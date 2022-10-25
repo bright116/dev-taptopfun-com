@@ -1,0 +1,277 @@
+// 20221026002138
+// https://www.yad.com/games/Wood-Shop/ResultDialog.json
+
+{
+  "type": "Dialog",
+  "props": {
+    "width": 720,
+    "runtime": "scripts/ResultDialog.ts",
+    "height": 1280
+  },
+  "compId": 2,
+  "child": [
+    {
+      "type": "Image",
+      "props": {
+        "y": 0,
+        "x": 0,
+        "width": 720,
+        "skin": "main/bg.jpg",
+        "sizeGrid": "2,4,2,2",
+        "height": 1280
+      },
+      "compId": 5
+    },
+    {
+      "type": "Image",
+      "props": {
+        "y": 270,
+        "x": 0,
+        "width": 720,
+        "skin": "main/8-01.png",
+        "sizeGrid": "2,2,2,2",
+        "height": 458
+      },
+      "compId": 6
+    },
+    {
+      "type": "Label",
+      "props": {
+        "y": 216,
+        "x": 34,
+        "wordWrap": true,
+        "width": 660,
+        "var": "resultTxt",
+        "height": 42,
+        "fontSize": 34,
+        "font": "Microsoft YaHei",
+        "color": "#ffffff",
+        "bold": true,
+        "align": "center"
+      },
+      "compId": 4
+    },
+    {
+      "type": "Sprite",
+      "props": {
+        "y": 34,
+        "x": 28,
+        "var": "goldSp",
+        "presetID": 1,
+        "name": "GoldSp",
+        "isPresetRoot": true
+      },
+      "compId": 83,
+      "child": [
+        {
+          "type": "Sprite",
+          "props": {
+            "presetID": 2,
+            "y": 0,
+            "x": 16,
+            "texture": "main/2-10.png"
+          },
+          "compId": 12
+        },
+        {
+          "type": "Sprite",
+          "props": {
+            "presetID": 3,
+            "texture": "main/2-09.png",
+            "name": "icon"
+          },
+          "compId": 11
+        },
+        {
+          "type": "Label",
+          "props": {
+            "presetID": 4,
+            "y": 10,
+            "x": 50,
+            "width": 100,
+            "text": "555555",
+            "name": "txt",
+            "fontSize": 30,
+            "color": "#ffffff",
+            "bold": true,
+            "align": "center"
+          },
+          "compId": 13
+        },
+        {
+          "type": "Script",
+          "props": {
+            "presetID": 5,
+            "runtime": "scripts/GoldSp.ts"
+          },
+          "compId": 14
+        }
+      ]
+    },
+    {
+      "type": "Sprite",
+      "props": {
+        "y": 108,
+        "x": 210,
+        "var": "titleImg",
+        "texture": "main/3-02.png"
+      },
+      "compId": 84
+    },
+    {
+      "type": "Label",
+      "props": {
+        "y": 753,
+        "x": 172,
+        "wordWrap": true,
+        "width": 209,
+        "text": "Coin: ",
+        "height": 47,
+        "fontSize": 40,
+        "font": "Microsoft YaHei",
+        "color": "#ffffff",
+        "bold": true
+      },
+      "compId": 85
+    },
+    {
+      "type": "Sprite",
+      "props": {
+        "y": 742,
+        "x": 363,
+        "texture": "main/1-03.png"
+      },
+      "compId": 86
+    },
+    {
+      "type": "Label",
+      "props": {
+        "y": 753,
+        "x": 433,
+        "wordWrap": true,
+        "width": 209,
+        "var": "scoreTxt",
+        "text": "x99",
+        "height": 40,
+        "fontSize": 40,
+        "font": "Microsoft YaHei",
+        "color": "#ffffff",
+        "bold": true
+      },
+      "compId": 87
+    },
+    {
+      "type": "Sprite",
+      "props": {
+        "y": 285,
+        "x": 13,
+        "width": 695,
+        "visible": true,
+        "var": "moreGameSp",
+        "presetID": 1,
+        "height": 423,
+        "name": "MoreGame2",
+        "isPresetRoot": true
+      },
+      "compId": 100,
+      "child": [
+        {
+          "type": "List",
+          "props": {
+            "y": 0,
+            "x": 0,
+            "width": 695,
+            "presetID": 2,
+            "height": 421,
+            "vScrollBarSkin": " ",
+            "spaceY": 10,
+            "spaceX": 20,
+            "repeatX": 3,
+            "name": "list",
+            "var": "list",
+            "elasticEnabled": true
+          },
+          "compId": 65,
+          "child": [
+            {
+              "type": "Box",
+              "props": {
+                "presetID": 3,
+                "width": 216,
+                "renderType": "render",
+                "height": 162
+              },
+              "compId": 66,
+              "child": [
+                {
+                  "type": "Image",
+                  "props": {
+                    "presetID": 9,
+                    "y": 9,
+                    "x": 0,
+                    "width": 216,
+                    "skin": "main/6-07.png",
+                    "name": "thumb",
+                    "height": 162,
+                    "alpha": 1
+                  },
+                  "compId": 77
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Box",
+      "props": {
+        "y": 807,
+        "x": 0,
+        "width": 720,
+        "var": "downBtns",
+        "height": 182
+      },
+      "compId": 102,
+      "child": [
+        {
+          "type": "Button",
+          "props": {
+            "y": 64,
+            "x": 360,
+            "var": "passBtn",
+            "stateNum": 1,
+            "skin": "main/3-06.png",
+            "anchorY": 0.5,
+            "anchorX": 0.5
+          },
+          "compId": 103
+        },
+        {
+          "type": "Button",
+          "props": {
+            "y": 138,
+            "x": 293,
+            "var": "closeBtn",
+            "stateNum": 1,
+            "skin": "main/3-05.png"
+          },
+          "compId": 104
+        }
+      ]
+    }
+  ],
+  "loadList": [
+    "main/bg.jpg",
+    "main/8-01.png",
+    "prefact/GoldSp.prefab",
+    "main/3-02.png",
+    "main/1-03.png",
+    "prefact/MoreGame2.prefab",
+    "main/3-06.png",
+    "main/3-05.png"
+  ],
+  "loadList3D": [
+    
+  ]
+}
