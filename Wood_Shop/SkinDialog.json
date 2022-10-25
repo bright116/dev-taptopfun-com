@@ -1,0 +1,172 @@
+{
+    "type": "Dialog",
+    "props": {
+        "width": 720,
+        "runtime": "scripts/SkinDialog.ts",
+        "height": 1280
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Sprite",
+            "props": {
+                "y": -1360,
+                "x": -640,
+                "width": 2000,
+                "texture": "main/backBg.png",
+                "height": 4000
+            },
+            "compId": 15
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 116,
+                "x": 60,
+                "width": 600,
+                "skin": "main/8-02.png",
+                "sizeGrid": "116,48,48,49",
+                "height": 740
+            },
+            "compId": 12
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 98,
+                "x": 589,
+                "var": "closeBtn",
+                "stateNum": 1,
+                "skin": "main/8-03.png"
+            },
+            "compId": 3
+        },
+        {
+            "type": "List",
+            "props": {
+                "y": 218,
+                "x": 98,
+                "width": 523,
+                "var": "list",
+                "vScrollBarSkin": " ",
+                "spaceY": 20,
+                "spaceX": 20,
+                "repeatX": 3,
+                "height": 612
+            },
+            "compId": 9,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "width": 160,
+                        "renderType": "render",
+                        "height": 187
+                    },
+                    "compId": 4,
+                    "child": [
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "texture": "main/7-03.png",
+                                "name": "bg"
+                            },
+                            "compId": 5
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 93,
+                                "x": 80,
+                                "skin": "main/7-06.png",
+                                "scaleY": 0.3,
+                                "scaleX": 0.3,
+                                "name": "icon",
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 14
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "y": 1,
+                                "x": 0,
+                                "texture": "main/7-06.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "selectImg",
+                                "height": 187
+                            },
+                            "compId": 8
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 141,
+                                "x": 20,
+                                "width": 120,
+                                "text": "label",
+                                "stroke": 4,
+                                "name": "porssTxt",
+                                "fontSize": 20,
+                                "font": "Microsoft YaHei",
+                                "color": "#ffffff",
+                                "bold": true,
+                                "align": "center"
+                            },
+                            "compId": 7
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 890,
+                "x": 380,
+                "var": "videoBtn",
+                "stateNum": 1,
+                "skin": "main/7-02.png"
+            },
+            "compId": 10
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 890,
+                "x": 52,
+                "var": "selectBtn",
+                "stateNum": 1,
+                "skin": "main/7-01.png",
+                "labelSize": 40,
+                "labelPadding": "0,0,0,30",
+                "labelColors": "#ffffff",
+                "labelBold": true,
+                "label": "1000削他"
+            },
+            "compId": 11
+        },
+        {
+            "type": "Sprite",
+            "props": {
+                "y": 137,
+                "x": 227,
+                "texture": "main/7-05.png"
+            },
+            "compId": 13
+        }
+    ],
+    "loadList": [
+        "main/backBg.png",
+        "main/8-02.png",
+        "main/8-03.png",
+        "main/7-03.png",
+        "main/7-06.png",
+        "main/7-02.png",
+        "main/7-01.png",
+        "main/7-05.png"
+    ],
+    "loadList3D": []
+}
