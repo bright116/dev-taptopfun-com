@@ -2650,7 +2650,7 @@ class Prompt {
         constructor() {
             window.Laya3D ? Laya3D.init(_.width, _.height) : Laya.init(_.width, _.height, Laya.WebGL),
                 Laya.Physics && Laya.Physics.enable(), Laya.DebugPanel && Laya.DebugPanel.enable(),
-                Laya.stage.scaleMode = Laya.Stage.SCALE_SHOWALL,
+                Laya.stage.scaleMode = Laya.Stage.SCALE_EXACTFIT,
                 Laya.stage.alignV = _.alignV,
                 Laya.stage.alignH = "center",
                 Laya.URL.exportSceneToJson = _.exportSceneToJson,
