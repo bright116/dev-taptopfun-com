@@ -1,0 +1,25 @@
+{
+	"version":"LAYAAVATAR:01",
+	"rootNode":{
+		"props":{
+			"name":"Helmet_5",
+			"translate":[
+				0,
+				0,
+				0
+			],
+			"rotation":[
+				0.7071068,
+				0,
+				0,
+				-0.7071068
+			],
+			"scale":[
+				1,
+				1,
+				1
+			]
+		},
+		"child":[]
+	}
+}
