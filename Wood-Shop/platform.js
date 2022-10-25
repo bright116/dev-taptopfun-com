@@ -441,10 +441,10 @@
             // if (YYGGames.isGamedistribution) {
             //     return;
             // }
-            if (this.canNavigateActive_) {
-                YYGGames.navigate(this.screen_, this.action_, this.to_);
-            }
-            this.canNavigateActive_ = false;
+            // if (this.canNavigateActive_) {
+            //     YYGGames.navigate(this.screen_, this.action_, this.to_);
+            // }
+            // this.canNavigateActive_ = false;
         }
 
         getStorageSync(key) {
@@ -482,33 +482,15 @@
         //插屏广告
         //插屏广告
         showInterstitial(complete) {
-            console.log("请求插屏广告");
-
-            // 展示插屏广告
-            HUHU_showInterstitialAd();
-
-            // 继续游戏
+            console.log("插屏广告")
             complete && complete()
             return;
         }
         //复活
         showReward(success, failure) {
-            console.log("请求激励广告");
-          
-            HUHU_showRewardedVideoAd(
-              () => {
-                  // 用户观看广告完成，继续游戏
-                  success && success();
-              },
-              () => {
-                // 广告请求失败或者用户跳过广告
-                if (failure) {
-                    failure();
-                }
-          
-                promptMessage("Failed to get the reward, please watch the ads to the end.");
-              }
-            );
+            console.log("激励广告")
+            success && success()
+            return;
           }
 
         initList(appList) {
@@ -544,18 +526,19 @@
             }.bind(this), duration);
         }
         getForgames() {
-            let sforgames = YYGGames.forgames || []; // YYGGames.forgames || []
-            // {
-            //     thumb:"adsfafa.png"
+            // let sforgames = YYGGames.forgames || []; // YYGGames.forgames || []
+            // // {
+            // //     thumb:"adsfafa.png"
+            // // }
+            // let forgames = sforgames.slice();
+            // for (let i = 0, length = forgames.length; i < length; i++) {
+            //     const random = Math.floor(Math.random() * (i + 1));
+            //     const item = forgames[random];
+            //     forgames[random] = forgames[i];
+            //     forgames[i] = item;
             // }
-            let forgames = sforgames.slice();
-            for (let i = 0, length = forgames.length; i < length; i++) {
-                const random = Math.floor(Math.random() * (i + 1));
-                const item = forgames[random];
-                forgames[random] = forgames[i];
-                forgames[i] = item;
-            }
-            return forgames;
+            // return forgames;
+            return [];
         }
 
         createLogo() {
@@ -599,14 +582,14 @@
         }
 
         showBanner(data) {
-            if (data) {
-                YYGGames.showBanner(data)
-            } else {
-                YYGGames.showBanner()
-            }
+            // if (data) {
+            //     YYGGames.showBanner(data)
+            // } else {
+            //     YYGGames.showBanner()
+            // }
         }
         hideBanner() {
-            YYGGames.hideBanner()
+            // YYGGames.hideBanner()
         }
 
         showSplash(data) {
