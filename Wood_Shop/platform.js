@@ -488,9 +488,22 @@
         }
         //复活
         showReward(success, failure) {
-            console.log("激励广告")
-            success && success()
-            return;
+            console.log("请求激励广告");
+          
+            HUHU_showRewardedVideoAd(
+              () => {
+                  // 用户观看广告完成，继续游戏
+                  success && success();
+              },
+              () => {
+                // 广告请求失败或者用户跳过广告
+                if (failure) {
+                    failure();
+                }
+          
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+              }
+            );
           }
 
         initList(appList) {
