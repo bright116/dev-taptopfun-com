@@ -1,0 +1,40 @@
+{
+	"version":"LAYAHIERARCHY:01",
+	"data":{
+		"type":"MeshSprite3D",
+		"props":{
+			"name":"goods",
+			"active":true,
+			"isStatic":false,
+			"layer":0,
+			"position":[
+				0,
+				0,
+				0
+			],
+			"rotation":[
+				0,
+				0,
+				0,
+				-1
+			],
+			"scale":[
+				10,
+				10,
+				10
+			],
+			"meshPath":"Assets/goods_1-goods_1.lm",
+			"enableRender":true,
+			"materials":[
+				{
+					"path":"Assets/mat14.lmat"
+				},
+				{
+					"path":"Assets/mat 1.lmat"
+				}
+			]
+		},
+		"components":[],
+		"child":[]
+	}
+}

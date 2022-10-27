@@ -1,0 +1,1746 @@
+{
+    "type": "Scene",
+    "props": {
+        "width": 1080,
+        "height": 1920,
+        "bottom": 0
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Sprite",
+            "props": {
+                "name": "3d"
+            },
+            "compId": 3
+        },
+        {
+            "type": "View",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "visible": true,
+                "top": 0,
+                "right": 0,
+                "name": "UI",
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 107,
+            "child": [
+                {
+                    "type": "View",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "width": 1080,
+                        "name": "homepage",
+                        "height": 1920
+                    },
+                    "compId": 108,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "background/lobby.jpg",
+                                "right": 0,
+                                "name": "bg",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 109
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 300,
+                                "skin": "ui/firstpage_ico_slogan.png",
+                                "name": "title",
+                                "centerX": 0
+                            },
+                            "compId": 110
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "skin": "ui/firstpage_ico_car.png",
+                                "name": "skin",
+                                "centerY": -27,
+                                "centerX": 0
+                            },
+                            "compId": 161
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "stateNum": 1,
+                                "skin": "ui/firstpage_btn_begin.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "start_btn",
+                                "centerX": 0,
+                                "bottom": 327,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 111,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 112
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "stateNum": 1,
+                                "skin": "ui/firstpage_btn_friendgame.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "moregame_btn",
+                                "centerX": -300,
+                                "bottom": 314,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 113,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 114
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "stateNum": 1,
+                                "skin": "ui/firstpage_btn_skinstore.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "skin_btn",
+                                "centerX": 300,
+                                "bottom": 314,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 115,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 116
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "top": 100,
+                                "stateNum": 1,
+                                "skin": "ui/firstpage_btn_settings.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "setting_btn",
+                                "left": 50,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 117,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 118
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "View",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "width": 1080,
+                        "name": "gamepage",
+                        "height": 1920
+                    },
+                    "compId": 121,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 10,
+                                "x": 10,
+                                "stateNum": 1,
+                                "skin": "ui/logo.png",
+                                "scaleY": 0.8,
+                                "scaleX": 0.8,
+                                "name": "logo"
+                            },
+                            "compId": 14
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 250,
+                                "skin": "ui/gamepage_ico_timebg.png",
+                                "right": 0,
+                                "name": "time"
+                            },
+                            "compId": 122,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 18.5,
+                                        "x": 78.111328125,
+                                        "text": "1:30",
+                                        "name": "time_label",
+                                        "fontSize": 60,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 123
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "top": 160,
+                                "text": "第1关",
+                                "name": "level",
+                                "fontSize": 100,
+                                "centerX": 0
+                            },
+                            "compId": 124
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 160,
+                                "skin": "ui/gamepage_ico_rankbg_1.png",
+                                "name": "rank1",
+                                "left": 0
+                            },
+                            "compId": 125,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 10,
+                                        "x": 28.375,
+                                        "text": "1",
+                                        "name": "rank",
+                                        "fontSize": 40,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 126
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 14,
+                                        "x": 63,
+                                        "text": "Wait",
+                                        "name": "name",
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "align": "left"
+                                    },
+                                    "compId": 127
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 240,
+                                "skin": "ui/gamepage_ico_rankbg_1.png",
+                                "name": "rank2",
+                                "left": 0
+                            },
+                            "compId": 128,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 10,
+                                        "x": 28.375,
+                                        "text": "2",
+                                        "name": "rank",
+                                        "fontSize": 40,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 129
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 14,
+                                        "x": 63,
+                                        "text": "Wait",
+                                        "name": "name",
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "align": "left"
+                                    },
+                                    "compId": 130
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 320,
+                                "skin": "ui/gamepage_ico_rankbg_1.png",
+                                "name": "rank3",
+                                "left": 0
+                            },
+                            "compId": 131,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 10,
+                                        "x": 28.375,
+                                        "text": "3",
+                                        "name": "rank",
+                                        "fontSize": 40,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 132
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 14,
+                                        "x": 63,
+                                        "text": "Wait",
+                                        "name": "name",
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "align": "left"
+                                    },
+                                    "compId": 133
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 0,
+                                "top": 400,
+                                "skin": "ui/gamepage_ico_rankbg_1.png",
+                                "name": "rank4",
+                                "left": 0
+                            },
+                            "compId": 134,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 10,
+                                        "x": 28.375,
+                                        "text": "4",
+                                        "name": "rank",
+                                        "fontSize": 40,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 135
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 14,
+                                        "x": 63,
+                                        "text": "Wait",
+                                        "name": "name",
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "align": "left"
+                                    },
+                                    "compId": 136
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 0,
+                                "skin": "ui/ico_hand2.png",
+                                "name": "hand",
+                                "centerX": 0,
+                                "bottom": 350
+                            },
+                            "compId": 137
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "skin": "ui/playpage_ico_guideword.png",
+                                "name": "ctrl_tip",
+                                "centerX": 0,
+                                "bottom": 200
+                            },
+                            "compId": 138
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 540,
+                                "skin": "ui/win_title.png",
+                                "name": "win_tip",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 139
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 540,
+                                "skin": "ui/lose_title.png",
+                                "name": "lose_tip",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 160
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "skin": "ui/1.png",
+                                "name": "count1",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "bottom": 200
+                            },
+                            "compId": 140
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "skin": "ui/2.png",
+                                "name": "count2",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "bottom": 200
+                            },
+                            "compId": 141
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "skin": "ui/3.png",
+                                "name": "count3",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "bottom": 200
+                            },
+                            "compId": 142
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "skin": "ui/ico_guide_2.png",
+                                "name": "matching",
+                                "centerY": 250,
+                                "centerX": 0
+                            },
+                            "compId": 162
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 0,
+                                "skin": "ui/ico_guide_3.png",
+                                "name": "game_tip",
+                                "centerY": 250,
+                                "centerX": 0
+                            },
+                            "compId": 163
+                        }
+                    ]
+                },
+                {
+                    "type": "View",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "width": 1080,
+                        "name": "endpage",
+                        "height": 1920
+                    },
+                    "compId": 143,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "ui/ico_adbg.png",
+                                "right": 0,
+                                "name": "bg",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 157
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 111,
+                                "skin": "ui/win_title.png",
+                                "scaleY": 0.7,
+                                "scaleX": 0.7,
+                                "name": "win_title",
+                                "height": 200,
+                                "centerX": 0
+                            },
+                            "compId": 144
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 111,
+                                "skin": "ui/lose_title.png",
+                                "scaleY": 0.7,
+                                "scaleX": 0.7,
+                                "name": "lose_title",
+                                "height": 200,
+                                "centerX": 0
+                            },
+                            "compId": 145
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 1400,
+                                "stateNum": 1,
+                                "skin": "ui/btn_backhome.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "home_btn",
+                                "centerX": -250,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 146,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 147
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 1400,
+                                "stateNum": 1,
+                                "skin": "ui/btn_nextlevel.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "next_btn",
+                                "centerX": 250,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 148,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 149
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 1400,
+                                "stateNum": 1,
+                                "skin": "ui/btn_playagain.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "restart_btn",
+                                "centerX": 250,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 150,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 151
+                                }
+                            ]
+                        },
+                        {
+                            "x": 45,
+                            "type": "List",
+                            "searchKey": "List,list_showList1,list_showList1",
+                            "props": {
+                                "y": 434,
+                                "x": 60,
+                                "width": 800,
+                                "var": "list_showList1",
+                                "scaleY": 1.2,
+                                "scaleX": 1.2,
+                                "repeatY": 2,
+                                "repeatX": 2,
+                                "name": "list_showList1",
+                                "height": 600
+                            },
+                            "nodeParent": 143,
+                            "label": "list_showList1",
+                            "isOpen": true,
+                            "isDirectory": true,
+                            "isAniNode": true,
+                            "hasChild": true,
+                            "compId": 255,
+                            "child": [
+                                {
+                                    "x": 60,
+                                    "type": "Box",
+                                    "searchKey": "Box",
+                                    "props": {
+                                        "renderType": "render"
+                                    },
+                                    "nodeParent": 255,
+                                    "label": "Box",
+                                    "isOpen": true,
+                                    "isDirectory": true,
+                                    "isAniNode": false,
+                                    "hasChild": true,
+                                    "compId": 256,
+                                    "child": [
+                                        {
+                                            "x": 75,
+                                            "type": "Image",
+                                            "searchKey": "Image,thumb",
+                                            "props": {
+                                                "width": 400,
+                                                "name": "thumb",
+                                                "height": 300
+                                            },
+                                            "nodeParent": 256,
+                                            "label": "thumb",
+                                            "isDirectory": false,
+                                            "isAniNode": false,
+                                            "hasChild": false,
+                                            "compId": 257,
+                                            "child": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "View",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "width": 1080,
+                        "visible": false,
+                        "name": "continue",
+                        "height": 1920
+                    },
+                    "compId": 152,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "top": 0,
+                                "skin": "ui/mask.png",
+                                "right": 0,
+                                "name": "bg",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 158
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "top": 150,
+                                "skin": "ui/window_word_save.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "title",
+                                "centerX": 0
+                            },
+                            "compId": 214
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 1338,
+                                "visible": false,
+                                "stateNum": 1,
+                                "skin": "ui/savewindow_btn_coinsave.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "coin_continue_btn",
+                                "centerX": -253,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 215,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 216
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "text": "0/100",
+                                        "name": "text",
+                                        "fontSize": 70,
+                                        "color": "#ffffff",
+                                        "centerY": 0,
+                                        "centerX": 48
+                                    },
+                                    "compId": 219,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "y": -5,
+                                                "x": -106,
+                                                "width": 80,
+                                                "texture": "ui/ico_coin.png",
+                                                "height": 80
+                                            },
+                                            "compId": 220
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 1352,
+                                "stateNum": 1,
+                                "skin": "ui/savewindow_btn_adsave.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "ad_continue_btn",
+                                "centerX": 0,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 217,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 218
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 1600,
+                                "stateNum": 1,
+                                "skin": "ui/btn_skip.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "skip_btn",
+                                "centerX": 0,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 221,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 222
+                                }
+                            ]
+                        },
+                        {
+                            "type": "List",
+                            "searchKey": "List,list_showList0,list_showList0",
+                            "props": {
+                                "y": 434,
+                                "x": 60,
+                                "width": 800,
+                                "var": "list_showList0",
+                                "scaleY": 1.2,
+                                "scaleX": 1.2,
+                                "repeatY": 2,
+                                "repeatX": 2,
+                                "name": "list_showList0",
+                                "height": 600
+                            },
+                            "nodeParent": 152,
+                            "label": "list_showList0",
+                            "isOpen": true,
+                            "isDirectory": true,
+                            "isAniNode": true,
+                            "hasChild": true,
+                            "compId": 252,
+                            "child": [
+                                {
+                                    "type": "Box",
+                                    "searchKey": "Box",
+                                    "props": {
+                                        "renderType": "render"
+                                    },
+                                    "nodeParent": 252,
+                                    "label": "Box",
+                                    "isOpen": true,
+                                    "isDirectory": true,
+                                    "isAniNode": false,
+                                    "hasChild": true,
+                                    "compId": 253,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "searchKey": "Image,thumb",
+                                            "props": {
+                                                "width": 400,
+                                                "name": "thumb",
+                                                "height": 300
+                                            },
+                                            "nodeParent": 253,
+                                            "label": "thumb",
+                                            "isDirectory": false,
+                                            "isAniNode": false,
+                                            "hasChild": false,
+                                            "compId": 254,
+                                            "child": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "View",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "width": 1080,
+                        "visible": false,
+                        "name": "coinpage",
+                        "height": 1920
+                    },
+                    "compId": 223,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "top": 0,
+                                "skin": "ui/mask.png",
+                                "right": 0,
+                                "name": "bg",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 224,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "y": 0,
+                                        "x": 0,
+                                        "top": 0,
+                                        "skin": "ui/friendgift_bg.png",
+                                        "right": 0,
+                                        "name": "bg",
+                                        "left": 0,
+                                        "bottom": 0
+                                    },
+                                    "compId": 234
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "top": 111,
+                                "skin": "ui/window_word_coinreward.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "title",
+                                "centerX": 0
+                            },
+                            "compId": 225
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 306,
+                                "skin": "ui/window_ico_cardbg.png",
+                                "name": "carriage",
+                                "centerX": -288
+                            },
+                            "compId": 235,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "text": "X0",
+                                        "name": "text",
+                                        "fontSize": 60,
+                                        "color": "#ffffff",
+                                        "centerY": 0,
+                                        "centerX": 57
+                                    },
+                                    "compId": 236,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "y": -10,
+                                                "x": -105,
+                                                "width": 80,
+                                                "texture": "ui/ico_ggoods.png",
+                                                "height": 80
+                                            },
+                                            "compId": 237
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 426,
+                                "skin": "ui/window_ico_arrow.png",
+                                "rotation": -90,
+                                "name": "convert",
+                                "centerX": 0
+                            },
+                            "compId": 241
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 253,
+                                "text": "金币收益X1.0",
+                                "name": "coin_plus",
+                                "fontSize": 40,
+                                "color": "#ffff00",
+                                "centerX": 12
+                            },
+                            "compId": 242
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 306,
+                                "skin": "ui/window_ico_cardbg.png",
+                                "name": "coin",
+                                "centerX": 303
+                            },
+                            "compId": 238,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "text": "X0",
+                                        "name": "text",
+                                        "fontSize": 60,
+                                        "color": "#ffffff",
+                                        "centerY": 0,
+                                        "centerX": 47
+                                    },
+                                    "compId": 239,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "y": -10,
+                                                "x": -103,
+                                                "width": 80,
+                                                "texture": "ui/ico_coin.png",
+                                                "height": 80
+                                            },
+                                            "compId": 240
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "stateNum": 1,
+                                "skin": "ui/window_btn_triblecoin.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "more_coin_btn",
+                                "centerX": 260,
+                                "bottom": 150,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 230,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 231
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "stateNum": 1,
+                                "skin": "ui/window_btn_get.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "skip_btn",
+                                "centerX": -260,
+                                "bottom": 150,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 232,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 233
+                                }
+                            ]
+                        },
+                        {
+                            "type": "List",
+                            "searchKey": "List,list_showList,list_showList",
+                            "props": {
+                                "y": 608,
+                                "x": 60,
+                                "width": 800,
+                                "var": "list_showList",
+                                "scaleY": 1.2,
+                                "scaleX": 1.2,
+                                "repeatY": 2,
+                                "repeatX": 2,
+                                "name": "list_showList",
+                                "height": 600
+                            },
+                            "nodeParent": 223,
+                            "label": "list_showList",
+                            "isOpen": true,
+                            "isDirectory": true,
+                            "isAniNode": true,
+                            "hasChild": true,
+                            "compId": 249,
+                            "child": [
+                                {
+                                    "type": "Box",
+                                    "searchKey": "Box",
+                                    "props": {
+                                        "renderType": "render"
+                                    },
+                                    "nodeParent": 249,
+                                    "label": "Box",
+                                    "isOpen": true,
+                                    "isDirectory": true,
+                                    "isAniNode": false,
+                                    "hasChild": true,
+                                    "compId": 250,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "searchKey": "Image,thumb",
+                                            "props": {
+                                                "width": 400,
+                                                "name": "thumb",
+                                                "height": 300
+                                            },
+                                            "nodeParent": 250,
+                                            "label": "thumb",
+                                            "isDirectory": false,
+                                            "isAniNode": false,
+                                            "hasChild": false,
+                                            "compId": 251,
+                                            "child": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "visible": true,
+                        "skin": "ui/ico_newskinbg.png",
+                        "name": "new_skin_tip",
+                        "centerX": 0,
+                        "bottom": 627
+                    },
+                    "compId": 153,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 8.5,
+                                "width": 0,
+                                "name": "pic",
+                                "height": 100,
+                                "centerX": 260
+                            },
+                            "compId": 154
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 31,
+                                "x": 51,
+                                "text": "2关后解锁新皮肤",
+                                "name": "text",
+                                "fontSize": 55,
+                                "color": "#ffffff"
+                            },
+                            "compId": 155
+                        }
+                    ]
+                },
+                {
+                    "type": "View",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "width": 1080,
+                        "visible": false,
+                        "name": "shoppage",
+                        "height": 1920
+                    },
+                    "compId": 164,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "top": 0,
+                                "skin": "background/shop.jpg",
+                                "right": 0,
+                                "name": "bg",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 165
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 151,
+                                "skin": "ui/skinpage_word_slogan.png",
+                                "name": "title",
+                                "centerX": 0
+                            },
+                            "compId": 168
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "x": 150,
+                                "top": 181,
+                                "stateNum": 1,
+                                "skin": "ui/skinpage_btn_back.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "back_btn",
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 166,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 167
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "visible": false,
+                                "text": "2关后解锁",
+                                "name": "tip",
+                                "fontSize": 80,
+                                "color": "#ffffff",
+                                "centerY": -300,
+                                "centerX": 0
+                            },
+                            "compId": 177
+                        },
+                        {
+                            "type": "List",
+                            "props": {
+                                "x": 0,
+                                "width": 1080,
+                                "repeatX": 26,
+                                "name": "list",
+                                "height": 360,
+                                "centerY": 0
+                            },
+                            "compId": 179,
+                            "child": [
+                                {
+                                    "type": "Box",
+                                    "props": {
+                                        "width": 360,
+                                        "renderType": "render",
+                                        "height": 360
+                                    },
+                                    "compId": 180,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "y": 55,
+                                                "x": 20,
+                                                "width": 320,
+                                                "name": "img",
+                                                "height": 250
+                                            },
+                                            "compId": 181
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "HScrollBar",
+                                    "props": {
+                                        "name": "scrollBar"
+                                    },
+                                    "compId": 182
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "visible": false,
+                                "stateNum": 1,
+                                "skin": "ui/skinpage_btn_use.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "use_btn",
+                                "centerY": 350,
+                                "centerX": 0,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 172,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 173
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 0,
+                                "skin": "ui/using.png",
+                                "name": "using",
+                                "centerY": 350,
+                                "centerX": 0
+                            },
+                            "compId": 176
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "runtime": "script/shop.js"
+                            },
+                            "compId": 178
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 125,
+                        "x": 380,
+                        "visible": true,
+                        "top": 125,
+                        "skin": "ui/firstpage_ico_coinbg.png",
+                        "name": "coin",
+                        "centerX": 0
+                    },
+                    "compId": 210,
+                    "child": [
+                        {
+                            "type": "Label",
+                            "props": {
+                                "text": "0",
+                                "name": "text",
+                                "fontSize": 60,
+                                "color": "#ffffff",
+                                "centerY": 0,
+                                "centerX": 20
+                            },
+                            "compId": 212,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 0,
+                                        "x": -75,
+                                        "width": 60,
+                                        "texture": "ui/ico_coin.png",
+                                        "height": 60
+                                    },
+                                    "compId": 213
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 1544,
+                        "x": 0,
+                        "visible": true,
+                        "skin": "ui/firstpage_ico_upgradebg.png",
+                        "name": "upgrade",
+                        "centerX": 0,
+                        "bottom": 0
+                    },
+                    "compId": 183,
+                    "child": [
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 188,
+                                "stateNum": 1,
+                                "skin": "ui/firstpage_btn_upgrade_1.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "move_speed",
+                                "centerX": -300,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 186,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 187
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "texture": "ui/firstpage_btn_upgrade_2.png",
+                                        "name": "disable"
+                                    },
+                                    "compId": 188
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 35,
+                                        "x": 10,
+                                        "width": 250,
+                                        "align": "center",
+                                        "text": "Move Speed",
+                                        "name": "title",
+                                        "fontSize": 36,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 189
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 103,
+                                        "x": 73.9951171875,
+                                        "text": "X1.0",
+                                        "name": "value",
+                                        "fontSize": 60,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 190
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 226,
+                                        "text": "100",
+                                        "name": "cost",
+                                        "fontSize": 50,
+                                        "color": "#ffffff",
+                                        "centerX": 20
+                                    },
+                                    "compId": 191,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "y": 0,
+                                                "x": -50,
+                                                "width": 50,
+                                                "texture": "ui/ico_coin.png",
+                                                "height": 50
+                                            },
+                                            "compId": 192
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": -16,
+                                        "x": 225,
+                                        "width": 60,
+                                        "texture": "ui/ico_levelup.png",
+                                        "name": "tip",
+                                        "height": 60
+                                    },
+                                    "compId": 244
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 188,
+                                "stateNum": 1,
+                                "skin": "ui/firstpage_btn_upgrade_1.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "upgrade_speed",
+                                "centerX": 0,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 193,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 194
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "texture": "ui/firstpage_btn_upgrade_2.png",
+                                        "name": "disable"
+                                    },
+                                    "compId": 195
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 35,
+                                        "x": 10,
+                                        "width": 250,
+                                        "align": "center",
+                                        "text": "Speed Update",
+                                        "name": "title",
+                                        "fontSize": 36,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 196
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 103,
+                                        "x": 73.9951171875,
+                                        "text": "X1.0",
+                                        "name": "value",
+                                        "fontSize": 60,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 197
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 226,
+                                        "text": "100",
+                                        "name": "cost",
+                                        "fontSize": 50,
+                                        "color": "#ffffff",
+                                        "centerX": 20
+                                    },
+                                    "compId": 198,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "y": 0,
+                                                "x": -50,
+                                                "width": 50,
+                                                "texture": "ui/ico_coin.png",
+                                                "height": 50
+                                            },
+                                            "compId": 199
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": -16,
+                                        "x": 225,
+                                        "width": 60,
+                                        "texture": "ui/ico_levelup.png",
+                                        "name": "tip",
+                                        "height": 60
+                                    },
+                                    "compId": 245
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 188,
+                                "stateNum": 1,
+                                "skin": "ui/firstpage_btn_upgrade_1.png",
+                                "scaleY": 1,
+                                "scaleX": 1,
+                                "name": "coin_plus",
+                                "centerX": 300,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 200,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "common/CommonButton.js"
+                                    },
+                                    "compId": 201
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "texture": "ui/firstpage_btn_upgrade_2.png",
+                                        "name": "disable"
+                                    },
+                                    "compId": 202
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 35,
+                                        "x": 10,
+                                        "width": 250,
+                                        "align": "center",
+                                        "text": "Coin Gain",
+                                        "name": "title",
+                                        "fontSize": 36,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 203
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 103,
+                                        "x": 73.9951171875,
+                                        "text": "X1.0",
+                                        "name": "value",
+                                        "fontSize": 60,
+                                        "color": "#ffffff"
+                                    },
+                                    "compId": 204
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 226,
+                                        "text": "100",
+                                        "name": "cost",
+                                        "fontSize": 50,
+                                        "color": "#ffffff",
+                                        "centerX": 20
+                                    },
+                                    "compId": 205,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "y": 0,
+                                                "x": -50,
+                                                "width": 50,
+                                                "texture": "ui/ico_coin.png",
+                                                "height": 50
+                                            },
+                                            "compId": 206
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": -16,
+                                        "x": 225,
+                                        "width": 60,
+                                        "texture": "ui/ico_levelup.png",
+                                        "name": "tip",
+                                        "height": 60
+                                    },
+                                    "compId": 246
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "runtime": "script/UICtrl.js"
+                    },
+                    "compId": 156
+                }
+            ]
+        },
+        {
+            "type": "Script",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "runtime": "script/stageCtrl.js"
+            },
+            "compId": 6
+        },
+        {
+            "type": "Script",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "runtime": "script/gameCtrl.js"
+            },
+            "compId": 5
+        }
+    ],
+    "loadList": [
+        "background/shop.jpg",
+        "ui/firstpage_ico_slogan.png",
+        "ui/firstpage_ico_car.png",
+        "ui/firstpage_btn_begin.png",
+        "ui/firstpage_btn_friendgame.png",
+        "ui/firstpage_btn_skinstore.png",
+        "ui/firstpage_btn_settings.png",
+        "ui/firstpage_btn_share.png",
+        "ui/gamepage_ico_timebg.png",
+        "ui/gamepage_ico_rankbg_1.png",
+        "ui/ico_hand2.png",
+        "ui/playpage_ico_guideword.png",
+        "ui/win_title.png",
+        "ui/lose_title.png",
+        "ui/1.png",
+        "ui/2.png",
+        "ui/3.png",
+        "ui/ico_guide_2.png",
+        "ui/ico_guide_3.png",
+        "ui/ico_adbg.png",
+        "ui/btn_backhome.png",
+        "ui/btn_nextlevel.png",
+        "ui/btn_playagain.png",
+        "ui/mask.png",
+        "ui/window_word_save.png",
+        "ui/savewindow_btn_coinsave.png",
+        "ui/ico_coin.png",
+        "ui/savewindow_btn_adsave.png",
+        "ui/btn_skip.png",
+        "ui/friendgift_bg.png",
+        "ui/window_word_coinreward.png",
+        "ui/window_ico_cardbg.png",
+        "ui/ico_ggoods.png",
+        "ui/window_ico_arrow.png",
+        "ui/window_btn_triblecoin.png",
+        "ui/window_btn_get.png",
+        "ui/ico_newskinbg.png",
+        "background/shop.jpg",
+        "ui/skinpage_word_slogan.png",
+        "ui/skinpage_btn_back.png",
+        "ui/skinpage_btn_use.png",
+        "ui/using.png",
+        "ui/firstpage_ico_coinbg.png",
+        "ui/firstpage_ico_upgradebg.png",
+        "ui/firstpage_btn_upgrade_1.png",
+        "ui/firstpage_btn_upgrade_2.png",
+        "ui/ico_levelup.png"
+    ],
+    "loadList3D": []
+}
