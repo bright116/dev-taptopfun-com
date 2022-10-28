@@ -1,0 +1,8 @@
+{
+	"front":"tk_01_PositiveZ.png",
+	"back":"tk_01_NegativeZ.png",
+	"left":"tk_01_PositiveX.png",
+	"right":"tk_01_NegativeX.png",
+	"up":"tk_01_PositiveY.png",
+	"down":"tk_01_NegativeY.png"
+}
