@@ -1,0 +1,1 @@
+{"type":"Box","props":{"y":0,"x":0,"width":48,"presetID":1,"isPresetRoot":true,"height":31},"compId":118,"child":[{"type":"Image","props":{"y":15.5,"x":24,"skin":"game/m_waterred.png","rotation":-90,"presetID":2,"anchorY":0.5,"anchorX":0.5},"compId":120}],"loadList":["game/m_waterred.png"],"loadList3D":[]}
