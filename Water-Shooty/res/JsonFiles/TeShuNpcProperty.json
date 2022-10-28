@@ -1,0 +1,1 @@
+[{"minHp":35,"maxHp":55,"socreMul":5,"attakFrequencyMs":200,"attakDurationMs":1100,"stopDurationMs":900},{"minHp":20,"maxHp":35,"socreMul":2,"attakFrequencyMs":200,"attakDurationMs":900,"stopDurationMs":1200},{"minHp":15,"maxHp":30,"socreMul":2,"attakFrequencyMs":300,"attakDurationMs":200,"stopDurationMs":500}]

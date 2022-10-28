@@ -1,0 +1,1 @@
+{"type":"Box","props":{"y":0,"x":0,"width":105,"presetID":1,"name":"appItem","isPresetRoot":true,"height":137},"compId":3,"child":[{"type":"Sprite","props":{"y":0,"x":53,"width":105,"texture":"ui/common/mask_white.png","presetID":2,"pivotX":53,"name":"icon","height":137,"sizeGrid":"2,2,2,2"},"compId":4}],"loadList":["ui/common/mask_white.png"],"loadList3D":[]}
