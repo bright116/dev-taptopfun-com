@@ -1,0 +1,37 @@
+{
+	"version":"LAYAHIERARCHY:01",
+	"data":{
+		"type":"MeshSprite3D",
+		"props":{
+			"name":"knife_0",
+			"active":true,
+			"isStatic":false,
+			"layer":0,
+			"position":[
+				-0.0001477933,
+				0,
+				0.071
+			],
+			"rotation":[
+				-2.185569E-08,
+				0,
+				0,
+				-1
+			],
+			"scale":[
+				0.01,
+				0.01,
+				0.01
+			],
+			"meshPath":"Assets/NewKnife/10-10.lm",
+			"enableRender":true,
+			"materials":[
+				{
+					"path":"Assets/NewKnife/new10.lmat"
+				}
+			]
+		},
+		"components":[],
+		"child":[]
+	}
+}

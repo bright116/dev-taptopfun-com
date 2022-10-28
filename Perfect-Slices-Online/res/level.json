@@ -1,0 +1,5614 @@
+{
+  "level1": [
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_02",
+      "type": 1
+    },
+    {
+      "id": "Board_01",
+      "type": 2
+    },
+    {
+      "id": "Food_02",
+      "type": 1
+    },
+    {
+      "id": "Food_03",
+      "type": 1
+    },
+    {
+      "id": "Food_04",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Board_02",
+      "type": 3
+    },
+    {
+      "id": "Food_04",
+      "type": 1
+    },
+    {
+      "id": "Food_03",
+      "type": 1
+    },
+    {
+      "id": "Board_02",
+      "type": 3
+    },
+    {
+      "id": "Food_04",
+      "type": 1
+    },
+    {
+      "id": "Food_03",
+      "type": 1
+    },
+    {
+      "id": "Food_02",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    }
+  ],
+  "level2": [
+      {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    },
+    {
+      "id": "Food_01",
+      "type": 1
+    }
+  ],
+  "level3": [
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    }
+  ],
+  "level4": [
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    }
+  ],
+  "level5": [
+    {"id":"Food_02","type":"1"},
+{"id":"Food_01","type":"1"},
+{"id":"Board_01","type":"2"},
+{"id":"Food_03","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Board_02","type":"3"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_03","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_01","type":"1"},
+{"id":"Board_01","type":"2"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_03","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_01","type":"1"},
+{"id":"Food_01","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Board_01","type":"2"},
+{"id":"Food_03","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_01","type":"1"}
+  ],
+  "level6": [
+{"id":"Food_04","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_03","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_01","type":"1"},
+{"id":"Food_01","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_04","type":"1"},
+{"id":"Board_02","type":"3"},
+{"id":"Food_04","type":"1"},
+{"id":"Food_04","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Food_01","type":"1"},
+{"id":"Food_03","type":"1"},
+{"id":"Food_02","type":"1"},
+{"id":"Board_01","type":"2"},
+{"id":"Food_04","type":"1"},
+{"id":"Board_02","type":"3"},
+{"id":"Food_01","type":"1"},
+{"id":"Food_01","type":"1"},
+{"id":"Food_04","type":"1"},
+{"id":"Food_04","type":"1"},
+{"id":"Food_03","type":"1"},
+{"id":"Board_01","type":"2"},
+{"id":"Food_04","type":"1"}
+  ],
+  "level7": [
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    }
+  ],
+  "level8": [
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    }
+  ],
+  "level9": [
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    }
+  ],
+  "level10": [
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    }
+  ],
+  "level11": [
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    }
+  ],
+  "level12": [
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    }
+  ],
+  "level13": [
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    }
+  ],
+  "level14": [
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    }
+  ],
+  "level15": [
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    }
+  ],
+  "level16": [
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    }
+  ],
+  "level17": [
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    }
+  ],
+  "level18": [
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    }
+  ],
+  "level19": [
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    }
+  ],
+  "level20": [
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    }
+  ],
+  "level21": [
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    }
+  ],
+  "level22": [
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    }
+  ],
+  "level23": [
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    }
+  ],
+  "level24": [
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    }
+  ],
+  "level25": [
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    }
+  ],
+  "level26": [
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    }
+  ],
+  "level27": [
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    }
+  ],
+  "level28": [
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    }
+  ],
+  "level29": [
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    }
+  ],
+  "level30": [
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    }
+  ],
+  "level31": [
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    }
+  ],
+  "level32": [
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    }
+  ],
+  "level33": [
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    }
+  ],
+  "level34": [
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    }
+  ],
+  "level35": [
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    }
+  ],
+  "level36": [
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    }
+  ],
+  "level37": [
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    }
+  ],
+  "level38": [
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    }
+  ],
+  "level39": [
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    }
+  ],
+  "level40": [
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    }
+  ],
+  "level41": [
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    }
+  ],
+  "level42": [
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    }
+  ],
+  "level43": [
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    }
+  ],
+  "level44": [
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    }
+  ],
+  "level45": [
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    }
+  ],
+  "level46": [
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    }
+  ],
+  "level47": [
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_08",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    }
+  ],
+  "level48": [
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    }
+  ],
+  "level49": [
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_02",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_04",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    }
+  ],
+  "level50": [
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_07",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_01",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Food_06",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Board_02",
+      "type": "3"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Board_01",
+      "type": "2"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    },
+    {
+      "id": "Food_03",
+      "type": "1"
+    },
+    {
+      "id": "Food_05",
+      "type": "1"
+    },
+    {
+      "id": "Food_09",
+      "type": "1"
+    }
+  ]
+}
