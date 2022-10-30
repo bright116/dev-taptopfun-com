@@ -9929,7 +9929,10 @@ function _0x418f() {
                     'key': _0x46ee25(0x66b),
                     'value': function() {
                         var _0xaecb3b = _0x46ee25;
-                        _0x400488['reqGetAvatar'](), this[_0xaecb3b(0x4d0)]['rebornCount'] >= _0xcd505d[_0xaecb3b(0x1e3)][_0xaecb3b(0x66c)] || _0xcd505d['config'][_0xaecb3b(0x511)] ? this['onGameEnd']() : this[_0xaecb3b(0x4d0)][_0xaecb3b(0x5d0)] = _0x1e0fc3[_0xaecb3b(0x5a4)], window[_0xaecb3b(0x615)]['visible'] = !![], console['log'](_0xaecb3b(0x66d));
+                        _0x400488['reqGetAvatar'](), 
+                        this[_0xaecb3b(0x4d0)]['rebornCount'] >= _0xcd505d[_0xaecb3b(0x1e3)][_0xaecb3b(0x66c)] || _0xcd505d['config'][_0xaecb3b(0x511)] ? this['onGameEnd']() : this[_0xaecb3b(0x4d0)][_0xaecb3b(0x5d0)] = _0x1e0fc3[_0xaecb3b(0x5a4)], 
+                        // window[_0xaecb3b(0x615)]['visible'] = !![], 
+                        console['log'](_0xaecb3b(0x66d));
                     }
                 },
                 {
