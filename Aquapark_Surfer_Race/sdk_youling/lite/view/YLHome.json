@@ -1,0 +1,783 @@
+{
+    "type": "View",
+    "props": {
+        "runtime": "youling/main/view/runtime/YLHomeRTView.ts",
+        "name": "View"
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Sprite",
+            "props": {
+                "y": 667,
+                "x": 375,
+                "width": 50,
+                "var": "_spView",
+                "height": 50
+            },
+            "compId": 134,
+            "child": [
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": -668,
+                        "x": -375,
+                        "width": 50,
+                        "name": "panelTopLeft",
+                        "height": 50
+                    },
+                    "compId": 116,
+                    "child": [
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": 11600000,
+                                "x": 150,
+                                "var": "_btnVibrate",
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 156,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 9,
+                                        "x": 8.5,
+                                        "width": 92,
+                                        "texture": "sdk_youling/lite/pic/common-bth-yuan.png",
+                                        "scaleY": 0.75,
+                                        "scaleX": 0.75,
+                                        "height": 96
+                                    },
+                                    "compId": 155
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 18,
+                                        "x": 23,
+                                        "var": "_spVibrateOn",
+                                        "texture": "sdk_youling/lite/pic/common-bth-zhengdong1.png",
+                                        "stateNum": 1,
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5
+                                    },
+                                    "compId": 120
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 21,
+                                        "x": 23,
+                                        "var": "_spVibrateOff",
+                                        "texture": "sdk_youling/lite/pic/common-bth-zhengdong2.png",
+                                        "stateNum": 1,
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5
+                                    },
+                                    "compId": 161
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": 156,
+                                "x": 62,
+                                "var": "_btnSound",
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 162,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 9,
+                                        "x": 8.5,
+                                        "width": 92,
+                                        "texture": "sdk_youling/lite/pic/common-bth-yuan.png",
+                                        "scaleY": 0.75,
+                                        "scaleX": 0.75,
+                                        "name": "spBg",
+                                        "height": 96
+                                    },
+                                    "compId": 163
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 24,
+                                        "x": 22,
+                                        "var": "_spSoundOn",
+                                        "texture": "sdk_youling/lite/pic/common-bth-yousheng1.png",
+                                        "stateNum": 1,
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5
+                                    },
+                                    "compId": 164
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 24,
+                                        "x": 22,
+                                        "var": "_spSoundOff",
+                                        "texture": "sdk_youling/lite/pic/common-bth-yousheng2.png",
+                                        "stateNum": 1,
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5
+                                    },
+                                    "compId": 165
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "y": 51,
+                                "x": 23,
+                                "presetID": 1,
+                                "width": 50,
+                                "runtime": "youling/common/component/runtime/YLGoldRTPane.ts",
+                                "isPresetRoot": true,
+                                "height": 58
+                            },
+                            "compId": 188,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "presetID": 2,
+                                        "sizeGrid": "24,40,36,36",
+                                        "y": 0,
+                                        "x": 0,
+                                        "width": 191,
+                                        "skin": "sdk_youling/lite/pic/common-jinbi-di.png",
+                                        "name": "imgFrame",
+                                        "height": 66
+                                    },
+                                    "compId": 57
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 3,
+                                        "y": 14,
+                                        "x": 17,
+                                        "texture": "sdk_youling/lite/pic/common-jinbi-icon.png",
+                                        "name": "spIcon"
+                                    },
+                                    "compId": 59
+                                },
+                                {
+                                    "type": "FontClip",
+                                    "props": {
+                                        "presetID": 4,
+                                        "y": 30,
+                                        "x": 108,
+                                        "value": "99999",
+                                        "skin": "sdk_youling/lite/pic/shuzi.png",
+                                        "sheet": ".0123456789",
+                                        "scaleY": 0.6,
+                                        "scaleX": 0.6,
+                                        "name": "fontClip",
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5,
+                                        "align": "center"
+                                    },
+                                    "compId": 228
+                                },
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "presetID": 5,
+                                        "isHero": true,
+                                        "runtime": "youling/common/component/YLGoldPane.ts"
+                                    },
+                                    "compId": 229
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "y": -1,
+                                "x": 0,
+                                "stickMode": "top",
+                                "statusBarOffsetY": -12,
+                                "isAdaptStatusBar": true,
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 231
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "y": 187,
+                        "x": 377,
+                        "width": 111,
+                        "visible": true,
+                        "var": "_btnMore",
+                        "stateNum": 1,
+                        "skin": "sdk_youling/lite/pic/common-bth-moreganme.png",
+                        "height": 87,
+                        "anchorY": 0.5,
+                        "anchorX": 1
+                    },
+                    "compId": 105,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 10,
+                                "skin": "sdk_youling/lite/pic/pic_tishi.png"
+                            },
+                            "compId": 113
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "stickMode": "right_down",
+                                "offsetY": "-36%",
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 169
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 191,
+                        "x": 9,
+                        "width": 50,
+                        "name": "spBottomBtns",
+                        "height": 50
+                    },
+                    "compId": 172,
+                    "child": [
+                        {
+                            "type": "Script",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "stickMode": "bottom_center",
+                                "offsetY": "-35%",
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 191
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 96,
+                                "x": -2,
+                                "var": "_btnPlay",
+                                "stateNum": 1,
+                                "skin": "sdk_youling/lite/pic/bth-yellow-1.png",
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 173,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 41.5,
+                                        "x": 102,
+                                        "texture": "bth-yellow-kaishiyouxi.png"
+                                    },
+                                    "compId": 174
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "x": 325,
+                                "centerY": -150,
+                                "width": 93,
+                                "var": "_btnSkin",
+                                "scaleX":1.2,
+                                "scaleY":1.2,
+                                "pivotY": 42,
+                                "pivotX": 47,
+                                "height": 130
+                            },
+                            "compId": 175,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 4,
+                                        "x": 1,
+                                        "texture": "sdk_youling/lite/pic/common-bth-yuan.png"
+                                    },
+                                    "compId": 176
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 16,
+                                        "x": 13.5,
+                                        "texture": "common-gnbth-pifu.png"
+                                    },
+                                    "compId": 177
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": 126,
+                                "x": -500000000,
+                                "width": 93,
+                                "var": "_btnRank",
+                                "pivotY": 42,
+                                "pivotX": 47,
+                                "height": 130
+                            },
+                            "compId": 178,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 4,
+                                        "x": 1,
+                                        "texture": "sdk_youling/lite/pic/common-bth-yuan.png"
+                                    },
+                                    "compId": 179
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 17,
+                                        "x": 0.5,
+                                        "texture": "sdk_youling/lite/pic/common-gnbth-paihanbang.png"
+                                    },
+                                    "compId": 180
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": 126,
+                                "x": 5000000000000,
+                                "width": 93,
+                                "var": "_btnCollect",
+                                "pivotY": 42,
+                                "pivotX": 47,
+                                "height": 130
+                            },
+                            "compId": 181,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 4,
+                                        "x": 1,
+                                        "texture": "sdk_youling/lite/pic/common-bth-yuan.png"
+                                    },
+                                    "compId": 182
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 17,
+                                        "x": 14.5,
+                                        "texture": "sdk_youling/lite/pic/common-gnbth-shoucang.png"
+                                    },
+                                    "compId": 183
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": 126,
+                                "x": 150000000000000,
+                                "width": 93,
+                                "var": "_btnShare",
+                                "pivotY": 42,
+                                "pivotX": 47,
+                                "height": 130
+                            },
+                            "compId": 184,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 4,
+                                        "x": 1,
+                                        "texture": "sdk_youling/lite/pic/common-bth-yuan.png"
+                                    },
+                                    "compId": 185
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 17,
+                                        "x": -10.5,
+                                        "texture": "sdk_youling/lite/pic/common-gnbth-yqhaoyou.png"
+                                    },
+                                    "compId": 186
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": -9,
+                                "x": -313,
+                                "width": 100,
+                                "var": "_btnLottery",
+                                "skin": "sdk_youling/lite/pic/icon_zj.png",
+                                "pivotY": 50,
+                                "pivotX": 50,
+                                "height": 100
+                            },
+                            "compId": 242,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "y": 8,
+                                        "x": 70,
+                                        "var": "_dot2",
+                                        "skin": "sdk_youling/lite/pic/pic_tishi.png"
+                                    },
+                                    "compId": 248
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 140,
+                                "x": -313,
+                                "width": 136,
+                                "var": "_btnSignIn",
+                                "skin": "sdk_youling/lite/pic/common-gnbth-qiandao2.png",
+                                "scaleY": 0.8,
+                                "scaleX": 0.8,
+                                "pivotY": 71,
+                                "pivotX": 68,
+                                "height": 142
+                            },
+                            "compId": 246,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "y": 19,
+                                        "x": 98,
+                                        "var": "_dot",
+                                        "skin": "sdk_youling/lite/pic/pic_tishi.png",
+                                        "scaleY": 1.2,
+                                        "scaleX": 1.2
+                                    },
+                                    "compId": 247
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": -92,
+                        "x": -374,
+                        "var": "_spYLADGameSquare0",
+                        "presetID": 1,
+                        "runtime": "youling/common/component/ad/runtime/YLADGameRTSquare0.ts",
+                        "isPresetRoot": true
+                    },
+                    "compId": 225,
+                    "child": [
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "presetID": 2,
+                                "y": -156,
+                                "x": -1,
+                                "width": 50,
+                                "name": "paneLeft",
+                                "height": 50
+                            },
+                            "compId": 131,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 3,
+                                        "y": -21,
+                                        "x": 10,
+                                        "width": 128,
+                                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                                        "isPresetRoot": true,
+                                        "height": 169,
+                                        "name": "adL1"
+                                    },
+                                    "compId": 203,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "presetID": 4,
+                                                "sizeGrid": "2,2,2,2",
+                                                "y": 0,
+                                                "x": 64,
+                                                "width": 128,
+                                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                                "name": "imgAd",
+                                                "height": 169,
+                                                "anchorX": 0.5
+                                            },
+                                            "compId": 204
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 5,
+                                        "y": 168,
+                                        "x": 10,
+                                        "width": 128,
+                                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                                        "isPresetRoot": true,
+                                        "height": 169,
+                                        "var": "_adL2",
+                                        "name": "adL2"
+                                    },
+                                    "compId": 207,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "presetID": 6,
+                                                "sizeGrid": "2,2,2,2",
+                                                "y": 0,
+                                                "x": 64,
+                                                "width": 128,
+                                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                                "name": "imgAd",
+                                                "height": 169,
+                                                "anchorX": 0.5
+                                            },
+                                            "compId": 208
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "presetID": 7,
+                                "y": -150,
+                                "x": 749,
+                                "width": 50,
+                                "pivotX": 50,
+                                "name": "paneRight",
+                                "height": 50
+                            },
+                            "compId": 132,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 8,
+                                        "y": -27,
+                                        "x": -90,
+                                        "width": 128,
+                                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                                        "isPresetRoot": true,
+                                        "height": 169,
+                                        "name": "adR1"
+                                    },
+                                    "compId": 209,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "presetID": 9,
+                                                "sizeGrid": "2,2,2,2",
+                                                "y": 0,
+                                                "x": 64,
+                                                "width": 128,
+                                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                                "name": "imgAd",
+                                                "height": 169,
+                                                "anchorX": 0.5
+                                            },
+                                            "compId": 211
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 10,
+                                        "y": 162,
+                                        "x": -90,
+                                        "width": 128,
+                                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                                        "isPresetRoot": true,
+                                        "height": 169,
+                                        "name": "adR2"
+                                    },
+                                    "compId": 210,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "presetID": 11,
+                                                "sizeGrid": "2,2,2,2",
+                                                "y": 0,
+                                                "x": 64,
+                                                "width": 128,
+                                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                                "name": "imgAd",
+                                                "height": 169,
+                                                "anchorX": 0.5
+                                            },
+                                            "compId": 212
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "presetID": 12,
+                                        "y": 0,
+                                        "x": 0,
+                                        "stickMode": "right",
+                                        "runtime": "youling/common/component/AlignWidget.ts"
+                                    },
+                                    "compId": 133
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "stickMode": "v_middle",
+                                "offsetY": "-7%",
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 227
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": -613,
+                        "x": 299,
+                        "presetID": 1,
+                        "runtime": "youling/common/component/runtime/YLAddGameRTSticker.ts",
+                        "isPresetRoot": true
+                    },
+                    "compId": 230,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "presetID": 2,
+                                "sizeGrid": "12,41,20,65",
+                                "y": -1000000000,
+                                "width": 332,
+                                "skin": "",
+                                "pivotY": 36,
+                                "name": "img",
+                                "height": 71,
+                                "anchorX": 1
+                            },
+                            "compId": 166,
+                            "child": [
+                                {
+                                    "type": "Text",
+                                    "props": {
+                                        "presetID": 3,
+                                        "y": 18.5,
+                                        "x": 66,
+                                        "text": "",
+                                        "name": "txt",
+                                        "fontSize": 28,
+                                        "font": "SimHei",
+                                        "color": "#b26511",
+                                        "bold": false,
+                                        "runtime": "Laya.Text"
+                                    },
+                                    "compId": 167
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": -396,
+                        "x": 0,
+                        "var": "_imgLogo",
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 81,
+                    "child": [
+                        {
+                            "type": "Script",
+                            "props": {
+                                "stickMode": "center",
+                                "offsetY": "-30%",
+                                "isAdaptStatusBar": true,
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 129
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Script",
+            "props": {
+                "showDelayMS": 500,
+                "needFakeBanner": true,
+                "isDisableWhileNoDelay": true,
+                "adIndex": 0,
+                "runtime": "youling/common/component/ad/script/YLADRealBanner.ts"
+            },
+            "compId": 241
+        }
+    ],
+    "loadList": [
+        "sdk_youling/lite/pic/common-bth-yuan.png",
+        "sdk_youling/lite/pic/common-bth-zhengdong1.png",
+        "sdk_youling/lite/pic/common-bth-zhengdong2.png",
+        "sdk_youling/lite/pic/common-bth-yousheng1.png",
+        "sdk_youling/lite/pic/common-bth-yousheng2.png",
+        "sdk_youling/lite/prefab/YLGoldPane.prefab",
+        "sdk_youling/lite/pic/common-bth-moreganme.png",
+        "sdk_youling/lite/pic/pic_tishi.png",
+        "sdk_youling/lite/pic/bth-yellow-1.png",
+        "sdk_youling/lite/pic/bth-yellow-kaishiyouxi.png",
+        "sdk_youling/lite/pic/common-gnbth-paihanbang.png",
+        "sdk_youling/lite/pic/common-gnbth-shoucang.png",
+        "sdk_youling/lite/pic/common-gnbth-yqhaoyou.png",
+        "sdk_youling/lite/pic/icon_zj.png",
+        "sdk_youling/lite/pic/common-gnbth-qiandao2.png",
+        "sdk_youling/common/prefab/YLADGameSquare0.prefab",
+        "sdk_youling/lite/prefab/YLAdGameGrid0.prefab",
+        "sdk_youling/lite/prefab/YLAddGameSticker.prefab"
+    ],
+    "loadList3D": []
+}

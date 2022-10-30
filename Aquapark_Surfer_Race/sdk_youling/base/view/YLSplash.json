@@ -1,0 +1,179 @@
+{
+    "type": "View",
+    "props": {
+        "runtime": "youling/splash/view/runtime/YLSplashRTView.ts"
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Box",
+            "props": {
+                "y": -13,
+                "x": -12,
+                "width": 5000,
+                "var": "_spModal",
+                "height": 5000,
+                "bgColor": "#47b5a8"
+            },
+            "compId": 18
+        },
+        {
+            "type": "Sprite",
+            "props": {
+                "y": 666,
+                "x": 374,
+                "width": 50,
+                "name": "_spView",
+                "height": 50
+            },
+            "compId": 22,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": -118,
+                        "x": 1,
+                        "width": 361,
+                        "texture": "sdk_youling/base/pic/logo_youling.png",
+                        "pivotY": 52,
+                        "pivotX": 181,
+                        "name": "spLogo",
+                        "height": 103
+                    },
+                    "compId": 12,
+                    "child": [
+                        {
+                            "type": "Script",
+                            "props": {
+                                "stickMode": "center",
+                                "offsetY": "-118",
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 20
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "centerY": -400,
+                        "centerX": 0,
+                        "skin":"logo.png",
+                        "var": "_imgLogo",
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 33,
+                    "child": [
+                        {
+                            "type": "Script",
+                            "props": {
+                                "stickMode": "center",
+                                "offsetY": "-30%",
+                                "isAdaptStatusBar": true,
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 34
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 616,
+                        "x": 1,
+                        "width": 50,
+                        "name": "loadingPanel",
+                        "height": 50
+                    },
+                    "compId": 15,
+                    "child": [
+                        {
+                            "type": "Script",
+                            "props": {
+                                "y": -150,
+                                "x": 223,
+                                "stickMode": "bottom_center",
+                                "offsetY": "-52",
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 21
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "y": -256,
+                                "x": -301,
+                                "texture": "sdk_youling/base/pic/weni-jiazaizhong.png",
+                                "name": "spTxt"
+                            },
+                            "compId": 25
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": -214,
+                                "x": -348,
+                                "width": 701,
+                                "skin": "sdk_youling/base/pic/loading-progress.png",
+                                "name": "barBg",
+                                "height": 34,
+                                "sizeGrid": "12,22,20,20"
+                            },
+                            "compId": 24
+                        },
+                        
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "y": -206,
+                                "x": -333,
+                                "var": "_spProgressBar",
+                                "texture": "sdk_youling/base/pic/loading-progressbar.png"
+                            },
+                            "compId": 26,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": -10,
+                                        "x": 0,
+                                        "var": "_spProgressBarMask"
+                                    },
+                                    "compId": 30
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": -256,
+                                "x": 101,
+                                "width": 70,
+                                "var": "_txtProgress",
+                                "valign": "middle",
+                                "text": "100%",
+                                "strokeColor": "#08084b",
+                                "stroke": 0,
+                                "height": 26,
+                                "fontSize": 26,
+                                "font": "SimHei",
+                                "color": "#000000",
+                                "bold": false,
+                                "align": "center"
+                            },
+                            "compId": 7
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "loadList": [
+        "sdk_youling/base/pic/logo_youling.png",
+        "sdk_youling/base/pic/weni-jiazaizhong.png",
+        "sdk_youling/base/pic/loading-progress.png",
+        "sdk_youling/base/pic/loading-progressbar.png"
+    ],
+    "loadList3D": []
+}

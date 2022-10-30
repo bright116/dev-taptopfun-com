@@ -1,0 +1,375 @@
+{
+    "type": "Scene",
+    "props": {
+        "width": 750,
+        "top": 0,
+        "right": 0,
+        "left": 0,
+        "height": 1334,
+        "bottom": 0
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "y": 667,
+                "x": 375,
+                "name": "center",
+                "centerY": 0,
+                "centerX": 0
+            },
+            "compId": 331,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 50,
+                        "x": 370,
+                        "skin": "game/zi4@2x.png",
+                        "name": "imgEffect"
+                    },
+                    "compId": 337
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": -100,
+                        "x": 430,
+                        "skin": "game/rank3.png",
+                        "name": "imgEffect2"
+                    },
+                    "compId": 339
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "props": {
+                "top": 300,
+                "right": 0,
+                "name": "dragBeginnerGuide",
+                "mouseThrough": true,
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 94,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "right": 0,
+                        "name": "guideTop",
+                        "left": 0,
+                        "centerY": -3
+                    },
+                    "compId": 196,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": -539,
+                                "x": 159,
+                                "width": 432,
+                                "skin": "game/kuan-help@2x.png",
+                                "sizeGrid": "39,46,45,46",
+                                "height": 278
+                            },
+                            "compId": 191
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": -400,
+                                "x": 350,
+                                "skin": "mainview/ren@2x.png",
+                                "name": "BeginnerGuide"
+                            },
+                            "compId": 174
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": -510,
+                                "x": 275,
+                                "text": "Hold screen",
+                                "name": "text1",
+                                "fontSize": 34,
+                                "font": "SimHei",
+                                "color": "#ffffff",
+                                "bold": true
+                            },
+                            "compId": 225
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": -350,
+                                "x": 237,
+                                "text": "control           move",
+                                "name": "text2",
+                                "fontSize": 30,
+                                "color": "#FFFFFF",
+                                "bold": true
+                            },
+                            "compId": 226
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": -430,
+                                "x": 430,
+                                "skin": "game/jt2@2x.png"
+                            },
+                            "compId": 323,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "centerY": 0,
+                                        "right": -50,
+                                        "text": "R",
+                                        "name": "text3",
+                                        "fontSize": 34,
+                                        "color": "#FFDE49",
+                                        "bold": true
+                                    }
+                                 }
+
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": -430,
+                                "x": 270,
+                                "skin": "game/jt1@2x.png"
+                            },
+                            "compId": 325,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "centerY": 0,
+                                        "left": -50,
+                                        "text": "L",
+                                        "name": "text3",
+                                        "fontSize": 34,
+                                        "color": "#FFDE49",
+                                        "bold": true
+                                    }
+                                 }
+
+                            ]
+                            
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "x": 375,
+                        "width": 532,
+                        "skin": "mainview/yindao_tiao01.png",
+                        "sizeGrid": "0,41,0,44",
+                        "scaleY": 1.09,
+                        "scaleX": 1.09,
+                        "name": "moveBg",
+                        "height": 36,
+                        "centerY": 289,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 92
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "x": 89,
+                        "width": 72,
+                        "skin": "mainview/yindao_tiao02.png",
+                        "name": "finger",
+                        "height": 36,
+                        "centerY": 289
+                    },
+                    "compId": 152,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 5,
+                                "x": 32,
+                                "skin": "mainview/yindao_shou.png",
+                                "scaleY": 1.02,
+                                "scaleX": 1.02,
+                                "name": "hand",
+                                "anchorY": 0,
+                                "anchorX": 0
+                            },
+                            "compId": 93
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Text",
+            "props": {
+                "y": 270,
+                "x": 574,
+                "width": 52,
+                "visible": false,
+                "text": "超越",
+                "name": "surpassOtherText",
+                "height": 26,
+                "fontSize": 26,
+                "color": "#2B2B2B",
+                "runtime": "laya.display.Text"
+            },
+            "compId": 146
+        },
+        {
+            "type": "Script",
+            "props": {
+                "runtime": "script/views/GameFighting.ts"
+            },
+            "compId": 151
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 120,
+                "x": 375,
+                "visible": false,
+                "name": "progress"
+            },
+            "compId": 164,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 0,
+                        "x": -153,
+                        "width": 306,
+                        "skin": "game/jindu2@2x.png",
+                        "sizeGrid": "0,22,0,25",
+                        "name": "bg",
+                        "height": 42
+                    },
+                    "compId": 235
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 7,
+                        "x": -145,
+                        "width": 0,
+                        "skin": "game/jindu1@2x.png",
+                        "sizeGrid": "0,14,0,14",
+                        "name": "progress",
+                        "height": 26
+                    },
+                    "compId": 236
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 3,
+                        "x": -173,
+                        "text": "1",
+                        "strokeColor": "#B54411",
+                        "stroke": 4,
+                        "name": "lbl_level",
+                        "fontSize": 30,
+                        "font": "Helvetica",
+                        "color": "#FFFFFF",
+                        "bold": true,
+                        "anchorX": 0.5
+                    },
+                    "compId": 239
+                }
+            ]
+        }
+    ],
+    "animations": [
+        {
+            "nodes": [
+                {
+                    "target": 176,
+                    "keyframes": {
+                        "scaleY": [
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 176,
+                                "key": "scaleY",
+                                "index": 0
+                            },
+                            {
+                                "value": 1.2,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 176,
+                                "key": "scaleY",
+                                "index": 10
+                            },
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 176,
+                                "key": "scaleY",
+                                "index": 20
+                            }
+                        ],
+                        "scaleX": [
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 176,
+                                "key": "scaleX",
+                                "index": 0
+                            },
+                            {
+                                "value": 1.2,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 176,
+                                "key": "scaleX",
+                                "index": 10
+                            },
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 176,
+                                "key": "scaleX",
+                                "index": 20
+                            }
+                        ]
+                    }
+                }
+            ],
+            "name": "BeginnerGuide",
+            "id": 3,
+            "frameRate": 24,
+            "action": 2
+        }
+    ],
+    "loadList": [
+        "game/zi4@2x.png",
+        "game/rank3.png",
+        "game/kuan-help@2x.png",
+        "mainview/ren@2x.png",
+        "game/jt2@2x.png",
+        "game/jt1@2x.png",
+        "mainview/yindao_tiao01.png",
+        "mainview/yindao_tiao02.png",
+        "mainview/yindao_shou.png",
+        "game/jindu2@2x.png",
+        "game/jindu1@2x.png"
+    ],
+    "loadList3D": []
+}

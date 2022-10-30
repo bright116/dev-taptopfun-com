@@ -1,0 +1,17 @@
+[
+    {"star":1,"end":1,"interval":"60_100","number":10,"probability":"1_60,2_40","speed":60},
+    {"star":2,"end":2,"interval":"60_60,55_40","number":10,"probability":"1_30,2_40,4_30","speed":60},
+    {"star":3,"end":3,"interval":"60_20,55_50,50_30","number":10,"probability":"1_30,2_40,5_30","speed":60},
+    {"star":4,"end":4,"interval":"55_20,50_40,45_30,40_10","number":15,"probability":"1_30,2_40,6_30","speed":60},
+    {"star":5,"end":5,"interval":"50_20,45_40,40_30,35_10","number":15,"probability":"1_30,2_40,7_30","speed":60},
+    {"star":6,"end":10,"interval":"45_30,40_40,35_30","number":15,"probability":"1_30,2_30,4_20,5_20","speed":65},
+    {"star":11,"end":15,"interval":"40_40,35_30,30_30","number":15,"probability":"1_30,2_30,6_20,7_20","speed":65},
+    {"star":16,"end":20,"interval":"40_30,35_40,30_30","number":15,"probability":"1_30,2_30,4_20,7_20","speed":65},
+    {"star":21,"end":25,"interval":"40_15,35_40,30_40,25_5","number":15,"probability":"1_30,2_30,6_20,5_20","speed":65},
+    {"star":26,"end":30,"interval":"40_5,35_40,30_35,25_20","number":20,"probability":"1_30,2_25,4_15,5_10,6_10,7_10","speed":65},
+    {"star":31,"end":35,"interval":"35_35,30_30,25_30,20_5","number":20,"probability":"1_25,2_25,4_15,5_15,6_10,7_10","speed":65},
+    {"star":36,"end":50,"interval":"35_25,30_30,25_30,20_15","number":25,"probability":"1_25,2_20,4_15,5_15,6_15,7_10","speed":70},
+    {"star":51,"end":100,"interval":"35_15,30_30,25_30,20_25","number":25,"probability":"1_20,2_20,4_15,5_15,6_15,7_15","speed":70},
+    {"star":101,"end":200,"interval":"30_30,25_35,20_30,15_5","number":25,"probability":"1_20,2_15,4_20,5_15,6_15,7_15","speed":70},
+    {"star":201,"end":-1,"interval":"30_30,25_30,20_25,15_15","number":30,"probability":"1_15,2_15,4_20,5_15,6_15,7_20","speed":70}
+    ]

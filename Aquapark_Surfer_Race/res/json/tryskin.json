@@ -1,0 +1,8 @@
+[
+    {"id":1,"icon":"1@2x","cap":101,"glasses":203,"skate":405},
+    {"id":2,"icon":"2@2x","cap":104,"glasses":204,"skate":401},
+    {"id":3,"icon":"3@2x","cap":103,"glasses":205,"skate":402},
+    {"id":4,"icon":"4@2x","cap":105,"glasses":202,"skate":406},
+    {"id":5,"icon":"5@2x","cap":106,"glasses":206,"skate":404},
+    {"id":6,"icon":"6@2x","cap":102,"glasses":201,"skate":403}
+]

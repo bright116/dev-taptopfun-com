@@ -1,0 +1,18 @@
+[
+    {"id":1,"model":"yyq_01","diff":1,"type":1,"":"","xcoor":"-2.4_2.4","length":2.2,"width":2.2},
+    {"id":2,"model":"yyq_02","diff":1,"type":1,"":"","xcoor":"-2.4_2.4","length":2.2,"width":2.2},
+    {"id":3,"model":"yyq_03","diff":1,"type":1,"":"","xcoor":"-2.4_2.4","length":2.2,"width":2.2},
+    {"id":4,"model":"yyq_04","diff":2,"type":1,"":"","xcoor":"0","length":1.5,"width":"null"},
+    {"id":5,"model":"yyq_05","diff":2,"type":1,"":"","xcoor":"0","length":1.5,"width":"null"},
+    {"id":6,"model":"yyq_06","diff":2,"type":1,"":"","xcoor":"0","length":1.5,"width":"null"},
+    {"id":7,"model":"yyq_07","diff":2,"type":1,"":"","xcoor":"0","length":1.5,"width":"null"},
+    {"id":8,"model":"yyq_08","diff":2,"type":1,"":"","xcoor":"0","length":1.5,"width":"null"},
+    {"id":9,"model":"yyq_09","diff":2,"type":1,"":"","xcoor":"0","length":1.5,"width":"null"},
+    {"id":10,"model":"daoju_5","diff":4,"type":2,"":"","xcoor":"0","length":1,"width":"null"},
+    {"id":11,"model":"daoju_6","diff":4,"type":2,"":"","xcoor":"0","length":1,"width":"null"},
+    {"id":12,"model":"zhangai_1","diff":5,"type":2,"":"","xcoor":"0","length":3.4,"width":"null"},
+    {"id":13,"model":"zhangai_2","diff":6,"type":2,"":"","xcoor":"-1.5_1.5","length":3.5,"width":3.5},
+    {"id":14,"model":"zhangai_4","diff":7,"type":2,"":"","xcoor":"0","length":2.2,"width":"null"},
+    {"id":15,"model":"zhangai_5","diff":5,"type":2,"":"","xcoor":"0","length":3.4,"width":"null"},
+    {"id":16,"model":"zhangai_6","diff":7,"type":2,"":"","xcoor":"0","length":2.2,"width":"null"}
+    ]

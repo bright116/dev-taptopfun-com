@@ -1,0 +1,7 @@
+[
+    {"ID":101,"text":"任意模式获得500分","award_type":"1,2","reward":"500,1"},
+    {"ID":102,"text":"观看1次视频","award_type":"1,2","reward":"500,1"},
+    {"ID":103,"text":"分享1个好友","award_type":"1,2","reward":"1000,3"},
+    {"ID":104,"text":"添加到浮窗","award_type":"1,2","reward":"1000,3"},
+    {"ID":105,"text":"收藏到小程序","award_type":"1,2","reward":"500,2"}
+    ]

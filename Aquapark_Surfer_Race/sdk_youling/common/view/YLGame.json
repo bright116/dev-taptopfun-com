@@ -1,0 +1,497 @@
+{
+    "type": "Scene",
+    "props": {
+        "runtime": "youling/main/view/runtime/YLGameRTView.ts",
+        "mouseThrough": true
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Sprite",
+            "props": {
+                "y": 659,
+                "x": 367,
+                "var": "_spView"
+            },
+            "compId": 119,
+            "child": [
+                {
+                    "type": "FontClip",
+                    "props": {
+                        "y": -474,
+                        "x": 6,
+                        "var": "_fontScore",
+                        "value": "999",
+                        "skin": "shuzi1.png",
+                        "sheet": "0123456789.+-x",
+                        "height": 100,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5,
+                        "align": "center"
+                    },
+                    "compId": 56,
+                    "child": [
+                        {
+                            "type": "Script",
+                            "props": {
+                                "stickMode": "h_center",
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 116
+                        }
+                    ]
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": -345,
+                        "x": -367,
+                        "width": 456,
+                        "var": "_panelRank",
+                        "pivotY": 0,
+                        "pivotX": 0,
+                        "height": 65
+                    },
+                    "compId": 69,
+                    "child": [
+                        {
+                            "type": "WXOpenDataViewer",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "width": 456,
+                                "var": "_wxRankHead",
+                                "iconSign": "wx",
+                                "height": 65,
+                                "runtime": "laya.ui.WXOpenDataViewer"
+                            },
+                            "compId": 71
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": -344,
+                        "x": 384,
+                        "width": 1,
+                        "var": "_panelOver",
+                        "height": 1
+                    },
+                    "compId": 81,
+                    "child": [
+                        {
+                            "type": "Script",
+                            "props": {
+                                "stickMode": "right",
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 118
+                        },
+                        {
+                            "type": "WXOpenDataViewer",
+                            "props": {
+                                "y": -37,
+                                "x": -120,
+                                "width": 120,
+                                "var": "_wxOverHead",
+                                "iconSign": "wx",
+                                "height": 100,
+                                "anchorX": 0,
+                                "runtime": "laya.ui.WXOpenDataViewer"
+                            },
+                            "compId": 68
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Sprite",
+            "props": {
+                "y": 1344,
+                "x": 385,
+                "var": "_panelAdBottom",
+                "presetID": 1,
+                "width": 50,
+                "runtime": "youling/common/component/ad/runtime/YLADGameRTBanner0.ts",
+                "isPresetRoot": true,
+                "height": 50
+            },
+            "compId": 133,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "presetID": 2,
+                        "sizeGrid": "0,1,0,1",
+                        "y": 0,
+                        "x": 0,
+                        "width": 760,
+                        "skin": "sdk_youling/lite/pic/common-guanggao-di-b.png",
+                        "name": "imgBg",
+                        "anchorY": 1,
+                        "anchorX": 0.5
+                    },
+                    "compId": 134
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 3,
+                        "y": -180,
+                        "x": -360,
+                        "width": 128,
+                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                        "isPresetRoot": true,
+                        "height": 169,
+                        "name": "ad0"
+                    },
+                    "compId": 135,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "presetID": 4,
+                                "sizeGrid": "2,2,2,2",
+                                "y": 0,
+                                "x": 64,
+                                "width": 128,
+                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                "name": "imgAd",
+                                "height": 169,
+                                "anchorX": 0.5
+                            },
+                            "compId": 136
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 5,
+                        "y": -180,
+                        "x": -211,
+                        "width": 128,
+                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                        "isPresetRoot": true,
+                        "height": 169,
+                        "name": "ad1"
+                    },
+                    "compId": 137,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "presetID": 6,
+                                "sizeGrid": "2,2,2,2",
+                                "y": 0,
+                                "x": 64,
+                                "width": 128,
+                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                "name": "imgAd",
+                                "height": 169,
+                                "anchorX": 0.5
+                            },
+                            "compId": 138
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 7,
+                        "y": -180,
+                        "x": -63,
+                        "width": 128,
+                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                        "isPresetRoot": true,
+                        "height": 169,
+                        "name": "ad2"
+                    },
+                    "compId": 139,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "presetID": 8,
+                                "sizeGrid": "2,2,2,2",
+                                "y": 0,
+                                "x": 64,
+                                "width": 128,
+                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                "name": "imgAd",
+                                "height": 169,
+                                "anchorX": 0.5
+                            },
+                            "compId": 140
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 9,
+                        "y": -180,
+                        "x": 86,
+                        "width": 128,
+                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                        "isPresetRoot": true,
+                        "height": 169,
+                        "name": "ad3"
+                    },
+                    "compId": 141,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "presetID": 10,
+                                "sizeGrid": "2,2,2,2",
+                                "y": 0,
+                                "x": 64,
+                                "width": 128,
+                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                "name": "imgAd",
+                                "height": 169,
+                                "anchorX": 0.5
+                            },
+                            "compId": 142
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 11,
+                        "y": -180,
+                        "x": 234,
+                        "width": 128,
+                        "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                        "isPresetRoot": true,
+                        "height": 169,
+                        "name": "ad4"
+                    },
+                    "compId": 143,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "presetID": 12,
+                                "sizeGrid": "2,2,2,2",
+                                "y": 0,
+                                "x": 64,
+                                "width": 128,
+                                "skin": "sdk_youling/lite/pic/mask_white.png",
+                                "name": "imgAd",
+                                "height": 169,
+                                "anchorX": 0.5
+                            },
+                            "compId": 144
+                        }
+                    ]
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "stickMode": "bottom_center",
+                        "runtime": "youling/common/component/AlignWidget.ts"
+                    },
+                    "compId": 145
+                }
+            ]
+        },
+        {
+            "type": "Sprite",
+            "props": {
+                "y": 667,
+                "x": 0,
+                "var": "_panelAdCenter",
+                "presetID": 1,
+                "runtime": "youling/common/component/ad/runtime/YLADGameRTSquare0.ts",
+                "isPresetRoot": true
+            },
+            "compId": 120,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 2,
+                        "y": -156,
+                        "x": -1,
+                        "width": 50,
+                        "name": "paneLeft",
+                        "height": 50
+                    },
+                    "compId": 121,
+                    "child": [
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "presetID": 3,
+                                "y": -21,
+                                "x": 10,
+                                "width": 128,
+                                "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                                "isPresetRoot": true,
+                                "height": 169,
+                                "name": "adL1"
+                            },
+                            "compId": 122,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "presetID": 4,
+                                        "sizeGrid": "2,2,2,2",
+                                        "y": 0,
+                                        "x": 64,
+                                        "width": 128,
+                                        "skin": "sdk_youling/lite/pic/mask_white.png",
+                                        "name": "imgAd",
+                                        "height": 169,
+                                        "anchorX": 0.5
+                                    },
+                                    "compId": 123
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "presetID": 5,
+                                "y": 168,
+                                "x": 10,
+                                "width": 128,
+                                "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                                "isPresetRoot": true,
+                                "height": 169,
+                                "var": "_adL2",
+                                "name": "adL2"
+                            },
+                            "compId": 124,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "presetID": 6,
+                                        "sizeGrid": "2,2,2,2",
+                                        "y": 0,
+                                        "x": 64,
+                                        "width": 128,
+                                        "skin": "sdk_youling/lite/pic/mask_white.png",
+                                        "name": "imgAd",
+                                        "height": 169,
+                                        "anchorX": 0.5
+                                    },
+                                    "compId": 125
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 7,
+                        "y": -150,
+                        "x": 749,
+                        "width": 50,
+                        "pivotX": 50,
+                        "name": "paneRight",
+                        "height": 50
+                    },
+                    "compId": 126,
+                    "child": [
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "presetID": 8,
+                                "y": -27,
+                                "x": -90,
+                                "width": 128,
+                                "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                                "isPresetRoot": true,
+                                "height": 169,
+                                "name": "adR1"
+                            },
+                            "compId": 127,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "presetID": 9,
+                                        "sizeGrid": "2,2,2,2",
+                                        "y": 0,
+                                        "x": 64,
+                                        "width": 128,
+                                        "skin": "sdk_youling/lite/pic/mask_white.png",
+                                        "name": "imgAd",
+                                        "height": 169,
+                                        "anchorX": 0.5
+                                    },
+                                    "compId": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "presetID": 10,
+                                "y": 162,
+                                "x": -90,
+                                "width": 128,
+                                "runtime": "youling/common/component/ad/runtime/YLADGameRTGrid.ts",
+                                "isPresetRoot": true,
+                                "height": 169,
+                                "name": "adR2"
+                            },
+                            "compId": 129,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "presetID": 11,
+                                        "sizeGrid": "2,2,2,2",
+                                        "y": 0,
+                                        "x": 64,
+                                        "width": 128,
+                                        "skin": "sdk_youling/lite/pic/mask_white.png",
+                                        "name": "imgAd",
+                                        "height": 169,
+                                        "anchorX": 0.5
+                                    },
+                                    "compId": 130
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "presetID": 12,
+                                "y": 0,
+                                "x": 0,
+                                "stickMode": "right",
+                                "runtime": "youling/common/component/AlignWidget.ts"
+                            },
+                            "compId": 131
+                        }
+                    ]
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "stickMode": "v_middle",
+                        "runtime": "youling/common/component/AlignWidget.ts"
+                    },
+                    "compId": 132
+                }
+            ]
+        }
+    ],
+    "loadList": [
+        "sdk_youling/lite/prefab/YLADGameBanner0.prefab",
+        "sdk_youling/lite/prefab/YLAdGameGrid0.prefab",
+        "sdk_youling/common/prefab/YLADGameSquare0.prefab"
+    ],
+    "loadList3D": []
+}

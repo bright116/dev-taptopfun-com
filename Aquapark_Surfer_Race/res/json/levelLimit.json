@@ -1,0 +1,11 @@
+[
+    {"star":1,"end":1,"interval":30,"number":10,"probability":"1_ 30,2_70","time":25},
+    {"star":2,"end":2,"interval":30,"number":10,"probability":"1_ 20,2_65,3_15","time":20},
+    {"star":3,"end":5,"interval":25,"number":11,"probability":"1_ 15,2_50,3_20,4_15","time":18},
+    {"star":6,"end":10,"interval":25,"number":11,"probability":"1_ 15,2_45,3_25,4_10,5_5","time":16},
+    {"star":11,"end":20,"interval":25,"number":11,"probability":"1_ 15,2_40,3_25,4_15,5_5","time":15},
+    {"star":21,"end":50,"interval":25,"number":11,"probability":"1_ 15,2_30,3_25,4_20,5_10","time":14},
+    {"star":51,"end":100,"interval":25,"number":10,"probability":"1_ 10,2_35,3_20,4_20,5_15","time":13},
+    {"star":101,"end":200,"interval":25,"number":10,"probability":"1_ 15,2_25,3_20,4_20,5_20","time":12},
+    {"star":201,"end":-1,"interval":25,"number":10,"probability":"1_ 10,2_20,3_20,4_25,5_25","time":10}
+]
