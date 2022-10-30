@@ -1,0 +1,212 @@
+{
+    "frames": {
+        "bg1.png": {
+            "frame": {
+                "h": 226,
+                "idx": 0,
+                "w": 309,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 227,
+                "w": 309
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "bg2.png": {
+            "frame": {
+                "h": 227,
+                "idx": 0,
+                "w": 309,
+                "x": 0,
+                "y": 227
+            },
+            "sourceSize": {
+                "h": 227,
+                "w": 309
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "bg3.png": {
+            "frame": {
+                "h": 27,
+                "idx": 0,
+                "w": 69,
+                "x": 0,
+                "y": 495
+            },
+            "sourceSize": {
+                "h": 27,
+                "w": 69
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "bg4.png": {
+            "frame": {
+                "h": 27,
+                "idx": 0,
+                "w": 69,
+                "x": 70,
+                "y": 495
+            },
+            "sourceSize": {
+                "h": 27,
+                "w": 69
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "closeBtn.png": {
+            "frame": {
+                "h": 111,
+                "idx": 0,
+                "w": 245,
+                "x": 310,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 111,
+                "w": 245
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "pro1.png": {
+            "frame": {
+                "h": 27,
+                "idx": 0,
+                "w": 69,
+                "x": 140,
+                "y": 495
+            },
+            "sourceSize": {
+                "h": 27,
+                "w": 69
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "pro2.png": {
+            "frame": {
+                "h": 27,
+                "idx": 0,
+                "w": 69,
+                "x": 210,
+                "y": 495
+            },
+            "sourceSize": {
+                "h": 27,
+                "w": 69
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "tip1.png": {
+            "frame": {
+                "h": 39,
+                "idx": 0,
+                "w": 268,
+                "x": 0,
+                "y": 455
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 268
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "tip2.png": {
+            "frame": {
+                "h": 39,
+                "idx": 0,
+                "w": 268,
+                "x": 269,
+                "y": 455
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 268
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "tryBtn.png": {
+            "frame": {
+                "h": 111,
+                "idx": 0,
+                "w": 245,
+                "x": 310,
+                "y": 112
+            },
+            "sourceSize": {
+                "h": 111,
+                "w": 245
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "useBtn.png": {
+            "frame": {
+                "h": 111,
+                "idx": 0,
+                "w": 245,
+                "x": 310,
+                "y": 224
+            },
+            "sourceSize": {
+                "h": 111,
+                "w": 245
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "using.png": {
+            "frame": {
+                "h": 111,
+                "idx": 0,
+                "w": 245,
+                "x": 310,
+                "y": 336
+            },
+            "sourceSize": {
+                "h": 111,
+                "w": 245
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "XDUI.png",
+         "prefix": "XDUI/"
+    }
+}

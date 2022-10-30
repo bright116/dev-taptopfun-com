@@ -1,0 +1,161 @@
+{
+    "frames": {
+        "1.png": {
+            "frame": {
+                "h": 37,
+                "idx": 0,
+                "w": 430,
+                "x": 0,
+                "y": 153
+            },
+            "sourceSize": {
+                "h": 56,
+                "w": 461
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 11
+            }
+        },
+        "2.png": {
+            "frame": {
+                "h": 37,
+                "idx": 0,
+                "w": 287,
+                "x": 0,
+                "y": 191
+            },
+            "sourceSize": {
+                "h": 56,
+                "w": 288
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 11
+            }
+        },
+        "3.png": {
+            "frame": {
+                "h": 38,
+                "idx": 0,
+                "w": 287,
+                "x": 0,
+                "y": 229
+            },
+            "sourceSize": {
+                "h": 56,
+                "w": 288
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 10
+            }
+        },
+        "dream.png": {
+            "frame": {
+                "h": 76,
+                "idx": 0,
+                "w": 413,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 112,
+                "w": 421
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 24
+            }
+        },
+        "homeBtn.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 69,
+                "x": 262,
+                "y": 77
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 69
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "level.png": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 79,
+                "x": 332,
+                "y": 77
+            },
+            "sourceSize": {
+                "h": 35,
+                "w": 79
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 12
+            }
+        },
+        "progress.png": {
+            "frame": {
+                "h": 28,
+                "idx": 0,
+                "w": 272,
+                "x": 0,
+                "y": 309
+            },
+            "sourceSize": {
+                "h": 28,
+                "w": 272
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "progressBg.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 286,
+                "x": 0,
+                "y": 268
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 286
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "snow.png": {
+            "frame": {
+                "h": 75,
+                "idx": 0,
+                "w": 261,
+                "x": 0,
+                "y": 77
+            },
+            "sourceSize": {
+                "h": 111,
+                "w": 418
+            },
+            "spriteSourceSize": {
+                "x": 81,
+                "y": 24
+            }
+        }
+    },
+    "meta": {
+        "image": "GameUI.png",
+         "prefix": "GameUI/"
+    }
+}
