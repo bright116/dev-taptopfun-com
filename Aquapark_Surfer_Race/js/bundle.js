@@ -12473,7 +12473,10 @@ function _0x418f() {
                             case this['_btnContinue']:
                                 platform[_0x217daf(0x11d)]()[_0x217daf(0x660)](() => {
                                     var _0x23089a = _0x217daf;
-                                    this[_0x23089a(0x4e7)][_0x23089a(0x63c)](), console[_0x23089a(0x17b)](_0x23089a(0x7fa)), window[_0x23089a(0x509)]['visible'] = !![], window[_0x23089a(0x615)]['visible'] = ![], this[_0x23089a(0x4e7)][_0x23089a(0x63b)]();
+                                    this[_0x23089a(0x4e7)][_0x23089a(0x63c)](), console[_0x23089a(0x17b)](_0x23089a(0x7fa)), 
+                                    window[_0x23089a(0x509)]['visible'] = !![], 
+                                    window[_0x23089a(0x615)]['visible'] = ![], 
+                                    this[_0x23089a(0x4e7)][_0x23089a(0x63b)]();
                                 });
                         }
                     }
@@ -18500,7 +18503,7 @@ function _0x418f() {
             (Config[_0x48ed31(0xb54)] = ![]),
                 (_classCallCheck(this, _0x3845cf),
                 (Laya["isWXPosMsg"] = !0x0),
-                // (Laya[_0x48ed31(0xb55)] = !0x1),
+                (Laya[_0x48ed31(0xb55)] = !0x1),
                 (Laya[_0x48ed31(0xb56)]["CharacterCache"] = !0x1),
                 (Laya[_0x48ed31(0xa7a)]["multiTouchEnabled"] = !0x1),
                 window["Laya3D"]
@@ -18522,14 +18525,14 @@ function _0x418f() {
                     (window["WebAudioEngine"]["pause"] = Laya[_0x2f473(0x6dd)]["getItem"](_0x2f473(0xb61))
                         ? JSON[_0x2f473(0x1d0)](Laya[_0x2f473(0x6dd)][_0x2f473(0xb62)](_0x2f473(0xb61)))
                         : ![]),
-                        // window[_0x2f473(0xb63)]["scale"](0.65, 0.65),
-                        // (window[_0x2f473(0xb63)][_0x2f473(0x70d)] = -0x1),
+                        window[_0x2f473(0xb63)]["scale"](0.65, 0.65),
+                        (window[_0x2f473(0xb63)][_0x2f473(0x70d)] = -0x1),
                         Laya[_0x2f473(0x173)]["addChild"](window[_0x2f473(0x509)]),
                         Laya[_0x2f473(0x173)][_0x2f473(0x478)](window[_0x2f473(0x615)]),
-                        // (window[_0x2f473(0x509)]["bottom"] = 0xc8),
-                        // window["box_adTwo"][_0x2f473(0xb64)](0xc8),
-                        // (window["scrollList"][_0x2f473(0x70a)] = 0x32),
-                        // (window["box_adTwo"][_0x2f473(0x4a5)] = window[_0x2f473(0x615)][_0x2f473(0x4a5)] = ![]),
+                        (window[_0x2f473(0x509)]["bottom"] = 0xc8),
+                        window["box_adTwo"][_0x2f473(0xb64)](0xc8),
+                        (window["scrollList"][_0x2f473(0x70a)] = 0x32),
+                        (window["box_adTwo"][_0x2f473(0x4a5)] = window[_0x2f473(0x615)][_0x2f473(0x4a5)] = ![]),
                         (Laya["stage"][_0x2f473(0x508)] = 0x2);
                 });
         }

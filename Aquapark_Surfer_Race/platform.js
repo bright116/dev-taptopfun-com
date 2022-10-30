@@ -610,26 +610,34 @@
                 complete && complete();
             }
             if (this.initialized_) return;
+            // platform.getInstance().showSplash();
+            platform.getInstance().createLogo();
             this.createNoVideo();
             this.createLoading();
             window.WebAudioEngine.init().then(() => {
                 Laya.SoundManager.playMusic = function(url) {
                     window.WebAudioEngine && window.WebAudioEngine.playMusic(url);
                 }
-                Laya.SoundManager.playSound = function(url) {
+                Laya.SoundManager.playSound = function(url, loop = false) {
                     window.WebAudioEngine && window.WebAudioEngine.playSound(url);
                 }
-                Laya.SoundManager.stopMusic = function(url) {
+                Laya.SoundManager.stopMusic = function() {
                     window.WebAudioEngine && window.WebAudioEngine.stopMusic();
                 }
+                Laya.SoundManager.stopSound = function(url) {
+                    window.WebAudioEngine && window.WebAudioEngine.stopSound(url);
+                }
             })
+        
+        
             //临时锁死
             this.initialized_ = true;
-        
-        
-            // 直接开始游戏
-            this.needStartUp = false;
-            complete && complete();
+            Laya.loader.load("cnf.json", Laya.Handler.create(this, (res) => {
+                window.scrollList = this.scrollList();
+                window.box_adTwo = this.box_adTwo();
+                this.needStartUp = false;
+                complete && complete();
+            }))
         }
 
         showBanner(data) {
