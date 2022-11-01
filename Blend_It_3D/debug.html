@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="/public/newafg/game.css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120043346-56"></script>
+    <script id="g-tag">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120043346-56');
+        gtag('config', 'UA-185765087-3');
+    </script>
+    <!-- End Google Analytics -->
+
+    <script src="/public/js/jquery-1.11.3.min.js"></script>
+    <script async
+            data-ad-client="ca-pub-2270136017335510"
+            data-adbreak-test="on"
+            data-ad-frequency-hint="30s"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    </script>
+
+    <script>
+        window.adsbygoogle = window.adsbygoogle || [];
+        var adBreak = adConfig = function(o) {adsbygoogle.push(o);}
+
+        adConfig({
+            preloadAdBreaks: 'on',
+            onReady: () => {
+                console.log('[adConfig] Ads Load Ready');
+            }
+        });
+    </script>
+
+    <script>
+        var gameTitle = "Blend It 3D";
+        var GadGA  = "UA-120043346-56";
+        var GadAFC = "ca-pub-2270136017335510";
+        var GadAFG = "ca-games-pub-2270136017335510";
+        var GadSlot = "4542208643";
+        var GadURL = "https://googleads.g.doubleclick.net/pagead/ads?" +
+            "ad_type=image" +
+            "&client={google.afg}" +
+            "&description_url=http%3A%2F%2F{game.path}" +
+            "&videoad_start_delay=0&hl=en&max_ad_duration=30000";
+        GadURL = GadURL.replace(/{google.afg}/, GadAFG).replace(/{game.path}/, gameTitle);
+
+        var _is_show_go_icon = false;
+        var _is_show_banner = true;
+        var _is_check_ip_enabled = false;
+        var _is_show_banner_stub = false;
+        var _is_show_splash_afg = false;
+    </script>
+</head>
+<body>
+
+<div id="rotate" class="rotate">
+    <div class="icon"></div>
+</div>
+
+<div id="mainContainer" style="display: none">
+    <div id="adContainer"></div>
+    <video id="videoElement"></video>
+</div>
+
+<div id="gameframediv">
+    <iframe id='game_frame' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen='true' webkit-playsinline='true' scrolling='no' seamless frameborder='0' style='display:block;overflow:hidden;'></iframe>
+</div>
+<div id='afc_banner_foot'></div>
+
+<script src="/public/newafg/ads-sdk.js"></script>
+
+</body>
+</html>
+
