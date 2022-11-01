@@ -1,0 +1,1 @@
+{"compId":2,"child":[{"compId":3,"type":"Image","props":{"top":14,"anchorX":0.5,"height":52,"width":57,"skin":"Lwg/UI/img_arrows_left.png","var":"btnReturn","anchorY":0.5,"left":12}}],"type":"View","props":{"y":0,"x":0,"height":80,"width":80},"loadList":["Lwg/UI/img_arrows_left.png"],"loadList3D":[]}

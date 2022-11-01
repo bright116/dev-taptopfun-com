@@ -1,0 +1,61 @@
+{
+    "describe": [
+        "[synthesis]     合成 ",
+        "[id]     材料的id ",
+        "[pic]     图片文件名 ",
+        "[call]     材料名 ",
+        "[trial]    试用 ",
+        "[name]    恐龙名 ",
+        "[num]    试用次数 ",
+        "[dataid]    所需材料的id ",
+        "[time]    每次试用时间，单位为s ",
+        "[weight]    出现的权重 "
+    ],
+    "RECORDS": [
+        {
+            "id": 1,
+            "name": "Rex",
+            "num": 2,
+            "dataid": [
+                1,
+                2,
+                3,
+                6
+            ],
+            "time": "600",
+            "weight": "6",
+            "chartlet": "Dino004_c",
+            "txtname": "icon_text_long2"
+        },
+        {
+            "id": 2,
+            "name": "Tyranny rex",
+            "num": 2,
+            "dataid": [
+                1,
+                2,
+                5,
+                6
+            ],
+            "time": "600",
+            "weight": "3",
+            "chartlet": "Dino004_d",
+            "txtname": "icon_text_long9"
+        },
+        {
+            "id": 3,
+            "name": "Red blood rex",
+            "num": 2,
+            "dataid": [
+                2,
+                3,
+                4,
+                6
+            ],
+            "time": "600",
+            "weight": "1",
+            "chartlet": "Dino004_a",
+            "txtname": "icon_text_long8"
+        }
+    ]
+}

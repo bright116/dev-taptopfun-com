@@ -1,0 +1,108 @@
+{
+    "collision": [
+        "[tab]     页签 ",
+        "[type]     类型：1：Run  2：Swim  3：Crash  4：Fly  5：Calm ",
+        "[unLock]     解锁条件：0：Free for newbies  1：Unlock after level x  2：Use coins to unlock  3：Watch ads to unlock  4：Merge to unlock 5：Event to unlock ",
+        "[num]     解锁条件对应的数量，如果是射程是配置合成所需要材料id ",
+        "[addition]    动物的速度加成 ",
+        "[height]    地面类型和对应的高度，类型1：草地   类型2：水池  类型3：障碍  类型4：岩浆  类型5：流沙 "
+    ],
+    "RECORDS": [
+        {
+            "id": 1,
+            "name": "Triceratops",
+            "pic": "Dino005",
+            "chartlet": "Dino005_a",
+            "grade": "1",
+            "unLock": "0",
+            "num": "0",
+            "describe": "None",
+            "addition": "0",
+            "height": "[1,0],[2,-1.5],[3,0],[4,-0.5],[5,0]"
+        },
+        {
+            "id": 2,
+            "name": "Triceratops",
+            "pic": "Dino005",
+            "chartlet": "Dino005_b",
+            "grade": "2",
+            "unLock": "2",
+            "num": "2000",
+            "describe": "None",
+            "addition": "0.05",
+            "height": "[1,0],[2,-1.5],[3,0],[4,-0.5],[5,0]"
+        },
+        {
+            "id": 3,
+            "name": "Triceratops",
+            "pic": "Dino005",
+            "chartlet": "Dino005_c",
+            "grade": "3",
+            "unLock": "2",
+            "num": "3000",
+            "describe": "None",
+            "addition": "0.1",
+            "height": "[1,0],[2,-1.5],[3,0],[4,-0.5],[5,0]"
+        },
+        {
+            "id": 4,
+            "name": "Triceratops",
+            "pic": "Dino005",
+            "chartlet": "Dino005_d",
+            "grade": "4",
+            "unLock": "3",
+            "num": "1",
+            "describe": "None",
+            "addition": "0.15",
+            "height": "[1,0],[2,-1.5],[3,0],[4,-0.5],[5,0]"
+        },
+        {
+            "id": 5,
+            "name": "Triceratops",
+            "pic": "Dino004",
+            "chartlet": "Dino004_c",
+            "grade": "5",
+            "unLock": "4",
+            "num": "0",
+            "describe": "Triceratops is a large carnivorous dinosaur with 13 meters long and 7 metric tons weight. It lived 65.5 million years ago.",
+            "addition": "0.2",
+            "height": "[1,0],[2,-4],[3,0],[4,-1],[5,0]"
+        },
+        {
+            "id": 6,
+            "name": "Berserk rex",
+            "pic": "Dino004",
+            "chartlet": "Dino004_b",
+            "grade": "6",
+            "unLock": "5",
+            "num": "0",
+            "describe": "Berserk rex is a large carnivorous dinosaur with 13 meters long and 7 metric tons weight. It lived 65.5 million years ago.",
+            "addition": "0.22",
+            "height": "[1,0],[2,-4],[3,0],[4,-1],[5,0]"
+        },
+        {
+            "id": 7,
+            "name": "Tyranny rex",
+            "pic": "Dino004",
+            "chartlet": "Dino004_d",
+            "grade": "7",
+            "unLock": "4",
+            "num": "0",
+            "describe": "Tyranny rex is a large carnivorous dinosaur with 13 meters long and 7 metric tons weight. It lived 65.5 million years ago.",
+            "addition": "0.25",
+            "height": "[1,0],[2,-4],[3,0],[4,-1],[5,0]"
+        },
+        {
+            "id": 8,
+            "name": "Red blood rex",
+            "pic": "Dino004",
+            "chartlet": "Dino004_a",
+            "grade": "8",
+            "unLock": "4",
+            "num": "0",
+            "describe": "Red blood rex is a large carnivorous dinosaur with 13 meters long and 7 metric tons weight. It lived 65.5 million years ago.",
+            "addition": "0.3",
+            "height": "[1,0],[2,-4],[3,0],[4,-1],[5,0]"
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "fly": [
+        "[tab]     页签 ",
+        "[type]     类型：1：奔跑  2：游泳  3：冲撞  4：飞行  5：稳健 ",
+        "[unLock]     解锁条件：0：初始赠送  1：通过*关后解锁  2：花费金币解锁  3：看视频解锁  4：合成解锁 5：活动解锁 ",
+        "[num]     解锁条件对应的数量，如果是射程是配置合成所需要材料id ",
+        "[addition]    动物的速度加成 ",
+        "[height]    地面类型和对应的高度，类型1：草地   类型2：水池  类型3：障碍  类型4：岩浆  类型5：流沙 "
+    ],
+    "RECORDS": [
+        {
+            "id": 1,
+            "name": "Toothless pterosaur",
+            "pic": "Dino002",
+            "chartlet": "Dino002_a",
+            "grade": "1",
+            "unLock": "0",
+            "num": "0",
+            "describe": "None",
+            "addition": "0",
+            "height": "[1,0],[2,-1.8],[3,0],[4,5],[5,0]"
+        },
+        {
+            "id": 2,
+            "name": "Toothless pterosaur1",
+            "pic": "Dino002",
+            "chartlet": "Dino002_b",
+            "grade": "2",
+            "unLock": "2",
+            "num": "2000",
+            "describe": "None",
+            "addition": "0.05",
+            "height": "[1,0],[2,-1.8],[3,0],[4,5],[5,0]"
+        },
+        {
+            "id": 3,
+            "name": "Toothless pterosaur2",
+            "pic": "Dino002",
+            "chartlet": "Dino002_c",
+            "grade": "3",
+            "unLock": "5",
+            "num": "1",
+            "describe": "None",
+            "addition": "0.1",
+            "height": "[1,0],[2,-1.8],[3,0],[4,5],[5,0]"
+        },
+        {
+            "id": 4,
+            "name": "Toothless pterosaur3",
+            "pic": "Dino002",
+            "chartlet": "Dino002_d",
+            "grade": "4",
+            "unLock": "3",
+            "num": "1",
+            "describe": "None",
+            "addition": "0.15",
+            "height": "[1,0],[2,-1.8],[3,0],[4,5],[5,0]"
+        }
+    ]
+}

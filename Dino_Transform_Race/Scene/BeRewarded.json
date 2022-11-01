@@ -1,0 +1,217 @@
+{
+    "type": "View",
+    "props": {
+        "width": 576,
+        "height": 1024
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "zOrder": -5,
+                "y": 0,
+                "x": 0,
+                "var": "background",
+                "top": 0,
+                "skin": "Lwg/UI/img_rectangle_mask_07.png",
+                "right": 0,
+                "name": "background",
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 3
+        },
+        {
+            "type": "Box",
+            "props": {
+                "width": 555,
+                "height": 768,
+                "centerY": 0,
+                "centerX": 0
+            },
+            "compId": 8,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 317,
+                        "x": 274,
+                        "width": 1,
+                        "height": 1
+                    },
+                    "compId": 31,
+                    "child": [
+                        {
+                            "type": "SkeletonPlayer",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "width": 0,
+                                "var": "ani",
+                                "url": "Game/UI/Animation/effect01.sk",
+                                "runtime": "Laya.Skeleton",
+                                "height": 0
+                            },
+                            "compId": 32
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 24,
+                        "var": "tattle",
+                        "skin": "Game/UI/Sgin/title_bg_1.png",
+                        "centerX": 0
+                    },
+                    "compId": 5,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 13,
+                                "skin": "Game/UI/Victory/title_text_gongxihuode.png",
+                                "centerX": 0
+                            },
+                            "compId": 6
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 594,
+                        "width": 246,
+                        "var": "btnThreeGet1",
+                        "skin": "Game/UI/Sgin/btn_ty_01.png",
+                        "height": 94,
+                        "centerX": 0,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 9,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "var": "imgBtnWord",
+                                "skin": "Game/UI/Victory/img_btn_text_3beilingqu.png",
+                                "name": "imgBtnWord",
+                                "centerY": 0,
+                                "centerX": 27
+                            },
+                            "compId": 10
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 26.5,
+                                "x": 29,
+                                "var": "img_video",
+                                "skin": "Game/UI/Sgin/icon_AD.png",
+                                "name": "img_video"
+                            },
+                            "compId": 29
+                        }
+                    ]
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": 467,
+                        "width": 200,
+                        "height": 56,
+                        "centerX": 0
+                    },
+                    "compId": 14,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 17,
+                                "var": "rewardIcon",
+                                "skin": "Game/UI/Start/icon_jinbi_1.png",
+                                "centerY": 1
+                            },
+                            "compId": 15
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "x": 61,
+                                "width": 122,
+                                "var": "rewardNum",
+                                "valign": "middle",
+                                "text": "2650",
+                                "height": 38,
+                                "fontSize": 38,
+                                "color": "#ffffff",
+                                "centerY": 3,
+                                "bold": true,
+                                "align": "center"
+                            },
+                            "compId": 16
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 281,
+                        "x": 195,
+                        "var": "rewardBigPic",
+                        "skin": "Game/UI/Sgin/icon_jinbi_2.png"
+                    },
+                    "compId": 7
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 686,
+                        "var": "btnDirect",
+                        "skin": "Game/UI/Sgin/btn_ty_01.png",
+                        "name": "btnDirect",
+                        "centerX": 0,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 35,
+                    "child": [
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 47,
+                                "x": 123,
+                                "width": 168,
+                                "valign": "middle",
+                                "text": "Claim",
+                                "height": 45,
+                                "fontSize": 30,
+                                "font": "Microsoft YaHei",
+                                "color": "#7d3535",
+                                "bold": true,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5,
+                                "align": "center"
+                            },
+                            "compId": 36
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "loadList": [
+        "Lwg/UI/img_rectangle_mask_07.png",
+        "Game/UI/Animation/effect01.sk",
+        "Game/UI/Sgin/title_bg_1.png",
+        "Game/UI/Victory/title_text_gongxihuode.png",
+        "Game/UI/Sgin/btn_ty_01.png",
+        "Game/UI/Victory/img_btn_text_3beilingqu.png",
+        "Game/UI/Sgin/icon_AD.png",
+        "Game/UI/Start/icon_jinbi_1.png",
+        "Game/UI/Sgin/icon_jinbi_2.png"
+    ],
+    "loadList3D": []
+}
