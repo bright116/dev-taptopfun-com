@@ -1,0 +1,1 @@
+{"frames":{"zs_basic_atlas0.png":{"frame":{"h":42,"idx":0,"w":63,"x":0,"y":106},"sourceSize":{"h":64,"w":64},"spriteSourceSize":{"x":1,"y":0}},"zs_example_atlas0.png":{"frame":{"h":105,"idx":0,"w":411,"x":0,"y":0},"sourceSize":{"h":128,"w":512},"spriteSourceSize":{"x":0,"y":0}}},"meta":{"image":"fgui.png","prefix":"fgui/"}}
