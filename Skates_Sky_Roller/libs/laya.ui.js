@@ -1,381 +1,218 @@
-(function(exports, Laya) {
-    'use strict';
-
-    class UIConfig {}
-    UIConfig.touchScrollEnable = true;
-    UIConfig.mouseWheelEnable = true;
-    UIConfig.showButtons = true;
-    UIConfig.popupBgColor = "#000000";
-    UIConfig.popupBgAlpha = 0.5;
-    UIConfig.closeDialogOnSide = true;
-    window.UIConfig = UIConfig;
-
-    class Styles {}
-    Styles.defaultSizeGrid = [4, 4, 4, 4, 0];
-    Styles.labelColor = "#000000";
-    Styles.labelPadding = [2, 2, 2, 2];
-    Styles.inputLabelPadding = [1, 1, 1, 3];
-    Styles.buttonStateNum = 3;
-    Styles.buttonLabelColors = ["#32556b", "#32cc6b", "#ff0000", "#C0C0C0"];
-    Styles.comboBoxItemColors = ["#5e95b6", "#ffffff", "#000000", "#8fa4b1", "#ffffff"];
-    Styles.scrollBarMinNum = 15;
-    Styles.scrollBarDelayTime = 500;
-
-    class AutoBitmap extends Laya.Graphics {
+!function(t, e) {
+    "use strict";
+    class s {}
+    s.touchScrollEnable = !0, s.mouseWheelEnable = !0, s.showButtons = !0, s.popupBgColor = "#000000", 
+    s.popupBgAlpha = .5, s.closeDialogOnSide = !0, window.UIConfig = s;
+    class i {}
+    i.defaultSizeGrid = [ 4, 4, 4, 4, 0 ], i.labelColor = "#000000", i.labelPadding = [ 2, 2, 2, 2 ], 
+    i.inputLabelPadding = [ 1, 1, 1, 3 ], i.buttonStateNum = 3, i.buttonLabelColors = [ "#32556b", "#32cc6b", "#ff0000", "#C0C0C0" ], 
+    i.comboBoxItemColors = [ "#5e95b6", "#ffffff", "#000000", "#8fa4b1", "#ffffff" ], 
+    i.scrollBarMinNum = 15, i.scrollBarDelayTime = 500;
+    class h extends e.Graphics {
         constructor() {
-            super(...arguments);
-            this.autoCacheCmd = true;
-            this._width = 0;
-            this._height = 0;
+            super(...arguments), this.autoCacheCmd = !0, this._width = 0, this._height = 0, 
             this.uv = null;
         }
         destroy() {
-            super.destroy();
-            this._source = null;
-            this._sizeGrid = null;
-            this._offset = null;
+            super.destroy(), this._source = null, this._sizeGrid = null, this._offset = null;
         }
         get sizeGrid() {
             return this._sizeGrid;
         }
-        set sizeGrid(value) {
-            this._sizeGrid = value.map((v) => {
-                return +v;
-            });
-            this._setChanged();
+        set sizeGrid(t) {
+            this._sizeGrid = t.map(t => +t), this._setChanged();
         }
         get width() {
-            if (this._width)
-                return this._width;
-            if (this._source)
-                return this._source.sourceWidth;
-            return 0;
+            return this._width ? this._width : this._source ? this._source.sourceWidth : 0;
         }
-        set width(value) {
-            if (this._width != value) {
-                this._width = value;
-                this._setChanged();
-            }
+        set width(t) {
+            this._width != t && (this._width = t, this._setChanged());
         }
         get height() {
-            if (this._height)
-                return this._height;
-            if (this._source)
-                return this._source.sourceHeight;
-            return 0;
+            return this._height ? this._height : this._source ? this._source.sourceHeight : 0;
         }
-        set height(value) {
-            if (this._height != value) {
-                this._height = value;
-                this._setChanged();
-            }
+        set height(t) {
+            this._height != t && (this._height = t, this._setChanged());
         }
         get source() {
             return this._source;
         }
-        set source(value) {
-            if (value) {
-                this._source = value;
-                this._setChanged();
-            } else {
-                this._source = null;
-                this.clear();
-            }
+        set source(t) {
+            t ? (this._source = t, this._setChanged()) : (this._source = null, this.clear());
         }
         _setChanged() {
-            if (!this._isChanged) {
-                this._isChanged = true;
-                Laya.ILaya.timer.callLater(this, this.changeSource);
-            }
+            this._isChanged || (this._isChanged = !0, e.ILaya.timer.callLater(this, this.changeSource));
         }
         changeSource() {
-            this._isChanged = false;
-            var source = this._source;
-            if (!source || !source.bitmap)
-                return;
-            var width = this.width;
-            var height = this.height;
-            var sizeGrid = this._sizeGrid;
-            var sw = source.sourceWidth;
-            var sh = source.sourceHeight;
-            if (!sizeGrid || (sw === width && sh === height)) {
-                this.clear();
-                this.drawTexture(source, this._offset ? this._offset[0] : 0, this._offset ? this._offset[1] : 0, width, height, null, 1, null, null, this.uv);
-            } else {
-                this.clear();
-                this.draw9Grid(source, 0, 0, width, height, sizeGrid);
+            this._isChanged = !1;
+            var t = this._source;
+            if (t && t.bitmap) {
+                var e = this.width, s = this.height, i = this._sizeGrid, h = t.sourceWidth, a = t.sourceHeight;
+                if (i && (h !== e || a !== s)) return this.clear(), this.draw9Grid(t, 0, 0, e, s, i), 
+                void this._repaint();
+                this.clear(), this.drawTexture(t, this._offset ? this._offset[0] : 0, this._offset ? this._offset[1] : 0, e, s, null, 1, null, null, this.uv), 
                 this._repaint();
-                return;
             }
-            this._repaint();
         }
-        drawBitmap(repeat, tex, x, y, width = 0, height = 0) {
-            if (width < 0.1 || height < 0.1)
-                return;
-            if (repeat && (tex.width != width || tex.height != height))
-                this.fillTexture(tex, x, y, width, height);
-            else
-                this.drawImage(tex, x, y, width, height);
+        drawBitmap(t, e, s, i, h = 0, a = 0) {
+            h < .1 || a < .1 || (!t || e.width == h && e.height == a ? this.drawImage(e, s, i, h, a) : this.fillTexture(e, s, i, h, a));
         }
-        static getTexture(tex, x, y, width, height) {
-            if (width <= 0)
-                width = 1;
-            if (height <= 0)
-                height = 1;
-            tex.$_GID || (tex.$_GID = Laya.Utils.getGID());
-            var texture;
-            if (!texture || !texture._getSource()) {
-                texture = Laya.Texture.createFromTexture(tex, x, y, width, height);
-            }
-            return texture;
+        static getTexture(t, s, i, h, a) {
+            var r;
+            return h <= 0 && (h = 1), a <= 0 && (a = 1), t.$_GID || (t.$_GID = e.Utils.getGID()), 
+            r && r._getSource() || (r = e.Texture.createFromTexture(t, s, i, h, a)), r;
         }
     }
-    Laya.ClassUtils.regClass("laya.ui.AutoBitmap", AutoBitmap);
-    Laya.ClassUtils.regClass("Laya.AutoBitmap", AutoBitmap);
-
-    class Widget extends Laya.Component {
+    e.ClassUtils.regClass("laya.ui.AutoBitmap", h), e.ClassUtils.regClass("Laya.AutoBitmap", h);
+    class a extends e.Component {
         constructor() {
-            super(...arguments);
-            this._top = NaN;
-            this._bottom = NaN;
-            this._left = NaN;
-            this._right = NaN;
-            this._centerX = NaN;
-            this._centerY = NaN;
+            super(...arguments), this._top = NaN, this._bottom = NaN, this._left = NaN, this._right = NaN, 
+            this._centerX = NaN, this._centerY = NaN;
         }
         onReset() {
             this._top = this._bottom = this._left = this._right = this._centerX = this._centerY = NaN;
         }
         _onEnable() {
-            if (this.owner.parent)
-                this._onAdded();
-            else
-                this.owner.once(Laya.Event.ADDED, this, this._onAdded);
+            this.owner.parent ? this._onAdded() : this.owner.once(e.Event.ADDED, this, this._onAdded);
         }
         _onDisable() {
-            this.owner.off(Laya.Event.ADDED, this, this._onAdded);
-            if (this.owner.parent)
-                this.owner.parent.off(Laya.Event.RESIZE, this, this._onParentResize);
+            this.owner.off(e.Event.ADDED, this, this._onAdded), this.owner.parent && this.owner.parent.off(e.Event.RESIZE, this, this._onParentResize);
         }
         _onAdded() {
-            if (this.owner.parent)
-                this.owner.parent.on(Laya.Event.RESIZE, this, this._onParentResize);
-            this.resetLayoutX();
-            this.resetLayoutY();
+            this.owner.parent && this.owner.parent.on(e.Event.RESIZE, this, this._onParentResize), 
+            this.resetLayoutX(), this.resetLayoutY();
         }
         _onParentResize() {
-            var flagX = this.resetLayoutX();
-            var flagY = this.resetLayoutY();
-            if (flagX || flagY)
-                this.owner.event(Laya.Event.RESIZE);
+            var t = this.resetLayoutX(), s = this.resetLayoutY();
+            (t || s) && this.owner.event(e.Event.RESIZE);
         }
         resetLayoutX() {
-            var owner = this.owner;
-            if (!owner)
-                return false;
-            var parent = owner.parent;
-            if (parent) {
-                if (!isNaN(this.centerX)) {
-                    owner.x = Math.round((parent.width - owner.displayWidth) * 0.5 + this.centerX + owner.pivotX * owner.scaleX);
-                } else if (!isNaN(this.left)) {
-                    owner.x = Math.round(this.left + owner.pivotX * owner.scaleX);
-                    if (!isNaN(this.right)) {
-                        var temp = (parent._width - this.left - this.right) / (owner.scaleX || 0.01);
-                        if (temp != owner.width) {
-                            owner.width = temp;
-                            return true;
-                        }
-                    }
-                } else if (!isNaN(this.right)) {
-                    owner.x = Math.round(parent.width - owner.displayWidth - this.right + owner.pivotX * owner.scaleX);
+            var t = this.owner;
+            if (!t) return !1;
+            var e = t.parent;
+            if (e) if (isNaN(this.centerX)) {
+                if (isNaN(this.left)) isNaN(this.right) || (t.x = Math.round(e.width - t.displayWidth - this.right + t.pivotX * t.scaleX)); else if (t.x = Math.round(this.left + t.pivotX * t.scaleX), 
+                !isNaN(this.right)) {
+                    var s = (e._width - this.left - this.right) / (t.scaleX || .01);
+                    if (s != t.width) return t.width = s, !0;
                 }
-            }
-            return false;
+            } else t.x = Math.round(.5 * (e.width - t.displayWidth) + this.centerX + t.pivotX * t.scaleX);
+            return !1;
         }
         resetLayoutY() {
-            var owner = this.owner;
-            if (!owner)
-                return false;
-            var parent = owner.parent;
-            if (parent) {
-                if (!isNaN(this.centerY)) {
-                    owner.y = Math.round((parent.height - owner.displayHeight) * 0.5 + this.centerY + owner.pivotY * owner.scaleY);
-                } else if (!isNaN(this.top)) {
-                    owner.y = Math.round(this.top + owner.pivotY * owner.scaleY);
-                    if (!isNaN(this.bottom)) {
-                        var temp = (parent._height - this.top - this.bottom) / (owner.scaleY || 0.01);
-                        if (temp != owner.height) {
-                            owner.height = temp;
-                            return true;
-                        }
-                    }
-                } else if (!isNaN(this.bottom)) {
-                    owner.y = Math.round(parent.height - owner.displayHeight - this.bottom + owner.pivotY * owner.scaleY);
+            var t = this.owner;
+            if (!t) return !1;
+            var e = t.parent;
+            if (e) if (isNaN(this.centerY)) {
+                if (isNaN(this.top)) isNaN(this.bottom) || (t.y = Math.round(e.height - t.displayHeight - this.bottom + t.pivotY * t.scaleY)); else if (t.y = Math.round(this.top + t.pivotY * t.scaleY), 
+                !isNaN(this.bottom)) {
+                    var s = (e._height - this.top - this.bottom) / (t.scaleY || .01);
+                    if (s != t.height) return t.height = s, !0;
                 }
-            }
-            return false;
+            } else t.y = Math.round(.5 * (e.height - t.displayHeight) + this.centerY + t.pivotY * t.scaleY);
+            return !1;
         }
         resetLayout() {
-            if (this.owner) {
-                this.resetLayoutX();
-                this.resetLayoutY();
-            }
+            this.owner && (this.resetLayoutX(), this.resetLayoutY());
         }
         get top() {
             return this._top;
         }
-        set top(value) {
-            if (this._top != value) {
-                this._top = value;
-                this.resetLayoutY();
-            }
+        set top(t) {
+            this._top != t && (this._top = t, this.resetLayoutY());
         }
         get bottom() {
             return this._bottom;
         }
-        set bottom(value) {
-            if (this._bottom != value) {
-                this._bottom = value;
-                this.resetLayoutY();
-            }
+        set bottom(t) {
+            this._bottom != t && (this._bottom = t, this.resetLayoutY());
         }
         get left() {
             return this._left;
         }
-        set left(value) {
-            if (this._left != value) {
-                this._left = value;
-                this.resetLayoutX();
-            }
+        set left(t) {
+            this._left != t && (this._left = t, this.resetLayoutX());
         }
         get right() {
             return this._right;
         }
-        set right(value) {
-            if (this._right != value) {
-                this._right = value;
-                this.resetLayoutX();
-            }
+        set right(t) {
+            this._right != t && (this._right = t, this.resetLayoutX());
         }
         get centerX() {
             return this._centerX;
         }
-        set centerX(value) {
-            if (this._centerX != value) {
-                this._centerX = value;
-                this.resetLayoutX();
-            }
+        set centerX(t) {
+            this._centerX != t && (this._centerX = t, this.resetLayoutX());
         }
         get centerY() {
             return this._centerY;
         }
-        set centerY(value) {
-            if (this._centerY != value) {
-                this._centerY = value;
-                this.resetLayoutY();
-            }
+        set centerY(t) {
+            this._centerY != t && (this._centerY = t, this.resetLayoutY());
         }
     }
-    Widget.EMPTY = null;
-    Laya.ILaya.regClass(Widget);
-    Widget.EMPTY = new Widget();
-    Laya.ClassUtils.regClass("laya.ui.Widget", Widget);
-    Laya.ClassUtils.regClass("Laya.Widget", Widget);
-
-    class UIEvent extends Laya.Event {}
-    UIEvent.SHOW_TIP = "showtip";
-    UIEvent.HIDE_TIP = "hidetip";
-    Laya.ILaya.regClass(UIEvent);
-    Laya.ClassUtils.regClass("laya.ui.UIEvent", UIEvent);
-    Laya.ClassUtils.regClass("Laya.UIEvent", UIEvent);
-
-    class UIUtils {
-        static fillArray(arr, str, type = null) {
-            var temp = arr.concat();
-            if (str) {
-                var a = str.split(",");
-                for (var i = 0, n = Math.min(temp.length, a.length); i < n; i++) {
-                    var value = a[i];
-                    temp[i] = (value == "true" ? true : (value == "false" ? false : value));
-                    if (type != null)
-                        temp[i] = type(value);
+    a.EMPTY = null, e.ILaya.regClass(a), a.EMPTY = new a(), e.ClassUtils.regClass("laya.ui.Widget", a), 
+    e.ClassUtils.regClass("Laya.Widget", a);
+    class r extends e.Event {}
+    r.SHOW_TIP = "showtip", r.HIDE_TIP = "hidetip", e.ILaya.regClass(r), e.ClassUtils.regClass("laya.ui.UIEvent", r), 
+    e.ClassUtils.regClass("Laya.UIEvent", r);
+    class l {
+        static fillArray(t, e, s = null) {
+            var i = t.concat();
+            if (e) for (var h = e.split(","), a = 0, r = Math.min(i.length, h.length); a < r; a++) {
+                var l = h[a];
+                i[a] = "true" == l || "false" != l && l, null != s && (i[a] = s(l));
+            }
+            return i;
+        }
+        static toColor(t) {
+            return e.Utils.toHexColor(t);
+        }
+        static gray(t, s = !0) {
+            s ? l.addFilter(t, l.grayFilter) : l.clearFilter(t, e.ColorFilter);
+        }
+        static addFilter(t, e) {
+            var s = t.filters || [];
+            s.push(e), t.filters = s;
+        }
+        static clearFilter(t, e) {
+            var s = t.filters;
+            if (null != s && s.length > 0) {
+                for (var i = s.length - 1; i > -1; i--) {
+                    s[i] instanceof e && s.splice(i, 1);
                 }
-            }
-            return temp;
-        }
-        static toColor(color) {
-            return Laya.Utils.toHexColor(color);
-        }
-        static gray(traget, isGray = true) {
-            if (isGray) {
-                UIUtils.addFilter(traget, UIUtils.grayFilter);
-            } else {
-                UIUtils.clearFilter(traget, Laya.ColorFilter);
+                t.filters = s;
             }
         }
-        static addFilter(target, filter) {
-            var filters = target.filters || [];
-            filters.push(filter);
-            target.filters = filters;
+        static _getReplaceStr(t) {
+            return l.escapeSequence[t];
         }
-        static clearFilter(target, filterType) {
-            var filters = target.filters;
-            if (filters != null && filters.length > 0) {
-                for (var i = filters.length - 1; i > -1; i--) {
-                    var filter = filters[i];
-                    if (filter instanceof filterType)
-                        filters.splice(i, 1);
-                }
-                target.filters = filters;
+        static adptString(t) {
+            return t.replace(/\\(\w)/g, l._getReplaceStr);
+        }
+        static getBindFun(t) {
+            l._funMap || (l._funMap = new e.WeakObject());
+            var s = l._funMap.get(t);
+            if (null == s) {
+                var i = '"' + t + '"', h = "(function(data){if(data==null)return;with(data){try{\nreturn " + (i = i.replace(/^"\${|}"$/g, "").replace(/\${/g, '"+').replace(/}/g, '+"')) + "\n}catch(e){}}})";
+                s = window.Laya._runScript(h), l._funMap.set(t, s);
             }
-        }
-        static _getReplaceStr(word) {
-            return UIUtils.escapeSequence[word];
-        }
-        static adptString(str) {
-            return str.replace(/\\(\w)/g, UIUtils._getReplaceStr);
-        }
-        static getBindFun(value) {
-            if (!UIUtils._funMap) {
-                UIUtils._funMap = new Laya.WeakObject();
-            }
-            var fun = UIUtils._funMap.get(value);
-            if (fun == null) {
-                var temp = "\"" + value + "\"";
-                temp = temp.replace(/^"\${|}"$/g, "").replace(/\${/g, "\"+").replace(/}/g, "+\"");
-                var str = "(function(data){if(data==null)return;with(data){try{\nreturn " + temp + "\n}catch(e){}}})";
-                fun = window.Laya._runScript(str);
-                UIUtils._funMap.set(value, fun);
-            }
-            return fun;
+            return s;
         }
     }
-    UIUtils.grayFilter = new Laya.ColorFilter([0.3086, 0.6094, 0.082, 0, 0, 0.3086, 0.6094, 0.082, 0, 0, 0.3086, 0.6094, 0.082, 0, 0, 0, 0, 0, 1, 0]);
-    UIUtils.escapeSequence = {
+    l.grayFilter = new e.ColorFilter([ .3086, .6094, .082, 0, 0, .3086, .6094, .082, 0, 0, .3086, .6094, .082, 0, 0, 0, 0, 0, 1, 0 ]), 
+    l.escapeSequence = {
         "\\n": "\n",
         "\\t": "\t"
-    };
-    UIUtils._funMap = null;
-    Laya.ClassUtils.regClass("laya.ui.UIUtils", UIUtils);
-    Laya.ClassUtils.regClass("Laya.UIUtils", UIUtils);
-
-    class UIComponent extends Laya.Sprite {
-        constructor(createChildren = true) {
-            super();
-            this._anchorX = NaN;
-            this._anchorY = NaN;
-            this._widget = Widget.EMPTY;
-            if (createChildren) {
-                this.preinitialize();
-                this.createChildren();
-                this.initialize();
-            }
+    }, l._funMap = null, e.ClassUtils.regClass("laya.ui.UIUtils", l), e.ClassUtils.regClass("Laya.UIUtils", l);
+    class n extends e.Sprite {
+        constructor(t = !0) {
+            super(), this._anchorX = NaN, this._anchorY = NaN, this._widget = a.EMPTY, t && (this.preinitialize(), 
+            this.createChildren(), this.initialize());
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._dataSource = null;
-            this._tag = null;
-            this._toolTip = null;
+        destroy(t = !0) {
+            super.destroy(t), this._dataSource = null, this._tag = null, this._toolTip = null;
         }
         preinitialize() {}
         createChildren() {}
@@ -384,40 +221,32 @@
             return this.get_width();
         }
         get_width() {
-            if (this._width)
-                return this._width;
-            return this.measureWidth();
+            return this._width ? this._width : this.measureWidth();
         }
         measureWidth() {
-            var max = 0;
+            var t = 0;
             this.commitMeasure();
-            for (var i = this.numChildren - 1; i > -1; i--) {
-                var comp = this.getChildAt(i);
-                if (comp._visible) {
-                    max = Math.max(comp._x + comp.width * comp.scaleX, max);
-                }
+            for (var e = this.numChildren - 1; e > -1; e--) {
+                var s = this.getChildAt(e);
+                s._visible && (t = Math.max(s._x + s.width * s.scaleX, t));
             }
-            return max;
+            return t;
         }
         commitMeasure() {}
         get height() {
             return this.get_height();
         }
         get_height() {
-            if (this._height)
-                return this._height;
-            return this.measureHeight();
+            return this._height ? this._height : this.measureHeight();
         }
         measureHeight() {
-            var max = 0;
+            var t = 0;
             this.commitMeasure();
-            for (var i = this.numChildren - 1; i > -1; i--) {
-                var comp = this.getChildAt(i);
-                if (comp._visible) {
-                    max = Math.max(comp._y + comp.height * comp.scaleY, max);
-                }
+            for (var e = this.numChildren - 1; e > -1; e--) {
+                var s = this.getChildAt(e);
+                s._visible && (t = Math.max(s._y + s.height * s.scaleY, t));
             }
-            return max;
+            return t;
         }
         get dataSource() {
             return this.get_dataSource();
@@ -425,16 +254,11 @@
         get_dataSource() {
             return this._dataSource;
         }
-        set dataSource(value) {
-            this.set_dataSource(value);
+        set dataSource(t) {
+            this.set_dataSource(t);
         }
-        set_dataSource(value) {
-            this._dataSource = value;
-            for (var prop in this._dataSource) {
-                if (prop in this && !(typeof(this[prop]) == 'function')) {
-                    this[prop] = this._dataSource[prop];
-                }
-            }
+        set_dataSource(t) {
+            for (var e in this._dataSource = t, this._dataSource) e in this && "function" != typeof this[e] && (this[e] = this._dataSource[e]);
         }
         get top() {
             return this.get_top();
@@ -442,13 +266,11 @@
         get_top() {
             return this._widget.top;
         }
-        set top(value) {
-            this.set_top(value);
+        set top(t) {
+            this.set_top(t);
         }
-        set_top(value) {
-            if (value != this._widget.top) {
-                this._getWidget().top = value;
-            }
+        set_top(t) {
+            t != this._widget.top && (this._getWidget().top = t);
         }
         get bottom() {
             return this.get_bottom();
@@ -456,124 +278,89 @@
         get_bottom() {
             return this._widget.bottom;
         }
-        set bottom(value) {
-            this.set_bottom(value);
+        set bottom(t) {
+            this.set_bottom(t);
         }
-        set_bottom(value) {
-            if (value != this._widget.bottom) {
-                this._getWidget().bottom = value;
-            }
+        set_bottom(t) {
+            t != this._widget.bottom && (this._getWidget().bottom = t);
         }
         get left() {
             return this._widget.left;
         }
-        set left(value) {
-            if (value != this._widget.left) {
-                this._getWidget().left = value;
-            }
+        set left(t) {
+            t != this._widget.left && (this._getWidget().left = t);
         }
         get right() {
             return this._widget.right;
         }
-        set right(value) {
-            if (value != this._widget.right) {
-                this._getWidget().right = value;
-            }
+        set right(t) {
+            t != this._widget.right && (this._getWidget().right = t);
         }
         get centerX() {
             return this._widget.centerX;
         }
-        set centerX(value) {
-            if (value != this._widget.centerX) {
-                this._getWidget().centerX = value;
-            }
+        set centerX(t) {
+            t != this._widget.centerX && (this._getWidget().centerX = t);
         }
         get centerY() {
             return this._widget.centerY;
         }
-        set centerY(value) {
-            if (value != this._widget.centerY) {
-                this._getWidget().centerY = value;
-            }
+        set centerY(t) {
+            t != this._widget.centerY && (this._getWidget().centerY = t);
         }
         _sizeChanged() {
-            if (!isNaN(this._anchorX))
-                this.pivotX = this.anchorX * this.width;
-            if (!isNaN(this._anchorY))
-                this.pivotY = this.anchorY * this.height;
-            this.event(Laya.Event.RESIZE);
-            if (this._widget !== Widget.EMPTY)
-                this._widget.resetLayout();
+            isNaN(this._anchorX) || (this.pivotX = this.anchorX * this.width), isNaN(this._anchorY) || (this.pivotY = this.anchorY * this.height), 
+            this.event(e.Event.RESIZE), this._widget !== a.EMPTY && this._widget.resetLayout();
         }
         get tag() {
             return this._tag;
         }
-        set tag(value) {
-            this._tag = value;
+        set tag(t) {
+            this._tag = t;
         }
         get toolTip() {
             return this._toolTip;
         }
-        set toolTip(value) {
-            if (this._toolTip != value) {
-                this._toolTip = value;
-                if (value != null) {
-                    this.on(Laya.Event.MOUSE_OVER, this, this.onMouseOver);
-                    this.on(Laya.Event.MOUSE_OUT, this, this.onMouseOut);
-                } else {
-                    this.off(Laya.Event.MOUSE_OVER, this, this.onMouseOver);
-                    this.off(Laya.Event.MOUSE_OUT, this, this.onMouseOut);
-                }
-            }
+        set toolTip(t) {
+            this._toolTip != t && (this._toolTip = t, null != t ? (this.on(e.Event.MOUSE_OVER, this, this.onMouseOver), 
+            this.on(e.Event.MOUSE_OUT, this, this.onMouseOut)) : (this.off(e.Event.MOUSE_OVER, this, this.onMouseOver), 
+            this.off(e.Event.MOUSE_OUT, this, this.onMouseOut)));
         }
-        onMouseOver(e) {
-            Laya.ILaya.stage.event(UIEvent.SHOW_TIP, this._toolTip);
+        onMouseOver(t) {
+            e.ILaya.stage.event(r.SHOW_TIP, this._toolTip);
         }
-        onMouseOut(e) {
-            Laya.ILaya.stage.event(UIEvent.HIDE_TIP, this._toolTip);
+        onMouseOut(t) {
+            e.ILaya.stage.event(r.HIDE_TIP, this._toolTip);
         }
         get gray() {
             return this._gray;
         }
-        set gray(value) {
-            if (value !== this._gray) {
-                this._gray = value;
-                UIUtils.gray(this, value);
-            }
+        set gray(t) {
+            t !== this._gray && (this._gray = t, l.gray(this, t));
         }
         get disabled() {
             return this._disabled;
         }
-        set disabled(value) {
-            if (value !== this._disabled) {
-                this.gray = this._disabled = value;
-                this.mouseEnabled = !value;
-            }
+        set disabled(t) {
+            t !== this._disabled && (this.gray = this._disabled = t, this.mouseEnabled = !t);
         }
         _getWidget() {
-            this._widget === Widget.EMPTY && (this._widget = this.addComponent(Widget));
-            return this._widget;
+            return this._widget === a.EMPTY && (this._widget = this.addComponent(a)), this._widget;
         }
-        set scaleX(value) {
-            this.set_scaleX(value);
+        set scaleX(t) {
+            this.set_scaleX(t);
         }
-        set_scaleX(value) {
-            if (super.get_scaleX() == value)
-                return;
-            super.set_scaleX(value);
-            this.event(Laya.Event.RESIZE);
+        set_scaleX(t) {
+            super.get_scaleX() != t && (super.set_scaleX(t), this.event(e.Event.RESIZE));
         }
         get scaleX() {
             return super.scaleX;
         }
-        set scaleY(value) {
-            this.set_scaleY(value);
+        set scaleY(t) {
+            this.set_scaleY(t);
         }
-        set_scaleY(value) {
-            if (super.get_scaleY() == value)
-                return;
-            super.set_scaleY(value);
-            this.event(Laya.Event.RESIZE);
+        set_scaleY(t) {
+            super.get_scaleY() != t && (super.set_scaleY(t), this.event(e.Event.RESIZE));
         }
         get scaleY() {
             return super.scaleY;
@@ -581,23 +368,17 @@
         onCompResize() {
             this._sizeChanged();
         }
-        set width(value) {
-            this.set_width(value);
+        set width(t) {
+            this.set_width(t);
         }
-        set_width(value) {
-            if (super.get_width() == value)
-                return;
-            super.set_width(value);
-            this.callLater(this._sizeChanged);
+        set_width(t) {
+            super.get_width() != t && (super.set_width(t), this.callLater(this._sizeChanged));
         }
-        set height(value) {
-            this.set_height(value);
+        set height(t) {
+            this.set_height(t);
         }
-        set_height(value) {
-            if (super.get_height() == value)
-                return;
-            super.set_height(value);
-            this.callLater(this._sizeChanged);
+        set_height(t) {
+            super.get_height() != t && (super.set_height(t), this.callLater(this._sizeChanged));
         }
         get anchorX() {
             return this.get_anchorX();
@@ -605,14 +386,11 @@
         get_anchorX() {
             return this._anchorX;
         }
-        set anchorX(value) {
-            this.set_anchorX(value);
+        set anchorX(t) {
+            this.set_anchorX(t);
         }
-        set_anchorX(value) {
-            if (this._anchorX != value) {
-                this._anchorX = value;
-                this.callLater(this._sizeChanged);
-            }
+        set_anchorX(t) {
+            this._anchorX != t && (this._anchorX = t, this.callLater(this._sizeChanged));
         }
         get anchorY() {
             return this.get_anchorY();
@@ -620,83 +398,53 @@
         get_anchorY() {
             return this._anchorY;
         }
-        set anchorY(value) {
-            this.set_anchorY(value);
+        set anchorY(t) {
+            this.set_anchorY(t);
         }
-        set_anchorY(value) {
-            if (this._anchorY != value) {
-                this._anchorY = value;
-                this.callLater(this._sizeChanged);
-            }
+        set_anchorY(t) {
+            this._anchorY != t && (this._anchorY = t, this.callLater(this._sizeChanged));
         }
-        _childChanged(child = null) {
-            this.callLater(this._sizeChanged);
-            super._childChanged(child);
+        _childChanged(t = null) {
+            this.callLater(this._sizeChanged), super._childChanged(t);
         }
     }
-    Laya.ILaya.regClass(UIComponent);
-    Laya.ClassUtils.regClass("laya.ui.UIComponent", UIComponent);
-    Laya.ClassUtils.regClass("Laya.UIComponent", UIComponent);
-
-    class Image extends UIComponent {
-        constructor(skin = null) {
-            super();
-            this.skin = skin;
+    e.ILaya.regClass(n), e.ClassUtils.regClass("laya.ui.UIComponent", n), e.ClassUtils.regClass("Laya.UIComponent", n);
+    class o extends n {
+        constructor(t = null) {
+            super(), this.skin = t;
         }
-        destroy(destroyChild = true) {
-            super.destroy(true);
-            this._bitmap && this._bitmap.destroy();
-            this._bitmap = null;
+        destroy(t = !0) {
+            super.destroy(!0), this._bitmap && this._bitmap.destroy(), this._bitmap = null;
         }
         dispose() {
-            this.destroy(true);
-            Laya.ILaya.loader.clearRes(this._skin);
+            this.destroy(!0), e.ILaya.loader.clearRes(this._skin);
         }
         createChildren() {
-            this.graphics = this._bitmap = new AutoBitmap();
-            this._bitmap.autoCacheCmd = false;
+            this.graphics = this._bitmap = new h(), this._bitmap.autoCacheCmd = !1;
         }
         get skin() {
             return this._skin;
         }
-        set skin(value) {
-            if (this._skin != value) {
-                this._skin = value;
-                if (value) {
-                    var source = Laya.Loader.getRes(value);
-                    if (source) {
-                        this.source = source;
-                        this.onCompResize();
-                    } else
-                        Laya.ILaya.loader.load(this._skin, Laya.Handler.create(this, this.setSource, [this._skin]), null, Laya.Loader.IMAGE, 1, true, this._group);
-                } else {
-                    this.source = null;
-                }
-            }
+        set skin(t) {
+            if (this._skin != t) if (this._skin = t, t) {
+                var s = e.Loader.getRes(t);
+                s ? (this.source = s, this.onCompResize()) : e.ILaya.loader.load(this._skin, e.Handler.create(this, this.setSource, [ this._skin ]), null, e.Loader.IMAGE, 1, !0, this._group);
+            } else this.source = null;
         }
         get source() {
             return this._bitmap.source;
         }
-        set source(value) {
-            if (!this._bitmap)
-                return;
-            this._bitmap.source = value;
-            this.event(Laya.Event.LOADED);
-            this.repaint();
+        set source(t) {
+            this._bitmap && (this._bitmap.source = t, this.event(e.Event.LOADED), this.repaint());
         }
         get group() {
             return this._group;
         }
-        set group(value) {
-            if (value && this._skin)
-                Laya.Loader.setGroup(this._skin, value);
-            this._group = value;
+        set group(t) {
+            t && this._skin && e.Loader.setGroup(this._skin, t), this._group = t;
         }
-        setSource(url, img = null) {
-            if (url === this._skin && img) {
-                this.source = img;
-                this.onCompResize();
-            }
+        setSource(t, e = null) {
+            t === this._skin && e && (this.source = e, this.onCompResize());
         }
         measureWidth() {
             return this._bitmap.width;
@@ -704,215 +452,138 @@
         measureHeight() {
             return this._bitmap.height;
         }
-        set width(value) {
-            super.width = value;
-            this._bitmap.width = value == 0 ? 0.0000001 : value;
+        set width(t) {
+            super.width = t, this._bitmap.width = 0 == t ? 1e-7 : t;
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this._bitmap.height = value == 0 ? 0.0000001 : value;
+        set height(t) {
+            super.height = t, this._bitmap.height = 0 == t ? 1e-7 : t;
         }
         get height() {
             return super.height;
         }
         get sizeGrid() {
-            if (this._bitmap.sizeGrid)
-                return this._bitmap.sizeGrid.join(",");
-            return null;
+            return this._bitmap.sizeGrid ? this._bitmap.sizeGrid.join(",") : null;
         }
-        set sizeGrid(value) {
-            this._bitmap.sizeGrid = UIUtils.fillArray(Styles.defaultSizeGrid, value, Number);
+        set sizeGrid(t) {
+            this._bitmap.sizeGrid = l.fillArray(i.defaultSizeGrid, t, Number);
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'string')
-                this.skin = value;
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "string" == typeof t ? this.skin = t : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
         }
     }
-    Laya.ILaya.regClass(Image);
-    Laya.ClassUtils.regClass("laya.ui.Image", Image);
-    Laya.ClassUtils.regClass("Laya.Image", Image);
-
-    class AdvImage extends Image {
-        constructor(skin = null) {
-            super();
-            this.advsListArr = [];
-            this.resUrl = "https://unioncdn.layabox.com/config/iconlist.json";
-            this._http = new Laya.Browser.window.XMLHttpRequest();
-            this._data = [];
-            this._resquestTime = 360000;
-            this._playIndex = 0;
-            this._lunboTime = 5000;
-            this.skin = skin;
-            this.setLoadUrl();
-            this.init();
+    e.ILaya.regClass(o), e.ClassUtils.regClass("laya.ui.Image", o), e.ClassUtils.regClass("Laya.Image", o);
+    class _ extends o {
+        constructor(t = null) {
+            super(), this.advsListArr = [], this.resUrl = "https://unioncdn.layabox.com/config/iconlist.json", 
+            this._http = new e.Browser.window.XMLHttpRequest(), this._data = [], this._resquestTime = 36e4, 
+            this._playIndex = 0, this._lunboTime = 5e3, this.skin = t, this.setLoadUrl(), this.init(), 
             this.size(120, 120);
         }
         setLoadUrl() {}
         init() {
-            if (this.isSupportJump()) {
-                if (Laya.Browser.onMiniGame || Laya.Browser.onBDMiniGame) {
-                    Laya.ILaya.timer.loop(this._resquestTime, this, this.onGetAdvsListData);
-                }
-                this.onGetAdvsListData();
-                this.initEvent();
-            } else
-                this.visible = false;
+            this.isSupportJump() ? ((e.Browser.onMiniGame || e.Browser.onBDMiniGame) && e.ILaya.timer.loop(this._resquestTime, this, this.onGetAdvsListData), 
+            this.onGetAdvsListData(), this.initEvent()) : this.visible = !1;
         }
         initEvent() {
-            this.on(Laya.Event.CLICK, this, this.onAdvsImgClick);
+            this.on(e.Event.CLICK, this, this.onAdvsImgClick);
         }
         onAdvsImgClick() {
-            var currentJumpUrl = this.getCurrentAppidObj();
-            if (currentJumpUrl)
-                this.jumptoGame();
+            this.getCurrentAppidObj() && this.jumptoGame();
         }
         revertAdvsData() {
-            if (this.advsListArr[this._playIndex]) {
-                this.visible = true;
-                this.skin = this.advsListArr[this._playIndex];
-            }
+            this.advsListArr[this._playIndex] && (this.visible = !0, this.skin = this.advsListArr[this._playIndex]);
         }
         isSupportJump() {
-            if (Laya.Browser.onMiniGame) {
-                var isSupperJump = window.wx.navigateToMiniProgram instanceof Function;
-                return isSupperJump;
-            } else if (Laya.Browser.onBDMiniGame)
-                return true;
-            return false;
+            return e.Browser.onMiniGame ? window.wx.navigateToMiniProgram instanceof Function : !!e.Browser.onBDMiniGame;
         }
         jumptoGame() {
-            var advsObj = this.advsListArr[this._playIndex];
-            var desGameId = parseInt(advsObj.gameid);
-            var extendInfo = advsObj.extendInfo;
-            var path = advsObj.path;
-            if (Laya.Browser.onMiniGame) {
-                if (this.isSupportJump()) {
-                    window.wx.navigateToMiniProgram({
-                        appId: this._appid,
-                        path: "",
-                        extraData: "",
-                        envVersion: "release",
-                        success: function success() {
-                            console.log("-------------跳转成功--------------");
-                        },
-                        fail: function fail() {
-                            console.log("-------------跳转失败--------------");
-                        },
-                        complete: function complete() {
-                            console.log("-------------跳转接口调用成功--------------");
-                            this.updateAdvsInfo();
-                        }.bind(this)
-                    });
-                }
-            } else if (Laya.Browser.onBDMiniGame);
-            else {
-                this.visible = false;
-            }
+            var t = this.advsListArr[this._playIndex];
+            parseInt(t.gameid), t.extendInfo, t.path;
+            e.Browser.onMiniGame ? this.isSupportJump() && window.wx.navigateToMiniProgram({
+                appId: this._appid,
+                path: "",
+                extraData: "",
+                envVersion: "release",
+                success: function() {
+                    console.log("-------------跳转成功--------------");
+                },
+                fail: function() {
+                    console.log("-------------跳转失败--------------");
+                },
+                complete: function() {
+                    console.log("-------------跳转接口调用成功--------------"), this.updateAdvsInfo();
+                }.bind(this)
+            }) : e.Browser.onBDMiniGame || (this.visible = !1);
         }
         updateAdvsInfo() {
-            this.visible = false;
-            this.onLunbo();
-            Laya.ILaya.timer.loop(this._lunboTime, this, this.onLunbo);
+            this.visible = !1, this.onLunbo(), e.ILaya.timer.loop(this._lunboTime, this, this.onLunbo);
         }
         onLunbo() {
-            if (this._playIndex >= this.advsListArr.length - 1)
-                this._playIndex = 0;
-            else
-                this._playIndex += 1;
-            this.visible = true;
-            this.revertAdvsData();
+            this._playIndex >= this.advsListArr.length - 1 ? this._playIndex = 0 : this._playIndex += 1, 
+            this.visible = !0, this.revertAdvsData();
         }
         getCurrentAppidObj() {
             return this.advsListArr[this._playIndex];
         }
         onGetAdvsListData() {
-            var _this = this;
-            var random = AdvImage.randRange(10000, 1000000);
-            var url = this.resUrl + "?" + random;
-            this._http.open("get", url, true);
-            this._http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            this._http.responseType = "text";
-            this._http.onerror = function(e) {
-                _this._onError(e);
-            };
-            this._http.onload = function(e) {
-                _this._onLoad(e);
-            };
-            this._http.send(null);
+            var t = this, e = _.randRange(1e4, 1e6), s = this.resUrl + "?" + e;
+            this._http.open("get", s, !0), this._http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), 
+            this._http.responseType = "text", this._http.onerror = function(e) {
+                t._onError(e);
+            }, this._http.onload = function(e) {
+                t._onLoad(e);
+            }, this._http.send(null);
         }
-        static randRange(minNum, maxNum) {
-            return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
+        static randRange(t, e) {
+            return Math.floor(Math.random() * (e - t + 1)) + t;
         }
-        _onError(e) {
+        _onError(t) {
             this.error("Request failed Status:" + this._http.status + " text:" + this._http.statusText);
         }
-        _onLoad(e) {
-            var http = this._http;
-            var status = http.status !== undefined ? http.status : 200;
-            if (status === 200 || status === 204 || status === 0) {
-                this.complete();
-            } else {
-                this.error("[" + http.status + "]" + http.statusText + ":" + http.responseURL);
-            }
+        _onLoad(t) {
+            var e = this._http, s = void 0 !== e.status ? e.status : 200;
+            200 === s || 204 === s || 0 === s ? this.complete() : this.error("[" + e.status + "]" + e.statusText + ":" + e.responseURL);
         }
-        error(message) {
-            this.event(Laya.Event.ERROR, message);
+        error(t) {
+            this.event(e.Event.ERROR, t);
         }
         complete() {
             try {
-                this._data = this._http.response || this._http.responseText;
-                this._data = JSON.parse(this._data);
-                this.advsListArr = this._data.list;
-                this._appid = this._data.appid;
-                this.updateAdvsInfo();
+                this._data = this._http.response || this._http.responseText, this._data = JSON.parse(this._data), 
+                this.advsListArr = this._data.list, this._appid = this._data.appid, this.updateAdvsInfo(), 
                 this.revertAdvsData();
-            } catch (e) {
-                this.error(e.message);
+            } catch (t) {
+                this.error(t.message);
             }
         }
-        getAdvsQArr(data) {
-            var tempArr = [];
-            var gameAdvsObj = Laya.LocalStorage.getJSON("gameObj");
-            for (var key in data) {
-                var tempObj = data[key];
-                if (gameAdvsObj && gameAdvsObj[tempObj.gameid] && !tempObj.isQiangZhi)
-                    continue;
-                tempArr.push(tempObj);
+        getAdvsQArr(t) {
+            var s = [], i = e.LocalStorage.getJSON("gameObj");
+            for (var h in t) {
+                var a = t[h];
+                i && i[a.gameid] && !a.isQiangZhi || s.push(a);
             }
-            return tempArr;
+            return s;
         }
         clear() {
-            var http = this._http;
-            http.onerror = http.onabort = http.onprogress = http.onload = null;
+            var t = this._http;
+            t.onerror = t.onabort = t.onprogress = t.onload = null;
         }
-        destroy(destroyChild = true) {
-            Laya.ILaya.timer.clear(this, this.onLunbo);
-            super.destroy(true);
-            this.clear();
-            Laya.ILaya.timer.clear(this, this.onGetAdvsListData);
+        destroy(t = !0) {
+            e.ILaya.timer.clear(this, this.onLunbo), super.destroy(!0), this.clear(), e.ILaya.timer.clear(this, this.onGetAdvsListData);
         }
     }
-    Laya.ClassUtils.regClass("laya.ui.AdvImage", AdvImage);
-    Laya.ClassUtils.regClass("Laya.AdvImage", AdvImage);
-
-    class Box extends UIComponent {
-        set dataSource(value) {
-            this._dataSource = value;
-            for (var name in value) {
-                var comp = this.getChildByName(name);
-                if (comp)
-                    comp.dataSource = value[name];
-                else if (name in this && !(this[name] instanceof Function))
-                    this[name] = value[name];
+    e.ClassUtils.regClass("laya.ui.AdvImage", _), e.ClassUtils.regClass("Laya.AdvImage", _);
+    class c extends n {
+        set dataSource(t) {
+            for (var e in this._dataSource = t, t) {
+                var s = this.getChildByName(e);
+                s ? s.dataSource = t[e] : e in this && !(this[e] instanceof Function) && (this[e] = t[e]);
             }
         }
         get dataSource() {
@@ -921,319 +592,188 @@
         get bgColor() {
             return this._bgColor;
         }
-        set bgColor(value) {
-            this._bgColor = value;
-            if (value) {
-                this._onResize(null);
-                this.on(Laya.Event.RESIZE, this, this._onResize);
-            } else {
-                this.graphics.clear();
-                this.off(Laya.Event.RESIZE, this, this._onResize);
-            }
+        set bgColor(t) {
+            this._bgColor = t, t ? (this._onResize(null), this.on(e.Event.RESIZE, this, this._onResize)) : (this.graphics.clear(), 
+            this.off(e.Event.RESIZE, this, this._onResize));
         }
-        _onResize(e) {
-            this.graphics.clear();
-            this.graphics.drawRect(0, 0, this.width, this.height, this._bgColor);
+        _onResize(t) {
+            this.graphics.clear(), this.graphics.drawRect(0, 0, this.width, this.height, this._bgColor);
         }
     }
-    Laya.ILaya.regClass(Box);
-    Laya.ClassUtils.regClass("laya.ui.Box", Box);
-    Laya.ClassUtils.regClass("Laya.Box", Box);
-
-    class Button extends UIComponent {
-        constructor(skin = null, label = "") {
-            super();
-            this._labelColors = Styles.buttonLabelColors;
-            this._state = 0;
-            this._autoSize = true;
-            this._stateNum = Styles.buttonStateNum;
-            this._stateChanged = false;
-            this.skin = skin;
-            this.label = label;
+    e.ILaya.regClass(c), e.ClassUtils.regClass("laya.ui.Box", c), e.ClassUtils.regClass("Laya.Box", c);
+    class d extends n {
+        constructor(t = null, e = "") {
+            super(), this._labelColors = i.buttonLabelColors, this._state = 0, this._autoSize = !0, 
+            this._stateNum = i.buttonStateNum, this._stateChanged = !1, this.skin = t, this.label = e;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._bitmap && this._bitmap.destroy();
-            this._text && this._text.destroy(destroyChild);
-            this._bitmap = null;
-            this._text = null;
-            this._clickHandler = null;
-            this._labelColors = this._sources = this._strokeColors = null;
+        destroy(t = !0) {
+            super.destroy(t), this._bitmap && this._bitmap.destroy(), this._text && this._text.destroy(t), 
+            this._bitmap = null, this._text = null, this._clickHandler = null, this._labelColors = this._sources = this._strokeColors = null;
         }
         createChildren() {
-            this.graphics = this._bitmap = new AutoBitmap();
+            this.graphics = this._bitmap = new h();
         }
         createText() {
-            if (!this._text) {
-                this._text = new Laya.Text();
-                this._text.overflow = Laya.Text.HIDDEN;
-                this._text.align = "center";
-                this._text.valign = "middle";
-                this._text.width = this._width;
-                this._text.height = this._height;
-            }
+            this._text || (this._text = new e.Text(), this._text.overflow = e.Text.HIDDEN, this._text.align = "center", 
+            this._text.valign = "middle", this._text.width = this._width, this._text.height = this._height);
         }
         initialize() {
-            if (this._mouseState !== 1) {
-                this.mouseEnabled = true;
-                this._setBit(Laya.Const.HAS_MOUSE, true);
-            }
-            this._createListener(Laya.Event.MOUSE_OVER, this, this.onMouse, null, false, false);
-            this._createListener(Laya.Event.MOUSE_OUT, this, this.onMouse, null, false, false);
-            this._createListener(Laya.Event.MOUSE_DOWN, this, this.onMouse, null, false, false);
-            this._createListener(Laya.Event.MOUSE_UP, this, this.onMouse, null, false, false);
-            this._createListener(Laya.Event.CLICK, this, this.onMouse, null, false, false);
+            1 !== this._mouseState && (this.mouseEnabled = !0, this._setBit(e.Const.HAS_MOUSE, !0)), 
+            this._createListener(e.Event.MOUSE_OVER, this, this.onMouse, null, !1, !1), this._createListener(e.Event.MOUSE_OUT, this, this.onMouse, null, !1, !1), 
+            this._createListener(e.Event.MOUSE_DOWN, this, this.onMouse, null, !1, !1), this._createListener(e.Event.MOUSE_UP, this, this.onMouse, null, !1, !1), 
+            this._createListener(e.Event.CLICK, this, this.onMouse, null, !1, !1);
         }
-        onMouse(e) {
-            if (this.toggle === false && this._selected)
-                return;
-            if (e.type === Laya.Event.CLICK) {
-                this.toggle && (this.selected = !this._selected);
-                this._clickHandler && this._clickHandler.run();
-                return;
-            }!this._selected && (this.state = Button.stateMap[e.type]);
+        onMouse(t) {
+            if (!1 !== this.toggle || !this._selected) return t.type === e.Event.CLICK ? (this.toggle && (this.selected = !this._selected), 
+            void (this._clickHandler && this._clickHandler.run())) : void (!this._selected && (this.state = d.stateMap[t.type]));
         }
         get skin() {
             return this._skin;
         }
-        set skin(value) {
-            if (this._skin != value) {
-                this._skin = value;
-                if (value) {
-                    if (!Laya.Loader.getRes(value)) {
-                        Laya.ILaya.loader.load(this._skin, Laya.Handler.create(this, this._skinLoaded), null, Laya.Loader.IMAGE, 1);
-                    } else {
-                        this._skinLoaded();
-                    }
-                } else {
-                    this._skinLoaded();
-                }
-            }
+        set skin(t) {
+            this._skin != t && (this._skin = t, t ? e.Loader.getRes(t) ? this._skinLoaded() : e.ILaya.loader.load(this._skin, e.Handler.create(this, this._skinLoaded), null, e.Loader.IMAGE, 1) : this._skinLoaded());
         }
         _skinLoaded() {
-            this.callLater(this.changeClips);
-            this._setStateChanged();
-            this._sizeChanged();
-            this.event(Laya.Event.LOADED);
+            this.callLater(this.changeClips), this._setStateChanged(), this._sizeChanged(), 
+            this.event(e.Event.LOADED);
         }
         get stateNum() {
             return this._stateNum;
         }
-        set stateNum(value) {
-            if (typeof value == 'string') {
-                value = parseInt(value);
-            }
-            if (this._stateNum != value) {
-                this._stateNum = value < 1 ? 1 : value > 3 ? 3 : value;
-                this.callLater(this.changeClips);
-            }
+        set stateNum(t) {
+            "string" == typeof t && (t = parseInt(t)), this._stateNum != t && (this._stateNum = t < 1 ? 1 : t > 3 ? 3 : t, 
+            this.callLater(this.changeClips));
         }
         changeClips() {
-            var img = Laya.Loader.getRes(this._skin);
-            if (!img) {
-                console.log("lose skin", this._skin);
-                return;
-            }
-            var width = img.sourceWidth;
-            var height = img.sourceHeight / this._stateNum;
-            img.$_GID || (img.$_GID = Laya.Utils.getGID());
-            var key = img.$_GID + "-" + this._stateNum;
-            var clips = Laya.WeakObject.I.get(key);
-            if (!Laya.Utils.isOkTextureList(clips)) {
-                clips = null;
-            }
-            if (clips)
-                this._sources = clips;
-            else {
-                this._sources = [];
-                if (this._stateNum === 1) {
-                    this._sources.push(img);
-                } else {
-                    for (var i = 0; i < this._stateNum; i++) {
-                        this._sources.push(Laya.Texture.createFromTexture(img, 0, height * i, width, height));
-                    }
+            var t = e.Loader.getRes(this._skin);
+            if (t) {
+                var s = t.sourceWidth, i = t.sourceHeight / this._stateNum;
+                t.$_GID || (t.$_GID = e.Utils.getGID());
+                var h = t.$_GID + "-" + this._stateNum, a = e.WeakObject.I.get(h);
+                if (e.Utils.isOkTextureList(a) || (a = null), a) this._sources = a; else {
+                    if (this._sources = [], 1 === this._stateNum) this._sources.push(t); else for (var r = 0; r < this._stateNum; r++) this._sources.push(e.Texture.createFromTexture(t, 0, i * r, s, i));
+                    e.WeakObject.I.set(h, this._sources);
                 }
-                Laya.WeakObject.I.set(key, this._sources);
-            }
-            if (this._autoSize) {
-                this._bitmap.width = this._width || width;
-                this._bitmap.height = this._height || height;
-                if (this._text) {
-                    this._text.width = this._bitmap.width;
-                    this._text.height = this._bitmap.height;
-                }
-            } else {
-                this._text && (this._text.x = width);
-            }
+                this._autoSize ? (this._bitmap.width = this._width || s, this._bitmap.height = this._height || i, 
+                this._text && (this._text.width = this._bitmap.width, this._text.height = this._bitmap.height)) : this._text && (this._text.x = s);
+            } else console.log("lose skin", this._skin);
         }
         measureWidth() {
-            this.runCallLater(this.changeClips);
-            if (this._autoSize)
-                return this._bitmap.width;
-            this.runCallLater(this.changeState);
-            return this._bitmap.width + (this._text ? this._text.width : 0);
+            return this.runCallLater(this.changeClips), this._autoSize ? this._bitmap.width : (this.runCallLater(this.changeState), 
+            this._bitmap.width + (this._text ? this._text.width : 0));
         }
         measureHeight() {
-            this.runCallLater(this.changeClips);
-            return this._text ? Math.max(this._bitmap.height, this._text.height) : this._bitmap.height;
+            return this.runCallLater(this.changeClips), this._text ? Math.max(this._bitmap.height, this._text.height) : this._bitmap.height;
         }
         get label() {
             return this._text ? this._text.text : null;
         }
-        set label(value) {
-            if (!this._text && !value)
-                return;
-            this.createText();
-            if (this._text.text != value) {
-                value && !this._text.parent && this.addChild(this._text);
-                this._text.text = (value + "").replace(/\\n/g, "\n");
-                this._setStateChanged();
-            }
+        set label(t) {
+            (this._text || t) && (this.createText(), this._text.text != t && (t && !this._text.parent && this.addChild(this._text), 
+            this._text.text = (t + "").replace(/\\n/g, "\n"), this._setStateChanged()));
         }
         get selected() {
             return this._selected;
         }
-        set selected(value) {
-            if (this._selected != value) {
-                this._selected = value;
-                this.state = this._selected ? 2 : 0;
-                this.event(Laya.Event.CHANGE);
-            }
+        set selected(t) {
+            this._selected != t && (this._selected = t, this.state = this._selected ? 2 : 0, 
+            this.event(e.Event.CHANGE));
         }
         get state() {
             return this._state;
         }
-        set state(value) {
-            if (this._state != value) {
-                this._state = value;
-                this._setStateChanged();
-            }
+        set state(t) {
+            this._state != t && (this._state = t, this._setStateChanged());
         }
         changeState() {
-            this._stateChanged = false;
-            this.runCallLater(this.changeClips);
-            var index = this._state < this._stateNum ? this._state : this._stateNum - 1;
-            this._sources && (this._bitmap.source = this._sources[index]);
-            if (this.label) {
-                this._text.color = this._labelColors[index];
-                if (this._strokeColors)
-                    this._text.strokeColor = this._strokeColors[index];
-            }
+            this._stateChanged = !1, this.runCallLater(this.changeClips);
+            var t = this._state < this._stateNum ? this._state : this._stateNum - 1;
+            this._sources && (this._bitmap.source = this._sources[t]), this.label && (this._text.color = this._labelColors[t], 
+            this._strokeColors && (this._text.strokeColor = this._strokeColors[t]));
         }
         get labelColors() {
             return this._labelColors.join(",");
         }
-        set labelColors(value) {
-            this._labelColors = UIUtils.fillArray(Styles.buttonLabelColors, value, String);
-            this._setStateChanged();
+        set labelColors(t) {
+            this._labelColors = l.fillArray(i.buttonLabelColors, t, String), this._setStateChanged();
         }
         get strokeColors() {
             return this._strokeColors ? this._strokeColors.join(",") : "";
         }
-        set strokeColors(value) {
-            this._strokeColors = UIUtils.fillArray(Styles.buttonLabelColors, value, String);
-            this._setStateChanged();
+        set strokeColors(t) {
+            this._strokeColors = l.fillArray(i.buttonLabelColors, t, String), this._setStateChanged();
         }
         get labelPadding() {
-            this.createText();
-            return this._text.padding.join(",");
+            return this.createText(), this._text.padding.join(",");
         }
-        set labelPadding(value) {
-            this.createText();
-            this._text.padding = UIUtils.fillArray(Styles.labelPadding, value, Number);
+        set labelPadding(t) {
+            this.createText(), this._text.padding = l.fillArray(i.labelPadding, t, Number);
         }
         get labelSize() {
-            this.createText();
-            return this._text.fontSize;
+            return this.createText(), this._text.fontSize;
         }
-        set labelSize(value) {
-            this.createText();
-            this._text.fontSize = value;
+        set labelSize(t) {
+            this.createText(), this._text.fontSize = t;
         }
         get labelStroke() {
-            this.createText();
-            return this._text.stroke;
+            return this.createText(), this._text.stroke;
         }
-        set labelStroke(value) {
-            this.createText();
-            this._text.stroke = value;
+        set labelStroke(t) {
+            this.createText(), this._text.stroke = t;
         }
         get labelStrokeColor() {
-            this.createText();
-            return this._text.strokeColor;
+            return this.createText(), this._text.strokeColor;
         }
-        set labelStrokeColor(value) {
-            this.createText();
-            this._text.strokeColor = value;
+        set labelStrokeColor(t) {
+            this.createText(), this._text.strokeColor = t;
         }
         get labelBold() {
-            this.createText();
-            return this._text.bold;
+            return this.createText(), this._text.bold;
         }
-        set labelBold(value) {
-            this.createText();
-            this._text.bold = value;
+        set labelBold(t) {
+            this.createText(), this._text.bold = t;
         }
         get labelFont() {
-            this.createText();
-            return this._text.font;
+            return this.createText(), this._text.font;
         }
-        set labelFont(value) {
-            this.createText();
-            this._text.font = value;
+        set labelFont(t) {
+            this.createText(), this._text.font = t;
         }
         get labelAlign() {
-            this.createText();
-            return this._text.align;
+            return this.createText(), this._text.align;
         }
-        set labelAlign(value) {
-            this.createText();
-            this._text.align = value;
+        set labelAlign(t) {
+            this.createText(), this._text.align = t;
         }
         get clickHandler() {
             return this._clickHandler;
         }
-        set clickHandler(value) {
-            this._clickHandler = value;
+        set clickHandler(t) {
+            this._clickHandler = t;
         }
         get text() {
-            this.createText();
-            return this._text;
+            return this.createText(), this._text;
         }
         get sizeGrid() {
-            if (this._bitmap.sizeGrid)
-                return this._bitmap.sizeGrid.join(",");
-            return null;
+            return this._bitmap.sizeGrid ? this._bitmap.sizeGrid.join(",") : null;
         }
-        set sizeGrid(value) {
-            this._bitmap.sizeGrid = UIUtils.fillArray(Styles.defaultSizeGrid, value, Number);
+        set sizeGrid(t) {
+            this._bitmap.sizeGrid = l.fillArray(i.defaultSizeGrid, t, Number);
         }
-        set width(value) {
-            super.set_width(value);
-            if (this._autoSize) {
-                this._bitmap.width = value;
-                this._text && (this._text.width = value);
-            }
+        set width(t) {
+            super.set_width(t), this._autoSize && (this._bitmap.width = t, this._text && (this._text.width = t));
         }
         get width() {
             return super.get_width();
         }
-        set height(value) {
-            super.set_height(value);
-            if (this._autoSize) {
-                this._bitmap.height = value;
-                this._text && (this._text.height = value);
-            }
+        set height(t) {
+            super.set_height(t), this._autoSize && (this._bitmap.height = t, this._text && (this._text.height = t));
         }
         get height() {
             return super.get_height();
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.label = value + "";
-            else
-                super.set_dataSource(value);
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.label = t + "" : super.set_dataSource(t);
         }
         get dataSource() {
             return super.get_dataSource();
@@ -1241,300 +781,184 @@
         get iconOffset() {
             return this._bitmap._offset ? this._bitmap._offset.join(",") : null;
         }
-        set iconOffset(value) {
-            if (value)
-                this._bitmap._offset = UIUtils.fillArray([1, 1], value, Number);
-            else
-                this._bitmap._offset = [];
+        set iconOffset(t) {
+            this._bitmap._offset = t ? l.fillArray([ 1, 1 ], t, Number) : [];
         }
         _setStateChanged() {
-            if (!this._stateChanged) {
-                this._stateChanged = true;
-                this.callLater(this.changeState);
-            }
+            this._stateChanged || (this._stateChanged = !0, this.callLater(this.changeState));
         }
     }
-    Button.stateMap = {
-        "mouseup": 0,
-        "mouseover": 1,
-        "mousedown": 2,
-        "mouseout": 0
-    };
-    Laya.ILaya.regClass(Button);
-    Laya.ClassUtils.regClass("laya.ui.Button", Button);
-    Laya.ClassUtils.regClass("Laya.Button", Button);
-
-    class CheckBox extends Button {
-        constructor(skin = null, label = "") {
-            super(skin, label);
-            this.toggle = true;
-            this._autoSize = false;
+    d.stateMap = {
+        mouseup: 0,
+        mouseover: 1,
+        mousedown: 2,
+        mouseout: 0
+    }, e.ILaya.regClass(d), e.ClassUtils.regClass("laya.ui.Button", d), e.ClassUtils.regClass("Laya.Button", d);
+    class u extends d {
+        constructor(t = null, e = "") {
+            super(t, e), this.toggle = !0, this._autoSize = !1;
         }
         preinitialize() {
-            super.preinitialize();
-            this.toggle = true;
-            this._autoSize = false;
+            super.preinitialize(), this.toggle = !0, this._autoSize = !1;
         }
         initialize() {
-            super.initialize();
-            this.createText();
-            this._text.align = "left";
-            this._text.valign = "top";
+            super.initialize(), this.createText(), this._text.align = "left", this._text.valign = "top", 
             this._text.width = 0;
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (value instanceof Boolean)
-                this.selected = value;
-            else if (typeof(value) == 'string')
-                this.selected = value === "true";
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, t instanceof Boolean ? this.selected = t : "string" == typeof t ? this.selected = "true" === t : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
         }
     }
-    Laya.ILaya.regClass(CheckBox);
-    Laya.ClassUtils.regClass("laya.ui.CheckBox", CheckBox);
-    Laya.ClassUtils.regClass("Laya.CheckBox", CheckBox);
-
-    class Clip extends UIComponent {
-        constructor(url = null, clipX = 1, clipY = 1) {
-            super();
-            this._clipX = 1;
-            this._clipY = 1;
-            this._clipWidth = 0;
-            this._clipHeight = 0;
-            this._interval = 50;
-            this._index = 0;
-            this._toIndex = -1;
-            this._clipX = clipX;
-            this._clipY = clipY;
-            this.skin = url;
+    e.ILaya.regClass(u), e.ClassUtils.regClass("laya.ui.CheckBox", u), e.ClassUtils.regClass("Laya.CheckBox", u);
+    class g extends n {
+        constructor(t = null, e = 1, s = 1) {
+            super(), this._clipX = 1, this._clipY = 1, this._clipWidth = 0, this._clipHeight = 0, 
+            this._interval = 50, this._index = 0, this._toIndex = -1, this._clipX = e, this._clipY = s, 
+            this.skin = t;
         }
-        destroy(destroyChild = true) {
-            super.destroy(true);
-            this._bitmap && this._bitmap.destroy();
-            this._bitmap = null;
+        destroy(t = !0) {
+            super.destroy(!0), this._bitmap && this._bitmap.destroy(), this._bitmap = null, 
             this._sources = null;
         }
         dispose() {
-            this.destroy(true);
-            Laya.ILaya.loader.clearRes(this._skin);
+            this.destroy(!0), e.ILaya.loader.clearRes(this._skin);
         }
         createChildren() {
-            this.graphics = this._bitmap = new AutoBitmap();
+            this.graphics = this._bitmap = new h();
         }
-        _onDisplay(e) {
-            if (this._isPlaying) {
-                if (this._getBit(Laya.Const.DISPLAYED_INSTAGE))
-                    this.play();
-                else
-                    this.stop();
-            } else if (this._autoPlay) {
-                this.play();
-            }
+        _onDisplay(t) {
+            this._isPlaying ? this._getBit(e.Const.DISPLAYED_INSTAGE) ? this.play() : this.stop() : this._autoPlay && this.play();
         }
         get skin() {
             return this._skin;
         }
-        set skin(value) {
-            if (this._skin != value) {
-                this._skin = value;
-                if (value) {
-                    if (!Laya.Loader.getRes(value)) {
-                        Laya.ILaya.loader.load(this._skin, Laya.Handler.create(this, this._skinLoaded), null, Laya.Loader.IMAGE, 1);
-                    } else {
-                        this._skinLoaded();
-                    }
-                } else {
-                    this._bitmap.source = null;
-                }
-            }
+        set skin(t) {
+            this._skin != t && (this._skin = t, t ? e.Loader.getRes(t) ? this._skinLoaded() : e.ILaya.loader.load(this._skin, e.Handler.create(this, this._skinLoaded), null, e.Loader.IMAGE, 1) : this._bitmap.source = null);
         }
         _skinLoaded() {
-            this._setClipChanged();
-            this._sizeChanged();
-            this.event(Laya.Event.LOADED);
+            this._setClipChanged(), this._sizeChanged(), this.event(e.Event.LOADED);
         }
         get clipX() {
             return this._clipX;
         }
-        set clipX(value) {
-            this._clipX = value || 1;
-            this._setClipChanged();
+        set clipX(t) {
+            this._clipX = t || 1, this._setClipChanged();
         }
         get clipY() {
             return this._clipY;
         }
-        set clipY(value) {
-            this._clipY = value || 1;
-            this._setClipChanged();
+        set clipY(t) {
+            this._clipY = t || 1, this._setClipChanged();
         }
         get clipWidth() {
             return this._clipWidth;
         }
-        set clipWidth(value) {
-            this._clipWidth = value;
-            this._setClipChanged();
+        set clipWidth(t) {
+            this._clipWidth = t, this._setClipChanged();
         }
         get clipHeight() {
             return this._clipHeight;
         }
-        set clipHeight(value) {
-            this._clipHeight = value;
-            this._setClipChanged();
+        set clipHeight(t) {
+            this._clipHeight = t, this._setClipChanged();
         }
         changeClip() {
-            this._clipChanged = false;
-            if (!this._skin)
-                return;
-            var img = Laya.Loader.getRes(this._skin);
-            if (img) {
-                this.loadComplete(this._skin, img);
-            } else {
-                Laya.ILaya.loader.load(this._skin, Laya.Handler.create(this, this.loadComplete, [this._skin]));
+            if (this._clipChanged = !1, this._skin) {
+                var t = e.Loader.getRes(this._skin);
+                t ? this.loadComplete(this._skin, t) : e.ILaya.loader.load(this._skin, e.Handler.create(this, this.loadComplete, [ this._skin ]));
             }
         }
-        loadComplete(url, img) {
-            if (url === this._skin && img) {
-                var w = this._clipWidth || Math.ceil(img.sourceWidth / this._clipX);
-                var h = this._clipHeight || Math.ceil(img.sourceHeight / this._clipY);
-                var key = this._skin + w + h;
-                var clips = Laya.WeakObject.I.get(key);
-                if (!Laya.Utils.isOkTextureList(clips)) {
-                    clips = null;
-                }
-                if (clips)
-                    this._sources = clips;
-                else {
+        loadComplete(t, s) {
+            if (t === this._skin && s) {
+                var i = this._clipWidth || Math.ceil(s.sourceWidth / this._clipX), h = this._clipHeight || Math.ceil(s.sourceHeight / this._clipY), a = this._skin + i + h, r = e.WeakObject.I.get(a);
+                if (e.Utils.isOkTextureList(r) || (r = null), r) this._sources = r; else {
                     this._sources = [];
-                    for (var i = 0; i < this._clipY; i++) {
-                        for (var j = 0; j < this._clipX; j++) {
-                            this._sources.push(Laya.Texture.createFromTexture(img, w * j, h * i, w, h));
-                        }
-                    }
-                    Laya.WeakObject.I.set(key, this._sources);
+                    for (var l = 0; l < this._clipY; l++) for (var n = 0; n < this._clipX; n++) this._sources.push(e.Texture.createFromTexture(s, i * n, h * l, i, h));
+                    e.WeakObject.I.set(a, this._sources);
                 }
-                this.index = this._index;
-                this.event(Laya.Event.LOADED);
-                this.onCompResize();
+                this.index = this._index, this.event(e.Event.LOADED), this.onCompResize();
             }
         }
         get sources() {
             return this._sources;
         }
-        set sources(value) {
-            this._sources = value;
-            this.index = this._index;
-            this.event(Laya.Event.LOADED);
+        set sources(t) {
+            this._sources = t, this.index = this._index, this.event(e.Event.LOADED);
         }
         get group() {
             return this._group;
         }
-        set group(value) {
-            if (value && this._skin)
-                Laya.Loader.setGroup(this._skin, value);
-            this._group = value;
+        set group(t) {
+            t && this._skin && e.Loader.setGroup(this._skin, t), this._group = t;
         }
-        set width(value) {
-            super.width = value;
-            this._bitmap.width = value;
+        set width(t) {
+            super.width = t, this._bitmap.width = t;
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this._bitmap.height = value;
+        set height(t) {
+            super.height = t, this._bitmap.height = t;
         }
         get height() {
             return super.height;
         }
         measureWidth() {
-            this.runCallLater(this.changeClip);
-            return this._bitmap.width;
+            return this.runCallLater(this.changeClip), this._bitmap.width;
         }
         measureHeight() {
-            this.runCallLater(this.changeClip);
-            return this._bitmap.height;
+            return this.runCallLater(this.changeClip), this._bitmap.height;
         }
         get sizeGrid() {
-            if (this._bitmap.sizeGrid)
-                return this._bitmap.sizeGrid.join(",");
-            return null;
+            return this._bitmap.sizeGrid ? this._bitmap.sizeGrid.join(",") : null;
         }
-        set sizeGrid(value) {
-            this._bitmap.sizeGrid = UIUtils.fillArray(Styles.defaultSizeGrid, value, Number);
+        set sizeGrid(t) {
+            this._bitmap.sizeGrid = l.fillArray(i.defaultSizeGrid, t, Number);
         }
         get index() {
             return this._index;
         }
-        set index(value) {
-            this._index = value;
-            this._bitmap && this._sources && (this._bitmap.source = this._sources[value]);
-            this.event(Laya.Event.CHANGE);
+        set index(t) {
+            this._index = t, this._bitmap && this._sources && (this._bitmap.source = this._sources[t]), 
+            this.event(e.Event.CHANGE);
         }
         get total() {
-            this.runCallLater(this.changeClip);
-            return this._sources ? this._sources.length : 0;
+            return this.runCallLater(this.changeClip), this._sources ? this._sources.length : 0;
         }
         get autoPlay() {
             return this._autoPlay;
         }
-        set autoPlay(value) {
-            if (this._autoPlay != value) {
-                this._autoPlay = value;
-                value ? this.play() : this.stop();
-            }
+        set autoPlay(t) {
+            this._autoPlay != t && (this._autoPlay = t, t ? this.play() : this.stop());
         }
         get interval() {
             return this._interval;
         }
-        set interval(value) {
-            if (this._interval != value) {
-                this._interval = value;
-                if (this._isPlaying)
-                    this.play();
-            }
+        set interval(t) {
+            this._interval != t && (this._interval = t, this._isPlaying && this.play());
         }
         get isPlaying() {
             return this._isPlaying;
         }
-        set isPlaying(value) {
-            this._isPlaying = value;
+        set isPlaying(t) {
+            this._isPlaying = t;
         }
-        play(from = 0, to = -1) {
-            this._isPlaying = true;
-            this.index = from;
-            this._toIndex = to;
-            this._index++;
-            Laya.ILaya.timer.loop(this.interval, this, this._loop);
-            this.on(Laya.Event.DISPLAY, this, this._onDisplay);
-            this.on(Laya.Event.UNDISPLAY, this, this._onDisplay);
+        play(t = 0, s = -1) {
+            this._isPlaying = !0, this.index = t, this._toIndex = s, this._index++, e.ILaya.timer.loop(this.interval, this, this._loop), 
+            this.on(e.Event.DISPLAY, this, this._onDisplay), this.on(e.Event.UNDISPLAY, this, this._onDisplay);
         }
         _loop() {
-            if (this._visible && this._sources) {
-                this._index++;
-                if (this._toIndex > -1 && this._index >= this._toIndex)
-                    this.stop();
-                else if (this._index >= this._sources.length)
-                    this._index = 0;
-                this.index = this._index;
-            }
+            this._visible && this._sources && (this._index++, this._toIndex > -1 && this._index >= this._toIndex ? this.stop() : this._index >= this._sources.length && (this._index = 0), 
+            this.index = this._index);
         }
         stop() {
-            this._isPlaying = false;
-            Laya.ILaya.timer.clear(this, this._loop);
-            this.event(Laya.Event.COMPLETE);
+            this._isPlaying = !1, e.ILaya.timer.clear(this, this._loop), this.event(e.Event.COMPLETE);
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.index = parseInt(value);
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.index = parseInt(t) : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
@@ -1543,331 +967,245 @@
             return this._bitmap;
         }
         _setClipChanged() {
-            if (!this._clipChanged) {
-                this._clipChanged = true;
-                this.callLater(this.changeClip);
-            }
+            this._clipChanged || (this._clipChanged = !0, this.callLater(this.changeClip));
         }
     }
-    Laya.ILaya.regClass(Clip);
-    Laya.ClassUtils.regClass("laya.ui.Clip", Clip);
-    Laya.ClassUtils.regClass("Laya.Clip", Clip);
-
-    class ColorPicker extends UIComponent {
+    e.ILaya.regClass(g), e.ClassUtils.regClass("laya.ui.Clip", g), e.ClassUtils.regClass("Laya.Clip", g);
+    class p extends n {
         constructor() {
-            super(...arguments);
-            this._gridSize = 11;
-            this._bgColor = "#ffffff";
-            this._borderColor = "#000000";
-            this._inputColor = "#000000";
-            this._inputBgColor = "#efefef";
-            this._colors = [];
+            super(...arguments), this._gridSize = 11, this._bgColor = "#ffffff", this._borderColor = "#000000", 
+            this._inputColor = "#000000", this._inputBgColor = "#efefef", this._colors = [], 
             this._selectedColor = "#000000";
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._colorPanel && this._colorPanel.destroy(destroyChild);
-            this._colorButton && this._colorButton.destroy(destroyChild);
-            this._colorPanel = null;
-            this._colorTiles = null;
-            this._colorBlock = null;
-            this._colorInput = null;
-            this._colorButton = null;
-            this._colors = null;
-            this.changeHandler = null;
+        destroy(t = !0) {
+            super.destroy(t), this._colorPanel && this._colorPanel.destroy(t), this._colorButton && this._colorButton.destroy(t), 
+            this._colorPanel = null, this._colorTiles = null, this._colorBlock = null, this._colorInput = null, 
+            this._colorButton = null, this._colors = null, this.changeHandler = null;
         }
         createChildren() {
-            this.addChild(this._colorButton = new Button());
-            this._colorPanel = new Box();
-            this._colorPanel.size(230, 166);
-            this._colorPanel.addChild(this._colorTiles = new Laya.Sprite());
-            this._colorPanel.addChild(this._colorBlock = new Laya.Sprite());
-            this._colorPanel.addChild(this._colorInput = new Laya.Input());
+            this.addChild(this._colorButton = new d()), this._colorPanel = new c(), this._colorPanel.size(230, 166), 
+            this._colorPanel.addChild(this._colorTiles = new e.Sprite()), this._colorPanel.addChild(this._colorBlock = new e.Sprite()), 
+            this._colorPanel.addChild(this._colorInput = new e.Input());
         }
         initialize() {
-            this._colorButton.on(Laya.Event.CLICK, this, this.onColorButtonClick);
-            this._colorBlock.pos(5, 5);
-            this._colorInput.pos(60, 5);
-            this._colorInput.size(60, 20);
-            this._colorInput.on(Laya.Event.CHANGE, this, this.onColorInputChange);
-            this._colorInput.on(Laya.Event.KEY_DOWN, this, this.onColorFieldKeyDown);
-            this._colorTiles.pos(5, 30);
-            this._colorTiles.on(Laya.Event.MOUSE_MOVE, this, this.onColorTilesMouseMove);
-            this._colorTiles.on(Laya.Event.CLICK, this, this.onColorTilesClick);
-            this._colorTiles.size(20 * this._gridSize, 12 * this._gridSize);
-            this._colorPanel.on(Laya.Event.MOUSE_DOWN, this, this.onPanelMouseDown);
+            this._colorButton.on(e.Event.CLICK, this, this.onColorButtonClick), this._colorBlock.pos(5, 5), 
+            this._colorInput.pos(60, 5), this._colorInput.size(60, 20), this._colorInput.on(e.Event.CHANGE, this, this.onColorInputChange), 
+            this._colorInput.on(e.Event.KEY_DOWN, this, this.onColorFieldKeyDown), this._colorTiles.pos(5, 30), 
+            this._colorTiles.on(e.Event.MOUSE_MOVE, this, this.onColorTilesMouseMove), this._colorTiles.on(e.Event.CLICK, this, this.onColorTilesClick), 
+            this._colorTiles.size(20 * this._gridSize, 12 * this._gridSize), this._colorPanel.on(e.Event.MOUSE_DOWN, this, this.onPanelMouseDown), 
             this.bgColor = this._bgColor;
         }
-        onPanelMouseDown(e) {
-            e.stopPropagation();
+        onPanelMouseDown(t) {
+            t.stopPropagation();
         }
         changePanel() {
-            this._panelChanged = false;
-            var g = this._colorPanel.graphics;
-            g.clear(true);
-            g.drawRect(0, 0, 230, 166, this._bgColor, this._borderColor);
-            this.drawBlock(this._selectedColor);
-            this._colorInput.borderColor = this._borderColor;
-            this._colorInput.bgColor = this._inputBgColor;
-            this._colorInput.color = this._inputColor;
-            g = this._colorTiles.graphics;
-            g.clear(true);
-            var mainColors = [0x000000, 0x333333, 0x666666, 0x999999, 0xCCCCCC, 0xFFFFFF, 0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00, 0x00FFFF, 0xFF00FF];
-            for (var i = 0; i < 12; i++) {
-                for (var j = 0; j < 20; j++) {
-                    var color;
-                    if (j === 0)
-                        color = mainColors[i];
-                    else if (j === 1)
-                        color = 0x000000;
-                    else
-                        color = (((i * 3 + j / 6) % 3 << 0) + ((i / 6) << 0) * 3) * 0x33 << 16 | j % 6 * 0x33 << 8 | (i << 0) % 6 * 0x33;
-                    var strColor = UIUtils.toColor(color);
-                    this._colors.push(strColor);
-                    var x = j * this._gridSize;
-                    var y = i * this._gridSize;
-                    g.drawRect(x, y, this._gridSize, this._gridSize, strColor, "#000000");
-                }
+            this._panelChanged = !1;
+            var t = this._colorPanel.graphics;
+            t.clear(!0), t.drawRect(0, 0, 230, 166, this._bgColor, this._borderColor), this.drawBlock(this._selectedColor), 
+            this._colorInput.borderColor = this._borderColor, this._colorInput.bgColor = this._inputBgColor, 
+            this._colorInput.color = this._inputColor, (t = this._colorTiles.graphics).clear(!0);
+            for (var e = [ 0, 3355443, 6710886, 10066329, 13421772, 16777215, 16711680, 65280, 255, 16776960, 65535, 16711935 ], s = 0; s < 12; s++) for (var i = 0; i < 20; i++) {
+                var h;
+                h = 0 === i ? e[s] : 1 === i ? 0 : 51 * (((3 * s + i / 6) % 3 << 0) + 3 * (s / 6 << 0)) << 16 | i % 6 * 51 << 8 | (s << 0) % 6 * 51;
+                var a = l.toColor(h);
+                this._colors.push(a);
+                var r = i * this._gridSize, n = s * this._gridSize;
+                t.drawRect(r, n, this._gridSize, this._gridSize, a, "#000000");
             }
         }
-        onColorButtonClick(e) {
-            if (this._colorPanel.parent)
-                this.close();
-            else
-                this.open();
+        onColorButtonClick(t) {
+            this._colorPanel.parent ? this.close() : this.open();
         }
         open() {
-            let stage = Laya.ILaya.stage;
-            var p = this.localToGlobal(new Laya.Point());
-            var px = p.x + this._colorPanel.width <= stage.width ? p.x : stage.width - this._colorPanel.width;
-            var py = p.y + this._colorButton.height;
-            py = py + this._colorPanel.height <= stage.height ? py : p.y - this._colorPanel.height;
-            this._colorPanel.pos(px, py);
-            this._colorPanel.zOrder = 1001;
-            stage.addChild(this._colorPanel);
-            stage.on(Laya.Event.MOUSE_DOWN, this, this.removeColorBox);
+            let t = e.ILaya.stage;
+            var s = this.localToGlobal(new e.Point()), i = s.x + this._colorPanel.width <= t.width ? s.x : t.width - this._colorPanel.width, h = s.y + this._colorButton.height;
+            h = h + this._colorPanel.height <= t.height ? h : s.y - this._colorPanel.height, 
+            this._colorPanel.pos(i, h), this._colorPanel.zOrder = 1001, t.addChild(this._colorPanel), 
+            t.on(e.Event.MOUSE_DOWN, this, this.removeColorBox);
         }
         close() {
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_DOWN, this, this.removeColorBox);
-            this._colorPanel.removeSelf();
+            e.ILaya.stage.off(e.Event.MOUSE_DOWN, this, this.removeColorBox), this._colorPanel.removeSelf();
         }
-        removeColorBox(e = null) {
+        removeColorBox(t = null) {
             this.close();
         }
-        onColorFieldKeyDown(e) {
-            if (e.keyCode == 13) {
-                if (this._colorInput.text)
-                    this.selectedColor = this._colorInput.text;
-                else
-                    this.selectedColor = null;
-                this.close();
-                e.stopPropagation();
-            }
+        onColorFieldKeyDown(t) {
+            13 == t.keyCode && (this._colorInput.text ? this.selectedColor = this._colorInput.text : this.selectedColor = null, 
+            this.close(), t.stopPropagation());
         }
-        onColorInputChange(e = null) {
-            if (this._colorInput.text)
-                this.drawBlock(this._colorInput.text);
-            else
-                this.drawBlock("#FFFFFF");
+        onColorInputChange(t = null) {
+            this._colorInput.text ? this.drawBlock(this._colorInput.text) : this.drawBlock("#FFFFFF");
         }
-        onColorTilesClick(e) {
-            this.selectedColor = this.getColorByMouse();
-            this.close();
+        onColorTilesClick(t) {
+            this.selectedColor = this.getColorByMouse(), this.close();
         }
-        onColorTilesMouseMove(e) {
-            this._colorInput.focus = false;
-            var color = this.getColorByMouse();
-            this._colorInput.text = color;
-            this.drawBlock(color);
+        onColorTilesMouseMove(t) {
+            this._colorInput.focus = !1;
+            var e = this.getColorByMouse();
+            this._colorInput.text = e, this.drawBlock(e);
         }
         getColorByMouse() {
-            var point = this._colorTiles.getMousePoint();
-            var x = Math.floor(point.x / this._gridSize);
-            var y = Math.floor(point.y / this._gridSize);
-            return this._colors[y * 20 + x];
+            var t = this._colorTiles.getMousePoint(), e = Math.floor(t.x / this._gridSize), s = Math.floor(t.y / this._gridSize);
+            return this._colors[20 * s + e];
         }
-        drawBlock(color) {
-            var g = this._colorBlock.graphics;
-            g.clear(true);
-            var showColor = color ? color : "#ffffff";
-            g.drawRect(0, 0, 50, 20, showColor, this._borderColor);
-            color || g.drawLine(0, 0, 50, 20, "#ff0000");
+        drawBlock(t) {
+            var e = this._colorBlock.graphics;
+            e.clear(!0);
+            var s = t || "#ffffff";
+            e.drawRect(0, 0, 50, 20, s, this._borderColor), t || e.drawLine(0, 0, 50, 20, "#ff0000");
         }
         get selectedColor() {
             return this._selectedColor;
         }
-        set selectedColor(value) {
-            if (this._selectedColor != value) {
-                this._selectedColor = this._colorInput.text = value;
-                this.drawBlock(value);
-                this.changeColor();
-                this.changeHandler && this.changeHandler.runWith(this._selectedColor);
-                this.event(Laya.Event.CHANGE, Laya.Event.EMPTY.setTo(Laya.Event.CHANGE, this, this));
-            }
+        set selectedColor(t) {
+            this._selectedColor != t && (this._selectedColor = this._colorInput.text = t, this.drawBlock(t), 
+            this.changeColor(), this.changeHandler && this.changeHandler.runWith(this._selectedColor), 
+            this.event(e.Event.CHANGE, e.Event.EMPTY.setTo(e.Event.CHANGE, this, this)));
         }
         get skin() {
             return this._colorButton.skin;
         }
-        set skin(value) {
-            this._colorButton.once(Laya.Event.LOADED, this, this.changeColor);
-            this._colorButton.skin = value;
+        set skin(t) {
+            this._colorButton.once(e.Event.LOADED, this, this.changeColor), this._colorButton.skin = t;
         }
         changeColor() {
-            var g = this.graphics;
-            g.clear(true);
-            var showColor = this._selectedColor || "#000000";
-            g.drawRect(0, 0, this._colorButton.width, this._colorButton.height, showColor);
+            var t = this.graphics;
+            t.clear(!0);
+            var e = this._selectedColor || "#000000";
+            t.drawRect(0, 0, this._colorButton.width, this._colorButton.height, e);
         }
         get bgColor() {
             return this._bgColor;
         }
-        set bgColor(value) {
-            this._bgColor = value;
-            this._setPanelChanged();
+        set bgColor(t) {
+            this._bgColor = t, this._setPanelChanged();
         }
         get borderColor() {
             return this._borderColor;
         }
-        set borderColor(value) {
-            this._borderColor = value;
-            this._setPanelChanged();
+        set borderColor(t) {
+            this._borderColor = t, this._setPanelChanged();
         }
         get inputColor() {
             return this._inputColor;
         }
-        set inputColor(value) {
-            this._inputColor = value;
-            this._setPanelChanged();
+        set inputColor(t) {
+            this._inputColor = t, this._setPanelChanged();
         }
         get inputBgColor() {
             return this._inputBgColor;
         }
-        set inputBgColor(value) {
-            this._inputBgColor = value;
-            this._setPanelChanged();
+        set inputBgColor(t) {
+            this._inputBgColor = t, this._setPanelChanged();
         }
         _setPanelChanged() {
-            if (!this._panelChanged) {
-                this._panelChanged = true;
-                this.callLater(this.changePanel);
-            }
+            this._panelChanged || (this._panelChanged = !0, this.callLater(this.changePanel));
         }
     }
-    Laya.ILaya.regClass(ColorPicker);
-    Laya.ClassUtils.regClass("laya.ui.ColorPicker", ColorPicker);
-    Laya.ClassUtils.regClass("Laya.ColorPicker", ColorPicker);
-
-    class Label extends UIComponent {
-        constructor(text = "") {
-            super();
-            this.text = text;
+    e.ILaya.regClass(p), e.ClassUtils.regClass("laya.ui.ColorPicker", p), e.ClassUtils.regClass("Laya.ColorPicker", p);
+    class C extends n {
+        constructor(t = "") {
+            super(), this.text = t;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._tf = null;
+        destroy(t = !0) {
+            super.destroy(t), this._tf = null;
         }
         createChildren() {
-            this.addChild(this._tf = new Laya.Text());
+            this.addChild(this._tf = new e.Text());
         }
         get text() {
             return this._tf.text;
         }
-        set text(value) {
-            if (this._tf.text != value) {
-                if (value)
-                    value = UIUtils.adptString(value + "");
-                this._tf.text = value;
-                this.event(Laya.Event.CHANGE);
-                if (!this._width || !this._height)
-                    this.onCompResize();
-            }
+        set text(t) {
+            this._tf.text != t && (t && (t = l.adptString(t + "")), this._tf.text = t, this.event(e.Event.CHANGE), 
+            this._width && this._height || this.onCompResize());
         }
-        changeText(text) {
-            this._tf.changeText(text);
+        changeText(t) {
+            this._tf.changeText(t);
         }
         get wordWrap() {
             return this._tf.wordWrap;
         }
-        set wordWrap(value) {
-            this._tf.wordWrap = value;
+        set wordWrap(t) {
+            this._tf.wordWrap = t;
         }
         get color() {
             return this._tf.color;
         }
-        set color(value) {
-            this._tf.color = value;
+        set color(t) {
+            this._tf.color = t;
         }
         get font() {
             return this._tf.font;
         }
-        set font(value) {
-            this._tf.font = value;
+        set font(t) {
+            this._tf.font = t;
         }
         get align() {
             return this._tf.align;
         }
-        set align(value) {
-            this._tf.align = value;
+        set align(t) {
+            this._tf.align = t;
         }
         get valign() {
             return this._tf.valign;
         }
-        set valign(value) {
-            this._tf.valign = value;
+        set valign(t) {
+            this._tf.valign = t;
         }
         get bold() {
             return this._tf.bold;
         }
-        set bold(value) {
-            this._tf.bold = value;
+        set bold(t) {
+            this._tf.bold = t;
         }
         get italic() {
             return this._tf.italic;
         }
-        set italic(value) {
-            this._tf.italic = value;
+        set italic(t) {
+            this._tf.italic = t;
         }
         get leading() {
             return this._tf.leading;
         }
-        set leading(value) {
-            this._tf.leading = value;
+        set leading(t) {
+            this._tf.leading = t;
         }
         get fontSize() {
             return this._tf.fontSize;
         }
-        set fontSize(value) {
-            this._tf.fontSize = value;
+        set fontSize(t) {
+            this._tf.fontSize = t;
         }
         get padding() {
             return this._tf.padding.join(",");
         }
-        set padding(value) {
-            this._tf.padding = UIUtils.fillArray(Styles.labelPadding, value, Number);
+        set padding(t) {
+            this._tf.padding = l.fillArray(i.labelPadding, t, Number);
         }
         get bgColor() {
             return this._tf.bgColor;
         }
-        set bgColor(value) {
-            this._tf.bgColor = value;
+        set bgColor(t) {
+            this._tf.bgColor = t;
         }
         get borderColor() {
             return this._tf.borderColor;
         }
-        set borderColor(value) {
-            this._tf.borderColor = value;
+        set borderColor(t) {
+            this._tf.borderColor = t;
         }
         get stroke() {
             return this._tf.stroke;
         }
-        set stroke(value) {
-            this._tf.stroke = value;
+        set stroke(t) {
+            this._tf.stroke = t;
         }
         get strokeColor() {
             return this._tf.strokeColor;
         }
-        set strokeColor(value) {
-            this._tf.strokeColor = value;
+        set strokeColor(t) {
+            this._tf.strokeColor = t;
         }
         get textField() {
             return this._tf;
@@ -1879,29 +1217,19 @@
             return this._tf.height;
         }
         get width() {
-            if (this._width || this._tf.text)
-                return super.width;
-            return 0;
+            return this._width || this._tf.text ? super.width : 0;
         }
-        set width(value) {
-            super.width = value;
-            this._tf.width = value;
+        set width(t) {
+            super.width = t, this._tf.width = t;
         }
         get height() {
-            if (this._height || this._tf.text)
-                return super.height;
-            return 0;
+            return this._height || this._tf.text ? super.height : 0;
         }
-        set height(value) {
-            super.height = value;
-            this._tf.height = value;
+        set height(t) {
+            super.height = t, this._tf.height = t;
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.text = value + "";
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.text = t + "" : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
@@ -1909,170 +1237,100 @@
         get overflow() {
             return this._tf.overflow;
         }
-        set overflow(value) {
-            this._tf.overflow = value;
+        set overflow(t) {
+            this._tf.overflow = t;
         }
         get underline() {
             return this._tf.underline;
         }
-        set underline(value) {
-            this._tf.underline = value;
+        set underline(t) {
+            this._tf.underline = t;
         }
         get underlineColor() {
             return this._tf.underlineColor;
         }
-        set underlineColor(value) {
-            this._tf.underlineColor = value;
+        set underlineColor(t) {
+            this._tf.underlineColor = t;
         }
     }
-    Laya.ILaya.regClass(Label);
-    Laya.ClassUtils.regClass("laya.ui.Label", Label);
-    Laya.ClassUtils.regClass("Laya.Label", Label);
-
-    class Slider extends UIComponent {
-        constructor(skin = null) {
-            super();
-            this.isVertical = true;
-            this.showLabel = true;
-            this._max = 100;
-            this._min = 0;
-            this._tick = 1;
-            this._value = 0;
-            if (!Slider.label) {
-                Slider.label = new Label();
-            }
-            this.skin = skin;
+    e.ILaya.regClass(C), e.ClassUtils.regClass("laya.ui.Label", C), e.ClassUtils.regClass("Laya.Label", C);
+    class v extends n {
+        constructor(t = null) {
+            super(), this.isVertical = !0, this.showLabel = !0, this._max = 100, this._min = 0, 
+            this._tick = 1, this._value = 0, v.label || (v.label = new C()), this.skin = t;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._bg && this._bg.destroy(destroyChild);
-            this._bar && this._bar.destroy(destroyChild);
-            this._progress && this._progress.destroy(destroyChild);
-            this._bg = null;
-            this._bar = null;
-            this._progress = null;
-            this.changeHandler = null;
+        destroy(t = !0) {
+            super.destroy(t), this._bg && this._bg.destroy(t), this._bar && this._bar.destroy(t), 
+            this._progress && this._progress.destroy(t), this._bg = null, this._bar = null, 
+            this._progress = null, this.changeHandler = null;
         }
         createChildren() {
-            this.addChild(this._bg = new Image());
-            this.addChild(this._bar = new Button());
+            this.addChild(this._bg = new o()), this.addChild(this._bar = new d());
         }
         initialize() {
-            this._bar.on(Laya.Event.MOUSE_DOWN, this, this.onBarMouseDown);
-            this._bg.sizeGrid = this._bar.sizeGrid = "4,4,4,4,0";
-            if (this._progress)
-                this._progress.sizeGrid = this._bar.sizeGrid;
-            this.allowClickBack = true;
+            this._bar.on(e.Event.MOUSE_DOWN, this, this.onBarMouseDown), this._bg.sizeGrid = this._bar.sizeGrid = "4,4,4,4,0", 
+            this._progress && (this._progress.sizeGrid = this._bar.sizeGrid), this.allowClickBack = !0;
         }
-        onBarMouseDown(e) {
-            var Laya$1 = Laya.ILaya;
-            this._globalSacle || (this._globalSacle = new Laya.Point());
-            this._globalSacle.setTo(this.globalScaleX || 0.01, this.globalScaleY || 0.01);
-            this._maxMove = this.isVertical ? (this.height - this._bar.height) : (this.width - this._bar.width);
-            this._tx = Laya$1.stage.mouseX;
-            this._ty = Laya$1.stage.mouseY;
-            Laya$1.stage.on(Laya.Event.MOUSE_MOVE, this, this.mouseMove);
-            Laya$1.stage.once(Laya.Event.MOUSE_UP, this, this.mouseUp);
-            Laya$1.stage.once(Laya.Event.MOUSE_OUT, this, this.mouseUp);
+        onBarMouseDown(t) {
+            var s = e.ILaya;
+            this._globalSacle || (this._globalSacle = new e.Point()), this._globalSacle.setTo(this.globalScaleX || .01, this.globalScaleY || .01), 
+            this._maxMove = this.isVertical ? this.height - this._bar.height : this.width - this._bar.width, 
+            this._tx = s.stage.mouseX, this._ty = s.stage.mouseY, s.stage.on(e.Event.MOUSE_MOVE, this, this.mouseMove), 
+            s.stage.once(e.Event.MOUSE_UP, this, this.mouseUp), s.stage.once(e.Event.MOUSE_OUT, this, this.mouseUp), 
             this.showValueText();
         }
         showValueText() {
             if (this.showLabel) {
-                var label = Slider.label;
-                this.addChild(label);
-                label.textField.changeText(this._value + "");
-                if (this.isVertical) {
-                    label.x = this._bar._x + 20;
-                    label.y = (this._bar.height - label.height) * 0.5 + this._bar._y;
-                } else {
-                    label.y = this._bar._y - 20;
-                    label.x = (this._bar.width - label.width) * 0.5 + this._bar._x;
-                }
+                var t = v.label;
+                this.addChild(t), t.textField.changeText(this._value + ""), this.isVertical ? (t.x = this._bar._x + 20, 
+                t.y = .5 * (this._bar.height - t.height) + this._bar._y) : (t.y = this._bar._y - 20, 
+                t.x = .5 * (this._bar.width - t.width) + this._bar._x);
             }
         }
         hideValueText() {
-            Slider.label && Slider.label.removeSelf();
+            v.label && v.label.removeSelf();
         }
-        mouseUp(e) {
-            let stage = Laya.ILaya.stage;
-            stage.off(Laya.Event.MOUSE_MOVE, this, this.mouseMove);
-            stage.off(Laya.Event.MOUSE_UP, this, this.mouseUp);
-            stage.off(Laya.Event.MOUSE_OUT, this, this.mouseUp);
-            this.sendChangeEvent(Laya.Event.CHANGED);
+        mouseUp(t) {
+            let s = e.ILaya.stage;
+            s.off(e.Event.MOUSE_MOVE, this, this.mouseMove), s.off(e.Event.MOUSE_UP, this, this.mouseUp), 
+            s.off(e.Event.MOUSE_OUT, this, this.mouseUp), this.sendChangeEvent(e.Event.CHANGED), 
             this.hideValueText();
         }
-        mouseMove(e) {
-            let stage = Laya.ILaya.stage;
-            var oldValue = this._value;
-            if (this.isVertical) {
-                this._bar.y += (stage.mouseY - this._ty) / this._globalSacle.y;
-                if (this._bar._y > this._maxMove)
-                    this._bar.y = this._maxMove;
-                else if (this._bar._y < 0)
-                    this._bar.y = 0;
-                this._value = this._bar._y / this._maxMove * (this._max - this._min) + this._min;
-                if (this._progress)
-                    this._progress.height = this._bar._y + 0.5 * this._bar.height;
-            } else {
-                this._bar.x += (stage.mouseX - this._tx) / this._globalSacle.x;
-                if (this._bar._x > this._maxMove)
-                    this._bar.x = this._maxMove;
-                else if (this._bar._x < 0)
-                    this._bar.x = 0;
-                this._value = this._bar._x / this._maxMove * (this._max - this._min) + this._min;
-                if (this._progress)
-                    this._progress.width = this._bar._x + 0.5 * this._bar.width;
+        mouseMove(t) {
+            let s = e.ILaya.stage;
+            var i = this._value;
+            if (this.isVertical ? (this._bar.y += (s.mouseY - this._ty) / this._globalSacle.y, 
+            this._bar._y > this._maxMove ? this._bar.y = this._maxMove : this._bar._y < 0 && (this._bar.y = 0), 
+            this._value = this._bar._y / this._maxMove * (this._max - this._min) + this._min, 
+            this._progress && (this._progress.height = this._bar._y + .5 * this._bar.height)) : (this._bar.x += (s.mouseX - this._tx) / this._globalSacle.x, 
+            this._bar._x > this._maxMove ? this._bar.x = this._maxMove : this._bar._x < 0 && (this._bar.x = 0), 
+            this._value = this._bar._x / this._maxMove * (this._max - this._min) + this._min, 
+            this._progress && (this._progress.width = this._bar._x + .5 * this._bar.width)), 
+            this._tx = s.mouseX, this._ty = s.mouseY, 0 != this._tick) {
+                var h = Math.pow(10, (this._tick + "").length - 1);
+                this._value = Math.round(Math.round(this._value / this._tick) * this._tick * h) / h;
             }
-            this._tx = stage.mouseX;
-            this._ty = stage.mouseY;
-            if (this._tick != 0) {
-                var pow = Math.pow(10, (this._tick + "").length - 1);
-                this._value = Math.round(Math.round(this._value / this._tick) * this._tick * pow) / pow;
-            }
-            if (this._value != oldValue) {
-                this.sendChangeEvent();
-            }
-            this.showValueText();
+            this._value != i && this.sendChangeEvent(), this.showValueText();
         }
-        sendChangeEvent(type = Laya.Event.CHANGE) {
-            this.event(type);
-            this.changeHandler && this.changeHandler.runWith(this._value);
+        sendChangeEvent(t = e.Event.CHANGE) {
+            this.event(t), this.changeHandler && this.changeHandler.runWith(this._value);
         }
         get skin() {
             return this._skin;
         }
-        set skin(value) {
-            if (this._skin != value) {
-                this._skin = value;
-                if (this._skin && !Laya.Loader.getRes(this._skin)) {
-                    Laya.ILaya.loader.load([this._skin, this._skin.replace(".png", "$bar.png")], Laya.Handler.create(this, this._skinLoaded));
-                } else {
-                    this._skinLoaded();
-                }
-            }
+        set skin(t) {
+            this._skin != t && (this._skin = t, this._skin && !e.Loader.getRes(this._skin) ? e.ILaya.loader.load([ this._skin, this._skin.replace(".png", "$bar.png") ], e.Handler.create(this, this._skinLoaded)) : this._skinLoaded());
         }
         _skinLoaded() {
-            this._bg.skin = this._skin;
-            this._bar.skin = this._skin.replace(".png", "$bar.png");
-            var progressSkin = this._skin.replace(".png", "$progress.png");
-            if (Laya.Loader.getRes(progressSkin)) {
-                if (!this._progress) {
-                    this.addChild(this._progress = new Image());
-                    this._progress.sizeGrid = this._bar.sizeGrid;
-                    this.setChildIndex(this._progress, 1);
-                }
-                this._progress.skin = progressSkin;
-            }
-            this.setBarPoint();
-            this.callLater(this.changeValue);
-            this._sizeChanged();
-            this.event(Laya.Event.LOADED);
+            this._bg.skin = this._skin, this._bar.skin = this._skin.replace(".png", "$bar.png");
+            var t = this._skin.replace(".png", "$progress.png");
+            e.Loader.getRes(t) && (this._progress || (this.addChild(this._progress = new o()), 
+            this._progress.sizeGrid = this._bar.sizeGrid, this.setChildIndex(this._progress, 1)), 
+            this._progress.skin = t), this.setBarPoint(), this.callLater(this.changeValue), 
+            this._sizeChanged(), this.event(e.Event.LOADED);
         }
         setBarPoint() {
-            if (this.isVertical)
-                this._bar.x = Math.round((this._bg.width - this._bar.width) * 0.5);
-            else
-                this._bar.y = Math.round((this._bg.height - this._bar.height) * 0.5);
+            this.isVertical ? this._bar.x = Math.round(.5 * (this._bg.width - this._bar.width)) : this._bar.y = Math.round(.5 * (this._bg.height - this._bar.height));
         }
         measureWidth() {
             return Math.max(this._bg.width, this._bar.width);
@@ -2081,113 +1339,68 @@
             return Math.max(this._bg.height, this._bar.height);
         }
         _sizeChanged() {
-            super._sizeChanged();
-            if (this.isVertical)
-                this._bg.height = this.height;
-            else
-                this._bg.width = this.width;
-            this.setBarPoint();
-            this.changeValue();
+            super._sizeChanged(), this.isVertical ? this._bg.height = this.height : this._bg.width = this.width, 
+            this.setBarPoint(), this.changeValue();
         }
         get sizeGrid() {
             return this._bg.sizeGrid;
         }
-        set sizeGrid(value) {
-            this._bg.sizeGrid = value;
-            this._bar.sizeGrid = value;
-            if (this._progress)
-                this._progress.sizeGrid = this._bar.sizeGrid;
+        set sizeGrid(t) {
+            this._bg.sizeGrid = t, this._bar.sizeGrid = t, this._progress && (this._progress.sizeGrid = this._bar.sizeGrid);
         }
-        setSlider(min, max, value) {
-            this._value = -1;
-            this._min = min;
-            this._max = max > min ? max : min;
-            this.value = value < min ? min : value > max ? max : value;
+        setSlider(t, e, s) {
+            this._value = -1, this._min = t, this._max = e > t ? e : t, this.value = s < t ? t : s > e ? e : s;
         }
         get tick() {
             return this._tick;
         }
-        set tick(value) {
-            if (this._tick != value) {
-                this._tick = value;
-                this.callLater(this.changeValue);
-            }
+        set tick(t) {
+            this._tick != t && (this._tick = t, this.callLater(this.changeValue));
         }
         changeValue() {
-            if (this.tick != 0) {
-                var pow = Math.pow(10, (this._tick + "").length - 1);
-                this._value = Math.round(Math.round(this._value / this._tick) * this._tick * pow) / pow;
+            if (0 != this.tick) {
+                var t = Math.pow(10, (this._tick + "").length - 1);
+                this._value = Math.round(Math.round(this._value / this._tick) * this._tick * t) / t;
             }
             this._value = this._value > this._max ? this._max : this._value < this._min ? this._min : this._value;
-            var num = this._max - this._min;
-            if (num === 0)
-                num = 1;
-            if (this.isVertical) {
-                this._bar.y = (this._value - this._min) / num * (this.height - this._bar.height);
-                if (this._progress)
-                    this._progress.height = this._bar._y + 0.5 * this._bar.height;
-            } else {
-                this._bar.x = (this._value - this._min) / num * (this.width - this._bar.width);
-                if (this._progress)
-                    this._progress.width = this._bar._x + 0.5 * this._bar.width;
-            }
+            var e = this._max - this._min;
+            0 === e && (e = 1), this.isVertical ? (this._bar.y = (this._value - this._min) / e * (this.height - this._bar.height), 
+            this._progress && (this._progress.height = this._bar._y + .5 * this._bar.height)) : (this._bar.x = (this._value - this._min) / e * (this.width - this._bar.width), 
+            this._progress && (this._progress.width = this._bar._x + .5 * this._bar.width));
         }
         get max() {
             return this._max;
         }
-        set max(value) {
-            if (this._max != value) {
-                this._max = value;
-                this.callLater(this.changeValue);
-            }
+        set max(t) {
+            this._max != t && (this._max = t, this.callLater(this.changeValue));
         }
         get min() {
             return this._min;
         }
-        set min(value) {
-            if (this._min != value) {
-                this._min = value;
-                this.callLater(this.changeValue);
-            }
+        set min(t) {
+            this._min != t && (this._min = t, this.callLater(this.changeValue));
         }
         get value() {
             return this._value;
         }
-        set value(num) {
-            if (this._value != num) {
-                var oldValue = this._value;
-                this._value = num;
-                this.changeValue();
-                if (this._value != oldValue) {
-                    this.sendChangeEvent();
-                }
+        set value(t) {
+            if (this._value != t) {
+                var e = this._value;
+                this._value = t, this.changeValue(), this._value != e && this.sendChangeEvent();
             }
         }
         get allowClickBack() {
             return this._allowClickBack;
         }
-        set allowClickBack(value) {
-            if (this._allowClickBack != value) {
-                this._allowClickBack = value;
-                if (value)
-                    this._bg.on(Laya.Event.MOUSE_DOWN, this, this.onBgMouseDown);
-                else
-                    this._bg.off(Laya.Event.MOUSE_DOWN, this, this.onBgMouseDown);
-            }
+        set allowClickBack(t) {
+            this._allowClickBack != t && (this._allowClickBack = t, t ? this._bg.on(e.Event.MOUSE_DOWN, this, this.onBgMouseDown) : this._bg.off(e.Event.MOUSE_DOWN, this, this.onBgMouseDown));
         }
-        onBgMouseDown(e) {
-            var point = this._bg.getMousePoint();
-            if (this.isVertical)
-                this.value = point.y / (this.height - this._bar.height) * (this._max - this._min) + this._min;
-            else
-                this.value = point.x / (this.width - this._bar.width) * (this._max - this._min) + this._min;
+        onBgMouseDown(t) {
+            var e = this._bg.getMousePoint();
+            this.isVertical ? this.value = e.y / (this.height - this._bar.height) * (this._max - this._min) + this._min : this.value = e.x / (this.width - this._bar.width) * (this._max - this._min) + this._min;
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.value = Number(value);
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.value = Number(t) : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
@@ -2196,205 +1409,124 @@
             return this._bar;
         }
     }
-    Slider.label = null;
-    Laya.ILaya.regClass(Slider);
-    Laya.ClassUtils.regClass("laya.ui.Slider", Slider);
-    Laya.ClassUtils.regClass("Laya.Slider", Slider);
-
-    class ScrollBar extends UIComponent {
-        constructor(skin = null) {
-            super();
-            this.rollRatio = 0.97;
-            this.scaleBar = true;
-            this.autoHide = false;
-            this.elasticDistance = 0;
-            this.elasticBackTime = 500;
-            this._showButtons = UIConfig.showButtons;
-            this._scrollSize = 1;
-            this._thumbPercent = 1;
-            this._lastOffset = 0;
-            this._checkElastic = false;
-            this._isElastic = false;
-            this._hide = false;
-            this._clickOnly = true;
-            this._touchScrollEnable = UIConfig.touchScrollEnable;
-            this._mouseWheelEnable = UIConfig.mouseWheelEnable;
-            this.skin = skin;
-            this.max = 1;
+    v.label = null, e.ILaya.regClass(v), e.ClassUtils.regClass("laya.ui.Slider", v), 
+    e.ClassUtils.regClass("Laya.Slider", v);
+    class m extends n {
+        constructor(t = null) {
+            super(), this.rollRatio = .97, this.scaleBar = !0, this.autoHide = !1, this.elasticDistance = 0, 
+            this.elasticBackTime = 500, this._showButtons = s.showButtons, this._scrollSize = 1, 
+            this._thumbPercent = 1, this._lastOffset = 0, this._checkElastic = !1, this._isElastic = !1, 
+            this._hide = !1, this._clickOnly = !0, this._touchScrollEnable = s.touchScrollEnable, 
+            this._mouseWheelEnable = s.mouseWheelEnable, this.skin = t, this.max = 1;
         }
-        destroy(destroyChild = true) {
-            this.stopScroll();
-            this.target = null;
-            super.destroy(destroyChild);
-            this.upButton && this.upButton.destroy(destroyChild);
-            this.downButton && this.downButton.destroy(destroyChild);
-            this.slider && this.slider.destroy(destroyChild);
-            this.upButton = this.downButton = null;
-            this.slider = null;
-            this.changeHandler = null;
+        destroy(t = !0) {
+            this.stopScroll(), this.target = null, super.destroy(t), this.upButton && this.upButton.destroy(t), 
+            this.downButton && this.downButton.destroy(t), this.slider && this.slider.destroy(t), 
+            this.upButton = this.downButton = null, this.slider = null, this.changeHandler = null, 
             this._offsets = null;
         }
         createChildren() {
-            this.addChild(this.slider = new Slider());
-            this.addChild(this.upButton = new Button());
-            this.addChild(this.downButton = new Button());
+            this.addChild(this.slider = new v()), this.addChild(this.upButton = new d()), this.addChild(this.downButton = new d());
         }
         initialize() {
-            this.slider.showLabel = false;
-            this.slider.tick = 0;
-            this.slider.on(Laya.Event.CHANGE, this, this.onSliderChange);
-            this.slider.setSlider(0, 0, 0);
-            this.upButton.on(Laya.Event.MOUSE_DOWN, this, this.onButtonMouseDown);
-            this.downButton.on(Laya.Event.MOUSE_DOWN, this, this.onButtonMouseDown);
+            this.slider.showLabel = !1, this.slider.tick = 0, this.slider.on(e.Event.CHANGE, this, this.onSliderChange), 
+            this.slider.setSlider(0, 0, 0), this.upButton.on(e.Event.MOUSE_DOWN, this, this.onButtonMouseDown), 
+            this.downButton.on(e.Event.MOUSE_DOWN, this, this.onButtonMouseDown);
         }
         onSliderChange() {
-            if (this._value != this.slider.value)
-                this.value = this.slider.value;
+            this._value != this.slider.value && (this.value = this.slider.value);
         }
-        onButtonMouseDown(e) {
-            var isUp = e.currentTarget === this.upButton;
-            this.slide(isUp);
-            Laya.ILaya.timer.once(Styles.scrollBarDelayTime, this, this.startLoop, [isUp]);
-            Laya.ILaya.stage.once(Laya.Event.MOUSE_UP, this, this.onStageMouseUp);
+        onButtonMouseDown(t) {
+            var s = t.currentTarget === this.upButton;
+            this.slide(s), e.ILaya.timer.once(i.scrollBarDelayTime, this, this.startLoop, [ s ]), 
+            e.ILaya.stage.once(e.Event.MOUSE_UP, this, this.onStageMouseUp);
         }
-        startLoop(isUp) {
-            Laya.ILaya.timer.frameLoop(1, this, this.slide, [isUp]);
+        startLoop(t) {
+            e.ILaya.timer.frameLoop(1, this, this.slide, [ t ]);
         }
-        slide(isUp) {
-            if (isUp)
-                this.value -= this._scrollSize;
-            else
-                this.value += this._scrollSize;
+        slide(t) {
+            t ? this.value -= this._scrollSize : this.value += this._scrollSize;
         }
-        onStageMouseUp(e) {
-            Laya.ILaya.timer.clear(this, this.startLoop);
-            Laya.ILaya.timer.clear(this, this.slide);
+        onStageMouseUp(t) {
+            e.ILaya.timer.clear(this, this.startLoop), e.ILaya.timer.clear(this, this.slide);
         }
         get skin() {
             return this._skin;
         }
-        set skin(value) {
-            if (value == " ")
-                return;
-            if (this._skin != value) {
-                this._skin = value;
-                if (this._skin && !Laya.Loader.getRes(this._skin)) {
-                    Laya.ILaya.loader.load([this._skin, this._skin.replace(".png", "$up.png"), this._skin.replace(".png", "$down.png"), this._skin.replace(".png", "$bar.png")], Laya.Handler.create(this, this._skinLoaded));
-                } else {
-                    this._skinLoaded();
-                }
-            }
+        set skin(t) {
+            " " != t && this._skin != t && (this._skin = t, this._skin && !e.Loader.getRes(this._skin) ? e.ILaya.loader.load([ this._skin, this._skin.replace(".png", "$up.png"), this._skin.replace(".png", "$down.png"), this._skin.replace(".png", "$bar.png") ], e.Handler.create(this, this._skinLoaded)) : this._skinLoaded());
         }
         _skinLoaded() {
-            this.slider.skin = this._skin;
-            this.callLater(this.changeScrollBar);
-            this._sizeChanged();
-            this.event(Laya.Event.LOADED);
+            this.slider.skin = this._skin, this.callLater(this.changeScrollBar), this._sizeChanged(), 
+            this.event(e.Event.LOADED);
         }
         changeScrollBar() {
-            this.upButton.visible = this._showButtons;
-            this.downButton.visible = this._showButtons;
-            if (this._showButtons) {
-                this.upButton.skin = this._skin.replace(".png", "$up.png");
-                this.downButton.skin = this._skin.replace(".png", "$down.png");
-            }
-            if (this.slider.isVertical)
-                this.slider.y = this._showButtons ? this.upButton.height : 0;
-            else
-                this.slider.x = this._showButtons ? this.upButton.width : 0;
-            this.resetPositions();
-            this.repaint();
+            this.upButton.visible = this._showButtons, this.downButton.visible = this._showButtons, 
+            this._showButtons && (this.upButton.skin = this._skin.replace(".png", "$up.png"), 
+            this.downButton.skin = this._skin.replace(".png", "$down.png")), this.slider.isVertical ? this.slider.y = this._showButtons ? this.upButton.height : 0 : this.slider.x = this._showButtons ? this.upButton.width : 0, 
+            this.resetPositions(), this.repaint();
         }
         _sizeChanged() {
-            super._sizeChanged();
-            this.repaint();
-            this.resetPositions();
-            this.event(Laya.Event.CHANGE);
+            super._sizeChanged(), this.repaint(), this.resetPositions(), this.event(e.Event.CHANGE), 
             this.changeHandler && this.changeHandler.runWith(this.value);
         }
         resetPositions() {
-            if (this.slider.isVertical)
-                this.slider.height = this.height - (this._showButtons ? (this.upButton.height + this.downButton.height) : 0);
-            else
-                this.slider.width = this.width - (this._showButtons ? (this.upButton.width + this.downButton.width) : 0);
+            this.slider.isVertical ? this.slider.height = this.height - (this._showButtons ? this.upButton.height + this.downButton.height : 0) : this.slider.width = this.width - (this._showButtons ? this.upButton.width + this.downButton.width : 0), 
             this.resetButtonPosition();
         }
         resetButtonPosition() {
-            if (this.slider.isVertical)
-                this.downButton.y = this.slider._y + this.slider.height;
-            else
-                this.downButton.x = this.slider._x + this.slider.width;
+            this.slider.isVertical ? this.downButton.y = this.slider._y + this.slider.height : this.downButton.x = this.slider._x + this.slider.width;
         }
         measureWidth() {
-            if (this.slider.isVertical)
-                return this.slider.width;
-            return 100;
+            return this.slider.isVertical ? this.slider.width : 100;
         }
         measureHeight() {
-            if (this.slider.isVertical)
-                return 100;
-            return this.slider.height;
+            return this.slider.isVertical ? 100 : this.slider.height;
         }
-        setScroll(min, max, value) {
-            this.runCallLater(this._sizeChanged);
-            this.slider.setSlider(min, max, value);
-            this.slider.bar.visible = max > 0;
-            if (!this._hide && this.autoHide)
-                this.visible = false;
+        setScroll(t, e, s) {
+            this.runCallLater(this._sizeChanged), this.slider.setSlider(t, e, s), this.slider.bar.visible = e > 0, 
+            !this._hide && this.autoHide && (this.visible = !1);
         }
         get max() {
             return this.slider.max;
         }
-        set max(value) {
-            this.slider.max = value;
+        set max(t) {
+            this.slider.max = t;
         }
         get min() {
             return this.slider.min;
         }
-        set min(value) {
-            this.slider.min = value;
+        set min(t) {
+            this.slider.min = t;
         }
         get value() {
             return this._value;
         }
-        set value(v) {
-            if (v !== this._value) {
-                this._value = v;
-                if (!this._isElastic) {
-                    if (this.slider["_value"] != v) {
-                        this.slider["_value"] = v;
-                        this.slider.changeValue();
-                    }
-                    this._value = this.slider["_value"];
-                }
-                this.event(Laya.Event.CHANGE);
-                this.changeHandler && this.changeHandler.runWith(this._value);
-            }
+        set value(t) {
+            t !== this._value && (this._value = t, this._isElastic || (this.slider._value != t && (this.slider._value = t, 
+            this.slider.changeValue()), this._value = this.slider._value), this.event(e.Event.CHANGE), 
+            this.changeHandler && this.changeHandler.runWith(this._value));
         }
         get isVertical() {
             return this.slider.isVertical;
         }
-        set isVertical(value) {
-            this.slider.isVertical = value;
+        set isVertical(t) {
+            this.slider.isVertical = t;
         }
         get sizeGrid() {
             return this.slider.sizeGrid;
         }
-        set sizeGrid(value) {
-            this.slider.sizeGrid = value;
+        set sizeGrid(t) {
+            this.slider.sizeGrid = t;
         }
         get scrollSize() {
             return this._scrollSize;
         }
-        set scrollSize(value) {
-            this._scrollSize = value;
+        set scrollSize(t) {
+            this._scrollSize = t;
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.value = Number(value);
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.value = Number(t) : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
@@ -2402,368 +1534,172 @@
         get thumbPercent() {
             return this._thumbPercent;
         }
-        set thumbPercent(value) {
-            this.runCallLater(this.changeScrollBar);
-            this.runCallLater(this._sizeChanged);
-            value = value >= 1 ? 0.99 : value;
-            this._thumbPercent = value;
-            if (this.scaleBar) {
-                if (this.slider.isVertical)
-                    this.slider.bar.height = Math.max(this.slider.height * value, Styles.scrollBarMinNum);
-                else
-                    this.slider.bar.width = Math.max(this.slider.width * value, Styles.scrollBarMinNum);
-            }
+        set thumbPercent(t) {
+            this.runCallLater(this.changeScrollBar), this.runCallLater(this._sizeChanged), t = t >= 1 ? .99 : t, 
+            this._thumbPercent = t, this.scaleBar && (this.slider.isVertical ? this.slider.bar.height = Math.max(this.slider.height * t, i.scrollBarMinNum) : this.slider.bar.width = Math.max(this.slider.width * t, i.scrollBarMinNum));
         }
         get target() {
             return this._target;
         }
-        set target(value) {
-            if (this._target) {
-                this._target.off(Laya.Event.MOUSE_WHEEL, this, this.onTargetMouseWheel);
-                this._target.off(Laya.Event.MOUSE_DOWN, this, this.onTargetMouseDown);
-            }
-            this._target = value;
-            if (value) {
-                this._mouseWheelEnable && this._target.on(Laya.Event.MOUSE_WHEEL, this, this.onTargetMouseWheel);
-                this._touchScrollEnable && this._target.on(Laya.Event.MOUSE_DOWN, this, this.onTargetMouseDown);
-            }
+        set target(t) {
+            this._target && (this._target.off(e.Event.MOUSE_WHEEL, this, this.onTargetMouseWheel), 
+            this._target.off(e.Event.MOUSE_DOWN, this, this.onTargetMouseDown)), this._target = t, 
+            t && (this._mouseWheelEnable && this._target.on(e.Event.MOUSE_WHEEL, this, this.onTargetMouseWheel), 
+            this._touchScrollEnable && this._target.on(e.Event.MOUSE_DOWN, this, this.onTargetMouseDown));
         }
         get hide() {
             return this._hide;
         }
-        set hide(value) {
-            this._hide = value;
-            this.visible = !value;
+        set hide(t) {
+            this._hide = t, this.visible = !t;
         }
         get showButtons() {
             return this._showButtons;
         }
-        set showButtons(value) {
-            this._showButtons = value;
-            this.callLater(this.changeScrollBar);
+        set showButtons(t) {
+            this._showButtons = t, this.callLater(this.changeScrollBar);
         }
         get touchScrollEnable() {
             return this._touchScrollEnable;
         }
-        set touchScrollEnable(value) {
-            this._touchScrollEnable = value;
-            this.target = this._target;
+        set touchScrollEnable(t) {
+            this._touchScrollEnable = t, this.target = this._target;
         }
         get mouseWheelEnable() {
             return this._mouseWheelEnable;
         }
-        set mouseWheelEnable(value) {
-            this._mouseWheelEnable = value;
-            this.target = this._target;
+        set mouseWheelEnable(t) {
+            this._mouseWheelEnable = t, this.target = this._target;
         }
-        onTargetMouseWheel(e) {
-            this.value -= e.delta * this._scrollSize;
-            this.target = this._target;
+        onTargetMouseWheel(t) {
+            this.value -= t.delta * this._scrollSize, this.target = this._target;
         }
-        onTargetMouseDown(e) {
-            if ((this.isLockedFun) && !this.isLockedFun(e))
-                return;
-            this.event(Laya.Event.END);
-            this._clickOnly = true;
-            this._lastOffset = 0;
-            this._checkElastic = false;
-            this._lastPoint || (this._lastPoint = new Laya.Point());
-            this._lastPoint.setTo(Laya.ILaya.stage.mouseX, Laya.ILaya.stage.mouseY);
-            Laya.ILaya.timer.clear(this, this.tweenMove);
-            Laya.Tween.clearTween(this);
-            Laya.ILaya.stage.once(Laya.Event.MOUSE_UP, this, this.onStageMouseUp2);
-            Laya.ILaya.stage.once(Laya.Event.MOUSE_OUT, this, this.onStageMouseUp2);
-            Laya.ILaya.timer.frameLoop(1, this, this.loop);
+        onTargetMouseDown(t) {
+            this.isLockedFun && !this.isLockedFun(t) || (this.event(e.Event.END), this._clickOnly = !0, 
+            this._lastOffset = 0, this._checkElastic = !1, this._lastPoint || (this._lastPoint = new e.Point()), 
+            this._lastPoint.setTo(e.ILaya.stage.mouseX, e.ILaya.stage.mouseY), e.ILaya.timer.clear(this, this.tweenMove), 
+            e.Tween.clearTween(this), e.ILaya.stage.once(e.Event.MOUSE_UP, this, this.onStageMouseUp2), 
+            e.ILaya.stage.once(e.Event.MOUSE_OUT, this, this.onStageMouseUp2), e.ILaya.timer.frameLoop(1, this, this.loop));
         }
         startDragForce() {
-            this._clickOnly = true;
-            this._lastOffset = 0;
-            this._checkElastic = false;
-            this._lastPoint || (this._lastPoint = new Laya.Point());
-            this._lastPoint.setTo(Laya.ILaya.stage.mouseX, Laya.ILaya.stage.mouseY);
-            Laya.ILaya.timer.clear(this, this.tweenMove);
-            Laya.Tween.clearTween(this);
-            Laya.ILaya.stage.once(Laya.Event.MOUSE_UP, this, this.onStageMouseUp2);
-            Laya.ILaya.stage.once(Laya.Event.MOUSE_OUT, this, this.onStageMouseUp2);
-            Laya.ILaya.timer.frameLoop(1, this, this.loop);
+            this._clickOnly = !0, this._lastOffset = 0, this._checkElastic = !1, this._lastPoint || (this._lastPoint = new e.Point()), 
+            this._lastPoint.setTo(e.ILaya.stage.mouseX, e.ILaya.stage.mouseY), e.ILaya.timer.clear(this, this.tweenMove), 
+            e.Tween.clearTween(this), e.ILaya.stage.once(e.Event.MOUSE_UP, this, this.onStageMouseUp2), 
+            e.ILaya.stage.once(e.Event.MOUSE_OUT, this, this.onStageMouseUp2), e.ILaya.timer.frameLoop(1, this, this.loop);
         }
         cancelDragOp() {
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_UP, this, this.onStageMouseUp2);
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_OUT, this, this.onStageMouseUp2);
-            Laya.ILaya.timer.clear(this, this.tweenMove);
-            Laya.ILaya.timer.clear(this, this.loop);
-            this._target.mouseEnabled = true;
+            e.ILaya.stage.off(e.Event.MOUSE_UP, this, this.onStageMouseUp2), e.ILaya.stage.off(e.Event.MOUSE_OUT, this, this.onStageMouseUp2), 
+            e.ILaya.timer.clear(this, this.tweenMove), e.ILaya.timer.clear(this, this.loop), 
+            this._target.mouseEnabled = !0;
         }
-        checkTriggers(isTweenMove = false) {
-            if (this.value >= 0 && this.value - this._lastOffset <= 0) {
-                if ((this.triggerDownDragLimit) && this.triggerDownDragLimit(isTweenMove)) {
-                    this.cancelDragOp();
-                    this.value = 0;
-                    return true;
-                }
-            }
-            if (this.value <= this.max && (this.value - this._lastOffset >= this.max)) {
-                if ((this.triggerUpDragLimit) && this.triggerUpDragLimit(isTweenMove)) {
-                    this.cancelDragOp();
-                    this.value = this.max;
-                    return true;
-                }
-            }
-            return false;
+        checkTriggers(t = !1) {
+            return this.value >= 0 && this.value - this._lastOffset <= 0 && this.triggerDownDragLimit && this.triggerDownDragLimit(t) ? (this.cancelDragOp(), 
+            this.value = 0, !0) : !!(this.value <= this.max && this.value - this._lastOffset >= this.max && this.triggerUpDragLimit && this.triggerUpDragLimit(t)) && (this.cancelDragOp(), 
+            this.value = this.max, !0);
         }
         get lastOffset() {
             return this._lastOffset;
         }
-        startTweenMoveForce(lastOffset) {
-            this._lastOffset = lastOffset;
-            Laya.ILaya.timer.frameLoop(1, this, this.tweenMove, [200]);
+        startTweenMoveForce(t) {
+            this._lastOffset = t, e.ILaya.timer.frameLoop(1, this, this.tweenMove, [ 200 ]);
         }
         loop() {
-            var mouseY = Laya.ILaya.stage.mouseY;
-            var mouseX = Laya.ILaya.stage.mouseX;
-            this._lastOffset = this.isVertical ? (mouseY - this._lastPoint.y) : (mouseX - this._lastPoint.x);
-            if (this._clickOnly) {
-                if (Math.abs(this._lastOffset * (this.isVertical ? Laya.ILaya.stage._canvasTransform.getScaleY() : Laya.ILaya.stage._canvasTransform.getScaleX())) > 1) {
-                    this._clickOnly = false;
-                    if (this.checkTriggers())
-                        return;
-                    this._offsets || (this._offsets = []);
-                    this._offsets.length = 0;
-                    this._target.mouseEnabled = false;
-                    if (!this.hide && this.autoHide) {
-                        this.alpha = 1;
-                        this.visible = true;
-                    }
-                    this.event(Laya.Event.START);
-                } else
-                    return;
-            } else {
-                if (this.checkTriggers())
-                    return;
-            }
-            this._offsets.push(this._lastOffset);
-            this._lastPoint.x = mouseX;
-            this._lastPoint.y = mouseY;
-            if (this._lastOffset === 0)
-                return;
-            if (!this._checkElastic) {
-                if (this.elasticDistance > 0) {
-                    if (!this._checkElastic && this._lastOffset != 0) {
-                        if ((this._lastOffset > 0 && this._value <= this.min) || (this._lastOffset < 0 && this._value >= this.max)) {
-                            this._isElastic = true;
-                            this._checkElastic = true;
-                        } else {
-                            this._isElastic = false;
-                        }
-                    }
-                } else {
-                    this._checkElastic = true;
-                }
-            }
-            if (this._isElastic) {
-                if (this._value <= this.min) {
-                    if (this._lastOffset > 0) {
-                        this.value -= this._lastOffset * Math.max(0, (1 - ((this.min - this._value) / this.elasticDistance)));
-                    } else {
-                        this.value -= this._lastOffset * 0.5;
-                        if (this._value >= this.min)
-                            this._checkElastic = false;
-                    }
-                } else if (this._value >= this.max) {
-                    if (this._lastOffset < 0) {
-                        this.value -= this._lastOffset * Math.max(0, (1 - ((this._value - this.max) / this.elasticDistance)));
-                    } else {
-                        this.value -= this._lastOffset * 0.5;
-                        if (this._value <= this.max)
-                            this._checkElastic = false;
-                    }
-                }
-            } else {
-                this.value -= this._lastOffset;
-            }
+            var t = e.ILaya.stage.mouseY, s = e.ILaya.stage.mouseX;
+            if (this._lastOffset = this.isVertical ? t - this._lastPoint.y : s - this._lastPoint.x, 
+            this._clickOnly) {
+                if (!(Math.abs(this._lastOffset * (this.isVertical ? e.ILaya.stage._canvasTransform.getScaleY() : e.ILaya.stage._canvasTransform.getScaleX())) > 1)) return;
+                if (this._clickOnly = !1, this.checkTriggers()) return;
+                this._offsets || (this._offsets = []), this._offsets.length = 0, this._target.mouseEnabled = !1, 
+                !this.hide && this.autoHide && (this.alpha = 1, this.visible = !0), this.event(e.Event.START);
+            } else if (this.checkTriggers()) return;
+            this._offsets.push(this._lastOffset), this._lastPoint.x = s, this._lastPoint.y = t, 
+            0 !== this._lastOffset && (this._checkElastic || (this.elasticDistance > 0 ? this._checkElastic || 0 == this._lastOffset || (this._lastOffset > 0 && this._value <= this.min || this._lastOffset < 0 && this._value >= this.max ? (this._isElastic = !0, 
+            this._checkElastic = !0) : this._isElastic = !1) : this._checkElastic = !0), this._isElastic ? this._value <= this.min ? this._lastOffset > 0 ? this.value -= this._lastOffset * Math.max(0, 1 - (this.min - this._value) / this.elasticDistance) : (this.value -= .5 * this._lastOffset, 
+            this._value >= this.min && (this._checkElastic = !1)) : this._value >= this.max && (this._lastOffset < 0 ? this.value -= this._lastOffset * Math.max(0, 1 - (this._value - this.max) / this.elasticDistance) : (this.value -= .5 * this._lastOffset, 
+            this._value <= this.max && (this._checkElastic = !1))) : this.value -= this._lastOffset);
         }
-        onStageMouseUp2(e) {
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_UP, this, this.onStageMouseUp2);
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_OUT, this, this.onStageMouseUp2);
-            Laya.ILaya.timer.clear(this, this.loop);
-            if (this._clickOnly) {
-                if (this._value >= this.min && this._value <= this.max)
-                    return;
-            }
-            this._target.mouseEnabled = true;
-            if (this._isElastic) {
-                if (this._value < this.min) {
-                    Laya.Tween.to(this, {
-                        value: this.min
-                    }, this.elasticBackTime, Laya.Ease.sineOut, Laya.Handler.create(this, this.elasticOver));
-                } else if (this._value > this.max) {
-                    Laya.Tween.to(this, {
-                        value: this.max
-                    }, this.elasticBackTime, Laya.Ease.sineOut, Laya.Handler.create(this, this.elasticOver));
-                }
-            } else {
-                if (!this._offsets)
-                    return;
-                if (this._offsets.length < 1) {
-                    this._offsets[0] = this.isVertical ? Laya.ILaya.stage.mouseY - this._lastPoint.y : Laya.ILaya.stage.mouseX - this._lastPoint.x;
-                }
-                var offset = 0;
-                var n = Math.min(this._offsets.length, 3);
-                for (var i = 0; i < n; i++) {
-                    offset += this._offsets[this._offsets.length - 1 - i];
-                }
-                this._lastOffset = offset / n;
-                offset = Math.abs(this._lastOffset);
-                if (offset < 2) {
-                    this.event(Laya.Event.END);
-                    return;
-                }
-                if (offset > 250)
-                    this._lastOffset = this._lastOffset > 0 ? 250 : -250;
-                var dis = Math.round(Math.abs(this.elasticDistance * (this._lastOffset / 150)));
-                Laya.ILaya.timer.frameLoop(1, this, this.tweenMove, [dis]);
+        onStageMouseUp2(t) {
+            if (e.ILaya.stage.off(e.Event.MOUSE_UP, this, this.onStageMouseUp2), e.ILaya.stage.off(e.Event.MOUSE_OUT, this, this.onStageMouseUp2), 
+            e.ILaya.timer.clear(this, this.loop), !(this._clickOnly && this._value >= this.min && this._value <= this.max)) if (this._target.mouseEnabled = !0, 
+            this._isElastic) this._value < this.min ? e.Tween.to(this, {
+                value: this.min
+            }, this.elasticBackTime, e.Ease.sineOut, e.Handler.create(this, this.elasticOver)) : this._value > this.max && e.Tween.to(this, {
+                value: this.max
+            }, this.elasticBackTime, e.Ease.sineOut, e.Handler.create(this, this.elasticOver)); else {
+                if (!this._offsets) return;
+                this._offsets.length < 1 && (this._offsets[0] = this.isVertical ? e.ILaya.stage.mouseY - this._lastPoint.y : e.ILaya.stage.mouseX - this._lastPoint.x);
+                for (var s = 0, i = Math.min(this._offsets.length, 3), h = 0; h < i; h++) s += this._offsets[this._offsets.length - 1 - h];
+                if (this._lastOffset = s / i, (s = Math.abs(this._lastOffset)) < 2) return void this.event(e.Event.END);
+                s > 250 && (this._lastOffset = this._lastOffset > 0 ? 250 : -250);
+                var a = Math.round(Math.abs(this.elasticDistance * (this._lastOffset / 150)));
+                e.ILaya.timer.frameLoop(1, this, this.tweenMove, [ a ]);
             }
         }
         elasticOver() {
-            this._isElastic = false;
-            if (!this.hide && this.autoHide) {
-                Laya.Tween.to(this, {
+            this._isElastic = !1, !this.hide && this.autoHide && e.Tween.to(this, {
+                alpha: 0
+            }, 500), this.event(e.Event.END);
+        }
+        tweenMove(t) {
+            var s;
+            if ((this._lastOffset *= this.rollRatio, !this.checkTriggers(!0)) && (t > 0 && (this._lastOffset > 0 && this.value <= this.min ? (this._isElastic = !0, 
+            s = .5 * -(this.min - t - this.value), this._lastOffset > s && (this._lastOffset = s)) : this._lastOffset < 0 && this.value >= this.max && (this._isElastic = !0, 
+            s = .5 * -(this.max + t - this.value), this._lastOffset < s && (this._lastOffset = s))), 
+            this.value -= this._lastOffset, Math.abs(this._lastOffset) < .1)) {
+                if (e.ILaya.timer.clear(this, this.tweenMove), this._isElastic) return void (this._value < this.min ? e.Tween.to(this, {
+                    value: this.min
+                }, this.elasticBackTime, e.Ease.sineOut, e.Handler.create(this, this.elasticOver)) : this._value > this.max ? e.Tween.to(this, {
+                    value: this.max
+                }, this.elasticBackTime, e.Ease.sineOut, e.Handler.create(this, this.elasticOver)) : this.elasticOver());
+                this.event(e.Event.END), !this.hide && this.autoHide && e.Tween.to(this, {
                     alpha: 0
                 }, 500);
             }
-            this.event(Laya.Event.END);
-        }
-        tweenMove(maxDistance) {
-            this._lastOffset *= this.rollRatio;
-            if (this.checkTriggers(true)) {
-                return;
-            }
-            var tarSpeed;
-            if (maxDistance > 0) {
-                if (this._lastOffset > 0 && this.value <= this.min) {
-                    this._isElastic = true;
-                    tarSpeed = -(this.min - maxDistance - this.value) * 0.5;
-                    if (this._lastOffset > tarSpeed)
-                        this._lastOffset = tarSpeed;
-                } else if (this._lastOffset < 0 && this.value >= this.max) {
-                    this._isElastic = true;
-                    tarSpeed = -(this.max + maxDistance - this.value) * 0.5;
-                    if (this._lastOffset < tarSpeed)
-                        this._lastOffset = tarSpeed;
-                }
-            }
-            this.value -= this._lastOffset;
-            if (Math.abs(this._lastOffset) < 0.1) {
-                Laya.ILaya.timer.clear(this, this.tweenMove);
-                if (this._isElastic) {
-                    if (this._value < this.min) {
-                        Laya.Tween.to(this, {
-                            value: this.min
-                        }, this.elasticBackTime, Laya.Ease.sineOut, Laya.Handler.create(this, this.elasticOver));
-                    } else if (this._value > this.max) {
-                        Laya.Tween.to(this, {
-                            value: this.max
-                        }, this.elasticBackTime, Laya.Ease.sineOut, Laya.Handler.create(this, this.elasticOver));
-                    } else {
-                        this.elasticOver();
-                    }
-                    return;
-                }
-                this.event(Laya.Event.END);
-                if (!this.hide && this.autoHide) {
-                    Laya.Tween.to(this, {
-                        alpha: 0
-                    }, 500);
-                }
-            }
         }
         stopScroll() {
-            this.onStageMouseUp2(null);
-            Laya.ILaya.timer.clear(this, this.tweenMove);
-            Laya.Tween.clearTween(this);
+            this.onStageMouseUp2(null), e.ILaya.timer.clear(this, this.tweenMove), e.Tween.clearTween(this);
         }
         get tick() {
             return this.slider.tick;
         }
-        set tick(value) {
-            this.slider.tick = value;
+        set tick(t) {
+            this.slider.tick = t;
         }
     }
-    Laya.ILaya.regClass(ScrollBar);
-    Laya.ClassUtils.regClass("laya.ui.ScrollBar", ScrollBar);
-    Laya.ClassUtils.regClass("Laya.ScrollBar", ScrollBar);
-
-    class VScrollBar extends ScrollBar {}
-    Laya.ILaya.regClass(VScrollBar);
-    Laya.ClassUtils.regClass("laya.ui.VScrollBar", VScrollBar);
-    Laya.ClassUtils.regClass("Laya.VScrollBar", VScrollBar);
-
-    class HScrollBar extends ScrollBar {
+    e.ILaya.regClass(m), e.ClassUtils.regClass("laya.ui.ScrollBar", m), e.ClassUtils.regClass("Laya.ScrollBar", m);
+    class f extends m {}
+    e.ILaya.regClass(f), e.ClassUtils.regClass("laya.ui.VScrollBar", f), e.ClassUtils.regClass("Laya.VScrollBar", f);
+    class S extends m {
         initialize() {
-            super.initialize();
-            this.slider.isVertical = false;
+            super.initialize(), this.slider.isVertical = !1;
         }
     }
-    Laya.ILaya.regClass(HScrollBar);
-    Laya.ClassUtils.regClass("laya.ui.HScrollBar", HScrollBar);
-    Laya.ClassUtils.regClass("Laya.HScrollBar", HScrollBar);
-
-    class List extends Box {
+    e.ILaya.regClass(S), e.ClassUtils.regClass("laya.ui.HScrollBar", S), e.ClassUtils.regClass("Laya.HScrollBar", S);
+    class b extends c {
         constructor() {
-            super(...arguments);
-            this.selectEnable = false;
-            this.totalPage = 0;
-            this._$componentType = "List";
-            this._repeatX = 0;
-            this._repeatY = 0;
-            this._repeatX2 = 0;
-            this._repeatY2 = 0;
-            this._spaceX = 0;
-            this._spaceY = 0;
-            this._cells = [];
-            this._startIndex = 0;
-            this._selectedIndex = -1;
-            this._page = 0;
-            this._isVertical = true;
-            this._cellSize = 20;
-            this._cellOffset = 0;
-            this._createdLine = 0;
-            this._offset = new Laya.Point();
-            this._usedCache = null;
-            this._elasticEnabled = false;
+            super(...arguments), this.selectEnable = !1, this.totalPage = 0, this._$componentType = "List", 
+            this._repeatX = 0, this._repeatY = 0, this._repeatX2 = 0, this._repeatY2 = 0, this._spaceX = 0, 
+            this._spaceY = 0, this._cells = [], this._startIndex = 0, this._selectedIndex = -1, 
+            this._page = 0, this._isVertical = !0, this._cellSize = 20, this._cellOffset = 0, 
+            this._createdLine = 0, this._offset = new e.Point(), this._usedCache = null, this._elasticEnabled = !1, 
             this._preLen = 0;
         }
-        destroy(destroyChild = true) {
-            this._content && this._content.destroy(destroyChild);
-            this._scrollBar && this._scrollBar.destroy(destroyChild);
-            super.destroy(destroyChild);
-            this._content = null;
-            this._scrollBar = null;
-            this._itemRender = null;
-            this._cells = null;
-            this._array = null;
-            this.selectHandler = this.renderHandler = this.mouseHandler = null;
+        destroy(t = !0) {
+            this._content && this._content.destroy(t), this._scrollBar && this._scrollBar.destroy(t), 
+            super.destroy(t), this._content = null, this._scrollBar = null, this._itemRender = null, 
+            this._cells = null, this._array = null, this.selectHandler = this.renderHandler = this.mouseHandler = null;
         }
         createChildren() {
-            this.addChild(this._content = new Box());
+            this.addChild(this._content = new c());
         }
-        set cacheAs(value) {
-            super.cacheAs = value;
-            if (this._scrollBar) {
-                this._usedCache = null;
-                if (value !== "none")
-                    this._scrollBar.on(Laya.Event.START, this, this.onScrollStart);
-                else
-                    this._scrollBar.off(Laya.Event.START, this, this.onScrollStart);
-            }
+        set cacheAs(t) {
+            super.cacheAs = t, this._scrollBar && (this._usedCache = null, "none" !== t ? this._scrollBar.on(e.Event.START, this, this.onScrollStart) : this._scrollBar.off(e.Event.START, this, this.onScrollStart));
         }
         get cacheAs() {
             return super.cacheAs;
         }
         onScrollStart() {
-            this._usedCache || (this._usedCache = super.cacheAs);
-            super.cacheAs = "none";
-            this._scrollBar.once(Laya.Event.END, this, this.onScrollEnd);
+            this._usedCache || (this._usedCache = super.cacheAs), super.cacheAs = "none", this._scrollBar.once(e.Event.END, this, this.onScrollEnd);
         }
         onScrollEnd() {
             super.cacheAs = this._usedCache;
@@ -2774,76 +1710,50 @@
         get vScrollBarSkin() {
             return this._scrollBar ? this._scrollBar.skin : null;
         }
-        set vScrollBarSkin(value) {
+        set vScrollBarSkin(t) {
             this._removePreScrollBar();
-            var scrollBar = new VScrollBar();
-            scrollBar.name = "scrollBar";
-            scrollBar.right = 0;
-            scrollBar.skin = value;
-            scrollBar.elasticDistance = this._elasticEnabled ? 200 : 0;
-            this.scrollBar = scrollBar;
-            this.addChild(scrollBar);
-            this._setCellChanged();
+            var e = new f();
+            e.name = "scrollBar", e.right = 0, e.skin = t, e.elasticDistance = this._elasticEnabled ? 200 : 0, 
+            this.scrollBar = e, this.addChild(e), this._setCellChanged();
         }
         _removePreScrollBar() {
-            var preNode = this.removeChildByName("scrollBar");
-            if (preNode)
-                preNode.destroy(true);
+            var t = this.removeChildByName("scrollBar");
+            t && t.destroy(!0);
         }
         get hScrollBarSkin() {
             return this._scrollBar ? this._scrollBar.skin : null;
         }
-        set hScrollBarSkin(value) {
+        set hScrollBarSkin(t) {
             this._removePreScrollBar();
-            var scrollBar = new HScrollBar();
-            scrollBar.name = "scrollBar";
-            scrollBar.bottom = 0;
-            scrollBar.skin = value;
-            scrollBar.elasticDistance = this._elasticEnabled ? 200 : 0;
-            this.scrollBar = scrollBar;
-            this.addChild(scrollBar);
-            this._setCellChanged();
+            var e = new S();
+            e.name = "scrollBar", e.bottom = 0, e.skin = t, e.elasticDistance = this._elasticEnabled ? 200 : 0, 
+            this.scrollBar = e, this.addChild(e), this._setCellChanged();
         }
         get scrollBar() {
             return this._scrollBar;
         }
-        set scrollBar(value) {
-            if (this._scrollBar != value) {
-                this._scrollBar = value;
-                if (value) {
-                    this._isVertical = this._scrollBar.isVertical;
-                    this.addChild(this._scrollBar);
-                    this._scrollBar.on(Laya.Event.CHANGE, this, this.onScrollBarChange);
-                }
-            }
+        set scrollBar(t) {
+            this._scrollBar != t && (this._scrollBar = t, t && (this._isVertical = this._scrollBar.isVertical, 
+            this.addChild(this._scrollBar), this._scrollBar.on(e.Event.CHANGE, this, this.onScrollBarChange)));
         }
         get itemRender() {
             return this._itemRender;
         }
-        set itemRender(value) {
-            if (this._itemRender != value) {
-                this._itemRender = value;
-                for (var i = this._cells.length - 1; i > -1; i--) {
-                    this._cells[i].destroy();
-                }
-                this._cells.length = 0;
-                this._setCellChanged();
+        set itemRender(t) {
+            if (this._itemRender != t) {
+                this._itemRender = t;
+                for (var e = this._cells.length - 1; e > -1; e--) this._cells[e].destroy();
+                this._cells.length = 0, this._setCellChanged();
             }
         }
-        set width(value) {
-            if (value != this._width) {
-                super.width = value;
-                this._setCellChanged();
-            }
+        set width(t) {
+            t != this._width && (super.width = t, this._setCellChanged());
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            if (value != this._height) {
-                super.height = value;
-                this._setCellChanged();
-            }
+        set height(t) {
+            t != this._height && (super.height = t, this._setCellChanged());
         }
         get height() {
             return super.height;
@@ -2851,550 +1761,330 @@
         get repeatX() {
             return this._repeatX > 0 ? this._repeatX : this._repeatX2 > 0 ? this._repeatX2 : 1;
         }
-        set repeatX(value) {
-            this._repeatX = value;
-            this._setCellChanged();
+        set repeatX(t) {
+            this._repeatX = t, this._setCellChanged();
         }
         get repeatY() {
             return this._repeatY > 0 ? this._repeatY : this._repeatY2 > 0 ? this._repeatY2 : 1;
         }
-        set repeatY(value) {
-            this._repeatY = value;
-            this._setCellChanged();
+        set repeatY(t) {
+            this._repeatY = t, this._setCellChanged();
         }
         get spaceX() {
             return this._spaceX;
         }
-        set spaceX(value) {
-            this._spaceX = value;
-            this._setCellChanged();
+        set spaceX(t) {
+            this._spaceX = t, this._setCellChanged();
         }
         get spaceY() {
             return this._spaceY;
         }
-        set spaceY(value) {
-            this._spaceY = value;
-            this._setCellChanged();
+        set spaceY(t) {
+            this._spaceY = t, this._setCellChanged();
         }
         changeCells() {
-            this._cellChanged = false;
-            if (this._itemRender) {
+            if (this._cellChanged = !1, this._itemRender) {
                 this.scrollBar = this.getChildByName("scrollBar");
-                var cell = this._getOneCell();
-                var cellWidth = (cell.width + this._spaceX) || 1;
-                var cellHeight = (cell.height + this._spaceY) || 1;
-                if (this._width > 0)
-                    this._repeatX2 = this._isVertical ? Math.round(this._width / cellWidth) : Math.ceil(this._width / cellWidth);
-                if (this._height > 0)
-                    this._repeatY2 = this._isVertical ? Math.ceil(this._height / cellHeight) : Math.round(this._height / cellHeight);
-                var listWidth = this._width ? this._width : (cellWidth * this.repeatX - this._spaceX);
-                var listHeight = this._height ? this._height : (cellHeight * this.repeatY - this._spaceY);
-                this._cellSize = this._isVertical ? cellHeight : cellWidth;
-                this._cellOffset = this._isVertical ? (cellHeight * Math.max(this._repeatY2, this._repeatY) - listHeight - this._spaceY) : (cellWidth * Math.max(this._repeatX2, this._repeatX) - listWidth - this._spaceX);
-                if (this._isVertical && this.vScrollBarSkin)
-                    this._scrollBar.height = listHeight;
-                else if (!this._isVertical && this.hScrollBarSkin)
-                    this._scrollBar.width = listWidth;
-                this.setContentSize(listWidth, listHeight);
-                var numX = this._isVertical ? this.repeatX : this.repeatY;
-                var numY = (this._isVertical ? this.repeatY : this.repeatX) + (this._scrollBar ? 1 : 0);
-                this._createItems(0, numX, numY);
-                this._createdLine = numY;
-                if (this._array) {
-                    this.array = this._array;
-                    this.runCallLater(this.renderItems);
-                }
+                var t = this._getOneCell(), e = t.width + this._spaceX || 1, s = t.height + this._spaceY || 1;
+                this._width > 0 && (this._repeatX2 = this._isVertical ? Math.round(this._width / e) : Math.ceil(this._width / e)), 
+                this._height > 0 && (this._repeatY2 = this._isVertical ? Math.ceil(this._height / s) : Math.round(this._height / s));
+                var i = this._width ? this._width : e * this.repeatX - this._spaceX, h = this._height ? this._height : s * this.repeatY - this._spaceY;
+                this._cellSize = this._isVertical ? s : e, this._cellOffset = this._isVertical ? s * Math.max(this._repeatY2, this._repeatY) - h - this._spaceY : e * Math.max(this._repeatX2, this._repeatX) - i - this._spaceX, 
+                this._isVertical && this.vScrollBarSkin ? this._scrollBar.height = h : !this._isVertical && this.hScrollBarSkin && (this._scrollBar.width = i), 
+                this.setContentSize(i, h);
+                var a = this._isVertical ? this.repeatX : this.repeatY, r = (this._isVertical ? this.repeatY : this.repeatX) + (this._scrollBar ? 1 : 0);
+                this._createItems(0, a, r), this._createdLine = r, this._array && (this.array = this._array, 
+                this.runCallLater(this.renderItems));
             }
         }
         _getOneCell() {
-            if (this._cells.length === 0) {
-                var item = this.createItem();
-                this._offset.setTo(item._x, item._y);
-                if (this.cacheContent)
-                    return item;
-                this._cells.push(item);
+            if (0 === this._cells.length) {
+                var t = this.createItem();
+                if (this._offset.setTo(t._x, t._y), this.cacheContent) return t;
+                this._cells.push(t);
             }
             return this._cells[0];
         }
-        _createItems(startY, numX, numY) {
-            var box = this._content;
-            var cell = this._getOneCell();
-            var cellWidth = cell.width + this._spaceX;
-            var cellHeight = cell.height + this._spaceY;
+        _createItems(t, e, s) {
+            var i = this._content, h = this._getOneCell(), a = h.width + this._spaceX, r = h.height + this._spaceY;
             if (this.cacheContent) {
-                var cacheBox = new Box();
-                cacheBox.cacheAs = "normal";
-                cacheBox.pos((this._isVertical ? 0 : startY) * cellWidth, (this._isVertical ? startY : 0) * cellHeight);
-                this._content.addChild(cacheBox);
-                box = cacheBox;
+                var l = new c();
+                l.cacheAs = "normal", l.pos((this._isVertical ? 0 : t) * a, (this._isVertical ? t : 0) * r), 
+                this._content.addChild(l), i = l;
             } else {
-                var arr = [];
-                for (var i = this._cells.length - 1; i > -1; i--) {
-                    var item = this._cells[i];
-                    item.removeSelf();
-                    arr.push(item);
+                for (var n = [], o = this._cells.length - 1; o > -1; o--) {
+                    var _ = this._cells[o];
+                    _.removeSelf(), n.push(_);
                 }
                 this._cells.length = 0;
             }
-            for (var k = startY; k < numY; k++) {
-                for (var l = 0; l < numX; l++) {
-                    if (arr && arr.length) {
-                        cell = arr.pop();
-                    } else {
-                        cell = this.createItem();
-                    }
-                    cell.x = (this._isVertical ? l : k) * cellWidth - box._x;
-                    cell.y = (this._isVertical ? k : l) * cellHeight - box._y;
-                    cell.name = "item" + (k * numX + l);
-                    box.addChild(cell);
-                    this.addCell(cell);
-                }
-            }
+            for (var d = t; d < s; d++) for (var u = 0; u < e; u++) (h = n && n.length ? n.pop() : this.createItem()).x = (this._isVertical ? u : d) * a - i._x, 
+            h.y = (this._isVertical ? d : u) * r - i._y, h.name = "item" + (d * e + u), i.addChild(h), 
+            this.addCell(h);
         }
         createItem() {
-            var arr = [];
-            if (typeof(this._itemRender) == "function") {
-                var box = new this._itemRender();
-            } else {
-                box = Laya.SceneUtils.createComp(this._itemRender, null, null, arr);
-            }
-            if (arr.length == 0 && box["_watchMap"]) {
-                var watchMap = box["_watchMap"];
-                for (var name in watchMap) {
-                    var a = watchMap[name];
-                    for (var i = 0; i < a.length; i++) {
-                        var watcher = a[i];
-                        arr.push(watcher.comp, watcher.prop, watcher.value);
-                    }
+            var t = [];
+            if ("function" == typeof this._itemRender) var s = new this._itemRender(); else s = e.SceneUtils.createComp(this._itemRender, null, null, t);
+            if (0 == t.length && s._watchMap) {
+                var i = s._watchMap;
+                for (var h in i) for (var a = i[h], r = 0; r < a.length; r++) {
+                    var l = a[r];
+                    t.push(l.comp, l.prop, l.value);
                 }
             }
-            if (arr.length)
-                box["_$bindData"] = arr;
-            return box;
+            return t.length && (s._$bindData = t), s;
         }
-        addCell(cell) {
-            cell.on(Laya.Event.CLICK, this, this.onCellMouse);
-            cell.on(Laya.Event.RIGHT_CLICK, this, this.onCellMouse);
-            cell.on(Laya.Event.MOUSE_OVER, this, this.onCellMouse);
-            cell.on(Laya.Event.MOUSE_OUT, this, this.onCellMouse);
-            cell.on(Laya.Event.MOUSE_DOWN, this, this.onCellMouse);
-            cell.on(Laya.Event.MOUSE_UP, this, this.onCellMouse);
-            this._cells.push(cell);
+        addCell(t) {
+            t.on(e.Event.CLICK, this, this.onCellMouse), t.on(e.Event.RIGHT_CLICK, this, this.onCellMouse), 
+            t.on(e.Event.MOUSE_OVER, this, this.onCellMouse), t.on(e.Event.MOUSE_OUT, this, this.onCellMouse), 
+            t.on(e.Event.MOUSE_DOWN, this, this.onCellMouse), t.on(e.Event.MOUSE_UP, this, this.onCellMouse), 
+            this._cells.push(t);
         }
         _afterInited() {
             this.initItems();
         }
         initItems() {
-            if (!this._itemRender && this.getChildByName("item0") != null) {
-                this.repeatX = 1;
-                var count;
-                count = 0;
-                for (var i = 0; i < 10000; i++) {
-                    var cell = this.getChildByName("item" + i);
-                    if (cell) {
-                        this.addCell(cell);
-                        count++;
-                        continue;
-                    }
-                    break;
+            if (!this._itemRender && null != this.getChildByName("item0")) {
+                var t;
+                this.repeatX = 1, t = 0;
+                for (var e = 0; e < 1e4; e++) {
+                    var s = this.getChildByName("item" + e);
+                    if (!s) break;
+                    this.addCell(s), t++;
                 }
-                this.repeatY = count;
+                this.repeatY = t;
             }
         }
-        setContentSize(width, height) {
-            this._content.width = width;
-            this._content.height = height;
-            if (this._scrollBar || this._offset.x != 0 || this._offset.y != 0) {
-                this._content._style.scrollRect || (this._content.scrollRect = Laya.Rectangle.create());
-                this._content._style.scrollRect.setTo(-this._offset.x, -this._offset.y, width, height);
-                this._content.scrollRect = this._content.scrollRect;
-            }
-            this.event(Laya.Event.RESIZE);
+        setContentSize(t, s) {
+            this._content.width = t, this._content.height = s, (this._scrollBar || 0 != this._offset.x || 0 != this._offset.y) && (this._content._style.scrollRect || (this._content.scrollRect = e.Rectangle.create()), 
+            this._content._style.scrollRect.setTo(-this._offset.x, -this._offset.y, t, s), this._content.scrollRect = this._content.scrollRect), 
+            this.event(e.Event.RESIZE);
         }
-        onCellMouse(e) {
-            if (e.type === Laya.Event.MOUSE_DOWN)
-                this._isMoved = false;
-            var cell = e.currentTarget;
-            var index = this._startIndex + this._cells.indexOf(cell);
-            if (index < 0)
-                return;
-            if (e.type === Laya.Event.CLICK || e.type === Laya.Event.RIGHT_CLICK) {
-                if (this.selectEnable && !this._isMoved)
-                    this.selectedIndex = index;
-                else
-                    this.changeCellState(cell, true, 0);
-            } else if ((e.type === Laya.Event.MOUSE_OVER || e.type === Laya.Event.MOUSE_OUT) && this._selectedIndex !== index) {
-                this.changeCellState(cell, e.type === Laya.Event.MOUSE_OVER, 0);
-            }
-            this.mouseHandler && this.mouseHandler.runWith([e, index]);
+        onCellMouse(t) {
+            t.type === e.Event.MOUSE_DOWN && (this._isMoved = !1);
+            var s = t.currentTarget, i = this._startIndex + this._cells.indexOf(s);
+            i < 0 || (t.type === e.Event.CLICK || t.type === e.Event.RIGHT_CLICK ? this.selectEnable && !this._isMoved ? this.selectedIndex = i : this.changeCellState(s, !0, 0) : t.type !== e.Event.MOUSE_OVER && t.type !== e.Event.MOUSE_OUT || this._selectedIndex === i || this.changeCellState(s, t.type === e.Event.MOUSE_OVER, 0), 
+            this.mouseHandler && this.mouseHandler.runWith([ t, i ]));
         }
-        changeCellState(cell, visible, index) {
-            var selectBox = cell.getChildByName("selectBox");
-            if (selectBox) {
-                this.selectEnable = true;
-                selectBox.visible = visible;
-                selectBox.index = index;
-            }
+        changeCellState(t, e, s) {
+            var i = t.getChildByName("selectBox");
+            i && (this.selectEnable = !0, i.visible = e, i.index = s);
         }
         _sizeChanged() {
-            super._sizeChanged();
-            this.setContentSize(this.width, this.height);
-            if (this._scrollBar)
-                this.callLater(this.onScrollBarChange);
+            super._sizeChanged(), this.setContentSize(this.width, this.height), this._scrollBar && this.callLater(this.onScrollBarChange);
         }
-        onScrollBarChange(e = null) {
+        onScrollBarChange(t = null) {
             this.runCallLater(this.changeCells);
-            var scrollValue = this._scrollBar.value;
-            var lineX = (this._isVertical ? this.repeatX : this.repeatY);
-            var lineY = (this._isVertical ? this.repeatY : this.repeatX);
-            var scrollLine = Math.floor(scrollValue / this._cellSize);
-            if (!this.cacheContent) {
-                var index = scrollLine * lineX;
-                var num = 0;
-                if (index > this._startIndex) {
-                    num = index - this._startIndex;
-                    var down = true;
-                    var toIndex = this._startIndex + lineX * (lineY + 1);
-                    this._isMoved = true;
-                } else if (index < this._startIndex) {
-                    num = this._startIndex - index;
-                    down = false;
-                    toIndex = this._startIndex - 1;
-                    this._isMoved = true;
+            var e = this._scrollBar.value, s = this._isVertical ? this.repeatX : this.repeatY, i = this._isVertical ? this.repeatY : this.repeatX, h = Math.floor(e / this._cellSize);
+            if (this.cacheContent) r = i + 1, this._createdLine - h < r && (this._createItems(this._createdLine, s, this._createdLine + r), 
+            this.renderItems(this._createdLine * s, 0), this._createdLine += r); else {
+                var a = h * s, r = 0;
+                if (a > this._startIndex) {
+                    r = a - this._startIndex;
+                    var l = !0, n = this._startIndex + s * (i + 1);
+                    this._isMoved = !0;
+                } else a < this._startIndex && (r = this._startIndex - a, l = !1, n = this._startIndex - 1, 
+                this._isMoved = !0);
+                for (var o = 0; o < r; o++) {
+                    if (l) {
+                        var _ = this._cells.shift();
+                        this._cells[this._cells.length] = _;
+                        var c = n + o;
+                    } else _ = this._cells.pop(), this._cells.unshift(_), c = n - o;
+                    var d = Math.floor(c / s) * this._cellSize;
+                    this._isVertical ? _.y = d : _.x = d, this.renderItem(_, c);
                 }
-                for (var i = 0; i < num; i++) {
-                    if (down) {
-                        var cell = this._cells.shift();
-                        this._cells[this._cells.length] = cell;
-                        var cellIndex = toIndex + i;
-                    } else {
-                        cell = this._cells.pop();
-                        this._cells.unshift(cell);
-                        cellIndex = toIndex - i;
-                    }
-                    var pos = Math.floor(cellIndex / lineX) * this._cellSize;
-                    this._isVertical ? cell.y = pos : cell.x = pos;
-                    this.renderItem(cell, cellIndex);
-                }
-                this._startIndex = index;
-                this.changeSelectStatus();
-            } else {
-                num = (lineY + 1);
-                if (this._createdLine - scrollLine < num) {
-                    this._createItems(this._createdLine, lineX, this._createdLine + num);
-                    this.renderItems(this._createdLine * lineX, 0);
-                    this._createdLine += num;
-                }
+                this._startIndex = a, this.changeSelectStatus();
             }
-            var r = this._content._style.scrollRect;
-            if (this._isVertical) {
-                r.y = scrollValue - this._offset.y;
-                r.x = -this._offset.x;
-            } else {
-                r.y = -this._offset.y;
-                r.x = scrollValue - this._offset.x;
-            }
-            this._content.scrollRect = r;
+            var u = this._content._style.scrollRect;
+            this._isVertical ? (u.y = e - this._offset.y, u.x = -this._offset.x) : (u.y = -this._offset.y, 
+            u.x = e - this._offset.x), this._content.scrollRect = u;
         }
-        posCell(cell, cellIndex) {
-            if (!this._scrollBar)
-                return;
-            var lineX = (this._isVertical ? this.repeatX : this.repeatY);
-            var lineY = (this._isVertical ? this.repeatY : this.repeatX);
-            var pos = Math.floor(cellIndex / lineX) * this._cellSize;
-            this._isVertical ? cell._y = pos : cell.x = pos;
+        posCell(t, e) {
+            if (this._scrollBar) {
+                var s = this._isVertical ? this.repeatX : this.repeatY, i = (this._isVertical ? this.repeatY : this.repeatX, 
+                Math.floor(e / s) * this._cellSize);
+                this._isVertical ? t._y = i : t.x = i;
+            }
         }
         get selectedIndex() {
             return this._selectedIndex;
         }
-        set selectedIndex(value) {
-            if (this._selectedIndex != value) {
-                this._selectedIndex = value;
-                this.changeSelectStatus();
-                this.event(Laya.Event.CHANGE);
-                this.selectHandler && this.selectHandler.runWith(value);
-                this.startIndex = this._startIndex;
-            }
+        set selectedIndex(t) {
+            this._selectedIndex != t && (this._selectedIndex = t, this.changeSelectStatus(), 
+            this.event(e.Event.CHANGE), this.selectHandler && this.selectHandler.runWith(t), 
+            this.startIndex = this._startIndex);
         }
         changeSelectStatus() {
-            for (var i = 0, n = this._cells.length; i < n; i++) {
-                this.changeCellState(this._cells[i], this._selectedIndex === this._startIndex + i, 1);
-            }
+            for (var t = 0, e = this._cells.length; t < e; t++) this.changeCellState(this._cells[t], this._selectedIndex === this._startIndex + t, 1);
         }
         get selectedItem() {
-            return this._selectedIndex != -1 ? this._array[this._selectedIndex] : null;
+            return -1 != this._selectedIndex ? this._array[this._selectedIndex] : null;
         }
-        set selectedItem(value) {
-            this.selectedIndex = this._array.indexOf(value);
+        set selectedItem(t) {
+            this.selectedIndex = this._array.indexOf(t);
         }
         get selection() {
             return this.getCell(this._selectedIndex);
         }
-        set selection(value) {
-            this.selectedIndex = this._startIndex + this._cells.indexOf(value);
+        set selection(t) {
+            this.selectedIndex = this._startIndex + this._cells.indexOf(t);
         }
         get startIndex() {
             return this._startIndex;
         }
-        set startIndex(value) {
-            this._startIndex = value > 0 ? value : 0;
-            this.callLater(this.renderItems);
+        set startIndex(t) {
+            this._startIndex = t > 0 ? t : 0, this.callLater(this.renderItems);
         }
-        renderItems(from = 0, to = 0) {
-            for (var i = from, n = to || this._cells.length; i < n; i++) {
-                this.renderItem(this._cells[i], this._startIndex + i);
-            }
+        renderItems(t = 0, e = 0) {
+            for (var s = t, i = e || this._cells.length; s < i; s++) this.renderItem(this._cells[s], this._startIndex + s);
             this.changeSelectStatus();
         }
-        renderItem(cell, index) {
-            if (this._array && index >= 0 && index < this._array.length) {
-                cell.visible = true;
-                if (cell["_$bindData"]) {
-                    cell["_dataSource"] = this._array[index];
-                    this._bindData(cell, this._array[index]);
-                } else
-                    cell.dataSource = this._array[index];
-                if (!this.cacheContent) {
-                    this.posCell(cell, index);
-                }
-                if (this.hasListener(Laya.Event.RENDER))
-                    this.event(Laya.Event.RENDER, [cell, index]);
-                if (this.renderHandler)
-                    this.renderHandler.runWith([cell, index]);
-            } else {
-                cell.visible = false;
-                cell.dataSource = null;
-            }
+        renderItem(t, s) {
+            this._array && s >= 0 && s < this._array.length ? (t.visible = !0, t._$bindData ? (t._dataSource = this._array[s], 
+            this._bindData(t, this._array[s])) : t.dataSource = this._array[s], this.cacheContent || this.posCell(t, s), 
+            this.hasListener(e.Event.RENDER) && this.event(e.Event.RENDER, [ t, s ]), this.renderHandler && this.renderHandler.runWith([ t, s ])) : (t.visible = !1, 
+            t.dataSource = null);
         }
-        _bindData(cell, data) {
-            var arr = cell._$bindData;
-            for (var i = 0, n = arr.length; i < n; i++) {
-                var ele = arr[i++];
-                var prop = arr[i++];
-                var value = arr[i];
-                var fun = UIUtils.getBindFun(value);
-                ele[prop] = fun.call(this, data);
+        _bindData(t, e) {
+            for (var s = t._$bindData, i = 0, h = s.length; i < h; i++) {
+                var a = s[i++], r = s[i++], n = s[i], o = l.getBindFun(n);
+                a[r] = o.call(this, e);
             }
         }
         get array() {
             return this._array;
         }
-        set array(value) {
-            this.runCallLater(this.changeCells);
-            this._array = value || [];
-            this._preLen = this._array.length;
-            var length = this._array.length;
-            this.totalPage = Math.ceil(length / (this.repeatX * this.repeatY));
-            this._selectedIndex = this._selectedIndex < length ? this._selectedIndex : length - 1;
-            this.startIndex = this._startIndex;
-            if (this._scrollBar) {
+        set array(t) {
+            this.runCallLater(this.changeCells), this._array = t || [], this._preLen = this._array.length;
+            var e = this._array.length;
+            if (this.totalPage = Math.ceil(e / (this.repeatX * this.repeatY)), this._selectedIndex = this._selectedIndex < e ? this._selectedIndex : e - 1, 
+            this.startIndex = this._startIndex, this._scrollBar) {
                 this._scrollBar.stopScroll();
-                var numX = this._isVertical ? this.repeatX : this.repeatY;
-                var numY = this._isVertical ? this.repeatY : this.repeatX;
-                var lineCount = Math.ceil(length / numX);
-                var total = this._cellOffset > 0 ? this.totalPage + 1 : this.totalPage;
-                if (total > 1 && lineCount >= numY) {
-                    this._scrollBar.scrollSize = this._cellSize;
-                    this._scrollBar.thumbPercent = numY / lineCount;
-                    this._scrollBar.setScroll(0, (lineCount - numY) * this._cellSize + this._cellOffset, this._scrollBar.value);
-                    this._scrollBar.target = this._content;
-                } else {
-                    this._scrollBar.setScroll(0, 0, 0);
-                    this._scrollBar.target = this._content;
-                }
+                var s = this._isVertical ? this.repeatX : this.repeatY, i = this._isVertical ? this.repeatY : this.repeatX, h = Math.ceil(e / s);
+                (this._cellOffset > 0 ? this.totalPage + 1 : this.totalPage) > 1 && h >= i ? (this._scrollBar.scrollSize = this._cellSize, 
+                this._scrollBar.thumbPercent = i / h, this._scrollBar.setScroll(0, (h - i) * this._cellSize + this._cellOffset, this._scrollBar.value), 
+                this._scrollBar.target = this._content) : (this._scrollBar.setScroll(0, 0, 0), this._scrollBar.target = this._content);
             }
         }
-        updateArray(array) {
-            this._array = array;
-            var freshStart;
-            if (this._array) {
-                freshStart = this._preLen - this._startIndex;
-                if (freshStart >= 0)
-                    this.renderItems(freshStart);
-                this._preLen = this._array.length;
-            }
-            if (this._scrollBar) {
-                var length = array.length;
-                var numX = this._isVertical ? this.repeatX : this.repeatY;
-                var numY = this._isVertical ? this.repeatY : this.repeatX;
-                var lineCount = Math.ceil(length / numX);
-                if (lineCount >= numY) {
-                    this._scrollBar.thumbPercent = numY / lineCount;
-                    this._scrollBar.slider["_max"] = (lineCount - numY) * this._cellSize + this._cellOffset;
-                }
+        updateArray(t) {
+            var e;
+            if (this._array = t, this._array && ((e = this._preLen - this._startIndex) >= 0 && this.renderItems(e), 
+            this._preLen = this._array.length), this._scrollBar) {
+                var s = t.length, i = this._isVertical ? this.repeatX : this.repeatY, h = this._isVertical ? this.repeatY : this.repeatX, a = Math.ceil(s / i);
+                a >= h && (this._scrollBar.thumbPercent = h / a, this._scrollBar.slider._max = (a - h) * this._cellSize + this._cellOffset);
             }
         }
         get page() {
             return this._page;
         }
-        set page(value) {
-            this._page = value;
-            if (this._array) {
-                this._page = value > 0 ? value : 0;
-                this._page = this._page < this.totalPage ? this._page : this.totalPage - 1;
-                this.startIndex = this._page * this.repeatX * this.repeatY;
-            }
+        set page(t) {
+            this._page = t, this._array && (this._page = t > 0 ? t : 0, this._page = this._page < this.totalPage ? this._page : this.totalPage - 1, 
+            this.startIndex = this._page * this.repeatX * this.repeatY);
         }
         get length() {
             return this._array ? this._array.length : 0;
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.selectedIndex = parseInt(value);
-            else if (value instanceof Array)
-                this.array = value;
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.selectedIndex = parseInt(t) : t instanceof Array ? this.array = t : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
         }
         get cells() {
-            this.runCallLater(this.changeCells);
-            return this._cells;
+            return this.runCallLater(this.changeCells), this._cells;
         }
         get elasticEnabled() {
             return this._elasticEnabled;
         }
-        set elasticEnabled(value) {
-            this._elasticEnabled = value;
-            if (this._scrollBar) {
-                this._scrollBar.elasticDistance = value ? 200 : 0;
-            }
+        set elasticEnabled(t) {
+            this._elasticEnabled = t, this._scrollBar && (this._scrollBar.elasticDistance = t ? 200 : 0);
         }
         refresh() {
             this.array = this._array;
         }
-        getItem(index) {
-            if (index > -1 && index < this._array.length) {
-                return this._array[index];
-            }
-            return null;
+        getItem(t) {
+            return t > -1 && t < this._array.length ? this._array[t] : null;
         }
-        changeItem(index, source) {
-            if (index > -1 && index < this._array.length) {
-                this._array[index] = source;
-                if (index >= this._startIndex && index < this._startIndex + this._cells.length) {
-                    this.renderItem(this.getCell(index), index);
-                }
-            }
+        changeItem(t, e) {
+            t > -1 && t < this._array.length && (this._array[t] = e, t >= this._startIndex && t < this._startIndex + this._cells.length && this.renderItem(this.getCell(t), t));
         }
-        setItem(index, source) {
-            this.changeItem(index, source);
+        setItem(t, e) {
+            this.changeItem(t, e);
         }
-        addItem(souce) {
-            this._array.push(souce);
-            this.array = this._array;
+        addItem(t) {
+            this._array.push(t), this.array = this._array;
         }
-        addItemAt(souce, index) {
-            this._array.splice(index, 0, souce);
-            this.array = this._array;
+        addItemAt(t, e) {
+            this._array.splice(e, 0, t), this.array = this._array;
         }
-        deleteItem(index) {
-            this._array.splice(index, 1);
-            this.array = this._array;
+        deleteItem(t) {
+            this._array.splice(t, 1), this.array = this._array;
         }
-        getCell(index) {
-            this.runCallLater(this.changeCells);
-            if (index > -1 && this._cells) {
-                return this._cells[(index - this._startIndex) % this._cells.length];
-            }
-            return null;
+        getCell(t) {
+            return this.runCallLater(this.changeCells), t > -1 && this._cells ? this._cells[(t - this._startIndex) % this._cells.length] : null;
         }
-        scrollTo(index) {
+        scrollTo(t) {
             if (this._scrollBar) {
-                var numX = this._isVertical ? this.repeatX : this.repeatY;
-                this._scrollBar.value = Math.floor(index / numX) * this._cellSize;
-            } else {
-                this.startIndex = index;
-            }
+                var e = this._isVertical ? this.repeatX : this.repeatY;
+                this._scrollBar.value = Math.floor(t / e) * this._cellSize;
+            } else this.startIndex = t;
         }
-        tweenTo(index, time = 200, complete = null) {
+        tweenTo(t, s = 200, i = null) {
             if (this._scrollBar) {
                 this._scrollBar.stopScroll();
-                var numX = this._isVertical ? this.repeatX : this.repeatY;
-                Laya.Tween.to(this._scrollBar, {
-                    value: Math.floor(index / numX) * this._cellSize
-                }, time, null, complete, 0, true);
-            } else {
-                this.startIndex = index;
-                if (complete)
-                    complete.run();
-            }
+                var h = this._isVertical ? this.repeatX : this.repeatY;
+                e.Tween.to(this._scrollBar, {
+                    value: Math.floor(t / h) * this._cellSize
+                }, s, null, i, 0, !0);
+            } else this.startIndex = t, i && i.run();
         }
         _setCellChanged() {
-            if (!this._cellChanged) {
-                this._cellChanged = true;
-                this.callLater(this.changeCells);
-            }
+            this._cellChanged || (this._cellChanged = !0, this.callLater(this.changeCells));
         }
         commitMeasure() {
             this.runCallLater(this.changeCells);
         }
     }
-    Laya.ILaya.regClass(List);
-    Laya.ClassUtils.regClass("laya.ui.List", List);
-    Laya.ClassUtils.regClass("Laya.List", List);
-
-    class ComboBox extends UIComponent {
-        constructor(skin = null, labels = null) {
-            super();
-            this._visibleNum = 6;
-            this._itemColors = Styles.comboBoxItemColors;
-            this._itemSize = 12;
-            this._labels = [];
-            this._selectedIndex = -1;
-            this.itemRender = null;
-            this.skin = skin;
-            this.labels = labels;
+    e.ILaya.regClass(b), e.ClassUtils.regClass("laya.ui.List", b), e.ClassUtils.regClass("Laya.List", b);
+    class y extends n {
+        constructor(t = null, e = null) {
+            super(), this._visibleNum = 6, this._itemColors = i.comboBoxItemColors, this._itemSize = 12, 
+            this._labels = [], this._selectedIndex = -1, this.itemRender = null, this.skin = t, 
+            this.labels = e;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._button && this._button.destroy(destroyChild);
-            this._list && this._list.destroy(destroyChild);
-            this._button = null;
-            this._list = null;
-            this._itemColors = null;
-            this._labels = null;
+        destroy(t = !0) {
+            super.destroy(t), this._button && this._button.destroy(t), this._list && this._list.destroy(t), 
+            this._button = null, this._list = null, this._itemColors = null, this._labels = null, 
             this._selectHandler = null;
         }
         createChildren() {
-            this.addChild(this._button = new Button());
-            this._button.text.align = "left";
-            this._button.labelPadding = "0,0,0,5";
-            this._button.on(Laya.Event.MOUSE_DOWN, this, this.onButtonMouseDown);
+            this.addChild(this._button = new d()), this._button.text.align = "left", this._button.labelPadding = "0,0,0,5", 
+            this._button.on(e.Event.MOUSE_DOWN, this, this.onButtonMouseDown);
         }
         _createList() {
-            this._list = new List();
-            if (this._scrollBarSkin)
-                this._list.vScrollBarSkin = this._scrollBarSkin;
+            this._list = new b(), this._scrollBarSkin && (this._list.vScrollBarSkin = this._scrollBarSkin), 
             this._setListEvent(this._list);
         }
-        _setListEvent(list) {
-            this._list.selectEnable = true;
-            this._list.on(Laya.Event.MOUSE_DOWN, this, this.onListDown);
-            this._list.mouseHandler = Laya.Handler.create(this, this.onlistItemMouse, null, false);
-            if (this._list.scrollBar)
-                this._list.scrollBar.on(Laya.Event.MOUSE_DOWN, this, this.onScrollBarDown);
+        _setListEvent(t) {
+            this._list.selectEnable = !0, this._list.on(e.Event.MOUSE_DOWN, this, this.onListDown), 
+            this._list.mouseHandler = e.Handler.create(this, this.onlistItemMouse, null, !1), 
+            this._list.scrollBar && this._list.scrollBar.on(e.Event.MOUSE_DOWN, this, this.onScrollBarDown);
         }
-        onListDown(e) {
-            e.stopPropagation();
+        onListDown(t) {
+            t.stopPropagation();
         }
-        onScrollBarDown(e) {
-            e.stopPropagation();
+        onScrollBarDown(t) {
+            t.stopPropagation();
         }
-        onButtonMouseDown(e) {
-            this.callLater(this.switchTo, [!this._isOpen]);
+        onButtonMouseDown(t) {
+            this.callLater(this.switchTo, [ !this._isOpen ]);
         }
         get skin() {
             return this._button.skin;
         }
-        set skin(value) {
-            if (this._button.skin != value) {
-                this._button.skin = value;
-                this._listChanged = true;
-            }
+        set skin(t) {
+            this._button.skin != t && (this._button.skin = t, this._listChanged = !0);
         }
         measureWidth() {
             return this._button.width;
@@ -3403,69 +2093,49 @@
             return this._button.height;
         }
         changeList() {
-            this._listChanged = false;
-            var labelWidth = this.width - 2;
-            var labelColor = this._itemColors[2];
-            this._itemHeight = this._itemSize + 6;
-            this._list.itemRender = this.itemRender || {
+            this._listChanged = !1;
+            var t = this.width - 2, e = this._itemColors[2];
+            this._itemHeight = this._itemSize + 6, this._list.itemRender = this.itemRender || {
                 type: "Box",
-                child: [{
+                child: [ {
                     type: "Label",
                     props: {
                         name: "label",
                         x: 1,
                         padding: "3,3,3,3",
-                        width: labelWidth,
+                        width: t,
                         height: this._itemHeight,
                         fontSize: this._itemSize,
-                        color: labelColor
+                        color: e
                     }
-                }]
-            };
-            this._list.repeatY = this._visibleNum;
-            this._list.refresh();
+                } ]
+            }, this._list.repeatY = this._visibleNum, this._list.refresh();
         }
-        onlistItemMouse(e, index) {
-            var type = e.type;
-            if (type === Laya.Event.MOUSE_OVER || type === Laya.Event.MOUSE_OUT) {
-                if (this._isCustomList)
-                    return;
-                var box = this._list.getCell(index);
-                if (!box)
-                    return;
-                var label = box.getChildByName("label");
-                if (label) {
-                    if (type === Laya.Event.ROLL_OVER) {
-                        label.bgColor = this._itemColors[0];
-                        label.color = this._itemColors[1];
-                    } else {
-                        label.bgColor = null;
-                        label.color = this._itemColors[2];
-                    }
-                }
-            } else if (type === Laya.Event.CLICK) {
-                this.selectedIndex = index;
-                this.isOpen = false;
-            }
+        onlistItemMouse(t, s) {
+            var i = t.type;
+            if (i === e.Event.MOUSE_OVER || i === e.Event.MOUSE_OUT) {
+                if (this._isCustomList) return;
+                var h = this._list.getCell(s);
+                if (!h) return;
+                var a = h.getChildByName("label");
+                a && (i === e.Event.ROLL_OVER ? (a.bgColor = this._itemColors[0], a.color = this._itemColors[1]) : (a.bgColor = null, 
+                a.color = this._itemColors[2]));
+            } else i === e.Event.CLICK && (this.selectedIndex = s, this.isOpen = !1);
         }
-        switchTo(value) {
-            this.isOpen = value;
+        switchTo(t) {
+            this.isOpen = t;
         }
         changeOpen() {
             this.isOpen = !this._isOpen;
         }
-        set width(value) {
-            super.width = value;
-            this._button.width = this._width;
-            this._itemChanged = true;
-            this._listChanged = true;
+        set width(t) {
+            super.width = t, this._button.width = this._width, this._itemChanged = !0, this._listChanged = !0;
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this._button.height = this._height;
+        set height(t) {
+            super.height = t, this._button.height = this._height;
         }
         get height() {
             return super.height;
@@ -3473,46 +2143,30 @@
         get labels() {
             return this._labels.join(",");
         }
-        set labels(value) {
-            if (this._labels.length > 0)
-                this.selectedIndex = -1;
-            if (value)
-                this._labels = value.split(",");
-            else
-                this._labels.length = 0;
-            this._itemChanged = true;
+        set labels(t) {
+            this._labels.length > 0 && (this.selectedIndex = -1), t ? this._labels = t.split(",") : this._labels.length = 0, 
+            this._itemChanged = !0;
         }
         changeItem() {
-            this._itemChanged = false;
-            this._listHeight = this._labels.length > 0 ? Math.min(this._visibleNum, this._labels.length) * this._itemHeight : this._itemHeight;
-            if (!this._isCustomList) {
-                var g = this._list.graphics;
-                g.clear(true);
-                g.drawRect(0, 0, this.width - 1, this._listHeight, this._itemColors[4], this._itemColors[3]);
+            if (this._itemChanged = !1, this._listHeight = this._labels.length > 0 ? Math.min(this._visibleNum, this._labels.length) * this._itemHeight : this._itemHeight, 
+            !this._isCustomList) {
+                var t = this._list.graphics;
+                t.clear(!0), t.drawRect(0, 0, this.width - 1, this._listHeight, this._itemColors[4], this._itemColors[3]);
             }
-            var a = this._list.array || [];
-            a.length = 0;
-            for (var i = 0, n = this._labels.length; i < n; i++) {
-                a.push({
-                    label: this._labels[i]
-                });
-            }
-            this._list.height = this._listHeight;
-            this._list.array = a;
+            var e = this._list.array || [];
+            e.length = 0;
+            for (var s = 0, i = this._labels.length; s < i; s++) e.push({
+                label: this._labels[s]
+            });
+            this._list.height = this._listHeight, this._list.array = e;
         }
         get selectedIndex() {
             return this._selectedIndex;
         }
-        set selectedIndex(value) {
-            if (this._selectedIndex != value) {
-                this._selectedIndex = value;
-                if (this._labels.length > 0)
-                    this.changeSelected();
-                else
-                    this.callLater(this.changeSelected);
-                this.event(Laya.Event.CHANGE, [Laya.Event.EMPTY.setTo(Laya.Event.CHANGE, this, this)]);
-                this._selectHandler && this._selectHandler.runWith(this._selectedIndex);
-            }
+        set selectedIndex(t) {
+            this._selectedIndex != t && (this._selectedIndex = t, this._labels.length > 0 ? this.changeSelected() : this.callLater(this.changeSelected), 
+            this.event(e.Event.CHANGE, [ e.Event.EMPTY.setTo(e.Event.CHANGE, this, this) ]), 
+            this._selectHandler && this._selectHandler.runWith(this._selectedIndex));
         }
         changeSelected() {
             this._button.label = this.selectedLabel;
@@ -3520,82 +2174,65 @@
         get selectHandler() {
             return this._selectHandler;
         }
-        set selectHandler(value) {
-            this._selectHandler = value;
+        set selectHandler(t) {
+            this._selectHandler = t;
         }
         get selectedLabel() {
             return this._selectedIndex > -1 && this._selectedIndex < this._labels.length ? this._labels[this._selectedIndex] : null;
         }
-        set selectedLabel(value) {
-            this.selectedIndex = this._labels.indexOf(value);
+        set selectedLabel(t) {
+            this.selectedIndex = this._labels.indexOf(t);
         }
         get visibleNum() {
             return this._visibleNum;
         }
-        set visibleNum(value) {
-            this._visibleNum = value;
-            this._listChanged = true;
+        set visibleNum(t) {
+            this._visibleNum = t, this._listChanged = !0;
         }
         get itemColors() {
             return String(this._itemColors);
         }
-        set itemColors(value) {
-            this._itemColors = UIUtils.fillArray(this._itemColors, value, String);
-            this._listChanged = true;
+        set itemColors(t) {
+            this._itemColors = l.fillArray(this._itemColors, t, String), this._listChanged = !0;
         }
         get itemSize() {
             return this._itemSize;
         }
-        set itemSize(value) {
-            this._itemSize = value;
-            this._listChanged = true;
+        set itemSize(t) {
+            this._itemSize = t, this._listChanged = !0;
         }
         get isOpen() {
             return this._isOpen;
         }
-        set isOpen(value) {
-            if (this._isOpen != value) {
-                this._isOpen = value;
-                this._button.selected = this._isOpen;
-                if (this._isOpen) {
-                    this._list || this._createList();
-                    this._listChanged && !this._isCustomList && this.changeList();
-                    this._itemChanged && this.changeItem();
-                    var p = this.localToGlobal(Laya.Point.TEMP.setTo(0, 0));
-                    var py = p.y + this._button.height;
-                    py = py + this._listHeight <= Laya.ILaya.stage.height ? py : p.y - this._listHeight;
-                    this._list.pos(p.x, py);
-                    this._list.zOrder = 1001;
-                    Laya.ILaya.stage.addChild(this._list);
-                    Laya.ILaya.stage.once(Laya.Event.MOUSE_DOWN, this, this.removeList);
-                    Laya.ILaya.stage.on(Laya.Event.MOUSE_WHEEL, this, this._onStageMouseWheel);
-                    this._list.selectedIndex = this._selectedIndex;
-                } else {
-                    this._list && this._list.removeSelf();
-                }
-            }
+        set isOpen(t) {
+            if (this._isOpen != t) if (this._isOpen = t, this._button.selected = this._isOpen, 
+            this._isOpen) {
+                this._list || this._createList(), this._listChanged && !this._isCustomList && this.changeList(), 
+                this._itemChanged && this.changeItem();
+                var s = this.localToGlobal(e.Point.TEMP.setTo(0, 0)), i = s.y + this._button.height;
+                i = i + this._listHeight <= e.ILaya.stage.height ? i : s.y - this._listHeight, this._list.pos(s.x, i), 
+                this._list.zOrder = 1001, e.ILaya.stage.addChild(this._list), e.ILaya.stage.once(e.Event.MOUSE_DOWN, this, this.removeList), 
+                e.ILaya.stage.on(e.Event.MOUSE_WHEEL, this, this._onStageMouseWheel), this._list.selectedIndex = this._selectedIndex;
+            } else this._list && this._list.removeSelf();
         }
-        _onStageMouseWheel(e) {
-            if (!this._list || this._list.contains(e.target))
-                return;
-            this.removeList(null);
+        _onStageMouseWheel(t) {
+            this._list && !this._list.contains(t.target) && this.removeList(null);
         }
-        removeList(e) {
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_DOWN, this, this.removeList);
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_WHEEL, this, this._onStageMouseWheel);
-            this.isOpen = false;
+        removeList(t) {
+            e.ILaya.stage.off(e.Event.MOUSE_DOWN, this, this.removeList), e.ILaya.stage.off(e.Event.MOUSE_WHEEL, this, this._onStageMouseWheel), 
+            this.isOpen = !1;
         }
         get scrollBarSkin() {
             return this._scrollBarSkin;
         }
-        set scrollBarSkin(value) {
-            this._scrollBarSkin = value;
+        set scrollBarSkin(t) {
+            this._scrollBarSkin = t;
         }
         get sizeGrid() {
             return this._button.sizeGrid;
         }
-        set sizeGrid(value) {
-            this._button.sizeGrid = value;
+        set sizeGrid(t) {
+            this._button.sizeGrid = t;
         }
         get scrollBar() {
             return this.list.scrollBar;
@@ -3604,26 +2241,14 @@
             return this._button;
         }
         get list() {
-            this._list || this._createList();
-            return this._list;
+            return this._list || this._createList(), this._list;
         }
-        set list(value) {
-            if (value) {
-                value.removeSelf();
-                this._isCustomList = true;
-                this._list = value;
-                this._setListEvent(value);
-                this._itemHeight = value.getCell(0).height + value.spaceY;
-            }
+        set list(t) {
+            t && (t.removeSelf(), this._isCustomList = !0, this._list = t, this._setListEvent(t), 
+            this._itemHeight = t.getCell(0).height + t.spaceY);
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.selectedIndex = parseInt(value);
-            else if (value instanceof Array)
-                this.labels = value.join(",");
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.selectedIndex = parseInt(t) : t instanceof Array ? this.labels = t.join(",") : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
@@ -3631,83 +2256,61 @@
         get labelColors() {
             return this._button.labelColors;
         }
-        set labelColors(value) {
-            if (this._button.labelColors != value) {
-                this._button.labelColors = value;
-            }
+        set labelColors(t) {
+            this._button.labelColors != t && (this._button.labelColors = t);
         }
         get labelPadding() {
             return this._button.text.padding.join(",");
         }
-        set labelPadding(value) {
-            this._button.text.padding = UIUtils.fillArray(Styles.labelPadding, value, Number);
+        set labelPadding(t) {
+            this._button.text.padding = l.fillArray(i.labelPadding, t, Number);
         }
         get labelSize() {
             return this._button.text.fontSize;
         }
-        set labelSize(value) {
-            this._button.text.fontSize = value;
+        set labelSize(t) {
+            this._button.text.fontSize = t;
         }
         get labelBold() {
             return this._button.text.bold;
         }
-        set labelBold(value) {
-            this._button.text.bold = value;
+        set labelBold(t) {
+            this._button.text.bold = t;
         }
         get labelFont() {
             return this._button.text.font;
         }
-        set labelFont(value) {
-            this._button.text.font = value;
+        set labelFont(t) {
+            this._button.text.font = t;
         }
         get stateNum() {
             return this._button.stateNum;
         }
-        set stateNum(value) {
-            this._button.stateNum = value;
+        set stateNum(t) {
+            this._button.stateNum = t;
         }
     }
-    Laya.ILaya.regClass(ComboBox);
-    Laya.ClassUtils.regClass("laya.ui.ComboBox", ComboBox);
-    Laya.ClassUtils.regClass("Laya.ComboBox", ComboBox);
-
-    class ProgressBar extends UIComponent {
-        constructor(skin = null) {
-            super();
-            this._value = 0.5;
-            this.skin = skin;
+    e.ILaya.regClass(y), e.ClassUtils.regClass("laya.ui.ComboBox", y), e.ClassUtils.regClass("Laya.ComboBox", y);
+    class w extends n {
+        constructor(t = null) {
+            super(), this._value = .5, this.skin = t;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._bg && this._bg.destroy(destroyChild);
-            this._bar && this._bar.destroy(destroyChild);
-            this._bg = this._bar = null;
-            this.changeHandler = null;
+        destroy(t = !0) {
+            super.destroy(t), this._bg && this._bg.destroy(t), this._bar && this._bar.destroy(t), 
+            this._bg = this._bar = null, this.changeHandler = null;
         }
         createChildren() {
-            this.addChild(this._bg = new Image());
-            this.addChild(this._bar = new Image());
-            this._bar._bitmap.autoCacheCmd = false;
+            this.addChild(this._bg = new o()), this.addChild(this._bar = new o()), this._bar._bitmap.autoCacheCmd = !1;
         }
         get skin() {
             return this._skin;
         }
-        set skin(value) {
-            if (this._skin != value) {
-                this._skin = value;
-                if (this._skin && !Laya.Loader.getRes(this._skin)) {
-                    Laya.ILaya.loader.load(this._skin, Laya.Handler.create(this, this._skinLoaded), null, Laya.Loader.IMAGE, 1);
-                } else {
-                    this._skinLoaded();
-                }
-            }
+        set skin(t) {
+            this._skin != t && (this._skin = t, this._skin && !e.Loader.getRes(this._skin) ? e.ILaya.loader.load(this._skin, e.Handler.create(this, this._skinLoaded), null, e.Loader.IMAGE, 1) : this._skinLoaded());
         }
         _skinLoaded() {
-            this._bg.skin = this._skin;
-            this._bar.skin = this._skin.replace(".png", "$bar.png");
-            this.callLater(this.changeValue);
-            this._sizeChanged();
-            this.event(Laya.Event.LOADED);
+            this._bg.skin = this._skin, this._bar.skin = this._skin.replace(".png", "$bar.png"), 
+            this.callLater(this.changeValue), this._sizeChanged(), this.event(e.Event.LOADED);
         }
         measureWidth() {
             return this._bg.width;
@@ -3718,27 +2321,15 @@
         get value() {
             return this._value;
         }
-        set value(num) {
-            if (this._value != num) {
-                num = num > 1 ? 1 : num < 0 ? 0 : num;
-                this._value = num;
-                this.callLater(this.changeValue);
-                this.event(Laya.Event.CHANGE);
-                this.changeHandler && this.changeHandler.runWith(num);
-            }
+        set value(t) {
+            this._value != t && (t = t > 1 ? 1 : t < 0 ? 0 : t, this._value = t, this.callLater(this.changeValue), 
+            this.event(e.Event.CHANGE), this.changeHandler && this.changeHandler.runWith(t));
         }
         changeValue() {
             if (this.sizeGrid) {
-                var grid = this.sizeGrid.split(",");
-                var left = Number(grid[3]);
-                var right = Number(grid[1]);
-                var max = this.width - left - right;
-                var sw = max * this._value;
-                this._bar.width = left + right + sw;
-                this._bar.visible = this._bar.width > left + right;
-            } else {
-                this._bar.width = this.width * this._value;
-            }
+                var t = this.sizeGrid.split(","), e = Number(t[3]), s = Number(t[1]), i = (this.width - e - s) * this._value;
+                this._bar.width = e + s + i, this._bar.visible = this._bar.width > e + s;
+            } else this._bar.width = this.width * this._value;
         }
         get bar() {
             return this._bar;
@@ -3749,336 +2340,210 @@
         get sizeGrid() {
             return this._bg.sizeGrid;
         }
-        set sizeGrid(value) {
-            this._bg.sizeGrid = this._bar.sizeGrid = value;
+        set sizeGrid(t) {
+            this._bg.sizeGrid = this._bar.sizeGrid = t;
         }
-        set width(value) {
-            super.width = value;
-            this._bg.width = this._width;
-            this.callLater(this.changeValue);
+        set width(t) {
+            super.width = t, this._bg.width = this._width, this.callLater(this.changeValue);
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this._bg.height = this._height;
-            this._bar.height = this._height;
+        set height(t) {
+            super.height = t, this._bg.height = this._height, this._bar.height = this._height;
         }
         get height() {
             return super.height;
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.value = Number(value);
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.value = Number(t) : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
         }
     }
-    Laya.ILaya.regClass(ProgressBar);
-    Laya.ClassUtils.regClass("laya.ui.ProgressBar", ProgressBar);
-    Laya.ClassUtils.regClass("Laya.ProgressBar", ProgressBar);
-
-    class Radio extends Button {
-        constructor(skin = null, label = "") {
-            super(skin, label);
-            this.toggle = false;
-            this._autoSize = false;
+    e.ILaya.regClass(w), e.ClassUtils.regClass("laya.ui.ProgressBar", w), e.ClassUtils.regClass("Laya.ProgressBar", w);
+    class x extends d {
+        constructor(t = null, e = "") {
+            super(t, e), this.toggle = !1, this._autoSize = !1;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._value = null;
+        destroy(t = !0) {
+            super.destroy(t), this._value = null;
         }
         preinitialize() {
-            super.preinitialize();
-            this.toggle = false;
-            this._autoSize = false;
+            super.preinitialize(), this.toggle = !1, this._autoSize = !1;
         }
         initialize() {
-            super.initialize();
-            this.createText();
-            this._text.align = "left";
-            this._text.valign = "top";
-            this._text.width = 0;
-            this.on(Laya.Event.CLICK, this, this.onClick);
+            super.initialize(), this.createText(), this._text.align = "left", this._text.valign = "top", 
+            this._text.width = 0, this.on(e.Event.CLICK, this, this.onClick);
         }
-        onClick(e) {
-            this.selected = true;
+        onClick(t) {
+            this.selected = !0;
         }
         get value() {
-            return this._value != null ? this._value : this.label;
+            return null != this._value ? this._value : this.label;
         }
-        set value(obj) {
-            this._value = obj;
+        set value(t) {
+            this._value = t;
         }
     }
-    Laya.ILaya.regClass(Radio);
-    Laya.ClassUtils.regClass("laya.ui.Radio", Radio);
-    Laya.ClassUtils.regClass("Laya.Radio", Radio);
-
-    class UIGroup extends Box {
-        constructor(labels = null, skin = null) {
-            super();
-            this._selectedIndex = -1;
-            this._direction = "horizontal";
-            this._space = 0;
-            this.skin = skin;
-            this.labels = labels;
+    e.ILaya.regClass(x), e.ClassUtils.regClass("laya.ui.Radio", x), e.ClassUtils.regClass("Laya.Radio", x);
+    class L extends c {
+        constructor(t = null, e = null) {
+            super(), this._selectedIndex = -1, this._direction = "horizontal", this._space = 0, 
+            this.skin = e, this.labels = t;
         }
         preinitialize() {
-            this.mouseEnabled = true;
+            this.mouseEnabled = !0;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._items && (this._items.length = 0);
-            this._items = null;
-            this.selectHandler = null;
+        destroy(t = !0) {
+            super.destroy(t), this._items && (this._items.length = 0), this._items = null, this.selectHandler = null;
         }
-        addItem(item, autoLayOut = true) {
-            var display = item;
-            var index = this._items.length;
-            display.name = "item" + index;
-            this.addChild(display);
-            this.initItems();
-            if (autoLayOut && index > 0) {
-                var preItem = this._items[index - 1];
-                if (this._direction == "horizontal") {
-                    display.x = preItem._x + preItem.width + this._space;
-                } else {
-                    display.y = preItem._y + preItem.height + this._space;
-                }
-            } else {
-                if (autoLayOut) {
-                    display.x = 0;
-                    display.y = 0;
-                }
-            }
-            return index;
+        addItem(t, e = !0) {
+            var s = t, i = this._items.length;
+            if (s.name = "item" + i, this.addChild(s), this.initItems(), e && i > 0) {
+                var h = this._items[i - 1];
+                "horizontal" == this._direction ? s.x = h._x + h.width + this._space : s.y = h._y + h.height + this._space;
+            } else e && (s.x = 0, s.y = 0);
+            return i;
         }
-        delItem(item, autoLayOut = true) {
-            var index = this._items.indexOf(item);
-            if (index != -1) {
-                var display = item;
-                this.removeChild(display);
-                for (var i = index + 1, n = this._items.length; i < n; i++) {
-                    var child = this._items[i];
-                    child.name = "item" + (i - 1);
-                    if (autoLayOut) {
-                        if (this._direction == "horizontal") {
-                            child.x -= display.width + this._space;
-                        } else {
-                            child.y -= display.height + this._space;
-                        }
-                    }
+        delItem(t, e = !0) {
+            var s = this._items.indexOf(t);
+            if (-1 != s) {
+                var i, h = t;
+                this.removeChild(h);
+                for (var a = s + 1, r = this._items.length; a < r; a++) {
+                    var l = this._items[a];
+                    l.name = "item" + (a - 1), e && ("horizontal" == this._direction ? l.x -= h.width + this._space : l.y -= h.height + this._space);
                 }
-                this.initItems();
-                if (this._selectedIndex > -1) {
-                    var newIndex;
-                    newIndex = this._selectedIndex < this._items.length ? this._selectedIndex : (this._selectedIndex - 1);
-                    this._selectedIndex = -1;
-                    this.selectedIndex = newIndex;
-                }
+                if (this.initItems(), this._selectedIndex > -1) i = this._selectedIndex < this._items.length ? this._selectedIndex : this._selectedIndex - 1, 
+                this._selectedIndex = -1, this.selectedIndex = i;
             }
         }
         _afterInited() {
             this.initItems();
         }
         initItems() {
-            this._items || (this._items = []);
-            this._items.length = 0;
-            for (var i = 0; i < 10000; i++) {
-                var item = this.getChildByName("item" + i);
-                if (item == null)
-                    break;
-                this._items.push(item);
-                item.selected = (i === this._selectedIndex);
-                item.clickHandler = Laya.Handler.create(this, this.itemClick, [i], false);
+            this._items || (this._items = []), this._items.length = 0;
+            for (var t = 0; t < 1e4; t++) {
+                var s = this.getChildByName("item" + t);
+                if (null == s) break;
+                this._items.push(s), s.selected = t === this._selectedIndex, s.clickHandler = e.Handler.create(this, this.itemClick, [ t ], !1);
             }
         }
-        itemClick(index) {
-            this.selectedIndex = index;
+        itemClick(t) {
+            this.selectedIndex = t;
         }
         get selectedIndex() {
             return this._selectedIndex;
         }
-        set selectedIndex(value) {
-            if (this._selectedIndex != value) {
-                this.setSelect(this._selectedIndex, false);
-                this._selectedIndex = value;
-                this.setSelect(value, true);
-                this.event(Laya.Event.CHANGE);
-                this.selectHandler && this.selectHandler.runWith(this._selectedIndex);
-            }
+        set selectedIndex(t) {
+            this._selectedIndex != t && (this.setSelect(this._selectedIndex, !1), this._selectedIndex = t, 
+            this.setSelect(t, !0), this.event(e.Event.CHANGE), this.selectHandler && this.selectHandler.runWith(this._selectedIndex));
         }
-        setSelect(index, selected) {
-            if (this._items && index > -1 && index < this._items.length)
-                this._items[index].selected = selected;
+        setSelect(t, e) {
+            this._items && t > -1 && t < this._items.length && (this._items[t].selected = e);
         }
         get skin() {
             return this._skin;
         }
-        set skin(value) {
-            if (this._skin != value) {
-                this._skin = value;
-                if (this._skin && !Laya.Loader.getRes(this._skin)) {
-                    Laya.ILaya.loader.load(this._skin, Laya.Handler.create(this, this._skinLoaded), null, Laya.Loader.IMAGE, 1);
-                } else {
-                    this._skinLoaded();
-                }
-            }
+        set skin(t) {
+            this._skin != t && (this._skin = t, this._skin && !e.Loader.getRes(this._skin) ? e.ILaya.loader.load(this._skin, e.Handler.create(this, this._skinLoaded), null, e.Loader.IMAGE, 1) : this._skinLoaded());
         }
         _skinLoaded() {
-            this._setLabelChanged();
-            this.event(Laya.Event.LOADED);
+            this._setLabelChanged(), this.event(e.Event.LOADED);
         }
         get labels() {
             return this._labels;
         }
-        set labels(value) {
-            if (this._labels != value) {
-                this._labels = value;
-                this.removeChildren();
-                this._setLabelChanged();
-                if (this._labels) {
-                    var a = this._labels.split(",");
-                    for (var i = 0, n = a.length; i < n; i++) {
-                        var item = this.createItem(this._skin, a[i]);
-                        item.name = "item" + i;
-                        this.addChild(item);
-                    }
+        set labels(t) {
+            if (this._labels != t) {
+                if (this._labels = t, this.removeChildren(), this._setLabelChanged(), this._labels) for (var e = this._labels.split(","), s = 0, i = e.length; s < i; s++) {
+                    var h = this.createItem(this._skin, e[s]);
+                    h.name = "item" + s, this.addChild(h);
                 }
                 this.initItems();
             }
         }
-        createItem(skin, label) {
+        createItem(t, e) {
             return null;
         }
         get labelColors() {
             return this._labelColors;
         }
-        set labelColors(value) {
-            if (this._labelColors != value) {
-                this._labelColors = value;
-                this._setLabelChanged();
-            }
+        set labelColors(t) {
+            this._labelColors != t && (this._labelColors = t, this._setLabelChanged());
         }
         get labelStroke() {
             return this._labelStroke;
         }
-        set labelStroke(value) {
-            if (this._labelStroke != value) {
-                this._labelStroke = value;
-                this._setLabelChanged();
-            }
+        set labelStroke(t) {
+            this._labelStroke != t && (this._labelStroke = t, this._setLabelChanged());
         }
         get labelStrokeColor() {
             return this._labelStrokeColor;
         }
-        set labelStrokeColor(value) {
-            if (this._labelStrokeColor != value) {
-                this._labelStrokeColor = value;
-                this._setLabelChanged();
-            }
+        set labelStrokeColor(t) {
+            this._labelStrokeColor != t && (this._labelStrokeColor = t, this._setLabelChanged());
         }
         get strokeColors() {
             return this._strokeColors;
         }
-        set strokeColors(value) {
-            if (this._strokeColors != value) {
-                this._strokeColors = value;
-                this._setLabelChanged();
-            }
+        set strokeColors(t) {
+            this._strokeColors != t && (this._strokeColors = t, this._setLabelChanged());
         }
         get labelSize() {
             return this._labelSize;
         }
-        set labelSize(value) {
-            if (this._labelSize != value) {
-                this._labelSize = value;
-                this._setLabelChanged();
-            }
+        set labelSize(t) {
+            this._labelSize != t && (this._labelSize = t, this._setLabelChanged());
         }
         get stateNum() {
             return this._stateNum;
         }
-        set stateNum(value) {
-            if (this._stateNum != value) {
-                this._stateNum = value;
-                this._setLabelChanged();
-            }
+        set stateNum(t) {
+            this._stateNum != t && (this._stateNum = t, this._setLabelChanged());
         }
         get labelBold() {
             return this._labelBold;
         }
-        set labelBold(value) {
-            if (this._labelBold != value) {
-                this._labelBold = value;
-                this._setLabelChanged();
-            }
+        set labelBold(t) {
+            this._labelBold != t && (this._labelBold = t, this._setLabelChanged());
         }
         get labelFont() {
             return this._labelFont;
         }
-        set labelFont(value) {
-            if (this._labelFont != value) {
-                this._labelFont = value;
-                this._setLabelChanged();
-            }
+        set labelFont(t) {
+            this._labelFont != t && (this._labelFont = t, this._setLabelChanged());
         }
         get labelPadding() {
             return this._labelPadding;
         }
-        set labelPadding(value) {
-            if (this._labelPadding != value) {
-                this._labelPadding = value;
-                this._setLabelChanged();
-            }
+        set labelPadding(t) {
+            this._labelPadding != t && (this._labelPadding = t, this._setLabelChanged());
         }
         get direction() {
             return this._direction;
         }
-        set direction(value) {
-            this._direction = value;
-            this._setLabelChanged();
+        set direction(t) {
+            this._direction = t, this._setLabelChanged();
         }
         get space() {
             return this._space;
         }
-        set space(value) {
-            this._space = value;
-            this._setLabelChanged();
+        set space(t) {
+            this._space = t, this._setLabelChanged();
         }
         changeLabels() {
-            this._labelChanged = false;
-            if (this._items) {
-                var left = 0;
-                for (var i = 0, n = this._items.length; i < n; i++) {
-                    var btn = this._items[i];
-                    this._skin && (btn.skin = this._skin);
-                    this._labelColors && (btn.labelColors = this._labelColors);
-                    this._labelSize && (btn.labelSize = this._labelSize);
-                    this._labelStroke && (btn.labelStroke = this._labelStroke);
-                    this._labelStrokeColor && (btn.labelStrokeColor = this._labelStrokeColor);
-                    this._strokeColors && (btn.strokeColors = this._strokeColors);
-                    this._labelBold && (btn.labelBold = this._labelBold);
-                    this._labelPadding && (btn.labelPadding = this._labelPadding);
-                    this._labelAlign && (btn.labelAlign = this._labelAlign);
-                    this._stateNum && (btn.stateNum = this._stateNum);
-                    this._labelFont && (btn.labelFont = this._labelFont);
-                    if (this._direction === "horizontal") {
-                        btn.y = 0;
-                        btn.x = left;
-                        left += btn.width + this._space;
-                    } else {
-                        btn.x = 0;
-                        btn.y = left;
-                        left += btn.height + this._space;
-                    }
-                }
+            if (this._labelChanged = !1, this._items) for (var t = 0, e = 0, s = this._items.length; e < s; e++) {
+                var i = this._items[e];
+                this._skin && (i.skin = this._skin), this._labelColors && (i.labelColors = this._labelColors), 
+                this._labelSize && (i.labelSize = this._labelSize), this._labelStroke && (i.labelStroke = this._labelStroke), 
+                this._labelStrokeColor && (i.labelStrokeColor = this._labelStrokeColor), this._strokeColors && (i.strokeColors = this._strokeColors), 
+                this._labelBold && (i.labelBold = this._labelBold), this._labelPadding && (i.labelPadding = this._labelPadding), 
+                this._labelAlign && (i.labelAlign = this._labelAlign), this._stateNum && (i.stateNum = this._stateNum), 
+                this._labelFont && (i.labelFont = this._labelFont), "horizontal" === this._direction ? (i.y = 0, 
+                i.x = t, t += i.width + this._space) : (i.x = 0, i.y = t, t += i.height + this._space);
             }
             this._sizeChanged();
         }
@@ -4091,232 +2556,161 @@
         get selection() {
             return this._selectedIndex > -1 && this._selectedIndex < this._items.length ? this._items[this._selectedIndex] : null;
         }
-        set selection(value) {
-            this.selectedIndex = this._items.indexOf(value);
+        set selection(t) {
+            this.selectedIndex = this._items.indexOf(t);
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string')
-                this.selectedIndex = parseInt(value);
-            else if (value instanceof Array)
-                this.labels = value.join(",");
-            else
-                super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, "number" == typeof t || "string" == typeof t ? this.selectedIndex = parseInt(t) : t instanceof Array ? this.labels = t.join(",") : super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
         }
         _setLabelChanged() {
-            if (!this._labelChanged) {
-                this._labelChanged = true;
-                this.callLater(this.changeLabels);
-            }
+            this._labelChanged || (this._labelChanged = !0, this.callLater(this.changeLabels));
         }
     }
-    Laya.ILaya.regClass(UIGroup);
-    Laya.ClassUtils.regClass("laya.ui.UIGroup", UIGroup);
-    Laya.ClassUtils.regClass("Laya.UIGroup", UIGroup);
-
-    class RadioGroup extends UIGroup {
-        createItem(skin, label) {
-            return new Radio(skin, label);
+    e.ILaya.regClass(L), e.ClassUtils.regClass("laya.ui.UIGroup", L), e.ClassUtils.regClass("Laya.UIGroup", L);
+    class E extends L {
+        createItem(t, e) {
+            return new x(t, e);
         }
     }
-    Laya.ILaya.regClass(RadioGroup);
-    Laya.ClassUtils.regClass("laya.ui.RadioGroup", RadioGroup);
-    Laya.ClassUtils.regClass("Laya.RadioGroup", RadioGroup);
-
-    class Tab extends UIGroup {
-        createItem(skin, label) {
-            return new Button(skin, label);
+    e.ILaya.regClass(E), e.ClassUtils.regClass("laya.ui.RadioGroup", E), e.ClassUtils.regClass("Laya.RadioGroup", E);
+    class I extends L {
+        createItem(t, e) {
+            return new d(t, e);
         }
     }
-    Laya.ILaya.regClass(Tab);
-    Laya.ClassUtils.regClass("laya.ui.Tab", Tab);
-    Laya.ClassUtils.regClass("Laya.Tab", Tab);
-
-    class ViewStack extends Box {
+    e.ILaya.regClass(I), e.ClassUtils.regClass("laya.ui.Tab", I), e.ClassUtils.regClass("Laya.Tab", I);
+    class B extends c {
         constructor() {
-            super(...arguments);
-            this._setIndexHandler = Laya.Handler.create(this, this.setIndex, null, false);
+            super(...arguments), this._setIndexHandler = e.Handler.create(this, this.setIndex, null, !1);
         }
-        setItems(views) {
+        setItems(t) {
             this.removeChildren();
-            var index = 0;
-            for (var i = 0, n = views.length; i < n; i++) {
-                var item = views[i];
-                if (item) {
-                    item.name = "item" + index;
-                    this.addChild(item);
-                    index++;
-                }
+            for (var e = 0, s = 0, i = t.length; s < i; s++) {
+                var h = t[s];
+                h && (h.name = "item" + e, this.addChild(h), e++);
             }
             this.initItems();
         }
-        addItem(view) {
-            view.name = "item" + this._items.length;
-            this.addChild(view);
-            this.initItems();
+        addItem(t) {
+            t.name = "item" + this._items.length, this.addChild(t), this.initItems();
         }
         _afterInited() {
             this.initItems();
         }
         initItems() {
             this._items = [];
-            for (var i = 0; i < 10000; i++) {
-                var item = this.getChildByName("item" + i);
-                if (item == null) {
-                    break;
-                }
-                this._items.push(item);
-                item.visible = (i == this._selectedIndex);
+            for (var t = 0; t < 1e4; t++) {
+                var e = this.getChildByName("item" + t);
+                if (null == e) break;
+                this._items.push(e), e.visible = t == this._selectedIndex;
             }
         }
         get selectedIndex() {
             return this._selectedIndex;
         }
-        set selectedIndex(value) {
-            if (this._selectedIndex != value) {
-                this.setSelect(this._selectedIndex, false);
-                this._selectedIndex = value;
-                this.setSelect(this._selectedIndex, true);
-            }
+        set selectedIndex(t) {
+            this._selectedIndex != t && (this.setSelect(this._selectedIndex, !1), this._selectedIndex = t, 
+            this.setSelect(this._selectedIndex, !0));
         }
-        setSelect(index, selected) {
-            if (this._items && index > -1 && index < this._items.length) {
-                this._items[index].visible = selected;
-            }
+        setSelect(t, e) {
+            this._items && t > -1 && t < this._items.length && (this._items[t].visible = e);
         }
         get selection() {
             return this._selectedIndex > -1 && this._selectedIndex < this._items.length ? this._items[this._selectedIndex] : null;
         }
-        set selection(value) {
-            this.selectedIndex = this._items.indexOf(value);
+        set selection(t) {
+            this.selectedIndex = this._items.indexOf(t);
         }
         get setIndexHandler() {
             return this._setIndexHandler;
         }
-        set setIndexHandler(value) {
-            this._setIndexHandler = value;
+        set setIndexHandler(t) {
+            this._setIndexHandler = t;
         }
-        setIndex(index) {
-            this.selectedIndex = index;
+        setIndex(t) {
+            this.selectedIndex = t;
         }
         get items() {
             return this._items;
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            if (typeof(value) == 'number' || typeof(value) == 'string') {
-                this.selectedIndex = parseInt(value);
-            } else {
-                for (var prop in this._dataSource) {
-                    if (prop in this) {
-                        this[prop] = this._dataSource[prop];
-                    }
-                }
-            }
+        set dataSource(t) {
+            if (this._dataSource = t, "number" == typeof t || "string" == typeof t) this.selectedIndex = parseInt(t); else for (var e in this._dataSource) e in this && (this[e] = this._dataSource[e]);
         }
         get dataSource() {
             return super.dataSource;
         }
     }
-    Laya.ILaya.regClass(ViewStack);
-    Laya.ClassUtils.regClass("laya.ui.ViewStack", ViewStack);
-    Laya.ClassUtils.regClass("Laya.ViewStack", ViewStack);
-
-    class TextInput extends Label {
-        constructor(text = "") {
-            super();
-            this.text = text;
-            this.skin = this.skin;
+    e.ILaya.regClass(B), e.ClassUtils.regClass("laya.ui.ViewStack", B), e.ClassUtils.regClass("Laya.ViewStack", B);
+    class k extends C {
+        constructor(t = "") {
+            super(), this.text = t, this.skin = this.skin;
         }
         preinitialize() {
-            this.mouseEnabled = true;
+            this.mouseEnabled = !0;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._bg && this._bg.destroy();
-            this._bg = null;
+        destroy(t = !0) {
+            super.destroy(t), this._bg && this._bg.destroy(), this._bg = null;
         }
         createChildren() {
-            this.addChild(this._tf = new Laya.Input());
-            this._tf.padding = Styles.inputLabelPadding;
-            this._tf.on(Laya.Event.INPUT, this, this._onInput);
-            this._tf.on(Laya.Event.ENTER, this, this._onEnter);
-            this._tf.on(Laya.Event.BLUR, this, this._onBlur);
-            this._tf.on(Laya.Event.FOCUS, this, this._onFocus);
+            this.addChild(this._tf = new e.Input()), this._tf.padding = i.inputLabelPadding, 
+            this._tf.on(e.Event.INPUT, this, this._onInput), this._tf.on(e.Event.ENTER, this, this._onEnter), 
+            this._tf.on(e.Event.BLUR, this, this._onBlur), this._tf.on(e.Event.FOCUS, this, this._onFocus);
         }
         _onFocus() {
-            this.event(Laya.Event.FOCUS, this);
+            this.event(e.Event.FOCUS, this);
         }
         _onBlur() {
-            this.event(Laya.Event.BLUR, this);
+            this.event(e.Event.BLUR, this);
         }
         _onInput() {
-            this.event(Laya.Event.INPUT, this);
+            this.event(e.Event.INPUT, this);
         }
         _onEnter() {
-            this.event(Laya.Event.ENTER, this);
+            this.event(e.Event.ENTER, this);
         }
         initialize() {
-            this.width = 128;
-            this.height = 22;
+            this.width = 128, this.height = 22;
         }
         get bg() {
             return this._bg;
         }
-        set bg(value) {
-            this.graphics = this._bg = value;
+        set bg(t) {
+            this.graphics = this._bg = t;
         }
         get skin() {
             return this._skin;
         }
-        set skin(value) {
-            if (this._skin != value) {
-                this._skin = value;
-                if (this._skin && !Laya.Loader.getRes(this._skin)) {
-                    Laya.ILaya.loader.load(this._skin, Laya.Handler.create(this, this._skinLoaded), null, Laya.Loader.IMAGE, 1);
-                } else {
-                    this._skinLoaded();
-                }
-            }
+        set skin(t) {
+            this._skin != t && (this._skin = t, this._skin && !e.Loader.getRes(this._skin) ? e.ILaya.loader.load(this._skin, e.Handler.create(this, this._skinLoaded), null, e.Loader.IMAGE, 1) : this._skinLoaded());
         }
         _skinLoaded() {
-            this._bg || (this.graphics = this._bg = new AutoBitmap());
-            this._bg.source = Laya.Loader.getRes(this._skin);
-            this._width && (this._bg.width = this._width);
-            this._height && (this._bg.height = this._height);
-            this._sizeChanged();
-            this.event(Laya.Event.LOADED);
+            this._bg || (this.graphics = this._bg = new h()), this._bg.source = e.Loader.getRes(this._skin), 
+            this._width && (this._bg.width = this._width), this._height && (this._bg.height = this._height), 
+            this._sizeChanged(), this.event(e.Event.LOADED);
         }
         get sizeGrid() {
             return this._bg && this._bg.sizeGrid ? this._bg.sizeGrid.join(",") : null;
         }
-        set sizeGrid(value) {
-            this._bg || (this.graphics = this._bg = new AutoBitmap());
-            this._bg.sizeGrid = UIUtils.fillArray(Styles.defaultSizeGrid, value, Number);
+        set sizeGrid(t) {
+            this._bg || (this.graphics = this._bg = new h()), this._bg.sizeGrid = l.fillArray(i.defaultSizeGrid, t, Number);
         }
-        set text(value) {
-            if (this._tf.text != value) {
-                value = value + "";
-                this._tf.text = value;
-                this.event(Laya.Event.CHANGE);
-            }
+        set text(t) {
+            this._tf.text != t && (t += "", this._tf.text = t, this.event(e.Event.CHANGE));
         }
         get text() {
             return super.text;
         }
-        set width(value) {
-            super.width = value;
-            this._bg && (this._bg.width = value);
+        set width(t) {
+            super.width = t, this._bg && (this._bg.width = t);
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this._bg && (this._bg.height = value);
+        set height(t) {
+            super.height = t, this._bg && (this._bg.height = t);
         }
         get height() {
             return super.height;
@@ -4324,11 +2718,11 @@
         get multiline() {
             return this._tf.multiline;
         }
-        set multiline(value) {
-            this._tf.multiline = value;
+        set multiline(t) {
+            this._tf.multiline = t;
         }
-        set editable(value) {
-            this._tf.editable = value;
+        set editable(t) {
+            this._tf.editable = t;
         }
         get editable() {
             return this._tf.editable;
@@ -4339,78 +2733,66 @@
         get restrict() {
             return this._tf.restrict;
         }
-        set restrict(pattern) {
-            this._tf.restrict = pattern;
+        set restrict(t) {
+            this._tf.restrict = t;
         }
         get prompt() {
             return this._tf.prompt;
         }
-        set prompt(value) {
-            this._tf.prompt = value;
+        set prompt(t) {
+            this._tf.prompt = t;
         }
         get promptColor() {
             return this._tf.promptColor;
         }
-        set promptColor(value) {
-            this._tf.promptColor = value;
+        set promptColor(t) {
+            this._tf.promptColor = t;
         }
         get maxChars() {
             return this._tf.maxChars;
         }
-        set maxChars(value) {
-            this._tf.maxChars = value;
+        set maxChars(t) {
+            this._tf.maxChars = t;
         }
         get focus() {
             return this._tf.focus;
         }
-        set focus(value) {
-            this._tf.focus = value;
+        set focus(t) {
+            this._tf.focus = t;
         }
         get type() {
             return this._tf.type;
         }
-        set type(value) {
-            this._tf.type = value;
+        set type(t) {
+            this._tf.type = t;
         }
-        setSelection(startIndex, endIndex) {
-            this._tf.setSelection(startIndex, endIndex);
+        setSelection(t, e) {
+            this._tf.setSelection(t, e);
         }
     }
-    Laya.ILaya.regClass(TextInput);
-    Laya.ClassUtils.regClass("laya.ui.TextInput", TextInput);
-    Laya.ClassUtils.regClass("Laya.TextInput", TextInput);
-
-    class TextArea extends TextInput {
-        constructor(text = "") {
-            super(text);
-            this.on(Laya.Event.CHANGE, this, this._onTextChange);
+    e.ILaya.regClass(k), e.ClassUtils.regClass("laya.ui.TextInput", k), e.ClassUtils.regClass("Laya.TextInput", k);
+    class M extends k {
+        constructor(t = "") {
+            super(t), this.on(e.Event.CHANGE, this, this._onTextChange);
         }
         _onTextChange() {
             this.callLater(this.changeScroll);
         }
-        destroy(destroyChild = true) {
-            this._vScrollBar && this._vScrollBar.destroy();
-            this._hScrollBar && this._hScrollBar.destroy();
-            this._vScrollBar = null;
-            this._hScrollBar = null;
-            super.destroy(destroyChild);
+        destroy(t = !0) {
+            this._vScrollBar && this._vScrollBar.destroy(), this._hScrollBar && this._hScrollBar.destroy(), 
+            this._vScrollBar = null, this._hScrollBar = null, super.destroy(t);
         }
         initialize() {
-            this.width = 180;
-            this.height = 150;
-            this._tf.wordWrap = true;
-            this.multiline = true;
+            this.width = 180, this.height = 150, this._tf.wordWrap = !0, this.multiline = !0;
         }
-        set width(value) {
-            super.width = value;
-            this.callLater(this.changeScroll);
+        set width(t) {
+            super.width = t, this.callLater(this.changeScroll);
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this.callLater(this.changeScroll);
+        set height(t) {
+            super.height = t, this.callLater(this.changeScroll);
         }
         get height() {
             return super.height;
@@ -4418,37 +2800,23 @@
         get vScrollBarSkin() {
             return this._vScrollBar ? this._vScrollBar.skin : null;
         }
-        set vScrollBarSkin(value) {
-            if (this._vScrollBar == null) {
-                this.addChild(this._vScrollBar = new VScrollBar());
-                this._vScrollBar.on(Laya.Event.CHANGE, this, this.onVBarChanged);
-                this._vScrollBar.target = this._tf;
-                this.callLater(this.changeScroll);
-            }
-            this._vScrollBar.skin = value;
+        set vScrollBarSkin(t) {
+            null == this._vScrollBar && (this.addChild(this._vScrollBar = new f()), this._vScrollBar.on(e.Event.CHANGE, this, this.onVBarChanged), 
+            this._vScrollBar.target = this._tf, this.callLater(this.changeScroll)), this._vScrollBar.skin = t;
         }
         get hScrollBarSkin() {
             return this._hScrollBar ? this._hScrollBar.skin : null;
         }
-        set hScrollBarSkin(value) {
-            if (this._hScrollBar == null) {
-                this.addChild(this._hScrollBar = new HScrollBar());
-                this._hScrollBar.on(Laya.Event.CHANGE, this, this.onHBarChanged);
-                this._hScrollBar.mouseWheelEnable = false;
-                this._hScrollBar.target = this._tf;
-                this.callLater(this.changeScroll);
-            }
-            this._hScrollBar.skin = value;
+        set hScrollBarSkin(t) {
+            null == this._hScrollBar && (this.addChild(this._hScrollBar = new S()), this._hScrollBar.on(e.Event.CHANGE, this, this.onHBarChanged), 
+            this._hScrollBar.mouseWheelEnable = !1, this._hScrollBar.target = this._tf, this.callLater(this.changeScroll)), 
+            this._hScrollBar.skin = t;
         }
-        onVBarChanged(e) {
-            if (this._tf.scrollY != this._vScrollBar.value) {
-                this._tf.scrollY = this._vScrollBar.value;
-            }
+        onVBarChanged(t) {
+            this._tf.scrollY != this._vScrollBar.value && (this._tf.scrollY = this._vScrollBar.value);
         }
-        onHBarChanged(e) {
-            if (this._tf.scrollX != this._hScrollBar.value) {
-                this._tf.scrollX = this._hScrollBar.value;
-            }
+        onHBarChanged(t) {
+            this._tf.scrollX != this._hScrollBar.value && (this._tf.scrollX = this._hScrollBar.value);
         }
         get vScrollBar() {
             return this._vScrollBar;
@@ -4469,219 +2837,142 @@
             return this._tf.scrollX;
         }
         changeScroll() {
-            var vShow = this._vScrollBar && this._tf.maxScrollY > 0;
-            var hShow = this._hScrollBar && this._tf.maxScrollX > 0;
-            var showWidth = vShow ? this._width - this._vScrollBar.width : this._width;
-            var showHeight = hShow ? this._height - this._hScrollBar.height : this._height;
-            var padding = this._tf.padding || Styles.labelPadding;
-            this._tf.width = showWidth;
-            this._tf.height = showHeight;
-            if (this._vScrollBar) {
-                this._vScrollBar.x = this._width - this._vScrollBar.width - padding[2];
-                this._vScrollBar.y = padding[1];
-                this._vScrollBar.height = this._height - (hShow ? this._hScrollBar.height : 0) - padding[1] - padding[3];
-                this._vScrollBar.scrollSize = 1;
-                this._vScrollBar.thumbPercent = showHeight / Math.max(this._tf.textHeight, showHeight);
-                this._vScrollBar.setScroll(1, this._tf.maxScrollY, this._tf.scrollY);
-                this._vScrollBar.visible = vShow;
-            }
-            if (this._hScrollBar) {
-                this._hScrollBar.x = padding[0];
-                this._hScrollBar.y = this._height - this._hScrollBar.height - padding[3];
-                this._hScrollBar.width = this._width - (vShow ? this._vScrollBar.width : 0) - padding[0] - padding[2];
-                this._hScrollBar.scrollSize = Math.max(showWidth * 0.033, 1);
-                this._hScrollBar.thumbPercent = showWidth / Math.max(this._tf.textWidth, showWidth);
-                this._hScrollBar.setScroll(0, this.maxScrollX, this.scrollX);
-                this._hScrollBar.visible = hShow;
-            }
+            var t = this._vScrollBar && this._tf.maxScrollY > 0, e = this._hScrollBar && this._tf.maxScrollX > 0, s = t ? this._width - this._vScrollBar.width : this._width, h = e ? this._height - this._hScrollBar.height : this._height, a = this._tf.padding || i.labelPadding;
+            this._tf.width = s, this._tf.height = h, this._vScrollBar && (this._vScrollBar.x = this._width - this._vScrollBar.width - a[2], 
+            this._vScrollBar.y = a[1], this._vScrollBar.height = this._height - (e ? this._hScrollBar.height : 0) - a[1] - a[3], 
+            this._vScrollBar.scrollSize = 1, this._vScrollBar.thumbPercent = h / Math.max(this._tf.textHeight, h), 
+            this._vScrollBar.setScroll(1, this._tf.maxScrollY, this._tf.scrollY), this._vScrollBar.visible = t), 
+            this._hScrollBar && (this._hScrollBar.x = a[0], this._hScrollBar.y = this._height - this._hScrollBar.height - a[3], 
+            this._hScrollBar.width = this._width - (t ? this._vScrollBar.width : 0) - a[0] - a[2], 
+            this._hScrollBar.scrollSize = Math.max(.033 * s, 1), this._hScrollBar.thumbPercent = s / Math.max(this._tf.textWidth, s), 
+            this._hScrollBar.setScroll(0, this.maxScrollX, this.scrollX), this._hScrollBar.visible = e);
         }
-        scrollTo(y) {
-            this.commitMeasure();
-            this._tf.scrollY = y;
+        scrollTo(t) {
+            this.commitMeasure(), this._tf.scrollY = t;
         }
     }
-    Laya.ILaya.regClass(TextArea);
-    Laya.ClassUtils.regClass("laya.ui.TextArea", TextArea);
-    Laya.ClassUtils.regClass("Laya.TextArea", TextArea);
-
-    class ScaleBox extends Box {
+    e.ILaya.regClass(M), e.ClassUtils.regClass("laya.ui.TextArea", M), e.ClassUtils.regClass("Laya.TextArea", M);
+    class O extends c {
         constructor() {
-            super(...arguments);
-            this._oldW = 0;
-            this._oldH = 0;
+            super(...arguments), this._oldW = 0, this._oldH = 0;
         }
         onEnable() {
-            Laya.ILaya.stage.on("resize", this, this.onResize);
-            this.onResize();
+            e.ILaya.stage.on("resize", this, this.onResize), this.onResize();
         }
         onDisable() {
-            Laya.ILaya.stage.off("resize", this, this.onResize);
+            e.ILaya.stage.off("resize", this, this.onResize);
         }
         onResize() {
-            let stage = Laya.ILaya.stage;
+            let t = e.ILaya.stage;
             if (this.width > 0 && this.height > 0) {
-                var scale = Math.min(stage.width / this._oldW, stage.height / this._oldH);
-                super.width = stage.width;
-                super.height = stage.height;
-                this.scale(scale, scale);
+                var s = Math.min(t.width / this._oldW, t.height / this._oldH);
+                super.width = t.width, super.height = t.height, this.scale(s, s);
             }
         }
-        set width(value) {
-            super.width = value;
-            this._oldW = value;
+        set width(t) {
+            super.width = t, this._oldW = t;
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this._oldH = value;
+        set height(t) {
+            super.height = t, this._oldH = t;
         }
         get height() {
             return super.height;
         }
     }
-    Laya.ILaya.regClass(ScaleBox);
-    Laya.ClassUtils.regClass("laya.ui.ScaleBox", ScaleBox);
-    Laya.ClassUtils.regClass("Laya.ScaleBox", ScaleBox);
-
-    class HSlider extends Slider {
-        constructor(skin = null) {
-            super(skin);
-            this.isVertical = false;
+    e.ILaya.regClass(O), e.ClassUtils.regClass("laya.ui.ScaleBox", O), e.ClassUtils.regClass("Laya.ScaleBox", O);
+    class T extends v {
+        constructor(t = null) {
+            super(t), this.isVertical = !1;
         }
     }
-    Laya.ILaya.regClass(HSlider);
-    Laya.ClassUtils.regClass("laya.ui.HSlider", HSlider);
-    Laya.ClassUtils.regClass("Laya.HSlider", HSlider);
-
-    class Panel extends Box {
+    e.ILaya.regClass(T), e.ClassUtils.regClass("laya.ui.HSlider", T), e.ClassUtils.regClass("Laya.HSlider", T);
+    class z extends c {
         constructor() {
-            super();
-            this._usedCache = null;
-            this._elasticEnabled = false;
-            this.width = this.height = 100;
+            super(), this._usedCache = null, this._elasticEnabled = !1, this.width = this.height = 100;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._content && this._content.destroy(destroyChild);
-            this._vScrollBar && this._vScrollBar.destroy(destroyChild);
-            this._hScrollBar && this._hScrollBar.destroy(destroyChild);
-            this._vScrollBar = null;
-            this._hScrollBar = null;
+        destroy(t = !0) {
+            super.destroy(t), this._content && this._content.destroy(t), this._vScrollBar && this._vScrollBar.destroy(t), 
+            this._hScrollBar && this._hScrollBar.destroy(t), this._vScrollBar = null, this._hScrollBar = null, 
             this._content = null;
         }
         destroyChildren() {
             this._content.destroyChildren();
         }
         createChildren() {
-            super.addChild(this._content = new Box());
+            super.addChild(this._content = new c());
         }
-        addChild(child) {
-            child.on(Laya.Event.RESIZE, this, this.onResize);
-            this._setScrollChanged();
-            return this._content.addChild(child);
+        addChild(t) {
+            return t.on(e.Event.RESIZE, this, this.onResize), this._setScrollChanged(), this._content.addChild(t);
         }
         onResize() {
             this._setScrollChanged();
         }
-        addChildAt(child, index) {
-            child.on(Laya.Event.RESIZE, this, this.onResize);
-            this._setScrollChanged();
-            return this._content.addChildAt(child, index);
+        addChildAt(t, s) {
+            return t.on(e.Event.RESIZE, this, this.onResize), this._setScrollChanged(), this._content.addChildAt(t, s);
         }
-        removeChild(child) {
-            child.off(Laya.Event.RESIZE, this, this.onResize);
-            this._setScrollChanged();
-            return this._content.removeChild(child);
+        removeChild(t) {
+            return t.off(e.Event.RESIZE, this, this.onResize), this._setScrollChanged(), this._content.removeChild(t);
         }
-        removeChildAt(index) {
-            this.getChildAt(index).off(Laya.Event.RESIZE, this, this.onResize);
-            this._setScrollChanged();
-            return this._content.removeChildAt(index);
+        removeChildAt(t) {
+            return this.getChildAt(t).off(e.Event.RESIZE, this, this.onResize), this._setScrollChanged(), 
+            this._content.removeChildAt(t);
         }
-        removeChildren(beginIndex = 0, endIndex = 0x7fffffff) {
-            this._content.removeChildren(beginIndex, endIndex);
-            this._setScrollChanged();
-            return this;
+        removeChildren(t = 0, e = 2147483647) {
+            return this._content.removeChildren(t, e), this._setScrollChanged(), this;
         }
-        getChildAt(index) {
-            return this._content.getChildAt(index);
+        getChildAt(t) {
+            return this._content.getChildAt(t);
         }
-        getChildByName(name) {
-            return this._content.getChildByName(name);
+        getChildByName(t) {
+            return this._content.getChildByName(t);
         }
-        getChildIndex(child) {
-            return this._content.getChildIndex(child);
+        getChildIndex(t) {
+            return this._content.getChildIndex(t);
         }
         get numChildren() {
             return this._content.numChildren;
         }
         changeScroll() {
-            this._scrollChanged = false;
-            var contentW = this.contentWidth || 1;
-            var contentH = this.contentHeight || 1;
-            var vscroll = this._vScrollBar;
-            var hscroll = this._hScrollBar;
-            var vShow = vscroll && contentH > this._height;
-            var hShow = hscroll && contentW > this._width;
-            var showWidth = vShow ? this._width - vscroll.width : this._width;
-            var showHeight = hShow ? this._height - hscroll.height : this._height;
-            if (vscroll) {
-                vscroll.x = this._width - vscroll.width;
-                vscroll.y = 0;
-                vscroll.height = this._height - (hShow ? hscroll.height : 0);
-                vscroll.scrollSize = Math.max(this._height * 0.033, 1);
-                vscroll.thumbPercent = showHeight / contentH;
-                vscroll.setScroll(0, contentH - showHeight, vscroll.value);
-            }
-            if (hscroll) {
-                hscroll.x = 0;
-                hscroll.y = this._height - hscroll.height;
-                hscroll.width = this._width - (vShow ? vscroll.width : 0);
-                hscroll.scrollSize = Math.max(this._width * 0.033, 1);
-                hscroll.thumbPercent = showWidth / contentW;
-                hscroll.setScroll(0, contentW - showWidth, hscroll.value);
-            }
+            this._scrollChanged = !1;
+            var t = this.contentWidth || 1, e = this.contentHeight || 1, s = this._vScrollBar, i = this._hScrollBar, h = s && e > this._height, a = i && t > this._width, r = h ? this._width - s.width : this._width, l = a ? this._height - i.height : this._height;
+            s && (s.x = this._width - s.width, s.y = 0, s.height = this._height - (a ? i.height : 0), 
+            s.scrollSize = Math.max(.033 * this._height, 1), s.thumbPercent = l / e, s.setScroll(0, e - l, s.value)), 
+            i && (i.x = 0, i.y = this._height - i.height, i.width = this._width - (h ? s.width : 0), 
+            i.scrollSize = Math.max(.033 * this._width, 1), i.thumbPercent = r / t, i.setScroll(0, t - r, i.value));
         }
         _sizeChanged() {
-            super._sizeChanged();
-            this.setContentSize(this._width, this._height);
+            super._sizeChanged(), this.setContentSize(this._width, this._height);
         }
         get contentWidth() {
-            var max = 0;
-            for (var i = this._content.numChildren - 1; i > -1; i--) {
-                var comp = this._content.getChildAt(i);
-                max = Math.max(comp._x + comp.width * comp.scaleX - comp.pivotX, max);
+            for (var t = 0, e = this._content.numChildren - 1; e > -1; e--) {
+                var s = this._content.getChildAt(e);
+                t = Math.max(s._x + s.width * s.scaleX - s.pivotX, t);
             }
-            return max;
+            return t;
         }
         get contentHeight() {
-            var max = 0;
-            for (var i = this._content.numChildren - 1; i > -1; i--) {
-                var comp = this._content.getChildAt(i);
-                max = Math.max(comp._y + comp.height * comp.scaleY - comp.pivotY, max);
+            for (var t = 0, e = this._content.numChildren - 1; e > -1; e--) {
+                var s = this._content.getChildAt(e);
+                t = Math.max(s._y + s.height * s.scaleY - s.pivotY, t);
             }
-            return max;
+            return t;
         }
-        setContentSize(width, height) {
-            var content = this._content;
-            content.width = width;
-            content.height = height;
-            content._style.scrollRect || (content.scrollRect = Laya.Rectangle.create());
-            content._style.scrollRect.setTo(0, 0, width, height);
-            content.scrollRect = content.scrollRect;
+        setContentSize(t, s) {
+            var i = this._content;
+            i.width = t, i.height = s, i._style.scrollRect || (i.scrollRect = e.Rectangle.create()), 
+            i._style.scrollRect.setTo(0, 0, t, s), i.scrollRect = i.scrollRect;
         }
-        set width(value) {
-            super.width = value;
-            this._setScrollChanged();
+        set width(t) {
+            super.width = t, this._setScrollChanged();
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this._setScrollChanged();
+        set height(t) {
+            super.height = t, this._setScrollChanged();
         }
         get height() {
             return super.height;
@@ -4689,28 +2980,18 @@
         get vScrollBarSkin() {
             return this._vScrollBar ? this._vScrollBar.skin : null;
         }
-        set vScrollBarSkin(value) {
-            if (this._vScrollBar == null) {
-                super.addChild(this._vScrollBar = new VScrollBar());
-                this._vScrollBar.on(Laya.Event.CHANGE, this, this.onScrollBarChange, [this._vScrollBar]);
-                this._vScrollBar.target = this._content;
-                this._vScrollBar.elasticDistance = this._elasticEnabled ? 200 : 0;
-                this._setScrollChanged();
-            }
-            this._vScrollBar.skin = value;
+        set vScrollBarSkin(t) {
+            null == this._vScrollBar && (super.addChild(this._vScrollBar = new f()), this._vScrollBar.on(e.Event.CHANGE, this, this.onScrollBarChange, [ this._vScrollBar ]), 
+            this._vScrollBar.target = this._content, this._vScrollBar.elasticDistance = this._elasticEnabled ? 200 : 0, 
+            this._setScrollChanged()), this._vScrollBar.skin = t;
         }
         get hScrollBarSkin() {
             return this._hScrollBar ? this._hScrollBar.skin : null;
         }
-        set hScrollBarSkin(value) {
-            if (this._hScrollBar == null) {
-                super.addChild(this._hScrollBar = new HScrollBar());
-                this._hScrollBar.on(Laya.Event.CHANGE, this, this.onScrollBarChange, [this._hScrollBar]);
-                this._hScrollBar.target = this._content;
-                this._hScrollBar.elasticDistance = this._elasticEnabled ? 200 : 0;
-                this._setScrollChanged();
-            }
-            this._hScrollBar.skin = value;
+        set hScrollBarSkin(t) {
+            null == this._hScrollBar && (super.addChild(this._hScrollBar = new S()), this._hScrollBar.on(e.Event.CHANGE, this, this.onScrollBarChange, [ this._hScrollBar ]), 
+            this._hScrollBar.target = this._content, this._hScrollBar.elasticDistance = this._elasticEnabled ? 200 : 0, 
+            this._setScrollChanged()), this._hScrollBar.skin = t;
         }
         get vScrollBar() {
             return this._vScrollBar;
@@ -4721,33 +3002,23 @@
         get content() {
             return this._content;
         }
-        onScrollBarChange(scrollBar) {
-            var rect = this._content._style.scrollRect;
-            if (rect) {
-                var start = Math.round(scrollBar.value);
-                scrollBar.isVertical ? rect.y = start : rect.x = start;
-                this._content.scrollRect = rect;
+        onScrollBarChange(t) {
+            var e = this._content._style.scrollRect;
+            if (e) {
+                var s = Math.round(t.value);
+                t.isVertical ? e.y = s : e.x = s, this._content.scrollRect = e;
             }
         }
-        scrollTo(x = 0, y = 0) {
-            if (this.vScrollBar)
-                this.vScrollBar.value = y;
-            if (this.hScrollBar)
-                this.hScrollBar.value = x;
+        scrollTo(t = 0, e = 0) {
+            this.vScrollBar && (this.vScrollBar.value = e), this.hScrollBar && (this.hScrollBar.value = t);
         }
         refresh() {
             this.changeScroll();
         }
-        set cacheAs(value) {
-            super.cacheAs = value;
-            this._usedCache = null;
-            if (value !== "none") {
-                this._hScrollBar && this._hScrollBar.on(Laya.Event.START, this, this.onScrollStart);
-                this._vScrollBar && this._vScrollBar.on(Laya.Event.START, this, this.onScrollStart);
-            } else {
-                this._hScrollBar && this._hScrollBar.off(Laya.Event.START, this, this.onScrollStart);
-                this._vScrollBar && this._vScrollBar.off(Laya.Event.START, this, this.onScrollStart);
-            }
+        set cacheAs(t) {
+            super.cacheAs = t, this._usedCache = null, "none" !== t ? (this._hScrollBar && this._hScrollBar.on(e.Event.START, this, this.onScrollStart), 
+            this._vScrollBar && this._vScrollBar.on(e.Event.START, this, this.onScrollStart)) : (this._hScrollBar && this._hScrollBar.off(e.Event.START, this, this.onScrollStart), 
+            this._vScrollBar && this._vScrollBar.off(e.Event.START, this, this.onScrollStart));
         }
         get cacheAs() {
             return super.cacheAs;
@@ -4755,79 +3026,51 @@
         get elasticEnabled() {
             return this._elasticEnabled;
         }
-        set elasticEnabled(value) {
-            this._elasticEnabled = value;
-            if (this._vScrollBar) {
-                this._vScrollBar.elasticDistance = value ? 200 : 0;
-            }
-            if (this._hScrollBar) {
-                this._hScrollBar.elasticDistance = value ? 200 : 0;
-            }
+        set elasticEnabled(t) {
+            this._elasticEnabled = t, this._vScrollBar && (this._vScrollBar.elasticDistance = t ? 200 : 0), 
+            this._hScrollBar && (this._hScrollBar.elasticDistance = t ? 200 : 0);
         }
         onScrollStart() {
-            this._usedCache || (this._usedCache = super.cacheAs);
-            super.cacheAs = "none";
-            this._hScrollBar && this._hScrollBar.once(Laya.Event.END, this, this.onScrollEnd);
-            this._vScrollBar && this._vScrollBar.once(Laya.Event.END, this, this.onScrollEnd);
+            this._usedCache || (this._usedCache = super.cacheAs), super.cacheAs = "none", this._hScrollBar && this._hScrollBar.once(e.Event.END, this, this.onScrollEnd), 
+            this._vScrollBar && this._vScrollBar.once(e.Event.END, this, this.onScrollEnd);
         }
         onScrollEnd() {
             super.cacheAs = this._usedCache;
         }
         _setScrollChanged() {
-            if (!this._scrollChanged) {
-                this._scrollChanged = true;
-                this.callLater(this.changeScroll);
-            }
+            this._scrollChanged || (this._scrollChanged = !0, this.callLater(this.changeScroll));
         }
     }
-    Laya.ILaya.regClass(Panel);
-    Laya.ClassUtils.regClass("laya.ui.Panel", Panel);
-    Laya.ClassUtils.regClass("Laya.Panel", Panel);
-
-    class VSlider extends Slider {}
-    Laya.ILaya.regClass(VSlider);
-    Laya.ClassUtils.regClass("laya.ui.VSlider", VSlider);
-    Laya.ClassUtils.regClass("Laya.VSlider", VSlider);
-
-    class Tree extends Box {
+    e.ILaya.regClass(z), e.ClassUtils.regClass("laya.ui.Panel", z), e.ClassUtils.regClass("Laya.Panel", z);
+    class U extends v {}
+    e.ILaya.regClass(U), e.ClassUtils.regClass("laya.ui.VSlider", U), e.ClassUtils.regClass("Laya.VSlider", U);
+    class D extends c {
         constructor() {
-            super();
-            this._spaceLeft = 10;
-            this._spaceBottom = 0;
-            this._keepStatus = true;
-            this.width = this.height = 200;
+            super(), this._spaceLeft = 10, this._spaceBottom = 0, this._keepStatus = !0, this.width = this.height = 200;
         }
-        destroy(destroyChild = true) {
-            super.destroy(destroyChild);
-            this._list && this._list.destroy(destroyChild);
-            this._list = null;
-            this._source = null;
+        destroy(t = !0) {
+            super.destroy(t), this._list && this._list.destroy(t), this._list = null, this._source = null, 
             this._renderHandler = null;
         }
         createChildren() {
-            this.addChild(this._list = new List());
-            this._list.renderHandler = Laya.Handler.create(this, this.renderItem, null, false);
-            this._list.repeatX = 1;
-            this._list.on(Laya.Event.CHANGE, this, this.onListChange);
+            this.addChild(this._list = new b()), this._list.renderHandler = e.Handler.create(this, this.renderItem, null, !1), 
+            this._list.repeatX = 1, this._list.on(e.Event.CHANGE, this, this.onListChange);
         }
-        onListChange(e = null) {
-            this.event(Laya.Event.CHANGE);
+        onListChange(t = null) {
+            this.event(e.Event.CHANGE);
         }
         get keepStatus() {
             return this._keepStatus;
         }
-        set keepStatus(value) {
-            this._keepStatus = value;
+        set keepStatus(t) {
+            this._keepStatus = t;
         }
         get array() {
             return this._list.array;
         }
-        set array(value) {
-            if (this._keepStatus && this._list.array && value) {
-                this.parseOpenStatus(this._list.array, value);
-            }
-            this._source = value;
-            this._list.array = this.getArray();
+        set array(t) {
+            this._keepStatus && this._list.array && t && this.parseOpenStatus(this._list.array, t), 
+            this._source = t, this._list.array = this.getArray();
         }
         get source() {
             return this._source;
@@ -4838,14 +3081,14 @@
         get itemRender() {
             return this._list.itemRender;
         }
-        set itemRender(value) {
-            this._list.itemRender = value;
+        set itemRender(t) {
+            this._list.itemRender = t;
         }
         get scrollBarSkin() {
             return this._list.vScrollBarSkin;
         }
-        set scrollBarSkin(value) {
-            this._list.vScrollBarSkin = value;
+        set scrollBarSkin(t) {
+            this._list.vScrollBarSkin = t;
         }
         get scrollBar() {
             return this._list.scrollBar;
@@ -4853,403 +3096,248 @@
         get mouseHandler() {
             return this._list.mouseHandler;
         }
-        set mouseHandler(value) {
-            this._list.mouseHandler = value;
+        set mouseHandler(t) {
+            this._list.mouseHandler = t;
         }
         get renderHandler() {
             return this._renderHandler;
         }
-        set renderHandler(value) {
-            this._renderHandler = value;
+        set renderHandler(t) {
+            this._renderHandler = t;
         }
         get spaceLeft() {
             return this._spaceLeft;
         }
-        set spaceLeft(value) {
-            this._spaceLeft = value;
+        set spaceLeft(t) {
+            this._spaceLeft = t;
         }
         get spaceBottom() {
             return this._list.spaceY;
         }
-        set spaceBottom(value) {
-            this._list.spaceY = value;
+        set spaceBottom(t) {
+            this._list.spaceY = t;
         }
         get selectedIndex() {
             return this._list.selectedIndex;
         }
-        set selectedIndex(value) {
-            this._list.selectedIndex = value;
+        set selectedIndex(t) {
+            this._list.selectedIndex = t;
         }
         get selectedItem() {
             return this._list.selectedItem;
         }
-        set selectedItem(value) {
-            this._list.selectedItem = value;
+        set selectedItem(t) {
+            this._list.selectedItem = t;
         }
-        set width(value) {
-            super.width = value;
-            this._list.width = value;
+        set width(t) {
+            super.width = t, this._list.width = t;
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this._list.height = value;
+        set height(t) {
+            super.height = t, this._list.height = t;
         }
         get height() {
             return super.height;
         }
         getArray() {
-            var arr = [];
-            for (let key in this._source) {
-                let item = this._source[key];
-                if (this.getParentOpenStatus(item)) {
-                    item.x = this._spaceLeft * this.getDepth(item);
-                    arr.push(item);
-                }
+            var t = [];
+            for (let e in this._source) {
+                let s = this._source[e];
+                this.getParentOpenStatus(s) && (s.x = this._spaceLeft * this.getDepth(s), t.push(s));
             }
-            return arr;
+            return t;
         }
-        getDepth(item, num = 0) {
-            if (item.nodeParent == null)
-                return num;
-            else
-                return this.getDepth(item.nodeParent, num + 1);
+        getDepth(t, e = 0) {
+            return null == t.nodeParent ? e : this.getDepth(t.nodeParent, e + 1);
         }
-        getParentOpenStatus(item) {
-            var parent = item.nodeParent;
-            if (parent == null) {
-                return true;
-            } else {
-                if (parent.isOpen) {
-                    if (parent.nodeParent != null)
-                        return this.getParentOpenStatus(parent);
-                    else
-                        return true;
-                } else {
-                    return false;
-                }
+        getParentOpenStatus(t) {
+            var e = t.nodeParent;
+            return null == e || !!e.isOpen && (null == e.nodeParent || this.getParentOpenStatus(e));
+        }
+        renderItem(t, s) {
+            var i = t.dataSource;
+            if (i) {
+                t.left = i.x;
+                var h = t.getChildByName("arrow");
+                h && (i.hasChild ? (h.visible = !0, h.index = i.isOpen ? 1 : 0, h.tag = s, h.off(e.Event.CLICK, this, this.onArrowClick), 
+                h.on(e.Event.CLICK, this, this.onArrowClick)) : h.visible = !1);
+                var a = t.getChildByName("folder");
+                a && (2 == a.clipY ? a.index = i.isDirectory ? 0 : 1 : a.index = i.isDirectory ? i.isOpen ? 1 : 0 : 2), 
+                this._renderHandler && this._renderHandler.runWith([ t, s ]);
             }
         }
-        renderItem(cell, index) {
-            var item = cell.dataSource;
-            if (item) {
-                cell.left = item.x;
-                var arrow = cell.getChildByName("arrow");
-                if (arrow) {
-                    if (item.hasChild) {
-                        arrow.visible = true;
-                        arrow.index = item.isOpen ? 1 : 0;
-                        arrow.tag = index;
-                        arrow.off(Laya.Event.CLICK, this, this.onArrowClick);
-                        arrow.on(Laya.Event.CLICK, this, this.onArrowClick);
-                    } else {
-                        arrow.visible = false;
-                    }
-                }
-                var folder = cell.getChildByName("folder");
-                if (folder) {
-                    if (folder.clipY == 2) {
-                        folder.index = item.isDirectory ? 0 : 1;
-                    } else {
-                        folder.index = item.isDirectory ? item.isOpen ? 1 : 0 : 2;
-                    }
-                }
-                this._renderHandler && this._renderHandler.runWith([cell, index]);
-            }
-        }
-        onArrowClick(e) {
-            var arrow = e.currentTarget;
-            var index = arrow.tag;
-            this._list.array[index].isOpen = !this._list.array[index].isOpen;
-            this.event(Laya.Event.OPEN);
+        onArrowClick(t) {
+            var s = t.currentTarget.tag;
+            this._list.array[s].isOpen = !this._list.array[s].isOpen, this.event(e.Event.OPEN), 
             this._list.array = this.getArray();
         }
-        setItemState(index, isOpen) {
-            if (!this._list.array[index])
-                return;
-            this._list.array[index].isOpen = isOpen;
-            this._list.array = this.getArray();
+        setItemState(t, e) {
+            this._list.array[t] && (this._list.array[t].isOpen = e, this._list.array = this.getArray());
         }
         fresh() {
-            this._list.array = this.getArray();
-            this.repaint();
+            this._list.array = this.getArray(), this.repaint();
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            super.dataSource = value;
+        set dataSource(t) {
+            this._dataSource = t, super.dataSource = t;
         }
         get dataSource() {
             return super.dataSource;
         }
-        set xml(value) {
-            var arr = [];
-            this.parseXml(value.childNodes[0], arr, null, true);
-            this.array = arr;
+        set xml(t) {
+            var e = [];
+            this.parseXml(t.childNodes[0], e, null, !0), this.array = e;
         }
-        parseXml(xml, source, nodeParent, isRoot) {
-            var obj;
-            var list = xml.childNodes;
-            var childCount = list.length;
-            if (!isRoot) {
-                obj = {};
-                var list2 = xml.attributes;
-                for (let key in list2) {
-                    var attrs = list2[key];
-                    var prop = attrs.nodeName;
-                    var value = attrs.nodeValue;
-                    obj[prop] = value == "true" ? true : value == "false" ? false : value;
+        parseXml(t, e, s, i) {
+            var h, a = t.childNodes, r = a.length;
+            if (!i) {
+                h = {};
+                var l = t.attributes;
+                for (let t in l) {
+                    var n = l[t], o = n.nodeName, _ = n.nodeValue;
+                    h[o] = "true" == _ || "false" != _ && _;
                 }
-                obj.nodeParent = nodeParent;
-                if (childCount > 0)
-                    obj.isDirectory = true;
-                obj.hasChild = childCount > 0;
-                source.push(obj);
+                h.nodeParent = s, r > 0 && (h.isDirectory = !0), h.hasChild = r > 0, e.push(h);
             }
-            for (var i = 0; i < childCount; i++) {
-                var node = list[i];
-                this.parseXml(node, source, obj, false);
+            for (var c = 0; c < r; c++) {
+                var d = a[c];
+                this.parseXml(d, e, h, !1);
             }
         }
-        parseOpenStatus(oldSource, newSource) {
-            for (var i = 0, n = newSource.length; i < n; i++) {
-                var newItem = newSource[i];
-                if (newItem.isDirectory) {
-                    for (var j = 0, m = oldSource.length; j < m; j++) {
-                        var oldItem = oldSource[j];
-                        if (oldItem.isDirectory && this.isSameParent(oldItem, newItem) && newItem.label == oldItem.label) {
-                            newItem.isOpen = oldItem.isOpen;
-                            break;
-                        }
+        parseOpenStatus(t, e) {
+            for (var s = 0, i = e.length; s < i; s++) {
+                var h = e[s];
+                if (h.isDirectory) for (var a = 0, r = t.length; a < r; a++) {
+                    var l = t[a];
+                    if (l.isDirectory && this.isSameParent(l, h) && h.label == l.label) {
+                        h.isOpen = l.isOpen;
+                        break;
                     }
                 }
             }
         }
-        isSameParent(item1, item2) {
-            if (item1.nodeParent == null && item2.nodeParent == null)
-                return true;
-            else if (item1.nodeParent == null || item2.nodeParent == null)
-                return false;
-            else {
-                if (item1.nodeParent.label == item2.nodeParent.label)
-                    return this.isSameParent(item1.nodeParent, item2.nodeParent);
-                else
-                    return false;
-            }
+        isSameParent(t, e) {
+            return null == t.nodeParent && null == e.nodeParent || null != t.nodeParent && null != e.nodeParent && (t.nodeParent.label == e.nodeParent.label && this.isSameParent(t.nodeParent, e.nodeParent));
         }
         get selectedPath() {
-            if (this._list.selectedItem) {
-                return this._list.selectedItem.path;
-            }
-            return null;
+            return this._list.selectedItem ? this._list.selectedItem.path : null;
         }
-        filter(key) {
-            if (Boolean(key)) {
-                var result = [];
-                this.getFilterSource(this._source, result, key);
-                this._list.array = result;
-            } else {
-                this._list.array = this.getArray();
-            }
+        filter(t) {
+            if (Boolean(t)) {
+                var e = [];
+                this.getFilterSource(this._source, e, t), this._list.array = e;
+            } else this._list.array = this.getArray();
         }
-        getFilterSource(array, result, key) {
-            key = key.toLocaleLowerCase();
-            for (let item of array) {
-                if (!item.isDirectory && String(item.label).toLowerCase().indexOf(key) > -1) {
-                    item.x = 0;
-                    result.push(item);
-                }
-                if (item.child && item.child.length > 0) {
-                    this.getFilterSource(item.child, result, key);
-                }
-            }
+        getFilterSource(t, e, s) {
+            s = s.toLocaleLowerCase();
+            for (let i of t) !i.isDirectory && String(i.label).toLowerCase().indexOf(s) > -1 && (i.x = 0, 
+            e.push(i)), i.child && i.child.length > 0 && this.getFilterSource(i.child, e, s);
         }
     }
-    Laya.ILaya.regClass(Tree);
-    Laya.ClassUtils.regClass("laya.ui.Tree", Tree);
-    Laya.ClassUtils.regClass("Laya.Tree", Tree);
-
-    class LayoutBox extends Box {
+    e.ILaya.regClass(D), e.ClassUtils.regClass("laya.ui.Tree", D), e.ClassUtils.regClass("Laya.Tree", D);
+    class A extends c {
         constructor() {
-            super(...arguments);
-            this._space = 0;
-            this._align = "none";
-            this._itemChanged = false;
+            super(...arguments), this._space = 0, this._align = "none", this._itemChanged = !1;
         }
-        addChild(child) {
-            child.on(Laya.Event.RESIZE, this, this.onResize);
-            this._setItemChanged();
-            return super.addChild(child);
+        addChild(t) {
+            return t.on(e.Event.RESIZE, this, this.onResize), this._setItemChanged(), super.addChild(t);
         }
-        onResize(e) {
+        onResize(t) {
             this._setItemChanged();
         }
-        addChildAt(child, index) {
-            child.on(Laya.Event.RESIZE, this, this.onResize);
-            this._setItemChanged();
-            return super.addChildAt(child, index);
+        addChildAt(t, s) {
+            return t.on(e.Event.RESIZE, this, this.onResize), this._setItemChanged(), super.addChildAt(t, s);
         }
-        removeChildAt(index) {
-            this.getChildAt(index).off(Laya.Event.RESIZE, this, this.onResize);
-            this._setItemChanged();
-            return super.removeChildAt(index);
+        removeChildAt(t) {
+            return this.getChildAt(t).off(e.Event.RESIZE, this, this.onResize), this._setItemChanged(), 
+            super.removeChildAt(t);
         }
         refresh() {
             this._setItemChanged();
         }
         changeItems() {
-            this._itemChanged = false;
+            this._itemChanged = !1;
         }
         get space() {
             return this._space;
         }
-        set space(value) {
-            this._space = value;
-            this._setItemChanged();
+        set space(t) {
+            this._space = t, this._setItemChanged();
         }
         get align() {
             return this._align;
         }
-        set align(value) {
-            this._align = value;
-            this._setItemChanged();
+        set align(t) {
+            this._align = t, this._setItemChanged();
         }
-        sortItem(items) {
-            if (items)
-                items.sort(function(a, b) {
-                    return a.y - b.y;
-                });
+        sortItem(t) {
+            t && t.sort(function(t, e) {
+                return t.y - e.y;
+            });
         }
         _setItemChanged() {
-            if (!this._itemChanged) {
-                this._itemChanged = true;
-                this.callLater(this.changeItems);
-            }
+            this._itemChanged || (this._itemChanged = !0, this.callLater(this.changeItems));
         }
     }
-    Laya.ILaya.regClass(LayoutBox);
-    Laya.ClassUtils.regClass("laya.ui.LayoutBox", LayoutBox);
-    Laya.ClassUtils.regClass("Laya.LayoutBox", LayoutBox);
-
-    class HBox extends LayoutBox {
-        sortItem(items) {
-            if (items)
-                items.sort(function(a, b) {
-                    return a.x - b.x;
-                });
+    e.ILaya.regClass(A), e.ClassUtils.regClass("laya.ui.LayoutBox", A), e.ClassUtils.regClass("Laya.LayoutBox", A);
+    class H extends A {
+        sortItem(t) {
+            t && t.sort(function(t, e) {
+                return t.x - e.x;
+            });
         }
-        set height(value) {
-            if (this._height != value) {
-                super.height = value;
-                this.callLater(this.changeItems);
-            }
+        set height(t) {
+            this._height != t && (super.height = t, this.callLater(this.changeItems));
         }
         get height() {
             return super.height;
         }
         changeItems() {
-            this._itemChanged = false;
-            var items = [];
-            var maxHeight = 0;
-            for (var i = 0, n = this.numChildren; i < n; i++) {
-                var item = this.getChildAt(i);
-                if (item) {
-                    items.push(item);
-                    maxHeight = this._height ? this._height : Math.max(maxHeight, item.height * item.scaleY);
-                }
+            this._itemChanged = !1;
+            for (var t = [], e = 0, s = 0, i = this.numChildren; s < i; s++) {
+                var h = this.getChildAt(s);
+                h && (t.push(h), e = this._height ? this._height : Math.max(e, h.height * h.scaleY));
             }
-            this.sortItem(items);
-            var left = 0;
-            for (i = 0, n = items.length; i < n; i++) {
-                item = items[i];
-                item.x = left;
-                left += item.width * item.scaleX + this._space;
-                if (this._align == HBox.TOP) {
-                    item.y = 0;
-                } else if (this._align == HBox.MIDDLE) {
-                    item.y = (maxHeight - item.height * item.scaleY) * 0.5;
-                } else if (this._align == HBox.BOTTOM) {
-                    item.y = maxHeight - item.height * item.scaleY;
-                }
-            }
+            this.sortItem(t);
+            var a = 0;
+            for (s = 0, i = t.length; s < i; s++) (h = t[s]).x = a, a += h.width * h.scaleX + this._space, 
+            this._align == H.TOP ? h.y = 0 : this._align == H.MIDDLE ? h.y = .5 * (e - h.height * h.scaleY) : this._align == H.BOTTOM && (h.y = e - h.height * h.scaleY);
             this._sizeChanged();
         }
     }
-    HBox.NONE = "none";
-    HBox.TOP = "top";
-    HBox.MIDDLE = "middle";
-    HBox.BOTTOM = "bottom";
-    Laya.ILaya.regClass(HBox);
-    Laya.ClassUtils.regClass("laya.ui.HBox", HBox);
-    Laya.ClassUtils.regClass("Laya.HBox", HBox);
-
-    class VBox extends LayoutBox {
-        set width(value) {
-            if (this._width != value) {
-                super.width = value;
-                this.callLater(this.changeItems);
-            }
+    H.NONE = "none", H.TOP = "top", H.MIDDLE = "middle", H.BOTTOM = "bottom", e.ILaya.regClass(H), 
+    e.ClassUtils.regClass("laya.ui.HBox", H), e.ClassUtils.regClass("Laya.HBox", H);
+    class N extends A {
+        set width(t) {
+            this._width != t && (super.width = t, this.callLater(this.changeItems));
         }
         get width() {
             return super.width;
         }
         changeItems() {
-            this._itemChanged = false;
-            var items = [];
-            var maxWidth = 0;
-            for (var i = 0, n = this.numChildren; i < n; i++) {
-                var item = this.getChildAt(i);
-                if (item) {
-                    items.push(item);
-                    maxWidth = this._width ? this._width : Math.max(maxWidth, item.width * item.scaleX);
-                }
+            this._itemChanged = !1;
+            for (var t = [], e = 0, s = 0, i = this.numChildren; s < i; s++) {
+                var h = this.getChildAt(s);
+                h && (t.push(h), e = this._width ? this._width : Math.max(e, h.width * h.scaleX));
             }
-            this.sortItem(items);
-            var top = 0;
-            for (i = 0, n = items.length; i < n; i++) {
-                item = items[i];
-                item.y = top;
-                top += item.height * item.scaleY + this._space;
-                if (this._align == VBox.LEFT) {
-                    item.x = 0;
-                } else if (this._align == VBox.CENTER) {
-                    item.x = (maxWidth - item.width * item.scaleX) * 0.5;
-                } else if (this._align == VBox.RIGHT) {
-                    item.x = maxWidth - item.width * item.scaleX;
-                }
-            }
+            this.sortItem(t);
+            var a = 0;
+            for (s = 0, i = t.length; s < i; s++) (h = t[s]).y = a, a += h.height * h.scaleY + this._space, 
+            this._align == N.LEFT ? h.x = 0 : this._align == N.CENTER ? h.x = .5 * (e - h.width * h.scaleX) : this._align == N.RIGHT && (h.x = e - h.width * h.scaleX);
             this._sizeChanged();
         }
     }
-    VBox.NONE = "none";
-    VBox.LEFT = "left";
-    VBox.CENTER = "center";
-    VBox.RIGHT = "right";
-    Laya.ILaya.regClass(VBox);
-    Laya.ClassUtils.regClass("laya.ui.VBox", VBox);
-    Laya.ClassUtils.regClass("Laya.VBox", VBox);
-
-    class FontClip extends Clip {
-        constructor(skin = null, sheet = null) {
-            super();
-            this._valueArr = '';
-            this._indexMap = null;
-            this._sheet = null;
-            this._direction = "horizontal";
-            this._spaceX = 0;
-            this._spaceY = 0;
-            this._align = "left";
-            this._wordsW = 0;
-            this._wordsH = 0;
-            if (skin)
-                this.skin = skin;
-            if (sheet)
-                this.sheet = sheet;
+    N.NONE = "none", N.LEFT = "left", N.CENTER = "center", N.RIGHT = "right", e.ILaya.regClass(N), 
+    e.ClassUtils.regClass("laya.ui.VBox", N), e.ClassUtils.regClass("Laya.VBox", N);
+    class P extends g {
+        constructor(t = null, e = null) {
+            super(), this._valueArr = "", this._indexMap = null, this._sheet = null, this._direction = "horizontal", 
+            this._spaceX = 0, this._spaceY = 0, this._align = "left", this._wordsW = 0, this._wordsH = 0, 
+            t && (this.skin = t), e && (this.sheet = e);
         }
         createChildren() {
-            this._bitmap = new AutoBitmap();
-            this.on(Laya.Event.LOADED, this, this._onClipLoaded);
+            this._bitmap = new h(), this.on(e.Event.LOADED, this, this._onClipLoaded);
         }
         _onClipLoaded() {
             this.callLater(this.changeValue);
@@ -5257,120 +3345,77 @@
         get sheet() {
             return this._sheet;
         }
-        set sheet(value) {
-            value += "";
-            this._sheet = value;
-            var arr = value.split(" ");
-            this._clipX = String(arr[0]).length;
-            this.clipY = arr.length;
-            this._indexMap = {};
-            for (var i = 0; i < this._clipY; i++) {
-                var line = arr[i].split("");
-                for (var j = 0, n = line.length; j < n; j++) {
-                    this._indexMap[line[j]] = i * this._clipX + j;
-                }
-            }
+        set sheet(t) {
+            t += "", this._sheet = t;
+            var e = t.split(" ");
+            this._clipX = String(e[0]).length, this.clipY = e.length, this._indexMap = {};
+            for (var s = 0; s < this._clipY; s++) for (var i = e[s].split(""), h = 0, a = i.length; h < a; h++) this._indexMap[i[h]] = s * this._clipX + h;
         }
         get value() {
-            if (!this._valueArr)
-                return "";
-            return this._valueArr;
+            return this._valueArr ? this._valueArr : "";
         }
-        set value(value) {
-            value += "";
-            this._valueArr = value;
-            this.callLater(this.changeValue);
+        set value(t) {
+            t += "", this._valueArr = t, this.callLater(this.changeValue);
         }
         get direction() {
             return this._direction;
         }
-        set direction(value) {
-            this._direction = value;
-            this.callLater(this.changeValue);
+        set direction(t) {
+            this._direction = t, this.callLater(this.changeValue);
         }
         get spaceX() {
             return this._spaceX;
         }
-        set spaceX(value) {
-            this._spaceX = value;
-            if (this._direction === "horizontal")
-                this.callLater(this.changeValue);
+        set spaceX(t) {
+            this._spaceX = t, "horizontal" === this._direction && this.callLater(this.changeValue);
         }
         get spaceY() {
             return this._spaceY;
         }
-        set spaceY(value) {
-            this._spaceY = value;
-            if (!(this._direction === "horizontal"))
-                this.callLater(this.changeValue);
+        set spaceY(t) {
+            this._spaceY = t, "horizontal" !== this._direction && this.callLater(this.changeValue);
         }
-        set align(v) {
-            this._align = v;
-            this.callLater(this.changeValue);
+        set align(t) {
+            this._align = t, this.callLater(this.changeValue);
         }
         get align() {
             return this._align;
         }
         changeValue() {
-            if (!this._sources)
-                return;
-            if (!this._valueArr)
-                return;
-            this.graphics.clear(true);
-            var texture;
-            texture = this._sources[0];
-            if (!texture)
-                return;
-            var isHorizontal = (this._direction === "horizontal");
-            if (isHorizontal) {
-                this._wordsW = this._valueArr.length * (texture.sourceWidth + this.spaceX);
-                this._wordsH = texture.sourceHeight;
-            } else {
-                this._wordsW = texture.sourceWidth;
-                this._wordsH = (texture.sourceHeight + this.spaceY) * this._valueArr.length;
-            }
-            var dX = 0;
-            if (this._width) {
-                switch (this._align) {
-                    case "center":
-                        dX = 0.5 * (this._width - this._wordsW);
-                        break;
-                    case "right":
-                        dX = this._width - this._wordsW;
-                        break;
-                    default:
-                        dX = 0;
+            var t;
+            if (this._sources && (this._valueArr && (this.graphics.clear(!0), t = this._sources[0]))) {
+                var e = "horizontal" === this._direction;
+                e ? (this._wordsW = this._valueArr.length * (t.sourceWidth + this.spaceX), this._wordsH = t.sourceHeight) : (this._wordsW = t.sourceWidth, 
+                this._wordsH = (t.sourceHeight + this.spaceY) * this._valueArr.length);
+                var s = 0;
+                if (this._width) switch (this._align) {
+                  case "center":
+                    s = .5 * (this._width - this._wordsW);
+                    break;
+
+                  case "right":
+                    s = this._width - this._wordsW;
+                    break;
+
+                  default:
+                    s = 0;
                 }
-            }
-            for (var i = 0, sz = this._valueArr.length; i < sz; i++) {
-                var index = this._indexMap[this._valueArr.charAt(i)];
-                if (!this.sources[index])
-                    continue;
-                texture = this.sources[index];
-                if (isHorizontal)
-                    this.graphics.drawImage(texture, dX + i * (texture.sourceWidth + this.spaceX), 0, texture.sourceWidth, texture.sourceHeight);
-                else
-                    this.graphics.drawImage(texture, 0 + dX, i * (texture.sourceHeight + this.spaceY), texture.sourceWidth, texture.sourceHeight);
-            }
-            if (!this._width) {
-                this._widget.resetLayoutX();
-                this.callLater(this._sizeChanged);
-            }
-            if (!this._height) {
-                this._widget.resetLayoutY();
-                this.callLater(this._sizeChanged);
+                for (var i = 0, h = this._valueArr.length; i < h; i++) {
+                    var a = this._indexMap[this._valueArr.charAt(i)];
+                    this.sources[a] && (t = this.sources[a], e ? this.graphics.drawImage(t, s + i * (t.sourceWidth + this.spaceX), 0, t.sourceWidth, t.sourceHeight) : this.graphics.drawImage(t, 0 + s, i * (t.sourceHeight + this.spaceY), t.sourceWidth, t.sourceHeight));
+                }
+                this._width || (this._widget.resetLayoutX(), this.callLater(this._sizeChanged)), 
+                this._height || (this._widget.resetLayoutY(), this.callLater(this._sizeChanged));
             }
         }
-        set width(value) {
-            super.width = value;
-            this.callLater(this.changeValue);
+        set width(t) {
+            super.width = t, this.callLater(this.changeValue);
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            this.callLater(this.changeValue);
+        set height(t) {
+            super.height = t, this.callLater(this.changeValue);
         }
         get height() {
             return super.height;
@@ -5381,668 +3426,422 @@
         measureHeight() {
             return this._wordsH;
         }
-        destroy(destroyChild = true) {
-            this._valueArr = null;
-            this._indexMap = null;
-            this.graphics.clear(true);
-            this.removeSelf();
-            this.off(Laya.Event.LOADED, this, this._onClipLoaded);
-            super.destroy(destroyChild);
+        destroy(t = !0) {
+            this._valueArr = null, this._indexMap = null, this.graphics.clear(!0), this.removeSelf(), 
+            this.off(e.Event.LOADED, this, this._onClipLoaded), super.destroy(t);
         }
     }
-    Laya.ILaya.regClass(FontClip);
-    Laya.ClassUtils.regClass("laya.ui.FontClip", FontClip);
-    Laya.ClassUtils.regClass("Laya.FontClip", FontClip);
-
-    class View extends Laya.Scene {
+    e.ILaya.regClass(P), e.ClassUtils.regClass("laya.ui.FontClip", P), e.ClassUtils.regClass("Laya.FontClip", P);
+    class Y extends e.Scene {
         constructor() {
-            super(false);
-            this._watchMap = {};
-            this._anchorX = NaN;
-            this._anchorY = NaN;
-            this._widget = Widget.EMPTY;
+            super(!1), this._watchMap = {}, this._anchorX = NaN, this._anchorY = NaN, this._widget = a.EMPTY, 
             this.createChildren();
         }
         static __init__() {
-            Laya.ILaya.ClassUtils.regShortClassName([ViewStack, Button, TextArea, ColorPicker, Box, ScaleBox, CheckBox, Clip, ComboBox, UIComponent,
-                HScrollBar, HSlider, Image, Label, List, Panel, ProgressBar, Radio, RadioGroup, ScrollBar, Slider, Tab, TextInput, View,
-                VScrollBar, VSlider, Tree, HBox, VBox, Laya.Animation, Laya.Text, FontClip
-            ]);
+            e.ILaya.ClassUtils.regShortClassName([ B, d, M, p, c, O, u, g, y, n, S, T, o, C, b, z, w, x, E, m, v, I, k, Y, f, U, D, H, N, e.Animation, e.Text, P ]);
         }
-        static regComponent(key, compClass) {
-            Laya.ILaya.ClassUtils.regClass(key, compClass);
+        static regComponent(t, s) {
+            e.ILaya.ClassUtils.regClass(t, s);
         }
-        static regViewRuntime(key, compClass) {
-            Laya.ILaya.ClassUtils.regClass(key, compClass);
+        static regViewRuntime(t, s) {
+            e.ILaya.ClassUtils.regClass(t, s);
         }
-        static regUI(url, json) {
-            Laya.ILaya.loader.cacheRes(url, json);
+        static regUI(t, s) {
+            e.ILaya.loader.cacheRes(t, s);
         }
-        destroy(destroyChild = true) {
-            this._watchMap = null;
-            super.destroy(destroyChild);
+        destroy(t = !0) {
+            this._watchMap = null, super.destroy(t);
         }
-        changeData(key) {
-            var arr = this._watchMap[key];
-            if (!arr)
-                return;
-            for (var i = 0, n = arr.length; i < n; i++) {
-                var watcher = arr[i];
-                watcher.exe(this);
+        changeData(t) {
+            var e = this._watchMap[t];
+            if (e) for (var s = 0, i = e.length; s < i; s++) {
+                e[s].exe(this);
             }
         }
         get top() {
             return this._widget.top;
         }
-        set top(value) {
-            if (value != this._widget.top) {
-                this._getWidget().top = value;
-            }
+        set top(t) {
+            t != this._widget.top && (this._getWidget().top = t);
         }
         get bottom() {
             return this._widget.bottom;
         }
-        set bottom(value) {
-            if (value != this._widget.bottom) {
-                this._getWidget().bottom = value;
-            }
+        set bottom(t) {
+            t != this._widget.bottom && (this._getWidget().bottom = t);
         }
         get left() {
             return this._widget.left;
         }
-        set left(value) {
-            if (value != this._widget.left) {
-                this._getWidget().left = value;
-            }
+        set left(t) {
+            t != this._widget.left && (this._getWidget().left = t);
         }
         get right() {
             return this._widget.right;
         }
-        set right(value) {
-            if (value != this._widget.right) {
-                this._getWidget().right = value;
-            }
+        set right(t) {
+            t != this._widget.right && (this._getWidget().right = t);
         }
         get centerX() {
             return this._widget.centerX;
         }
-        set centerX(value) {
-            if (value != this._widget.centerX) {
-                this._getWidget().centerX = value;
-            }
+        set centerX(t) {
+            t != this._widget.centerX && (this._getWidget().centerX = t);
         }
         get centerY() {
             return this._widget.centerY;
         }
-        set centerY(value) {
-            if (value != this._widget.centerY) {
-                this._getWidget().centerY = value;
-            }
+        set centerY(t) {
+            t != this._widget.centerY && (this._getWidget().centerY = t);
         }
         get anchorX() {
             return this._anchorX;
         }
-        set anchorX(value) {
-            if (this._anchorX != value) {
-                this._anchorX = value;
-                this.callLater(this._sizeChanged);
-            }
+        set anchorX(t) {
+            this._anchorX != t && (this._anchorX = t, this.callLater(this._sizeChanged));
         }
         get anchorY() {
             return this._anchorY;
         }
-        set anchorY(value) {
-            if (this._anchorY != value) {
-                this._anchorY = value;
-                this.callLater(this._sizeChanged);
-            }
+        set anchorY(t) {
+            this._anchorY != t && (this._anchorY = t, this.callLater(this._sizeChanged));
         }
         _sizeChanged() {
-            if (!isNaN(this._anchorX))
-                this.pivotX = this.anchorX * this.width;
-            if (!isNaN(this._anchorY))
-                this.pivotY = this.anchorY * this.height;
-            this.event(Laya.Event.RESIZE);
+            isNaN(this._anchorX) || (this.pivotX = this.anchorX * this.width), isNaN(this._anchorY) || (this.pivotY = this.anchorY * this.height), 
+            this.event(e.Event.RESIZE);
         }
         _getWidget() {
-            this._widget === Widget.EMPTY && (this._widget = this.addComponent(Widget));
-            return this._widget;
+            return this._widget === a.EMPTY && (this._widget = this.addComponent(a)), this._widget;
         }
-        loadUI(path) {
-            var uiView = View.uiMap[path];
-            View.uiMap && this.createView(uiView);
+        loadUI(t) {
+            var e = Y.uiMap[t];
+            Y.uiMap && this.createView(e);
         }
         get dataSource() {
             return this._dataSource;
         }
-        set dataSource(value) {
-            this._dataSource = value;
-            for (var name in value) {
-                var comp = this.getChildByName(name);
-                if (comp instanceof UIComponent)
-                    comp.dataSource = value[name];
-                else if (name in this && !(this[name] instanceof Function))
-                    this[name] = value[name];
+        set dataSource(t) {
+            for (var e in this._dataSource = t, t) {
+                var s = this.getChildByName(e);
+                s instanceof n ? s.dataSource = t[e] : e in this && !(this[e] instanceof Function) && (this[e] = t[e]);
             }
         }
     }
-    View.uiMap = {};
-    Laya.ILaya.regClass(View);
-    Laya.ClassUtils.regClass("laya.ui.View", View);
-    Laya.ClassUtils.regClass("Laya.View", View);
-
-    class IUI {}
-    IUI.Dialog = null;
-
-    class DialogManager extends Laya.Sprite {
+    Y.uiMap = {}, e.ILaya.regClass(Y), e.ClassUtils.regClass("laya.ui.View", Y), e.ClassUtils.regClass("Laya.View", Y);
+    class R {}
+    R.Dialog = null;
+    class X extends e.Sprite {
         constructor() {
-            super();
-            this.maskLayer = new Laya.Sprite();
-            this.popupEffect = (dialog) => {
-                dialog.scale(1, 1);
-                dialog._effectTween = Laya.Tween.from(dialog, {
-                    x: Laya.ILaya.stage.width / 2,
-                    y: Laya.ILaya.stage.height / 2,
+            super(), this.maskLayer = new e.Sprite(), this.popupEffect = (t => {
+                t.scale(1, 1), t._effectTween = e.Tween.from(t, {
+                    x: e.ILaya.stage.width / 2,
+                    y: e.ILaya.stage.height / 2,
                     scaleX: 0,
                     scaleY: 0
-                }, 300, Laya.Ease.backOut, Laya.Handler.create(this, this.doOpen, [dialog]), 0, false, false);
-            };
-            this.closeEffect = (dialog) => {
-                dialog._effectTween = Laya.Tween.to(dialog, {
-                    x: Laya.ILaya.stage.width / 2,
-                    y: Laya.ILaya.stage.height / 2,
+                }, 300, e.Ease.backOut, e.Handler.create(this, this.doOpen, [ t ]), 0, !1, !1);
+            }), this.closeEffect = (t => {
+                t._effectTween = e.Tween.to(t, {
+                    x: e.ILaya.stage.width / 2,
+                    y: e.ILaya.stage.height / 2,
                     scaleX: 0,
                     scaleY: 0
-                }, 300, Laya.Ease.strongOut, Laya.Handler.create(this, this.doClose, [dialog]), 0, false, false);
-            };
-            this.popupEffectHandler = new Laya.Handler(this, this.popupEffect);
-            this.closeEffectHandler = new Laya.Handler(this, this.closeEffect);
-            this.mouseEnabled = this.maskLayer.mouseEnabled = true;
-            this.zOrder = 1000;
-            Laya.ILaya.stage.addChild(this);
-            Laya.ILaya.stage.on(Laya.Event.RESIZE, this, this._onResize);
-            if (UIConfig.closeDialogOnSide)
-                this.maskLayer.on("click", this, this._closeOnSide);
+                }, 300, e.Ease.strongOut, e.Handler.create(this, this.doClose, [ t ]), 0, !1, !1);
+            }), this.popupEffectHandler = new e.Handler(this, this.popupEffect), this.closeEffectHandler = new e.Handler(this, this.closeEffect), 
+            this.mouseEnabled = this.maskLayer.mouseEnabled = !0, this.zOrder = 1e3, e.ILaya.stage.addChild(this), 
+            e.ILaya.stage.on(e.Event.RESIZE, this, this._onResize), s.closeDialogOnSide && this.maskLayer.on("click", this, this._closeOnSide), 
             this._onResize(null);
         }
         _closeOnSide() {
-            var dialog = this.getChildAt(this.numChildren - 1);
-            if (dialog instanceof IUI.Dialog)
-                dialog.close("side");
+            var t = this.getChildAt(this.numChildren - 1);
+            t instanceof R.Dialog && t.close();
         }
-        setLockView(value) {
-            if (!this.lockLayer) {
-                this.lockLayer = new Box();
-                this.lockLayer.mouseEnabled = true;
-                this.lockLayer.size(Laya.ILaya.stage.width, Laya.ILaya.stage.height);
-            }
-            this.lockLayer.removeChildren();
-            if (value) {
-                value.centerX = value.centerY = 0;
-                this.lockLayer.addChild(value);
-            }
+        setLockView(t) {
+            this.lockLayer || (this.lockLayer = new c(), this.lockLayer.mouseEnabled = !0, this.lockLayer.size(e.ILaya.stage.width, e.ILaya.stage.height)), 
+            this.lockLayer.removeChildren(), t && (t.centerX = t.centerY = 0, this.lockLayer.addChild(t));
         }
-        _onResize(e = null) {
-            var width = this.maskLayer.width = Laya.ILaya.stage.width;
-            var height = this.maskLayer.height = Laya.ILaya.stage.height;
-            if (this.lockLayer)
-                this.lockLayer.size(width, height);
-            this.maskLayer.graphics.clear(true);
-            this.maskLayer.graphics.drawRect(0, 0, width, height, UIConfig.popupBgColor);
-            this.maskLayer.alpha = UIConfig.popupBgAlpha;
-            for (var i = this.numChildren - 1; i > -1; i--) {
-                var item = this.getChildAt(i);
-                if (item.isPopupCenter)
-                    this._centerDialog(item);
+        _onResize(t = null) {
+            var i = this.maskLayer.width = e.ILaya.stage.width, h = this.maskLayer.height = e.ILaya.stage.height;
+            this.lockLayer && this.lockLayer.size(i, h), this.maskLayer.graphics.clear(!0), 
+            this.maskLayer.graphics.drawRect(0, 0, i, h, s.popupBgColor), this.maskLayer.alpha = s.popupBgAlpha;
+            for (var a = this.numChildren - 1; a > -1; a--) {
+                var r = this.getChildAt(a);
+                r.isPopupCenter && this._centerDialog(r);
             }
         }
-        _centerDialog(dialog) {
-            dialog.x = Math.round(((Laya.ILaya.stage.width - dialog.width) >> 1) + dialog.pivotX);
-            dialog.y = Math.round(((Laya.ILaya.stage.height - dialog.height) >> 1) + dialog.pivotY);
+        _centerDialog(t) {
+            t.x = Math.round((e.ILaya.stage.width - t.width >> 1) + t.pivotX), t.y = Math.round((e.ILaya.stage.height - t.height >> 1) + t.pivotY);
         }
-        open(dialog, closeOther = false, showEffect = false) {
-            if (closeOther)
-                this._closeAll();
-            this._clearDialogEffect(dialog);
-            if (dialog.isPopupCenter)
-                this._centerDialog(dialog);
-            this.addChild(dialog);
-            if (dialog.isModal || this._getBit(Laya.Const.HAS_ZORDER))
-                Laya.ILaya.timer.callLater(this, this._checkMask);
-            if (showEffect && dialog.popupEffect != null)
-                dialog.popupEffect.runWith(dialog);
-            else
-                this.doOpen(dialog);
-            this.event(Laya.Event.OPEN);
+        open(t, s = !1, i = !1) {
+            s && this._closeAll(), this._clearDialogEffect(t), t.isPopupCenter && this._centerDialog(t), 
+            this.addChild(t), (t.isModal || this._getBit(e.Const.HAS_ZORDER)) && e.ILaya.timer.callLater(this, this._checkMask), 
+            i && null != t.popupEffect ? t.popupEffect.runWith(t) : this.doOpen(t), this.event(e.Event.OPEN);
         }
-        _clearDialogEffect(dialog) {
-            if (dialog._effectTween) {
-                Laya.Tween.clear(dialog._effectTween);
-                dialog._effectTween = null;
-            }
+        _clearDialogEffect(t) {
+            t._effectTween && (e.Tween.clear(t._effectTween), t._effectTween = null);
         }
-        doOpen(dialog) {
-            dialog.onOpened(dialog._param);
+        doOpen(t) {
+            t.onOpened(t._param);
         }
-        lock(value) {
-            if (this.lockLayer) {
-                if (value)
-                    this.addChild(this.lockLayer);
-                else
-                    this.lockLayer.removeSelf();
-            }
+        lock(t) {
+            this.lockLayer && (t ? this.addChild(this.lockLayer) : this.lockLayer.removeSelf());
         }
-        close(dialog) {
-            this._clearDialogEffect(dialog);
-            if (dialog.isShowEffect && dialog.closeEffect != null)
-                dialog.closeEffect.runWith([dialog]);
-            else
-                this.doClose(dialog);
-            this.event(Laya.Event.CLOSE);
+        close(t) {
+            this._clearDialogEffect(t), t.isShowEffect && null != t.closeEffect ? t.closeEffect.runWith([ t ]) : this.doClose(t), 
+            this.event(e.Event.CLOSE);
         }
-        doClose(dialog) {
-            dialog.removeSelf();
-            dialog.isModal && this._checkMask();
-            dialog.closeHandler && dialog.closeHandler.runWith(dialog.closeType);
-            dialog.onClosed(dialog.closeType);
-            if (dialog.autoDestroyAtClosed)
-                dialog.destroy();
+        doClose(t) {
+            t.removeSelf(), t.isModal && this._checkMask(), t.closeHandler && t.closeHandler.runWith(t.closeType), 
+            t.onClosed(t.closeType), t.autoDestroyAtClosed && t.destroy();
         }
         closeAll() {
-            this._closeAll();
-            this.event(Laya.Event.CLOSE);
+            this._closeAll(), this.event(e.Event.CLOSE);
         }
         _closeAll() {
-            for (var i = this.numChildren - 1; i > -1; i--) {
-                var item = this.getChildAt(i);
-                if (item && item.close != null) {
-                    this.doClose(item);
-                }
+            for (var t = this.numChildren - 1; t > -1; t--) {
+                var e = this.getChildAt(t);
+                e && null != e.close && this.doClose(e);
             }
         }
-        getDialogsByGroup(group) {
-            var arr = [];
-            for (var i = this.numChildren - 1; i > -1; i--) {
-                var item = this.getChildAt(i);
-                if (item && item.group === group) {
-                    arr.push(item);
-                }
+        getDialogsByGroup(t) {
+            for (var e = [], s = this.numChildren - 1; s > -1; s--) {
+                var i = this.getChildAt(s);
+                i && i.group === t && e.push(i);
             }
-            return arr;
+            return e;
         }
-        closeByGroup(group) {
-            var arr = [];
-            for (var i = this.numChildren - 1; i > -1; i--) {
-                var item = this.getChildAt(i);
-                if (item && item.group === group) {
-                    item.close();
-                    arr.push(item);
-                }
+        closeByGroup(t) {
+            for (var e = [], s = this.numChildren - 1; s > -1; s--) {
+                var i = this.getChildAt(s);
+                i && i.group === t && (i.close(), e.push(i));
             }
-            return arr;
+            return e;
         }
         _checkMask() {
             this.maskLayer.removeSelf();
-            for (var i = this.numChildren - 1; i > -1; i--) {
-                var dialog = this.getChildAt(i);
-                if (dialog && dialog.isModal) {
-                    this.addChildAt(this.maskLayer, i);
-                    return;
-                }
+            for (var t = this.numChildren - 1; t > -1; t--) {
+                var e = this.getChildAt(t);
+                if (e && e.isModal) return void this.addChildAt(this.maskLayer, t);
             }
         }
     }
-    Laya.ClassUtils.regClass("laya.ui.DialogManager", DialogManager);
-    Laya.ClassUtils.regClass("Laya.DialogManager", DialogManager);
-
-    class Dialog extends View {
+    e.ClassUtils.regClass("laya.ui.DialogManager", X), e.ClassUtils.regClass("Laya.DialogManager", X);
+    class G extends Y {
         constructor() {
-            super();
-            this.isShowEffect = true;
-            this.isPopupCenter = true;
-            this.popupEffect = Dialog.manager.popupEffectHandler;
-            this.closeEffect = Dialog.manager.closeEffectHandler;
-            this._dealDragArea();
-            this.on(Laya.Event.CLICK, this, this._onClick);
+            super(), this.isShowEffect = !0, this.isPopupCenter = !0, this.popupEffect = G.manager.popupEffectHandler, 
+            this.closeEffect = G.manager.closeEffectHandler, this._dealDragArea(), this.on(e.Event.CLICK, this, this._onClick);
         }
         static get manager() {
-            return Dialog._manager = Dialog._manager || new DialogManager();
+            return G._manager = G._manager || new X();
         }
-        static set manager(value) {
-            Dialog._manager = value;
+        static set manager(t) {
+            G._manager = t;
         }
         _dealDragArea() {
-            var dragTarget = this.getChildByName("drag");
-            if (dragTarget) {
-                this.dragArea = dragTarget._x + "," + dragTarget._y + "," + dragTarget.width + "," + dragTarget.height;
-                dragTarget.removeSelf();
-            }
+            var t = this.getChildByName("drag");
+            t && (this.dragArea = t._x + "," + t._y + "," + t.width + "," + t.height, t.removeSelf());
         }
         get dragArea() {
-            if (this._dragArea)
-                return this._dragArea.toString();
-            return null;
+            return this._dragArea ? this._dragArea.toString() : null;
         }
-        set dragArea(value) {
-            if (value) {
-                var a = UIUtils.fillArray([0, 0, 0, 0], value, Number);
-                this._dragArea = new Laya.Rectangle(a[0], a[1], a[2], a[3]);
-                this.on(Laya.Event.MOUSE_DOWN, this, this._onMouseDown);
-            } else {
-                this._dragArea = null;
-                this.off(Laya.Event.MOUSE_DOWN, this, this._onMouseDown);
+        set dragArea(t) {
+            if (t) {
+                var s = l.fillArray([ 0, 0, 0, 0 ], t, Number);
+                this._dragArea = new e.Rectangle(s[0], s[1], s[2], s[3]), this.on(e.Event.MOUSE_DOWN, this, this._onMouseDown);
+            } else this._dragArea = null, this.off(e.Event.MOUSE_DOWN, this, this._onMouseDown);
+        }
+        _onMouseDown(t) {
+            var e = this.getMousePoint();
+            this._dragArea.contains(e.x, e.y) ? this.startDrag() : this.stopDrag();
+        }
+        _onClick(t) {
+            var e = t.target;
+            if (e) switch (e.name) {
+              case G.CLOSE:
+              case G.CANCEL:
+              case G.SURE:
+              case G.NO:
+              case G.OK:
+              case G.YES:
+                return void this.close(e.name);
             }
         }
-        _onMouseDown(e) {
-            var point = this.getMousePoint();
-            if (this._dragArea.contains(point.x, point.y))
-                this.startDrag();
-            else
-                this.stopDrag();
+        open(t = !0, e = null) {
+            this._dealDragArea(), this._param = e, G.manager.open(this, t, this.isShowEffect), 
+            G.manager.lock(!1);
         }
-        _onClick(e) {
-            var btn = e.target;
-            if (btn) {
-                switch (btn.name) {
-                    case Dialog.CLOSE:
-                    case Dialog.CANCEL:
-                    case Dialog.SURE:
-                    case Dialog.NO:
-                    case Dialog.OK:
-                    case Dialog.YES:
-                        this.close(btn.name);
-                        return;
-                }
-            }
+        close(t = null) {
+            this.closeType = t, G.manager.close(this);
         }
-        open(closeOther = true, param = null) {
-            this._dealDragArea();
-            this._param = param;
-            Dialog.manager.open(this, closeOther, this.isShowEffect);
-            Dialog.manager.lock(false);
+        destroy(t = !0) {
+            this.closeHandler = null, this.popupEffect = null, this.closeEffect = null, this._dragArea = null, 
+            super.destroy(t);
         }
-        close(type = null) {
-            this.closeType = type;
-            Dialog.manager.close(this);
+        show(t = !1, e = !0) {
+            this._open(!1, t, e);
         }
-        destroy(destroyChild = true) {
-            this.closeHandler = null;
-            this.popupEffect = null;
-            this.closeEffect = null;
-            this._dragArea = null;
-            super.destroy(destroyChild);
+        popup(t = !1, e = !0) {
+            this._open(!0, t, e);
         }
-        show(closeOther = false, showEffect = true) {
-            this._open(false, closeOther, showEffect);
-        }
-        popup(closeOther = false, showEffect = true) {
-            this._open(true, closeOther, showEffect);
-        }
-        _open(modal, closeOther, showEffect) {
-            this.isModal = modal;
-            this.isShowEffect = showEffect;
-            Dialog.manager.lock(true);
-            this.open(closeOther);
+        _open(t, e, s) {
+            this.isModal = t, this.isShowEffect = s, G.manager.lock(!0), this.open(e);
         }
         get isPopup() {
-            return this.parent != null;
+            return null != this.parent;
         }
-        set zOrder(value) {
-            super.zOrder = value;
-            Dialog.manager._checkMask();
+        set zOrder(t) {
+            super.zOrder = t, G.manager._checkMask();
         }
         get zOrder() {
             return super.zOrder;
         }
-        static setLockView(view) {
-            Dialog.manager.setLockView(view);
+        static setLockView(t) {
+            G.manager.setLockView(t);
         }
-        static lock(value) {
-            Dialog.manager.lock(value);
+        static lock(t) {
+            G.manager.lock(t);
         }
         static closeAll() {
-            Dialog.manager.closeAll();
+            G.manager.closeAll();
         }
-        static getDialogsByGroup(group) {
-            return Dialog.manager.getDialogsByGroup(group);
+        static getDialogsByGroup(t) {
+            return G.manager.getDialogsByGroup(t);
         }
-        static closeByGroup(group) {
-            return Dialog.manager.closeByGroup(group);
+        static closeByGroup(t) {
+            return G.manager.closeByGroup(t);
         }
     }
-    Dialog.CLOSE = "close";
-    Dialog.CANCEL = "cancel";
-    Dialog.SURE = "sure";
-    Dialog.NO = "no";
-    Dialog.YES = "yes";
-    Dialog.OK = "ok";
-    IUI.Dialog = Dialog;
-    Laya.ILaya.regClass(Dialog);
-    Laya.ClassUtils.regClass("laya.ui.Dialog", Dialog);
-    Laya.ClassUtils.regClass("Laya.Dialog", Dialog);
-
-    class TipManager extends UIComponent {
+    G.CLOSE = "close", G.CANCEL = "cancel", G.SURE = "sure", G.NO = "no", G.YES = "yes", 
+    G.OK = "ok", R.Dialog = G, e.ILaya.regClass(G), e.ClassUtils.regClass("laya.ui.Dialog", G), 
+    e.ClassUtils.regClass("Laya.Dialog", G);
+    class W extends n {
         constructor() {
-            super();
-            this._tipBox = new UIComponent();
-            this._tipBox.addChild(this._tipText = new Laya.Text());
-            this._tipText.x = this._tipText.y = 5;
-            this._tipText.color = TipManager.tipTextColor;
-            this._defaultTipHandler = this._showDefaultTip;
-            Laya.ILaya.stage.on(UIEvent.SHOW_TIP, this, this._onStageShowTip);
-            Laya.ILaya.stage.on(UIEvent.HIDE_TIP, this, this._onStageHideTip);
+            super(), this._tipBox = new n(), this._tipBox.addChild(this._tipText = new e.Text()), 
+            this._tipText.x = this._tipText.y = 5, this._tipText.color = W.tipTextColor, this._defaultTipHandler = this._showDefaultTip, 
+            e.ILaya.stage.on(r.SHOW_TIP, this, this._onStageShowTip), e.ILaya.stage.on(r.HIDE_TIP, this, this._onStageHideTip), 
             this.zOrder = 1100;
         }
-        _onStageHideTip(e) {
-            Laya.ILaya.timer.clear(this, this._showTip);
-            this.closeAll();
-            this.removeSelf();
+        _onStageHideTip(t) {
+            e.ILaya.timer.clear(this, this._showTip), this.closeAll(), this.removeSelf();
         }
-        _onStageShowTip(data) {
-            Laya.ILaya.timer.once(TipManager.tipDelay, this, this._showTip, [data], true);
+        _onStageShowTip(t) {
+            e.ILaya.timer.once(W.tipDelay, this, this._showTip, [ t ], !0);
         }
-        _showTip(tip) {
-            if (typeof(tip) == 'string') {
-                var text = String(tip);
-                if (Boolean(text)) {
-                    this._defaultTipHandler(text);
-                }
-            } else if (tip instanceof Laya.Handler) {
-                tip.run();
-            } else if (tip instanceof Function) {
-                tip.apply();
-            } {
-                Laya.ILaya.stage.on(Laya.Event.MOUSE_MOVE, this, this._onStageMouseMove);
-                Laya.ILaya.stage.on(Laya.Event.MOUSE_DOWN, this, this._onStageMouseDown);
-            }
+        _showTip(t) {
+            if ("string" == typeof t) {
+                var s = String(t);
+                Boolean(s) && this._defaultTipHandler(s);
+            } else t instanceof e.Handler ? t.run() : t instanceof Function && t.apply();
+            e.ILaya.stage.on(e.Event.MOUSE_MOVE, this, this._onStageMouseMove), e.ILaya.stage.on(e.Event.MOUSE_DOWN, this, this._onStageMouseDown), 
             this._onStageMouseMove(null);
         }
-        _onStageMouseDown(e) {
+        _onStageMouseDown(t) {
             this.closeAll();
         }
-        _onStageMouseMove(e) {
-            this._showToStage(this, TipManager.offsetX, TipManager.offsetY);
+        _onStageMouseMove(t) {
+            this._showToStage(this, W.offsetX, W.offsetY);
         }
-        _showToStage(dis, offX = 0, offY = 0) {
-            var rec = dis.getBounds();
-            dis.x = Laya.ILaya.stage.mouseX + offX;
-            dis.y = Laya.ILaya.stage.mouseY + offY;
-            if (dis._x + rec.width > Laya.ILaya.stage.width) {
-                dis.x -= rec.width + offX;
-            }
-            if (dis._y + rec.height > Laya.ILaya.stage.height) {
-                dis.y -= rec.height + offY;
-            }
+        _showToStage(t, s = 0, i = 0) {
+            var h = t.getBounds();
+            t.x = e.ILaya.stage.mouseX + s, t.y = e.ILaya.stage.mouseY + i, t._x + h.width > e.ILaya.stage.width && (t.x -= h.width + s), 
+            t._y + h.height > e.ILaya.stage.height && (t.y -= h.height + i);
         }
         closeAll() {
-            Laya.ILaya.timer.clear(this, this._showTip);
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_MOVE, this, this._onStageMouseMove);
-            Laya.ILaya.stage.off(Laya.Event.MOUSE_DOWN, this, this._onStageMouseDown);
-            this.removeChildren();
+            e.ILaya.timer.clear(this, this._showTip), e.ILaya.stage.off(e.Event.MOUSE_MOVE, this, this._onStageMouseMove), 
+            e.ILaya.stage.off(e.Event.MOUSE_DOWN, this, this._onStageMouseDown), this.removeChildren();
         }
-        showDislayTip(tip) {
-            this.addChild(tip);
-            this._showToStage(this);
-            Laya.ILaya.stage.addChild(this);
+        showDislayTip(t) {
+            this.addChild(t), this._showToStage(this), e.ILaya.stage.addChild(this);
         }
-        _showDefaultTip(text) {
-            this._tipText.text = text;
-            var g = this._tipBox.graphics;
-            g.clear(true);
-            g.drawRect(0, 0, this._tipText.width + 10, this._tipText.height + 10, TipManager.tipBackColor);
-            this.addChild(this._tipBox);
-            this._showToStage(this);
-            Laya.ILaya.stage.addChild(this);
+        _showDefaultTip(t) {
+            this._tipText.text = t;
+            var s = this._tipBox.graphics;
+            s.clear(!0), s.drawRect(0, 0, this._tipText.width + 10, this._tipText.height + 10, W.tipBackColor), 
+            this.addChild(this._tipBox), this._showToStage(this), e.ILaya.stage.addChild(this);
         }
         get defaultTipHandler() {
             return this._defaultTipHandler;
         }
-        set defaultTipHandler(value) {
-            this._defaultTipHandler = value;
+        set defaultTipHandler(t) {
+            this._defaultTipHandler = t;
         }
     }
-    TipManager.offsetX = 10;
-    TipManager.offsetY = 15;
-    TipManager.tipTextColor = "#ffffff";
-    TipManager.tipBackColor = "#111111";
-    TipManager.tipDelay = 200;
-    Laya.ILaya.regClass(TipManager);
-    Laya.ClassUtils.regClass("laya.ui.TipManager", TipManager);
-    Laya.ClassUtils.regClass("Laya.TipManager", TipManager);
-
-    class UILib {
-        static __init__() {}
-    }
-
-    class WXOpenDataViewer extends UIComponent {
+    W.offsetX = 10, W.offsetY = 15, W.tipTextColor = "#ffffff", W.tipBackColor = "#111111", 
+    W.tipDelay = 200, e.ILaya.regClass(W), e.ClassUtils.regClass("laya.ui.TipManager", W), 
+    e.ClassUtils.regClass("Laya.TipManager", W);
+    class V extends n {
         constructor() {
-            super();
-            this._width = this._height = 200;
-            var tex = new Laya.Texture();
-            tex.bitmap = new Laya.Texture2D();
-            this.texture = tex;
+            super(), this._width = this._height = 200;
+            var t = new e.Texture();
+            t.bitmap = new e.Texture2D(), this.texture = t;
         }
         onEnable() {
             this.postMsg({
                 type: "display",
-                rate: Laya.Laya.stage.frameRate
-            });
-            if (window.wx && window.sharedCanvas)
-                Laya.Laya.timer.frameLoop(1, this, this._onLoop);
+                rate: e.Laya.stage.frameRate
+            }), window.wx && window.sharedCanvas && e.Laya.timer.frameLoop(1, this, this._onLoop);
         }
         onDisable() {
             this.postMsg({
                 type: "undisplay"
-            });
-            Laya.Laya.timer.clear(this, this._onLoop);
+            }), e.Laya.timer.clear(this, this._onLoop);
         }
         _onLoop() {
             this.texture.bitmap.loadImageSource(window.sharedCanvas);
         }
-        set width(value) {
-            super.width = value;
-            if (window.sharedCanvas)
-                window.sharedCanvas.width = value;
-            this.callLater(this._postMsg);
+        set width(t) {
+            super.width = t, window.sharedCanvas && (window.sharedCanvas.width = t), this.callLater(this._postMsg);
         }
         get width() {
             return super.width;
         }
-        set height(value) {
-            super.height = value;
-            if (window.sharedCanvas)
-                window.sharedCanvas.height = value;
-            this.callLater(this._postMsg);
+        set height(t) {
+            super.height = t, window.sharedCanvas && (window.sharedCanvas.height = t), this.callLater(this._postMsg);
         }
         get height() {
             return super.height;
         }
-        set x(value) {
-            super.x = value;
-            this.callLater(this._postMsg);
+        set x(t) {
+            super.x = t, this.callLater(this._postMsg);
         }
         get x() {
             return super.x;
         }
-        set y(value) {
-            super.y = value;
-            this.callLater(this._postMsg);
+        set y(t) {
+            super.y = t, this.callLater(this._postMsg);
         }
         get y() {
             return super.y;
         }
         _postMsg() {
-            var mat = new Laya.Matrix();
-            mat.translate(this.x, this.y);
-            var stage = Laya.Laya.stage;
-            mat.scale(stage._canvasTransform.getScaleX() * this.globalScaleX * stage.transform.getScaleX(), stage._canvasTransform.getScaleY() * this.globalScaleY * stage.transform.getScaleY());
+            var t = new e.Matrix();
+            t.translate(this.x, this.y);
+            var s = e.Laya.stage;
+            t.scale(s._canvasTransform.getScaleX() * this.globalScaleX * s.transform.getScaleX(), s._canvasTransform.getScaleY() * this.globalScaleY * s.transform.getScaleY()), 
             this.postMsg({
                 type: "changeMatrix",
-                a: mat.a,
-                b: mat.b,
-                c: mat.c,
-                d: mat.d,
-                tx: mat.tx,
-                ty: mat.ty,
+                a: t.a,
+                b: t.b,
+                c: t.c,
+                d: t.d,
+                tx: t.tx,
+                ty: t.ty,
                 w: this.width,
                 h: this.height
             });
         }
-        postMsg(msg) {
-            if (window.wx && window.wx.getOpenDataContext) {
-                var openDataContext = window.wx.getOpenDataContext();
-                openDataContext.postMessage(msg);
-            }
+        postMsg(t) {
+            window.wx && window.wx.getOpenDataContext && window.wx.getOpenDataContext().postMessage(t);
         }
     }
-    Laya.ILaya.regClass(WXOpenDataViewer);
-    Laya.ClassUtils.regClass("laya.ui.WXOpenDataViewer", WXOpenDataViewer);
-    Laya.ClassUtils.regClass("Laya.WXOpenDataViewer", WXOpenDataViewer);
-
-    exports.AdvImage = AdvImage;
-    exports.AutoBitmap = AutoBitmap;
-    exports.Box = Box;
-    exports.Button = Button;
-    exports.CheckBox = CheckBox;
-    exports.Clip = Clip;
-    exports.ColorPicker = ColorPicker;
-    exports.ComboBox = ComboBox;
-    exports.Dialog = Dialog;
-    exports.DialogManager = DialogManager;
-    exports.FontClip = FontClip;
-    exports.HBox = HBox;
-    exports.HScrollBar = HScrollBar;
-    exports.HSlider = HSlider;
-    exports.IUI = IUI;
-    exports.Image = Image;
-    exports.Label = Label;
-    exports.LayoutBox = LayoutBox;
-    exports.List = List;
-    exports.Panel = Panel;
-    exports.ProgressBar = ProgressBar;
-    exports.Radio = Radio;
-    exports.RadioGroup = RadioGroup;
-    exports.ScaleBox = ScaleBox;
-    exports.ScrollBar = ScrollBar;
-    exports.Slider = Slider;
-    exports.Styles = Styles;
-    exports.Tab = Tab;
-    exports.TextArea = TextArea;
-    exports.TextInput = TextInput;
-    exports.TipManager = TipManager;
-    exports.Tree = Tree;
-    exports.UIComponent = UIComponent;
-    exports.UIConfig = UIConfig;
-    exports.UIEvent = UIEvent;
-    exports.UIGroup = UIGroup;
-    exports.UILib = UILib;
-    exports.UIUtils = UIUtils;
-    exports.VBox = VBox;
-    exports.VScrollBar = VScrollBar;
-    exports.VSlider = VSlider;
-    exports.View = View;
-    exports.ViewStack = ViewStack;
-    exports.WXOpenDataViewer = WXOpenDataViewer;
-    exports.Widget = Widget;
-
-}(window.Laya = window.Laya || {}, Laya));
+    e.ILaya.regClass(V), e.ClassUtils.regClass("laya.ui.WXOpenDataViewer", V), e.ClassUtils.regClass("Laya.WXOpenDataViewer", V), 
+    t.AdvImage = _, t.AutoBitmap = h, t.Box = c, t.Button = d, t.CheckBox = u, t.Clip = g, 
+    t.ColorPicker = p, t.ComboBox = y, t.Dialog = G, t.DialogManager = X, t.FontClip = P, 
+    t.HBox = H, t.HScrollBar = S, t.HSlider = T, t.IUI = R, t.Image = o, t.Label = C, 
+    t.LayoutBox = A, t.List = b, t.Panel = z, t.ProgressBar = w, t.Radio = x, t.RadioGroup = E, 
+    t.ScaleBox = O, t.ScrollBar = m, t.Slider = v, t.Styles = i, t.Tab = I, t.TextArea = M, 
+    t.TextInput = k, t.TipManager = W, t.Tree = D, t.UIComponent = n, t.UIConfig = s, 
+    t.UIEvent = r, t.UIGroup = L, t.UILib = class {
+        static __init__() {}
+    }, t.UIUtils = l, t.VBox = N, t.VScrollBar = f, t.VSlider = U, t.View = Y, t.ViewStack = B, 
+    t.WXOpenDataViewer = V, t.Widget = a;
+}(window.Laya = window.Laya || {}, Laya);
