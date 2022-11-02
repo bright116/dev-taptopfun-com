@@ -2707,7 +2707,7 @@ function _0x418f() {
         'youling/main/view/runtime/gadgets/YLSpecialRewardRTItem.ts',
         'youling/common/component/ad/runtime/YLADGameRTBanner2.ts',
         'scaleMode',
-        'showall',
+        'exactfit',
         'screenMode',
         'alignV',
         'middle',
