@@ -1,0 +1,52 @@
+function _0x241c(_0x409847, _0x2ecf3f) {
+    var _0x22dee1 = _0x22de();
+    return _0x241c = function (_0x241c8a, _0x3c9ca8) {
+        _0x241c8a = _0x241c8a - 0x1c2;
+        var _0x54318d = _0x22dee1[_0x241c8a];
+        return _0x54318d;
+    }, _0x241c(_0x409847, _0x2ecf3f);
+}
+var _0x142b25 = _0x241c;
+function _0x22de() {
+    var _0x3af364 = [
+        'DEBUG',
+        'ONLINE',
+        'PRINT_CLICK',
+        'LOAD_DATA_JS',
+        'setDebugMode',
+        'show',
+        '649405yRBaaM',
+        '1021398eIrtjF',
+        '1049958DRESMx',
+        '167784mbyYhJ',
+        '1918845hhCXrN',
+        '3877290eJYXXS',
+        '4163572FfTkQY',
+        'ulee',
+        'Vector3',
+        'Pool',
+        'Handler',
+        'VERSION'
+    ];
+    _0x22de = function () {
+        return _0x3af364;
+    };
+    return _0x22de();
+}
+(function (_0xaa3983, _0x4169d3) {
+    var _0x5971ac = _0x241c, _0x5285f9 = _0xaa3983();
+    while (!![]) {
+        try {
+            var _0xe122c6 = -parseInt(_0x5971ac(0x1c2)) / 0x1 + parseInt(_0x5971ac(0x1c3)) / 0x2 + -parseInt(_0x5971ac(0x1c4)) / 0x3 + -parseInt(_0x5971ac(0x1c5)) / 0x4 + -parseInt(_0x5971ac(0x1c6)) / 0x5 + parseInt(_0x5971ac(0x1c7)) / 0x6 + parseInt(_0x5971ac(0x1c8)) / 0x7;
+            if (_0xe122c6 === _0x4169d3)
+                break;
+            else
+                _0x5285f9['push'](_0x5285f9['shift']());
+        } catch (_0x50351d) {
+            _0x5285f9['push'](_0x5285f9['shift']());
+        }
+    }
+}(_0x22de, 0x4fbcc), (window[_0x142b25(0x1c9)] = {}, ulee['io'] = {}, window['G'] = {}, window['D'] = {}, window['Vector3'] = Laya[_0x142b25(0x1ca)], window[_0x142b25(0x1cb)] = Laya[_0x142b25(0x1cb)], window[_0x142b25(0x1cc)] = Laya[_0x142b25(0x1cc)], G[_0x142b25(0x1cd)] = 0x1, G[_0x142b25(0x1ce)] = !0x1, G[_0x142b25(0x1cf)] = !0x1, G[_0x142b25(0x1d0)] = !0x1, G[_0x142b25(0x1d1)] = !0x0, G[_0x142b25(0x1d2)] = function () {
+    var _0x4d5fdb = _0x142b25;
+    G[_0x4d5fdb(0x1d0)] = !0x0, G[_0x4d5fdb(0x1ce)] = !0x0, Laya['Stat'][_0x4d5fdb(0x1d3)](0x0, 0x0);
+}));
