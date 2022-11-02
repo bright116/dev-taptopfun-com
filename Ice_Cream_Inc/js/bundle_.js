@@ -7297,7 +7297,7 @@
                 e("Core/UIModule/Common/UITips.ts", Ge), e("Core/UIModule/Common/TipsItem.ts", De);
         }
     }
-    Ee.width = 720, Ee.height = 1280, Ee.scaleMode = "showall", Ee.screenMode = "vertical",
+    Ee.width = 720, Ee.height = 1280, Ee.scaleMode = "exactfit", Ee.screenMode = "vertical",
         Ee.alignV = "middle", Ee.alignH = "center", Ee.startScene = "Loading.scene", Ee.sceneRoot = "",
         Ee.debug = !1, Ee.stat = !1, Ee.physicsDebug = !1, Ee.exportSceneToJson = !0, Ee.init();
     new class {
