@@ -1,0 +1,91 @@
+{
+    "version": "0.0.1",
+    "appId": "wx9bd4483113d533eb",
+    "subpackage": [
+        "sound",
+        "music",
+        "loadRes",
+        "Textures",
+        "ad"
+    ],
+    "configList": [
+        "config/level.json"
+    ],
+    "fontList": [],
+    "baseResList": [],
+    "bgm": "music/bgm.mp3",
+    "soundClick": "sound/button.mp3",
+    "soundViewOpen": "sound/popup.mp3",
+    "default3DScene": "GameScene",
+    "viewMap": {
+        "loading": "view/comm/LoadingPage.scene",
+        "home": "view/comm/HomePage.scene",
+        "playing": "view/game/GamePage.scene",
+        "relive": "view/comm/RelivePage.scene",
+        "score": "view/comm/WinPage.scene",
+        "store": "view/game/StorePage.scene",
+        "sampleSack": "view/ad/SampleSackPage.scene",
+        "push": "view/ad/PushPage.scene",
+        "treasure": "view/ad/TreasurePage.scene"
+    },
+    "useWebApi": false,
+    "useWebAdApi": false,
+    "platformType": "wx",
+    "webApiSign": "wcfz6_api_secret",
+    "webApiMap": {
+        "login": "https://wcfz6.zxmn2018.com/Zhise/User/login",
+        "authorize": "",
+        "gameCfg": "https://wcfz6.zxmn2018.com/Zhise/Game/config",
+        "updateInfo": "https://wcfz6.zxmn2018.com/Zhise/User/update",
+        "gameStart": "https://wcfz6.zxmn2018.com/Zhise/Game/start",
+        "gameEnd": "https://wcfz6.zxmn2018.com/Zhise/Game/end",
+        "worldRank": null,
+        "logVideo": "https://wcfz6.zxmn2018.com/Zhise/Game/video"
+    },
+    "defaultCfg": {
+        "playerInfo": {
+            "user_id": "1",
+            "is_new": 1,
+            "level_id": 1,
+            "gold": 0,
+            "goods_id": [
+                0
+            ],
+            "goods_ids": [
+                [
+                    0
+                ],
+                [
+                    1
+                ]
+            ]
+        },
+        "gameSetting": {
+            "game": [
+                {
+                    "offsetCamera": 2,
+                    "cutSpeed": 1,
+                    "enterCuttingTime": 400,
+                    "leaveCuttingTime": 400,
+                    "moveSpeed": 0.1,
+                    "shakeType": 1,
+                    "shakeSpeed": 300,
+                    "lightShadow": 1,
+                    "moveSpeed2": 0.04,
+                    "bHideClothes": 1
+                }
+            ]
+        },
+        "levelData": {
+            "rewardGold": 10
+        }
+    },
+    "storeCfg": {
+        "typeMap": [
+            "icon/",
+            "icon/",
+            "icon/"
+        ],
+        "exchangeRate": 500
+    }
+}
