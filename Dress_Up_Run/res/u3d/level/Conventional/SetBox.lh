@@ -1,0 +1,341 @@
+{
+    "version": "LAYAHIERARCHY:02",
+    "data": {
+        "type": "Sprite3D",
+        "instanceID": 167,
+        "props": {
+            "name": "SetBox",
+            "active": true,
+            "isStatic": false,
+            "layer": 0,
+            "position": [
+                0,
+                0,
+                0
+            ],
+            "rotation": [
+                0,
+                0,
+                0,
+                -1
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        },
+        "components": [],
+        "child": [
+            {
+                "type": "Sprite3D",
+                "instanceID": 168,
+                "props": {
+                    "name": "Toy",
+                    "active": true,
+                    "isStatic": false,
+                    "layer": 0,
+                    "position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "rotation": [
+                        0,
+                        0,
+                        0,
+                        -1
+                    ],
+                    "scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "components": [],
+                "child": [
+                    {
+                        "type": "Sprite3D",
+                        "instanceID": 169,
+                        "props": {
+                            "name": "TargetDoll",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                -0.283,
+                                0.01,
+                                -0.3
+                            ],
+                            "rotation": [
+                                0,
+                                1,
+                                0,
+                                0
+                            ],
+                            "scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    },
+                    {
+                        "type": "MeshSprite3D",
+                        "instanceID": 170,
+                        "props": {
+                            "name": "Box",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "rotation": [
+                                0,
+                                0.7071067,
+                                0.7071068,
+                                0
+                            ],
+                            "scale": [
+                                0.83,
+                                1,
+                                0.87
+                            ],
+                            "meshPath": "Assets/Meshs/Box-Box.lm",
+                            "enableRender": true,
+                            "receiveShadows": true,
+                            "castShadow": false,
+                            "materials": [
+                                {
+                                    "path": "Assets/Materials/ToyBox.lmat"
+                                }
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    },
+                    {
+                        "type": "MeshSprite3D",
+                        "instanceID": 171,
+                        "props": {
+                            "name": "DoorRight",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                0.6224999,
+                                0,
+                                0.551
+                            ],
+                            "rotation": [
+                                1.986124E-07,
+                                -0.7071068,
+                                -0.7071068,
+                                -1.986124E-07
+                            ],
+                            "scale": [
+                                0.8299998,
+                                1,
+                                0.8700001
+                            ],
+                            "meshPath": "Assets/Meshs/DoorRight-DoorRight.lm",
+                            "enableRender": true,
+                            "receiveShadows": true,
+                            "castShadow": false,
+                            "materials": [
+                                {
+                                    "path": "Assets/Materials/ToyBox.lmat"
+                                }
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    },
+                    {
+                        "type": "MeshSprite3D",
+                        "instanceID": 172,
+                        "props": {
+                            "name": "DoorLeft",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                -0.6224999,
+                                0,
+                                0.551
+                            ],
+                            "rotation": [
+                                0,
+                                0.7071068,
+                                0.7071068,
+                                0
+                            ],
+                            "scale": [
+                                0.8299998,
+                                1,
+                                0.8700001
+                            ],
+                            "meshPath": "Assets/Meshs/DoorLeft-DoorLeft.lm",
+                            "enableRender": true,
+                            "receiveShadows": true,
+                            "castShadow": false,
+                            "materials": [
+                                {
+                                    "path": "Assets/Materials/ToyBox.lmat"
+                                }
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "type": "Sprite3D",
+                "instanceID": 173,
+                "props": {
+                    "name": "Positions",
+                    "active": true,
+                    "isStatic": false,
+                    "layer": 0,
+                    "position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "rotation": [
+                        0,
+                        0,
+                        0,
+                        -1
+                    ],
+                    "scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "components": [],
+                "child": [
+                    {
+                        "type": "Sprite3D",
+                        "instanceID": 174,
+                        "props": {
+                            "name": "0",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                0.06,
+                                0.267,
+                                0
+                            ],
+                            "rotation": [
+                                0,
+                                1,
+                                0,
+                                0
+                            ],
+                            "scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    },
+                    {
+                        "type": "Sprite3D",
+                        "instanceID": 175,
+                        "props": {
+                            "name": "1",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                0.229,
+                                1.081,
+                                0
+                            ],
+                            "rotation": [
+                                0,
+                                1,
+                                0,
+                                0
+                            ],
+                            "scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    },
+                    {
+                        "type": "Sprite3D",
+                        "instanceID": 176,
+                        "props": {
+                            "name": "2",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                0.222,
+                                1.713,
+                                0
+                            ],
+                            "rotation": [
+                                0,
+                                1,
+                                0,
+                                0
+                            ],
+                            "scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    },
+                    {
+                        "type": "Sprite3D",
+                        "instanceID": 177,
+                        "props": {
+                            "name": "3",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "rotation": [
+                                0,
+                                0,
+                                0,
+                                -1
+                            ],
+                            "scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    }
+                ]
+            }
+        ]
+    }
+}

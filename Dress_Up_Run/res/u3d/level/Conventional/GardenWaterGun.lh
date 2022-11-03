@@ -1,0 +1,121 @@
+{
+    "version": "LAYAHIERARCHY:02",
+    "data": {
+        "type": "Sprite3D",
+        "instanceID": 7,
+        "props": {
+            "name": "GardenWaterGun",
+            "active": true,
+            "isStatic": false,
+            "layer": 0,
+            "position": [
+                -1.5,
+                0.75,
+                75
+            ],
+            "rotation": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "scale": [
+                1.5,
+                1.5,
+                1.5
+            ]
+        },
+        "components": [
+            {
+                "type": "PhysicsCollider",
+                "restitution": 0,
+                "friction": 0.5,
+                "rollingFriction": 0,
+                "shapes": [
+                    {
+                        "type": "BoxColliderShape",
+                        "center": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "size": [
+                            0.4,
+                            1,
+                            0.5
+                        ]
+                    }
+                ],
+                "isTrigger": true
+            }
+        ],
+        "child": [
+            {
+                "type": "Sprite3D",
+                "instanceID": 8,
+                "props": {
+                    "name": "Tools",
+                    "active": true,
+                    "isStatic": false,
+                    "layer": 0,
+                    "position": [
+                        0.029,
+                        -0.233,
+                        0.071
+                    ],
+                    "rotation": [
+                        0,
+                        0,
+                        -0.4226183,
+                        -0.9063079
+                    ],
+                    "scale": [
+                        1.5,
+                        1.5,
+                        1.5
+                    ]
+                },
+                "components": [],
+                "child": [
+                    {
+                        "type": "MeshSprite3D",
+                        "instanceID": 9,
+                        "props": {
+                            "name": "WaterPistol",
+                            "active": true,
+                            "isStatic": false,
+                            "layer": 0,
+                            "position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "rotation": [
+                                7.54979E-08,
+                                1,
+                                2.185569E-08,
+                                1.711291E-15
+                            ],
+                            "scale": [
+                                1,
+                                1,
+                                1
+                            ],
+                            "meshPath": "Assets/Meshs/WaterPistol-WaterPistol.lm",
+                            "enableRender": true,
+                            "receiveShadows": true,
+                            "castShadow": true,
+                            "materials": [
+                                {
+                                    "path": "Assets/Materials/WaterGun1.lmat"
+                                }
+                            ]
+                        },
+                        "components": [],
+                        "child": []
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+
+{
+    "front": "1.png",
+    "back": "1.png",
+    "left": "1.png",
+    "right": "1.png",
+    "up": "1_down.png",
+    "down": "1_down.png",
+    "size":512
+}

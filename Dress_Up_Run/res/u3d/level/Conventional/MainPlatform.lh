@@ -1,0 +1,63 @@
+{
+    "version": "LAYAHIERARCHY:02",
+    "data": {
+        "type": "MeshSprite3D",
+        "instanceID": 22,
+        "props": {
+            "name": "MainPlatform",
+            "active": true,
+            "isStatic": false,
+            "layer": 10,
+            "position": [
+                0,
+                -1,
+                92
+            ],
+            "rotation": [
+                0.7071068,
+                0,
+                0,
+                -0.7071068
+            ],
+            "scale": [
+                1.5,
+                95.00002,
+                1
+            ],
+            "meshPath": "Assets/Meshs/Cube_d9-Cube_d9.lm",
+            "enableRender": true,
+            "receiveShadows": true,
+            "castShadow": true,
+            "materials": [
+                {
+                    "path": "Assets/Materials/Floor.lmat"
+                }
+            ]
+        },
+        "components": [
+            {
+                "type": "PhysicsCollider",
+                "restitution": 0,
+                "friction": 0.5,
+                "rollingFriction": 0,
+                "shapes": [
+                    {
+                        "type": "BoxColliderShape",
+                        "center": [
+                            2.980232E-08,
+                            2.980233E-08,
+                            0
+                        ],
+                        "size": [
+                            2,
+                            2,
+                            2
+                        ]
+                    }
+                ],
+                "isTrigger": true
+            }
+        ],
+        "child": []
+    }
+}

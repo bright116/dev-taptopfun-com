@@ -1,0 +1,95 @@
+{
+    "SetBox5": [
+        {
+            "name": "DoorRight",
+            "x": 0.675,
+            "y": 0,
+            "z": 0.551,
+            "rotX": 0,
+            "rotY": 0.7071068,
+            "rotZ": 0.7071068,
+            "rotW": 0,
+            "scaleX": 0.8999999,
+            "scaleY": 1,
+            "scaleZ": 0.8700001
+        },
+        {
+            "name": "DoorLeft",
+            "x": -0.675,
+            "y": 0,
+            "z": 0.551,
+            "rotX": 0,
+            "rotY": 0.7071068,
+            "rotZ": 0.7071068,
+            "rotW": 0,
+            "scaleX": 0.8999999,
+            "scaleY": 1,
+            "scaleZ": 0.8700001
+        },
+        {
+            "name": "Box",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "rotX": 0,
+            "rotY": 0.7071067,
+            "rotZ": 0.7071068,
+            "rotW": 0,
+            "scaleX": 0.9,
+            "scaleY": 1,
+            "scaleZ": 0.87
+        },
+        {
+            "name": "0",
+            "x": 0.06999993,
+            "y": 0.503,
+            "z": 0.5,
+            "rotX": 0,
+            "rotY": 1,
+            "rotZ": 0,
+            "rotW": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1
+        },
+        {
+            "name": "1",
+            "x": 0.14,
+            "y": 1.184,
+            "z": 0.5,
+            "rotX": 0,
+            "rotY": 1,
+            "rotZ": 0,
+            "rotW": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1
+        },
+        {
+            "name": "2",
+            "x": 0.05299997,
+            "y": 1.672,
+            "z": 0.5,
+            "rotX": 0,
+            "rotY": 1,
+            "rotZ": 0,
+            "rotW": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1
+        },
+        {
+            "name": "3",
+            "x": -0.3630002,
+            "y": 1.364,
+            "z": 0.5,
+            "rotX": 0,
+            "rotY": 0.8949898,
+            "rotZ": 0,
+            "rotW": 0.4460867,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1
+        }
+    ]
+}

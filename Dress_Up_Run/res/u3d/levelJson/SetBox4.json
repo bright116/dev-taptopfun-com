@@ -1,0 +1,56 @@
+{
+    "SetBox4": [
+        {
+            "name": "DoorRight",
+            "x": 0.675,
+            "y": 0,
+            "z": 0.551,
+            "rotX": 0,
+            "rotY": 0.7071068,
+            "rotZ": 0.7071068,
+            "rotW": 0,
+            "scaleX": 0.8999999,
+            "scaleY": 1,
+            "scaleZ": 0.8700001
+        },
+        {
+            "name": "DoorLeft",
+            "x": -0.675,
+            "y": 0,
+            "z": 0.551,
+            "rotX": 0,
+            "rotY": 0.7071068,
+            "rotZ": 0.7071068,
+            "rotW": 0,
+            "scaleX": 0.8999999,
+            "scaleY": 1,
+            "scaleZ": 0.8700001
+        },
+        {
+            "name": "Box",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "rotX": 0,
+            "rotY": 0.7071067,
+            "rotZ": 0.7071068,
+            "rotW": 0,
+            "scaleX": 0.9,
+            "scaleY": 1,
+            "scaleZ": 0.87
+        },
+        {
+            "name": "TargetDoll",
+            "x": 0,
+            "y": 0.01,
+            "z": -0.3,
+            "rotX": 0,
+            "rotY": 1,
+            "rotZ": 0,
+            "rotW": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1
+        }
+    ]
+}
