@@ -1,0 +1,288 @@
+{
+    "publishVer":"2.0.2",
+    "adCfg": {
+        "zs_ad_jump_num": 2,
+        "zs_banner_banner_time": 2000,
+        "zs_banner_city": 1,
+        "zs_banner_horizontal_enable": 1,
+        "zs_banner_move_time": "500",
+        "zs_banner_refresh_time": 30000,
+        "zs_banner_rotate_id1": "",
+        "zs_banner_rotate_id2": "",
+        "zs_banner_rotate_id3": "",
+        "zs_banner_show_number": "2",
+        "zs_banner_show_time": 1,
+        "zs_banner_system": "",
+        "zs_banner_text_time": 2000,
+        "zs_banner_vertical_enable": 1,
+        "zs_click_award_add": "0.1",
+        "zs_click_award_back": "0.005",
+        "zs_click_award_city": 1,
+        "zs_click_award_money": "10",
+        "zs_click_award_num": "[1,2,3,4,5]",
+        "zs_click_award_percent": "[0.4,0.7]",
+        "zs_click_award_since": "1",
+        "zs_click_award_system": "",
+        "zs_click_award_time": 1,
+        "zs_finish_city": 1,
+        "zs_finish_jump": 0,
+        "zs_finish_time": 1,
+        "zs_full_screen_ad": 1,
+        "zs_full_screen_adunit": "",
+        "zs_full_screen_city": 1,
+        "zs_full_screen_jump": 0,
+        "zs_full_screen_rotate": "1",
+        "zs_full_screen_time": 1,
+        "zs_history_list_jump": "1",
+        "zs_jump_refesh": 4000,
+        "zs_jump_style": 0,
+        "zs_jump_switch": 1,
+        "zs_number": "1.0",
+        "zs_ready_click_num": "5",
+        "zs_recommend_id1": "",
+        "zs_recommend_id2": "",
+        "zs_recommend_id3": "",
+        "zs_recommend_id4": "",
+        "zs_revive_click_num": 0,
+        "zs_revive_countdown": 9,
+        "zs_revive_share_num": 0,
+        "zs_revive_video_num": -1,
+        "zs_share_img": "这个是分享图片地址",
+        "zs_share_title": "这个是分享标题",
+        "zs_shield_gdt_export": "1",
+        "zs_switch": 1,
+        "zs_share": 0,
+        "zs_unmiss_text_time": "3000",
+        "zs_version": "1.0.0",
+        "zs_video_adunit": "adunit-26870e8de509e14d"
+    },
+    "iosFilterAppIds": [],  
+    "bannerCfg": {
+        "victory": {
+            "showData": {
+                "isDelay": true
+            }
+        },
+        "revive": {
+            "showData": {
+                "isDelay": true
+            }
+        },
+        "home": {
+            "showData": {
+                
+            }
+        },
+        "freeSkin": {
+            "showData": {
+                "isDelay": true
+            }
+        },
+        "match": {
+            "showData": {
+                "unAutoShow": true
+            }
+        },
+        "disk": {
+            "showData": {
+                "unAutoShow": true
+            }
+        },
+        "ListAd": {
+            "lockHide": true
+        }
+    },
+    "exportGameCfg": {
+        "home":[
+            {       
+                "adType": "promotion",
+                "isClockPendulum":true,
+                "viewUrl": "prefab/wechat/ExportHorizontalList_2.json",
+                "parentRoot":"topUI",
+                "x":0,
+                "y":80,
+                "scriptType":"ExportScrollH",
+                "checkKey": "zs_game_star_jump_switch"
+            },
+            {
+                "viewUrl": "prefab/wechat/FakeExitButton.json",
+                "parentRoot": "topUI",
+                "x": 18,
+                "y": 18,
+                "scriptType": "FakeExitBtn",
+                "checkKey": "zs_game_star_jump_switch"
+            },
+            {       
+                "adType": "promotion",
+                "isClockPendulum":true,
+                "viewUrl": "prefab/wechat/ExportShakeBox_3.json",
+                "parentRoot":"bottomUI",
+                "x":0,
+                "y":-952.5,
+                "scriptType":"ShakeExportBox",
+                "checkKey": "zs_game_star_jump_switch"
+            },
+            {
+                "viewUrl": "prefab/wechat/ExportLeftPop.json",
+                "parentRoot": "bottomUI",
+                "x": -525,
+                "y": -450,
+                "scriptType": "ExportLeftPop",
+                "adType": "promotion",
+                "readonly": false,
+                "position": "侧拉栏导出",
+                "checkKey": "zs_game_star_jump_switch",
+                "autoPop":true
+            }
+        ],
+        "gamev":[
+            {
+                "viewUrl": "prefab/wechat/FakeExitButton.json",
+                "parentRoot": "topUI",
+                "x": 18,
+                "y": 18,
+                "scriptType": "FakeExitBtn",
+                "checkKey": "zs_game_star_jump_switch"
+            },
+            {       
+                "adType": "promotion",
+                "isClockPendulum":true,
+                "viewUrl": "prefab/wechat/ExportHorizontalList_2.json",
+                "parentRoot":"topUI",
+                "x":0,
+                "y":80,
+                "scriptType":"ExportScrollH",
+                "checkKey": "zs_game_star_jump_switch"
+            },
+            {       
+                "adType": "promotion",
+                "isClockPendulum":true,
+                "viewUrl": "prefab/wechat/ExportShakeBox_3.json",
+                "parentRoot":"bottomUI",
+                "x":0,
+                "y":-952.5,
+                "scriptType":"ShakeExportBox",
+                "checkKey": "zs_game_star_jump_switch"
+            }
+        ],
+        "FloatAd": [
+            {
+                "adType": "promotion",
+                "readonly": true
+            }
+        ],
+        "FullAd": [
+            {
+                "adType": "promotion",
+                "readonly": true
+            }
+        ],
+        "FullAd_1": [
+            {
+                "adType": "promotion",
+                "readonly": true
+            }
+        ],
+        "KnockEgg":[
+            {
+                "adType": "promotion",
+                "viewUrl": "prefab/wechat/ExportLikeList.json",
+                "parentRoot":"middleUI",
+                "x":30,
+                "y":880,
+                "scriptType":"ExportScrollH"
+            }
+        ],
+        "victory": [
+            {
+                "adType": "promotion",
+                "viewUrl": "prefab/wechat/ExportKnock.json",
+                "parentRoot": "middleUI",
+                "x": 38,
+                "y": -352,
+                "scriptType": "ExportKnock",
+                "checkKey": "zs_finish_jump"
+            },
+            {
+                "adType": "promotion",
+                "viewUrl": "prefab/wechat/InviteBox.json",
+                "parentRoot": "topUI",
+                "x": 18,
+                "y": 20,
+                "scriptType": "InviteBox",
+                "checkKey": "zs_finish_jump",
+                "jsonUrl": "config/nickname.json"
+            },
+            {
+                "viewUrl": "prefab/wechat/FakeExitButton.json",
+                "parentRoot": "topUI",
+                "x": 18,
+                "y": 18,
+                "scriptType": "FakeExitBtn",
+                "checkKey": "zs_game_star_jump_switch"
+            }
+        ],
+        "revive": [
+            {
+                "adType": "promotion",
+                "viewUrl": "prefab/wechat/ExportKnock.json",
+                "parentRoot": "middleUI",
+                "x": 38,
+                "y": -295,
+                "scriptType": "ExportKnock",
+                "checkKey": "zs_finish_jump"
+            },
+            {
+                "adType": "promotion",
+                "viewUrl": "prefab/wechat/InviteBox.json",
+                "parentRoot": "topUI",
+                "x": 18,
+                "y": 20,
+                "scriptType": "InviteBox",
+                "checkKey": "zs_finish_jump",
+                "jsonUrl": "config/nickname.json"
+            },
+            {
+                "viewUrl": "prefab/wechat/FakeExitButton.json",
+                "parentRoot": "topUI",
+                "x": 18,
+                "y": 18,
+                "scriptType": "FakeExitBtn",
+                "checkKey": "zs_game_star_jump_switch"
+            }
+        ]
+    },
+    "mistakenlyTouchCfg": {
+        "victory":[
+            {
+                "path": "bottomUI/btnPlay",
+                "offsetX": 0,
+                "offsetY": 200
+            }
+        ],
+        "revive":[
+            {
+                "path": "bottomUI/btnSkip",
+                "offsetX": 0,
+                "offsetY": 200
+            }
+        ],
+        "freeSkin":[
+            {
+                "path": "bottomUI/btnSkip",
+                "offsetX": 0,
+                "offsetY": 200
+            }
+        ],
+        "FloatAd":[
+            {
+                "path": "middleUI/closeBtn",
+                "offsetX": 0,
+                "offsetY": 200
+            }
+        ]
+    },
+    "customAdCfg":{
+
+    }
+}
