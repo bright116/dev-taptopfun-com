@@ -1,0 +1,105 @@
+{
+    "type": "Scene",
+    "props": {
+        "width": 1334,
+        "height": 750
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Box",
+            "props": {
+                "var": "Box_StartUI",
+                "top": 0,
+                "right": 0,
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 4,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "var": "start_bg",
+                        "top": 0,
+                        "skin": "res/ui/local/control/bg.png",
+                        "right": 0,
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 9
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "skin": "res/ui/local/control/logo.png",
+                        "centerY": -80,
+                        "centerX": 0
+                    },
+                    "compId": 16
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "width": 1334,
+                        "var": "box_StartUI_c",
+                        "height": 750,
+                        "centerY": 0,
+                        "centerX": 0
+                    },
+                    "compId": 10,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 623,
+                                "width": 813,
+                                "skin": "images/main/loading_progress_zxhuangshi.png",
+                                "height": 62,
+                                "centerX": 0
+                            },
+                            "compId": 14
+                        },
+                        {
+                            "type": "ProgressBar",
+                            "props": {
+                                "y": 629,
+                                "width": 797,
+                                "var": "start_bar",
+                                "value": 0,
+                                "skin": "images/main/loding_progress.png",
+                                "sizeGrid": "0,20,0,20",
+                                "height": 36,
+                                "centerX": 0
+                            },
+                            "compId": 12
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 538,
+                                "x": 517,
+                                "text": "Loading...",
+                                "strokeColor": "#363652",
+                                "stroke": 10,
+                                "fontSize": 60,
+                                "font": "SimHei",
+                                "color": "#FFFFFF"
+                            },
+                            "compId": 15
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "loadList": [
+        "res/ui/local/control/bg.png",
+        "res/ui/local/control/logo.png",
+        "images/main/loading_progress_zxhuangshi.png",
+        "images/main/loding_progress.png"
+    ],
+    "loadList3D": []
+}

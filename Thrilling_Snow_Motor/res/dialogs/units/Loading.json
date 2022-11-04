@@ -1,0 +1,67 @@
+{
+    "type": "Dialog",
+    "props": {
+        "width": 1334,
+        "height": 750
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Box",
+            "props": {
+                "top": 0,
+                "right": 0,
+                "left": 0,
+                "bottom": 0,
+                "bgColor": "#000000"
+            },
+            "compId": 9
+        },
+        {
+            "type": "Animation",
+            "props": {
+                "autoPlay": true
+            },
+            "compId": 4
+        },
+        {
+            "type": "Script",
+            "props": {
+                "lvlLbl": "@node:8",
+                "loadLbl": "@node:7",
+                "loadAnimation": "@node:4",
+                "runtime": "gamePlay/units/Loading.ts"
+            },
+            "compId": 6
+        },
+        {
+            "type": "Label",
+            "props": {
+                "text": "Loading...",
+                "name": "load",
+                "fontSize": 30,
+                "color": "#fbf9f9",
+                "centerY": 180,
+                "centerX": 0,
+                "bold": true
+            },
+            "compId": 7
+        },
+        {
+            "type": "Label",
+            "props": {
+                "x": 0,
+                "text": "第1关",
+                "name": "level",
+                "fontSize": 45,
+                "color": "#fbf9f9",
+                "centerY": -100,
+                "centerX": 0,
+                "bold": true
+            },
+            "compId": 8
+        }
+    ],
+    "loadList": [],
+    "loadList3D": []
+}

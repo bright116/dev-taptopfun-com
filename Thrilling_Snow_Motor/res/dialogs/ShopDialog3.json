@@ -1,0 +1,535 @@
+{
+    "type": "Dialog",
+    "props": {
+        "y": 375,
+        "x": 667,
+        "width": 1334,
+        "height": 750,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "top": 0,
+                "skin": "res/ui/local/control/bg.png",
+                "right": 0,
+                "name": "Background",
+                "left": 0,
+                "bottom": 0,
+                "alpha": 0.1
+            },
+            "compId": 26
+        },
+        {
+            "type": "Script",
+            "props": {
+                "Select": "@node:22",
+                "Back": "@node:6",
+                "车父节点": "@node:4",
+                "购买需要金钱": "@node:18",
+                "Buy": "@node:4",
+                "拥有金钱": "@node:14",
+                "uiNode": "@node:5",
+                "payNeedMoney": "@node:56",
+                "nameLbl": "@node:78",
+                "iconLock": "@node:42",
+                "hadMoney": "@node:72",
+                "closeBtn": "@node:39",
+                "carNode": "@node:41",
+                "carLbl": "@node:32",
+                "btnPay": "@node:51",
+                "btnNext": "@node:65",
+                "btnChoose": "@node:58",
+                "btnBefore": "@node:63",
+                "btnBack": "@node:43",
+                "runtime": "components/dialog/ShopDialog.ts"
+            },
+            "compId": 25
+        },
+        {
+            "type": "Button",
+            "props": {
+                "top": 30,
+                "stateNum": 1,
+                "name": "CloseBtn",
+                "left": 30
+            },
+            "compId": 39
+        },
+        {
+            "type": "Label",
+            "props": {
+                "y": 345,
+                "text": "",
+                "fontSize": 60,
+                "color": "#f9f6f6",
+                "centerX": 0,
+                "bold": true
+            },
+            "compId": 32
+        },
+        {
+            "type": "Box",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "top": 0,
+                "right": 0,
+                "name": "ui",
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 40,
+            "child": [
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "top": 0,
+                        "right": 0,
+                        "name": "carStage",
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 41
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "width": 1334,
+                        "skin": "res/ui/local/control/dikuang.png",
+                        "right": 0,
+                        "name": "Background",
+                        "left": 0,
+                        "height": 132,
+                        "bottom": 0,
+                        "alpha": 0.6
+                    },
+                    "compId": 74
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "width": 200,
+                        "name": "ShowLock",
+                        "height": 150,
+                        "centerY": 0,
+                        "centerX": 0
+                    },
+                    "compId": 42,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0,
+                                "alpha": 0.3
+                            },
+                            "compId": 76
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "width": 79,
+                                "skin": "res/ui/local/control/lock.png",
+                                "height": 114,
+                                "centerY": 0,
+                                "centerX": 0
+                            },
+                            "compId": 75
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "width": 273,
+                        "name": "BtnBack",
+                        "left": 14,
+                        "height": 113,
+                        "bottom": 8,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 43,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "res/ui/local/control/an3.png",
+                                "sizeGrid": "0,19,0,22",
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 44
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "text": "Back",
+                                "italic": true,
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "bold": true
+                            },
+                            "compId": 45
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "runtime": "components/ui/ScaleButton.ts"
+                            },
+                            "compId": 46
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "width": 273,
+                        "right": 18,
+                        "name": "BtnPay",
+                        "height": 113,
+                        "bottom": 6,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 51,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "res/ui/local/control/an1.png",
+                                "sizeGrid": "9,9,23,13",
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 52
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "visible": false,
+                                "top": 0,
+                                "skin": "res/ui/local/gamePlay/btn_4.png",
+                                "sizeGrid": "12,22,20,20",
+                                "right": 0,
+                                "name": "dis",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 53
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "x": 17,
+                                "text": "Buy:",
+                                "italic": true,
+                                "fontSize": 35,
+                                "color": "#fbf6f6",
+                                "centerY": 0,
+                                "bold": true
+                            },
+                            "compId": 55
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "x": 97,
+                                "width": 110,
+                                "valign": "middle",
+                                "text": "9999",
+                                "height": 41,
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "centerY": 0,
+                                "bold": true,
+                                "align": "right"
+                            },
+                            "compId": 56
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "scaleY": 0.95,
+                                "scaleX": 0.95,
+                                "runtime": "components/ui/ScaleButton.ts"
+                            },
+                            "compId": 57
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 211,
+                                "width": 50,
+                                "skin": "res/ui/local/control/gold.png",
+                                "height": 50,
+                                "centerY": 0
+                            },
+                            "compId": 80
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "width": 273,
+                        "right": 18,
+                        "name": "BtnChoose",
+                        "height": 113,
+                        "bottom": 6,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 58,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "res/ui/local/control/an1.png",
+                                "sizeGrid": "13,9,20,13",
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 59
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "visible": false,
+                                "top": 0,
+                                "skin": "res/ui/local/control/an5.png",
+                                "sizeGrid": "8,19,19,14",
+                                "right": 0,
+                                "name": "dis",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 60
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "text": "Select",
+                                "name": "Label",
+                                "italic": true,
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "bold": true
+                            },
+                            "compId": 61
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "scaleY": 0.95,
+                                "scaleX": 0.95,
+                                "runtime": "components/ui/ScaleButton.ts"
+                            },
+                            "compId": 62
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "width": 100,
+                        "name": "before",
+                        "left": 80,
+                        "height": 200,
+                        "centerY": 0,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 63,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 49,
+                                "skin": "res/ui/local/control/you.png",
+                                "scaleX": -1,
+                                "centerY": 0,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 64
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "width": 100,
+                        "right": 80,
+                        "name": "next",
+                        "height": 200,
+                        "centerY": 0,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 65,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "x": 10,
+                                "skin": "res/ui/local/control/you.png",
+                                "centerY": 0
+                            },
+                            "compId": 66
+                        }
+                    ]
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "right": 0,
+                        "name": "top",
+                        "left": 0
+                    },
+                    "compId": 68,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "skin": "res/ui/local/control/dingbu.png",
+                                "sizeGrid": "14,10,9,9",
+                                "right": 0,
+                                "left": 0,
+                                "alpha": 0.7
+                            },
+                            "compId": 69
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": 0,
+                                "x": 14,
+                                "top": 0
+                            },
+                            "compId": 70,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "y": 2.5,
+                                        "x": 13,
+                                        "skin": "res/ui/local/control/dk1.png"
+                                    },
+                                    "compId": 81
+                                },
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "top": 12,
+                                        "skin": "res/ui/local/control/gold.png",
+                                        "left": 24
+                                    },
+                                    "compId": 71
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "x": 88,
+                                        "width": 167,
+                                        "text": "12806",
+                                        "italic": true,
+                                        "height": 40,
+                                        "fontSize": 35,
+                                        "color": "#fdf9f9",
+                                        "centerY": 0,
+                                        "bold": true,
+                                        "align": "center"
+                                    },
+                                    "compId": 72
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "width": 250,
+                        "visible": false,
+                        "sizeGrid": "18,32,15,27",
+                        "height": 60,
+                        "centerX": 0,
+                        "bottom": 150
+                    },
+                    "compId": 77,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "top": 0,
+                                "skin": "res/ui/local/control/dk.png",
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0,
+                                "alpha": 0.7
+                            },
+                            "compId": 79
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "text": "车名",
+                                "italic": true,
+                                "fontSize": 35,
+                                "color": "#fffdfd",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "bold": true
+                            },
+                            "compId": 78
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "loadList": [
+        "res/ui/local/control/bg.png",
+        "res/ui/local/control/dikuang.png",
+        "res/ui/local/control/lock.png",
+        "res/ui/local/control/an3.png",
+        "res/ui/local/control/an1.png",
+        "res/ui/local/gamePlay/btn_4.png",
+        "res/ui/local/control/gold.png",
+        "res/ui/local/control/an5.png",
+        "res/ui/local/control/you.png",
+        "res/ui/local/control/dingbu.png",
+        "res/ui/local/control/dk1.png",
+        "res/ui/local/control/dk.png"
+    ],
+    "loadList3D": []
+}
