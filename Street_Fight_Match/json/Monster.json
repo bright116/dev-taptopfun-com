@@ -1,0 +1,32 @@
+[
+    {
+        "id": 11002,
+        "isBoss": false,
+        "level": 1,
+        "role": "Npc1",
+        "hat": null,
+        "glasse": null,
+        "buff": null,
+        "dbuff": null
+    },
+    {
+        "id": 11003,
+        "isBoss": false,
+        "level": 1,
+        "role": "Npc2",
+        "hat": "Hat1",
+        "glasse": "Glasses1",
+        "buff": null,
+        "dbuff": null
+    },
+    {
+        "id": 11004,
+        "isBoss": true,
+        "level": 1,
+        "role": "Npc6",
+        "hat": "Hat2",
+        "glasse": "Glasses3",
+        "buff": 141,
+        "dbuff": 111
+    }
+]

@@ -1,0 +1,173 @@
+[
+    {
+        "id": 1,
+        "hp": 100,
+        "hpCost": 15,
+        "attack": 10,
+        "attackCost": 20,
+        "profit": 35,
+        "profitCost": 280
+    },
+    {
+        "id": 2,
+        "hp": 106,
+        "hpCost": 56,
+        "attack": 11,
+        "attackCost": 75,
+        "profit": 40,
+        "profitCost": 320
+    },
+    {
+        "id": 3,
+        "hp": 118,
+        "hpCost": 121,
+        "attack": 13,
+        "attackCost": 161,
+        "profit": 50,
+        "profitCost": 400
+    },
+    {
+        "id": 4,
+        "hp": 136,
+        "hpCost": 209,
+        "attack": 16,
+        "attackCost": 279,
+        "profit": 65,
+        "profitCost": 520
+    },
+    {
+        "id": 5,
+        "hp": 160,
+        "hpCost": 319,
+        "attack": 20,
+        "attackCost": 426,
+        "profit": 85,
+        "profitCost": 680
+    },
+    {
+        "id": 6,
+        "hp": 190,
+        "hpCost": 451,
+        "attack": 25,
+        "attackCost": 602,
+        "profit": 110,
+        "profitCost": 880
+    },
+    {
+        "id": 7,
+        "hp": 226,
+        "hpCost": 605,
+        "attack": 31,
+        "attackCost": 807,
+        "profit": 140,
+        "profitCost": 1120
+    },
+    {
+        "id": 8,
+        "hp": 268,
+        "hpCost": 780,
+        "attack": 38,
+        "attackCost": 1040,
+        "profit": 175,
+        "profitCost": 1400
+    },
+    {
+        "id": 9,
+        "hp": 316,
+        "hpCost": 975,
+        "attack": 46,
+        "attackCost": 1300,
+        "profit": 215,
+        "profitCost": 1720
+    },
+    {
+        "id": 10,
+        "hp": 370,
+        "hpCost": 1190,
+        "attack": 55,
+        "attackCost": 1590,
+        "profit": 260,
+        "profitCost": 2080
+    },
+    {
+        "id": 11,
+        "hp": 430,
+        "hpCost": 1430,
+        "attack": 65,
+        "attackCost": 1900,
+        "profit": 310,
+        "profitCost": 2480
+    },
+    {
+        "id": 12,
+        "hp": 496,
+        "hpCost": 1690,
+        "attack": 76,
+        "attackCost": 2250,
+        "profit": 365,
+        "profitCost": 2920
+    },
+    {
+        "id": 13,
+        "hp": 568,
+        "hpCost": 1960,
+        "attack": 88,
+        "attackCost": 2620,
+        "profit": 425,
+        "profitCost": 3400
+    },
+    {
+        "id": 14,
+        "hp": 646,
+        "hpCost": 2260,
+        "attack": 101,
+        "attackCost": 3010,
+        "profit": 490,
+        "profitCost": 3920
+    },
+    {
+        "id": 15,
+        "hp": 730,
+        "hpCost": 2570,
+        "attack": 115,
+        "attackCost": 3430,
+        "profit": 560,
+        "profitCost": 4480
+    },
+    {
+        "id": 16,
+        "hp": 820,
+        "hpCost": 2910,
+        "attack": 130,
+        "attackCost": 3880,
+        "profit": 635,
+        "profitCost": 5080
+    },
+    {
+        "id": 17,
+        "hp": 916,
+        "hpCost": 3270,
+        "attack": 146,
+        "attackCost": 4350,
+        "profit": 715,
+        "profitCost": 5720
+    },
+    {
+        "id": 18,
+        "hp": 1018,
+        "hpCost": 3640,
+        "attack": 163,
+        "attackCost": 4850,
+        "profit": 800,
+        "profitCost": 6400
+    },
+    {
+        "id": 19,
+        "hp": 1126,
+        "hpCost": 4030,
+        "attack": 181,
+        "attackCost": 5380,
+        "profit": 890,
+        "profitCost": 7120
+    }
+]

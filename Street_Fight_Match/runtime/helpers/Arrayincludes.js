@@ -1,0 +1,63 @@
+function _0x464f(_0x542e0a, _0x3166dc) {
+    var _0x5e9606 = _0x5e96();
+    return _0x464f = function (_0x464fa8, _0x8e1f8f) {
+        _0x464fa8 = _0x464fa8 - 0x1da;
+        var _0x375128 = _0x5e9606[_0x464fa8];
+        return _0x375128;
+    }, _0x464f(_0x542e0a, _0x3166dc);
+}
+var _0x253bd9 = _0x464f;
+function _0x5e96() {
+    var _0x431177 = [
+        'length',
+        'max',
+        'abs',
+        'number',
+        '272843IoyReL',
+        '1678966OweHuI',
+        '3kvknir',
+        '2135612RKmHAj',
+        '5229355LXimBD',
+        '1835136kmkToC',
+        '7PNjgbx',
+        '11076016BsPWuS',
+        '973575LECiOT',
+        'prototype',
+        'includes',
+        'defineProperty',
+        '\x22this\x22\x20is\x20null\x20or\x20not\x20defined'
+    ];
+    _0x5e96 = function () {
+        return _0x431177;
+    };
+    return _0x5e96();
+}
+(function (_0x30de70, _0x2bb405) {
+    var _0x3097ad = _0x464f, _0x44a4b5 = _0x30de70();
+    while (!![]) {
+        try {
+            var _0x38e4f3 = parseInt(_0x3097ad(0x1da)) / 0x1 + -parseInt(_0x3097ad(0x1db)) / 0x2 * (-parseInt(_0x3097ad(0x1dc)) / 0x3) + -parseInt(_0x3097ad(0x1dd)) / 0x4 + -parseInt(_0x3097ad(0x1de)) / 0x5 + -parseInt(_0x3097ad(0x1df)) / 0x6 + parseInt(_0x3097ad(0x1e0)) / 0x7 * (parseInt(_0x3097ad(0x1e1)) / 0x8) + parseInt(_0x3097ad(0x1e2)) / 0x9;
+            if (_0x38e4f3 === _0x2bb405)
+                break;
+            else
+                _0x44a4b5['push'](_0x44a4b5['shift']());
+        } catch (_0x6413fb) {
+            _0x44a4b5['push'](_0x44a4b5['shift']());
+        }
+    }
+}(_0x5e96, 0xafa0d), Array[_0x253bd9(0x1e3)][_0x253bd9(0x1e4)] || Object[_0x253bd9(0x1e5)](Array[_0x253bd9(0x1e3)], _0x253bd9(0x1e4), {
+    'value': function (_0xe078a1, _0x58be18) {
+        var _0x25983b = _0x253bd9;
+        if (null == this)
+            throw new TypeError(_0x25983b(0x1e6));
+        var _0x400a53 = Object(this), _0x3cb9d6 = _0x400a53[_0x25983b(0x1e7)] >>> 0x0;
+        if (0x0 == _0x3cb9d6)
+            return !0x1;
+        for (var _0x59ab77, _0x2dbfc6, _0x5ca026 = 0x0 | _0x58be18, _0x50ca26 = Math[_0x25983b(0x1e8)](0x0 <= _0x5ca026 ? _0x5ca026 : _0x3cb9d6 - Math[_0x25983b(0x1e9)](_0x5ca026), 0x0); _0x50ca26 < _0x3cb9d6;) {
+            if ((_0x59ab77 = _0x400a53[_0x50ca26]) === (_0x2dbfc6 = _0xe078a1) || _0x25983b(0x1ea) == typeof _0x59ab77 && _0x25983b(0x1ea) == typeof _0x2dbfc6 && isNaN(_0x59ab77) && isNaN(_0x2dbfc6))
+                return !0x0;
+            _0x50ca26++;
+        }
+        return !0x1;
+    }
+}));

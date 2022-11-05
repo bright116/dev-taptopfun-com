@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "chapterIcon": "UI_MapLocations_icons_0",
+        "nextChapterIocn": "UI_MapLocations_icons_1",
+        "tripleBackground": "Train_TileField_Background",
+        "tileBlock": "Train_FoodItem_TileBlock"
+    },
+    {
+        "id": 2,
+        "chapterIcon": "UI_MapLocations_icons_1",
+        "nextChapterIocn": "UI_MapLocations_icons_2",
+        "tripleBackground": "StreetNight_TileField_Background",
+        "tileBlock": "StreetNight_FoodItem_TileBlock"
+    },
+    {
+        "id": 3,
+        "chapterIcon": "UI_MapLocations_icons_2",
+        "nextChapterIocn": "UI_MapLocations_icons_3",
+        "tripleBackground": "Museum_TileField_Background",
+        "tileBlock": "Museum_FoodItem_TileBlock"
+    },
+    {
+        "id": 4,
+        "chapterIcon": "UI_MapLocations_icons_3",
+        "nextChapterIocn": "UI_MapLocations_icons_4",
+        "tripleBackground": "Desert_TileField_Background",
+        "tileBlock": "Desert_FoodItem_TileBlock"
+    },
+    {
+        "id": 5,
+        "chapterIcon": "UI_MapLocations_icons_4",
+        "nextChapterIocn": "UI_MapLocations_icons_5",
+        "tripleBackground": "Mountains_TileField_Background",
+        "tileBlock": "Mountain_FoodItem_TileBlock"
+    },
+    {
+        "id": 6,
+        "chapterIcon": "UI_MapLocations_icons_5",
+        "nextChapterIocn": "UI_MapLocations_icons_6",
+        "tripleBackground": "ArmyCamp_TileField_Background",
+        "tileBlock": "ArmyCamp_FoodItem_TileBlock"
+    },
+    {
+        "id": 7,
+        "chapterIcon": "UI_MapLocations_icons_6",
+        "nextChapterIocn": "UI_MapLocations_icons_7",
+        "tripleBackground": "Jungle_TileField_Background",
+        "tileBlock": "Jungle_FoodItem_TileBlock"
+    },
+    {
+        "id": 8,
+        "chapterIcon": "UI_MapLocations_icons_7",
+        "nextChapterIocn": "UI_MapLocations_icons_8",
+        "tripleBackground": "Office_TileField_Background",
+        "tileBlock": "Office_FoodItem_TileBlock"
+    },
+    {
+        "id": 9,
+        "chapterIcon": "UI_MapLocations_icons_8",
+        "nextChapterIocn": "UI_MapLocations_icons_9",
+        "tripleBackground": "City_TileField_Background",
+        "tileBlock": "City_FoodItem_TileBlock"
+    },
+    {
+        "id": 10,
+        "chapterIcon": "UI_MapLocations_icons_9",
+        "nextChapterIocn": null,
+        "tripleBackground": "StreetDay_TileField_Background",
+        "tileBlock": "StreetDay_FoodItem_TileBlock"
+    }
+]
