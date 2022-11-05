@@ -320,16 +320,38 @@
             }, 0x64);
         }
         ['showInters' + 'titial'](_0x5613fd) {
+            console.log("请求插屏广告");
+
+            HUHU_showInterstitialAd();
+            window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume'](), _0x5613fd && _0x5613fd();
+            return;
+
             YYGGames['showInters' + 'titial']({
                 'beforeShowAd': () => {
                     window['WebAudioEn' + 'gine']['adShowing'] = !![], this['onblur'](), Laya['timer']['scale'] = 0x0, Laya['stage']['renderingE' + 'nabled'] = ![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['pause'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['pause']();
                 },
                 'afterShowAd': () => {
+                    // ZL: 这个下面就是complete的方法，拷贝到上面
                     window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume'](), _0x5613fd && _0x5613fd();
                 }
             });
         }
         ['showReward'](_0x4c08f2, _0x5579f0, _0x7161f7) {
+            console.log("请求激励广告");
+            HUHU_showRewardedVideoAd(
+                () => {
+                    // 用户观看广告完成，继续游戏
+                    window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume']();
+                    _0x4c08f2 && _0x4c08f2(), _0x7161f7 && _0x7161f7(), _0x7161f7 = null, _0x4c08f2 = null;
+                },
+                () => {
+                  // 广告请求失败或者用户跳过广告
+                  _0x5579f0 && (_0x5579f0(), _0x7161f7 && _0x7161f7(), _0x7161f7 = null, _0x5579f0 = null);
+                  promptMessage("Failed to get the reward, please watch the ads to the end.");
+                }
+            );
+            return;
+
             if (!YYGGames['canShowRew' + 'ard']()) {
                 this['prompt']('No\x20Availab' + 'le\x20Video'), _0x7161f7 && _0x7161f7();
                 return;
@@ -339,13 +361,19 @@
                     window['WebAudioEn' + 'gine']['adShowing'] = !![], this['onblur'](), Laya['timer']['scale'] = 0x0, Laya['stage']['renderingE' + 'nabled'] = ![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['pause'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['pause']();
                 },
                 'afterShowAd': () => {
+                    // ZL: 这个是complete回调的一部分，拷贝到咱们success的回调里
                     window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume']();
                 },
                 'rewardComplete': () => {
+                    // ZL: 这个是complete回调的第二部分，拷贝到咱们success的回调里
                     _0x4c08f2 && _0x4c08f2(), _0x7161f7 && _0x7161f7(), _0x7161f7 = null, _0x4c08f2 = null;
                 },
                 'rewardDismissed': () => {
-                    _0x5579f0 && (_0x5579f0(), _0x7161f7 && _0x7161f7(), _0x7161f7 = null, _0x5579f0 = null), this['prompt']('Pls\x20watch\x20' + 'the\x20ad\x20com' + 'pletely,\x20s' + 'o\x20that\x20you' + '\x20can\x20claim' + '\x20your\x20rewa' + 'rd');
+                    // ZL: 这个是用户没有看广告，失败回调的一部分，拷贝到咱们failure的回调里
+                    _0x5579f0 && (_0x5579f0(), _0x7161f7 && _0x7161f7(), _0x7161f7 = null, _0x5579f0 = null), 
+
+                    // ZL: 下面这个是弹出框提示失败的，和咱们的重复不用拷贝上去
+                    this['prompt']('Pls\x20watch\x20' + 'the\x20ad\x20com' + 'pletely,\x20s' + 'o\x20that\x20you' + '\x20can\x20claim' + '\x20your\x20rewa' + 'rd');
                 }
             });
         }
@@ -369,7 +397,9 @@
             this['labelInfo']['visible'] = ![];
         }
         ['getForgame' + 's']() {
+            // ZL: 这个和以前一样，直接返回个空数组就行
             return [];
+
             let _0x149168 = YYGGames['forgames'] || [], _0x18f40b = _0x149168['slice']();
             for (let _0xd60ddb = 0x0, _0x450fdc = _0x18f40b['length']; _0xd60ddb < _0x450fdc; _0xd60ddb++) {
                 const _0x564602 = Math['floor'](Math['random']() * (_0xd60ddb + 0x1)), _0xcf7bd9 = _0x18f40b[_0x564602];
@@ -472,7 +502,7 @@
                 });
             }));
         }
-        ['puzzlegame' + 'startup'](_0x2206ce, _0x44bc8f) { // puzzlegamestartup
+        ['puzzlegame' + 'startup'](_0x2206ce, _0x44bc8f) { // ZL: puzzlegamestartup
             !this['needStartU' + 'p'] && (_0x44bc8f && _0x44bc8f());
             if (this['initialize' + 'd_'])
                 return;
@@ -486,6 +516,7 @@
                 };
             }), this['initialize' + 'd_'] = !![], 
             Laya['loader']['load']('cnf.json', Laya['Handler']['create'](this, _0x4bfd99 => {
+                // ZL: 主要找到这个加载cnf.json的回调
                 window['scrollList'] = this['scrollList'](), window['box_adTwo'] = this['box_adTwo']();
                 this['needStartU' + 'p'] = ![], _0x44bc8f && _0x44bc8f(); 
                 
@@ -495,6 +526,7 @@
                 //     'config': _0x4bfd99,
                 //     'complete': () => {
                 //         const _0x3e929e = YYGGames['getAdPlatf' + 'ormType']();
+                //         // ZL: 下面一行这个是加scrollList和box_adTwo的片段，拷贝上去
                 //         window['scrollList'] = this['scrollList'](), window['box_adTwo'] = this['box_adTwo']();
                 //         switch (_0x3e929e) {
                 //         case AdPlatformType['en_GAMEDIS' + 'TRIBUTION']:
@@ -508,7 +540,8 @@
                 //             });
                 //             break;
                 //         }
-                //         this['needStartU' + 'p'] = ![], _0x44bc8f && _0x44bc8f(); //这个就是 this.needStartUp = false; complete && complete();
+                //         // ZL: 下面一行这个就是 this.needStartUp = false; complete && complete(); 直接拷贝上去
+                //         this['needStartU' + 'p'] = ![], _0x44bc8f && _0x44bc8f(); 
                 //     }
                 // });
             }));
