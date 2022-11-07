@@ -2141,7 +2141,7 @@ function _0x33d6() {
         'closeDialogOnSide',
         'WebGL',
         'scaleMode',
-        'SCALE_SHOWALL',
+        'SCALE_EXACTFIT',
         'alignH',
         'Stage',
         'ALIGN_CENTER',
