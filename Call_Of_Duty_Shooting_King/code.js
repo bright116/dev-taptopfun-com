@@ -4399,7 +4399,22 @@ var RoleProxy = (function(_0x79b4x1a) {
         this[_0xb5bd[1210]] = _0x79b4x1b;
         this[_0xb5bd[1211]] = _0x79b4x1c;
         window[_0xb5bd[1212]](true);
-        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].REWARD, YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1214]]), YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
+
+        HUHU_showRewardedVideoAd(
+            () => { // 用户观看广告完成，继续游戏
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1214]]);
+            },
+            () => { // 广告请求失败或者用户跳过广告
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]);
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+            }
+        );
+        return;
+
+        // ZL: 某道具请求弹出激励广告，激励广告的方法基本是三个参数: 广告类型，成功回调，失败回调。
+        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].REWARD, 
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1214]]), 
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
     };
     RoleProxy[_0xb5bd[13]][_0xb5bd[1216]] = function() {
         window[_0xb5bd[1212]](false);
@@ -5833,7 +5848,23 @@ var MainRightUi = (function(_0x79b4x1a) {
     };
     MainRightUi[_0xb5bd[13]][_0xb5bd[1410]] = function() {
         window[_0xb5bd[1212]](true);
-        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].REWARD, YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1415]]), YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
+
+        HUHU_showRewardedVideoAd(
+            () => { // 用户观看广告完成，继续游戏
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1415]]);
+            },
+            () => { // 广告请求失败或者用户跳过广告
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]);
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+            }
+        );
+        return;
+
+        // ZL: 某道具请求弹出激励广告，激励广告的方法基本是三个参数: 广告类型，成功回调，失败回调。
+        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](
+            YYG[_0xb5bd[1213]].REWARD, 
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1415]]), 
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
     };
     MainRightUi[_0xb5bd[13]][_0xb5bd[1415]] = function() {
         window[_0xb5bd[1212]](false);
@@ -5855,7 +5886,25 @@ var MainRightUi = (function(_0x79b4x1a) {
     };
     MainRightUi[_0xb5bd[13]][_0xb5bd[1411]] = function() {
         window[_0xb5bd[1212]](true);
-        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].REWARD, YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1419]]), YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
+        
+        HUHU_showRewardedVideoAd(
+            () => { // 用户观看广告完成，继续游戏
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1419]]);
+            },
+            () => { // 广告请求失败或者用户跳过广告
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]);
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+            }
+        );
+        return;
+
+        // ZL: 某道具请求弹出激励广告，激励广告的方法基本是三个参数: 广告类型，成功回调，失败回调。
+        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](
+            YYG[_0xb5bd[1213]].REWARD, // 广告类型
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1419]]), // 用户观看广告，成功后回调函数
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]])  // 用户未完整观看广告，失败后回调函数
+        )
+        
     };
     MainRightUi[_0xb5bd[13]][_0xb5bd[1419]] = function() {
         window[_0xb5bd[1212]](false);
@@ -5870,7 +5919,23 @@ var MainRightUi = (function(_0x79b4x1a) {
     };
     MainRightUi[_0xb5bd[13]][_0xb5bd[1412]] = function() {
         window[_0xb5bd[1212]](true);
-        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].REWARD, YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1422]]), YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
+
+        HUHU_showRewardedVideoAd(
+            () => { // 用户观看广告完成，继续游戏
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1422]]);
+            },
+            () => { // 广告请求失败或者用户跳过广告
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]);
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+            }
+        );
+        return;
+        
+        // ZL: 某道具请求弹出激励广告，激励广告的方法基本是三个参数: 广告类型，成功回调，失败回调。
+        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](
+            YYG[_0xb5bd[1213]].REWARD, 
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1422]]), 
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
     };
     MainRightUi[_0xb5bd[13]][_0xb5bd[1422]] = function() {
         window[_0xb5bd[1212]](false);
@@ -7279,7 +7344,22 @@ var GoldBuzuView = (function(_0x79b4x1a) {
     };
     GoldBuzuView[_0xb5bd[13]][_0xb5bd[1703]] = function() {
         window[_0xb5bd[1212]](true);
-        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].REWARD, YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1704]]), YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
+
+        HUHU_showRewardedVideoAd(
+            () => { // 用户观看广告完成，继续游戏
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1704]]);
+            },
+            () => { // 广告请求失败或者用户跳过广告
+                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]);
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+            }
+        );
+        return;
+
+        // ZL: 某道具请求弹出激励广告，激励广告的方法基本是三个参数: 广告类型，成功回调，失败回调。
+        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].REWARD, 
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1704]]), 
+            YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]))
     };
     GoldBuzuView[_0xb5bd[13]][_0xb5bd[1216]] = function() {
         window[_0xb5bd[1212]](false);
@@ -7640,7 +7720,10 @@ var MainView = (function(_0x79b4x1a) {
             platform[_0xb5bd[73]]()[_0xb5bd[81]](_0xb5bd[1722], _0xb5bd[1723])
         });
         window[_0xb5bd[1212]](true);
-        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].INTERSTITIAL, YYG[_0xb5bd[1215]][_0xb5bd[21]](window, window[_0xb5bd[1212]], [false]), YYG[_0xb5bd[1215]][_0xb5bd[21]](window, window[_0xb5bd[1212]], [false]));
+        // YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].INTERSTITIAL, YYG[_0xb5bd[1215]][_0xb5bd[21]](window, window[_0xb5bd[1212]], [false]), YYG[_0xb5bd[1215]][_0xb5bd[21]](window, window[_0xb5bd[1212]], [false]));
+        // ZL: 这句应该就是请求了一个插屏广告, 改成咱们的
+        HUHU_showInterstitialAd();
+
         this[_0xb5bd[1327]][_0xb5bd[243]] = !0, this[_0xb5bd[1335]][_0xb5bd[1299]] = 1, this[_0xb5bd[1745]] && this[_0xb5bd[1745]][_0xb5bd[1088]](), this[_0xb5bd[1755]]()
     };
     MainView[_0xb5bd[13]][_0xb5bd[1198]] = function() {
@@ -7649,7 +7732,10 @@ var MainView = (function(_0x79b4x1a) {
             platform[_0xb5bd[73]]()[_0xb5bd[81]](_0xb5bd[1722], _0xb5bd[1723])
         });
         window[_0xb5bd[1212]](true);
-        YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].INTERSTITIAL, YYG[_0xb5bd[1215]][_0xb5bd[21]](window, window[_0xb5bd[1212]], [false]), YYG[_0xb5bd[1215]][_0xb5bd[21]](window, window[_0xb5bd[1212]], [false]));
+        // YYGSDK[_0xb5bd[1217]][_0xb5bd[80]](YYG[_0xb5bd[1213]].INTERSTITIAL, YYG[_0xb5bd[1215]][_0xb5bd[21]](window, window[_0xb5bd[1212]], [false]), YYG[_0xb5bd[1215]][_0xb5bd[21]](window, window[_0xb5bd[1212]], [false]));
+        // ZL: 这句应该就是请求了一个插屏广告, 改成咱们的
+        HUHU_showInterstitialAd();
+
         this[_0xb5bd[1327]][_0xb5bd[243]] = false;
         Laya[_0xb5bd[32]][_0xb5bd[218]](this, this[_0xb5bd[1760]]), this[_0xb5bd[1335]][_0xb5bd[1299]] = 0, this[_0xb5bd[1745]] && this[_0xb5bd[1745]][_0xb5bd[1088]](), this[_0xb5bd[1761]][_0xb5bd[1279]](), this[_0xb5bd[1756]][_0xb5bd[1431]]()
     };
@@ -8244,12 +8330,14 @@ var Main = (function() {
         Laya[_0xb5bd[662]][_0xb5bd[1842]] = Laya[_0xb5bd[1839]][_0xb5bd[1843]];
         Laya[_0xb5bd[662]][_0xb5bd[1844]] = _0xb5bd[1845];
         Laya[_0xb5bd[662]][_0xb5bd[10]](_0xb5bd[1846], this, this[_0xb5bd[165]]);
-        YYGSDK[_0xb5bd[10]](YYG[_0xb5bd[27]].YYGSDK_INITIALIZED, this, function() {
-            new GameContents()[_0xb5bd[1030]]()
-        });
-        var _0x79b4xd2 = new YYG.Options();
-        _0x79b4xd2[_0xb5bd[1847]] = _0xb5bd[1848];
-        YYGSDK.__init__(YYG[_0xb5bd[1849]].YAD, _0x79b4xd2)
+        
+        new GameContents()[_0xb5bd[1030]]();
+        // YYGSDK[_0xb5bd[10]](YYG[_0xb5bd[27]].YYGSDK_INITIALIZED, this, function() {
+        //     new GameContents()[_0xb5bd[1030]]()
+        // });
+        // var _0x79b4xd2 = new YYG.Options();
+        // _0x79b4xd2[_0xb5bd[1847]] = _0xb5bd[1848];
+        // YYGSDK.__init__(YYG[_0xb5bd[1849]].YAD, _0x79b4xd2)
     }
     Main[_0xb5bd[13]][_0xb5bd[165]] = function() {
         fairygui[_0xb5bd[730]][_0xb5bd[1850]] = _0xb5bd[526];
