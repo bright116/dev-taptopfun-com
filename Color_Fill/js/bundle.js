@@ -63,7 +63,7 @@ var __extends = this && this.__extends || function () {
                         t("script/UIControl/gongxiPanelCtr.ts", L.default), t("script/UIScript/helpPanelCtr.ts", I.default),
                         t("script/UIScript/FlyCoin.ts", C.default), t("script/GameBoxManager/UI/SideFrameUICtrl.ts", k.default),
                         t("script/UIScript/bkPanelCtr.ts", S.default);
-                }, t.width = 750, t.height = 1334, t.scaleMode = "showall", t.screenMode = "none",
+                }, t.width = 750, t.height = 1334, t.scaleMode = "exactfit", t.screenMode = "none",
                     t.alignV = "middle", t.alignH = "center", t.startScene = "test/Loading.scene", t.sceneRoot = "",
                     t.debug = !1, t.stat = !1, t.physicsDebug = !1, t.exportSceneToJson = !0, t;
             }();
