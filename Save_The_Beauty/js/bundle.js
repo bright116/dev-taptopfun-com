@@ -9755,7 +9755,7 @@
                 e("view/AdNativeImage.ts", ne), e("view/AdImage.ts", oe);
         }
     }
-    re.width = 750, re.height = 1334, re.scaleMode = "showall", re.screenMode = "none",
+    re.width = 750, re.height = 1334, re.scaleMode = "exactfit", re.screenMode = "none",
         re.alignV = "middle", re.alignH = "center", re.startScene = "StartScene.scene", re.sceneRoot = "",
         re.debug = !1, re.stat = !1, re.physicsDebug = !1, re.exportSceneToJson = !0, re.init();
     new class {
