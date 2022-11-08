@@ -3,7 +3,8 @@ window.Laya = function(t) {
     class e {}
     e.animationInterval = 50, e.isAntialias = !1, e.isAlpha = !1, e.premultipliedAlpha = !0, 
     e.isStencil = !0, e.preserveDrawingBuffer = !1, e.webGL2D_MeshAllocMaxMem = !0, 
-    e.is2DPixelArtGame = !1, e.useWebGL2 = !0, e.useRetinalCanvas = !1, window.Config = e;
+    e.is2DPixelArtGame = !1, e.useWebGL2 = !0, e.allowGPUInstanceDynamicBatch = !0, 
+    e.useRetinalCanvas = !1, window.Config = e;
     class i {
         static regClass(t) {
             i.__classMap[t.name] = t;
@@ -472,18 +473,6 @@ window.Laya = function(t) {
             v._blendEquationAlpha = t.FUNC_ADD, v._sFactor = t.ONE, v._dFactor = t.ZERO, v._sFactorAlpha = t.ONE, 
             v._dFactorAlpha = t.ZERO, v._activedTextureID = t.TEXTURE0, v._glTextureIDs = [ t.TEXTURE0, t.TEXTURE1, t.TEXTURE2, t.TEXTURE3, t.TEXTURE4, t.TEXTURE5, t.TEXTURE6, t.TEXTURE7 ];
         }
-        static get _sFactor() {
-            return v.__sFactor;
-        }
-        static set _sFactor(t) {
-            v.__sFactor = t;
-        }
-        static get _dFactor() {
-            return v.__dFactor;
-        }
-        static set _dFactor(t) {
-            v.__dFactor = t;
-        }
         static useProgram(t, e) {
             return v._useProgram !== e && (t.useProgram(e), v._useProgram = e, !0);
         }
@@ -507,9 +496,10 @@ window.Laya = function(t) {
             e === v._blendEquationRGB && i === v._blendEquationAlpha || (v._blendEquationRGB = e, 
             v._blendEquationAlpha = i, v._blendEquation = null, t.blendEquationSeparate(e, i));
         }
-        static setBlendFunc(t, e, i) {
-            e === v._sFactor && i === v._dFactor || (v._sFactor = e, v._dFactor = i, v._sFactorRGB = null, 
-            v._dFactorRGB = null, v._sFactorAlpha = null, v._dFactorAlpha = null, t.blendFunc(e, i));
+        static setBlendFunc(t, e, i, s = !1) {
+            (s || e !== v._sFactor || i !== v._dFactor) && (v._sFactor = e, v._dFactor = i, 
+            v._sFactorRGB = null, v._dFactorRGB = null, v._sFactorAlpha = null, v._dFactorAlpha = null, 
+            t.blendFunc(e, i));
         }
         static setBlendFuncSeperate(t, e, i, s, r) {
             e === v._sFactorRGB && i === v._dFactorRGB && s === v._sFactorAlpha && r === v._dFactorAlpha || (v._sFactorRGB = e, 
@@ -849,14 +839,14 @@ window.Laya = function(t) {
             throw "Bitmap: must override it.";
         }
     }
-    var A, R, w, S, M;
-    (A = t.FilterMode || (t.FilterMode = {}))[A.Point = 0] = "Point", A[A.Bilinear = 1] = "Bilinear", 
-    A[A.Trilinear = 2] = "Trilinear", (R = t.TextureFormat || (t.TextureFormat = {}))[R.R8G8B8 = 0] = "R8G8B8", 
-    R[R.R8G8B8A8 = 1] = "R8G8B8A8", R[R.R5G6B5 = 16] = "R5G6B5", R[R.Alpha8 = 2] = "Alpha8", 
-    R[R.DXT1 = 3] = "DXT1", R[R.DXT5 = 4] = "DXT5", R[R.ETC1RGB = 5] = "ETC1RGB", R[R.PVRTCRGB_2BPPV = 9] = "PVRTCRGB_2BPPV", 
-    R[R.PVRTCRGBA_2BPPV = 10] = "PVRTCRGBA_2BPPV", R[R.PVRTCRGB_4BPPV = 11] = "PVRTCRGB_4BPPV", 
-    R[R.PVRTCRGBA_4BPPV = 12] = "PVRTCRGBA_4BPPV", R[R.R32G32B32A32 = 15] = "R32G32B32A32", 
-    (w = t.WarpMode || (t.WarpMode = {}))[w.Repeat = 0] = "Repeat", w[w.Clamp = 1] = "Clamp";
+    var w, A, R, S, M;
+    (w = t.FilterMode || (t.FilterMode = {}))[w.Point = 0] = "Point", w[w.Bilinear = 1] = "Bilinear", 
+    w[w.Trilinear = 2] = "Trilinear", (A = t.TextureFormat || (t.TextureFormat = {}))[A.R8G8B8 = 0] = "R8G8B8", 
+    A[A.R8G8B8A8 = 1] = "R8G8B8A8", A[A.R5G6B5 = 16] = "R5G6B5", A[A.Alpha8 = 2] = "Alpha8", 
+    A[A.DXT1 = 3] = "DXT1", A[A.DXT5 = 4] = "DXT5", A[A.ETC1RGB = 5] = "ETC1RGB", A[A.PVRTCRGB_2BPPV = 9] = "PVRTCRGB_2BPPV", 
+    A[A.PVRTCRGBA_2BPPV = 10] = "PVRTCRGBA_2BPPV", A[A.PVRTCRGB_4BPPV = 11] = "PVRTCRGB_4BPPV", 
+    A[A.PVRTCRGBA_4BPPV = 12] = "PVRTCRGBA_4BPPV", A[A.R32G32B32A32 = 15] = "R32G32B32A32", 
+    (R = t.WarpMode || (t.WarpMode = {}))[R.Repeat = 0] = "Repeat", R[R.Clamp = 1] = "Clamp";
     class I extends b {
         constructor(e, i) {
             super(), this._wrapModeU = t.WarpMode.Repeat, this._wrapModeV = t.WarpMode.Repeat, 
@@ -1290,7 +1280,6 @@ window.Laya = function(t) {
                 throw "Texture2D:unkonwn format.";
             }
         }
-        _recoverResource() {}
         getPixels() {
             if (this._canRead) return this._pixels;
             throw new Error("Texture2D: must set texture canRead is true.");
@@ -1324,9 +1313,9 @@ window.Laya = function(t) {
     D.worldMatrix = new p(), D.matWVP = null, D.worldAlpha = 1, D.worldScissorTest = !1, 
     D.width = 0, D.height = 0, (S = t.RenderTextureFormat || (t.RenderTextureFormat = {}))[S.R8G8B8 = 0] = "R8G8B8", 
     S[S.R8G8B8A8 = 1] = "R8G8B8A8", S[S.Alpha8 = 2] = "Alpha8", S[S.R16G16B16A16 = 14] = "R16G16B16A16", 
-    (M = t.RenderTextureDepthFormat || (t.RenderTextureDepthFormat = {}))[M.DEPTH_16 = 0] = "DEPTH_16", 
-    M[M.STENCIL_8 = 1] = "STENCIL_8", M[M.DEPTHSTENCIL_16_8 = 2] = "DEPTHSTENCIL_16_8", 
-    M[M.DEPTHSTENCIL_NONE = 3] = "DEPTHSTENCIL_NONE";
+    S[S.Depth = 15] = "Depth", S[S.ShadowMap = 16] = "ShadowMap", (M = t.RenderTextureDepthFormat || (t.RenderTextureDepthFormat = {}))[M.DEPTH_16 = 0] = "DEPTH_16", 
+    M[M.STENCIL_8 = 1] = "STENCIL_8", M[M.DEPTHSTENCIL_24_8 = 2] = "DEPTHSTENCIL_24_8", 
+    M[M.DEPTHSTENCIL_NONE = 3] = "DEPTHSTENCIL_NONE", M[M.DEPTHSTENCIL_16_8 = 2] = "DEPTHSTENCIL_16_8";
     class B extends I {
         constructor(e, i, s = t.RenderTextureFormat.R8G8B8, r = t.RenderTextureDepthFormat.DEPTH_16) {
             super(s, !1), this._mgrKey = 0, this._glTextureType = m.instance.TEXTURE_2D, this._width = e, 
@@ -1373,7 +1362,7 @@ window.Laya = function(t) {
                 s.renderbufferStorage(s.RENDERBUFFER, s.STENCIL_INDEX8, e, i), s.framebufferRenderbuffer(s.FRAMEBUFFER, s.STENCIL_ATTACHMENT, s.RENDERBUFFER, this._depthStencilBuffer);
                 break;
 
-              case t.RenderTextureDepthFormat.DEPTHSTENCIL_16_8:
+              case t.RenderTextureDepthFormat.DEPTHSTENCIL_24_8:
                 s.renderbufferStorage(s.RENDERBUFFER, s.DEPTH_STENCIL, e, i), s.framebufferRenderbuffer(s.FRAMEBUFFER, s.DEPTH_STENCIL_ATTACHMENT, s.RENDERBUFFER, this._depthStencilBuffer);
             }
             s.bindFramebuffer(s.FRAMEBUFFER, null), s.bindRenderbuffer(s.RENDERBUFFER, null), 
@@ -1474,46 +1463,46 @@ window.Laya = function(t) {
             O.targetFns = [ O.BlendNormalTarget, O.BlendAddTarget, O.BlendMultiplyTarget, O.BlendScreenTarget, O.BlendOverlayTarget, O.BlendLightTarget, O.BlendMask, O.BlendDestinationOut ];
         }
         static BlendNormal(t) {
-            v.setBlendFunc(t, t.ONE, t.ONE_MINUS_SRC_ALPHA);
+            v.setBlendFunc(t, t.ONE, t.ONE_MINUS_SRC_ALPHA, !0);
         }
         static BlendAdd(t) {
-            v.setBlendFunc(t, t.ONE, t.DST_ALPHA);
+            v.setBlendFunc(t, t.ONE, t.DST_ALPHA, !0);
         }
         static BlendMultiply(t) {
-            v.setBlendFunc(t, t.DST_COLOR, t.ONE_MINUS_SRC_ALPHA);
+            v.setBlendFunc(t, t.DST_COLOR, t.ONE_MINUS_SRC_ALPHA, !0);
         }
         static BlendScreen(t) {
-            v.setBlendFunc(t, t.ONE, t.ONE);
+            v.setBlendFunc(t, t.ONE, t.ONE, !0);
         }
         static BlendOverlay(t) {
-            v.setBlendFunc(t, t.ONE, t.ONE_MINUS_SRC_COLOR);
+            v.setBlendFunc(t, t.ONE, t.ONE_MINUS_SRC_COLOR, !0);
         }
         static BlendLight(t) {
-            v.setBlendFunc(t, t.ONE, t.ONE);
+            v.setBlendFunc(t, t.ONE, t.ONE, !0);
         }
         static BlendNormalTarget(t) {
-            v.setBlendFunc(t, t.ONE, t.ONE_MINUS_SRC_ALPHA);
+            v.setBlendFunc(t, t.ONE, t.ONE_MINUS_SRC_ALPHA, !0);
         }
         static BlendAddTarget(t) {
-            v.setBlendFunc(t, t.ONE, t.DST_ALPHA);
+            v.setBlendFunc(t, t.ONE, t.DST_ALPHA, !0);
         }
         static BlendMultiplyTarget(t) {
-            v.setBlendFunc(t, t.DST_COLOR, t.ONE_MINUS_SRC_ALPHA);
+            v.setBlendFunc(t, t.DST_COLOR, t.ONE_MINUS_SRC_ALPHA, !0);
         }
         static BlendScreenTarget(t) {
-            v.setBlendFunc(t, t.ONE, t.ONE);
+            v.setBlendFunc(t, t.ONE, t.ONE, !0);
         }
         static BlendOverlayTarget(t) {
-            v.setBlendFunc(t, t.ONE, t.ONE_MINUS_SRC_COLOR);
+            v.setBlendFunc(t, t.ONE, t.ONE_MINUS_SRC_COLOR, !0);
         }
         static BlendLightTarget(t) {
-            v.setBlendFunc(t, t.ONE, t.ONE);
+            v.setBlendFunc(t, t.ONE, t.ONE, !0);
         }
         static BlendMask(t) {
-            v.setBlendFunc(t, t.ZERO, t.SRC_ALPHA);
+            v.setBlendFunc(t, t.ZERO, t.SRC_ALPHA, !0);
         }
         static BlendDestinationOut(t) {
-            v.setBlendFunc(t, t.ZERO, t.ZERO);
+            v.setBlendFunc(t, t.ZERO, t.ZERO, !0);
         }
     }
     O.activeBlendFunction = null, O.NAMES = [ "normal", "add", "multiply", "screen", "overlay", "light", "mask", "destination-out" ], 
@@ -2041,18 +2030,18 @@ window.Laya = function(t) {
                 t._getCacheStyle().filterCache = T, r.pushRT(), r.useRT(v);
                 var C = t.x - x + m, b = t.y - y + m;
                 a._fun.call(a, t, e, C, b), r.useRT(E);
-                for (var A = 0; A < h; A++) {
-                    0 != A && (r.useRT(v), r.drawTarget(E, 0, 0, o.width, o.height, p.TEMP.identity(), l, null, O.TOINT.overlay), 
+                for (var w = 0; w < h; w++) {
+                    0 != w && (r.useRT(v), r.drawTarget(E, 0, 0, o.width, o.height, p.TEMP.identity(), l, null, O.TOINT.overlay), 
                     r.useRT(E));
-                    var R = n[A];
-                    switch (R.type) {
+                    var A = n[w];
+                    switch (A.type) {
                       case z.BLUR:
                       case z.GLOW:
-                        R._glRender && R._glRender.render(v, e, o.width, o.height, R);
+                        A._glRender && A._glRender.render(v, e, o.width, o.height, A);
                         break;
 
                       case z.COLOR:
-                        r.setColorFilter(R), r.drawTarget(v, 0, 0, o.width, o.height, p.EMPTY.identity(), V.create(U.TEXTURE2D, 0)), 
+                        r.setColorFilter(A), r.drawTarget(v, 0, 0, o.width, o.height, p.EMPTY.identity(), V.create(U.TEXTURE2D, 0)), 
                         r.setColorFilter(null);
                     }
                 }
@@ -2061,10 +2050,10 @@ window.Laya = function(t) {
             if (i = i - m - t.x, s = s - m - t.y, _.setTo(i, s), u.transformPoint(_), i = _.x + o.x, 
             s = _.y + o.y, r._drawRenderTexture(T, i, s, o.width, o.height, p.TEMP.identity(), 1, B.defuv), 
             v) {
-                var w = H.create([ v ], function(t) {
+                var R = H.create([ v ], function(t) {
                     t.destroy();
                 }, this);
-                v = null, e.addRenderObject(w);
+                v = null, e.addRenderObject(R);
             }
             u.destroy();
         }
@@ -3079,11 +3068,11 @@ window.Laya = function(t) {
                 _[o + 4] = r, _[o + 5] = 255, o += 6, c += 2;
             }
             a.setNeedUpload();
-            var y = this.vertNum, E = i.length, C = n.needSize(i.byteLength), b = n.getUint16Array(), A = C >> 1;
+            var y = this.vertNum, E = i.length, C = n.needSize(i.byteLength), b = n.getUint16Array(), w = C >> 1;
             if (y > 0) {
-                var R = A + E, w = 0;
-                for (v = A; v < R; v++, w++) b[v] = i[w] + y;
-            } else b.set(i, A);
+                var A = w + E, R = 0;
+                for (v = w; v < A; v++, R++) b[v] = i[R] + y;
+            } else b.set(i, w);
             n.setNeedUpload(), this.vertNum += h, this.indexNum += i.length;
         }
         releaseMesh() {
@@ -3122,7 +3111,7 @@ window.Laya = function(t) {
         }
     }
     bt.const_stride = 12, bt._POOL = [];
-    class At {
+    class wt {
         constructor(t, e) {
             this.submitStartPos = 0, this.submitEndPos = 0, this.context = null, this.touches = [], 
             this.submits = [], this.sprite = null, this.meshlist = [], this.cachedClipInfo = new p(), 
@@ -3171,8 +3160,8 @@ window.Laya = function(t) {
         }
         releaseMem() {}
     }
-    At.matI = new p();
-    var Rt = "/*\r\n\ttexture和fillrect使用的。\r\n*/\r\nattribute vec4 posuv;\r\nattribute vec4 attribColor;\r\nattribute vec4 attribFlags;\r\n//attribute vec4 clipDir;\r\n//attribute vec2 clipRect;\r\nuniform vec4 clipMatDir;\r\nuniform vec2 clipMatPos;\t\t// 这个是全局的，不用再应用矩阵了。\r\nvarying vec2 cliped;\r\nuniform vec2 size;\r\nuniform vec2 clipOff;\t\t\t// 使用要把clip偏移。cacheas normal用. 只用了[0]\r\n#ifdef WORLDMAT\r\n\tuniform mat4 mmat;\r\n#endif\r\n#ifdef MVP3D\r\n\tuniform mat4 u_MvpMatrix;\r\n#endif\r\nvarying vec4 v_texcoordAlpha;\r\nvarying vec4 v_color;\r\nvarying float v_useTex;\r\n\r\nvoid main() {\r\n\r\n\tvec4 pos = vec4(posuv.xy,0.,1.);\r\n#ifdef WORLDMAT\r\n\tpos=mmat*pos;\r\n#endif\r\n\tvec4 pos1  =vec4((pos.x/size.x-0.5)*2.0,(0.5-pos.y/size.y)*2.0,0.,1.0);\r\n#ifdef MVP3D\r\n\tgl_Position=u_MvpMatrix*pos1;\r\n#else\r\n\tgl_Position=pos1;\r\n#endif\r\n\tv_texcoordAlpha.xy = posuv.zw;\r\n\t//v_texcoordAlpha.z = attribColor.a/255.0;\r\n\tv_color = attribColor/255.0;\r\n\tv_color.xyz*=v_color.w;//反正后面也要预乘\r\n\t\r\n\tv_useTex = attribFlags.r/255.0;\r\n\tfloat clipw = length(clipMatDir.xy);\r\n\tfloat cliph = length(clipMatDir.zw);\r\n\t\r\n\tvec2 clpos = clipMatPos.xy;\r\n\t#ifdef WORLDMAT\r\n\t\t// 如果有mmat，需要修改clipMatPos,因为 这是cacheas normal （如果不是就错了）， clipMatPos被去掉了偏移\r\n\t\tif(clipOff[0]>0.0){\r\n\t\t\tclpos.x+=mmat[3].x;\t//tx\t最简单处理\r\n\t\t\tclpos.y+=mmat[3].y;\t//ty\r\n\t\t}\r\n\t#endif\r\n\tvec2 clippos = pos.xy - clpos;\t//pos已经应用矩阵了，为了减的有意义，clip的位置也要缩放\r\n\tif(clipw>20000. && cliph>20000.)\r\n\t\tcliped = vec2(0.5,0.5);\r\n\telse {\r\n\t\t//转成0到1之间。/clipw/clipw 表示clippos与normalize之后的clip朝向点积之后，再除以clipw\r\n\t\tcliped=vec2( dot(clippos,clipMatDir.xy)/clipw/clipw, dot(clippos,clipMatDir.zw)/cliph/cliph);\r\n\t}\r\n\r\n}", wt = "/*\r\n\ttexture和fillrect使用的。\r\n*/\r\n#ifdef GL_FRAGMENT_PRECISION_HIGH\r\nprecision highp float;\r\n#else\r\nprecision mediump float;\r\n#endif\r\n\r\nvarying vec4 v_texcoordAlpha;\r\nvarying vec4 v_color;\r\nvarying float v_useTex;\r\nuniform sampler2D texture;\r\nvarying vec2 cliped;\r\n\r\n#ifdef BLUR_FILTER\r\nuniform vec4 strength_sig2_2sig2_gauss1;\r\nuniform vec2 blurInfo;\r\n\r\n#define PI 3.141593\r\n\r\nfloat getGaussian(float x, float y){\r\n    return strength_sig2_2sig2_gauss1.w*exp(-(x*x+y*y)/strength_sig2_2sig2_gauss1.z);\r\n}\r\n\r\nvec4 blur(){\r\n    const float blurw = 9.0;\r\n    vec4 vec4Color = vec4(0.0,0.0,0.0,0.0);\r\n    vec2 halfsz=vec2(blurw,blurw)/2.0/blurInfo;    \r\n    vec2 startpos=v_texcoordAlpha.xy-halfsz;\r\n    vec2 ctexcoord = startpos;\r\n    vec2 step = 1.0/blurInfo;  //每个像素      \r\n    \r\n    for(float y = 0.0;y<=blurw; ++y){\r\n        ctexcoord.x=startpos.x;\r\n        for(float x = 0.0;x<=blurw; ++x){\r\n            //TODO 纹理坐标的固定偏移应该在vs中处理\r\n            vec4Color += texture2D(texture, ctexcoord)*getGaussian(x-blurw/2.0,y-blurw/2.0);\r\n            ctexcoord.x+=step.x;\r\n        }\r\n        ctexcoord.y+=step.y;\r\n    }\r\n    return vec4Color;\r\n}\r\n#endif\r\n\r\n#ifdef COLOR_FILTER\r\nuniform vec4 colorAlpha;\r\nuniform mat4 colorMat;\r\n#endif\r\n\r\n#ifdef GLOW_FILTER\r\nuniform vec4 u_color;\r\nuniform vec4 u_blurInfo1;\r\nuniform vec4 u_blurInfo2;\r\n#endif\r\n\r\n#ifdef COLOR_ADD\r\nuniform vec4 colorAdd;\r\n#endif\r\n\r\n#ifdef FILLTEXTURE\t\r\nuniform vec4 u_TexRange;//startu,startv,urange, vrange\r\n#endif\r\nvoid main() {\r\n\tif(cliped.x<0.) discard;\r\n\tif(cliped.x>1.) discard;\r\n\tif(cliped.y<0.) discard;\r\n\tif(cliped.y>1.) discard;\r\n\t\r\n#ifdef FILLTEXTURE\t\r\n   vec4 color= texture2D(texture, fract(v_texcoordAlpha.xy)*u_TexRange.zw + u_TexRange.xy);\r\n#else\r\n   vec4 color= texture2D(texture, v_texcoordAlpha.xy);\r\n#endif\r\n\r\n   if(v_useTex<=0.)color = vec4(1.,1.,1.,1.);\r\n   color.a*=v_color.w;\r\n   //color.rgb*=v_color.w;\r\n   color.rgb*=v_color.rgb;\r\n   gl_FragColor=color;\r\n   \r\n   #ifdef COLOR_ADD\r\n\tgl_FragColor = vec4(colorAdd.rgb,colorAdd.a*gl_FragColor.a);\r\n\tgl_FragColor.xyz *= colorAdd.a;\r\n   #endif\r\n   \r\n   #ifdef BLUR_FILTER\r\n\tgl_FragColor =   blur();\r\n\tgl_FragColor.w*=v_color.w;   \r\n   #endif\r\n   \r\n   #ifdef COLOR_FILTER\r\n\tmat4 alphaMat =colorMat;\r\n\r\n\talphaMat[0][3] *= gl_FragColor.a;\r\n\talphaMat[1][3] *= gl_FragColor.a;\r\n\talphaMat[2][3] *= gl_FragColor.a;\r\n\r\n\tgl_FragColor = gl_FragColor * alphaMat;\r\n\tgl_FragColor += colorAlpha/255.0*gl_FragColor.a;\r\n   #endif\r\n   \r\n   #ifdef GLOW_FILTER\r\n\tconst float c_IterationTime = 10.0;\r\n\tfloat floatIterationTotalTime = c_IterationTime * c_IterationTime;\r\n\tvec4 vec4Color = vec4(0.0,0.0,0.0,0.0);\r\n\tvec2 vec2FilterDir = vec2(-(u_blurInfo1.z)/u_blurInfo2.x,-(u_blurInfo1.w)/u_blurInfo2.y);\r\n\tvec2 vec2FilterOff = vec2(u_blurInfo1.x/u_blurInfo2.x/c_IterationTime * 2.0,u_blurInfo1.y/u_blurInfo2.y/c_IterationTime * 2.0);\r\n\tfloat maxNum = u_blurInfo1.x * u_blurInfo1.y;\r\n\tvec2 vec2Off = vec2(0.0,0.0);\r\n\tfloat floatOff = c_IterationTime/2.0;\r\n\tfor(float i = 0.0;i<=c_IterationTime; ++i){\r\n\t\tfor(float j = 0.0;j<=c_IterationTime; ++j){\r\n\t\t\tvec2Off = vec2(vec2FilterOff.x * (i - floatOff),vec2FilterOff.y * (j - floatOff));\r\n\t\t\tvec4Color += texture2D(texture, v_texcoordAlpha.xy + vec2FilterDir + vec2Off)/floatIterationTotalTime;\r\n\t\t}\r\n\t}\r\n\tgl_FragColor = vec4(u_color.rgb,vec4Color.a * u_blurInfo2.z);\r\n\tgl_FragColor.rgb *= gl_FragColor.a;   \r\n   #endif\r\n   \r\n}", St = "attribute vec4 position;\r\nattribute vec4 attribColor;\r\n//attribute vec4 clipDir;\r\n//attribute vec2 clipRect;\r\nuniform vec4 clipMatDir;\r\nuniform vec2 clipMatPos;\r\n#ifdef WORLDMAT\r\n\tuniform mat4 mmat;\r\n#endif\r\nuniform mat4 u_mmat2;\r\n//uniform vec2 u_pos;\r\nuniform vec2 size;\r\nvarying vec4 color;\r\n//vec4 dirxy=vec4(0.9,0.1, -0.1,0.9);\r\n//vec4 clip=vec4(100.,30.,300.,600.);\r\nvarying vec2 cliped;\r\nvoid main(){\r\n\t\r\n#ifdef WORLDMAT\r\n\tvec4 pos=mmat*vec4(position.xy,0.,1.);\r\n\tgl_Position =vec4((pos.x/size.x-0.5)*2.0,(0.5-pos.y/size.y)*2.0,pos.z,1.0);\r\n#else\r\n\tgl_Position =vec4((position.x/size.x-0.5)*2.0,(0.5-position.y/size.y)*2.0,position.z,1.0);\r\n#endif\t\r\n\tfloat clipw = length(clipMatDir.xy);\r\n\tfloat cliph = length(clipMatDir.zw);\r\n\tvec2 clippos = position.xy - clipMatPos.xy;\t//pos已经应用矩阵了，为了减的有意义，clip的位置也要缩放\r\n\tif(clipw>20000. && cliph>20000.)\r\n\t\tcliped = vec2(0.5,0.5);\r\n\telse {\r\n\t\t//clipdir是带缩放的方向，由于上面clippos是在缩放后的空间计算的，所以需要把方向先normalize一下\r\n\t\tcliped=vec2( dot(clippos,clipMatDir.xy)/clipw/clipw, dot(clippos,clipMatDir.zw)/cliph/cliph);\r\n\t}\r\n  //pos2d.x = dot(clippos,dirx);\r\n  color=attribColor/255.;\r\n}", Mt = "precision mediump float;\r\n//precision mediump float;\r\nvarying vec4 color;\r\n//uniform float alpha;\r\nvarying vec2 cliped;\r\nvoid main(){\r\n\t//vec4 a=vec4(color.r, color.g, color.b, 1);\r\n\t//a.a*=alpha;\r\n    gl_FragColor= color;// vec4(color.r, color.g, color.b, alpha);\r\n\tgl_FragColor.rgb*=color.a;\r\n\tif(cliped.x<0.) discard;\r\n\tif(cliped.x>1.) discard;\r\n\tif(cliped.y<0.) discard;\r\n\tif(cliped.y>1.) discard;\r\n}", It = "attribute vec2 position;\r\nattribute vec2 texcoord;\r\nattribute vec4 color;\r\nuniform vec2 size;\r\nuniform float offsetX;\r\nuniform float offsetY;\r\nuniform mat4 mmat;\r\nuniform mat4 u_mmat2;\r\nvarying vec2 v_texcoord;\r\nvarying vec4 v_color;\r\nvoid main() {\r\n  vec4 pos=mmat*u_mmat2*vec4(offsetX+position.x,offsetY+position.y,0,1 );\r\n  gl_Position = vec4((pos.x/size.x-0.5)*2.0,(0.5-pos.y/size.y)*2.0,pos.z,1.0);\r\n  v_color = color;\r\n  v_color.rgb *= v_color.a;\r\n  v_texcoord = texcoord;  \r\n}", Pt = "precision mediump float;\r\nvarying vec2 v_texcoord;\r\nvarying vec4 v_color;\r\nuniform sampler2D texture;\r\nuniform float alpha;\r\nvoid main() {\r\n\tvec4 t_color = texture2D(texture, v_texcoord);\r\n\tgl_FragColor = t_color.rgba * v_color;\r\n\tgl_FragColor *= alpha;\r\n}";
+    wt.matI = new p();
+    var At = "/*\r\n\ttexture和fillrect使用的。\r\n*/\r\nattribute vec4 posuv;\r\nattribute vec4 attribColor;\r\nattribute vec4 attribFlags;\r\n//attribute vec4 clipDir;\r\n//attribute vec2 clipRect;\r\nuniform vec4 clipMatDir;\r\nuniform vec2 clipMatPos;\t\t// 这个是全局的，不用再应用矩阵了。\r\nvarying vec2 cliped;\r\nuniform vec2 size;\r\nuniform vec2 clipOff;\t\t\t// 使用要把clip偏移。cacheas normal用. 只用了[0]\r\n#ifdef WORLDMAT\r\n\tuniform mat4 mmat;\r\n#endif\r\n#ifdef MVP3D\r\n\tuniform mat4 u_MvpMatrix;\r\n#endif\r\nvarying vec4 v_texcoordAlpha;\r\nvarying vec4 v_color;\r\nvarying float v_useTex;\r\n\r\nvoid main() {\r\n\r\n\tvec4 pos = vec4(posuv.xy,0.,1.);\r\n#ifdef WORLDMAT\r\n\tpos=mmat*pos;\r\n#endif\r\n\tvec4 pos1  =vec4((pos.x/size.x-0.5)*2.0,(0.5-pos.y/size.y)*2.0,0.,1.0);\r\n#ifdef MVP3D\r\n\tgl_Position=u_MvpMatrix*pos1;\r\n#else\r\n\tgl_Position=pos1;\r\n#endif\r\n\tv_texcoordAlpha.xy = posuv.zw;\r\n\t//v_texcoordAlpha.z = attribColor.a/255.0;\r\n\tv_color = attribColor/255.0;\r\n\tv_color.xyz*=v_color.w;//反正后面也要预乘\r\n\t\r\n\tv_useTex = attribFlags.r/255.0;\r\n\tfloat clipw = length(clipMatDir.xy);\r\n\tfloat cliph = length(clipMatDir.zw);\r\n\t\r\n\tvec2 clpos = clipMatPos.xy;\r\n\t#ifdef WORLDMAT\r\n\t\t// 如果有mmat，需要修改clipMatPos,因为 这是cacheas normal （如果不是就错了）， clipMatPos被去掉了偏移\r\n\t\tif(clipOff[0]>0.0){\r\n\t\t\tclpos.x+=mmat[3].x;\t//tx\t最简单处理\r\n\t\t\tclpos.y+=mmat[3].y;\t//ty\r\n\t\t}\r\n\t#endif\r\n\tvec2 clippos = pos.xy - clpos;\t//pos已经应用矩阵了，为了减的有意义，clip的位置也要缩放\r\n\tif(clipw>20000. && cliph>20000.)\r\n\t\tcliped = vec2(0.5,0.5);\r\n\telse {\r\n\t\t//转成0到1之间。/clipw/clipw 表示clippos与normalize之后的clip朝向点积之后，再除以clipw\r\n\t\tcliped=vec2( dot(clippos,clipMatDir.xy)/clipw/clipw, dot(clippos,clipMatDir.zw)/cliph/cliph);\r\n\t}\r\n\r\n}", Rt = "/*\r\n\ttexture和fillrect使用的。\r\n*/\r\n#ifdef GL_FRAGMENT_PRECISION_HIGH\r\nprecision highp float;\r\n#else\r\nprecision mediump float;\r\n#endif\r\n\r\nvarying vec4 v_texcoordAlpha;\r\nvarying vec4 v_color;\r\nvarying float v_useTex;\r\nuniform sampler2D texture;\r\nvarying vec2 cliped;\r\n\r\n#ifdef BLUR_FILTER\r\nuniform vec4 strength_sig2_2sig2_gauss1;\r\nuniform vec2 blurInfo;\r\n\r\n#define PI 3.141593\r\n\r\nfloat getGaussian(float x, float y){\r\n    return strength_sig2_2sig2_gauss1.w*exp(-(x*x+y*y)/strength_sig2_2sig2_gauss1.z);\r\n}\r\n\r\nvec4 blur(){\r\n    const float blurw = 9.0;\r\n    vec4 vec4Color = vec4(0.0,0.0,0.0,0.0);\r\n    vec2 halfsz=vec2(blurw,blurw)/2.0/blurInfo;    \r\n    vec2 startpos=v_texcoordAlpha.xy-halfsz;\r\n    vec2 ctexcoord = startpos;\r\n    vec2 step = 1.0/blurInfo;  //每个像素      \r\n    \r\n    for(float y = 0.0;y<=blurw; ++y){\r\n        ctexcoord.x=startpos.x;\r\n        for(float x = 0.0;x<=blurw; ++x){\r\n            //TODO 纹理坐标的固定偏移应该在vs中处理\r\n            vec4Color += texture2D(texture, ctexcoord)*getGaussian(x-blurw/2.0,y-blurw/2.0);\r\n            ctexcoord.x+=step.x;\r\n        }\r\n        ctexcoord.y+=step.y;\r\n    }\r\n    return vec4Color;\r\n}\r\n#endif\r\n\r\n#ifdef COLOR_FILTER\r\nuniform vec4 colorAlpha;\r\nuniform mat4 colorMat;\r\n#endif\r\n\r\n#ifdef GLOW_FILTER\r\nuniform vec4 u_color;\r\nuniform vec4 u_blurInfo1;\r\nuniform vec4 u_blurInfo2;\r\n#endif\r\n\r\n#ifdef COLOR_ADD\r\nuniform vec4 colorAdd;\r\n#endif\r\n\r\n#ifdef FILLTEXTURE\t\r\nuniform vec4 u_TexRange;//startu,startv,urange, vrange\r\n#endif\r\nvoid main() {\r\n\tif(cliped.x<0.) discard;\r\n\tif(cliped.x>1.) discard;\r\n\tif(cliped.y<0.) discard;\r\n\tif(cliped.y>1.) discard;\r\n\t\r\n#ifdef FILLTEXTURE\t\r\n   vec4 color= texture2D(texture, fract(v_texcoordAlpha.xy)*u_TexRange.zw + u_TexRange.xy);\r\n#else\r\n   vec4 color= texture2D(texture, v_texcoordAlpha.xy);\r\n#endif\r\n\r\n   if(v_useTex<=0.)color = vec4(1.,1.,1.,1.);\r\n   color.a*=v_color.w;\r\n   //color.rgb*=v_color.w;\r\n   color.rgb*=v_color.rgb;\r\n   gl_FragColor=color;\r\n   \r\n   #ifdef COLOR_ADD\r\n\tgl_FragColor = vec4(colorAdd.rgb,colorAdd.a*gl_FragColor.a);\r\n\tgl_FragColor.xyz *= colorAdd.a;\r\n   #endif\r\n   \r\n   #ifdef BLUR_FILTER\r\n\tgl_FragColor =   blur();\r\n\tgl_FragColor.w*=v_color.w;   \r\n   #endif\r\n   \r\n   #ifdef COLOR_FILTER\r\n\tmat4 alphaMat =colorMat;\r\n\r\n\talphaMat[0][3] *= gl_FragColor.a;\r\n\talphaMat[1][3] *= gl_FragColor.a;\r\n\talphaMat[2][3] *= gl_FragColor.a;\r\n\r\n\tgl_FragColor = gl_FragColor * alphaMat;\r\n\tgl_FragColor += colorAlpha/255.0*gl_FragColor.a;\r\n   #endif\r\n   \r\n   #ifdef GLOW_FILTER\r\n\tconst float c_IterationTime = 10.0;\r\n\tfloat floatIterationTotalTime = c_IterationTime * c_IterationTime;\r\n\tvec4 vec4Color = vec4(0.0,0.0,0.0,0.0);\r\n\tvec2 vec2FilterDir = vec2(-(u_blurInfo1.z)/u_blurInfo2.x,-(u_blurInfo1.w)/u_blurInfo2.y);\r\n\tvec2 vec2FilterOff = vec2(u_blurInfo1.x/u_blurInfo2.x/c_IterationTime * 2.0,u_blurInfo1.y/u_blurInfo2.y/c_IterationTime * 2.0);\r\n\tfloat maxNum = u_blurInfo1.x * u_blurInfo1.y;\r\n\tvec2 vec2Off = vec2(0.0,0.0);\r\n\tfloat floatOff = c_IterationTime/2.0;\r\n\tfor(float i = 0.0;i<=c_IterationTime; ++i){\r\n\t\tfor(float j = 0.0;j<=c_IterationTime; ++j){\r\n\t\t\tvec2Off = vec2(vec2FilterOff.x * (i - floatOff),vec2FilterOff.y * (j - floatOff));\r\n\t\t\tvec4Color += texture2D(texture, v_texcoordAlpha.xy + vec2FilterDir + vec2Off)/floatIterationTotalTime;\r\n\t\t}\r\n\t}\r\n\tgl_FragColor = vec4(u_color.rgb,vec4Color.a * u_blurInfo2.z);\r\n\tgl_FragColor.rgb *= gl_FragColor.a;   \r\n   #endif\r\n   \r\n}", St = "attribute vec4 position;\r\nattribute vec4 attribColor;\r\n//attribute vec4 clipDir;\r\n//attribute vec2 clipRect;\r\nuniform vec4 clipMatDir;\r\nuniform vec2 clipMatPos;\r\n#ifdef WORLDMAT\r\n\tuniform mat4 mmat;\r\n#endif\r\nuniform mat4 u_mmat2;\r\n//uniform vec2 u_pos;\r\nuniform vec2 size;\r\nvarying vec4 color;\r\n//vec4 dirxy=vec4(0.9,0.1, -0.1,0.9);\r\n//vec4 clip=vec4(100.,30.,300.,600.);\r\nvarying vec2 cliped;\r\nvoid main(){\r\n\t\r\n#ifdef WORLDMAT\r\n\tvec4 pos=mmat*vec4(position.xy,0.,1.);\r\n\tgl_Position =vec4((pos.x/size.x-0.5)*2.0,(0.5-pos.y/size.y)*2.0,pos.z,1.0);\r\n#else\r\n\tgl_Position =vec4((position.x/size.x-0.5)*2.0,(0.5-position.y/size.y)*2.0,position.z,1.0);\r\n#endif\t\r\n\tfloat clipw = length(clipMatDir.xy);\r\n\tfloat cliph = length(clipMatDir.zw);\r\n\tvec2 clippos = position.xy - clipMatPos.xy;\t//pos已经应用矩阵了，为了减的有意义，clip的位置也要缩放\r\n\tif(clipw>20000. && cliph>20000.)\r\n\t\tcliped = vec2(0.5,0.5);\r\n\telse {\r\n\t\t//clipdir是带缩放的方向，由于上面clippos是在缩放后的空间计算的，所以需要把方向先normalize一下\r\n\t\tcliped=vec2( dot(clippos,clipMatDir.xy)/clipw/clipw, dot(clippos,clipMatDir.zw)/cliph/cliph);\r\n\t}\r\n  //pos2d.x = dot(clippos,dirx);\r\n  color=attribColor/255.;\r\n}", Mt = "precision mediump float;\r\n//precision mediump float;\r\nvarying vec4 color;\r\n//uniform float alpha;\r\nvarying vec2 cliped;\r\nvoid main(){\r\n\t//vec4 a=vec4(color.r, color.g, color.b, 1);\r\n\t//a.a*=alpha;\r\n    gl_FragColor= color;// vec4(color.r, color.g, color.b, alpha);\r\n\tgl_FragColor.rgb*=color.a;\r\n\tif(cliped.x<0.) discard;\r\n\tif(cliped.x>1.) discard;\r\n\tif(cliped.y<0.) discard;\r\n\tif(cliped.y>1.) discard;\r\n}", It = "attribute vec2 position;\r\nattribute vec2 texcoord;\r\nattribute vec4 color;\r\nuniform vec2 size;\r\nuniform float offsetX;\r\nuniform float offsetY;\r\nuniform mat4 mmat;\r\nuniform mat4 u_mmat2;\r\nvarying vec2 v_texcoord;\r\nvarying vec4 v_color;\r\nvoid main() {\r\n  vec4 pos=mmat*u_mmat2*vec4(offsetX+position.x,offsetY+position.y,0,1 );\r\n  gl_Position = vec4((pos.x/size.x-0.5)*2.0,(0.5-pos.y/size.y)*2.0,pos.z,1.0);\r\n  v_color = color;\r\n  v_color.rgb *= v_color.a;\r\n  v_texcoord = texcoord;  \r\n}", Pt = "precision mediump float;\r\nvarying vec2 v_texcoord;\r\nvarying vec4 v_color;\r\nuniform sampler2D texture;\r\nuniform float alpha;\r\nvoid main() {\r\n\tvec4 t_color = texture2D(texture, v_texcoord);\r\n\tgl_FragColor = t_color.rgba * v_color;\r\n\tgl_FragColor *= alpha;\r\n}";
     class Lt {
         constructor() {
             this.ALPHA = 1, this.defines = new U(), this.shaderType = 0, this.fillStyle = at.DEFAULT, 
@@ -3182,7 +3171,7 @@ window.Laya = function(t) {
             this.defines = null, this.filters = null;
         }
         static __init__() {
-            W.preCompile2D(0, U.TEXTURE2D, Rt, wt, null), W.preCompile2D(0, U.PRIMITIVE, St, Mt, null), 
+            W.preCompile2D(0, U.TEXTURE2D, At, Rt, null), W.preCompile2D(0, U.PRIMITIVE, St, Mt, null), 
             W.preCompile2D(0, U.SKINMESH, It, Pt, null);
         }
     }
@@ -3213,15 +3202,15 @@ window.Laya = function(t) {
             n[h++] = t[1]);
             var _ = r;
             l = h / 2;
-            var c, u, d, p, f, g, m, v, T, x, y, E, C, b, A, R, w, S, M, I, P = i / 2;
+            var c, u, d, p, f, g, m, v, T, x, y, E, C, b, w, A, R, S, M, I, P = i / 2;
             for (d = n[0], p = n[1], x = d - (f = n[2]), T = (T = -(p - (g = n[3]))) / (I = Math.sqrt(T * T + x * x)) * P, 
             x = x / I * P, _.push(d - T, p - x, d + T, p + x), o = 1; o < l - 1; o++) d = n[2 * (o - 1)], 
             p = n[2 * (o - 1) + 1], f = n[2 * o], g = n[2 * o + 1], m = n[2 * (o + 1)], v = n[2 * (o + 1) + 1], 
-            x = d - f, E = f - m, A = (-(T = (T = -(p - g)) / (I = Math.sqrt(T * T + x * x)) * P) + d) * (-(x = x / I * P) + g) - (-T + f) * (-x + p), 
+            x = d - f, E = f - m, w = (-(T = (T = -(p - g)) / (I = Math.sqrt(T * T + x * x)) * P) + d) * (-(x = x / I * P) + g) - (-T + f) * (-x + p), 
             S = (-(y = (y = -(g - v)) / (I = Math.sqrt(y * y + E * E)) * P) + m) * (-(E = E / I * P) + g) - (-y + f) * (-E + v), 
-            M = (C = -x + p - (-x + g)) * (w = -y + f - (-y + m)) - (R = -E + v - (-E + g)) * (b = -T + f - (-T + d)), 
-            Math.abs(M) < .1 ? (M += 10.1, _.push(f - T, g - x, f + T, g + x)) : (c = (b * S - w * A) / M, 
-            u = (R * A - C * S) / M, _.push(c, u, f - (c - f), g - (u - g)));
+            M = (C = -x + p - (-x + g)) * (R = -y + f - (-y + m)) - (A = -E + v - (-E + g)) * (b = -T + f - (-T + d)), 
+            Math.abs(M) < .1 ? (M += 10.1, _.push(f - T, g - x, f + T, g + x)) : (c = (b * S - R * w) / M, 
+            u = (A * w - C * S) / M, _.push(c, u, f - (c - f), g - (u - g)));
             for (d = n[h - 4], p = n[h - 3], x = d - (f = n[h - 2]), T = (T = -(p - (g = n[h - 1]))) / (I = Math.sqrt(T * T + x * x)) * P, 
             x = x / I * P, _.push(f - T, g - x, f + T, g + x), o = 1; o < l; o++) e.push(s + 2 * (o - 1), s + 2 * (o - 1) + 1, s + 2 * o + 1, s + 2 * o + 1, s + 2 * o, s + 2 * (o - 1));
             return _;
@@ -3968,7 +3957,7 @@ window.Laya = function(t) {
         }
         getTexturePixels(t, e, s, r) {
             var a, n, h, o = this.bitmap, l = this._w, _ = this._h, c = this.sourceWidth, u = this.sourceHeight, d = o.width, p = o.height, f = this.offsetX, g = this.offsetY;
-            let m = s, v = s;
+            let m = s, v = r;
             if (t + s > l + f && (m -= t + s - l - f), t + s > c && (s -= t + s - c), e + r > _ + g && (v -= e + r - _ - g), 
             e + r > u && (r -= e + r - u), s <= 0 || r <= 0) return null;
             let T = f > t ? f - t : 0, x = g > e ? g - e : 0, y = t > f ? t - f : 0, E = e > g ? e - g : 0;
@@ -3980,24 +3969,24 @@ window.Laya = function(t) {
             if (b) {
                 if (0 == t && 0 == e && s == d && r == p) return b;
                 let i = this._uv.slice(), o = Math.round(i[0] * d), l = Math.round(i[1] * p);
-                var A = new Uint8Array(s * r * 4);
-                for (a = 4 * o + 4 * y + (n = (l + E) * (C = 4 * d)), h = 0; h < v; h++) A.set(b.slice(a, a + 4 * m), 4 * s * (h + x) + 4 * T), 
+                var w = new Uint8Array(s * r * 4);
+                for (a = 4 * o + 4 * y + (n = (l + E) * (C = 4 * d)), h = 0; h < v; h++) w.set(b.slice(a, a + 4 * m), 4 * s * (h + x) + 4 * T), 
                 a += C;
-                return A;
+                return w;
             }
-            var R = new i.Context();
-            R.size(s, r), R.asBitmap = !0;
-            var w = null;
+            var A = new i.Context();
+            A.size(s, r), A.asBitmap = !0;
+            var R = null;
             if (0 != t || 0 != e || s != d || r != p) {
-                var S = (w = this._uv.slice())[0], M = w[1], I = (w[2] - S) / l, P = (w[7] - M) / _;
-                w = [ S + y * I, M + E * P, S + (y + m) * I, M + E * P, S + (y + m) * I, M + (E + v) * P, S + y * I, M + (E + v) * P ];
+                var S = (R = this._uv.slice())[0], M = R[1], I = (R[2] - S) / l, P = (R[7] - M) / _;
+                R = [ S + y * I, M + E * P, S + (y + m) * I, M + E * P, S + (y + m) * I, M + (E + v) * P, S + y * I, M + (E + v) * P ];
             }
-            R._drawTextureM(this, T, x, m, v, null, 1, w), R._targets.start(), R.flush(), R._targets.end(), 
-            R._targets.restore();
-            var L = R._targets.getData(0, 0, s, r);
-            for (R.destroy(), A = new Uint8Array(s * r * 4), a = 0, n = (r - 1) * C, h = r - 1; h >= 0; h--) A.set(L.slice(n, n + C), a), 
+            A._drawTextureM(this, T, x, m, v, null, 1, R), A._targets.start(), A.flush(), A._targets.end(), 
+            A._targets.restore();
+            var L = A._targets.getData(0, 0, s, r);
+            for (A.destroy(), w = new Uint8Array(s * r * 4), a = 0, n = (r - 1) * C, h = r - 1; h >= 0; h--) w.set(L.slice(n, n + C), a), 
             a += C, n -= C;
-            return A;
+            return w;
         }
         getPixels(t, e, i, s) {
             return window.conch ? this._nativeObj.getImageData(t, e, i, s) : this.getTexturePixels(t, e, i, s);
@@ -4110,7 +4099,8 @@ window.Laya = function(t) {
             if ($t._window) return $t._window;
             var e = $t._window = window, s = $t._document = e.document, r = $t.userAgent = e.navigator.userAgent, a = e.navigator.maxTouchPoints || 0, n = e.navigator.platform;
             r.indexOf("AlipayMiniGame") > -1 && "my" in $t.window && (window.aliPayMiniGame(t, t), 
-            t.ALIMiniAdapter ? t.ALIMiniAdapter.enable() : console.error("请先添加阿里小游戏适配库")), -1 == r.indexOf("OPPO") && r.indexOf("MiniGame") > -1 && "wx" in $t.window && ("qq" in $t.window ? (window.qqMiniGame(t, t), 
+            t.ALIMiniAdapter ? t.ALIMiniAdapter.enable() : console.error("请先添加阿里小游戏适配库")), -1 == r.indexOf("OPPO") && r.indexOf("MiniGame") > -1 && "wx" in $t.window && ("bl" in $t.window ? (window.biliMiniGame(t, t), 
+            t.BLMiniAdapter ? t.BLMiniAdapter.enable() : console.error("请引入bilibili小游戏的适配库：https://ldc2.layabox.com/doc/?nav=zh-ts-5-0-0")) : "qq" in $t.window ? (window.qqMiniGame(t, t), 
             t.QQMiniAdapter ? t.QQMiniAdapter.enable() : console.error("请引入手机QQ小游戏的适配库：https://ldc2.layabox.com/doc/?nav=zh-ts-5-0-0")) : (window.wxMiniGame(t, t), 
             t.MiniAdpter ? t.MiniAdpter.enable() : console.error("请先添加小游戏适配库,详细教程：https://ldc2.layabox.com/doc/?nav=zh-ts-5-0-0"))), 
             r.indexOf("MiniGame") > -1 && "qq" in $t.window && (window.qqMiniGame(t, t), t.QQMiniAdapter ? t.QQMiniAdapter.enable() : console.error("请先添加小游戏适配库,详细教程")), 
@@ -4140,8 +4130,9 @@ window.Laya = function(t) {
             $t.onIE = !!e.ActiveXObject || "ActiveXObject" in e, $t.onWeiXin = r.indexOf("MicroMessenger") > -1, 
             $t.onSafari = r.indexOf("Safari") > -1, $t.onPC = !$t.onMobile, $t.onMiniGame = r.indexOf("MiniGame") > -1, 
             $t.onBDMiniGame = r.indexOf("SwanGame") > -1, $t.onLayaRuntime = !!$t.window.conch, 
-            r.indexOf("OPPO") > -1 && r.indexOf("MiniGame") > -1 ? ($t.onQGMiniGame = !0, $t.onMiniGame = !1) : "qq" in $t.window && r.indexOf("MiniGame") > -1 && ($t.onQQMiniGame = !0, 
-            $t.onMiniGame = !1), $t.onVVMiniGame = r.indexOf("VVGame") > -1, $t.onKGMiniGame = r.indexOf("QuickGame") > -1, 
+            r.indexOf("OPPO") > -1 && r.indexOf("MiniGame") > -1 ? ($t.onQGMiniGame = !0, $t.onMiniGame = !1) : "qq" in $t.window && r.indexOf("MiniGame") > -1 ? ($t.onQQMiniGame = !0, 
+            $t.onMiniGame = !1) : "bl" in $t.window && r.indexOf("MiniGame") > -1 && ($t.onBLMiniGame = !0, 
+            $t.onMiniGame = !0), $t.onVVMiniGame = r.indexOf("VVGame") > -1, $t.onKGMiniGame = r.indexOf("QuickGame") > -1, 
             r.indexOf("AlipayMiniGame") > -1 && ($t.onAlipayMiniGame = !0, $t.onMiniGame = !1), 
             e;
         }
@@ -4347,29 +4338,29 @@ window.Laya = function(t) {
                   case i.Context.ENUM_TEXTALIGN_RIGHT:
                     r -= T;
                 }
-                p && v && (this.hasFreedText(v) && (v = p.pageChars = []), !f || this.fontScaleX == p.scalex && this.fontScaleY == p.scaley || (v = p.pageChars = []));
+                p && v && this.hasFreedText(v) && (v = p.pageChars = []);
                 var x = null, y = this.renderPerChar = !f || ee.forceSplitRender || m || f && p.splitRender;
                 if (!v || v.length < 1) if (f && (p.scalex = this.fontScaleX, p.scaley = this.fontScaleY), 
                 y) {
                     var E, C = 0, b = 0;
                     for (this._curStrPos = 0; ;) {
                         if (s) {
-                            var A = s[this._curStrPos++];
-                            A ? (E = A.char, C = A.x, b = A.y) : E = null;
+                            var w = s[this._curStrPos++];
+                            w ? (E = w.char, C = w.x, b = w.y) : E = null;
                         } else E = this.getNextChar(g);
                         if (!E) break;
                         if (!(x = this.getCharRenderInfo(E, n, h, o, l, !1))) break;
                         if (x.isSpace) ; else {
-                            var R = v[x.tex.id];
-                            if (R) R = R.words; else {
-                                var w = {
+                            var A = v[x.tex.id];
+                            if (A) A = A.words; else {
+                                var R = {
                                     texgen: x.tex.genID,
                                     tex: x.tex,
                                     words: []
                                 };
-                                v[x.tex.id] = w, R = w.words;
+                                v[x.tex.id] = R, A = R.words;
                             }
-                            R.push({
+                            A.push({
                                 ri: x,
                                 x: C,
                                 y: b,
@@ -5021,31 +5012,33 @@ window.Laya = function(t) {
             return this._charSubmitCache.enable(t, this), t;
         }
         _inner_drawTexture(t, e, i, s, r, a, n, h, o, l) {
-            var _ = this._curSubmit._key;
-            if (h = h || t._uv, _.submitType === ot.KEY_TRIANGLES && _.other === e) {
-                var c = this._drawTexToDrawTri_Vert;
-                c[0] = i, c[1] = s, c[2] = i + r, c[3] = s, c[4] = i + r, c[5] = s + a, c[6] = i, 
-                c[7] = s + a, this._drawTriUseAbsMatrix = !0;
-                var u = this._tempUV;
-                return u[0] = h[0], u[1] = h[1], u[2] = h[2], u[3] = h[3], u[4] = h[4], u[5] = h[5], 
-                u[6] = h[6], u[7] = h[7], this.drawTriangles(t, 0, 0, c, u, this._drawTexToDrawTri_Index, n, o, null, null), 
-                this._drawTriUseAbsMatrix = !1, !0;
+            if (!(r <= 0 || a <= 0)) {
+                var _ = this._curSubmit._key;
+                if (h = h || t._uv, _.submitType === ot.KEY_TRIANGLES && _.other === e) {
+                    var c = this._drawTexToDrawTri_Vert;
+                    c[0] = i, c[1] = s, c[2] = i + r, c[3] = s, c[4] = i + r, c[5] = s + a, c[6] = i, 
+                    c[7] = s + a, this._drawTriUseAbsMatrix = !0;
+                    var u = this._tempUV;
+                    return u[0] = h[0], u[1] = h[1], u[2] = h[2], u[3] = h[3], u[4] = h[4], u[5] = h[5], 
+                    u[6] = h[6], u[7] = h[7], this.drawTriangles(t, 0, 0, c, u, this._drawTexToDrawTri_Index, n, o, null, null), 
+                    this._drawTriUseAbsMatrix = !1, !0;
+                }
+                var d = this._mesh, p = this._curSubmit, f = l ? this._charSubmitCache.getPos() : this._transedPoints;
+                if (this.transformQuad(i, s, r || t.width, a || t.height, this._italicDeg, n || this._curMat, f), 
+                this.drawTexAlign) {
+                    var g = Math.round;
+                    f[0] = g(f[0]), f[1] = g(f[1]), f[2] = g(f[2]), f[3] = g(f[3]), f[4] = g(f[4]), 
+                    f[5] = g(f[5]), f[6] = g(f[6]), f[7] = g(f[7]), this.drawTexAlign = !1;
+                }
+                var m = this._mixRGBandAlpha(4294967295, this._shader2D.ALPHA * o);
+                if (l) return this._charSubmitCache.add(this, t, e, f, h, m), !0;
+                this._drawCount++;
+                var v = e >= 0 && _.submitType === ot.KEY_DRAWTEXTURE && _.other === e;
+                return v && (v = v && this.isSameClipInfo(p)), this._lastTex = t, d.vertNum + 4 > ie._MAXVERTNUM && (d = this._mesh = Et.getAMesh(this.isMain), 
+                this.meshlist.push(d), v = !1), d.addQuad(f, h, m, !0), v || (this._submits[this._submits._length++] = this._curSubmit = p = Wt.create(this, d, V.create(U.TEXTURE2D, 0)), 
+                p.shaderValue.textureHost = t, p._key.other = e, this._copyClipInfo(p, this._globalClipMatrix)), 
+                p._numEle += 6, d.indexNum += 6, d.vertNum += 4, !0;
             }
-            var d = this._mesh, p = this._curSubmit, f = l ? this._charSubmitCache.getPos() : this._transedPoints;
-            if (this.transformQuad(i, s, r || t.width, a || t.height, this._italicDeg, n || this._curMat, f), 
-            this.drawTexAlign) {
-                var g = Math.round;
-                f[0] = g(f[0]), f[1] = g(f[1]), f[2] = g(f[2]), f[3] = g(f[3]), f[4] = g(f[4]), 
-                f[5] = g(f[5]), f[6] = g(f[6]), f[7] = g(f[7]), this.drawTexAlign = !1;
-            }
-            var m = this._mixRGBandAlpha(4294967295, this._shader2D.ALPHA * o);
-            if (l) return this._charSubmitCache.add(this, t, e, f, h, m), !0;
-            this._drawCount++;
-            var v = e >= 0 && _.submitType === ot.KEY_DRAWTEXTURE && _.other === e;
-            return v && (v = v && this.isSameClipInfo(p)), this._lastTex = t, d.vertNum + 4 > ie._MAXVERTNUM && (d = this._mesh = Et.getAMesh(this.isMain), 
-            this.meshlist.push(d), v = !1), d.addQuad(f, h, m, !0), v || (this._submits[this._submits._length++] = this._curSubmit = p = Wt.create(this, d, V.create(U.TEXTURE2D, 0)), 
-            p.shaderValue.textureHost = t, p._key.other = e, this._copyClipInfo(p, this._globalClipMatrix)), 
-            p._numEle += 6, d.indexNum += 6, d.vertNum += 4, !0;
         }
         transform4Points(t, e, i) {
             var s = e.tx, r = e.ty, a = e.a, n = e.b, h = e.c, o = e.d, l = t[0], _ = t[1], c = t[2], u = t[3], d = t[4], p = t[5], f = t[6], g = t[7];
@@ -5303,15 +5296,15 @@ window.Laya = function(t) {
                 if (!(g <= 1e-6)) {
                     var m = d / g, v = p / g, T = c + m, x = u + v, y = Math.sqrt(T * T + x * x);
                     if (!(y <= 1e-6)) {
-                        var E = T / y, C = x / y, b = Math.acos(E * c + C * u), A = Math.PI / 2 - b, R = (_ = r / Math.tan(A)) * c + t, w = _ * u + e, S = Math.sqrt(_ * _ + r * r), M = t + E * S, I = e + C * S, P = 0, L = 0;
+                        var E = T / y, C = x / y, b = Math.acos(E * c + C * u), w = Math.PI / 2 - b, A = (_ = r / Math.tan(w)) * c + t, R = _ * u + e, S = Math.sqrt(_ * _ + r * r), M = t + E * S, I = e + C * S, P = 0, L = 0;
                         if (c * v - u * m >= 0) {
-                            var D = 2 * A / ie.SEGNUM;
+                            var D = 2 * w / ie.SEGNUM;
                             P = Math.sin(D), L = Math.cos(D);
-                        } else D = 2 * -A / ie.SEGNUM, P = Math.sin(D), L = Math.cos(D);
-                        var B = this._path._lastOriX, F = this._path._lastOriY, O = R, N = w;
+                        } else D = 2 * -w / ie.SEGNUM, P = Math.sin(D), L = Math.cos(D);
+                        var B = this._path._lastOriX, F = this._path._lastOriY, O = A, N = R;
                         (Math.abs(O - this._path._lastOriX) > .1 || Math.abs(N - this._path._lastOriY) > .1) && (n = O, 
                         h = N, B = O, F = N, this._path._lastOriX = n, this._path._lastOriY = h, this._path.addPoint(n, h));
-                        var U = R - M, G = w - I;
+                        var U = A - M, G = R - I;
                         for (a = 0; a < ie.SEGNUM; a++) {
                             var k = U * L + G * P, W = -U * P + G * L;
                             n = k + M, h = W + I, (Math.abs(B - n) > .1 || Math.abs(F - h) > .1) && (this._path._lastOriX = n, 
@@ -5390,24 +5383,24 @@ window.Laya = function(t) {
                     var y = s;
                     g = !0, s = u + d, this.save(), this.clipRect(0 + e, 0 + i, y, r);
                 }
-                var E = t.bitmap.id, C = this._curMat, b = this._tempUV, A = o[0], R = o[1], w = o[4], S = o[5], M = A, I = R, P = w, L = S;
-                if (u && c && (P = A + v, L = R + m, b[0] = A, b[1] = R, b[2] = P, b[3] = R, b[4] = P, 
-                b[5] = L, b[6] = A, b[7] = L, this._inner_drawTexture(t, E, e, i, u, c, C, b, 1, !1)), 
-                d && c && (M = w - T, I = R, P = w, L = R + m, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
+                var E = t.bitmap.id, C = this._curMat, b = this._tempUV, w = o[0], A = o[1], R = o[4], S = o[5], M = w, I = A, P = R, L = S;
+                if (u && c && (P = w + v, L = A + m, b[0] = w, b[1] = A, b[2] = P, b[3] = A, b[4] = P, 
+                b[5] = L, b[6] = w, b[7] = L, this._inner_drawTexture(t, E, e, i, u, c, C, b, 1, !1)), 
+                d && c && (M = R - T, I = A, P = R, L = A + m, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
                 b[4] = P, b[5] = L, b[6] = M, b[7] = L, this._inner_drawTexture(t, E, s - d + e, 0 + i, d, c, C, b, 1, !1)), 
-                u && p && (M = A, I = S - x, P = A + v, L = S, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
+                u && p && (M = w, I = S - x, P = w + v, L = S, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
                 b[4] = P, b[5] = L, b[6] = M, b[7] = L, this._inner_drawTexture(t, E, 0 + e, r - p + i, u, p, C, b, 1, !1)), 
-                d && p && (M = w - T, I = S - x, P = w, L = S, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
+                d && p && (M = R - T, I = S - x, P = R, L = S, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
                 b[4] = P, b[5] = L, b[6] = M, b[7] = L, this._inner_drawTexture(t, E, s - d + e, r - p + i, d, p, C, b, 1, !1)), 
-                c && (M = A + v, I = R, P = w - T, L = R + m, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
+                c && (M = w + v, I = A, P = R - T, L = A + m, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
                 b[4] = P, b[5] = L, b[6] = M, b[7] = L, f ? this._fillTexture_h(t, E, b, t.width - u - d, c, u + e, i, s - u - d) : this._inner_drawTexture(t, E, u + e, i, s - u - d, c, C, b, 1, !1)), 
-                p && (M = A + v, I = S - x, P = w - T, L = S, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
+                p && (M = w + v, I = S - x, P = R - T, L = S, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
                 b[4] = P, b[5] = L, b[6] = M, b[7] = L, f ? this._fillTexture_h(t, E, b, t.width - u - d, p, u + e, r - p + i, s - u - d) : this._inner_drawTexture(t, E, u + e, r - p + i, s - u - d, p, C, b, 1, !1)), 
-                u && (M = A, I = R + m, P = A + v, L = S - x, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
+                u && (M = w, I = A + m, P = w + v, L = S - x, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
                 b[4] = P, b[5] = L, b[6] = M, b[7] = L, f ? this._fillTexture_v(t, E, b, u, t.height - c - p, e, c + i, r - c - p) : this._inner_drawTexture(t, E, e, c + i, u, r - c - p, C, b, 1, !1)), 
-                d && (M = w - T, I = R + m, P = w, L = S - x, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
+                d && (M = R - T, I = A + m, P = R, L = S - x, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
                 b[4] = P, b[5] = L, b[6] = M, b[7] = L, f ? this._fillTexture_v(t, E, b, d, t.height - c - p, s - d + e, c + i, r - c - p) : this._inner_drawTexture(t, E, s - d + e, c + i, d, r - c - p, C, b, 1, !1)), 
-                M = A + v, I = R + m, P = w - T, L = S - x, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
+                M = w + v, I = A + m, P = R - T, L = S - x, b[0] = M, b[1] = I, b[2] = P, b[3] = I, 
                 b[4] = P, b[5] = L, b[6] = M, b[7] = L, f) {
                     var D = ie.tmpUVRect;
                     D[0] = M, D[1] = I, D[2] = P - M, D[3] = L - I, this._fillTexture(t, t.width - u - d, t.height - c - p, D, u + e, c + i, s - u - d, r - c - p, "repeat", 0, 0);
@@ -5634,6 +5627,12 @@ window.Laya = function(t) {
               case t.RenderTextureFormat.R16G16B16A16:
                 return !!(m.layaGPUInstance._isWebGL2 || m.layaGPUInstance._oesTextureHalfFloat && m.layaGPUInstance._oesTextureHalfFloatLinear);
 
+              case t.RenderTextureFormat.Depth:
+                return !(!m.layaGPUInstance._isWebGL2 && !m.layaGPUInstance._webgl_depth_texture);
+
+              case t.RenderTextureFormat.ShadowMap:
+                return !!m.layaGPUInstance._isWebGL2;
+
               default:
                 return !0;
             }
@@ -5645,14 +5644,14 @@ window.Laya = function(t) {
             this._oesTextureHalfFloat = null, this._oes_element_index_uint = null, this._oesTextureHalfFloatLinear = null, 
             this._oesTextureFloat = null, this._extShaderTextureLod = null, this._extTextureFilterAnisotropic = null, 
             this._compressedTextureS3tc = null, this._compressedTexturePvrtc = null, this._compressedTextureEtc1 = null, 
-            this._gl = t, this._isWebGL2 = e;
+            this._webgl_depth_texture = null, this._gl = t, this._isWebGL2 = e;
             var s = t.getParameter(t.MAX_TEXTURE_IMAGE_UNITS), r = t.getParameter(t.MAX_TEXTURE_SIZE);
             e ? (this._getExtension("EXT_color_buffer_float"), ae._shaderCapailityLevel = 35) : (i.Render.isConchApp || window._setupVertexArrayObject && window._setupVertexArrayObject(t), 
             this._vaoExt = this._getExtension("OES_vertex_array_object"), this._angleInstancedArrays = this._getExtension("ANGLE_instanced_arrays"), 
             this._oesTextureHalfFloat = this._getExtension("OES_texture_half_float"), this._oesTextureHalfFloatLinear = this._getExtension("OES_texture_half_float_linear"), 
             this._oesTextureFloat = this._getExtension("OES_texture_float"), this._oes_element_index_uint = this._getExtension("OES_element_index_uint"), 
-            this._extShaderTextureLod = this._getExtension("EXT_shader_texture_lod"), ae._shaderCapailityLevel = 30), 
-            this._extTextureFilterAnisotropic = this._getExtension("EXT_texture_filter_anisotropic"), 
+            this._extShaderTextureLod = this._getExtension("EXT_shader_texture_lod"), this._webgl_depth_texture = this._getExtension("WEBGL_depth_texture"), 
+            ae._shaderCapailityLevel = 30), this._extTextureFilterAnisotropic = this._getExtension("EXT_texture_filter_anisotropic"), 
             this._compressedTextureS3tc = this._getExtension("WEBGL_compressed_texture_s3tc"), 
             this._compressedTexturePvrtc = this._getExtension("WEBGL_compressed_texture_pvrtc"), 
             this._compressedTextureEtc1 = this._getExtension("WEBGL_compressed_texture_etc1"), 
@@ -5688,7 +5687,7 @@ window.Laya = function(t) {
             this._isWebGL2 ? this._gl.vertexAttribDivisor(t, e) : this._angleInstancedArrays.vertexAttribDivisorANGLE(t, e);
         }
         supportInstance() {
-            return !(!this._isWebGL2 && !this._angleInstancedArrays);
+            return !(!this._isWebGL2 && !this._angleInstancedArrays || !e.allowGPUInstanceDynamicBatch);
         }
         supportElementIndexUint32() {
             return !(!this._isWebGL2 && !this._oes_element_index_uint);
@@ -5858,8 +5857,8 @@ window.Laya = function(t) {
 
               case h.ID:
                 if (m = f.texture, t) f.width && f.height ? _e._addPointArrToRst(e, g._getBoundPointS(f.x, f.y, f.width, f.height), p) : _e._addPointArrToRst(e, g._getBoundPointS(f.x, f.y, m.width, m.height), p); else {
-                    var y = (f.width || m.sourceWidth) / m.width, E = (f.height || m.sourceHeight) / m.height, C = y * m.sourceWidth, b = E * m.sourceHeight, A = m.offsetX > 0 ? m.offsetX : 0, R = m.offsetY > 0 ? m.offsetY : 0;
-                    A *= y, R *= E, _e._addPointArrToRst(e, g._getBoundPointS(f.x - A, f.y - R, C, b), p);
+                    var y = (f.width || m.sourceWidth) / m.width, E = (f.height || m.sourceHeight) / m.height, C = y * m.sourceWidth, b = E * m.sourceHeight, w = m.offsetX > 0 ? m.offsetX : 0, A = m.offsetY > 0 ? m.offsetY : 0;
+                    w *= y, A *= E, _e._addPointArrToRst(e, g._getBoundPointS(f.x - w, f.y - A, C, b), p);
                 }
                 break;
 
@@ -5869,12 +5868,12 @@ window.Laya = function(t) {
                 break;
 
               case Q.ID:
-                var w;
-                f.matrix ? (p.copyTo(v), v.concat(f.matrix), w = v) : w = p, t ? f.width && f.height ? _e._addPointArrToRst(e, g._getBoundPointS(f.x, f.y, f.width, f.height), w) : (m = f.texture, 
-                _e._addPointArrToRst(e, g._getBoundPointS(f.x, f.y, m.width, m.height), w)) : (m = f.texture, 
+                var R;
+                f.matrix ? (p.copyTo(v), v.concat(f.matrix), R = v) : R = p, t ? f.width && f.height ? _e._addPointArrToRst(e, g._getBoundPointS(f.x, f.y, f.width, f.height), R) : (m = f.texture, 
+                _e._addPointArrToRst(e, g._getBoundPointS(f.x, f.y, m.width, m.height), R)) : (m = f.texture, 
                 y = (f.width || m.sourceWidth) / m.width, E = (f.height || m.sourceHeight) / m.height, 
-                C = y * m.sourceWidth, b = E * m.sourceHeight, A = m.offsetX > 0 ? m.offsetX : 0, 
-                R = m.offsetY > 0 ? m.offsetY : 0, A *= y, R *= E, _e._addPointArrToRst(e, g._getBoundPointS(f.x - A, f.y - R, C, b), w));
+                C = y * m.sourceWidth, b = E * m.sourceHeight, w = m.offsetX > 0 ? m.offsetX : 0, 
+                A = m.offsetY > 0 ? m.offsetY : 0, w *= y, A *= E, _e._addPointArrToRst(e, g._getBoundPointS(f.x - w, f.y - A, C, b), R));
                 break;
 
               case d.ID:
@@ -6591,8 +6590,8 @@ window.Laya = function(t) {
         _canvas_repaint(t, e, i, s) {
             var r, a, n, h, o, l, _, c, u, d = t._cacheStyle, p = this._next, f = d.canvas, g = d.cacheAs;
             if (_ = (u = d._calculateCacheRect(t, g, i, s)).x, c = u.y, o = (h = d.cacheRect).width * _, 
-            l = h.height * c, a = h.x, n = h.y, "bitmap" === g && (o > 2048 || l > 2048)) return d.releaseContext(), 
-            void p._fun.call(p, t, e, i, s);
+            l = h.height * c, a = h.x, n = h.y, "bitmap" === g && (o > 2048 || l > 2048)) return console.warn("cache bitmap size larger than 2048,cache ignored"), 
+            d.releaseContext(), void p._fun.call(p, t, e, i, s);
             if (f || (d.createContext(), f = d.canvas), (r = f.context).sprite = t, (f.width != o || f.height != l) && f.size(o, l), 
             "bitmap" === g ? r.asBitmap = !0 : "normal" === g && (r.asBitmap = !1), r.clear(), 
             1 != _ || 1 != c) {
@@ -6603,7 +6602,7 @@ window.Laya = function(t) {
         }
         _canvas_webgl_normal_repaint(t, e) {
             var i = t._cacheStyle, s = this._next, r = i.canvas, a = i.cacheAs;
-            i._calculateCacheRect(t, a, 0, 0), r || (r = i.canvas = new At(e, t));
+            i._calculateCacheRect(t, a, 0, 0), r || (r = i.canvas = new wt(e, t));
             var n = r.context;
             r.startRec(), s._fun.call(s, t, n, t.pivotX, t.pivotY), t._applyFilters(), G.canvasReCache++, 
             r.endRec();
@@ -6887,7 +6886,7 @@ window.Laya = function(t) {
         Curves: [ "drawCurves", [ [ "x", 0 ], [ "y", 0 ], [ "points", "" ], [ "lineColor", null ], [ "lineWidth", 0 ] ], 0, "_adptLinesData" ],
         Poly: [ "drawPoly", [ [ "x", 0 ], [ "y", 0 ], [ "points", "" ], [ "fillColor", null ], [ "lineColor", null ], [ "lineWidth", 1 ] ], 0, "_adptLinesData" ]
     }, be._temParam = [], be._classMap = {};
-    class Ae {
+    class we {
         reset() {
             return this.bounds && this.bounds.recover(), this.userBounds && this.userBounds.recover(), 
             this.bounds = null, this.userBounds = null, this.temBM = null, this;
@@ -6896,10 +6895,10 @@ window.Laya = function(t) {
             s.recover("BoundsStyle", this.reset());
         }
         static create() {
-            return s.getItemByClass("BoundsStyle", Ae);
+            return s.getItemByClass("BoundsStyle", we);
         }
     }
-    class Re {
+    class Ae {
         constructor() {
             this.reset();
         }
@@ -6930,7 +6929,7 @@ window.Laya = function(t) {
             t && (t.destroy(), t.recycle(), this.filterCache = null);
         }
         recover() {
-            this !== Re.EMPTY && s.recover("SpriteCache", this.reset());
+            this !== Ae.EMPTY && s.recover("SpriteCache", this.reset());
         }
         reset() {
             return this.releaseContext(), this.releaseFilterCache(), this.cacheAs = "none", 
@@ -6940,24 +6939,24 @@ window.Laya = function(t) {
             this.cacheRect = null, this;
         }
         static create() {
-            return s.getItemByClass("SpriteCache", Re);
+            return s.getItemByClass("SpriteCache", Ae);
         }
         _calculateCacheRect(t, e, i, s) {
             var r, a = t._cacheStyle;
-            if (a.cacheRect || (a.cacheRect = g.create()), "bitmap" === e ? ((r = t.getSelfBounds()).width = r.width + 2 * Re.CANVAS_EXTEND_EDGE, 
-            r.height = r.height + 2 * Re.CANVAS_EXTEND_EDGE, r.x = r.x - t.pivotX, r.y = r.y - t.pivotY, 
-            r.x = r.x - Re.CANVAS_EXTEND_EDGE, r.y = r.y - Re.CANVAS_EXTEND_EDGE, r.x = Math.floor(r.x + i) - i, 
+            if (a.cacheRect || (a.cacheRect = g.create()), "bitmap" === e ? ((r = t.getSelfBounds()).width = r.width + 2 * Ae.CANVAS_EXTEND_EDGE, 
+            r.height = r.height + 2 * Ae.CANVAS_EXTEND_EDGE, r.x = r.x - t.pivotX, r.y = r.y - t.pivotY, 
+            r.x = r.x - Ae.CANVAS_EXTEND_EDGE, r.y = r.y - Ae.CANVAS_EXTEND_EDGE, r.x = Math.floor(r.x + i) - i, 
             r.y = Math.floor(r.y + s) - s, r.width = Math.floor(r.width), r.height = Math.floor(r.height), 
             a.cacheRect.copyFrom(r)) : a.cacheRect.setTo(-t._style.pivotX, -t._style.pivotY, 1, 1), 
             r = a.cacheRect, t._style.scrollRect) {
                 var n = t._style.scrollRect;
                 r.x -= n.x, r.y -= n.y;
             }
-            return Re._scaleInfo.setTo(1, 1), Re._scaleInfo;
+            return Ae._scaleInfo.setTo(1, 1), Ae._scaleInfo;
         }
     }
-    Re.EMPTY = new Re(), Re._scaleInfo = new f(), Re.CANVAS_EXTEND_EDGE = 16;
-    class we {
+    Ae.EMPTY = new Ae(), Ae._scaleInfo = new f(), Ae.CANVAS_EXTEND_EDGE = 16;
+    class Re {
         constructor() {
             this.reset();
         }
@@ -6968,13 +6967,13 @@ window.Laya = function(t) {
             this.dragging = null, this.blendMode = null, this;
         }
         recover() {
-            this !== we.EMPTY && s.recover("SpriteStyle", this.reset());
+            this !== Re.EMPTY && s.recover("SpriteStyle", this.reset());
         }
         static create() {
-            return s.getItemByClass("SpriteStyle", we);
+            return s.getItemByClass("SpriteStyle", Re);
         }
     }
-    we.EMPTY = new we();
+    Re.EMPTY = new Re();
     class Se extends x {
         constructor() {
             super(), this._bits = 0, this._children = Se.ARRAY_EMPTY, this._extUIChild = Se.ARRAY_EMPTY, 
@@ -7329,8 +7328,8 @@ window.Laya = function(t) {
         constructor() {
             super(), this._x = 0, this._y = 0, this._width = 0, this._height = 0, this._visible = !0, 
             this._mouseState = 0, this._zOrder = 0, this._renderType = 0, this._transform = null, 
-            this._tfChanged = !1, this._repaint = ce.REPAINT_NONE, this._texture = null, this._style = we.EMPTY, 
-            this._cacheStyle = Re.EMPTY, this._boundStyle = null, this._graphics = null, this.mouseThrough = !1, 
+            this._tfChanged = !1, this._repaint = ce.REPAINT_NONE, this._texture = null, this._style = Re.EMPTY, 
+            this._cacheStyle = Ae.EMPTY, this._boundStyle = null, this._graphics = null, this.mouseThrough = !1, 
             this.autoSize = !1, this.hitTestPrior = !1;
         }
         destroy(t = !0) {
@@ -7343,7 +7342,7 @@ window.Laya = function(t) {
             K.updateOrder(this._children) && this.repaint();
         }
         _getBoundsStyle() {
-            return this._boundStyle || (this._boundStyle = Ae.create()), this._boundStyle;
+            return this._boundStyle || (this._boundStyle = we.create()), this._boundStyle;
         }
         _setCustomRender() {}
         set customRenderEnable(t) {
@@ -7475,10 +7474,10 @@ window.Laya = function(t) {
             return s;
         }
         _getCacheStyle() {
-            return this._cacheStyle === Re.EMPTY && (this._cacheStyle = Re.create()), this._cacheStyle;
+            return this._cacheStyle === Ae.EMPTY && (this._cacheStyle = Ae.create()), this._cacheStyle;
         }
         getStyle() {
-            return this._style === we.EMPTY && (this._style = we.create()), this._style;
+            return this._style === Re.EMPTY && (this._style = Re.create()), this._style;
         }
         setStyle(t) {
             this._style = t;
@@ -7914,7 +7913,7 @@ window.Laya = function(t) {
         }
     }
     be.regClass("laya.display.Sprite", Me), be.regClass("Laya.Sprite", Me);
-    class Ie extends we {
+    class Ie extends Re {
         constructor() {
             super(...arguments), this.italic = !1;
         }
@@ -8168,18 +8167,18 @@ window.Laya = function(t) {
                 if (m) {
                     var b = C.length;
                     C = "";
-                    for (var A = b; A > 0; A--) C += "●";
+                    for (var w = b; w > 0; w--) C += "●";
                 }
                 if (null == C && (C = ""), v = n - (this._clipPoint ? this._clipPoint.x : 0), T = c + l * y - (this._clipPoint ? this._clipPoint.y : 0), 
                 this.underline && this._drawUnderline(h, v, T, y), _) {
-                    var R = this.width;
-                    _.autoScaleSize && (R = this.width * p), _._drawText(C, this, v, T, this.align, R);
+                    var A = this.width;
+                    _.autoScaleSize && (A = this.width * p), _._drawText(C, this, v, T, this.align, A);
                 } else this._words || (this._words = []), this._words.length > y - s ? E = this._words[y - s] : (E = new qt(), 
                 this._words.push(E)), E.setText(C), E.splitRender = this._singleCharRender, d.stroke ? r.fillBorderText(E, v, T, a, this.color, d.strokeColor, d.stroke, h) : r.fillText(E, v, T, a, this.color, h);
             }
             if (_ && _.autoScaleSize) {
-                var w = 1 / p;
-                this.scale(w, w);
+                var R = 1 / p;
+                this.scale(R, R);
             }
             this._clipPoint && r.restore(), this._startX = n, this._startY = c;
         }
@@ -8353,7 +8352,7 @@ window.Laya = function(t) {
         static __init__() {
             if (Le._createInputElement(), i.Browser.onMobile) {
                 var t = !1;
-                (i.Browser.onMiniGame || i.Browser.onBDMiniGame || i.Browser.onQGMiniGame || i.Browser.onKGMiniGame || i.Browser.onVVMiniGame || i.Browser.onAlipayMiniGame || i.Browser.onQQMiniGame) && (t = !0), 
+                (i.Browser.onMiniGame || i.Browser.onBDMiniGame || i.Browser.onQGMiniGame || i.Browser.onKGMiniGame || i.Browser.onVVMiniGame || i.Browser.onAlipayMiniGame || i.Browser.onQQMiniGame || i.Browser.onBLMiniGame) && (t = !0), 
                 i.Render.canvas.addEventListener(Le.IOS_IFRAME ? t ? "touchend" : "click" : "touchend", Le._popupInputMethod);
             }
         }
@@ -8445,7 +8444,7 @@ window.Laya = function(t) {
             this.padding;
             if (t.value = this._content, t.placeholder = this._prompt, i.stage.off(zt.KEY_DOWN, this, this._onKeyDown), 
             i.stage.on(zt.KEY_DOWN, this, this._onKeyDown), i.stage.focus = this, this.event(zt.FOCUS), 
-            i.Browser.onPC && t.focus(), !(i.Browser.onMiniGame || i.Browser.onBDMiniGame || i.Browser.onQGMiniGame || i.Browser.onKGMiniGame || i.Browser.onVVMiniGame || i.Browser.onAlipayMiniGame || i.Browser.onQQMiniGame)) {
+            i.Browser.onPC && t.focus(), !(i.Browser.onMiniGame || i.Browser.onBDMiniGame || i.Browser.onQGMiniGame || i.Browser.onKGMiniGame || i.Browser.onVVMiniGame || i.Browser.onAlipayMiniGame || i.Browser.onQQMiniGame || i.Browser.onBLMiniGame)) {
                 this._text;
                 this._text = null;
             }
@@ -8899,14 +8898,51 @@ window.Laya = function(t) {
             i = "webkitVisibilityState"), t.document.addEventListener(s, () => {
                 "hidden" == $t.document[i] ? (this._isVisibility = !1, this._isInputting() && (Le.inputElement.target.focus = !1)) : this._isVisibility = !0, 
                 this.renderingEnabled = this._isVisibility, this.event(zt.VISIBILITY_CHANGE);
-            }), t.addEventListener("resize", () => {
+            }),
+            
+            
+            t.addEventListener("resize", () => {
                 var t = $t.window.orientation;
                 null != t && t != this._previousOrientation && this._isInputting() && (Le.inputElement.target.focus = !1), 
                 this._previousOrientation = t, this._isInputting() || ($t.onSafari && (this._safariOffsetY = ($t.window.__innerHeight || $t.document.body.clientHeight || $t.document.documentElement.clientHeight) - $t.window.innerHeight), 
                 this._resetCanvas());
             }), t.addEventListener("orientationchange", t => {
                 this._resetCanvas();
-            }), this.on(zt.MOUSE_MOVE, this, this._onmouseMove), $t.onMobile && this.on(zt.MOUSE_DOWN, this, this._onmouseMove);
+            }),
+            t.addEventListener("resize", () => {
+                                        var orientation = $t.window.orientation;
+                                        if (orientation != null && orientation != this._previousOrientation && this._isInputting()) {
+                                            Input["inputElement"].target.focus = false;
+                                        }
+                                        this._previousOrientation = orientation;
+                                        if (this._isInputting())
+                                            return;
+                                        if ($t.onSafari) {
+                                            this._safariOffsetY = ($t.window.__innerHeight || $t.document.body.clientHeight ||
+                                                $t.document.documentElement.clientHeight) - $t.window.innerHeight;
+                                            this._safariOffsetY = Math.max(0, this._safariOffsetY);
+                                        }
+                
+                                        this._resetCanvas();
+                                    }),t.addEventListener("orientationchange", (t) => {
+                                        if ($t.onSafari) {
+                                            clearTimeout(this._timeoutId);
+                                            this._timeoutId = setTimeout(() => {
+                                                this._safariOffsetY = ($t.window.__innerHeight || $t.document.body.clientHeight ||
+                                                    $t.document.documentElement.clientHeight) - $t.window.innerHeight;
+                                                this._safariOffsetY = Math.max(0, this._safariOffsetY);
+                                                this._resetCanvas();
+                
+                                            }, 0.5e3);
+                                        } else {
+                                            this._resetCanvas();
+                                        }
+                                    })
+            
+            
+            
+            
+            this.on(zt.MOUSE_MOVE, this, this._onmouseMove), $t.onMobile && this.on(zt.MOUSE_DOWN, this, this._onmouseMove);
         }
         _isInputting() {
             return $t.onMobile && Le.isInputting;
@@ -9571,8 +9607,8 @@ window.Laya = function(t) {
                 if (He._soundMuted) return null;
             }
             var h, o;
-            return i.Browser.onBDMiniGame || i.Browser.onMiniGame || i.Browser.onKGMiniGame || i.Browser.onQGMiniGame || i.Browser.onVVMiniGame || i.Browser.onAlipayMiniGame || i.Browser.onQQMiniGame || (h = i.loader.getRes(t)), 
-            r || (r = He._soundClass), h || ((h = new r()).load(t), i.Browser.onBDMiniGame || i.Browser.onMiniGame || i.Browser.onKGMiniGame || i.Browser.onQGMiniGame || i.Browser.onVVMiniGame || i.Browser.onAlipayMiniGame || i.Browser.onQQMiniGame || i.Loader.cacheRes(t, h)), 
+            return i.Browser.onBDMiniGame || i.Browser.onMiniGame || i.Browser.onKGMiniGame || i.Browser.onQGMiniGame || i.Browser.onVVMiniGame || i.Browser.onAlipayMiniGame || i.Browser.onQQMiniGame || i.Browser.onBLMiniGame || (h = i.loader.getRes(t)), 
+            r || (r = He._soundClass), h || ((h = new r()).load(t), i.Browser.onBDMiniGame || i.Browser.onMiniGame || i.Browser.onKGMiniGame || i.Browser.onQGMiniGame || i.Browser.onVVMiniGame || i.Browser.onAlipayMiniGame || i.Browser.onQQMiniGame || i.Browser.onBLMiniGame || i.Loader.cacheRes(t, h)), 
             (o = h.play(a, e)) ? (o.url = t, o.volume = t == He._bgMusic ? He.musicVolume : He.soundVolume, 
             o.completeHandler = s, o) : null;
         }
@@ -9988,7 +10024,7 @@ window.Laya = function(t) {
             super(...arguments), this._http = new XMLHttpRequest();
         }
         send(t, e = null, i = "get", s = "text", r = null) {
-            this._responseType = s, this._data = null, ($t.onVVMiniGame || $t.onQGMiniGame || $t.onQQMiniGame || $t.onAlipayMiniGame) && (t = encodeURI(t)), 
+            this._responseType = s, this._data = null, ($t.onVVMiniGame || $t.onQGMiniGame || $t.onQQMiniGame || $t.onAlipayMiniGame || $t.onBLMiniGame) && (t = qe._urlEncode(t)), 
             this._url = t;
             var a = this, n = this._http;
             t = E.getAdptedFilePath(t), n.open(i, t, !0);
@@ -10004,7 +10040,7 @@ window.Laya = function(t) {
                 a._onProgress(t);
             }, n.onload = function(t) {
                 a._onLoad(t);
-            }, n.send(h ? JSON.stringify(e) : e);
+            }, $t.onBLMiniGame && $t.onAndroid && !e && (e = {}), n.send(h ? JSON.stringify(e) : e);
         }
         _onProgress(t) {
             t && t.lengthComputable && this.event(zt.PROGRESS, t.loaded / t.total);
@@ -10046,6 +10082,7 @@ window.Laya = function(t) {
             return this._http;
         }
     }
+    qe._urlEncode = encodeURI;
     class Qe extends x {
         constructor() {
             super(...arguments), this._customParse = !1;
@@ -10211,19 +10248,19 @@ window.Laya = function(t) {
                 var T = 1;
                 if (this._data.meta && this._data.meta.scale && 1 != this._data.meta.scale) for (var x in T = parseFloat(this._data.meta.scale), 
                 d) {
-                    var y, C = d[x], b = g[C.frame.idx ? C.frame.idx : 0], A = E.formatURL(f + x);
-                    b.scaleRate = T, y = Kt._create(b, C.frame.x, C.frame.y, C.frame.w, C.frame.h, C.spriteSourceSize.x, C.spriteSourceSize.y, C.sourceSize.w, C.sourceSize.h, Qe.getRes(A)), 
-                    Qe.cacheTexture(A, y), y.url = A, v.push(A);
-                } else for (x in d) b = g[(C = d[x]).frame.idx ? C.frame.idx : 0], A = E.formatURL(f + x), 
-                y = Kt._create(b, C.frame.x, C.frame.y, C.frame.w, C.frame.h, C.spriteSourceSize.x, C.spriteSourceSize.y, C.sourceSize.w, C.sourceSize.h, Qe.getRes(A)), 
-                Qe.cacheTexture(A, y), y.url = A, v.push(A);
+                    var y, C = d[x], b = g[C.frame.idx ? C.frame.idx : 0], w = E.formatURL(f + x);
+                    b.scaleRate = T, y = Kt._create(b, C.frame.x, C.frame.y, C.frame.w, C.frame.h, C.spriteSourceSize.x, C.spriteSourceSize.y, C.sourceSize.w, C.sourceSize.h, Qe.getRes(w)), 
+                    Qe.cacheTexture(w, y), y.url = w, v.push(w);
+                } else for (x in d) b = g[(C = d[x]).frame.idx ? C.frame.idx : 0], w = E.formatURL(f + x), 
+                y = Kt._create(b, C.frame.x, C.frame.y, C.frame.w, C.frame.h, C.spriteSourceSize.x, C.spriteSourceSize.y, C.sourceSize.w, C.sourceSize.h, Qe.getRes(w)), 
+                Qe.cacheTexture(w, y), y.url = w, v.push(w);
                 delete this._data.pics, this.complete(this._data);
             } else if (i === Qe.FONT) {
                 if (!e._source) return this._data = e, this.event(zt.PROGRESS, .5), this._loadResourceFilter(Qe.IMAGE, this._url.replace(".fnt", ".png"));
-                var R = new je();
-                R.parseFont(this._data, new Kt(e));
-                var w = this._url.split(".fnt")[0].split("/"), S = w[w.length - 1];
-                Pe.registerBitmapFont(S, R), this._data = R, this.complete(this._data);
+                var A = new je();
+                A.parseFont(this._data, new Kt(e));
+                var R = this._url.split(".fnt")[0].split("/"), S = R[R.length - 1];
+                Pe.registerBitmapFont(S, A), this._data = A, this.complete(this._data);
             } else if (i === Qe.PREFAB) {
                 var M = new ze();
                 M.json = e, this.complete(M);
@@ -11515,7 +11552,7 @@ window.Laya = function(t) {
             this._view = [];
         }
         show(t = 0, e = 0) {
-            $t.onMiniGame || i.Render.isConchApp || $t.onBDMiniGame || $t.onKGMiniGame || $t.onQGMiniGame || $t.onQQMiniGame || $t.onAlipayMiniGame || (this._useCanvas = !0), 
+            $t.onMiniGame || i.Render.isConchApp || $t.onBDMiniGame || $t.onKGMiniGame || $t.onQGMiniGame || $t.onQQMiniGame || $t.onAlipayMiniGame || $t.onBLMiniGame || (this._useCanvas = !0), 
             this._show = !0, G._fpsData.length = 60, this._view[0] = {
                 title: "FPS(WebGL)",
                 value: "_fpsStr",
@@ -12062,50 +12099,52 @@ window.Laya = function(t) {
         }
     }
     bi.workerPath = "libs/workerloader.js", bi._enable = !1, bi._tryEnabled = !1;
-    class Ai {
+    class wi {
         static set cursor(t) {
-            Ai._style.cursor = t;
+            wi._style.cursor = t;
         }
         static get cursor() {
-            return Ai._style.cursor;
+            return wi._style.cursor;
         }
-        static __init__() {}
+        static __init__() {
+            wi._style = $t.document.body.style;
+        }
         static hide() {
-            "none" != Ai.cursor && (Ai._preCursor = Ai.cursor, Ai.cursor = "none");
+            "none" != wi.cursor && (wi._preCursor = wi.cursor, wi.cursor = "none");
         }
         static show() {
-            "none" == Ai.cursor && (Ai._preCursor ? Ai.cursor = Ai._preCursor : Ai.cursor = "auto");
+            "none" == wi.cursor && (wi._preCursor ? wi.cursor = wi._preCursor : wi.cursor = "auto");
         }
     }
-    class Ri extends yt {
+    class Ai extends yt {
         constructor(t) {
-            super(Ri.const_stride, 4 * t * Ri.const_stride, 4), this.canReuse = !0, this.setAttributes(Ri._fixattriInfo), 
+            super(Ai.const_stride, 4 * t * Ai.const_stride, 4), this.canReuse = !0, this.setAttributes(Ai._fixattriInfo), 
             this.createQuadIB(t), this._quadNum = t;
         }
         static __init__() {
             var t = m.instance;
-            Ri._fixattriInfo = [ t.FLOAT, 4, 0, t.FLOAT, 3, 16, t.FLOAT, 3, 28, t.FLOAT, 4, 40, t.FLOAT, 4, 56, t.FLOAT, 3, 72, t.FLOAT, 2, 84, t.FLOAT, 4, 92, t.FLOAT, 1, 108, t.FLOAT, 1, 112 ];
+            Ai._fixattriInfo = [ t.FLOAT, 4, 0, t.FLOAT, 3, 16, t.FLOAT, 3, 28, t.FLOAT, 4, 40, t.FLOAT, 4, 56, t.FLOAT, 3, 72, t.FLOAT, 2, 84, t.FLOAT, 4, 92, t.FLOAT, 1, 108, t.FLOAT, 1, 112 ];
         }
         setMaxParticleNum(t) {
-            this._vb._resizeBuffer(4 * t * Ri.const_stride, !1), this.createQuadIB(t);
+            this._vb._resizeBuffer(4 * t * Ai.const_stride, !1), this.createQuadIB(t);
         }
         static getAMesh(t) {
-            if (Ri._POOL.length) {
-                var e = Ri._POOL.pop();
+            if (Ai._POOL.length) {
+                var e = Ai._POOL.pop();
                 return e.setMaxParticleNum(t), e;
             }
-            return new Ri(t);
+            return new Ai(t);
         }
         releaseMesh() {
-            this._vb.setByteLength(0), this.vertNum = 0, this.indexNum = 0, Ri._POOL.push(this);
+            this._vb.setByteLength(0), this.vertNum = 0, this.indexNum = 0, Ai._POOL.push(this);
         }
         destroy() {
             this._ib.destroy(), this._vb.destroy(), this._vb.deleteBuffer();
         }
     }
-    Ri.const_stride = 116, Ri._POOL = [];
-    class wi extends b {}
-    wi.create = function(e, i, s) {
+    Ai.const_stride = 116, Ai._POOL = [];
+    class Ri extends b {}
+    Ri.create = function(e, i, s) {
         var r = new P(e, i, s, !1, !1);
         return r.wrapModeU = t.WarpMode.Clamp, r.wrapModeV = t.WarpMode.Clamp, r;
     };
@@ -12128,12 +12167,12 @@ window.Laya = function(t) {
                 t.lateTimer = i.lateTimer = Si.lateTimer, t.updateTimer = i.updateTimer = Si.updateTimer, 
                 i.systemTimer = Si.systemTimer, t.timer = i.timer = Si.timer, t.physicsTimer = i.physicsTimer = Si.physicsTimer, 
                 Si.loader = new $e(), i.Laya = Si, t.loader = i.loader = Si.loader, _i.__init__(), 
-                ci.__init(), Ai.__init__(), re.inner_enable(), r) for (var h = 0, o = r.length; h < o; h++) r[h] && r[h].enable && r[h].enable();
+                ci.__init(), wi.__init__(), re.inner_enable(), r) for (var h = 0, o = r.length; h < o; h++) r[h] && r[h].enable && r[h].enable();
                 return i.Render.isConchApp && Si.enableNative(), Si.enableWebGLPlus(), ge.beginCheck(), 
                 t.stage = Si.stage = new Ue(), i.stage = Si.stage, K.gStage = Si.stage, E.rootPath = E._basePath = Si._getUrlPath(), 
                 Et.__int__(), bt.__init__(), Ct.__init__(), Si.render = new he(0, 0, $t.mainCanvas), 
                 t.render = Si.render, Si.stage.size(e, s), window.stage = Si.stage, v.__init__(), 
-                Ri.__init__(), Ci.__init__(), ye.__init__(), Ge.__init__(), Be.instance.__init__(Si.stage, he.canvas), 
+                Ai.__init__(), Ci.__init__(), ye.__init__(), Ge.__init__(), Be.instance.__init__(Si.stage, he.canvas), 
                 Le.__init__(), He.autoStopMusic = !0, G._StatRender = new fi(), V._initone(U.TEXTURE2D, xi), 
                 V._initone(U.TEXTURE2D | U.FILTERGLOW, xi), V._initone(U.PRIMITIVE, Ti), V._initone(U.SKINMESH, vi), 
                 he.canvas;
@@ -12147,7 +12186,7 @@ window.Laya = function(t) {
             var i = new Uint8Array(this, t, e - t), s = new Uint8Array(i.length);
             return s.set(i), s.buffer;
         }
-        static set alertGlobalError(t) {
+        static alertGlobalError(t) {
             var e = 0;
             $t.window.onerror = t ? function(t, i, s, r, a) {
                 e++ < 5 && a && this.alert("出错啦，请把此信息截图给研发商\n" + t + "\n" + a.stack);
@@ -12197,13 +12236,13 @@ window.Laya = function(t) {
         }
     }
     Si.stage = null, Si.systemTimer = null, Si.startTimer = null, Si.physicsTimer = null, 
-    Si.updateTimer = null, Si.lateTimer = null, Si.timer = null, Si.loader = null, Si.version = "2.5.0", 
+    Si.updateTimer = null, Si.lateTimer = null, Si.timer = null, Si.loader = null, Si.version = "2.6.1", 
     Si._isinit = !1, Si.isWXOpenDataContext = !1, Si.isWXPosMsg = !1, Si.__classmap = null, 
     Si.Config = e, Si.TextRender = ee, Si.EventDispatcher = x, Si.SoundChannel = ke, 
     Si.Stage = Ue, Si.Render = he, Si.Browser = $t, Si.Sprite = Me, Si.Node = Se, Si.Context = ie, 
     Si.WebGL = re, Si.Handler = T, Si.RunDriver = Ne, Si.Utils = K, Si.Input = Le, Si.Loader = Qe, 
     Si.LocalStorage = ti, Si.SoundManager = He, Si.URL = E, Si.Event = zt, Si.Matrix = p, 
-    Si.HTMLImage = wi, Si.Laya = Si, Si._evcode = "eval", Si.isNativeRender_enable = !1, 
+    Si.HTMLImage = Ri, Si.Laya = Si, Si._evcode = "eval", Si.isNativeRender_enable = !1, 
     Si.__classmap = i.__classMap, i.Timer = gi, i.Dragging = ai, i.GraphicsBounds = _e, 
     i.Sprite = Me, i.TextRender = ee, i.Loader = Qe, i.TTFLoader = ii, i.WebAudioSound = Xe, 
     i.SoundManager = He, i.ShaderCompile = Ci, i.ClassUtils = be, i.SceneUtils = ci, 
@@ -12402,8 +12441,8 @@ window.Laya = function(t) {
             var y = null;
             if (m || 1 !== f || 1 !== g || v || T) {
                 (y = Gi._tempMt).identity(), y._bTransform = !0;
-                var E = .0174532922222222 * (m - v), C = .0174532922222222 * (m + T), b = Math.cos(C), A = Math.sin(C), R = Math.sin(E), w = Math.cos(E);
-                y.a = f * b, y.b = f * A, y.c = -g * R, y.d = g * w, y.tx = y.ty = 0;
+                var E = .0174532922222222 * (m - v), C = .0174532922222222 * (m + T), b = Math.cos(C), w = Math.sin(C), A = Math.sin(E), R = Math.cos(E);
+                y.a = f * b, y.b = f * w, y.c = -g * A, y.d = g * R, y.tx = y.ty = 0;
             }
             return y && (x = p.mul(x, y, x)), x.translate(o[1], o[2]), i;
         }
@@ -13583,7 +13622,7 @@ window.Laya = function(t) {
         set strength(t) {
             this._strength = t;
         }
-    }, t.BoundsStyle = Ae, t.Browser = $t, t.Buffer = gt, t.Buffer2D = vt, t.BufferState2D = ft, 
+    }, t.BoundsStyle = we, t.Browser = $t, t.Buffer = gt, t.Buffer2D = vt, t.BufferState2D = ft, 
     t.BufferStateBase = pt, t.ButtonEffect = class {
         constructor() {
             this._curState = 0, this.effectScale = 1.5, this.tweenTime = 300;
@@ -13608,7 +13647,7 @@ window.Laya = function(t) {
         tweenComplete() {
             this._curState = 0, this._curTween = null;
         }
-    }, t.Byte = Ke, t.CONST3D2D = Nt, t.CacheManger = ge, t.CacheStyle = Re, t.CallLater = Fe, 
+    }, t.Byte = Ke, t.CONST3D2D = Nt, t.CacheManger = ge, t.CacheStyle = Ae, t.CallLater = Fe, 
     t.CharRenderInfo = Qt, t.CharRender_Canvas = Jt, t.CharRender_Native = te, t.CharSubmitCache = Yt, 
     t.ClassUtils = be, t.ClipRectCmd = ue, t.ColorFilter = q, t.ColorFilterSetter = class extends zi {
         constructor() {
@@ -13767,7 +13806,7 @@ window.Laya = function(t) {
             this._offY = t, this.paramChanged();
         }
     }, t.GrahamScan = rt, t.GraphicAnimation = Gi, t.Graphics = ve, t.GraphicsBounds = _e, 
-    t.HTMLCanvas = Ee, t.HTMLChar = ss, t.HTMLImage = wi, t.Handler = T, t.HitArea = Ce, 
+    t.HTMLCanvas = Ee, t.HTMLChar = ss, t.HTMLImage = Ri, t.Handler = T, t.HitArea = Ce, 
     t.HttpRequest = qe, t.ICharRender = Zt, t.ILaya = i, t.IStatRender = pi, t.IndexBuffer2D = Tt, 
     t.InlcudeFile = yi, t.Input = Le, t.KeyBoardManager = Ge, t.KeyLocation = $i, t.Keyboard = Ji, 
     t.Laya = Si, t.LayaGL = m, t.LayaGLQuickRunner = xe, t.LayaGLRunner = class {
@@ -13792,8 +13831,8 @@ window.Laya = function(t) {
             return m.instance.uploadShaderUniforms(e, r, s);
         }
     }, t.LayaGPU = ne, t.Loader = Qe, t.LoaderManager = $e, t.LocalStorage = ti, t.Log = rs, 
-    t.MathUtil = oi, t.MatirxArray = us, t.Matrix = p, t.Mesh2D = yt, t.MeshParticle2D = Ri, 
-    t.MeshQuadTexture = Et, t.MeshTexture = Ct, t.MeshVG = bt, t.Mouse = Ai, t.MouseManager = Be, 
+    t.MathUtil = oi, t.MatirxArray = us, t.Matrix = p, t.Mesh2D = yt, t.MeshParticle2D = Ai, 
+    t.MeshQuadTexture = Et, t.MeshTexture = Ct, t.MeshVG = bt, t.Mouse = wi, t.MouseManager = Be, 
     t.Node = Se, t.Path = nt, t.PerfData = ns, t.PerfHUD = hs, t.Point = f, t.Pool = s, 
     t.PoolCache = os, t.Prefab = ze, t.PrimitiveSV = Ti, t.QuickTestTool = ts, t.Rectangle = g, 
     t.Render = he, t.RenderInfo = mt, t.RenderSprite = ye, t.RenderState2D = D, t.RenderTexture2D = B, 
@@ -13845,7 +13884,7 @@ window.Laya = function(t) {
         set stopEvent(t) {
             this._stopEvents = t, t && this._tar && this._setPlayActions(this._tar, t, "stop");
         }
-    }, t.Sprite = Me, t.SpriteConst = ce, t.SpriteStyle = we, t.Stage = Ue, t.Stat = G, 
+    }, t.Sprite = Me, t.SpriteConst = ce, t.SpriteStyle = Re, t.Stage = Ue, t.Stat = G, 
     t.StatUI = fi, t.StringKey = k, t.Submit = Ut, t.SubmitBase = ot, t.SubmitCMD = H, 
     t.SubmitCanvas = Gt, t.SubmitKey = X, t.SubmitTarget = kt, t.SubmitTexture = Wt, 
     t.System = class {
@@ -13861,7 +13900,7 @@ window.Laya = function(t) {
     t.VertexArrayObject = class {
         constructor() {}
     }, t.VertexBuffer2D = xt, t.WeakObject = _i, t.WebAudioSound = Xe, t.WebAudioSoundChannel = Ve, 
-    t.WebGL = re, t.WebGLCacheAsNormalCanvas = At, t.WebGLContext = v, t.WebGLRTMgr = F, 
+    t.WebGL = re, t.WebGLCacheAsNormalCanvas = wt, t.WebGLContext = v, t.WebGLRTMgr = F, 
     t.WordText = qt, t.WorkerLoader = bi, t.__init = Di, t._static = _static, t.alertGlobalError = Oi, 
     t.enableDebugPanel = Ni, t.init = Bi, t.isWXOpenDataContext = void 0, t.isWXPosMsg = void 0, 
     t.version = Fi, t.static = _static, t;

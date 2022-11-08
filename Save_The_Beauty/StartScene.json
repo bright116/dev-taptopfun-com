@@ -1,0 +1,1 @@
+{"type":"Scene","props":{"width":750,"height":1336},"compId":2,"child":[{"type":"Script","props":{"y":0,"x":0,"runtime":"script/GameLogic.ts"},"compId":8}],"loadList3D":[]}
