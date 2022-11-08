@@ -10241,7 +10241,7 @@ function _0xe7c7() {
         'uiBottom',
         'views/scene/LoadScene.ts',
         'scaleMode',
-        'showall',
+        'exactfit',
         'screenMode',
         'none',
         'alignV',
