@@ -13731,7 +13731,7 @@
 												1,
 												1
 											],
-											"meshPath":"Assets/fbx/dxx_22-Í¼__001.lm",
+											"meshPath":"Assets/fbx/dxx_22-tu__001.lm",
 											"enableRender":true,
 											"materials":[
 												{
@@ -15757,7 +15757,7 @@
 												1,
 												1
 											],
-											"meshPath":"Assets/fbx/she_24-Í¼__002.lm",
+											"meshPath":"Assets/fbx/she_24-tu__002.lm",
 											"enableRender":true,
 											"materials":[
 												{
@@ -20275,7 +20275,7 @@
 												1,
 												1
 											],
-											"meshPath":"Assets/fbx/wjj-Í¼__021.lm",
+											"meshPath":"Assets/fbx/wjj-tu__021.lm",
 											"enableRender":true,
 											"materials":[
 												{
@@ -24550,7 +24550,7 @@
 							"sortingFudge":0,
 							"material":{
 								"type":"Laya.ShurikenParticleMaterial",
-								"path":"Assets/å°å°æ‹¼å›¾çŽ‹/eff/Material/confetti.lmat"
+								"path":"Assets/xxptw/eff/Material/confetti.lmat"
 							}
 						},
 						"components":[],
@@ -24989,7 +24989,7 @@
 									"sortingFudge":0,
 									"material":{
 										"type":"Laya.ShurikenParticleMaterial",
-										"path":"Assets/å°å°æ‹¼å›¾çŽ‹/eff/Material/confetti.lmat"
+										"path":"Assets/xxptw/eff/Material/confetti.lmat"
 									}
 								},
 								"components":[],
@@ -25431,7 +25431,7 @@
 							"sortingFudge":0,
 							"material":{
 								"type":"Laya.ShurikenParticleMaterial",
-								"path":"Assets/å°å°æ‹¼å›¾çŽ‹/eff/Material/confetti.lmat"
+								"path":"Assets/xxptw/eff/Material/confetti.lmat"
 							}
 						},
 						"components":[],
@@ -25870,7 +25870,7 @@
 									"sortingFudge":0,
 									"material":{
 										"type":"Laya.ShurikenParticleMaterial",
-										"path":"Assets/å°å°æ‹¼å›¾çŽ‹/eff/Material/confetti.lmat"
+										"path":"Assets/xxptw/eff/Material/confetti.lmat"
 									}
 								},
 								"components":[],
@@ -26328,7 +26328,7 @@
 							"sortingFudge":0,
 							"material":{
 								"type":"Laya.ShurikenParticleMaterial",
-								"path":"Assets/å°å°æ‹¼å›¾çŽ‹/eff/Material/confetti 1.lmat"
+								"path":"Assets/xxptw/eff/Material/confetti 1.lmat"
 							}
 						},
 						"components":[],

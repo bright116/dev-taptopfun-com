@@ -78,7 +78,7 @@ var __extends = this && this['__extends'] || function () {
                     return _0x5a840f['init'] = function () {
                         var _0x314539 = Laya['ClassUtils']['regClass'];
                         _0x314539('Mgr/GameMg' + 'r.ts', _0x1faa48['default']), _0x314539('myGameScri' + 'pt/view/ga' + 'meView.ts', _0x3e4937['default']), _0x314539('View/Butto' + 'nAnim.ts', _0x42f7d5['default']), _0x314539('myGameScri' + 'pt/view/vi' + 'deoBtnEffe' + 'ct.ts', _0x1f4736['default']), _0x314539('View/Loadi' + 'ngView/Loa' + 'dingView.t' + 's', _0xc91ddb['default']), _0x314539('MenuScene.' + 'ts', _0x29915d['default']), _0x314539('LevelScene' + '.ts', _0x14e786['default']), _0x314539('WinScene.t' + 's', _0x56f7b2['default']);
-                    }, _0x5a840f['width'] = 0x2ee, _0x5a840f['height'] = 0x536, _0x5a840f['scaleMode'] = 'showall', _0x5a840f['screenMode'] = 'none', _0x5a840f['alignV'] = 'center', _0x5a840f['alignH'] = 'middle', _0x5a840f['startScene'] = 'GameMain.s' + 'cene', _0x5a840f['sceneRoot'] = '', _0x5a840f['debug'] = !0x1, _0x5a840f['stat'] = !0x1, _0x5a840f['physicsDeb' + 'ug'] = !0x1, _0x5a840f['exportScen' + 'eToJson'] = !0x0, _0x5a840f;
+                    }, _0x5a840f['width'] = 0x2ee, _0x5a840f['height'] = 0x536, _0x5a840f['scaleMode'] = 'exactfit', _0x5a840f['screenMode'] = 'none', _0x5a840f['alignV'] = 'center', _0x5a840f['alignH'] = 'middle', _0x5a840f['startScene'] = 'GameMain.s' + 'cene', _0x5a840f['sceneRoot'] = '', _0x5a840f['debug'] = !0x1, _0x5a840f['stat'] = !0x1, _0x5a840f['physicsDeb' + 'ug'] = !0x1, _0x5a840f['exportScen' + 'eToJson'] = !0x0, _0x5a840f;
                 }();
             _0x118561['default'] = _0x3327d9, _0x3327d9['init']();
         },
