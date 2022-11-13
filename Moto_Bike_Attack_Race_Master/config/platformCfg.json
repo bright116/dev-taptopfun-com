@@ -1,0 +1,284 @@
+{
+    "adCfg": {
+        "zs_ad_jump_num": 2,
+        "zs_banner_banner_time": 2000,
+        "zs_banner_city": 1,
+        "zs_banner_horizontal_enable": 1,
+        "zs_banner_move_time": "500",
+        "zs_banner_refresh_time": 30000,
+        "zs_banner_rotate_id1": "adunit-e666a225f61ad142",
+        "zs_banner_rotate_id2": "adunit-e666a225f61ad142",
+        "zs_banner_rotate_id3": "adunit-e666a225f61ad142",
+        "zs_banner_show_number": "2",
+        "zs_banner_show_time": 1,
+        "zs_banner_system": "",
+        "zs_banner_text_time": 2000,
+        "zs_banner_vertical_enable": 1,
+        "zs_click_award_add": "0.1",
+        "zs_click_award_back": "0.005",
+        "zs_click_award_city": 1,
+        "zs_click_award_money": "10",
+        "zs_click_award_num": "[1,2,3,4,5]",
+        "zs_click_award_percent": "[0.4,0.7]",
+        "zs_click_award_since": "1",
+        "zs_click_award_system": "",
+        "zs_click_award_time": 1,
+        "zs_finish_city": 1,
+        "zs_finish_jump": 0,
+        "zs_finish_time": 1,
+        "zs_full_screen_ad": 1,
+        "zs_full_screen_adunit": "",
+        "zs_full_screen_city": 1,
+        "zs_full_screen_jump": 0,
+        "zs_full_screen_rotate": "1",
+        "zs_full_screen_time": 1,
+        "zs_history_list_jump": "1",
+        "zs_jump_refesh": 4000,
+        "zs_jump_style": 0,
+        "zs_jump_switch": 1,
+        "zs_number": "1.0",
+        "zs_ready_click_num": "5",
+        "zs_recommend_id1": "",
+        "zs_recommend_id2": "",
+        "zs_recommend_id3": "",
+        "zs_recommend_id4": "",
+        "zs_revive_click_num": 0,
+        "zs_revive_countdown": 9,
+        "zs_revive_share_num": 0,
+        "zs_revive_video_num": -1,
+        "zs_share_img": "这个是分享图片地址",
+        "zs_share_title": "这个是分享标题",
+        "zs_shield_gdt_export": "1",
+        "zs_switch": 1,
+        "zs_unmiss_text_time": "3000",
+        "zs_version": "1.0",
+        "zs_video_adunit": "adunit-02aca121c03f37a2"
+    },
+    "iosFilterAppIds": [],
+    "bannerCfg": {
+        "BannerAnchorArr": [
+            "BOTTOM_LEFT",
+            "BOTTOM_RIGHT",
+            "TOP_LEFT",
+            "TOP_RIGHT"
+        ],
+        "HomePage": {
+            "initGroupArr": [
+                {
+                    "sign": 1,
+                    "length": 1,
+                    "autoChange": true,
+                    "isReset": true
+                }
+            ],
+            "showData": {
+                "sign": 1,
+                "isDelay": true
+            }
+        },
+        "WinPage": {
+            "initGroupArr": [
+                {
+                    "sign": 2,
+                    "length": 3,
+                    "autoChange": true,
+                    "isReset": true
+                }
+            ],
+            "showData": {
+                "sign": 2,
+                "isDelay": true
+            },
+            "exposureData": {
+                "sign": 2,
+                "anchorArr": [
+                    "BOTTOM_LEFT",
+                    "BOTTOM_RIGHT"
+                ]
+            }
+        },
+        "RelivePage": {
+            "initGroupArr": [
+                {
+                    "sign": 2,
+                    "length": 3,
+                    "autoChange": true,
+                    "isReset": true
+                }
+            ],
+            "showData": {
+                "sign": 2,
+                "isDelay": true
+            },
+            "exposureData": {
+                "sign": 2,
+                "anchorArr": [
+                    "BOTTOM_LEFT",
+                    "BOTTOM_RIGHT"
+                ]
+            }
+        },
+        "KnockEgg": {
+            "initGroupArr": [
+                {
+                    "sign": 3,
+                    "length": 3,
+                    "autoChange": true,
+                    "isReset": true
+                }
+            ],
+            "showData": {
+                "unAutoShow": true,
+                "sign": 3,
+                "showType": 1
+            },
+            "exposureData": {
+                "sign": 3,
+                "anchorArr": [
+                    "BOTTOM_LEFT",
+                    "BOTTOM_RIGHT"
+                ]
+            }
+        },
+        "FullAd": {
+            "initGroupArr": [
+                {
+                    "sign": 4,
+                    "length": 3,
+                    "autoChange": true,
+                    "isReset": true
+                }
+            ],
+            "showData": {
+                "unAutoShow": true,
+                "sign": 4,
+                "showType": 1
+            }
+        },
+        "FullAd_1": {
+            "initGroupArr": [
+                {
+                    "sign": 4,
+                    "length": 3,
+                    "autoChange": true,
+                    "isReset": true
+                }
+            ],
+            "showData": {
+                "unAutoShow": true,
+                "sign": 4,
+                "showType": 1
+            }
+        },
+        "ListAd": {
+            "lockHide": true
+        }
+    },
+    "exportGameCfg": {
+        "HomePage": [
+            {
+                "viewUrl": "prefab/wechat/FakeExitButton.json",
+                "parentRoot": "topUI",
+                "x": 18,
+                "y": 18,
+                "scriptType": "FakeExitBtn"
+            },
+            {
+                "adType": "promotion",
+                "isClockPendulum": true,
+                "viewUrl": "prefab/wechat/ExportHorizontalList_2.json",
+                "parentRoot": "topUI",
+                "x": 0,
+                "y": 100,
+                "scriptType": "ExportScrollH",
+                "position": "index_top"
+            }
+        ],
+        "GamePage": [
+            {
+                "viewUrl": "prefab/wechat/FakeExitButton.json",
+                "parentRoot": "topUI",
+                "x": 18,
+                "y": 18,
+                "scriptType": "FakeExitBtn"
+            },
+            {
+                "adType": "promotion",
+                "isClockPendulum": true,
+                "viewUrl": "prefab/wechat/ExportHorizontalList_2.json",
+                "parentRoot": "bottomUI",
+                "x": 0,
+                "y": 440,
+                "scriptType": "ExportScrollH",
+                "position": "game_bottom"
+            }
+        ],
+        "FloatAd": [
+            {
+                "adType": "promotion",
+                "readonly": true,
+                "position": "index_popup"
+            }
+        ],
+        "FullAd": [
+            {
+                "adType": "promotion",
+                "readonly": true,
+                "position": "full_screen_col3"
+            }
+        ],
+        "FullAd_1": [
+            {
+                "adType": "promotion",
+                "readonly": true,
+                "position": "full_screen_col2"
+            }
+        ],
+        "ListAd": [
+            {
+                "adType": "promotion",
+                "readonly": true,
+                "position": "full_screen_col3"
+            }
+        ],
+        "KnockEgg": [
+            {
+                "adType": "promotion",
+                "viewUrl": "prefab/wechat/ExportLikeList.json",
+                "parentRoot": "middleUI",
+                "x": 30,
+                "y": 380,
+                "scriptType": "ExportScrollH",
+                "position": "egg_bottom"
+            }
+        ]
+    },
+    "mistakenlyTouchCfg": {
+        "WinPage": [
+            {
+                "path": "bottomUI/homeBtn",
+                "offsetX": 0,
+                "offsetY": 180
+            },
+            {
+                "path": "bottomUI/nextBtn",
+                "offsetX": 0,
+                "offsetY": 180
+            }
+        ],
+        "RelivePage": [
+            {
+                "path": "bottomUI/replayBtn",
+                "offsetX": 0,
+                "offsetY": 180
+            }
+        ],
+        "FloatAd": [
+            {
+                "path": "bottomUI/closeBtn",
+                "offsetX": 0,
+                "offsetY": 180
+            }
+        ]
+    }
+}
