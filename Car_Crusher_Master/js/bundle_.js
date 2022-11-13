@@ -516,7 +516,7 @@ var __extends = this && this.__extends || function() {
             function Main() {
                 window.Laya3D ? Laya3D.init(a.default.width, a.default.height) : Laya.init(a.default.width, a.default.height, Laya.WebGL), 
                 Laya.Physics && Laya.Physics.enable(), Laya.DebugPanel && Laya.DebugPanel.enable(), 
-                Laya.stage.scaleMode = "showall";//a.default.scaleMode, 
+                Laya.stage.scaleMode = "exactfit";//a.default.scaleMode, 
                 // Laya.stage.screenMode = a.default.screenMode, 
                 Laya.stage.alignV = a.default.alignV, Laya.stage.alignH = "center", Laya.URL.exportSceneToJson = a.default.exportSceneToJson, 
                 (a.default.debug || "true" == Laya.Utils.getQueryString("debug")) && Laya.enableDebugPanel(), 
