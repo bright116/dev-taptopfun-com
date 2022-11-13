@@ -98,9 +98,10 @@ const _0x260e = function (_0x4e193d, _0x566b02) {
             _0x40060a && (_0x40060a['addEventListener'](_0x260e('0x2f'), this[_0x260e('0x12')][_0x260e('0x2')](this)), _0x40060a[_0x260e('0xe')](_0x260e('0x43'), this['onNavigate_'][_0x260e('0x2')](this)));
         }
         [_0x260e('0x12')]() {
-            if (YYGSDK[_0x260e('0x11')])
-                return;
-            this[_0x260e('0x2b')] && YYGSDK[_0x260e('0x15')](this[_0x260e('0x1d')], this[_0x260e('0x40')], this['to_']), this['canNavigateActive_'] = ![];
+            //TODO onNavigate_
+            // if (YYGSDK[_0x260e('0x11')])
+            //     return;
+            // this[_0x260e('0x2b')] && YYGSDK[_0x260e('0x15')](this[_0x260e('0x1d')], this[_0x260e('0x40')], this['to_']), this['canNavigateActive_'] = ![];
         }
         ['getStorageSync'](_0x48255b) {
             let _0x2ca172 = null;
@@ -134,30 +135,60 @@ const _0x260e = function (_0x4e193d, _0x566b02) {
             }
         }
         [_0x260e('0x8')](_0x53b3f9) {
-            if (!this['initialized_']) {
-                _0x53b3f9 && _0x53b3f9();
-                return;
-            }
-            this[_0x260e('0x3c')](), YYGSDK[_0x260e('0x8')](() => {
-                window[_0x260e('0x13')](), this[_0x260e('0xc')](), _0x53b3f9 && _0x53b3f9();
-            });
+            //TODO showInterstitial
+            console.log("请求插屏广告");
+
+            // 展示插屏广告
+            HUHU_showInterstitialAd();
+        
+            // 继续游戏
+            _0x53b3f9 && _0x53b3f9();
+            return;
+            // if (!this['initialized_']) {
+                // TODO 这一行：complete && complete()
+            //     _0x53b3f9 && _0x53b3f9();
+            //     return;
+            // }
+            // this[_0x260e('0x3c')](), YYGSDK[_0x260e('0x8')](() => {
+            //     window[_0x260e('0x13')](), this[_0x260e('0xc')](), _0x53b3f9 && _0x53b3f9();
+            // });
         }
         [_0x260e('0x1e')](_0x285d96, _0x347359) {
-            if (!this[_0x260e('0x14')]) {
-                _0x285d96 && _0x285d96();
-                return;
-            }
-            this[_0x260e('0x3c')](), YYGSDK['adsManager']['request'](YYG[_0x260e('0x16')][_0x260e('0xb')], YYG['EventHandler'][_0x260e('0x5')](this, () => {
+            //TODO showReward
+            console.log("请求激励广告");
+
+
+            HUHU_showRewardedVideoAd(
+              () => {
+                  // 用户观看广告完成，继续游戏
+                  _0x285d96 && _0x285d96();
+              },
+              () => {
+                // 广告请求失败或者用户跳过广告
                 window[_0x260e('0x13')](), this[_0x260e('0xc')](), _0x285d96 && _0x285d96(), _0x285d96 = null;
-            }), YYG['EventHandler'][_0x260e('0x5')](this, _0x442136 => {
-                window[_0x260e('0x13')](), this[_0x260e('0xc')](), _0x347359 ? (_0x347359(), _0x347359 = null) : _0x442136 == YYG[_0x260e('0x3a')][_0x260e('0x18')] && this[_0x260e('0x10')](_0x260e('0x1'));
-            }));
+          
+          
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+              }
+            );
+            // if (!this[_0x260e('0x14')]) {
+                // TODO 这一行：success && success();
+            //     _0x285d96 && _0x285d96();
+            //     return;
+            // }
+            // this[_0x260e('0x3c')](), YYGSDK['adsManager']['request'](YYG[_0x260e('0x16')][_0x260e('0xb')], YYG['EventHandler'][_0x260e('0x5')](this, () => {
+            //     window[_0x260e('0x13')](), this[_0x260e('0xc')](), _0x285d96 && _0x285d96(), _0x285d96 = null;
+            // }), YYG['EventHandler'][_0x260e('0x5')](this, _0x442136 => {
+                // TODO 这一行失败的回调 
+            //     window[_0x260e('0x13')](), this[_0x260e('0xc')](), _0x347359 ? (_0x347359(), _0x347359 = null) : _0x442136 == YYG[_0x260e('0x3a')][_0x260e('0x18')] && this[_0x260e('0x10')](_0x260e('0x1'));
+            // }));
         }
         ['initList'](_0x2fb9ea) {
-            if (YYGSDK[_0x260e('0x11')]) {
-                _0x2fb9ea[_0x260e('0x26')] = ![];
-                return;
-            }
+            //TODO initList
+            // if (YYGSDK[_0x260e('0x11')]) {
+            //     _0x2fb9ea[_0x260e('0x26')] = ![];
+            //     return;
+            // }
             _0x2fb9ea['renderHandler'] = new Laya[(_0x260e('0x44'))](_0x2fb9ea, function (_0x2ed05c) {
                 _0x2ed05c[_0x260e('0x1f')](Laya['Event']['MOUSE_DOWN']), _0x2ed05c['on'](Laya['Event'][_0x260e('0x47')], _0x2ed05c, () => {
                     _0x503458[_0x260e('0x30')]()[_0x260e('0x15')]('GAME', _0x260e('0x17'), _0x2ed05c['dataSource']['id']);
@@ -171,22 +202,27 @@ const _0x260e = function (_0x4e193d, _0x566b02) {
             }[_0x260e('0x2')](this), _0x208275);
         }
         [_0x260e('0x36')]() {
-            let _0x345fe4 = YYGSDK[_0x260e('0x3e')] || [], _0x27c745 = _0x345fe4[_0x260e('0x4')]();
-            for (let _0x46cda5 = 0x0, _0x4f2535 = _0x27c745['length']; _0x46cda5 < _0x4f2535; _0x46cda5++) {
-                const _0xa96f2f = Math[_0x260e('0x27')](Math[_0x260e('0x3')]() * (_0x46cda5 + 0x1)), _0x377989 = _0x27c745[_0xa96f2f];
-                _0x27c745[_0xa96f2f] = _0x27c745[_0x46cda5], _0x27c745[_0x46cda5] = _0x377989;
-            }
-            return _0x27c745;
+            //TODO getForgames
+            return [];
+            // let _0x345fe4 = YYGSDK[_0x260e('0x3e')] || [], _0x27c745 = _0x345fe4[_0x260e('0x4')]();
+            // for (let _0x46cda5 = 0x0, _0x4f2535 = _0x27c745['length']; _0x46cda5 < _0x4f2535; _0x46cda5++) {
+            //     const _0xa96f2f = Math[_0x260e('0x27')](Math[_0x260e('0x3')]() * (_0x46cda5 + 0x1)), _0x377989 = _0x27c745[_0xa96f2f];
+            //     _0x27c745[_0xa96f2f] = _0x27c745[_0x46cda5], _0x27c745[_0x46cda5] = _0x377989;
+            // }
+            // return _0x27c745;
         }
         [_0x260e('0x24')](_0x7ee429, _0x36e9a4) {
             if (this['initialized_'])
                 return;
             this[_0x260e('0x14')] = !![], Laya['loader'][_0x260e('0x5')]('cnf.json', Laya['Handler']['create'](this, _0x1aace => {
-                this[_0x260e('0x14')] = ![], YYGSDK['on'](YYG[_0x260e('0x3a')][_0x260e('0x6')], this, () => {
-                    this[_0x260e('0x14')] = !![], _0x36e9a4 && _0x36e9a4(), _0x36e9a4 = null;
-                });
-                let _0x481ec7 = new YYG[(_0x260e('0x37'))]();
-                _0x481ec7[_0x260e('0x1c')] = _0x7ee429, _0x481ec7[_0x260e('0x34')] = _0x1aace['id'] || '', YYGSDK[_0x260e('0x41')](YYG[_0x260e('0x31')][_0x260e('0x33')], _0x481ec7);
+                //TODO yadstartup
+                this[_0x260e('0x14')] = ![],
+                this[_0x260e('0x14')] = !![], _0x36e9a4 && _0x36e9a4(), _0x36e9a4 = null;
+                //  YYGSDK['on'](YYG[_0x260e('0x3a')][_0x260e('0x6')], this, () => {
+                //     this[_0x260e('0x14')] = !![], _0x36e9a4 && _0x36e9a4(), _0x36e9a4 = null;
+                // });
+                // let _0x481ec7 = new YYG[(_0x260e('0x37'))]();
+                // _0x481ec7[_0x260e('0x1c')] = _0x7ee429, _0x481ec7[_0x260e('0x34')] = _0x1aace['id'] || '', YYGSDK[_0x260e('0x41')](YYG[_0x260e('0x31')][_0x260e('0x33')], _0x481ec7);
             }));
         }
     }
