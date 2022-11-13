@@ -1794,7 +1794,7 @@
             window.Laya3D ? Laya3D.init(x.width, x.height) : Laya.init(x.width, x.height, Laya.WebGL), 
             Laya.Physics && Laya.Physics.enable(),
              Laya.DebugPanel && Laya.DebugPanel.enable(), 
-            Laya.stage.scaleMode = 'showall'; 
+            Laya.stage.scaleMode = 'exactfit'; 
             // Laya.stage.screenMode = '', 
             Laya.stage.alignV = 'center', 
             Laya.stage.alignH = 'cneter', Laya.URL.exportSceneToJson = x.exportSceneToJson, 
