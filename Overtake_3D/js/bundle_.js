@@ -193,7 +193,7 @@ const AudioEngineInstance = AudioEngine.getInstance();
             Laya.ClassUtils.regClass;
         }
     }
-    t.width = 720, t.height = 1280, t.scaleMode = "showall", t.screenMode = "none", 
+    t.width = 720, t.height = 1280, t.scaleMode = "exactfit", t.screenMode = "none", 
     t.alignV = "middle", t.alignH = "center", t.startScene = "View/Settle.scene", t.sceneRoot = "", 
     t.debug = !1, t.stat = !1, t.physicsDebug = !1, t.exportSceneToJson = !1, t.init();
     var e, i = Laya.ClassUtils.regClass;
