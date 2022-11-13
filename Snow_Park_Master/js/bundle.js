@@ -9163,7 +9163,7 @@
             let e = new Config3D();
             e.isAntialias = !0, window.Laya3D ? Laya3D.init(Ue.width, Ue.height, e) : Laya.init(Ue.width, Ue.height, Laya.WebGL), 
             Laya.Physics && Laya.Physics.enable(), Laya.DebugPanel && Laya.DebugPanel.enable(), 
-            Laya.stage.scaleMode = "showall", Laya.stage.screenMode = Ue.screenMode, Laya.stage.alignV = Ue.alignV, 
+            Laya.stage.scaleMode = "exactfit", Laya.stage.screenMode = Ue.screenMode, Laya.stage.alignV = Ue.alignV, 
             Laya.stage.alignH = "center", Laya.URL.exportSceneToJson = Ue.exportSceneToJson, 
             (Ue.debug || "true" == Laya.Utils.getQueryString("debug")) && Laya.enableDebugPanel(), 
             Ue.physicsDebug && Laya.PhysicsDebugDraw && Laya.PhysicsDebugDraw.enable(), Ue.stat && Laya.Stat.show(), 
