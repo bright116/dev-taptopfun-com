@@ -88,7 +88,7 @@ var __extends = undefined && undefined.__extends || function() {
                 }
             } ]), e;
         }();
-        a.default = v, v.width = 750, v.height = 1334, v.scaleMode = "showall", v.screenMode = "none", 
+        a.default = v, v.width = 750, v.height = 1334, v.scaleMode = "exactfit", v.screenMode = "none", 
         v.alignV = "middle", v.alignH = "center", v.startScene = "views/login.scene", v.sceneRoot = "", 
         v.debug = !1, v.stat = !1, v.physicsDebug = !1, v.exportSceneToJson = !0, v.init();
     }, {
