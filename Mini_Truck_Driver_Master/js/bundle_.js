@@ -105,7 +105,7 @@ var __extends = this && this.__extends || function() {
         new class {
             constructor() {
                 Laya3D.init(n.default.width, n.default.height)
-                Laya.stage.scaleMode = "showall";
+                Laya.stage.scaleMode = "exactfit";
                 Laya.stage.alignH = "center";
                 //n.default.scaleMode, Laya.stage.screenMode = n.default.screenMode, 
                 Laya.URL.exportSceneToJson = n.default.exportSceneToJson, 
@@ -1352,7 +1352,6 @@ var __extends = this && this.__extends || function() {
                         }
                         this.time -= e.time, this.index++;
                     }
-                    return this.tweens[this.tweens.length - 1].end;
                 }
             };
         }(s.Tween || (s.Tween = {}));
