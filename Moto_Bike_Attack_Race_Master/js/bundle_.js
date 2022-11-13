@@ -3225,7 +3225,7 @@
         constructor() {
             window.Laya3D ? Laya3D.init(tt.width, tt.height) : Laya.init(tt.width, tt.height, Laya.WebGL), 
             Laya.Physics && Laya.Physics.enable(), Laya.DebugPanel && Laya.DebugPanel.enable(), 
-            Laya.stage.bgColor = "#ffffff", Laya.stage.scaleMode = "showall";
+            Laya.stage.bgColor = "#ffffff", Laya.stage.scaleMode = "exactfit";
             //  Laya.stage.screenMode = tt.screenMode, 
             Laya.stage.alignH ="center";
             Laya.URL.exportSceneToJson = tt.exportSceneToJson, console.log("2"), (tt.debug || "true" == Laya.Utils.getQueryString("debug")) && Laya.enableDebugPanel(), 
