@@ -1,0 +1,1 @@
+{"type":"Scene","props":{"width":1080,"height":1920},"compId":2,"child":[{"type":"ProgressBar","props":{"y":1476,"x":139,"var":"prb_load","skin":"Loading/progress_loading.png","sizeGrid":"23,42,23,38"},"compId":9},{"type":"Sprite","props":{"y":294,"x":127,"texture":"Common/logo.png"},"compId":10}],"loadList":["Loading/progress_loading.png","Common/logo.png"],"loadList3D":[]}
