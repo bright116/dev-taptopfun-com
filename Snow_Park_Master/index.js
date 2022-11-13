@@ -1,0 +1,3 @@
+window.screenOrientation = "sensor_landscape", "undefined" != typeof tt ? require("libs/ald-game.js") : "undefined" != typeof qq ? require("libs/ald-game.js") : "undefined" != typeof qg ? require("libs/qg-ald-game.js") : "undefined" != typeof wx && require("libs/ald-game.js"), 
+loadLib("libs/laya.core.js"), loadLib("libs/laya.ui.js"), loadLib("libs/laya.d3.js"), 
+loadLib("libs/laya.physics3D.js"), loadLib("js/bundle.js");
