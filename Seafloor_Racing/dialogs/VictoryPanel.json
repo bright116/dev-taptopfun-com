@@ -1,0 +1,397 @@
+{
+	"type": "Dialog",
+	"props": {
+		"width": 1334,
+		"height": 750
+	},
+	"compId": 2,
+	"child": [{
+		"type": "Box",
+		"props": {
+			"y": 0,
+			"x": 0,
+			"width": 1334,
+			"var": "box",
+			"height": 750,
+			"centerY": 0,
+			"centerX": 0
+		},
+		"compId": 3,
+		"child": [{
+			"type": "Image",
+			"props": {
+				"top": 18,
+				"text": "Win",
+				"skin": "gameui/benjujiesuan.png",
+				"name": "img_victory",
+				"fontSize": 60,
+				"color": "#ffffff",
+				"centerX": 0,
+				"bold": true
+			},
+			"compId": 4
+		}, {
+			"type": "Image",
+			"props": {
+				"y": 283,
+				"var": "img_roll_bg01",
+				"skin": "gameui/diceng.png",
+				"centerX": 0,
+				"anchorY": 0.5,
+				"anchorX": 0.5
+			},
+			"compId": 22
+		}, {
+			"type": "Image",
+			"props": {
+				"y": 283,
+				"x": 667,
+				"var": "img_point",
+				"skin": "gameui/zhizhen.png",
+				"rotation": 72,
+				"anchorY": 1,
+				"anchorX": 0.5
+			},
+			"compId": 23
+		}, {
+			"type": "Image",
+			"props": {
+				"y": 283,
+				"x": 667,
+				"var": "img_roll",
+				"skin": "gameui/dingceng.png",
+				"centerX": 0,
+				"anchorY": 0.5,
+				"anchorX": 0.5
+			},
+			"compId": 26,
+			"child": [{
+				"type": "Label",
+				"props": {
+					"y": 160,
+					"x": 31,
+					"var": "lab_one_1",
+					"text": "X2",
+					"rotation": -64,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 28
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 134,
+					"x": 40,
+					"var": "lab_one_2",
+					"text": "",
+					"rotation": -64,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 29
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 69,
+					"x": 84,
+					"width": 16,
+					"var": "lab_two_1",
+					"text": "X4",
+					"rotation": -44,
+					"height": 28,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 30
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 53,
+					"x": 105,
+					"width": 28,
+					"var": "lab_two_2",
+					"text": "",
+					"rotation": -42,
+					"height": 28,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 31
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 31,
+					"x": 177,
+					"width": 16,
+					"var": "lab_three_1",
+					"text": "X6",
+					"rotation": 0,
+					"height": 28,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 32
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 30,
+					"x": 206,
+					"width": 28,
+					"var": "lab_three_2",
+					"text": "",
+					"rotation": 0,
+					"height": 28,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 33
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 53,
+					"x": 279,
+					"width": 16,
+					"var": "lab_four_1",
+					"text": "X8",
+					"rotation": 34,
+					"height": 28,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 34
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 67,
+					"x": 303,
+					"width": 28,
+					"var": "lab_four_2",
+					"text": "",
+					"rotation": 35,
+					"height": 28,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 35
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 124,
+					"x": 340,
+					"width": 16,
+					"var": "lab_five_1",
+					"text": "X10",
+					"rotation": 60,
+					"height": 28,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 36
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 162,
+					"x": 360,
+					"width": 28,
+					"var": "lab_five_2",
+					"text": "",
+					"rotation": 60,
+					"height": 28,
+					"fontSize": 28,
+					"color": "#ffffff",
+					"anchorY": 0.5,
+					"anchorX": 0.5
+				},
+				"compId": 37
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 148,
+					"x": 154,
+					"var": "lab_gold_desc",
+					"text": "Coin",
+					"fontSize": 38,
+					"color": "#ffffff"
+				},
+				"compId": 38
+			}, {
+				"type": "Label",
+				"props": {
+					"y": 198,
+					"x": 92,
+					"width": 206,
+					"var": "lab_gold_num",
+					"valign": "middle",
+					"text": "x1000000",
+					"height": 57,
+					"fontSize": 38,
+					"color": "#ffffff",
+					"align": "center"
+				},
+				"compId": 39
+			}]
+		}, {
+			"type": "Sprite",
+			"props": {
+				"y": 148,
+				"x": 532,
+				"texture": "gameui/mask_zhizhen.png"
+			},
+			"compId": 27
+		}, {
+			"type": "Image",
+			"props": {
+				"y": 400,
+				"x": 667,
+				"var": "img_share_bg",
+				"skin": "gameui/btn_shipinjiabei.png",
+				"centerX": 0,
+				"anchorY": 0.5,
+				"anchorX": 0.5
+			},
+			"compId": 49,
+			"child": [{
+				"type": "Image",
+				"props": {
+					"width": 65,
+					"skin": "gameui/icon_share.png",
+					"left": 23,
+					"height": 65,
+					"centerY": 0
+				},
+				"compId": 50
+			}, {
+				"type": "Image",
+				"props": {
+					"skin": "gameui/jinbi.png",
+					"right": 23,
+					"centerY": 0
+				},
+				"compId": 51
+			}, {
+				"type": "Label",
+				"props": {
+					"text": "Multiply",
+					"fontSize": 46,
+					"color": "#ffffff",
+					"centerY": 0,
+					"centerX": 0
+				},
+				"compId": 52
+			}]
+		}, {
+			"type": "Image",
+			"props": {
+				"y": 400,
+				"x": 667,
+				"var": "img_video_bg",
+				"skin": "gameui/btn_shipinjiabei.png",
+				"centerX": 0,
+				"anchorY": 0.5,
+				"anchorX": 0.5
+			},
+			"compId": 40,
+			"child": [{
+				"type": "Image",
+				"props": {
+					"skin": "gameui/icon_shipin.png",
+					"left": 23,
+					"centerY": 0
+				},
+				"compId": 41
+			}, {
+				"type": "Image",
+				"props": {
+					"skin": "gameui/jinbi.png",
+					"right": 23,
+					"centerY": 0
+				},
+				"compId": 42
+			}, {
+				"type": "Label",
+				"props": {
+					"text": "Multiply",
+					"fontSize": 46,
+					"color": "#ffffff",
+					"centerY": 0,
+					"centerX": 0
+				},
+				"compId": 43
+			}]
+        }, 
+        {
+            "type": "List",
+            "props": {
+                "y": 526,
+                "x": 297,
+                "width": 740,
+                "spaceX": 10,
+                "repeatY": 1,
+                "var":"appList",
+                "name": "appList",
+                "height": 214
+            },
+            "compId": 38,
+            "child": [{
+                "type": "Box",
+                "props": {
+                    "y": 0,
+                    "x": 0,
+                    "width": 240,
+                    "name": "render",
+                    "height": 180
+                },
+                "compId": 43,
+                "child": [{
+                    "type": "Image",
+                    "props": {
+                        "top": 0,
+                        "skin": "car/point.png",
+                        "sizeGrid": "17,18,18,17",
+                        "right": 0,
+                        "renderType": "render",
+                        "name": "thumb",
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 40
+                }]
+            }]
+        },
+        {
+			"type": "Script",
+			"props": {
+				"y": 79,
+				"x": 463,
+				"labBetNum5": "@node:36",
+				"labBetNum4": "@node:34",
+				"labBetNum3": "@node:32",
+				"labBetNum2": "@node:30",
+				"labBetNum1": "@node:28",
+				"imgPoint": "@node:23",
+				"runtime": "scripts/Roll.ts"
+			},
+			"compId": 44
+		}]
+	}],
+	"loadList": ["gameui/benjujiesuan.png", "gameui/diceng.png", "gameui/zhizhen.png", "gameui/dingceng.png", "gameui/mask_zhizhen.png", "gameui/btn_shipinjiabei.png", "gameui/icon_share.png", "gameui/jinbi.png", "gameui/icon_shipin.png"],
+	"loadList3D": []
+}

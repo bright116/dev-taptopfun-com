@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":256,"height":40},"compId":2,"child":[{"type":"Label","props":{"var":"btn_getAward","text":">>直接领取<<","fontSize":40,"color":"#ffffff","centerY":0,"centerX":0,"bold":true,"anchorY":0.5,"anchorX":0.5},"compId":3}],"loadList":[],"loadList3D":[]}

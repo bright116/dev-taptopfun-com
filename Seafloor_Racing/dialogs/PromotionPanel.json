@@ -1,0 +1,690 @@
+{
+	"type": "Dialog",
+	"props": {
+		"width": 1334,
+		"height": 750
+	},
+	"compId": 2,
+	"child": [{
+		"type": "Box",
+		"props": {
+			"y": 0,
+			"x": 0,
+			"width": 1334,
+			"var": "box",
+			"height": 750,
+			"centerY": 0,
+			"centerX": 0
+		},
+		"compId": 3,
+		"child": [{
+			"type": "Box",
+			"props": {
+				"width": 502,
+				"var": "box_rank",
+				"top": 120,
+				"height": 341,
+				"centerX": 0
+			},
+			"compId": 49,
+			"child": [{
+				"type": "Image",
+				"props": {
+					"y": 0,
+					"x": 0,
+					"width": 512,
+					"var": "img_bg",
+					"sizeGrid": "0,21,0,19",
+					"height": 351
+				},
+				"compId": 53,
+				"child": [{
+					"type": "Box",
+					"props": {
+						"y": 0,
+						"visible": false,
+						"var": "box_rank_1",
+						"presetID": 1,
+						"name": "box_rank_1",
+						"centerX": 0,
+						"x": 0,
+						"width": 491,
+						"isPresetRoot": true,
+						"height": 59
+					},
+					"compId": 147,
+					"child": [{
+						"type": "Image",
+						"props": {
+							"presetID": 2,
+							"width": 491,
+							"skin": "gameui/diban.png",
+							"name": "img_rank_bg",
+							"height": 55
+						},
+						"compId": 148
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 4,
+							"y": 28,
+							"width": 63,
+							"valign": "middle",
+							"text": "3",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_rank_num",
+							"italic": false,
+							"height": 62,
+							"fontSize": 53,
+							"color": "#ffffff",
+							"centerY": -2,
+							"centerX": -214,
+							"bold": false,
+							"anchorY": 0.5,
+							"anchorX": 0.5,
+							"align": "center"
+						},
+						"compId": 7
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 5,
+							"valign": "middle",
+							"text": "我",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_name",
+							"left": 125,
+							"italic": true,
+							"fontSize": 26,
+							"color": "#a5ff17",
+							"centerY": 0,
+							"align": "center"
+						},
+						"compId": 149,
+						"child": [{
+							"type": "Image",
+							"props": {
+								"presetID": 6,
+								"skin": "gameui/hat.png",
+								"right": -57,
+								"name": "img_icon"
+							},
+							"compId": 150
+						}]
+					}, {
+						"type": "Image",
+						"props": {
+							"presetID": 7,
+							"skin": "gameui/jinji.png",
+							"right": 30,
+							"name": "img_flag",
+							"centerY": 0
+						},
+						"compId": 151
+					}, {
+						"type": "Script",
+						"props": {
+							"presetID": 9,
+							"result": "@node:11",
+							"rank": "@node:7",
+							"name": "@node:8",
+							"icon": "@node:9",
+							"flag": "@node:10",
+							"runtime": "scripts/PromotionItem.ts"
+						},
+						"compId": 152
+					}]
+				}, {
+					"type": "Box",
+					"props": {
+						"y": 65,
+						"visible": false,
+						"var": "box_rank_2",
+						"presetID": 1,
+						"name": "box_rank_2",
+						"centerX": 0,
+						"x": 0,
+						"width": 491,
+						"isPresetRoot": true,
+						"height": 59
+					},
+					"compId": 153,
+					"child": [{
+						"type": "Image",
+						"props": {
+							"presetID": 2,
+							"width": 491,
+							"skin": "gameui/diban.png",
+							"name": "img_rank_bg",
+							"height": 55
+						},
+						"compId": 154
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 4,
+							"y": 28,
+							"width": 63,
+							"valign": "middle",
+							"text": "3",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_rank_num",
+							"italic": false,
+							"height": 62,
+							"fontSize": 53,
+							"color": "#ffffff",
+							"centerY": -2,
+							"centerX": -214,
+							"bold": false,
+							"anchorY": 0.5,
+							"anchorX": 0.5,
+							"align": "center"
+						},
+						"compId": 155
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 5,
+							"valign": "middle",
+							"text": "我",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_name",
+							"left": 125,
+							"italic": true,
+							"fontSize": 26,
+							"color": "#a5ff17",
+							"centerY": 0,
+							"align": "center"
+						},
+						"compId": 156,
+						"child": [{
+							"type": "Image",
+							"props": {
+								"presetID": 6,
+								"skin": "gameui/hat.png",
+								"right": -57,
+								"name": "img_icon"
+							},
+							"compId": 157
+						}]
+					}, {
+						"type": "Image",
+						"props": {
+							"presetID": 7,
+							"skin": "gameui/jinji.png",
+							"right": 30,
+							"name": "img_flag",
+							"centerY": 0
+						},
+						"compId": 158
+					}, {
+						"type": "Script",
+						"props": {
+							"presetID": 9,
+							"result": "@node:11",
+							"rank": "@node:7",
+							"name": "@node:8",
+							"icon": "@node:9",
+							"flag": "@node:10",
+							"runtime": "scripts/PromotionItem.ts"
+						},
+						"compId": 159
+					}]
+				}, {
+					"type": "Box",
+					"props": {
+						"y": 130,
+						"visible": false,
+						"var": "box_rank_3",
+						"presetID": 1,
+						"name": "box_rank_3",
+						"centerX": 0,
+						"x": 0,
+						"width": 491,
+						"isPresetRoot": true,
+						"height": 59
+					},
+					"compId": 160,
+					"child": [{
+						"type": "Image",
+						"props": {
+							"presetID": 2,
+							"width": 491,
+							"skin": "gameui/diban.png",
+							"name": "img_rank_bg",
+							"height": 55
+						},
+						"compId": 161
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 4,
+							"y": 28,
+							"width": 63,
+							"valign": "middle",
+							"text": "3",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_rank_num",
+							"italic": false,
+							"height": 62,
+							"fontSize": 53,
+							"color": "#ffffff",
+							"centerY": -2,
+							"centerX": -214,
+							"bold": false,
+							"anchorY": 0.5,
+							"anchorX": 0.5,
+							"align": "center"
+						},
+						"compId": 162
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 5,
+							"valign": "middle",
+							"text": "我",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_name",
+							"left": 125,
+							"italic": true,
+							"fontSize": 26,
+							"color": "#a5ff17",
+							"centerY": 0,
+							"align": "center"
+						},
+						"compId": 163,
+						"child": [{
+							"type": "Image",
+							"props": {
+								"presetID": 6,
+								"skin": "gameui/hat.png",
+								"right": -57,
+								"name": "img_icon"
+							},
+							"compId": 164
+						}]
+					}, {
+						"type": "Image",
+						"props": {
+							"presetID": 7,
+							"skin": "gameui/jinji.png",
+							"right": 30,
+							"name": "img_flag",
+							"centerY": 0
+						},
+						"compId": 165
+					}, {
+						"type": "Script",
+						"props": {
+							"presetID": 9,
+							"result": "@node:11",
+							"rank": "@node:7",
+							"name": "@node:8",
+							"icon": "@node:9",
+							"flag": "@node:10",
+							"runtime": "scripts/PromotionItem.ts"
+						},
+						"compId": 166
+					}]
+				}, {
+					"type": "Box",
+					"props": {
+						"y": 195,
+						"visible": false,
+						"var": "box_rank_4",
+						"scaleY": 1.2,
+						"presetID": 1,
+						"name": "box_rank_4",
+						"centerX": 0,
+						"x": 0,
+						"width": 491,
+						"isPresetRoot": true,
+						"height": 59
+					},
+					"compId": 167,
+					"child": [{
+						"type": "Image",
+						"props": {
+							"presetID": 2,
+							"width": 491,
+							"skin": "gameui/diban.png",
+							"name": "img_rank_bg",
+							"height": 55
+						},
+						"compId": 168
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 4,
+							"y": 28,
+							"width": 63,
+							"valign": "middle",
+							"text": "3",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_rank_num",
+							"italic": false,
+							"height": 62,
+							"fontSize": 53,
+							"color": "#ffffff",
+							"centerY": -2,
+							"centerX": -214,
+							"bold": false,
+							"anchorY": 0.5,
+							"anchorX": 0.5,
+							"align": "center"
+						},
+						"compId": 169
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 5,
+							"valign": "middle",
+							"text": "我",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_name",
+							"left": 125,
+							"italic": true,
+							"fontSize": 26,
+							"color": "#a5ff17",
+							"centerY": 0,
+							"align": "center"
+						},
+						"compId": 170,
+						"child": [{
+							"type": "Image",
+							"props": {
+								"presetID": 6,
+								"skin": "gameui/hat.png",
+								"right": -57,
+								"name": "img_icon"
+							},
+							"compId": 171
+						}]
+					}, {
+						"type": "Image",
+						"props": {
+							"presetID": 7,
+							"skin": "gameui/jinji.png",
+							"right": 30,
+							"name": "img_flag",
+							"centerY": 0
+						},
+						"compId": 172
+					}, {
+						"type": "Script",
+						"props": {
+							"presetID": 9,
+							"result": "@node:11",
+							"rank": "@node:7",
+							"name": "@node:8",
+							"icon": "@node:9",
+							"flag": "@node:10",
+							"runtime": "scripts/PromotionItem.ts"
+						},
+						"compId": 173
+					}]
+				}, {
+					"type": "Box",
+					"props": {
+						"y": 270,
+						"visible": false,
+						"var": "box_rank_5",
+						"presetID": 1,
+						"name": "box_rank_5",
+						"centerX": 0,
+						"x": 0,
+						"width": 491,
+						"isPresetRoot": true,
+						"height": 59
+					},
+					"compId": 174,
+					"child": [{
+						"type": "Image",
+						"props": {
+							"presetID": 2,
+							"width": 491,
+							"skin": "gameui/diban.png",
+							"name": "img_rank_bg",
+							"height": 55
+						},
+						"compId": 175
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 4,
+							"y": 28,
+							"width": 63,
+							"valign": "middle",
+							"text": "3",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_rank_num",
+							"italic": false,
+							"height": 62,
+							"fontSize": 53,
+							"color": "#ffffff",
+							"centerY": -2,
+							"centerX": -214,
+							"bold": false,
+							"anchorY": 0.5,
+							"anchorX": 0.5,
+							"align": "center"
+						},
+						"compId": 176
+					}, {
+						"type": "Label",
+						"props": {
+							"presetID": 5,
+							"valign": "middle",
+							"text": "我",
+							"strokeColor": "#000000",
+							"stroke": 2,
+							"name": "lab_name",
+							"left": 125,
+							"italic": true,
+							"fontSize": 26,
+							"color": "#a5ff17",
+							"centerY": 0,
+							"align": "center"
+						},
+						"compId": 177,
+						"child": [{
+							"type": "Image",
+							"props": {
+								"presetID": 6,
+								"skin": "gameui/hat.png",
+								"right": -57,
+								"name": "img_icon"
+							},
+							"compId": 178
+						}]
+					}, {
+						"type": "Image",
+						"props": {
+							"presetID": 7,
+							"skin": "gameui/jinji.png",
+							"right": 30,
+							"name": "img_flag",
+							"centerY": 0
+						},
+						"compId": 179
+					}, {
+						"type": "Script",
+						"props": {
+							"presetID": 9,
+							"result": "@node:11",
+							"rank": "@node:7",
+							"name": "@node:8",
+							"icon": "@node:9",
+							"flag": "@node:10",
+							"runtime": "scripts/PromotionItem.ts"
+						},
+						"compId": 180
+					}]
+				}]
+			}]
+        }, 
+        {
+            "type": "List",
+            "props": {
+                "y": 556,
+                "x": 297,
+                "width": 740,
+                "spaceX": 10,
+                "repeatY": 1,
+                "var":"appList",
+                "name": "appList",
+                "height": 214
+            },
+            "compId": 38,
+            "child": [{
+                "type": "Box",
+                "props": {
+                    "y": 0,
+                    "x": 0,
+                    "width": 240,
+                    "name": "render",
+                    "height": 180
+                },
+                "compId": 43,
+                "child": [{
+                    "type": "Image",
+                    "props": {
+                        "top": 0,
+                        "skin": "car/point.png",
+                        "sizeGrid": "17,18,18,17",
+                        "right": 0,
+                        "renderType": "render",
+                        "name": "thumb",
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 40
+                }]
+            }]
+        },{
+			"type": "Image",
+			"props": {
+				"var": "img_title",
+				"top": 40,
+				"skin": "gameui/shengli.png",
+				"scaleY": 1.2,
+				"scaleX": 1.2,
+				"centerX": 0
+			},
+			"compId": 181
+		}]
+	}],
+	"animations": [{
+		"nodes": [{
+			"target": 147,
+			"keyframes": {
+				"visible": [{
+					"value": false,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 147,
+					"key": "visible",
+					"index": 0
+				}, {
+					"value": true,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 147,
+					"key": "visible",
+					"index": 7
+				}]
+			}
+		}, {
+			"target": 153,
+			"keyframes": {
+				"visible": [{
+					"value": false,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 153,
+					"key": "visible",
+					"index": 0
+				}, {
+					"value": true,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 153,
+					"key": "visible",
+					"index": 14
+				}]
+			}
+		}, {
+			"target": 160,
+			"keyframes": {
+				"visible": [{
+					"value": false,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 160,
+					"key": "visible",
+					"index": 0
+				}, {
+					"value": true,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 160,
+					"key": "visible",
+					"index": 19
+				}]
+			}
+		}, {
+			"target": 167,
+			"keyframes": {
+				"visible": [{
+					"value": false,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 167,
+					"key": "visible",
+					"index": 0
+				}, {
+					"value": true,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 167,
+					"key": "visible",
+					"index": 22
+				}]
+			}
+		}, {
+			"target": 174,
+			"keyframes": {
+				"visible": [{
+					"value": false,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 174,
+					"key": "visible",
+					"index": 0
+				}, {
+					"value": true,
+					"tweenMethod": "linearNone",
+					"tween": false,
+					"target": 174,
+					"key": "visible",
+					"index": 25
+				}]
+			}
+		}],
+		"name": "ani1",
+		"id": 1,
+		"frameRate": 24,
+		"action": 0
+	}],
+	"loadList": ["prefab/PromotionItem.prefab", "gameui/shengli.png"],
+	"loadList3D": []
+}

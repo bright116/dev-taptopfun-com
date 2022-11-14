@@ -1,0 +1,947 @@
+{
+    "type": "Scene",
+    "props": {
+        "width": 1334,
+        "runtime": "components/HomeScene.ts",
+        "height": 750
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Box",
+            "props": {
+                "top": 0,
+                "right": 0,
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 488,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "width": 257,
+                        "top": 28,
+                        "skin": "gameui/jinbi_di.png",
+                        "sizeGrid": "16,7,14,9",
+                        "name": "img_gold_bg",
+                        "left": 55,
+                        "height": 66
+                    },
+                    "compId": 388,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "var": "img_gold",
+                                "skin": "gameui/jinbi.png",
+                                "left": -23,
+                                "centerY": 0
+                            },
+                            "compId": 391
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "width": 178,
+                                "var": "lab_gold",
+                                "valign": "middle",
+                                "text": "9999999",
+                                "left": 55,
+                                "height": 44,
+                                "fontSize": 42,
+                                "color": "#ffffff",
+                                "centerY": 0,
+                                "bold": true,
+                                "align": "center"
+                            },
+                            "compId": 390
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "lbGoldNum": "@node:390",
+                                "imgGold": "@node:391",
+                                "runtime": "scripts/Gold.ts"
+                            },
+                            "compId": 495
+                        }
+                    ]
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": 565,
+                        "x": 0,
+                        "width": 1334,
+                        "var": "box_home_panel",
+                        "right": 0,
+                        "left": 0,
+                        "height": 121,
+                        "bottom": 64
+                    },
+                    "compId": 450,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": -59,
+                                "var": "btn_sound",
+                                "skin": "gameui/shengyin.png",
+                                "left": 55,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 461,
+                            "child": [
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "scripts/Sound.ts"
+                                    },
+                                    "compId": 494
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 60,
+                                "var": "btn_carport",
+                                "skin": "gameui/btn_cheku.png",
+                                "left": 50,
+                                "label": "label",
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 451
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 60,
+                                "var": "btn_start_Game",
+                                "skin": "gameui/btn_bisai.png",
+                                "right": 50,
+                                "label": "label",
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 453
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {},
+                            "compId": 521
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "var": "btn_Centre",
+                                "skin": "gameui/wujinmoshi.png",
+                                "left": 105,
+                                "label": "label",
+                                "bottom": 350,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 535
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": -260,
+                                "x": 288,
+                                "visible": false,
+                                "var": "btn_Centre_shou",
+                                "skin": "gameui/shouzhi.png"
+                            },
+                            "compId": 540
+                        },
+                        {
+                            "type": "Animation",
+                            "props": {
+                                "y": -306,
+                                "x": 206,
+                                "visible": false,
+                                "var": "btn_Centre_shou3",
+                                "scaleY": 0.6,
+                                "scaleX": 0.6
+                            },
+                            "compId": 543
+                        },
+                        {
+                            "type": "Animation",
+                            "props": {
+                                "y": -317,
+                                "x": 260,
+                                "var": "btn_Centre_shou2",
+                                "source": "texiao/fingerbaise.ani",
+                                "scaleY": 0.6,
+                                "scaleX": 0.6
+                            },
+                            "compId": 544
+                        }
+                    ]
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": 386,
+                        "x": 0,
+                        "width": 1334,
+                        "visible": false,
+                        "var": "box_carport_panel",
+                        "right": 0,
+                        "name": "box_carport_panel",
+                        "left": 0,
+                        "height": 364,
+                        "bottom": 0
+                    },
+                    "compId": 455,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 94,
+                                "var": "btn_carport_close",
+                                "skin": "gameui/btn_close.png",
+                                "scaleY": 1.1,
+                                "scaleX": 1.1,
+                                "right": 38,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 467
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "width": 312,
+                                "var": "btn_gold_unlock",
+                                "skin": "gameui/btn_jinbijiesuo.png",
+                                "right": 205,
+                                "label": "label",
+                                "height": 136,
+                                "bottom": 220,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 456,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "width": 224,
+                                        "var": "lab_unluck_name",
+                                        "valign": "middle",
+                                        "top": 15,
+                                        "text": "Claim now",
+                                        "height": 50,
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "centerX": 8,
+                                        "bold": false,
+                                        "align": "center"
+                                    },
+                                    "compId": 458
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "var": "lab_unlock_gold_num",
+                                        "valign": "middle",
+                                        "text": "1000000",
+                                        "left": 128,
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "centerY": 15,
+                                        "bold": false,
+                                        "align": "left"
+                                    },
+                                    "compId": 462
+                                },
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "width": 40,
+                                        "var": "img_unlock_gold_icon",
+                                        "skin": "gameui/jinbi.png",
+                                        "left": 79,
+                                        "height": 40,
+                                        "centerY": 15
+                                    },
+                                    "compId": 463
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "width": 312,
+                                "var": "btn_video_unlock",
+                                "skin": "gameui/btn_shipinjiesuo.png",
+                                "right": 205,
+                                "label": "label",
+                                "height": 136,
+                                "bottom": 220,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 457,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 40,
+                                        "width": 224,
+                                        "valign": "middle",
+                                        "top": 15,
+                                        "text": "Claim now",
+                                        "height": 50,
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "centerX": 8,
+                                        "bold": false,
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5,
+                                        "align": "center"
+                                    },
+                                    "compId": 459
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "var": "lab_unlock_video_num",
+                                        "valign": "middle",
+                                        "text": "0/9",
+                                        "left": 160,
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "centerY": 15,
+                                        "bold": false,
+                                        "align": "left"
+                                    },
+                                    "compId": 496
+                                },
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "width": 30,
+                                        "skin": "gameui/icon_shipin.png",
+                                        "left": 112,
+                                        "height": 30,
+                                        "centerY": 15
+                                    },
+                                    "compId": 497
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 76,
+                                "x": 973,
+                                "width": 312,
+                                "var": "btn_share_unlock",
+                                "skin": "gameui/btn_shipinjiesuo.png",
+                                "right": 205,
+                                "label": "label",
+                                "height": 136,
+                                "bottom": 220,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 536,
+                            "child": [
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 40,
+                                        "width": 224,
+                                        "valign": "middle",
+                                        "top": 15,
+                                        "text": "分享解锁",
+                                        "height": 50,
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "centerX": 8,
+                                        "bold": false,
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5,
+                                        "align": "center"
+                                    },
+                                    "compId": 537
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "var": "lab_unlock_share_num",
+                                        "valign": "middle",
+                                        "text": "0/9",
+                                        "left": 160,
+                                        "fontSize": 32,
+                                        "color": "#ffffff",
+                                        "centerY": 15,
+                                        "bold": false,
+                                        "align": "left"
+                                    },
+                                    "compId": 538
+                                },
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "width": 30,
+                                        "skin": "gameui/icon_share.png",
+                                        "left": 112,
+                                        "height": 30,
+                                        "centerY": 15
+                                    },
+                                    "compId": 539
+                                }
+                            ]
+                        },
+                        {
+                            "type": "List",
+                            "props": {
+                                "width": 1294,
+                                "var": "list_carport",
+                                "spaceX": 10,
+                                "right": 20,
+                                "repeatY": 1,
+                                "left": 20,
+                                "height": 227,
+                                "bottom": -9
+                            },
+                            "compId": 468,
+                            "child": [
+                                {
+                                    "type": "UnlockItem",
+                                    "props": {
+                                        "renderType": "render",
+                                        "runtime": "ui.item.UnlockItemUI"
+                                    },
+                                    "compId": 469
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "skin": "gameui/cheliangshuxing.png",
+                                "scaleY": 1.15,
+                                "scaleX": 1.15,
+                                "name": "img_car_attr_bg",
+                                "left": 60,
+                                "bottom": 234
+                            },
+                            "compId": 498,
+                            "child": [
+                                {
+                                    "type": "Box",
+                                    "props": {
+                                        "top": 80,
+                                        "presetID": 1,
+                                        "name": "box_car_attr_1",
+                                        "left": 20,
+                                        "y": 0,
+                                        "x": 0,
+                                        "width": 295,
+                                        "isPresetRoot": true,
+                                        "height": 54
+                                    },
+                                    "compId": 500,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "skin": "gameui/ic_chezhong.png",
+                                                "presetID": 2,
+                                                "name": "img_car_attr_icon"
+                                            },
+                                            "compId": 4
+                                        },
+                                        {
+                                            "type": "Text",
+                                            "props": {
+                                                "presetID": 3,
+                                                "x": 60,
+                                                "text": "Tare",
+                                                "name": "lab_car_attr_name",
+                                                "italic": true,
+                                                "fontSize": 23,
+                                                "color": "#ffffff",
+                                                "runtime": "laya.display.Text"
+                                            },
+                                            "compId": 5
+                                        },
+                                        {
+                                            "type": "ProgressBar",
+                                            "props": {
+                                                "presetID": 4,
+                                                "name": "pro_car_attr",
+                                                "value": 0.1,
+                                                "skin": "gameui/shuxing_2.png",
+                                                "left": 60,
+                                                "bottom": 0
+                                            },
+                                            "compId": 6
+                                        },
+                                        {
+                                            "type": "Script",
+                                            "props": {
+                                                "pro": "@node:6",
+                                                "presetID": 5,
+                                                "runtime": "scripts/CarAttrItem.ts"
+                                            },
+                                            "compId": 7
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Box",
+                                    "props": {
+                                        "top": 145,
+                                        "presetID": 1,
+                                        "name": "box_car_attr_2",
+                                        "left": 20,
+                                        "y": 0,
+                                        "x": 0,
+                                        "width": 295,
+                                        "isPresetRoot": true,
+                                        "height": 54
+                                    },
+                                    "compId": 501,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "skin": "gameui/ic_sudu.png",
+                                                "presetID": 2,
+                                                "name": "img_car_attr_icon"
+                                            },
+                                            "compId": 502
+                                        },
+                                        {
+                                            "type": "Text",
+                                            "props": {
+                                                "text": "Top Speed",
+                                                "presetID": 3,
+                                                "x": 60,
+                                                "name": "lab_car_attr_name",
+                                                "italic": true,
+                                                "fontSize": 23,
+                                                "color": "#ffffff",
+                                                "runtime": "laya.display.Text"
+                                            },
+                                            "compId": 503
+                                        },
+                                        {
+                                            "type": "ProgressBar",
+                                            "props": {
+                                                "presetID": 4,
+                                                "name": "pro_car_attr",
+                                                "value": 0.1,
+                                                "skin": "gameui/shuxing_2.png",
+                                                "left": 60,
+                                                "bottom": 0
+                                            },
+                                            "compId": 504
+                                        },
+                                        {
+                                            "type": "Script",
+                                            "props": {
+                                                "pro": "@node:504",
+                                                "presetID": 5,
+                                                "runtime": "scripts/CarAttrItem.ts"
+                                            },
+                                            "compId": 505
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Box",
+                                    "props": {
+                                        "top": 208,
+                                        "presetID": 1,
+                                        "name": "box_car_attr_3",
+                                        "left": 20,
+                                        "y": 0,
+                                        "x": 0,
+                                        "width": 295,
+                                        "isPresetRoot": true,
+                                        "height": 54
+                                    },
+                                    "compId": 506,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "skin": "gameui/ic_caokong.png",
+                                                "presetID": 2,
+                                                "name": "img_car_attr_icon"
+                                            },
+                                            "compId": 507
+                                        },
+                                        {
+                                            "type": "Text",
+                                            "props": {
+                                                "text": "Steering",
+                                                "presetID": 3,
+                                                "x": 60,
+                                                "name": "lab_car_attr_name",
+                                                "italic": true,
+                                                "fontSize": 23,
+                                                "color": "#ffffff",
+                                                "runtime": "laya.display.Text"
+                                            },
+                                            "compId": 508
+                                        },
+                                        {
+                                            "type": "ProgressBar",
+                                            "props": {
+                                                "presetID": 4,
+                                                "name": "pro_car_attr",
+                                                "value": 0.1,
+                                                "skin": "gameui/shuxing_2.png",
+                                                "left": 60,
+                                                "bottom": 0
+                                            },
+                                            "compId": 509
+                                        },
+                                        {
+                                            "type": "Script",
+                                            "props": {
+                                                "pro": "@node:509",
+                                                "presetID": 5,
+                                                "runtime": "scripts/CarAttrItem.ts"
+                                            },
+                                            "compId": 510
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Box",
+                                    "props": {
+                                        "top": 272,
+                                        "presetID": 1,
+                                        "name": "box_car_attr_4",
+                                        "left": 20,
+                                        "y": 0,
+                                        "x": 0,
+                                        "width": 295,
+                                        "isPresetRoot": true,
+                                        "height": 54
+                                    },
+                                    "compId": 511,
+                                    "child": [
+                                        {
+                                            "type": "Image",
+                                            "props": {
+                                                "skin": "gameui/ic_danqi.png",
+                                                "presetID": 2,
+                                                "name": "img_car_attr_icon"
+                                            },
+                                            "compId": 512
+                                        },
+                                        {
+                                            "type": "Text",
+                                            "props": {
+                                                "text": "Accelerate",
+                                                "presetID": 3,
+                                                "x": 60,
+                                                "name": "lab_car_attr_name",
+                                                "italic": true,
+                                                "fontSize": 23,
+                                                "color": "#ffffff",
+                                                "runtime": "laya.display.Text"
+                                            },
+                                            "compId": 513
+                                        },
+                                        {
+                                            "type": "ProgressBar",
+                                            "props": {
+                                                "presetID": 4,
+                                                "name": "pro_car_attr",
+                                                "value": 0.1,
+                                                "skin": "gameui/shuxing_2.png",
+                                                "left": 60,
+                                                "bottom": 0
+                                            },
+                                            "compId": 514
+                                        },
+                                        {
+                                            "type": "Script",
+                                            "props": {
+                                                "pro": "@node:514",
+                                                "presetID": 5,
+                                                "runtime": "scripts/CarAttrItem.ts"
+                                            },
+                                            "compId": 515
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "var": "img_checkpoint_bg",
+                        "top": 138,
+                        "skin": "gameui/guan_.png",
+                        "centerX": 0
+                    },
+                    "compId": 522,
+                    "child": [
+                        {
+                            "type": "Label",
+                            "props": {
+                                "x": 603,
+                                "var": "lab_checkpoint",
+                                "top": 0,
+                                "text": "第1关",
+                                "strokeColor": "#000000",
+                                "stroke": 2,
+                                "fontSize": 50,
+                                "color": "#ffffff",
+                                "centerX": 0,
+                                "bold": true
+                            },
+                            "compId": 493
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Script",
+            "props": {
+                "carAttr4": "@node:511",
+                "carAttr3": "@node:506",
+                "carAttr2": "@node:501",
+                "carAttr1": "@node:500",
+                "runtime": "scripts/CarAttrList.ts"
+            },
+            "compId": 517
+        },
+        {
+            "type": "Script",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "runtime": "scripts/CarPort.ts"
+            },
+            "compId": 518
+        }
+    ],
+    "animations": [
+        {
+            "nodes": [
+                {
+                    "target": 540,
+                    "keyframes": {
+                        "y": [
+                            {
+                                "value": -260,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "y",
+                                "index": 0
+                            },
+                            {
+                                "value": -309,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "y",
+                                "index": 15
+                            },
+                            {
+                                "value": -309,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "label": null,
+                                "key": "y",
+                                "index": 18
+                            },
+                            {
+                                "value": -309,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "label": null,
+                                "key": "y",
+                                "index": 21
+                            },
+                            {
+                                "value": -260,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "label": null,
+                                "key": "y",
+                                "index": 35
+                            }
+                        ],
+                        "x": [
+                            {
+                                "value": 288,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "x",
+                                "index": 0
+                            },
+                            {
+                                "value": 206,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "x",
+                                "index": 15
+                            },
+                            {
+                                "value": 206,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "label": null,
+                                "key": "x",
+                                "index": 18
+                            },
+                            {
+                                "value": 206,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "label": null,
+                                "key": "x",
+                                "index": 21
+                            },
+                            {
+                                "value": 288,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "label": null,
+                                "key": "x",
+                                "index": 35
+                            }
+                        ],
+                        "visible": [
+                            {
+                                "value": true,
+                                "tweenMethod": "linearNone",
+                                "tween": false,
+                                "target": 540,
+                                "key": "visible",
+                                "index": 0
+                            }
+                        ],
+                        "scaleY": [
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "scaleY",
+                                "index": 0
+                            },
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "scaleY",
+                                "index": 15
+                            },
+                            {
+                                "value": 0.7,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "scaleY",
+                                "index": 18
+                            },
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "scaleY",
+                                "index": 21
+                            }
+                        ],
+                        "scaleX": [
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "scaleX",
+                                "index": 0
+                            },
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "scaleX",
+                                "index": 15
+                            },
+                            {
+                                "value": 0.7,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "scaleX",
+                                "index": 18
+                            },
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 540,
+                                "key": "scaleX",
+                                "index": 21
+                            }
+                        ]
+                    }
+                }
+            ],
+            "name": "shouani",
+            "id": 1,
+            "frameRate": 24,
+            "action": 0
+        }
+    ],
+    "loadList": [
+        "gameui/jinbi_di.png",
+        "gameui/jinbi.png",
+        "gameui/shengyin.png",
+        "gameui/btn_cheku.png",
+        "gameui/btn_bisai.png",
+        "gameui/wujinmoshi.png",
+        "gameui/shouzhi.png",
+        "texiao/finger.ani",
+        "texiao/fingerbaise.ani",
+        "gameui/btn_close.png",
+        "gameui/btn_jinbijiesuo.png",
+        "gameui/btn_shipinjiesuo.png",
+        "gameui/icon_shipin.png",
+        "gameui/icon_share.png",
+        "item/UnlockItem.scene",
+        "gameui/cheliangshuxing.png",
+        "prefab/CarAttrItem.prefab",
+        "gameui/ic_chezhong.png",
+        "gameui/ic_sudu.png",
+        "gameui/ic_caokong.png",
+        "gameui/ic_danqi.png",
+        "gameui/guan_.png"
+    ],
+    "loadList3D": []
+}
