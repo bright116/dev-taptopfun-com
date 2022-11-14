@@ -4207,11 +4207,6 @@
             if (!obj) return;
             this._InterstitialAdData = obj;
             return;
-            console.log("创建插屏广告");
-            this._interstitialAd = qg.createInterstitialAd({
-                adUnitId: obj.id,
-                posId: obj.id
-            });
         }
         showInterstitialAd() {
             return new Promise((resolve, reject) => {
@@ -5720,7 +5715,7 @@
             if (window["Laya3D"]) Laya3D.init(1334, 750); else Laya.init(GameConfig.width, GameConfig.height, Laya["WebGL"]);
             Laya["Physics"] && Laya["Physics"].enable();
             Laya["DebugPanel"] && Laya["DebugPanel"].enable();
-            Laya.stage.scaleMode = "showall";
+            Laya.stage.scaleMode = "exactfit";
             Laya.stage.screenMode = "none";
             Laya.stage.alignV = "middle";
             Laya.stage.alignH = "center";
