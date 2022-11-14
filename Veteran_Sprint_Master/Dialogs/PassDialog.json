@@ -1,0 +1,434 @@
+{
+    "type": "Dialog",
+    "props": {
+        "y": 0,
+        "x": 0,
+        "width": 1334,
+        "top": 0,
+        "runtime": "Runtimes/BaseDialogRt.ts",
+        "right": 0,
+        "name": "PassDialog",
+        "left": 0,
+        "isModal": true,
+        "height": 750,
+        "bottom": 0,
+        "autoDestroyAtClosed": true
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Box",
+            "props": {
+                "presetID": 1,
+                "left": 60,
+                "y": 0,
+                "x": 0,
+                "width": 330,
+                "top": 0,
+                "name": "DcBoxV",
+                "isPresetRoot": true,
+                "bottom": 0
+            },
+            "compId": 159,
+            "child": [
+                {
+                    "type": "List",
+                    "props": {
+                        "presetID": 2,
+                        "x": 0,
+                        "width": 330,
+                        "top": 0,
+                        "spaceY": 10,
+                        "spaceX": 10,
+                        "repeatY": 4,
+                        "repeatX": 2,
+                        "name": "list",
+                        "bottom": 0
+                    },
+                    "compId": 926,
+                    "child": [
+                        {
+                            "type": "Box",
+                            "props": {
+                                "presetID": 3,
+                                "width": 160,
+                                "renderType": "render",
+                                "height": 160
+                            },
+                            "compId": 927,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 4,
+                                        "width": 160,
+                                        "texture": "dc/dc_bg.png",
+                                        "name": "bg",
+                                        "height": 160
+                                    },
+                                    "compId": 928
+                                },
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "presetID": 5,
+                                        "y": 5,
+                                        "x": 5,
+                                        "width": 150,
+                                        "skin": "dc/loadImg1.png",
+                                        "name": "m_pic",
+                                        "height": 150
+                                    },
+                                    "compId": 929,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "presetID": 6,
+                                                "width": 150,
+                                                "texture": "dc/dc_mask.png",
+                                                "renderType": "mask",
+                                                "height": 150
+                                            },
+                                            "compId": 930
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 7,
+                                        "y": 67,
+                                        "x": 67,
+                                        "visible": false,
+                                        "texture": "dc/dc_hand.png",
+                                        "runtime": "Prefabs/Exprot/DcHandRT.ts",
+                                        "name": "hand"
+                                    },
+                                    "compId": 931
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "presetID": 8,
+                        "isFront": true,
+                        "isAll": false,
+                        "eventId": "e_8",
+                        "runtime": "Prefabs/Exprot/ExprotBoxV.ts"
+                    },
+                    "compId": 936
+                }
+            ]
+        },
+        {
+            "type": "Box",
+            "props": {
+                "right": 60,
+                "presetID": 1,
+                "y": 0,
+                "x": 0,
+                "width": 330,
+                "top": 0,
+                "name": "DcBoxV",
+                "isPresetRoot": true,
+                "bottom": 0
+            },
+            "compId": 937,
+            "child": [
+                {
+                    "type": "List",
+                    "props": {
+                        "presetID": 2,
+                        "x": 0,
+                        "width": 330,
+                        "top": 0,
+                        "spaceY": 10,
+                        "spaceX": 10,
+                        "repeatY": 4,
+                        "repeatX": 2,
+                        "name": "list",
+                        "bottom": 0
+                    },
+                    "compId": 938,
+                    "child": [
+                        {
+                            "type": "Box",
+                            "props": {
+                                "presetID": 3,
+                                "width": 160,
+                                "renderType": "render",
+                                "height": 160
+                            },
+                            "compId": 939,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 4,
+                                        "width": 160,
+                                        "texture": "dc/dc_bg.png",
+                                        "name": "bg",
+                                        "height": 160
+                                    },
+                                    "compId": 940
+                                },
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "presetID": 5,
+                                        "y": 5,
+                                        "x": 5,
+                                        "width": 150,
+                                        "skin": "dc/loadImg1.png",
+                                        "name": "m_pic",
+                                        "height": 150
+                                    },
+                                    "compId": 941,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "presetID": 6,
+                                                "width": 150,
+                                                "texture": "dc/dc_mask.png",
+                                                "renderType": "mask",
+                                                "height": 150
+                                            },
+                                            "compId": 942
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "presetID": 7,
+                                        "y": 67,
+                                        "x": 67,
+                                        "visible": false,
+                                        "texture": "dc/dc_hand.png",
+                                        "runtime": "Prefabs/Exprot/DcHandRT.ts",
+                                        "name": "hand"
+                                    },
+                                    "compId": 943
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "presetID": 8,
+                        "isFront": false,
+                        "isAll": false,
+                        "eventId": "e_8",
+                        "runtime": "Prefabs/Exprot/ExprotBoxV.ts"
+                    },
+                    "compId": 944
+                }
+            ]
+        },
+        {
+            "type": "Box",
+            "props": {
+                "width": 460,
+                "top": 45,
+                "name": "goldBox",
+                "centerX": 0
+            },
+            "compId": 945,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 0,
+                        "x": 45,
+                        "visible": false,
+                        "texture": "public/fail_ico.png"
+                    },
+                    "compId": 946
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "top": 194,
+                        "stateNum": 1,
+                        "skin": "public/btn_yellow.png",
+                        "name": "btnMore",
+                        "centerX": 0
+                    },
+                    "compId": 155,
+                    "child": [
+                        {
+                            "type": "Label",
+                            "props": {
+                                "width": 240,
+                                "valign": "middle",
+                                "text": "更多",
+                                "name": "txt",
+                                "height": 40,
+                                "fontSize": 40,
+                                "font": "SimHei",
+                                "color": "#ffffff",
+                                "centerY": 0,
+                                "centerX": 0,
+                                "bold": true,
+                                "align": "center"
+                            },
+                            "compId": 948
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "stateNum": 1,
+                "skin": "public/btn_red.png",
+                "name": "btnNext",
+                "centerX": 0,
+                "centerY":0,
+                "bottom": 288
+            },
+            "compId": 950,
+            "child": [
+                {
+                    "type": "Label",
+                    "props": {
+                        "width": 240,
+                        "valign": "middle",
+                        "text": "Next Level",
+                        "height": 40,
+                        "fontSize": 40,
+                        "font": "SimHei",
+                        "color": "#ffffff",
+                        "centerY": 0,
+                        "centerX": 0,
+                        "bold": true,
+                        "align": "center"
+                    },
+                    "compId": 951
+                }
+            ]
+        },
+        {
+            "type": "Script",
+            "props": {
+                "runtime": "Activity/Scripts/PassDialog.ts"
+            },
+            "compId": 954
+        },
+        {
+            "type": "Box",
+            "props": {
+                "presetID": 1,
+                "y": 0,
+                "x": 0,
+                "width": 650,
+                "visible": false,
+                "name": "nativeTu",
+                "mouseEnabled": true,
+                "isPresetRoot": true,
+                "height": 200,
+                "centerX": 0,
+                "bottom": 0
+            },
+            "compId": 956,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "presetID": 2,
+                        "y": 0,
+                        "x": 0,
+                        "width": 650,
+                        "skin": "native/ysgg.png",
+                        "name": "img",
+                        "height": 170
+                    },
+                    "compId": 84
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 3,
+                        "y": 0,
+                        "x": 600,
+                        "texture": "native/ad-text.png"
+                    },
+                    "compId": 85
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 4,
+                        "y": 12,
+                        "x": 14,
+                        "visible": false,
+                        "texture": "native/ad-close.png",
+                        "name": "close"
+                    },
+                    "compId": 86
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "presetID": 5,
+                        "x": 0,
+                        "width": 650,
+                        "valign": "middle",
+                        "text": "广告标题",
+                        "overflow": "hidden",
+                        "name": "name",
+                        "mouseEnabled": true,
+                        "height": 30,
+                        "fontSize": 20,
+                        "font": "SimHei",
+                        "color": "#333333",
+                        "bottom": 0,
+                        "bold": true,
+                        "bgColor": "#ccc",
+                        "align": "center"
+                    },
+                    "compId": 163
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "presetID": 6,
+                        "runtime": "Platform/Oppo/nativeTu.ts"
+                    },
+                    "compId": 957
+                }
+            ]
+        }
+        ,
+                {
+                    "type": "Button",
+                    "props": {
+
+
+                        "stateNum": 1,
+                        "skin": "public/btn_retrun.png",
+                        "name": "btnRetrun",
+                        "centerX":-150,
+                        "centerY":0
+                    },
+                    "compId": 952
+                }
+    ],
+    "loadList": [
+        "Prefabs/Exprot/DcBoxV.prefab",
+        "public/fail_ico.png",
+        "public/btn_yellow.png",
+        "public/btn_retrun.png",
+        "public/btn_red.png",
+        "Prefabs/Oppo/nativeTu.prefab"
+    ],
+    "loadList3D": []
+}

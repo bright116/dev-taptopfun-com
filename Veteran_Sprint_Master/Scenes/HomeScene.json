@@ -1,0 +1,373 @@
+{
+    "type": "View",
+    "props": {
+        "width": 1334,
+        "runtime": "Runtimes/BaseSceneRt.ts",
+        "name": "HomeScen",
+        "height": 750
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "skin": "game/home_bg.jpg",
+                "name": "bg",
+                "centerY": 0,
+                "centerX": 0
+            },
+            "compId": 3
+        },
+
+        {
+            "type": "Box",
+            "props": {
+                "y": 22,
+                "x": 60,
+                "presetID": 1,
+                "left": 60,
+                "zOrder": 99,
+                "top": 22,
+                "name": "CoinBox",
+                "isPresetRoot": true
+            },
+            "compId": 5,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 2,
+                        "width": 160,
+                        "texture": "game/coin_bg.png",
+                        "name": "bg",
+                        "height": 59
+                    },
+                    "compId": 9
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 7,
+                        "y": 8,
+                        "x": 15,
+                        "texture": "game/coin_ico.png",
+                        "name": "coin"
+                    },
+                    "compId": 10
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "presetID": 3,
+                        "y": 14,
+                        "x": 62,
+                        "width": 80,
+                        "valign": "middle",
+                        "text": "3586",
+                        "name": "txt",
+                        "height": 31,
+                        "fontSize": 30,
+                        "font": "SimHei",
+                        "color": "#FFFFFF",
+                        "alpha": 1,
+                        "align": "center"
+                    },
+                    "compId": 11
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "presetID": 6,
+                        "runtime": "Prefabs/CoinControl.ts"
+                    },
+                    "compId": 12
+                }
+            ]
+        },
+        {
+            "type": "Box",
+            "props": {
+                "y": 0,
+                "presetID": 1,
+                "left": 60,
+                "top": 160,
+                "name": "RandomExprot",
+                "isPresetRoot": true
+            },
+            "compId": 7,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 2,
+                        "texture": "dc/dc_bgh.png",
+                        "name": "bg"
+                    },
+                    "compId": 13
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "presetID": 3,
+                        "y": 12,
+                        "x": 8,
+                        "width": 252,
+                        "skin": "dc/loadImg1.png",
+                        "name": "img",
+                        "height": 252
+                    },
+                    "compId": 14,
+                    "child": [
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "presetID": 5,
+                                "texture": "dc/dc_masks.png",
+                                "renderType": "mask"
+                            },
+                            "compId": 25
+                        }
+                    ]
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "presetID": 4,
+                        "isFront": true,
+                        "isAll": false,
+                        "eventId": "e_3",
+                        "runtime": "Prefabs/Exprot/RandomExprotMg.ts"
+                    },
+                    "compId": 15
+                }
+            ]
+        },
+        {
+            "type": "Box",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "right": 60,
+                "presetID": 1,
+                "name": "RandomExprotR",
+                "top": 160,
+                "isPresetRoot": true
+            },
+            "compId": 8,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "presetID": 2,
+                        "texture": "dc/dc_bgh.png",
+                        "name": "bg"
+                    },
+                    "compId": 16
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "presetID": 3,
+                        "y": 12,
+                        "x": 8,
+                        "width": 252,
+                        "skin": "dc/loadImg1.png",
+                        "name": "img",
+                        "height": 252
+                    },
+                    "compId": 17,
+                    "child": [
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "presetID": 5,
+                                "texture": "dc/dc_masks.png",
+                                "renderType": "mask"
+                            },
+                            "compId": 26
+                        }
+                    ]
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "presetID": 4,
+                        "isFront": false,
+                        "isAll": false,
+                        "eventId": "e_3",
+                        "runtime": "Prefabs/Exprot/RandomExprotMg.ts"
+                    },
+                    "compId": 18
+                }
+            ]
+        },
+        {
+            "type": "Box",
+            "props": {
+                "y": 116,
+                "x": 377,
+                "width": 580,
+                "top": 116,
+                "name": "carBox",
+                "mouseEnabled": true,
+                "height": 400,
+                "centerX": 0
+            },
+            "compId": 22,
+            "child": [
+                {
+                    "type": "Button",
+                    "props": {
+                        "zOrder": 99,
+                        "visible": true,
+                        "stateNum": 1,
+                        "skin": "game/qh_left.png",
+                        "name": "btn_left",
+                        "left": 0,
+                        "centerY": 0
+                    },
+                    "compId": 23
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "zOrder": 99,
+                        "y": 169,
+                        "visible": true,
+                        "stateNum": 1,
+                        "skin": "game/qh_right.png",
+                        "right": 0,
+                        "name": "btn_right",
+                        "centerY": 0
+                    },
+                    "compId": 24
+                }
+            ]
+        },
+        {
+            "type": "Script",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "runtime": "Game/Script/Scene/HomeScene.ts"
+            },
+            "compId": 4
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 531,
+                "visible": true,
+                "stateNum": 1,
+                "skin": "public/btn_coinbg.png",
+                "centerX":0,
+                "name": "btnBuy"
+            },
+            "compId": 19,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 27.5,
+                        "x": 38,
+                        "width": 53,
+                        "texture": "public/coin_icoh.png",
+                        "height": 56
+                    },
+                    "compId": 20
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 35.5,
+                        "x": 106,
+                        "valign": "middle",
+                        "text": "2000",
+                        "fontSize": 40,
+                        "font": "SimHei",
+                        "color": "#ffffff",
+                        "bold": true,
+                        "centerX":0
+                    },
+                    "compId": 21
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 531,
+                "x": 940,
+                "top": 531,
+                "stateNum": 1,
+                "skin": "public/btn_video.png",
+                "left": 60,
+                "name": "btnVideo"
+            },
+            "compId": 31
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 531,
+                "x": 940,
+                "top": 531,
+                "stateNum": 1,
+                "skin": "public/btn_start.png",
+                "right": 60,
+                "name": "btnNext"
+            },
+            "compId": 6,
+            "child": [
+                {
+                    "type": "Animation",
+                    "props": {
+                        "source": "Ani/HandAni.ani",
+                        "name": "Ani",
+                        "interval": 50,
+                        "autoPlay": true
+                    },
+                    "compId": 28
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "visible": false,
+                "stateNum": 1,
+                "skin": "game/btn_MoreGame.png",
+                "right": 60,
+                "name": "btnMore",
+                "label": "label",
+                "centerY": -57
+            },
+            "compId": 29
+        },
+        {
+            "type":"Image",
+            "props":{
+                "centerX":0,
+                "centerY":0,
+                "skin":"lock.png",
+                "name":"Lock"
+            },
+            "compId":30
+        }
+    ],
+    "loadList": [
+        "game/home_bg.jpg",
+        "Prefabs/CoinBox.prefab",
+        "Prefabs/Exprot/RandomExprot.prefab",
+        "game/qh_left.png",
+        "game/qh_right.png",
+        "public/btn_coinbg.png",
+        "public/coin_icoh.png",
+        "public/btn_start.png",
+        "Ani/HandAni.ani",
+        "game/btn_MoreGame.png"
+    ],
+    "loadList3D": []
+}

@@ -1,0 +1,88 @@
+{
+    "type": "View",
+    "props": {
+        "x": 0,
+        "width": 1334,
+        "runtime": "Runtimes/BaseSceneRt.ts",
+        "name": "LoadingScene",
+        "height": 750,
+        "centerY": 0,
+        "centerX": 0
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "skin": "public/loding.jpg",
+                "centerY": 0,
+                "centerX": 0
+            },
+            "compId": 778
+        },
+        {
+            "type": "Script",
+            "props": {
+                "runtime": "Game/Script/Scene/LoadingScene.ts"
+            },
+            "compId": 783
+        },
+        {
+            "type": "Image",
+            "props": {
+                "visible": false,
+                "top": 80,
+                "skin": "public/login.png",
+                "name": "logo",
+                "left": 100
+            },
+            "compId": 785
+        },
+        {
+            "type": "Box",
+            "props": {
+                "width": 1800,
+                "height": 150,
+                "centerX": 0,
+                "bottom": 0,
+                "bgColor": "#000000",
+                "alpha": 0.5
+            },
+            "compId": 786
+        },
+        {
+            "type": "ProgressBar",
+            "props": {
+                "skin": "public/progress.png",
+                "name": "progress",
+                "centerX": 0,
+                "bottom": 83
+            },
+            "compId": 3
+        },
+        {
+            "type": "Label",
+            "props": {
+                "width": 750,
+                "valign": "middle",
+                "text": "Loading...",
+                "name": "prompt",
+                "height": 28,
+                "fontSize": 26,
+                "font": "SimHei",
+                "color": "#ffffff",
+                "centerX": 0,
+                "bottom": 42,
+                "bold": true,
+                "align": "center"
+            },
+            "compId": 779
+        }
+    ],
+    "loadList": [
+        "public/loding.jpg",
+        "public/login.png",
+        "public/progress.png"
+    ],
+    "loadList3D": []
+}

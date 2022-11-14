@@ -1,0 +1,386 @@
+{
+    "type": "Scene",
+    "props": {
+        "width": 1334,
+        "runtime": "Runtimes/BaseSceneRt.ts",
+        "name": "GameScene",
+        "mouseEnabled": true,
+        "height": 750
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Script",
+            "props": {
+                "runtime": "Game/Script/Scene/GameScene.ts"
+            },
+            "compId": 891
+        },
+        {
+            "type": "Box",
+            "props": {
+                "zOrder": 999,
+                "top": 0,
+                "right": 0,
+                "name": "OperatingBox",
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 916,
+            "child": [
+                {
+                    "type": "Box",
+                    "props": {
+                        "visible": true,
+                        "name": "fxBox",
+                        "left": 50,
+                        "height": 193,
+                        "bottom": 20
+                    },
+                    "compId": 920,
+                    "child": [
+                        {
+                            "type": "Button",
+                            "props": {
+                                "width": 150,
+                                "stateNum": 1,
+                                "skin": "game/btnL.png",
+                                "name": "left",
+                                "mouseEnabled": true,
+                                "height": 193
+                            },
+                            "compId": 903
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "x": 188,
+                                "width": 150,
+                                "stateNum": 1,
+                                "skin": "game/btnR.png",
+                                "name": "right",
+                                "mouseEnabled": true,
+                                "height": 193
+                            },
+                            "compId": 907
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 528,
+                        "x": 838,
+                        "width": 100,
+                        "visible": false,
+                        "name": "stop",
+                        "mouseThrough": true,
+                        "height": 200
+                    },
+                    "compId": 917,
+                    "child": [
+                        {
+                            "type": "Rect",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "width": 100,
+                                "lineWidth": 1,
+                                "height": 200,
+                                "fillColor": "#ff0000"
+                            },
+                            "compId": 918
+                        },
+                        {
+                            "type": "Text",
+                            "props": {
+                                "y": 6,
+                                "x": 0,
+                                "width": 96,
+                                "valign": "middle",
+                                "text": "×",
+                                "height": 192,
+                                "fontSize": 58,
+                                "color": "#ffffff",
+                                "bold": true,
+                                "align": "center",
+                                "runtime": "laya.display.Text"
+                            },
+                            "compId": 919
+                        }
+                    ]
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "right": 50,
+                        "name": "dlBox",
+                        "bottom": 20
+                    },
+                    "compId": 921,
+                    "child": [
+                        {
+                            "type": "Button",
+                            "props": {
+                                "x": 162,
+                                "width": 131,
+                                "stateNum": 1,
+                                "skin": "game/goAhead.png",
+                                "name": "top",
+                                "mouseEnabled": true,
+                                "hitTestPrior": true,
+                                "height": 249
+                            },
+                            "compId": 910,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 101,
+                                        "x": 52,
+                                        "visible": false,
+                                        "texture": "dc/dc_hand.png",
+                                        "name": "hand"
+                                    },
+                                    "compId": 945
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "props": {
+                                "y": 101,
+                                "x": 0,
+                                "width": 144,
+                                "stateNum": 1,
+                                "skin": "game/goBack.png",
+                                "name": "bottom",
+                                "mouseEnabled": true,
+                                "height": 148
+                            },
+                            "compId": 911
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": -190,
+                                "x": 162,
+                                "width": 130,
+                                "name": "speedBtn",
+                                "mouseEnabled": true,
+                                "height": 130
+                            },
+                            "compId": 924,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "texture": "game/btnSpeed.png",
+                                        "name": "bg"
+                                    },
+                                    "compId": 922
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 2,
+                                        "x": 2,
+                                        "texture": "game/btnSpeedMask.png",
+                                        "name": "quan"
+                                    },
+                                    "compId": 923
+                                },
+                                {
+                                    "type": "Script",
+                                    "props": {
+                                        "runtime": "Game/Script/SpeedBtnMg.ts"
+                                    },
+                                    "compId": 925
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 49,
+                                        "x": 54,
+                                        "visible": false,
+                                        "texture": "dc/dc_hand.png",
+                                        "name": "hand",
+                                        "alpha": 0
+                                    },
+                                    "compId": 944
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "width": 558,
+                        "visible": false,
+                        "pivotY": 140,
+                        "pivotX": 140,
+                        "name": "fxpBox",
+                        "left": 0,
+                        "height": 600,
+                        "bottom": 0
+                    },
+                    "compId": 929,
+                    "child": [
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "y": 414,
+                                "x": 202,
+                                "width": 320,
+                                "texture": "game/fxp_ico.png",
+                                "rotation": 0,
+                                "pivotY": 160,
+                                "pivotX": 160,
+                                "name": "fxp",
+                                "height": 320
+                            },
+                            "compId": 930
+                        },
+                        {
+                            "type": "Script",
+                            "props": {
+                                "runtime": "Game/Script/FxpMg.ts"
+                            },
+                            "compId": 931
+                        }
+                    ]
+                },
+                {
+                    "type": "Box",
+                    "props": {
+                        "name": "panelBox",
+                        "left": 0
+                    },
+                    "compId": 932,
+                    "child": [
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": 61,
+                                "x": 0,
+                                "name": "levelBox"
+                            },
+                            "compId": 934,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "texture": "game/show_bg.png"
+                                    },
+                                    "compId": 933
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 11,
+                                        "x": 10,
+                                        "texture": "game/qizhi_ico.png"
+                                    },
+                                    "compId": 935
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 13,
+                                        "x": 55,
+                                        "valign": "middle",
+                                        "text": "第12关",
+                                        "name": "txt",
+                                        "fontSize": 30,
+                                        "font": "SimHei",
+                                        "color": "#ffffff",
+                                        "bold": true,
+                                        "align": "left"
+                                    },
+                                    "compId": 936,
+                                    "child": [
+                                        {
+                                            "type": "Script",
+                                            "props": {
+                                                "runtime": "Game/Script/LevelMg.ts"
+                                            },
+                                            "compId": 942
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "y": 130,
+                                "x": 0,
+                                "name": "timeBox"
+                            },
+                            "compId": 937,
+                            "child": [
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "texture": "game/show_bg.png"
+                                    },
+                                    "compId": 938
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "props": {
+                                        "y": 11,
+                                        "x": 10,
+                                        "texture": "game/djs_ico.png"
+                                    },
+                                    "compId": 939
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 14,
+                                        "x": 55,
+                                        "valign": "middle",
+                                        "text": "01:59:99",
+                                        "name": "txt",
+                                        "fontSize": 28,
+                                        "font": "SimHei",
+                                        "color": "#ffffff",
+                                        "bold": false,
+                                        "align": "left"
+                                    },
+                                    "compId": 940,
+                                    "child": [
+                                        {
+                                            "type": "Script",
+                                            "props": {
+                                                "runtime": "Game/Script/TimeMg.ts"
+                                            },
+                                            "compId": 941
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "loadList": [
+        "game/btnL.png",
+        "game/btnR.png",
+        "game/goAhead.png",
+        "dc/dc_hand.png",
+        "game/goBack.png",
+        "game/btnSpeed.png",
+        "game/btnSpeedMask.png",
+        "game/fxp_ico.png",
+        "game/show_bg.png",
+        "game/qizhi_ico.png",
+        "game/djs_ico.png"
+
+    ],
+    "loadList3D": []
+}
