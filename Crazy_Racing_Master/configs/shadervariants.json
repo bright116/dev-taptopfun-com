@@ -1,0 +1,247 @@
+{
+    "BLINNPHONG": [
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "POINTLIGHT",
+                "UV"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "GPU_INSTANCE",
+                "DIFFUSEMAP",
+                "POINTLIGHT",
+                "UV"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "DIRECTIONLIGHT",
+                "UV"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "DIRECTIONLIGHT",
+                "UV",
+                "FOG"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "DIRECTIONLIGHT",
+                "UV",
+                "UV1",
+                "FOG"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "GPU_INSTANCE",
+                "DIFFUSEMAP",
+                "DIRECTIONLIGHT",
+                "UV",
+                "FOG"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        }
+    ],
+    "Effect": [
+        {
+            "defineNames": [
+                "ADDTIVEFOG"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "FOG",
+                "ADDTIVEFOG"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "FOG",
+                "ADDTIVEFOG",
+                "MAINTEXTURE"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "GPU_INSTANCE",
+                "FOG",
+                "ADDTIVEFOG"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        }
+    ],
+    "Unlit": [
+        {
+            "defineNames": [
+                "FOG"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "FOG",
+                "ALBEDOTEXTURE"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        }
+    ],
+    "PARTICLESHURIKEN": [
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "FOG",
+                "SPHERHBILLBOARD",
+                "SHAPE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "FOG",
+                "ADDTIVEFOG",
+                "SPHERHBILLBOARD",
+                "COLOROVERLIFETIME",
+                "SHAPE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "FOG",
+                "ADDTIVEFOG",
+                "RENDERMODE_MESH",
+                "COLOROVERLIFETIME",
+                "SIZEOVERLIFETIMECURVE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "FOG",
+                "ADDTIVEFOG",
+                "RENDERMODE_MESH",
+                "COLOROVERLIFETIME",
+                "SIZEOVERLIFETIMECURVE",
+                "SHAPE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "FOG",
+                "RENDERMODE_MESH",
+                "COLOROVERLIFETIME",
+                "SHAPE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "FOG",
+                "ADDTIVEFOG",
+                "SPHERHBILLBOARD",
+                "COLOROVERLIFETIME",
+                "ROTATIONOVERLIFETIME",
+                "ROTATIONOVERLIFETIMECONSTANT",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "FOG",
+                "ADDTIVEFOG",
+                "RENDERMODE_MESH",
+                "COLOROVERLIFETIME",
+                "SIZEOVERLIFETIMECURVE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "FOG",
+                "ADDTIVEFOG",
+                "SPHERHBILLBOARD",
+                "COLOROVERLIFETIME",
+                "SIZEOVERLIFETIMECURVE",
+                "SHAPE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "FOG",
+                "ADDTIVEFOG",
+                "RENDERMODE_MESH",
+                "SIZEOVERLIFETIMECURVE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        },
+        {
+            "defineNames": [
+                "DIFFUSEMAP",
+                "SPHERHBILLBOARD",
+                "SHAPE",
+                "TINTCOLOR"
+            ],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        }
+    ],
+    "Trail": [
+        {
+            "defineNames": [],
+            "passIndex": 0,
+            "subShaderIndex": 0
+        }
+    ]
+}

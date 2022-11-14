@@ -1,0 +1,149 @@
+[
+    {
+        "id": 1000,
+        "name": "Blue Thunder",
+        "url": "bluecar.lh",
+        "star": 1,
+        "selectNeedPlayVideo": false
+    },
+    {
+        "id": 1001,
+        "name": "Dumb",
+        "url": "adai.lh",
+        "star": 1,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1002,
+        "name": "Big Boy",
+        "url": "bigboy.lh",
+        "star": 2,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1003,
+        "name": "Black Whirlwind",
+        "url": "blackcar.lh",
+        "star": 2,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1004,
+        "name": "Vintage Car",
+        "url": "bluevintage.lh",
+        "star": 1,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1005,
+        "name": "Intercity Bus",
+        "url": "coach.lh",
+        "star": 1,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1006,
+        "name": "Cutie",
+        "url": "cutie.lh",
+        "star": 2,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1007,
+        "name": "Desert King",
+        "url": "desertking.lh",
+        "star": 3,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1008,
+        "name": "Doughnut",
+        "url": "doughnut.lh",
+        "star": 1,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1009,
+        "name": "Forklift",
+        "url": "forklift.lh",
+        "star": 1,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1010,
+        "name": "Green Pickup",
+        "url": "greenpickup.lh",
+        "star": 2,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1011,
+        "name": "Mini Car",
+        "url": "mini.lh",
+        "star": 2,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1012,
+        "name": "Forklift",
+        "url": "miniforklift.lh",
+        "star": 1,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1013,
+        "name": "SUV",
+        "url": "offroad.lh",
+        "star": 2,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1014,
+        "name": "Purple Lady",
+        "url": "purplelady.lh",
+        "star": 3,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1015,
+        "name": "Red Flame",
+        "url": "redcar.lh",
+        "star": 1,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1016,
+        "name": "Bean Rocket",
+        "url": "rocketcar.lh",
+        "star": 3,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1017,
+        "name": "Camp Car",
+        "url": "rv.lh",
+        "star": 2,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1018,
+        "name": "Toy Car",
+        "url": "toycar.lh",
+        "star": 1,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1019,
+        "name": "Watering Car",
+        "url": "wateringcar.lh",
+        "star": 2,
+        "selectNeedPlayVideo": true
+    },
+    {
+        "id": 1020,
+        "name": "Classic Vintage Car",
+        "url": "yellowvintage.lh",
+        "star": 3,
+        "selectNeedPlayVideo": true
+    }
+]
