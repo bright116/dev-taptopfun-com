@@ -92,7 +92,7 @@ const _0x3182 = function (_0x539625, _0x25372d) {
             _0x81135c && (_0x81135c[_0x3182('0x14')]('mouseup', this['onNavigate_'][_0x3182('0x2a')](this)), _0x81135c[_0x3182('0x14')](_0x3182('0xc'), this[_0x3182('0x16')][_0x3182('0x2a')](this)));
         }
         [_0x3182('0x16')]() {
-            this['canNavigateActive_'] && YYGSDK[_0x3182('0x24')](this[_0x3182('0x10')], this['action_'], this[_0x3182('0x3d')]), this['canNavigateActive_'] = ![];
+            // this['canNavigateActive_'] && YYGSDK[_0x3182('0x24')](this[_0x3182('0x10')], this['action_'], this[_0x3182('0x3d')]), this['canNavigateActive_'] = ![];
         }
         ['getStorageSync'](_0x107b01) {
             let _0x504073 = null;
@@ -130,28 +130,47 @@ const _0x3182 = function (_0x539625, _0x25372d) {
             YYGGames['audio'][_0x3182('0x35')] = ![];
         }
         [_0x3182('0xa')](_0x2795f4) {
-            if (!this[_0x3182('0x1f')]) {
-                _0x2795f4 && _0x2795f4();
-                return;
-            }
-            this[_0x3182('0x15')](), YYGGames[_0x3182('0x40')][_0x3182('0xa')](_0x2795f4);
+            console.log("请求插屏广告");
+
+            // 展示插屏广告
+            HUHU_showInterstitialAd();
+        
+            // 继续游戏
+            _0x2795f4 && _0x2795f4();
+            return;
         }
         [_0x3182('0x26')](_0x28a314, _0x9a3122) {
-            if (!this[_0x3182('0x1f')]) {
-                _0x28a314 && _0x28a314();
-                return;
-            }
-            this[_0x3182('0x15')](), YYGSDK['adsManager'][_0x3182('0x31')](YYG[_0x3182('0x27')]['REWARD'], YYG['EventHandler'][_0x3182('0x2')](this, () => {
-                window[_0x3182('0xf')](), this['onfocus'](), _0x28a314 && _0x28a314(), _0x28a314 = null;
-            }), YYG[_0x3182('0xe')][_0x3182('0x2')](this, _0x5d426b => {
-                window[_0x3182('0xf')](), this['onfocus'](), _0x9a3122 && (_0x9a3122(), _0x9a3122 = null), _0x5d426b == YYG[_0x3182('0x1d')]['AD_SKIPPED'] && this[_0x3182('0x1')](_0x3182('0x36'));
-            }));
+            console.log("请求激励广告");
+
+
+            HUHU_showRewardedVideoAd(
+              () => {
+                  // 用户观看广告完成，继续游戏
+                  _0x28a314 && _0x28a314();
+              },
+              () => {
+                // 广告请求失败或者用户跳过广告
+                window[_0x3182('0xf')](), this['onfocus'](), _0x9a3122 && (_0x9a3122(), _0x9a3122 = null)
+          
+          
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+              }
+            );
+            // if (!this[_0x3182('0x1f')]) {
+            //     _0x28a314 && _0x28a314();
+            //     return;
+            // }
+            // this[_0x3182('0x15')](), YYGSDK['adsManager'][_0x3182('0x31')](YYG[_0x3182('0x27')]['REWARD'], YYG['EventHandler'][_0x3182('0x2')](this, () => {
+            //     window[_0x3182('0xf')](), this['onfocus'](), _0x28a314 && _0x28a314(), _0x28a314 = null;
+            // }), YYG[_0x3182('0xe')][_0x3182('0x2')](this, _0x5d426b => {
+            //     window[_0x3182('0xf')](), this['onfocus'](), _0x9a3122 && (_0x9a3122(), _0x9a3122 = null), _0x5d426b == YYG[_0x3182('0x1d')]['AD_SKIPPED'] && this[_0x3182('0x1')](_0x3182('0x36'));
+            // }));
         }
         [_0x3182('0x4')](_0x178ab0) {
-            if (YYGSDK[_0x3182('0x3a')]) {
-                _0x178ab0['visible'] = ![];
-                return;
-            }
+            // if (YYGSDK[_0x3182('0x3a')]) {
+            //     _0x178ab0['visible'] = ![];
+            //     return;
+            // }
             _0x178ab0['renderHandler'] = new Laya['Handler'](_0x178ab0, function (_0x16ca47) {
                 _0x16ca47['offAll'](Laya[_0x3182('0x1d')][_0x3182('0x8')]), _0x16ca47['on'](Laya[_0x3182('0x1d')]['MOUSE_DOWN'], _0x16ca47, () => {
                     _0x3a0dfd[_0x3182('0x37')]()[_0x3182('0x24')](_0x3182('0x23'), _0x3182('0xb'), _0x16ca47[_0x3182('0x7')]['id']);
@@ -165,18 +184,14 @@ const _0x3182 = function (_0x539625, _0x25372d) {
             }[_0x3182('0x2a')](this), _0x2e4c57);
         }
         [_0x3182('0x2c')]() {
-            let _0x2d032c = YYGSDK['forgames'] || [], _0x630bc3 = _0x2d032c[_0x3182('0x3e')]();
-            for (let _0x101333 = 0x0, _0x372a85 = _0x630bc3[_0x3182('0x2b')]; _0x101333 < _0x372a85; _0x101333++) {
-                const _0x4d8a22 = Math[_0x3182('0x11')](Math[_0x3182('0x17')]() * (_0x101333 + 0x1)), _0x10ce27 = _0x630bc3[_0x4d8a22];
-                _0x630bc3[_0x4d8a22] = _0x630bc3[_0x101333], _0x630bc3[_0x101333] = _0x10ce27;
-            }
-            return _0x630bc3;
+            return [];
         }
         [_0x3182('0x1a')](_0x13775b, _0x3d59f4) {
+            //TODO 临时
             window[_0x3182('0xf')]();
             if (this[_0x3182('0x1f')])
                 return;
-            this[_0x3182('0x1f')] = !![], YYGGames[_0x3182('0x22')](_0x13775b, ![], YYG[_0x3182('0x34')]['CARGAMES'])[_0x3182('0x21')](_0x3d59f4);
+            // this[_0x3182('0x1f')] = !![], YYGGames[_0x3182('0x22')](_0x13775b, ![], YYG[_0x3182('0x34')]['CARGAMES'])[_0x3182('0x21')](_0x3d59f4);
         }
     }
     _0x3a0dfd['_instance'] = null, window['platform'] = _0x3a0dfd;
