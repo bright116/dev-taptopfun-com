@@ -4759,7 +4759,7 @@
                 window.Laya3D ? Laya3D.init(G.width, G.height) : Laya.init(G.width, G.height, Laya.WebGL),
                 Laya.Physics && Laya.Physics.enable(),
                 Laya.DebugPanel && Laya.DebugPanel.enable(),
-                Laya.stage.scaleMode  = "showall",
+                Laya.stage.scaleMode  = "exactfit",
                 Laya.stage.screenMode = "none",
                 Laya.stage.alignV = G.alignV,
                 Laya.stage.alignH = "center",

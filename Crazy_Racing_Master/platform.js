@@ -23,13 +23,13 @@
             }
         }
         onNavigate_() {
-            if(YYGSDK.isGamedistribution){
-                return;
-            }
-            if (this.canNavigateActive_) {
-                YYGSDK.navigate(this.screen_, this.action_, this.to_);
-            }
-            this.canNavigateActive_ = false;
+            // if(YYGSDK.isGamedistribution){
+            //     return;
+            // }
+            // if (this.canNavigateActive_) {
+            //     YYGSDK.navigate(this.screen_, this.action_, this.to_);
+            // }
+            // this.canNavigateActive_ = false;
         }
     
         getStorageSync(key) {
@@ -76,53 +76,42 @@
 
         //插屏广告
         showInterstitial(complete) {
-            
-            if(!this.initialized_){
-                complete && complete();
-                return;
-            }
-           
-            this.onblur();
-            YYGSDK.showInterstitial(()=>{
-                window.focus();
-                this.onfocus();
-                complete && complete();
-            });
+            console.log("请求插屏广告");
+
+            // 展示插屏广告
+            HUHU_showInterstitialAd();
+        
+            // 继续游戏
+            complete && complete()
+            return;
         }
         //复活
         showReward(success, failure) {
-            // success && success() 
-            // return;
-            if(!this.initialized_){
-                success && success();
-                return;
-            }
-            this.onblur();
-            YYGSDK.adsManager.request(YYG.TYPE.REWARD, YYG.EventHandler.create(this, () => {
-                window.focus();
-                this.onfocus();
-                success && success();
-                success = null;
-            }), YYG.EventHandler.create(this, (event) => {
-                window.focus();
-                this.onfocus();
+            console.log("请求激励广告");
+
+
+            HUHU_showRewardedVideoAd(
+              () => {
+                  // 用户观看广告完成，继续游戏
+                  success && success();
+              },
+              () => {
+                // 广告请求失败或者用户跳过广告
                 if (failure) {
                     failure();
-                    failure = null;
                 }
-                else {
-                    if (event == YYG.Event.AD_SKIPPED) {
-                        this.prompt("Failed to get the reward, please watch the ads to the end.");
-                    }
-                }
-            }));
+          
+          
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+              }
+            );
         }
 
         initList(appList){
-            if(YYGSDK.isGamedistribution){
-                appList.visible = false;
-                return;
-            }
+            // if(YYGSDK.isGamedistribution){
+            //     appList.visible = false;
+            //     return;
+            // }
             appList.renderHandler = new Laya.Handler(appList,function(e){
                 e.offAll(Laya.Event.MOUSE_DOWN);
                 e.on(Laya.Event.MOUSE_DOWN,e,()=>{platform.getInstance().navigate("GAME","MORE",e.dataSource.id)});
@@ -147,18 +136,7 @@
             }.bind(this), duration);
         }
         getForgames() {
-            let sforgames = YYGSDK.forgames || []
-            // {
-            //     thumb:"adsfafa.png"
-            // }
-            let forgames  = sforgames.slice();
-            for (let i = 0, length = forgames.length; i < length; i++) {
-                const random = Math.floor(Math.random() * (i + 1));
-                const item = forgames[random];
-                forgames[random] = forgames[i];
-                forgames[i] = item;
-            }
-            return forgames;
+            return [];
         }
 
         /**
@@ -211,13 +189,15 @@
                 return;
             //临时锁死
             this.initialized_ = true;
+            
             Laya.loader.create("cnf.json",Laya.Handler.create(this,(res)=>{
                 this.initialized_ = false;
-                YYGSDK.on(YYG.Event.YYGSDK_INITIALIZED, this, () => { complete && complete(); complete = null; this.initialized_ = true; });
-                let o = new YYG.Options();
-                o.gameNameId = name;
-                o.gamedistributionID = res["id"] || "";
-                YYGSDK.__init__(YYG.ChannelType.CARGAMES, o);
+                complete && complete(); complete = null; this.initialized_ = true;
+                // YYGSDK.on(YYG.Event.YYGSDK_INITIALIZED, this, () => { complete && complete(); complete = null; this.initialized_ = true; });
+                // let o = new YYG.Options();
+                // o.gameNameId = name;
+                // o.gamedistributionID = res["id"] || "";
+                // YYGSDK.__init__(YYG.ChannelType.CARGAMES, o);
             }))
         }
 
