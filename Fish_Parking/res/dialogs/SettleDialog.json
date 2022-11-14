@@ -1,0 +1,611 @@
+{
+    "type": "Dialog",
+    "props": {
+        "width": 1334,
+        "height": 750,
+        "centerY": 0,
+        "centerX": 0,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "top": 0,
+                "skin": "res/ui/local/sprites/square_black.png",
+                "sizeGrid": "5,6,5,4",
+                "right": 0,
+                "name": "Background",
+                "left": 0,
+                "bottom": 0,
+                "alpha": 0.8
+            },
+            "compId": 89
+        },
+        {
+            "type": "Box",
+            "props": {
+                "width": 750,
+                "top": 0,
+                "centerX": 0,
+                "bottom": 0
+            },
+            "compId": 34,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 182,
+                        "x": 375,
+                        "width": 750,
+                        "pivotY": 182,
+                        "pivotX": 375,
+                        "name": "Lost",
+                        "height": 386
+                    },
+                    "compId": 29,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 8,
+                                "skin": "res/ui/local/pageUi/text_lost.png",
+                                "name": "Title",
+                                "centerX": 0
+                            },
+                            "compId": 95
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 182,
+                        "x": 375,
+                        "width": 750,
+                        "pivotY": 182,
+                        "pivotX": 375,
+                        "name": "Win",
+                        "height": 386
+                    },
+                    "compId": 14,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 71.5,
+                                "width": 205,
+                                "skin": "res/ui/local/page/victory.png",
+                                "name": "Win",
+                                "height": 119,
+                                "centerX": 0,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 103
+                        },
+                        {
+                            "type": "Box",
+                            "props": {
+                                "width": 432,
+                                "top": 131,
+                                "name": "Level",
+                                "height": 62,
+                                "centerX": 0
+                            },
+                            "compId": 117,
+                            "child": [
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "y": 0,
+                                        "width": 96,
+                                        "skin": "res/ui/local/gamePlay/color1.png",
+                                        "name": "Current",
+                                        "left": 0,
+                                        "height": 62
+                                    },
+                                    "compId": 118
+                                },
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "y": 31,
+                                        "width": 235,
+                                        "skin": "res/ui/local/gamePlay/color2.png",
+                                        "pivotY": 31,
+                                        "pivotX": 121,
+                                        "height": 62,
+                                        "centerX": 0
+                                    },
+                                    "compId": 119,
+                                    "child": [
+                                        {
+                                            "type": "Sprite",
+                                            "props": {
+                                                "y": 11,
+                                                "x": 103,
+                                                "texture": "res/ui/local/gamePlay/color3.png"
+                                            },
+                                            "compId": 120
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Image",
+                                    "props": {
+                                        "y": 0,
+                                        "width": 96,
+                                        "skin": "res/ui/local/gamePlay/color1.png",
+                                        "right": 0,
+                                        "name": "Next",
+                                        "height": 62
+                                    },
+                                    "compId": 121
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 31,
+                                        "x": 385,
+                                        "valign": "middle",
+                                        "text": "2",
+                                        "name": "NextLevelLbl",
+                                        "fontSize": 50,
+                                        "color": "#fbf3f3",
+                                        "bold": true,
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5,
+                                        "align": "center"
+                                    },
+                                    "compId": 122
+                                },
+                                {
+                                    "type": "Label",
+                                    "props": {
+                                        "y": 31,
+                                        "x": 48,
+                                        "valign": "middle",
+                                        "text": "1",
+                                        "name": "CurrentLevelLbl",
+                                        "fontSize": 50,
+                                        "color": "#fbf3f3",
+                                        "bold": true,
+                                        "anchorY": 0.5,
+                                        "anchorX": 0.5,
+                                        "align": "center"
+                                    },
+                                    "compId": 123
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 0,
+                "visible": false,
+                "top": 0,
+                "skin": "res/ui/local/sprites/square_black.png",
+                "sizeGrid": "5,6,5,4",
+                "right": 0,
+                "name": "GuideMask",
+                "left": 0,
+                "bottom": 0,
+                "alpha": 0.4
+            },
+            "compId": 31
+        },
+        {
+            "type": "Box",
+            "props": {
+                "top": 0,
+                "right": 0,
+                "name": "AdBox",
+                "mouseThrough": true,
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 94
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 386,
+                "visible": false,
+                "stateNum": 1,
+                "skin": "res/ui/local/page/btn.png",
+                "sizeGrid": "7,72,23,70",
+                "name": "GetGoldBtn",
+                "centerX": 0,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 3,
+            "child": [
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.92,
+                        "scaleX": 0.92,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 57
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 28,
+                        "x": 19,
+                        "texture": "res/ui/local/gamePlay/text6.png"
+                    },
+                    "compId": 113
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "width": 360,
+                "visible": false,
+                "stateNum": 1,
+                "skin": "res/ui/local/page/shop.png",
+                "sizeGrid": "32,51,45,70",
+                "name": "DoubleBtn",
+                "height": 120,
+                "centerY": -109,
+                "centerX": 0,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 4,
+            "child": [
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.92,
+                        "scaleX": 0.92,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 58
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 34.5,
+                        "x": 40,
+                        "texture": "res/ui/local/gamePlay/icon_ad.png"
+                    },
+                    "compId": 110
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 34.5,
+                        "x": 130,
+                        "texture": "res/ui/local/gamePlay/text5.png"
+                    },
+                    "compId": 111
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "props": {
+                "zOrder": 21,
+                "width": 117,
+                "visible": false,
+                "skin": "res/ui/local/sprites/hand.png",
+                "rotation": -45,
+                "pivotY": 177,
+                "name": "GuideHand",
+                "height": 177,
+                "centerY": -56,
+                "centerX": 291
+            },
+            "compId": 32
+        },
+        {
+            "type": "Button",
+            "props": {
+                "visible": false,
+                "stateNum": 1,
+                "skin": "res/ui/local/page/btn.png",
+                "sizeGrid": "5,72,22,70",
+                "name": "ContinueBtn",
+                "centerY": 11,
+                "centerX": 0,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 76,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 30,
+                        "x": 60,
+                        "texture": "res/ui/local/gamePlay/text4.png",
+                        "scaleY": 0.7,
+                        "scaleX": 0.7
+                    },
+                    "compId": 102
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.92,
+                        "scaleX": 0.92,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 79
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "width": 360,
+                "visible": false,
+                "stateNum": 1,
+                "skin": "res/ui/local/page/shop.png",
+                "sizeGrid": "0,67,23,69",
+                "name": "SkipBtn",
+                "height": 120,
+                "centerY": -109,
+                "centerX": 0,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 81,
+            "child": [
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.92,
+                        "scaleX": 0.92,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 87
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 34.5,
+                        "x": 29,
+                        "texture": "res/ui/local/gamePlay/icon_ad.png"
+                    },
+                    "compId": 99
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 32.5,
+                        "x": 102,
+                        "texture": "res/ui/local/gamePlay/text3.png"
+                    },
+                    "compId": 100
+                }
+            ]
+        },
+        {
+            "type": "Animation",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "wrapMode": "0",
+                "width": 750,
+                "height": 386,
+                "autoPlay": false
+            },
+            "compId": 59
+        },
+        {
+            "type": "Script",
+            "props": {
+                "winNode": "@node:14",
+                "skipBtn": "@node:81",
+                "runtime": "components/dialog/SettleDialog.ts",
+                "loseNode": "@node:29",
+                "guideMask": "@node:31",
+                "guideHandNode": "@node:32",
+                "getGoldBtn": "@node:3",
+                "getDoubleGoldBtn": "@node:4",
+                "continueBtn": "@node:76",
+                "adNode": "@node:94",
+                "adBox": "@node:94"
+            },
+            "compId": 91
+        }
+    ],
+    "animations": [
+        {
+            "nodes": [
+                {
+                    "target": 59,
+                    "keyframes": {}
+                },
+                {
+                    "target": 103,
+                    "keyframes": {
+                        "x": [
+                            {
+                                "value": 375,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "x",
+                                "index": 0
+                            }
+                        ],
+                        "scaleY": [
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleY",
+                                "index": 0
+                            },
+                            {
+                                "value": 1.2,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleY",
+                                "index": 4
+                            },
+                            {
+                                "value": 0.9,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleY",
+                                "index": 8
+                            },
+                            {
+                                "value": 1.1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleY",
+                                "index": 10
+                            },
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleY",
+                                "index": 15
+                            },
+                            {
+                                "value": 0.98,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleY",
+                                "index": 60
+                            }
+                        ],
+                        "scaleX": [
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleX",
+                                "index": 0
+                            },
+                            {
+                                "value": 1.2,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleX",
+                                "index": 4
+                            },
+                            {
+                                "value": 0.9,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleX",
+                                "index": 8
+                            },
+                            {
+                                "value": 1.1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleX",
+                                "index": 10
+                            },
+                            {
+                                "value": 1,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleX",
+                                "index": 15
+                            },
+                            {
+                                "value": 0.98,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 103,
+                                "key": "scaleX",
+                                "index": 60
+                            }
+                        ]
+                    }
+                }
+            ],
+            "name": "ani1",
+            "id": 1,
+            "frameRate": 24,
+            "action": 2
+        },
+        {
+            "nodes": [
+                {
+                    "target": 32,
+                    "keyframes": {
+                        "rotation": [
+                            {
+                                "value": -45,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 32,
+                                "key": "rotation",
+                                "index": 0
+                            },
+                            {
+                                "value": -39,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 32,
+                                "key": "rotation",
+                                "index": 10
+                            },
+                            {
+                                "value": -42,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 32,
+                                "key": "rotation",
+                                "index": 13
+                            }
+                        ]
+                    }
+                }
+            ],
+            "name": "ani2",
+            "id": 2,
+            "frameRate": 18,
+            "action": 2
+        }
+    ],
+    "loadList": [
+        "res/ui/local/sprites/square_black.png",
+        "res/ui/local/pageUi/text_lost.png",
+        "res/ui/local/page/victory.png",
+        "res/ui/local/gamePlay/color1.png",
+        "res/ui/local/gamePlay/color2.png",
+        "res/ui/local/gamePlay/color3.png",
+        "res/ui/local/page/btn.png",
+        "res/ui/local/gamePlay/text6.png",
+        "res/ui/local/page/shop.png",
+        "res/ui/local/gamePlay/icon_ad.png",
+        "res/ui/local/gamePlay/text5.png",
+        "res/ui/local/sprites/hand.png",
+        "res/ui/local/gamePlay/text4.png",
+        "res/ui/local/gamePlay/text3.png"
+    ],
+    "loadList3D": []
+}

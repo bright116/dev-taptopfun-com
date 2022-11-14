@@ -1,0 +1,271 @@
+{
+    "version": "20200615.105",
+    "resVersion": "",
+    "cities": [
+        "北京",
+        "上海",
+        "深圳",
+        "广州",
+        "香港",
+        "成都"
+    ],
+    "ordinary": {
+        "switch": {
+            "showExportAd": true,
+            "bannerFakeClick": false,
+            "freeGift": true,
+            "showVideoAdAfterLaunch": true,
+            "showVideoAdWhenGameStart": true,
+            "showInterstitialAd": true
+        },
+        "appList": [
+            {
+                "gid": 1,
+                "appid": "wx43c6e568f25e5acf",
+                "title": "特技赛车",
+                "path": "?wxgamecid=CCBgAAoXkpQANILH8cxUOgRg",
+                "image": ""
+            },
+            {
+                "gid": 2,
+                "appid": "wx26d9a4050a9b7790",
+                "title": "闪电飞车",
+                "path": "?wxgamecid=CCBgAAoXkpQY9YTuY9HGZy",
+                "image": ""
+            },
+            {
+                "gid": 3,
+                "appid": "wx0373b871b8eefa6e",
+                "title": "停车我最牛",
+                "path": "?wxgamecid=CCBgAAoXkpQANmr6BbWH2oUQ",
+                "image": ""
+            },
+            {
+                "gid": 4,
+                "appid": "wxfb3e3323b2fc579c",
+                "title": "巴士停一停",
+                "path": "?wxgamecid=CCBgAAoXkpQY8fxmu6lXUl",
+                "image": ""
+            },
+            {
+                "gid": 5,
+                "appid": "wxc9c0480bf5b748bc",
+                "title": "挖掘机我最强",
+                "path": "?wxgamecid=CCBgAAoXkpQY8xJwf9SLUQ",
+                "image": ""
+            },
+            {
+                "gid": 6,
+                "appid": "wx01b1ddc2d553b7b7",
+                "title": "狂飙车神",
+                "path": "?wxgamecid=CCBgAAoXkpQY8BYi-hExWj",
+                "image": ""
+            },
+            {
+                "gid": 7,
+                "appid": "wxd21fe0dea59d069b",
+                "title": "空中赛道",
+                "path": "?wxgamecid=CCBgAAoXkpQY8rBBlpxG1K",
+                "image": ""
+            },
+            {
+                "gid": 8,
+                "appid": "wx795eed3a0f0553bb",
+                "title": "模拟开飞机",
+                "path": "?wxgamecid=CCBgAAoXkpQY8otjQEDv_5",
+                "image": ""
+            },
+            {
+                "gid": 9,
+                "appid": "wx5af476553c9aba4d",
+                "title": "火车快跑",
+                "path": "?wxgamecid=CCBgAAoXkpQANLU_BMOegtOw&channel=5f704ec6a72fa0ace871984b",
+                "image": ""
+            },
+            {
+                "gid": 10,
+                "appid": "wxba7fd4c6b4ff1d8f",
+                "title": "山地飞车",
+                "path": "?wxgamecid=CCBgAAoXkpQY9ATQLkThBo&channel=5f704ec9a72fa0ace8719855",
+                "image": ""
+            },
+            {
+                "gid": 11,
+                "appid": "wx5781a9941cd04882",
+                "title": "公路跑车",
+                "path": "?wxgamecid=CCBgAAoXkpQY8kaKJHxUBo&channel=5f70504ba72fa0ace8719e35",
+                "image": ""
+            },
+            {
+                "gid": 12,
+                "appid": "wxe6e5d4bd3f6eb826",
+                "title": "特技越野车",
+                "path": "?wxgamecid=CCBgAAoXkpQY9Vj-Z5uRo6&channel_id=2630",
+                "image": ""
+            },
+            {
+                "gid": 13,
+                "appid": "wx998413ceffa4845c",
+                "title": "迷宫小汽车",
+                "path": "?wxgamecid=CCBgAAoXkpQAMNulthy0ASwA&channel_id=2633",
+                "image": ""
+            },
+            {
+                "gid": 14,
+                "appid": "wx9629cb143d69fb99",
+                "title": "吃鸡飞行员",
+                "path": "?wxgamecid=CCBgAAoXkpQY9aZI83ydwq&channel_id=2636",
+                "image": ""
+            }
+        ],
+        "export": {
+            "couplet": {
+                "items": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ],
+                "displayCount": 14
+            },
+            "tryexport": {
+                "items": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ],
+                "displayCount": 14
+            },
+            "recommend": {
+                "items": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ],
+                "displayCount": 14
+            }
+        },
+        "adData": {
+            "banner": [
+                {
+                    "id": "adunit-004ecceb760e4d5b",
+                    "name": "b1"
+                },
+                {
+                    "id": "adunit-7e549b7fec0d3ce3",
+                    "name": "b2"
+                },
+                {
+                    "id": "adunit-fe108884ec05031e",
+                    "name": "b3"
+                },
+                {
+                    "id": "adunit-7e549b7fec0d3ce3",
+                    "name": "b4"
+                },
+                {
+                    "id": "adunit-004ecceb760e4d5b",
+                    "name": "b5"
+                }
+            ],
+            "video": [
+                {
+                    "id": "adunit-33795200c2a2925c",
+                    "name": "ad_15s"
+                }
+            ],
+            "interstitial": [
+                {
+                    "id": "adunit-a30bb9cc688b5ff0",
+                    "name": "cpad_1"
+                }
+            ]
+        },
+        "bannerSwitch": {
+            "time": 5,
+            "count": 3
+        },
+        "gameShareData": {
+            "checkTime": 3000,
+            "shareFailText": "请尝试分享到其他群",
+            "shareUrl": "https://game.9dwork.com/shareDoc/shareRes/",
+            "shareInfoArray": [
+                {
+                    "title": "真正3D模拟停车",
+                    "fileName": "CarDrift/CarDrift4.jpg"
+                },
+                {
+                    "title": "真正3D模拟停车",
+                    "fileName": "CarDrift/CarDrift4.jpg"
+                }
+            ]
+        },
+        "customData": {
+            "freeGiftCloseDelay": 2,
+            "showVideoAdWhenGameStartLevel": [
+                1,
+                3,
+                5
+            ],
+            "showInterstitialAdLevel": [
+                2,
+                4,
+                6,
+                8,
+                10,
+                12,
+                14,
+                16,
+                18,
+                20,
+                22
+            ],
+            "screening": [
+                "",
+                ""
+            ]
+        }
+    },
+    "special": {
+        "switch": {
+            "showExportAd": false,
+            "bannerFakeClick": false,
+            "freeGift": false,
+            "showVideoAdAfterLaunch": false,
+            "showVideoAdWhenGameStart": false,
+            "showInterstitialAd": false
+        }
+    }
+}

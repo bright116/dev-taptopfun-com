@@ -1,0 +1,105 @@
+{
+    "compId": 2,
+    "child": [
+        {
+            "compId": 4,
+            "type": "Image",
+            "props": {
+                "right": 0,
+                "name": "Background",
+                "bottom": 0,
+                "top": 0,
+                "skin": "res/ui/local/page/bg.png",
+                "left": 0
+            }
+        },
+        {
+            "compId": 6,
+            "type": "ProgressBar",
+            "props": {
+                "bottom": 169,
+                "sizeGrid": "2,2,2,2",
+                "value": 0.2,
+                "anchorY": 0.5,
+                "width": 650,
+                "anchorX": 0.5,
+                "centerX": 0,
+                "skin": "res/ui/local/page/loading.png"
+            }
+        },
+        {
+            "compId": 5,
+            "type": "Label",
+            "props": {
+                "right": -120,
+                "name": "VersionLbl",
+                "bottom": 19,
+                "color": "#ffffff",
+                "text": "2929229.111",
+                "align": "right",
+                "scaleX": 1,
+                "anchorX": 1,
+                "height": 50,
+                "width": 165,
+                "fontSize": 24,
+                "valign": "middle",
+                "anchorY": 1
+            }
+        },
+        {
+            "compId": 7,
+            "type": "Label",
+            "props": {
+                "right": 20,
+                "name": "TipsLbl",
+                "bottom": 213,
+                "color": "#ffffff",
+                "text": "loading...",
+                "align": "center",
+                "anchorX": 0.5,
+                "height": 50,
+                "padding": "10",
+                "fontSize": 32,
+                "valign": "top",
+                "overflow": "visible",
+                "anchorY": 0.5,
+                "left": 16
+            }
+        },
+        {
+            "compId": 11,
+            "type": "Script",
+            "props": {
+                "tipsLbl": "@node:7",
+                "progressBar": "@node:6",
+                "versionLbl": "@node:5",
+                "y": 1,
+                "x": 0,
+                "runtime": "components/scenes/LoginScene.ts"
+            }
+        },
+        {
+            "compId": 12,
+            "type": "Image",
+            "props": {
+                "name": "logo",
+                "skin": "res/ui/local/pageUi/logo.png",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "centerX": 0,
+                "centerY": -174
+            }
+        }
+    ],
+    "type": "Scene",
+    "props": {
+        "width": 1334,
+        "height": 750
+    },
+    "loadList": [
+        "res/ui/local/page/bg.png",
+        "res/ui/local/page/loading.png",
+        "res/ui/local/pageUi/logo.png"
+    ],
+    "loadList3D": []
+}

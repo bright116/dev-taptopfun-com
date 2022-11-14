@@ -1,0 +1,20 @@
+{
+    "resVersion": "2020092820",
+    "maxLevel": 25,
+    "cyclicLevel": 3,
+    "carCount": 3,
+    "carList": {
+        "1": {
+            "money": 100
+        },
+        "2": {
+            "money": 500
+        },
+        "3": {
+            "money": 750
+        },
+        "4": {
+            "money": 1000
+        }
+    }
+}
