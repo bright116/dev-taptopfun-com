@@ -6083,7 +6083,7 @@ console.log("levelend",a.LEVELEND)
             e("Platform/Oppo/nativeBtn.ts", ze);
         }
     }
-    qe.width = 1334, qe.height = 750, qe.scaleMode = "showall", qe.screenMode = "horizontal", 
+    qe.width = 1334, qe.height = 750, qe.scaleMode = "exactfit", qe.screenMode = "horizontal", 
     qe.alignV = "middle", qe.alignH = "center", qe.startScene = "Scenes/LoadingScene.scene", 
     qe.sceneRoot = "", qe.debug = !1, qe.stat = !1, qe.physicsDebug = !1, qe.exportSceneToJson = !0, 
     qe.init();
