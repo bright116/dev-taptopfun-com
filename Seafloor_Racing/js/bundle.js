@@ -6358,7 +6358,7 @@
             t("scripts/CarPort.ts", Te), t("components/LoadResScene.ts", kt), t("components/LoginScene.ts", Mt);
         }
     }
-    Dt.width = 1334, Dt.height = 750, Dt.scaleMode = "showall", Dt.screenMode = "horizontal", 
+    Dt.width = 1334, Dt.height = 750, Dt.scaleMode = "exactfit", Dt.screenMode = "horizontal", 
     Dt.alignV = "middle", Dt.alignH = "center", Dt.startScene = "scenes/LoginScene.scene", 
     Dt.sceneRoot = "", Dt.debug = !1, Dt.stat = !1, Dt.physicsDebug = !1, Dt.exportSceneToJson = !0, 
     Dt.init();
