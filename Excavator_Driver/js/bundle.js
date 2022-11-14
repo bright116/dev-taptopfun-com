@@ -7432,7 +7432,7 @@
         constructor() {
             window.Laya3D ? Laya3D.init(e.width, e.height) : Laya.init(e.width, e.height, Laya.WebGL), 
             Laya.Physics && Laya.Physics.enable(), Laya.DebugPanel && Laya.DebugPanel.enable(), 
-            Laya.stage.scaleMode = "showall", Laya.stage.screenMode = e.screenMode, Laya.stage.alignV ="", 
+            Laya.stage.scaleMode = "exactfit", Laya.stage.screenMode = e.screenMode, Laya.stage.alignV ="", 
             Laya.stage.alignH = "middle", Laya.URL.exportSceneToJson = e.exportSceneToJson, 
             (e.debug || "true" == Laya.Utils.getQueryString("debug")) && Laya.enableDebugPanel(), 
             e.physicsDebug && Laya.PhysicsDebugDraw && Laya.PhysicsDebugDraw.enable(), e.stat && Laya.Stat.show(), 
