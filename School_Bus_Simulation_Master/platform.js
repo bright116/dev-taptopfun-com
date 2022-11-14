@@ -107,9 +107,9 @@ const _0x3182 = function (_0x539625, _0x25372d) {
             return Laya[_0x3182('0x3')]['setItem'](_0x33cc90, JSON[_0x3182('0x1c')](_0x4c5349));
         }
         [_0x3182('0x24')](_0xfd8146, _0x333def, _0x5012d4) {
-            if (YYGSDK[_0x3182('0x3a')])
-                return;
-            this[_0x3182('0x2f')] === ![] && (this[_0x3182('0x10')] = _0xfd8146, this['action_'] = _0x333def, this[_0x3182('0x3d')] = _0x5012d4, this['canNavigateActive_'] = !![]);
+            // if (YYGSDK[_0x3182('0x3a')])
+            //     return;
+            // this[_0x3182('0x2f')] === ![] && (this[_0x3182('0x10')] = _0xfd8146, this['action_'] = _0x333def, this[_0x3182('0x3d')] = _0x5012d4, this['canNavigateActive_'] = !![]);
         }
         [_0x3182('0x15')]() {
             if (document && document[_0x3182('0x28')]) {
