@@ -3379,7 +3379,7 @@
                 t("scripts/uiScenes/TimeScene.ts", ie);
         }
     }
-    se.width = 750, se.height = 1334, se.scaleMode = "showall", se.screenMode = "none",
+    se.width = 750, se.height = 1334, se.scaleMode = "exactfit", se.screenMode = "none",
         se.alignV = "middle", se.alignH = "center", se.startScene = "JJExport/DrawUI.scene",
         se.sceneRoot = "", se.debug = !1, se.stat = !1, se.physicsDebug = !1, se.exportSceneToJson = !0,
         se.init();
