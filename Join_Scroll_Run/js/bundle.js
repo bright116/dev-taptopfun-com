@@ -3125,7 +3125,7 @@
                 e("side/SideTwoScene.ts", Se), e("tips/MoveTipsScene.ts", Le), e("tips/TipsScene.ts", ye);
         }
     }
-    pe.width = 750, pe.height = 1334, pe.scaleMode = "showall", pe.screenMode = "none",
+    pe.width = 750, pe.height = 1334, pe.scaleMode = "exactfit", pe.screenMode = "none",
         pe.alignV = "middle", pe.alignH = "center", pe.startScene = "scene/LoadingScene.scene",
         pe.sceneRoot = "", pe.debug = !1, pe.stat = !1, pe.physicsDebug = !1, pe.exportSceneToJson = !0,
         pe.init();
