@@ -1,0 +1,373 @@
+{
+    "type": "Dialog",
+    "props": {
+        "y": 667,
+        "x": 375,
+        "width": 750,
+        "height": 1334,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "top": 0,
+                "skin": "res/ui/local/images/login_background.jpg",
+                "right": 0,
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 42,
+            "child": [
+                {
+                    "type": "Label",
+                    "props": {
+                        "text": "Loading...",
+                        "fontSize": 60,
+                        "color": "#f9f6f6",
+                        "centerY": 0,
+                        "centerX": 0,
+                        "bold": true
+                    },
+                    "compId": 45
+                }
+            ]
+        },
+        {
+            "type": "Box",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "visible": false,
+                "top": 0,
+                "right": 0,
+                "name": "ui",
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 43,
+            "child": [
+                {
+                    "type": "Box",
+                    "props": {
+                        "y": 0,
+                        "x": 0,
+                        "top": 0,
+                        "right": 0,
+                        "name": "carStage",
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 46,
+                    "child": [
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 345,
+                                "x": 551,
+                                "visible": false,
+                                "fontSize": 60,
+                                "color": "#f9f4f4",
+                                "bold": true
+                            },
+                            "compId": 47
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "x": 22,
+                        "width": 172,
+                        "top": 100,
+                        "name": "btn_back",
+                        "height": 75
+                    },
+                    "compId": 48,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "res/ui/local/gamePlay/btn_1.png",
+                                "sizeGrid": "12,12,20,9",
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 49
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 15,
+                                "x": 46,
+                                "text": "Back",
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "bold": true
+                            },
+                            "compId": 50
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "x": 268,
+                        "width": 204,
+                        "top": 100,
+                        "height": 75
+                    },
+                    "compId": 51,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "res/ui/local/gamePlay/btn_2.png",
+                                "sizeGrid": "12,12,20,9",
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 52
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "y": -7.5,
+                                "x": -45,
+                                "width": 90,
+                                "texture": "res/ui/local/gamePlay/icon_gold.png",
+                                "height": 90
+                            },
+                            "compId": 53
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 34,
+                                "x": 109,
+                                "width": 149,
+                                "valign": "middle",
+                                "text": "0",
+                                "height": 53,
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "bold": true,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5,
+                                "align": "center"
+                            },
+                            "compId": 54
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "width": 396,
+                        "right": 10,
+                        "name": "btn_pay",
+                        "height": 109,
+                        "bottom": 200
+                    },
+                    "compId": 55,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "res/ui/local/gamePlay/btn_1.png",
+                                "sizeGrid": "12,12,20,9",
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 56
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "visible": false,
+                                "top": 0,
+                                "skin": "res/ui/local/gamePlay/btn_4.png",
+                                "sizeGrid": "12,12,20,9",
+                                "right": 0,
+                                "name": "dis",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 57
+                        },
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "y": 24.5,
+                                "x": 306,
+                                "width": 60,
+                                "texture": "res/ui/local/gamePlay/icon_gold.png",
+                                "height": 60
+                            },
+                            "compId": 58
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 34,
+                                "x": 67,
+                                "text": "Buy",
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "bold": true
+                            },
+                            "compId": 59
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 34,
+                                "x": 187,
+                                "width": 110,
+                                "valign": "middle",
+                                "text": "0",
+                                "height": 41,
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "bold": true,
+                                "align": "right"
+                            },
+                            "compId": 60
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "props": {
+                        "width": 395,
+                        "right": 10,
+                        "name": "btn_choose",
+                        "height": 108,
+                        "bottom": 200
+                    },
+                    "compId": 61,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "top": 0,
+                                "skin": "res/ui/local/gamePlay/btn_1.png",
+                                "sizeGrid": "12,12,20,9",
+                                "right": 0,
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 62
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 0,
+                                "x": 0,
+                                "visible": false,
+                                "top": 0,
+                                "skin": "res/ui/local/gamePlay/btn_4.png",
+                                "sizeGrid": "12,12,20,9",
+                                "right": 0,
+                                "name": "dis",
+                                "left": 0,
+                                "bottom": 0
+                            },
+                            "compId": 63
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 54,
+                                "x": 198,
+                                "text": "select",
+                                "name": "Label",
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "centerX": 0,
+                                "bold": true,
+                                "anchorY": 0.5,
+                                "anchorX": 0.5
+                            },
+                            "compId": 64
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 667,
+                        "skin": "res/ui/local/gamePlay/shop_btn4.png",
+                        "rotation": 180,
+                        "left": 10,
+                        "centerY": 0,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5
+                    },
+                    "compId": 65
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "skin": "res/ui/local/gamePlay/shop_btn4.png",
+                        "right": 10,
+                        "centerY": 0
+                    },
+                    "compId": 66
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "skin": "res/ui/local/gamePlay/shop_icon1.png",
+                        "name": "lock",
+                        "centerY": 0,
+                        "centerX": 0
+                    },
+                    "compId": 67
+                }
+            ]
+        },
+        {
+            "type": "Script",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "uiNode": "@node:43",
+                "payNeedMoney": "@node:60",
+                "iconLock": "@node:67",
+                "hadMoney": "@node:54",
+                "carNode": "@node:46",
+                "carLbl": "@node:47",
+                "btnPay": "@node:55",
+                "btnNext": "@node:66",
+                "btnChoose": "@node:61",
+                "btnBefore": "@node:65",
+                "btnBack": "@node:48",
+                "runtime": "components/dialog/ShopDialog.ts"
+            },
+            "compId": 44
+        }
+    ],
+    "loadList": [
+        "res/ui/local/images/login_background.jpg",
+        "res/ui/local/gamePlay/btn_1.png",
+        "res/ui/local/gamePlay/btn_2.png",
+        "res/ui/local/gamePlay/icon_gold.png",
+        "res/ui/local/gamePlay/btn_4.png",
+        "res/ui/local/gamePlay/shop_btn4.png",
+        "res/ui/local/gamePlay/shop_icon1.png"
+    ],
+    "loadList3D": []
+}

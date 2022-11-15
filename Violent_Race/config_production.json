@@ -1,0 +1,574 @@
+{
+    "version": "20200703.117.full",
+    "resVersion": "20200715",
+    "cities": [
+        "北京",
+        "上海",
+        "广州",
+        "深圳",
+        "香港",
+        "成都"
+    ],
+    "ordinary": {
+        "switch": {
+            "bannerFakeClick": true,
+            "freeGift": true,
+            "showVideoAdAfterLaunch": true
+        },
+        "appList": [
+            {
+                "gid": 1,
+                "appid": "wxf447b88b62a37d9f",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQANdH5QcjHYLxg&foo=wx8a3a06f5cab96a20",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "天天搬钻块",
+                "appVendor": "格子游戏",
+                "weight": 2
+            },
+            {
+                "gid": 101,
+                "appid": "wx0ce946c3e2524ae2",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8Hj5QLqysz",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "飞车大逃亡",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 2,
+                "appid": "wxec907b33a29ddf67",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8pNXmfkZPx",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "英雄救援队",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 3,
+                "appid": "",
+                "image": "",
+                "path": "",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "英雄救援队",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 4,
+                "appid": "wxca247d95ea3a6414",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9AfQ2uQ2oJ&cid=pyggs",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "跑抬棺",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 401,
+                "appid": "wxca247d95ea3a6414",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9AfQ2uQ2oJ&cid=pyggs",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "跑抬棺",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 402,
+                "appid": "wxca247d95ea3a6414",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9AfQ2uQ2oJ&cid=pyggs",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "跑抬棺",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 5,
+                "appid": "wx000fd8c0466b3977",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8tqxrTIM8g&channel_id=1158",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "我的小飞机",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 501,
+                "appid": "wx000fd8c0466b3977",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8tqxrTIM8g&channel_id=1158",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "我的小飞机",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 502,
+                "appid": "wx000fd8c0466b3977",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8tqxrTIM8g&channel_id=1158",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "我的小飞机",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 6,
+                "appid": "wx27d28b18e9fe6947",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY85rgOmE1qd&channel=c3e8659f2aa047f4a403",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "救援小分队",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 601,
+                "appid": "wx27d28b18e9fe6947",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY85rgOmE1qd&channel=c3e8659f2aa047f4a403",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "救援小分队",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 602,
+                "appid": "wx27d28b18e9fe6947",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY85rgOmE1qd&channel=c3e8659f2aa047f4a403",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "救援小分队",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 7,
+                "appid": "wx7d6716d538596fa8",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQAM7rOxqikxa1A",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "精英枪王突袭大战",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 8,
+                "appid": "wx9d615db4da793042",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQANqdgCZm4nZtg&channel=pyggsxyx_cost&plan=gzgz_yyml",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "街头扣篮王",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 9,
+                "appid": "wx1a3cccadedcd3763",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8lX9rtdwZz&ch=pyggs",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "飞车挑战3D",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 901,
+                "appid": "wx1a3cccadedcd3763",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8lX9rtdwZz&ch=pyggs",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "飞车挑战3D",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 902,
+                "appid": "wx1a3cccadedcd3763",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8lX9rtdwZz&ch=pyggs",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "飞车挑战3D",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 10,
+                "appid": "wx514c46c90aa23cdd",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9LroU_GhhR ",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "特工别跑",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 11,
+                "appid": "wx2ad56c57c52065c1",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8YKl2MNJZL&cid=pyggs",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "别碰病毒",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 12,
+                "appid": "",
+                "image": "",
+                "path": "",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 13,
+                "appid": "wxbed7e08045b8942e",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9gjPpCfNjE",
+                "targetAppid": " ",
+                "targetPath": " ",
+                "title": "冰火恐龙冒险",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 1301,
+                "appid": "wxbed7e08045b8942e",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9gjPpCfNjE",
+                "targetAppid": " ",
+                "targetPath": " ",
+                "title": "冰火恐龙冒险",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 1302,
+                "appid": "wxbed7e08045b8942e",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9gjPpCfNjE",
+                "targetAppid": " ",
+                "targetPath": " ",
+                "title": "冰火恐龙冒险",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 1401,
+                "appid": "wxd658fb14078317af",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8jUGnt3F9O&channel=5efabf29fac25243e38a6b58",
+                "targetAppid": " ",
+                "targetPath": " ",
+                "title": "俯视坦克",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 1402,
+                "appid": "wxd658fb14078317af",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8jUGnt3F9O&channel=5efabf29fac25243e38a6b58",
+                "targetAppid": " ",
+                "targetPath": " ",
+                "title": "俯视坦克",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 1403,
+                "appid": "wxd658fb14078317af",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8jUGnt3F9O&channel=5efabf29fac25243e38a6b58",
+                "targetAppid": " ",
+                "targetPath": " ",
+                "title": "俯视坦克",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 15,
+                "appid": "wx4961b4b49b9d77dc",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9AYprRxFaa",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "光头哥打鸭子",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 16,
+                "appid": "wxf0c048cd29a191ec",
+                "image": "",
+                "path": "",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "爆裂碎车机 ",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 17,
+                "appid": "wx011ca1387c3ef320",
+                "image": "",
+                "path": "",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "一枪到底 ",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 18,
+                "appid": "wx840e2e246968f224",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9e8C1pbPSh",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "装载小黄车",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 19,
+                "appid": "wxe3984577cfa9b73f",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY9SuoJOTBzX&foo=wxe611cf166348205c",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "疯狂推方块",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 20,
+                "appid": "wx9b9370927fdef3ae",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8SJP88apGz&foo=wxe611cf166348205c",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "翻转吧摩托",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 21,
+                "appid": "wx6901173ae73f45c7",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8CZ6bumjKG",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "摩托车狂飙",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 22,
+                "appid": "wx3ab00f267a38c52b",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQAN1o7C2AmDDTg",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "弹力小车",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 23,
+                "appid": "wxd0fed2d7f7112e5f",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8X0IZ1eHqM",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "滑板冲冲冲",
+                "appVendor": "格子游戏",
+                "weight": 0
+            },
+            {
+                "gid": 24,
+                "appid": "wx2115168b4612d568",
+                "image": "",
+                "path": "?wxgamecid=CCBgAAoXkpQY8jCpPkzdpE",
+                "targetAppid": "",
+                "targetPath": "",
+                "title": "装货小卡车",
+                "appVendor": "格子游戏",
+                "weight": 0
+            }
+        ],
+        "export": {
+            "couplet": {
+                "items": [
+                    1403,
+                    13,
+                    10,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    24,
+                    9,
+                    6,
+                    5,
+                    4,
+                    15,
+                    21,
+                    22,
+                    23,
+                    24,
+                    401,
+                    402,
+                    101,
+                    2,
+                    1
+                ],
+                "displayCount": 20
+            },
+            "tryexport": {
+                "items": [
+                    1402,
+                    13,
+                    10,
+                    9,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    24,
+                    902,
+                    6,
+                    602,
+                    5,
+                    502,
+                    4,
+                    15,
+                    21,
+                    22,
+                    23,
+                    24,
+                    401,
+                    402,
+                    101,
+                    2,
+                    1
+                ],
+                "displayCount": 20
+            },
+            "recommend": {
+                "items": [
+                    1402,
+                    13,
+                    10,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    24,
+                    902,
+                    602,
+                    502,
+                    15,
+                    21,
+                    22,
+                    23,
+                    24,
+                    5,
+                    4,
+                    401,
+                    402,
+                    101,
+                    2,
+                    1
+                ],
+                "displayCount": 20
+            }
+        },
+        "adData": {
+            "banner": [
+                {
+                    "id": "adunit-b44518ecb920c8ec",
+                    "name": "b20"
+                },
+                {
+                    "id": "adunit-70de08ea715681e5",
+                    "name": "b19"
+                },
+                {
+                    "id": "adunit-5ba9f791797f05c9",
+                    "name": "b18"
+                },
+                {
+                    "id": "adunit-d3a799ca7cd5ce61",
+                    "name": "b17"
+                },
+                {
+                    "id": "adunit-75382c9f5588ad80",
+                    "name": "b16"
+                }
+            ],
+            "video": [
+                {
+                    "id": "adunit-9971ac2297bf42c8",
+                    "name": "ad3"
+                }
+            ]
+        },
+        "bannerSwitch": {
+            "time": 5,
+            "count": 5
+        },
+        "gameShareData": {
+            "checkTime": 3000,
+            "shareFailText": "请尝试分享到其他群",
+            "shareUrl": "",
+            "shareInfoArray": [
+                {
+                    "title": "真正3D模拟停车",
+                    "fileName": "CarDrift/CarDrift4.jpg"
+                },
+                {
+                    "title": "真正3D模拟停车",
+                    "fileName": "CarDrift/CarDrift4.jpg"
+                }
+            ]
+        }
+    },
+    "special": {
+        "switch": {
+            "bannerFakeClick": false,
+            "freeGift": false,
+            "showVideoAdAfterLaunch": false
+        }
+    }
+}

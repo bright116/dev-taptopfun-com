@@ -1,0 +1,620 @@
+{
+    "type": "Dialog",
+    "props": {
+        "y": 667,
+        "x": 375,
+        "width": 750,
+        "height": 1334,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "top": 0,
+                "skin": "res/ui/local/sprites/square_black.png",
+                "right": 0,
+                "name": "Background",
+                "left": 0,
+                "bottom": 0,
+                "alpha": 0.8,
+                "sizeGrid": "5,5,5,5"
+            },
+            "compId": 89
+        },
+        {
+            "type": "Box",
+            "props": {
+                "width": 750,
+                "top": 0,
+                "right": 0,
+                "left": 0,
+                "height": 324
+            },
+            "compId": 34,
+            "child": [
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 182,
+                        "x": 375,
+                        "width": 750,
+                        "pivotY": 182,
+                        "pivotX": 375,
+                        "name": "Lost",
+                        "height": 323
+                    },
+                    "compId": 29,
+                    "child": [
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 229,
+                                "x": 303,
+                                "text": "Lose",
+                                "mouseEnabled": false,
+                                "hitTestPrior": false,
+                                "fontSize": 72,
+                                "color": "#ffffff",
+                                "cacheAs": "bitmap",
+                                "bold": true
+                            },
+                            "compId": 11
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 95,
+                                "centerX":-35,
+                                "text": "第4关",
+                                "name": "LevelLabel",
+                                "fontSize": 110,
+                                "color": "#ffffff",
+                                "bold": true
+                            },
+                            "compId": 10
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 182,
+                        "x": 375,
+                        "width": 750,
+                        "pivotY": 182,
+                        "pivotX": 375,
+                        "name": "Win",
+                        "height": 326
+                    },
+                    "compId": 14,
+                    "child": [
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 194,
+                                "x": 370,
+                                "width": 512,
+                                "skin": "res/ui/local/sprites/ray_yellow.png",
+                                "rotation": 252,
+                                "pivotY": 256,
+                                "pivotX": 256,
+                                "name": "Ray",
+                                "mouseEnabled": false,
+                                "hitTestPrior": false,
+                                "height": 512
+                            },
+                            "compId": 21
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 120,
+                                "x": 370,
+                                "width": 68,
+                                "skin": "res/ui/local/sprites/crown.png",
+                                "pivotY": 65,
+                                "pivotX": 34,
+                                "name": "Crown",
+                                "height": 50
+                            },
+                            "compId": 16
+                        },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "y": 306,
+                                "x": 419,
+                                "width": 314,
+                                "visible": false,
+                                "valign": "middle",
+                                "text": "第4关",
+                                "pivotY": 67,
+                                "pivotX": 201,
+                                "name": "Level",
+                                "height": 58,
+                                "fontSize": 50,
+                                "font": "Helvetica",
+                                "color": "#f4f4f4",
+                                "align": "center"
+                            },
+                            "compId": 18
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 304,
+                                "x": 327,
+                                "width": 320,
+                                "skin": "res/ui/local/sprites/split_line.png",
+                                "sizeGrid": "0,2,0,2",
+                                "pivotX": 106,
+                                "height": 4
+                            },
+                            "compId": 20
+                        },
+                        {
+                            "type": "Image",
+                            "props": {
+                                "y": 120,
+                                "skin": "res/ui/local/gamePlay/text_victory.png",
+                                "centerX": 0
+                            },
+                            "compId": 94
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "type": "Image",
+            "props": {
+                "y": 0,
+                "visible": false,
+                "top": 0,
+                "skin": "res/ui/local/sprites/square_black.png",
+                "right": 0,
+                "name": "GuideMask",
+                "left": 0,
+                "bottom": 0,
+                "alpha": 0.4,
+                "sizeGrid": "5,5,5,5"
+            },
+            "compId": 31
+        },
+        {
+            "type": "Button",
+            "props": {
+                "width": 376,
+                "visible": false,
+                "stateNum": 1,
+                "skin": "res/ui/local/gamePlay/btn_4.png",
+                "sizeGrid": "14,11,19,7",
+                "name": "GetGoldBtn",
+                "height": 74,
+                "centerX": 0,
+                "bottom": 277,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 3,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 12,
+                        "x": 113,
+                        "width": 41,
+                        "visible": true,
+                        "skin": "res/ui/local/gamePlay/icon_gold.png",
+                        "name": "Icon",
+                        "height": 43
+                    },
+                    "compId": 35
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 12,
+                        "x": 177,
+                        "visible": true,
+                        "valign": "middle",
+                        "text": "200",
+                        "name": "GoldLabel",
+                        "mouseEnabled": false,
+                        "hitTestPrior": false,
+                        "height": 44,
+                        "fontSize": 44,
+                        "color": "#ffffff",
+                        "bold": true,
+                        "align": "left"
+                    },
+                    "compId": 5
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.92,
+                        "scaleX": 0.92,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 57
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "width": 376,
+                "visible": false,
+                "stateNum": 1,
+                "skin": "res/ui/local/gamePlay/shop_btn2.png",
+                "sizeGrid": "13,11,17,9",
+                "name": "DoubleBtn",
+                "height": 149,
+                "centerX": -1,
+                "bottom": 349,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 4,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "x": 200,
+                        "width": 51,
+                        "skin": "res/ui/local/gamePlay/icon_gold.png",
+                        "name": "Icon",
+                        "height": 54,
+                        "centerY": 0
+                    },
+                    "compId": 7
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": -2,
+                        "x": 274,
+                        "width": 83,
+                        "skin": "res/ui/local/sprites/tag.png",
+                        "height": 136
+                    },
+                    "compId": 12
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 36,
+                        "x": 287,
+                        "valign": "middle",
+                        "text": "X3",
+                        "mouseEnabled": false,
+                        "hitTestPrior": false,
+                        "fontSize": 44,
+                        "color": "#ffffff",
+                        "cacheAs": "bitmap",
+                        "bold": true,
+                        "align": "center"
+                    },
+                    "compId": 9
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "x": 49,
+                        "width": 187,
+                        "valign": "middle",
+                        "text": "600",
+                        "name": "GoldLabel",
+                        "height": 60,
+                        "fontSize": 60,
+                        "color": "#ffffff",
+                        "centerY": 0,
+                        "bold": true,
+                        "align": "center"
+                    },
+                    "compId": 6
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.92,
+                        "scaleX": 0.92,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 58
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "x": 7,
+                        "skin": "res/ui/local/gamePlay/icon_camera.png",
+                        "centerY": 0
+                    },
+                    "compId": 95
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "props": {
+                "zOrder": 21,
+                "x": 617,
+                "width": 117,
+                "visible": false,
+                "skin": "res/ui/local/sprites/hand.png",
+                "rotation": -45,
+                "pivotY": 177,
+                "name": "GuideHand",
+                "height": 177,
+                "centerY": 274
+            },
+            "compId": 32
+        },
+        {
+            "type": "Button",
+            "props": {
+                "width": 376,
+                "visible": false,
+                "stateNum": 1,
+                "skin": "res/ui/local/sprites/btn_gray_2.png",
+                "sizeGrid": "11,9,16,10",
+                "name": "ContinueBtn",
+                "height": 74,
+                "centerX": 0,
+                "bottom": 277,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 76,
+            "child": [
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 12,
+                        "x": 100,
+                        "visible": true,
+                        "valign": "middle",
+                        "text": "Retry",
+                        "name": "Label",
+                        "mouseEnabled": false,
+                        "hitTestPrior": false,
+                        "height": 44,
+                        "fontSize": 44,
+                        "color": "#ffffff",
+                        "cacheAs": "bitmap",
+                        "bold": true,
+                        "align": "center"
+                    },
+                    "compId": 78
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.92,
+                        "scaleX": 0.92,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 79
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "width": 376,
+                "visible": false,
+                "stateNum": 1,
+                "skin": "res/ui/local/sprites/btn_yello_1.png",
+                "sizeGrid": "9,11,22,10",
+                "name": "SkipBtn",
+                "height": 149,
+                "centerX": 0,
+                "bottom": 349,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 81,
+            "child": [
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 97,
+                        "text": "Watch ads",
+                        "mouseEnabled": false,
+                        "hitTestPrior": false,
+                        "fontSize": 24,
+                        "color": "#b24f02",
+                        "centerX": 0,
+                        "cacheAs": "bitmap"
+                    },
+                    "compId": 85
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 22,
+                        "valign": "middle",
+                        "text": "Skip Level",
+                        "right": 20,
+                        "name": "GoldLabel",
+                        "left": 20,
+                        "height": 60,
+                        "fontSize": 60,
+                        "color": "#ffffff",
+                        "bold": true,
+                        "align": "center"
+                    },
+                    "compId": 86
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.92,
+                        "scaleX": 0.92,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 87
+                }
+            ]
+        },
+        {
+            "type": "Animation",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "wrapMode": "0",
+                "width": 750,
+                "height": 386,
+                "autoPlay": false
+            },
+            "compId": 59
+        },
+        {
+            "type": "Script",
+            "props": {
+                "winNode": "@node:14",
+                "skipBtn": "@node:81",
+                "loseNode": "@node:29",
+                "guideMask": "@node:31",
+                "guideHandNode": "@node:32",
+                "getGoldBtn": "@node:3",
+                "getDoubleGoldBtn": "@node:4",
+                "continueBtn": "@node:76",
+                "adNode": "@node:37",
+                "Congratulations":"@node:143",
+                "runtime": "components/dialog/SettleDialog.ts"
+            },
+            "compId": 91
+        },
+        {
+            "type": "Label",
+            "props": {
+                "y": 250,
+                "centerX":0,
+                
+                "text": "Congratulations!",
+                "name": "Congratulations",
+                "fontSize": 50,
+                "color": "#f9d201",
+                "bold": true
+            },
+            "compId": 143
+        }
+    ],
+    "animations": [
+        {
+            "nodes": [
+                {
+                    "target": 21,
+                    "keyframes": {
+                        "rotation": [
+                            {
+                                "value": 0,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 21,
+                                "key": "rotation",
+                                "index": 0
+                            },
+                            {
+                                "value": 360,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 21,
+                                "key": "rotation",
+                                "index": 60
+                            }
+                        ]
+                    }
+                },
+                {
+                    "target": 59,
+                    "keyframes": {
+                        "autoPlay": [
+                            {
+                                "value": true,
+                                "tweenMethod": "linearNone",
+                                "tween": false,
+                                "target": 59,
+                                "key": "autoPlay",
+                                "index": 0
+                            },
+                            {
+                                "value": false,
+                                "tweenMethod": "linearNone",
+                                "tween": false,
+                                "target": 59,
+                                "key": "autoPlay",
+                                "index": 48
+                            }
+                        ]
+                    }
+                }
+            ],
+            "name": "ani1",
+            "id": 1,
+            "frameRate": 24,
+            "action": 2
+        },
+        {
+            "nodes": [
+                {
+                    "target": 32,
+                    "keyframes": {
+                        "rotation": [
+                            {
+                                "value": -45,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 32,
+                                "key": "rotation",
+                                "index": 0
+                            },
+                            {
+                                "value": -39,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 32,
+                                "key": "rotation",
+                                "index": 10
+                            },
+                            {
+                                "value": -42,
+                                "tweenMethod": "linearNone",
+                                "tween": true,
+                                "target": 32,
+                                "key": "rotation",
+                                "index": 13
+                            }
+                        ]
+                    }
+                }
+            ],
+            "name": "ani2",
+            "id": 2,
+            "frameRate": 18,
+            "action": 2
+        }
+    ],
+    "loadList": [
+        "res/ui/local/sprites/square_black.png",
+        "res/ui/local/sprites/ray_yellow.png",
+        "res/ui/local/sprites/crown.png",
+        "res/ui/local/sprites/split_line.png",
+        "res/ui/local/gamePlay/text_victory.png",
+        "res/ui/local/sprites/btn_gray_2.png",
+        "res/ui/local/gamePlay/btn_4.png",
+        "res/ui/local/gamePlay/icon_gold.png",
+        "res/ui/local/gamePlay/shop_btn2.png",
+        "res/ui/local/sprites/tag.png",
+        "res/ui/local/gamePlay/icon_camera.png",
+        "res/ui/local/sprites/hand.png",
+        "res/ui/local/sprites/btn_yello_1.png"
+    ],
+    "loadList3D": []
+}

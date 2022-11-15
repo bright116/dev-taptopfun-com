@@ -1,0 +1,121 @@
+{
+    "type": "Scene",
+    "props": {
+        "width": 750,
+        "height": 1334
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "top": 0,
+                "skin": "res/ui/local/gamePlay/mask1.png",
+                "sizeGrid": "8,7,9,7",
+                "right": 0,
+                "name": "bg",
+                "left": 0,
+                "bottom": 0,
+                "alpha": 0.7
+            },
+            "compId": 12
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 274,
+                "skin": "res/ui/local/gamePlay/icon4.png",
+                "centerX": 0
+            },
+            "compId": 4
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 452,
+                "width": 326,
+                "name": "btn_next",
+                "height": 121,
+                "centerX": 0
+            },
+            "compId": 5,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "top": -1,
+                        "skin": "res/ui/local/gamePlay/shop_btn2.png",
+                        "sizeGrid": "14,10,22,9",
+                        "right": 0,
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 6
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 32,
+                        "x": 125,
+                        "texture": "res/ui/local/gamePlay/text4.png"
+                    },
+                    "compId": 7
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "y": 609,
+                "width": 326,
+                "name": "btn_restart",
+                "height": 121,
+                "centerX": 0
+            },
+            "compId": 9,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "top": 0,
+                        "skin": "res/ui/local/gamePlay/shop_btn2.png",
+                        "sizeGrid": "15,12,23,12",
+                        "right": 0,
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 10
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 32,
+                        "x": 135,
+                        "texture": "res/ui/local/gamePlay/text789.png"
+                    },
+                    "compId": 11
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 32,
+                        "x": 16,
+                        "texture": "res/ui/local/gamePlay/icon_camera.png"
+                    },
+                    "compId": 8
+                }
+            ]
+        }
+    ],
+    "loadList": [
+        "res/ui/local/gamePlay/mask1.png",
+        "res/ui/local/gamePlay/icon4.png",
+        "res/ui/local/gamePlay/shop_btn2.png",
+        "res/ui/local/gamePlay/text3.png",
+        "res/ui/local/gamePlay/icon_camera.png",
+        "res/ui/local/gamePlay/text789.png"
+    ],
+    "loadList3D": []
+}

@@ -1,0 +1,385 @@
+{
+    "type": "Scene",
+    "props": {
+        "width": 750,
+        "height": 1334
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Box",
+            "props": {
+                "width": 475,
+                "top": 60,
+                "name": "Level",
+                "height": 62,
+                "centerX": 0
+            },
+            "compId": 50,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 0,
+                        "width": 117,
+                        "skin": "res/ui/local/gamePlay/color1.png",
+                        "name": "Current",
+                        "left": 0,
+                        "height": 62
+                    },
+                    "compId": 36
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 0,
+                        "x": 547,
+                        "width": 241,
+                        "skin": "res/ui/local/gamePlay/color2.png",
+                        "height": 62,
+                        "centerX": 0
+                    },
+                    "compId": 37,
+                    "child": [
+                        {
+                            "type": "Sprite",
+                            "props": {
+                                "y": 11,
+                                "x": 103,
+                                "texture": "res/ui/local/gamePlay/color3.png"
+                            },
+                            "compId": 42
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "props": {
+                        "y": 0,
+                        "width": 119,
+                        "skin": "res/ui/local/gamePlay/color1.png",
+                        "right": 0,
+                        "name": "Next",
+                        "height": 62
+                    },
+                    "compId": 38
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 33,
+                        "x": 414,
+                        "valign": "middle",
+                        "text": "2",
+                        "name": "NextLevelLbl",
+                        "fontSize": 50,
+                        "color": "#fbf3f3",
+                        "bold": true,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5,
+                        "align": "center"
+                    },
+                    "compId": 43
+                },
+                {
+                    "type": "Label",
+                    "props": {
+                        "y": 33,
+                        "x": 57,
+                        "valign": "middle",
+                        "text": "1",
+                        "name": "CurrentLevelLbl",
+                        "fontSize": 50,
+                        "color": "#fbf3f3",
+                        "bold": true,
+                        "anchorY": 0.5,
+                        "anchorX": 0.5,
+                        "align": "center"
+                    },
+                    "compId": 41
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "width": 303,
+                "name": "ShopBtn",
+                "left": 30,
+                "height": 123,
+                "bottom": 300,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 39,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "top": 0,
+                        "skin": "res/ui/local/gamePlay/btn_2.png",
+                        "sizeGrid": "12,7,14,9",
+                        "right": 0,
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 44
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 41,
+                        "x": 107,
+                        "texture": "res/ui/local/gamePlay/Text2.png"
+                    },
+                    "compId": 45
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.95,
+                        "scaleX": 0.95,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 49
+                }
+            ]
+        },
+        {
+            "type": "Button",
+            "props": {
+                "width": 303,
+                "right": 30,
+                "name": "StartBtn",
+                "height": 123,
+                "bottom": 300,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 80,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "top": 0,
+                        "skin": "res/ui/local/gamePlay/btn_1.png",
+                        "sizeGrid": "12,7,14,9",
+                        "right": 0,
+                        "left": 0,
+                        "bottom": 0
+                    },
+                    "compId": 81
+                },
+                {
+                    "type": "Sprite",
+                    "props": {
+                        "y": 41,
+                        "x": 107,
+                        "texture": "res/ui/local/gamePlay/text1.png"
+                    },
+                    "compId": 82
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "scaleY": 0.95,
+                        "scaleX": 0.95,
+                        "runtime": "components/ui/ScaleButton.ts"
+                    },
+                    "compId": 83
+                },
+                {
+                    "type": "Script",
+                    "props": {
+                        "runtime": "components/effect/FlowAni.ts"
+                    },
+                    "compId": 84
+                }
+            ]
+        },
+
+        {
+            "type": "Script",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "shopBtn": "@node:23",
+                "gameStartBtn": "@node:7",
+                "gameOvernWinBtn": "@node:8",
+                "gameOvernLoseBtn": "@node:21",
+                "gameOverWinBtn": "@node:8",
+                "gameOverLoseBtn": "@node:21",
+                "gameOverBtn": "@node:8",
+                "flowExportBox3": "@node:34",
+                "flowExportBox2": "@node:33",
+                "flowExportBox1": "@node:28",
+                "flowExportBox0": "@node:27",
+                "enabled": true,
+                "bottomExportList": "@node:29",
+                "bottomExporBox": "@node:31",
+
+                "runtime": "components/scenes/GameScene.ts"
+            },
+            "compId": 9
+        },
+        {
+            "type": "Script",
+            "props": {
+                "turnRightBtn": "@node:55",
+                "turnLeftBtn": "@node:54",
+                "touchPanel": "@node:85",
+                "speedUpBtn": "@node:57",
+                "slowDownBtn": "@node:56",
+                "shopBtn": "@node:39",
+                "positionLbl": "@node:65",
+                "nextLevelLbl": "@node:43",
+                "moneyLbl": "@node:67",
+                "levelBox": "@node:50",
+                "gameStartBtn": "@node:80",
+                "gameLevelLbl": "@node:87",
+                "currentLevelLbl": "@node:41",
+                "controllBox": "@node:53",
+                "changeCameraBtn": "@node:76",
+                "CountDown":"@node:103",
+                "LevelNum":"@node:163",
+                "LevelList":"@node:160",
+                "Congratulations":"@node:143",
+                "runtime": "gamePlay/GamePlay.ts"
+            },
+            "compId": 35
+        },
+        {
+            "type": "Box",
+            "props": {
+                "y": 0,
+                "x": 0,
+                "top": 0,
+                "right": 0,
+                "name": "touchPanel",
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 85,
+            "child": [
+                {
+                    "type": "Image",
+                    "props": {
+                        "width": 200,
+                        "top": 116,
+                        "skin": "res/ui/local/gamePlay/mask1.png",
+                        "centerX": 0,
+                        "alpha": 0.7
+                    },
+                    "compId": 86,
+                    "child": [
+                        {
+                            "type": "Label",
+                            "props": {
+                                "text": "Level 5",
+                                "fontSize": 40,
+                                "color": "#fbf6f6",
+                                "centerY": 2,
+                                "centerX": 0,
+                                "bold": true
+                            },
+                            "compId": 87
+                        }
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "type": "Label",
+            "props": {
+                "name":"CountDown",
+                "text": "Label",
+                "fontSize": 100,
+                "color": "#ffffff",
+                "align": "center",
+                "valign": "middle",
+                "x":174,
+                "y":474,
+                "width":402,
+                "height":120
+
+            },
+            "compId": 103
+        },
+
+
+
+        {
+            "type": "List",
+            "props": {
+                "name":"LevelList",
+                "repeatX":5,
+                "repeatY": 4,
+                "spaceX": 10,
+                "spaceY": 10,
+                "x": 375,
+                "y":560,
+                "width":540,
+                "height":430,
+                "anchorX":0.5,
+                "anchorY":0.5
+
+            },
+            "compId": 160,
+            "child":[
+                {
+                    "type": "Box",
+                    "props": {
+                        "var":"render",
+                        "renderType":"render"
+                    },
+                    "compId": 161,
+                    "child":[
+                    {
+                        "type": "Image",
+                        "props": {
+                            "name":"LevelBg",
+                            "x": 0,
+                            "y": 0,
+                            "width":100,
+                            "height":100,
+                            "skin": "res/ui/local/sprites/square_gray_1.png"
+                        },
+                        "compId": 162
+                    },
+                        {
+                            "type": "Label",
+                            "props": {
+                                "name":"LevelNum",
+                                "text": "1",
+                                "fontSize": 50,
+                                "color": "#ffffff",
+                                "align": "center",
+                                "valign": "middle",
+                                "x":0,
+                                "y":0,
+                                "width":100,
+                                "height":100
+                
+                            },
+                            "compId": 163   
+                        }
+                    ]
+                }
+            ]
+        }
+    
+    
+],
+    "loadList": [
+        "res/ui/local/gamePlay/color1.png",
+        "res/ui/local/gamePlay/color2.png",
+        "res/ui/local/gamePlay/color3.png",
+        "res/ui/local/gamePlay/btn_2.png",
+        "res/ui/local/gamePlay/Text2.png",
+        "res/ui/local/gamePlay/btn_1.png",
+        "res/ui/local/gamePlay/text1.png",
+        "res/ui/local/gamePlay/mask1.png"
+    ],
+    "loadList3D": []
+}
