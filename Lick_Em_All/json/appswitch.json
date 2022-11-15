@@ -1,0 +1,102 @@
+[
+    {
+        "version": "",
+        "banner": 0,
+        "wudian": 0,
+        "wudianTime": {
+            "0": 1,
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+        },
+        "mailiang": 0,
+        "mailianglist": [],
+        "mailiangScenelist": [],
+        "wxwudianbanners": [],
+        "recreateBannerIDList": [],
+        "bannerRecreateTime": 5,
+        "kuangdianjiange": 0,
+        "btnMoveTimer": 1,
+        "bannerMoveTimer": 1,
+        "bannerFreshTimer": 200,
+        "createFailNum": 3,
+        "todayBannerMax": 10,
+        "adSwitch": 1,
+        "wudianSceneList": [],
+        "continueBtnDelayTime": 2,
+        "bannerShowTime": 30,
+        "fakeBtn": 0,
+        "popAd": 0,
+        "continueBanner": 0,
+        "continueBannerShowTime": 2,
+        "continueBannerHideTime": 2,
+        "oppocfg": {
+            "yuansheng": 100,
+            "yuanshengSwitch": 1,
+            "addToDesktop": 0,
+            "oppoversions": "",
+            "btnShowTimer": 0,
+            "indexAdSwitch": 0,
+            "endAdSwitch": 0,
+            "yuansheng2": 100,
+            "yuanshengSwitch2": 1
+        },
+        "qqcfg": {
+            "kuangdianBanner": 0,
+            "kuangdianBox": 0,
+            "box": 0,
+            "weiyi": 0,
+            "qqversions": ""
+        },
+        "ttcfg": {
+            "moreGameSwitch": 0,
+            "kuangdianBanner": 0,
+            "luping": 0,
+            "ttversions": ""
+        },
+        "tt2cfg": {
+            "startSwitch": 0,
+            "signInSwitch": 0,
+            "getSwitch": 0,
+            "useSwitch": 0,
+            "reliveSwitch": 0,
+            "screenCapSwitch": 0,
+            "boxSwitch": 0
+        },
+        "vivocfg": {
+            "yuanshengSwitch": 1,
+            "yuansheng": 100,
+            "yuanshengSwitch2": 1,
+            "yuansheng2": 100,
+            "chapingSwitch": 1,
+            "chaping": 100,
+            "addToDesktop": 1,
+            "vivoversions": "",
+            "btnShowTimer": 1
+        },
+        "wxcfg": {
+            "kuangdianBanner": 0,
+            "kuangdianLevelSpcacing": 0
+        }
+    }
+]

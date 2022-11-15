@@ -1,0 +1,1 @@
+{"type":"Scene","props":{"y":0,"x":0,"width":1080,"top":0,"right":0,"pivotY":0,"pivotX":0,"left":0,"height":1920},"compId":2,"child":[{"type":"Script","props":{"runtime":"Mgr/GameMgr.ts"},"compId":148}],"loadList":[],"loadList3D":[]}
