@@ -1,0 +1,1 @@
+{"compId":2,"child":[{"compId":53,"type":"Label","props":{"right":0,"bold":true,"color":"#ffffff","text":"V","top":0,"fontSize":20,"var":"fcTime","x":0,"strokeColor":"#000000","font":"Arial"}}],"type":"Scene","props":{"width":750,"runtime":"scripts/uiScenes/TimeScene.ts","height":1334},"loadList":[],"loadList3D":[]}
