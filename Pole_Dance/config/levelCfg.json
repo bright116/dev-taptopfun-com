@@ -1,0 +1,415 @@
+[
+	{
+		"NodeId": 1001,
+		"Level": 1,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	},
+	{
+		"NodeId": 2001,
+		"Level": 2,
+		"AnimData": 8,
+		"movePointPos": -0.38,
+		"offsetY": -0.04
+	},
+	{
+		"NodeId": 2002,
+		"Level": 2,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	},
+	{
+		"NodeId": 3001,
+		"Level": 3,
+		"AnimData": 9,
+		"movePointPos": 0.65,
+		"offsetY": -0.33
+	},
+	{
+		"NodeId": 3002,
+		"Level": 3,
+		"AnimData": 8,
+		"movePointPos": 3,
+		"offsetY": -0.48
+	},
+	{
+		"NodeId": 3003,
+		"Level": 3,
+		"AnimData": 10,
+		"movePointPos": -1.82,
+		"offsetY": -0.05
+	},
+	{
+		"NodeId": 4001,
+		"Level": 4,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	},
+	{
+		"NodeId": 4002,
+		"Level": 4,
+		"AnimData": 11,
+		"movePointPos": -2.98,
+		"offsetY": -0.09
+	},
+	{
+		"NodeId": 4003,
+		"Level": 4,
+		"AnimData": 12,
+		"movePointPos": 2.2,
+		"offsetY": -0.23
+	},
+	{
+		"NodeId": 5001,
+		"Level": 5,
+		"AnimData": 9,
+		"movePointPos": -1.61,
+		"offsetY": -0.05
+	},
+	{
+		"NodeId": 5002,
+		"Level": 5,
+		"AnimData": 13,
+		"movePointPos": 1.98,
+		"offsetY": -0.41
+	},
+	{
+		"NodeId": 5003,
+		"Level": 5,
+		"AnimData": 11,
+		"movePointPos": -2.98,
+		"offsetY": -0.09
+	},
+	{
+		"NodeId": 5004,
+		"Level": 5,
+		"AnimData": 10,
+		"movePointPos": 1.23,
+		"offsetY": -0.43
+	},
+	{
+		"NodeId": 6001,
+		"Level": 6,
+		"AnimData": 12,
+		"movePointPos": 2.2,
+		"offsetY": -0.23
+	},
+	{
+		"NodeId": 6002,
+		"Level": 6,
+		"AnimData": 14,
+		"movePointPos": -0.97,
+		"offsetY": -0.06
+	},
+	{
+		"NodeId": 6003,
+		"Level": 6,
+		"AnimData": 7,
+		"movePointPos": -0.12,
+		"offsetY": -0.05
+	},
+	{
+		"NodeId": 6004,
+		"Level": 6,
+		"AnimData": 9,
+		"movePointPos": 0.65,
+		"offsetY": -0.33
+	},
+	{
+		"NodeId": 7001,
+		"Level": 7,
+		"AnimData": 15,
+		"movePointPos": 2.5,
+		"offsetY": -0.51
+	},
+	{
+		"NodeId": 7002,
+		"Level": 7,
+		"AnimData": 16,
+		"movePointPos": 0.6,
+		"offsetY": -0.24
+	},
+	{
+		"NodeId": 7003,
+		"Level": 7,
+		"AnimData": 8,
+		"movePointPos": -0.38,
+		"offsetY": -0.04
+	},
+	{
+		"NodeId": 7004,
+		"Level": 7,
+		"AnimData": 11,
+		"movePointPos": -2.98,
+		"offsetY": -0.09
+	},
+	{
+		"NodeId": 8001,
+		"Level": 8,
+		"AnimData": 14,
+		"movePointPos": -0.97,
+		"offsetY": -0.06
+	},
+	{
+		"NodeId": 8002,
+		"Level": 8,
+		"AnimData": 15,
+		"movePointPos": -0.9,
+		"offsetY": -0.06
+	},
+	{
+		"NodeId": 8003,
+		"Level": 8,
+		"AnimData": 16,
+		"movePointPos": 0.6,
+		"offsetY": -0.24
+	},
+	{
+		"NodeId": 8004,
+		"Level": 8,
+		"AnimData": 10,
+		"movePointPos": -1.82,
+		"offsetY": -0.05
+	},
+	{
+		"NodeId": 9001,
+		"Level": 9,
+		"AnimData": 8,
+		"movePointPos": -0.38,
+		"offsetY": -0.04
+	},
+	{
+		"NodeId": 9002,
+		"Level": 9,
+		"AnimData": 15,
+		"movePointPos": 2.5,
+		"offsetY": -0.51
+	},
+	{
+		"NodeId": 9003,
+		"Level": 9,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	},
+	{
+		"NodeId": 9004,
+		"Level": 9,
+		"AnimData": 12,
+		"movePointPos": 2.2,
+		"offsetY": -0.23
+	},
+	{
+		"NodeId": 10001,
+		"Level": 10,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	},
+	{
+		"NodeId": 10002,
+		"Level": 10,
+		"AnimData": 8,
+		"movePointPos": -0.38,
+		"offsetY": -0.04
+	},
+	{
+		"NodeId": 10003,
+		"Level": 10,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	},
+	{
+		"NodeId": 10004,
+		"Level": 10,
+		"AnimData": 9,
+		"movePointPos": 0.65,
+		"offsetY": -0.33
+	},
+	{
+		"NodeId": 10005,
+		"Level": 10,
+		"AnimData": 8,
+		"movePointPos": 3,
+		"offsetY": -0.48
+	},
+	{
+		"NodeId": 11001,
+		"Level": 11,
+		"AnimData": 10,
+		"movePointPos": -1.82,
+		"offsetY": -0.05
+	},
+	{
+		"NodeId": 11002,
+		"Level": 11,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	},
+	{
+		"NodeId": 11003,
+		"Level": 11,
+		"AnimData": 11,
+		"movePointPos": -2.98,
+		"offsetY": -0.09
+	},
+	{
+		"NodeId": 11004,
+		"Level": 11,
+		"AnimData": 12,
+		"movePointPos": 2.2,
+		"offsetY": -0.23
+	},
+	{
+		"NodeId": 11005,
+		"Level": 11,
+		"AnimData": 9,
+		"movePointPos": -1.61,
+		"offsetY": -0.05
+	},
+	{
+		"NodeId": 12001,
+		"Level": 12,
+		"AnimData": 13,
+		"movePointPos": 1.98,
+		"offsetY": -0.41
+	},
+	{
+		"NodeId": 12002,
+		"Level": 12,
+		"AnimData": 11,
+		"movePointPos": -2.98,
+		"offsetY": -0.09
+	},
+	{
+		"NodeId": 12003,
+		"Level": 12,
+		"AnimData": 10,
+		"movePointPos": 1.23,
+		"offsetY": -0.43
+	},
+	{
+		"NodeId": 12004,
+		"Level": 12,
+		"AnimData": 12,
+		"movePointPos": 2.2,
+		"offsetY": -0.23
+	},
+	{
+		"NodeId": 12005,
+		"Level": 12,
+		"AnimData": 14,
+		"movePointPos": -0.97,
+		"offsetY": -0.06
+	},
+	{
+		"NodeId": 13001,
+		"Level": 13,
+		"AnimData": 7,
+		"movePointPos": -0.12,
+		"offsetY": -0.05
+	},
+	{
+		"NodeId": 13002,
+		"Level": 13,
+		"AnimData": 9,
+		"movePointPos": 0.65,
+		"offsetY": -0.33
+	},
+	{
+		"NodeId": 13003,
+		"Level": 13,
+		"AnimData": 15,
+		"movePointPos": 1.99,
+		"offsetY": -0.51
+	},
+	{
+		"NodeId": 13004,
+		"Level": 13,
+		"AnimData": 16,
+		"movePointPos": -1.24,
+		"offsetY": -0.24
+	},
+	{
+		"NodeId": 13005,
+		"Level": 13,
+		"AnimData": 8,
+		"movePointPos": -0.38,
+		"offsetY": -0.04
+	},
+	{
+		"NodeId": 14001,
+		"Level": 14,
+		"AnimData": 11,
+		"movePointPos": -2.98,
+		"offsetY": -0.09
+	},
+	{
+		"NodeId": 14002,
+		"Level": 14,
+		"AnimData": 14,
+		"movePointPos": -0.97,
+		"offsetY": -0.06
+	},
+	{
+		"NodeId": 14003,
+		"Level": 14,
+		"AnimData": 15,
+		"movePointPos": -1.65,
+		"offsetY": -0.06
+	},
+	{
+		"NodeId": 14004,
+		"Level": 14,
+		"AnimData": 16,
+		"movePointPos": -1.24,
+		"offsetY": -0.24
+	},
+	{
+		"NodeId": 14005,
+		"Level": 14,
+		"AnimData": 10,
+		"movePointPos": -1.82,
+		"offsetY": -0.05
+	},
+	{
+		"NodeId": 15001,
+		"Level": 15,
+		"AnimData": 8,
+		"movePointPos": -0.38,
+		"offsetY": -0.04
+	},
+	{
+		"NodeId": 15002,
+		"Level": 15,
+		"AnimData": 15,
+		"movePointPos": 1.99,
+		"offsetY": -0.51
+	},
+	{
+		"NodeId": 15003,
+		"Level": 15,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	},
+	{
+		"NodeId": 15004,
+		"Level": 15,
+		"AnimData": 12,
+		"movePointPos": 2.2,
+		"offsetY": -0.23
+	},
+	{
+		"NodeId": 15005,
+		"Level": 15,
+		"AnimData": 7,
+		"movePointPos": 2.23,
+		"offsetY": -0.34
+	}
+]

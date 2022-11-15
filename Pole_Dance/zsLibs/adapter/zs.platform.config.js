@@ -1,0 +1,2 @@
+window.zs = window.zs || {}, window.zs.platform = window.zs.platform || {}, window.zs.platform.config = window.zs.platform.config || {},
+    (window.zs.platform.config = window.zs.platform.config || {}).platformMark = "wx_";

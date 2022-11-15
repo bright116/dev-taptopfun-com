@@ -1,0 +1,14 @@
+{
+    "movePointSpeed":0.005,
+    "animPlaySpeed":0.008,
+    "movePointBackMoveSpeed":-2,
+    "wallDistance":40,
+    "maxHeight":3,
+    "minHeight":-3,
+    "baseModeHeight":0.2,
+    "wallHitDistance":0.4,
+    "maxLevel":10,
+    "endPointDistance":54.83731,
+    "rushPassSpeed":2,
+    "endPassSpeed":2
+}

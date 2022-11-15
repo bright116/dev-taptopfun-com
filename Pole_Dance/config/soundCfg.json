@@ -1,0 +1,12 @@
+{
+    "bgm":"sound/bgm.mp3",
+    "chanageMotion":"sound/chanageMotion.mp3",
+    "die":"sound/die.mp3",
+    "winShow":"sound/winShow.mp3",
+    "end":"sound/end.mp3",
+    "end2":"sound/end2.mp3",
+    "heart":"sound/heart.mp3",
+    "hit":"sound/hit.mp3",
+    "star":"sound/star.mp3",
+    "through":"sound/through.mp3"
+}

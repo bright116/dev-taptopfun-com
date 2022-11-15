@@ -1,0 +1,113 @@
+[{
+    "AnimId": 1,
+    "AnimClipName": "idle",
+    "AnimTexture": "null",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0
+},
+{
+    "AnimId": 2,
+    "AnimClipName": "up",
+    "AnimTexture": "null",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0
+},
+{
+    "AnimId": 3,
+    "AnimClipName": "upidle",
+    "AnimTexture": "null",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0
+},
+{
+    "AnimId": 4,
+    "AnimClipName": "down",
+    "AnimTexture": "null",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0
+},
+{
+    "AnimId": 5,
+    "AnimClipName": "die",
+    "AnimTexture": "null",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0
+},
+{
+    "AnimId": 6,
+    "AnimClipName": "win",
+    "AnimTexture": "null",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0
+},
+{
+    "AnimId": 7,
+    "AnimClipName": "dance1",
+    "AnimTexture": "dance1",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 8,
+    "AnimClipName": "dance2",
+    "AnimTexture": "dance2",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 9,
+    "AnimClipName": "dance3",
+    "AnimTexture": "dance3",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 10,
+    "AnimClipName": "dance4",
+    "AnimTexture": "dance4",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 11,
+    "AnimClipName": "dance5",
+    "AnimTexture": "dance5",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 12,
+    "AnimClipName": "dance6",
+    "AnimTexture": "dance6",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 13,
+    "AnimClipName": "dance7",
+    "AnimTexture": "dance7",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 14,
+    "AnimClipName": "dance7",
+    "AnimTexture": "dance7",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 15,
+    "AnimClipName": "dance7",
+    "AnimTexture": "dance7",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+},
+{
+    "AnimId": 16,
+    "AnimClipName": "dance7",
+    "AnimTexture": "dance7",
+    "AnimDeviationVuale": 0.1,
+    "MinimumPointDistance": 0.1
+}
+]

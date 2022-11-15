@@ -1,0 +1,14 @@
+[
+    {"skinId":1,"Level":1,"lockType":1,"LockNum":0,"skinType":0},
+    {"skinId":2,"Level":3,"lockType":1,"LockNum":500,"skinType":0},
+    {"skinId":3,"Level":4,"lockType":1,"LockNum":500,"skinType":0},
+    {"skinId":4,"Level":11,"lockType":1,"LockNum":500,"skinType":0},
+    {"skinId":5,"Level":12,"lockType":1,"LockNum":500,"skinType":0},
+    {"skinId":6,"Level":15,"lockType":0,"LockNum":1,"skinType":0},
+    {"skinId":7,"Level":1,"lockType":1,"LockNum":0,"skinType":1},
+    {"skinId":8,"Level":1,"lockType":0,"LockNum":1,"skinType":1},
+    {"skinId":9,"Level":1,"lockType":1,"LockNum":500,"skinType":1},
+    {"skinId":10,"Level":1,"lockType":0,"LockNum":1,"skinType":1},
+    {"skinId":11,"Level":1,"lockType":1,"LockNum":500,"skinType":1},
+    {"skinId":12,"Level":1,"lockType":0,"LockNum":1,"skinType":1}
+]

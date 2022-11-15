@@ -1,0 +1,182 @@
+{
+    "GAME_START": {},
+    "START_FULL_1": {
+    },
+    "START_FULL_2": {
+    },
+    "GAME_HOME": {
+        "banner": {"auto":true},
+        "exporter": [
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "topleft",
+                    "alignoffsety": 500
+                },
+                "base": {
+                    "item": "export_item_2",
+                    "mode": "side",
+                    "width": 300,
+                    "max": 2,
+                    "shaketime": 3000
+                }
+            },
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "topright",
+                    "alignoffsety": 500
+                },
+                "base": {
+                    "item": "export_item_2",
+                    "mode": "side",
+                    "width": 300,
+                    "max": 2,
+                    "shaketime": 3000
+                }
+            },
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "top",
+                    "alignoffsety": 95
+                },
+                "base": {
+                    "item": "export_item_7",
+                    "mode": "hlist",
+                    "height": 270,
+                    "max": 10,
+                    "marginleft": 10,
+                    "marginright": 10
+                }
+            },
+            {
+                "type": "export_side",
+                "window": {
+                    "align": "left",
+                    "alignoffsety": 100
+                }
+            }
+        ]
+    },
+    "GAME_HOME.SHOP": {
+       
+    },
+    "GAME_HOME.HOME": {
+        "banner": {"auto":true},
+        "exporter": [
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "topleft",
+                    "alignoffsety": 500
+                },
+                "base": {
+                    "item": "export_item_2",
+                    "mode": "side",
+                    "width": 300,
+                    "max": 2,
+                    "shaketime": 3000
+                }
+            },
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "topright",
+                    "alignoffsety": 500
+                },
+                "base": {
+                    "item": "export_item_2",
+                    "mode": "side",
+                    "width": 300,
+                    "max": 2,
+                    "shaketime": 3000
+                }
+            },
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "top",
+                    "alignoffsety": 95
+                },
+                "base": {
+                    "item": "export_item_7",
+                    "mode": "hlist",
+                    "height": 270,
+                    "max": 10,
+                    "marginleft": 10,
+                    "marginright": 10
+                }
+            },
+            {
+                "type": "export_side",
+                "window": {
+                    "align": "left",
+                    "alignoffsety": 100
+                }
+            }
+        ]
+    },
+    "GAME_PREPARE": {},
+    "EXPORT_COMMON_EGG": {
+    },
+    "GAME_PLAY": {
+        "banner": {"auto":true,"checkInit":true}
+    },
+    "EXPORT_GAME_EGG": {
+    },
+    "OVER_FULL_1": {
+    },
+    "GAME_SETTLE": {
+     
+    },
+    "OVER_FULL_2": {
+    },
+    "GAME_END": {
+        "exporter": [
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "topleft",
+                    "alignoffsety": 500
+                },
+                "base": {
+                    "item": "export_item_2",
+                    "mode": "side",
+                    "width": 300,
+                    "max": 2,
+                    "shaketime": 3000
+                }
+            },
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "topright",
+                    "alignoffsety": 500
+                },
+                "base": {
+                    "item": "export_item_2",
+                    "mode": "side",
+                    "width": 300,
+                    "max": 2,
+                    "shaketime": 3000
+                }
+            },
+            {
+                "type": "export_list",
+                "window": {
+                    "align": "top",
+                    "alignoffsety": 95
+                },
+                "base": {
+                    "item": "export_item_7",
+                    "mode": "hlist",
+                    "height": 270,
+                    "max": 10,
+                    "marginleft": 10,
+                    "marginright": 10
+                }
+            }
+        ]
+    }
+}
