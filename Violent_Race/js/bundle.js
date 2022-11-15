@@ -5299,7 +5299,7 @@ this.gameLevelLbl.text = "Level " + this.curLevel
     }
     GameConfig.width = 750;
     GameConfig.height = 1334;
-    GameConfig.scaleMode = "showall";
+    GameConfig.scaleMode = "exactfit";
     GameConfig.screenMode = "none";
     GameConfig.alignV = "middle";
     GameConfig.alignH = "center";
