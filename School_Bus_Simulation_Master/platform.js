@@ -187,10 +187,10 @@ const _0x3182 = function (_0x539625, _0x25372d) {
             return [];
         }
         [_0x3182('0x1a')](_0x13775b, _0x3d59f4) {
-            //TODO 临时
             window[_0x3182('0xf')]();
             if (this[_0x3182('0x1f')])
                 return;
+            _0x3d59f4();
             // this[_0x3182('0x1f')] = !![], YYGGames[_0x3182('0x22')](_0x13775b, ![], YYG[_0x3182('0x34')]['CARGAMES'])[_0x3182('0x21')](_0x3d59f4);
         }
     }
