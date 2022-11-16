@@ -4,7 +4,8 @@
     <title>Rotate Jigsaw</title>
     <meta charset='utf-8' />
     <meta name='renderer' content='webkit' />
-    <meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' />
+    <meta name='viewport'
+        content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' />
     <meta name='apple-mobile-web-app-capable' content='yes' />
     <meta name='full-screen' content='true' />
     <meta name='x5-fullscreen' content='true' />
@@ -22,12 +23,10 @@
         script.src = url;
         document.head.appendChild(script);
     }
-    // ZL: 注释掉YYGSDK.js的引用和console的重写
     // appendScript("https://h5gamessdk.yyggames.com/sdk/YYGSDK.js");
-    // console.warn = console.log = function() {};
+    // console.warn = console.log = function () { };
 </script>
-<!-- ZL: 注释掉topmathgames.js -->
-<!-- <script type="text/javascript" src="https://www.topmathgames.com/GameSDK/topmathgames.js"></script> -->
+<script src="/public/newafg/huhuSDK.js"></script>
 
 <!-- <script type="text/javascript">
     const showReward2 = function (successCallback, failureCallback, completeCallback) {
@@ -47,7 +46,6 @@
             document.body.appendChild(script);
         }
     </script>
-    <script src="/public/newafg/huhuSDK.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>
 
