@@ -1,0 +1,195 @@
+<html>
+
+<head>
+    <title>TOPMATHGAMES</title>
+    <meta charset='utf-8' />
+    <meta name='renderer' content='webkit' />
+    <meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'/>
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='full-screen' content='true' />
+    <meta name='x5-fullscreen' content='true' />
+    <meta name='360-fullscreen' content='true' />
+    <meta name='laya' screenorientation='landscape' />
+    <meta http-equiv='expires' content='0' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+    <meta http-equiv='expires' content='0' />
+    <meta http-equiv='Cache-Control' content='no-siteapp' />
+    <script src="/public/newafg/huhuSDK.js"></script>
+    <style>
+        html {
+			touch-action: none
+		}
+        body {
+            cursor: default;
+            background: #161B29;
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+        }
+        #splash {
+            position: relative;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height:100%;
+            background: #061a25;
+            text-align:center;
+            vertical-align: middle;
+            z-index: 999;
+        }
+        
+        #sidelogo{
+            max-width:307px;
+            width:40%;
+            height: auto;
+        }
+
+        #percent{
+            margin-top: 80px;
+            font-weight:bold;
+            font-size: 160%;
+        }
+
+        span{
+            margin:auto;
+        }
+
+        progress{
+            margin-top: 20px;
+            width: 65%;
+            background-color:#d7d7d7;
+            height: 10px;
+            border-radius: 20px;
+        }
+
+        progress::-webkit-progress-bar
+        {
+            background-color:#d7d7d7;
+            border-radius: 20px;
+        }
+        progress::-webkit-progress-value{
+            background-color:orange;
+            background-image:-webkit-linear-gradient(left,#f6ae25,#ffe65d);
+            border-radius: 20px;
+        }
+
+        #percent span:nth-child(1){
+            color: #f6ae25;
+            animation: bounce 2s linear 0s infinite;
+        }
+
+        #percent span:nth-child(2) {
+            color: #f9c239;
+            animation: bounce 2s linear 0.09s infinite;
+        }
+
+        #percent span:nth-child(3) {
+            color: #fdd74e;
+            animation: bounce 2s linear 0.18s infinite;
+        }
+
+        #percent span:nth-child(4) {
+            color: #ffe65d;
+            animation: bounce 2s linear 0.27s infinite;
+        }
+
+        #percent span:nth-child(5) {
+            color: #c9e979;
+            animation: bounce 2s linear 0.36s infinite;
+        }
+
+        #percent span:nth-child(6) {
+            color: #8fe7a3;
+            animation: bounce 2s linear 0.44s infinite;
+        }
+
+        #percent span:nth-child(7) {
+            color: #69dcca;
+            animation: bounce 2s linear 0.52s infinite;
+        }
+        #percent span:nth-child(8) {
+            color: #5ed3e1;
+            animation: bounce 2s linear 0.6s infinite;
+        }
+
+        #percent span:nth-child(9) {
+            color: #57cae0;
+            animation: bounce 2s linear 0.68s infinite;
+        }
+
+        #percent span:nth-child(10) {
+            color: #48b5d3;
+            animation: bounce 2s linear 0.76s infinite;
+        }
+        @keyframes bounce {
+            0%, 10%, 100% {
+                opacity:1;
+            }
+            5% {
+                opacity:0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="splash">
+        <img id="sidelogo" src="topmathgames/logo.png" onclick="cc.Application&&cc.Application.navigate_('LOADING','LOGO')">
+        </img>
+        <div id="percent">
+            <span >L</span>
+            <span >O</span>
+            <span >A</span>
+            <span >D</span>
+            <span >I</span>
+            <span >N</span>
+            <span >G</span>
+            <span >.</span>
+            <span >.</span>
+            <span >.</span>
+            <!-- <span >E</span>
+            <span >S</span> -->
+        </div>
+        <progress id="progress" value="0" max="100"></progress>
+    </div>
+    <script type="text/javascript">
+        var global = {};
+        (function(){
+            var progress = document.getElementById("progress");
+            function onOrientationOrResizeChange(){
+                let u =window.navigator.userAgent;
+                let onMobile = window.isConchApp ? true : u.indexOf("Mobile") > -1;
+                if(onMobile){
+                    progress.style.width = "90%";
+                }else{
+                    progress.style.width = "65%";
+                }
+            }
+            onOrientationOrResizeChange();
+            window.addEventListener("resize",onOrientationOrResizeChange);
+            try {
+                let u =window.navigator.userAgent;
+                let onMobile = window.isConchApp ? true : u.indexOf("Mobile") > -1;
+                if(onMobile){
+                    progress.style.width = "90%";
+                }
+            } catch (error) {
+                
+            }
+        })()
+    </script>
+
+    <script type="text/javascript">
+        function loadLib(url) {
+            var script = document.createElement("script");
+            script.async = false;
+            script.src = url;
+            document.body.appendChild(script);
+        }
+    </script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
