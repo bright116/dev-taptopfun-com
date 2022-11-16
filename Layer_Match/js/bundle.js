@@ -247,7 +247,7 @@
 	}
 	(p.width = 1080),
 		(p.height = 1920),
-		(p.scaleMode = 'showall'),
+		(p.scaleMode = 'exactfit'),
 		(p.screenMode = 'none'),
 		(p.alignV = 'middle'),
 		(p.alignH = 'center'),
@@ -1027,7 +1027,7 @@
 		(cc.Application.canAds = !0),
 		(p.width = s.stageSize[0]),
 		(p.height = s.stageSize[1]),
-		(p.scaleMode = 'showall'),
+		(p.scaleMode = 'exactfit'),
 		(p.screenMode = 'none'),
 		(p.alignV = 'middle'),
 		(p.alignH = 'center'),

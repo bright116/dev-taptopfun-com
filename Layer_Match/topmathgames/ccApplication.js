@@ -249,61 +249,36 @@
 			else this.startup();
 		}
 		startup() {
-      Laya.Tween.to(
-        this.perLoadScene,
-        { alpha: 0 },
-        1e3,
-        null,
-        Laya.Handler.create(this, () => {})
-      );
-			// if (cc.Application.isConchApp)
-			// 	if ((cc.Applicationbridge.call('startup'), this.perLoadScene))
-			// 		Laya.Tween.to(
-			// 			this.perLoadScene,
-			// 			{ alpha: 0 },
-			// 			1e3,
-			// 			null,
-			// 			Laya.Handler.create(this, () => {})
-			// 		);
-			// 	else {
-			// 		const e = { opacity: 1 };
-			// 		Laya.Tween.to(
-			// 			e,
-			// 			{
-			// 				opacity: 0,
-			// 				update: new Laya.Handler(this, () => {
-			// 					window.loadingView.loadingAlpha(e.opacity);
-			// 				}),
-			// 			},
-			// 			1e3,
-			// 			null,
-			// 			Laya.Handler.create(this, () => {
-			// 				window.loadingView.hideSplash();
-			// 			}),
-			// 			1e3
-			// 		);
-			// 	}
-			// else {
-			// 	const e = document.getElementById('splash');
-			// 	if (e) {
-			// 		const t = { opacity: 1 };
-			// 		Laya.Tween.to(
-			// 			t,
-			// 			{
-			// 				opacity: 0,
-			// 				update: new Laya.Handler(this, () => {
-			// 					e.style.opacity = t.opacity + '';
-			// 				}),
-			// 			},
-			// 			500,
-			// 			null,
-			// 			Laya.Handler.create(this, () => {
-			// 				e.style.display = 'none';
-			// 			})
-			// 		);
-			// 	}
-			// }
-			this.onStartup();
+			if (cc.Application.isConchApp) {
+				cc.Applicationbridge.call("startup");
+				const t = {
+						opacity: 1
+				};
+				Laya.Tween.to(t, {
+						opacity: 0,
+						update: new Laya.Handler(this, () => {
+								window.loadingView.loadingAlpha(t.opacity)
+						})
+				}, 1e3, null, Laya.Handler.create(this, () => {
+						window.loadingView.hideSplash()
+				}), 1e3)
+		} else {
+				const t = document.getElementById("splash");
+				if (t) {
+						const e = {
+								opacity: 1
+						};
+						Laya.Tween.to(e, {
+								opacity: 0,
+								update: new Laya.Handler(this, () => {
+										t.style.opacity = e.opacity + ""
+								})
+						}, 500, null, Laya.Handler.create(this, () => {
+								t.style.display = "none"
+						}))
+				}
+		}
+		this.onStartup()
 		}
 		onStartup() {}
 		onLoadAssetProgress(e) {}
