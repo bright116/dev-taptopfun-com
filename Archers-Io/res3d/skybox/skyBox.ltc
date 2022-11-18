@@ -1,0 +1,10 @@
+
+{
+    "front": "sky_pan.png",
+    "back": "sky_pan.png",
+    "left": "sky_pan.png",
+    "right": "sky_pan.png",
+    "up": "sky.png",
+    "down": "sky.png",
+    "size":512
+}

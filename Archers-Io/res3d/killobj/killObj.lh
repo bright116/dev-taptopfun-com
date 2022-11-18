@@ -1,0 +1,40 @@
+{
+	"version":"LAYAHIERARCHY:02",
+	"data":{
+		"type":"MeshSprite3D",
+		"instanceID":0,
+		"props":{
+			"name":"killObj",
+			"active":true,
+			"isStatic":false,
+			"layer":0,
+			"position":[
+				0,
+				5.3,
+				0
+			],
+			"rotation":[
+				0,
+				0,
+				0,
+				-1
+			],
+			"scale":[
+				3.6,
+				3.6,
+				3.6
+			],
+			"meshPath":"Library/unity default resources-Quad.lm",
+			"enableRender":true,
+			"receiveShadows":true,
+			"castShadow":true,
+			"materials":[
+				{
+					"path":"Assets/MyPrefab/killMat.lmat"
+				}
+			]
+		},
+		"components":[],
+		"child":[]
+	}
+}

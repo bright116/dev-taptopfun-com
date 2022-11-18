@@ -1,0 +1,40 @@
+{
+	"version":"LAYAHIERARCHY:02",
+	"data":{
+		"type":"MeshSprite3D",
+		"instanceID":33,
+		"props":{
+			"name":"Cube",
+			"active":true,
+			"isStatic":false,
+			"layer":0,
+			"position":[
+				-766.7407,
+				-172.0329,
+				670.9331
+			],
+			"rotation":[
+				0,
+				0,
+				0,
+				-1
+			],
+			"scale":[
+				1,
+				1,
+				1
+			],
+			"meshPath":"Library/unity default resources-Cube.lm",
+			"enableRender":true,
+			"receiveShadows":true,
+			"castShadow":true,
+			"materials":[
+				{
+					"path":"Assets/Material/matNormal.lmat"
+				}
+			]
+		},
+		"components":[],
+		"child":[]
+	}
+}

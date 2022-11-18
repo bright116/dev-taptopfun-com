@@ -1,0 +1,40 @@
+{
+	"version":"LAYAHIERARCHY:02",
+	"data":{
+		"type":"MeshSprite3D",
+		"instanceID":0,
+		"props":{
+			"name":"Arrow",
+			"active":true,
+			"isStatic":false,
+			"layer":4,
+			"position":[
+				0,
+				0.58,
+				0
+			],
+			"rotation":[
+				0,
+				0,
+				0,
+				-1
+			],
+			"scale":[
+				0.1,
+				0.1,
+				2.6
+			],
+			"meshPath":"Library/unity default resources-Cube.lm",
+			"enableRender":true,
+			"receiveShadows":true,
+			"castShadow":true,
+			"materials":[
+				{
+					"path":"Assets/MyPrefab/skin/skin6.lmat"
+				}
+			]
+		},
+		"components":[],
+		"child":[]
+	}
+}

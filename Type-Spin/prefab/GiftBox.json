@@ -1,0 +1,71 @@
+{
+    "type": "Box",
+    "props": {
+        "y": 75,
+        "x": 75,
+        "width": 150,
+        "skin": "game/icon_key_02.png",
+        "runtime": "script/Components/btncontroller.ts",
+        "presetID": 1,
+        "pivotY": 75,
+        "pivotX": 75,
+        "name": "GiftBox",
+        "isPresetRoot": true,
+        "height": 150,
+        "bgColor": "#ffffff"
+    },
+    "compId": 438,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "y": 75,
+                "x": 75,
+                "skin": "Other/SCZJUI/shop/icon_skin_02.png",
+                "presetID": 2,
+                "name": "img_bg",
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 399
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 60,
+                "x": 75,
+                "width": 70,
+                "skin": "Other/SCZJUI/chest/icon_skin_box.png",
+                "presetID": 3,
+                "name": "img_reward",
+                "height": 70,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 402
+        },
+        {
+            "type": "Label",
+            "props": {
+                "y": 117,
+                "x": 75,
+                "visible": false,
+                "text": "label",
+                "presetID": 4,
+                "name": "lab_reward",
+                "fontSize": 28,
+                "color": "#ffffff",
+                "bold": true,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 401
+        }
+    ],
+    "loadList": [
+        "game/icon_key_02.png",
+        "Other/SCZJUI/shop/icon_skin_02.png",
+        "Other/SCZJUI/chest/icon_skin_box.png"
+    ],
+    "loadList3D": []
+}

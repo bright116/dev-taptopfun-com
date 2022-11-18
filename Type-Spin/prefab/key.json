@@ -1,0 +1,25 @@
+{
+    "type": "Button",
+    "props": {
+        "y": 0,
+        "x": 0,
+        "var": "Q",
+        "stateNum": 1,
+        "skin": "Other/SCZJUI/gaming/btn_battle_key_02.png",
+        "sizeGrid": "20,23,24,17",
+        "runtime": "script/Components/btncontroller.ts",
+        "presetID": 1,
+        "labelSize": 30,
+        "labelBold": true,
+        "labelAlign": "center",
+        "label": "Q",
+        "isPresetRoot": true,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 828,
+    "loadList": [
+        "Other/SCZJUI/gaming/btn_battle_key_02.png"
+    ],
+    "loadList3D": []
+}

@@ -1,0 +1,1 @@
+{"type":"View","props":{"zOrder":10,"width":750,"top":0,"right":0,"name":"Main","mouseThrough":true,"left":0,"height":1334,"bottom":0},"compId":2,"child":[{"type":"Script","props":{"y":-1,"x":0,"runtime":"Scripts/GameCore/GameManager.ts"},"compId":3}],"loadList":[],"loadList3D":[]}

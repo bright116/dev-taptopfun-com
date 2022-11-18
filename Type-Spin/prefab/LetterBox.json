@@ -1,0 +1,35 @@
+{
+    "type": "Image",
+    "props": {
+        "y": 0,
+        "x": 0,
+        "skin": "Other/SCZJUI/collect/icon_shouji_bg_02a.png",
+        "presetID": 1,
+        "name": "Letter01",
+        "isPresetRoot": true,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 1028,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "y": 60,
+                "x": 55,
+                "skin": "Other/SCZJUI/collect/Word_A.png",
+                "presetID": 3,
+                "name": "lab_letter",
+                "anchorY": 0.5,
+                "anchorX": 0.5,
+                "alpha": 1
+            },
+            "compId": 1031
+        }
+    ],
+    "loadList": [
+        "Other/SCZJUI/collect/icon_shouji_bg_02a.png",
+        "Other/SCZJUI/collect/Word_A.png"
+    ],
+    "loadList3D": []
+}

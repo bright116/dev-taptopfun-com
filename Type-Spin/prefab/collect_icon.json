@@ -1,0 +1,46 @@
+{
+    "type": "Image",
+    "props": {
+        "y": 0,
+        "x": 0,
+        "skin": "Other/SCZJUI/gaming/icon_battle_mission_bg.png",
+        "presetID": 1,
+        "name": "collect_icon",
+        "isPresetRoot": true
+    },
+    "compId": 901,
+    "child": [
+        {
+            "type": "Label",
+            "props": {
+                "y": 29,
+                "x": 29,
+                "text": "A",
+                "presetID": 2,
+                "name": "Label",
+                "fontSize": 34,
+                "font": "Microsoft YaHei",
+                "bold": true,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 902
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 35,
+                "x": 33,
+                "skin": "Other/SCZJUI/gaming/icon_battle_get.png",
+                "presetID": 3,
+                "name": "geticon"
+            },
+            "compId": 903
+        }
+    ],
+    "loadList": [
+        "Other/SCZJUI/gaming/icon_battle_mission_bg.png",
+        "Other/SCZJUI/gaming/icon_battle_get.png"
+    ],
+    "loadList3D": []
+}

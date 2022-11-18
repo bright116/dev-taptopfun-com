@@ -1,0 +1,10 @@
+
+{
+    "front": "skydark.png",
+    "back": "skydark.png",
+    "left": "skydark.png",
+    "right": "skydark.png",
+    "up": "skydark.png",
+    "down": "skydark.png",
+    "size":512
+}

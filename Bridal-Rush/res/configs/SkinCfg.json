@@ -1,0 +1,47 @@
+{
+    "i0": {
+        "id": 0,
+        "name": "",
+        "prefabName": "role_01"
+    },
+    "i1": {
+        "id": 1,
+        "name": "",
+        "prefabName": "role_02"
+    },
+    "i2": {
+        "id": 2,
+        "name": "",
+        "prefabName": "role_03"
+    },
+    "i3": {
+        "id": 3,
+        "name": "",
+        "prefabName": "role_04"
+    },
+    "i4": {
+        "id": 4,
+        "name": "",
+        "prefabName": "role_05"
+    },
+    "i5": {
+        "id": 5,
+        "name": "",
+        "prefabName": "role_06"
+    },
+    "i6": {
+        "id": 6,
+        "name": "",
+        "prefabName": "role_07"
+    },
+    "i7": {
+        "id": 7,
+        "name": "",
+        "prefabName": "role_08"
+    },
+    "i8": {
+        "id": 8,
+        "name": "",
+        "prefabName": "role_09"
+    }
+}

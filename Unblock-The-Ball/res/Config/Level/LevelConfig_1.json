@@ -1,0 +1,87 @@
+{
+    "GameLevel": {
+        "BLv": 0,
+        "SLv": 1,
+        "Size": 4,
+        "Mode": 1,
+        "Award": 0
+    },
+    "Props": [
+        {
+            "Pos": 12,
+            "Type": 514,
+            "Star": 0
+        },
+        {
+            "Pos": 14,
+            "Type": 111,
+            "Star": 0
+        },
+        {
+            "Pos": 13,
+            "Type": 111,
+            "Star": 0
+        },
+        {
+            "Pos": 15,
+            "Type": 121,
+            "Star": 1
+        },
+        {
+            "Pos": 9,
+            "Type": 111,
+            "Star": 0
+        },
+        {
+            "Pos": 10,
+            "Type": 111,
+            "Star": 0
+        },
+        {
+            "Pos": 11,
+            "Type": 122,
+            "Star": 0
+        },
+        {
+            "Pos": 8,
+            "Type": 123,
+            "Star": 1
+        },
+        {
+            "Pos": 5,
+            "Type": 111,
+            "Star": 1,
+            "Newer": 1
+        },
+        {
+            "Pos": 4,
+            "Type": 112,
+            "Star": 0
+        },
+        {
+            "Pos": 6,
+            "Type": 200,
+            "Star": 0
+        },
+        {
+            "Pos": 7,
+            "Type": 200,
+            "Star": 0
+        },
+        {
+            "Pos": 3,
+            "Type": 613,
+            "Star": 0
+        },
+        {
+            "Pos": 0,
+            "Type": 224,
+            "Star": 0
+        },
+        {
+            "Pos": 2,
+            "Type": 211,
+            "Star": 0
+        }
+    ]
+}

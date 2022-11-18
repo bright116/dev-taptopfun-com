@@ -1,0 +1,40 @@
+{
+	"version":"LAYAHIERARCHY:02",
+	"data":{
+		"type":"MeshSprite3D",
+		"instanceID":34,
+		"props":{
+			"name":"Rope0",
+			"active":true,
+			"isStatic":false,
+			"layer":0,
+			"position":[
+				-14.06,
+				0,
+				0
+			],
+			"rotation":[
+				0,
+				0,
+				0,
+				-1
+			],
+			"scale":[
+				0.05,
+				1.75,
+				0.05
+			],
+			"meshPath":"Library/unity default resources-Cube.lm",
+			"enableRender":true,
+			"receiveShadows":true,
+			"castShadow":true,
+			"materials":[
+				{
+					"path":"Assets/Material/matNormal 1.lmat"
+				}
+			]
+		},
+		"components":[],
+		"child":[]
+	}
+}

@@ -1,0 +1,118 @@
+{
+    "type": "Image",
+    "props": {
+        "y": 0,
+        "x": 0,
+        "stateNum": 1,
+        "skin": "Other/SCZJUI/signin/bg_qiandao_01.png",
+        "sizeGrid": "20,17,23,17",
+        "presetID": 1,
+        "name": "signin",
+        "isPresetRoot": true,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 393,
+    "child": [
+        {
+            "type": "Sprite",
+            "props": {
+                "y": 63,
+                "x": 20,
+                "visible": true,
+                "texture": "Other/SCZJUI/signin/bg_qiandaoicon.png",
+                "presetID": 2,
+                "name": "box"
+            },
+            "compId": 395
+        },
+        {
+            "type": "Label",
+            "props": {
+                "y": 32,
+                "x": 75,
+                "valign": "middle",
+                "text": "DAY 1",
+                "presetID": 3,
+                "name": "daynum",
+                "fontSize": 24,
+                "font": "Microsoft YaHei",
+                "color": "#ffffff",
+                "bold": true,
+                "anchorY": 0.5,
+                "anchorX": 0.5,
+                "align": "center"
+            },
+            "compId": 394
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 116,
+                "x": 75,
+                "width": 80,
+                "presetID": 5,
+                "name": "rewardimg",
+                "height": 80,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 396
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 120,
+                "x": 75,
+                "width": 80,
+                "presetID": 6,
+                "name": "rewardimg2",
+                "height": 46,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 397
+        },
+        {
+            "type": "Label",
+            "props": {
+                "y": 155,
+                "x": 124,
+                "valign": "middle",
+                "text": "x999",
+                "strokeColor": "#000000",
+                "stroke": 3,
+                "presetID": 4,
+                "name": "rewardnum",
+                "fontSize": 22,
+                "font": "font",
+                "color": "#ffffff",
+                "bold": true,
+                "anchorY": 0.5,
+                "anchorX": 1,
+                "align": "right"
+            },
+            "compId": 398
+        },
+        {
+            "type": "Image",
+            "props": {
+                "y": 99,
+                "x": 75,
+                "visible": false,
+                "skin": "Other/SCZJUI/signin/icon_text_yilingqu.png",
+                "presetID": 7,
+                "name": "lingqu",
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 399
+        }
+    ],
+    "loadList": [
+        "Other/SCZJUI/signin/bg_qiandao_01.png",
+        "Other/SCZJUI/signin/bg_qiandaoicon.png",
+        "Other/SCZJUI/signin/icon_text_yilingqu.png"
+    ],
+    "loadList3D": []
+}

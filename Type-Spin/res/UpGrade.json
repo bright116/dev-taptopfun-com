@@ -1,0 +1,1 @@
+{"des":["[upgradeType]   升级类型：1：奔跑速度  2：跳跃高度  3：钻石加成 4：升级消耗钻石数量 ","[addition]    加成（每次升级）","[initial]    初始（1级）"],"upgrade":[{"upgradeType":"1","initial":1,"addition":"0.03"},{"upgradeType":"2","initial":1,"addition":"0.03"},{"upgradeType":"3","initial":1,"addition":"5"},{"upgradeType":"4","initial":100,"addition":"100"}]}

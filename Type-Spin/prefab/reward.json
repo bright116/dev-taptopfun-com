@@ -1,0 +1,41 @@
+{
+    "type": "Image",
+    "props": {
+        "y": 0,
+        "x": 0,
+        "width": 76,
+        "skin": "Other/SCZJUI/finish/icon_money_middle.png",
+        "presetID": 1,
+        "name": "reward",
+        "isPresetRoot": true,
+        "height": 76,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 24,
+    "child": [
+        {
+            "type": "Label",
+            "props": {
+                "y": 90,
+                "x": 38,
+                "valign": "middle",
+                "text": "300",
+                "presetID": 2,
+                "name": "rewardnum",
+                "fontSize": 24,
+                "font": "Helvetica",
+                "color": "#ffffff",
+                "bold": true,
+                "anchorY": 0.5,
+                "anchorX": 0.5,
+                "align": "center"
+            },
+            "compId": 27
+        }
+    ],
+    "loadList": [
+        "Other/SCZJUI/finish/icon_money_middle.png"
+    ],
+    "loadList3D": []
+}
