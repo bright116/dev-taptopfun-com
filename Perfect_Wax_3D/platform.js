@@ -479,132 +479,36 @@
 			audioEngine.muted = false;
 		}
 
-		//插屏广告
 		showInterstitial(complete) {
-			// console.log("插屏广告")
-			// complete && complete()
-			// return;
-			YYGGames.showInterstitial({
-				beforeShowAd: () => {
-					window.WebAudioEngine.adShowing = true;
-					this.onblur();
-					Laya.timer.scale = 0;
-					Laya.stage.renderingEnabled = false //停止渲染
-					Laya.updateTimer && Laya.updateTimer.pause() //停止onUpdate
-					Laya.physicsTimer && Laya.physicsTimer.pause() //停止物理
-					// window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "");
-				},
-				afterShowAd: () => {
-					window.focus();
-					this.onfocus();
-					window.WebAudioEngine.adShowing = false;
-					Laya.timer.scale = 1;
-					Laya.stage.renderingEnabled = true //恢复渲染
-					Laya.updateTimer && Laya.updateTimer.resume() //恢复onUpdate
-					Laya.physicsTimer && Laya.physicsTimer.resume() //恢复物理
-					// window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
-					complete && complete();
-				}
-			});
-
-
-			// if (GamemonetizeAds) {
-			//     GamemonetizeAds.showInterstitial(() => {
-			//         window.focus();
-			//         this.onfocus();
-			//         window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
-			//         complete && complete();
-			//     });
-			//     return;
-			// }
-
-			// YYGGames.showInterstitial(() => {
-
-			// });
-		}
+			console.log("请求插屏广告");
+	
+			// 展示插屏广告
+			HUHU_showInterstitialAd();
+	
+			// 继续游戏
+			complete && complete()
+			return;
+	}
 		//复活
 		showReward(success, failure) {
-			// console.log("激励广告")
-			// success && success()
-			// return;
-			if (!YYGGames.canShowReward()) {
-				this.prompt("No Available Video");
-				// this.showNoVideo();
-				return;
-			}
-			YYGGames.showReward({
-				beforeShowAd: () => {
-					window.WebAudioEngine.adShowing = true;
-					this.onblur();
-					Laya.timer.scale = 0;
-					Laya.stage.renderingEnabled = false //停止渲染
-					Laya.updateTimer && Laya.updateTimer.pause() //停止onUpdate
-					Laya.physicsTimer && Laya.physicsTimer.pause() //停止物理
-					// window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "");
+			console.log("请求激励广告");
+		
+		
+			HUHU_showRewardedVideoAd(
+				() => {
+						// 用户观看广告完成，继续游戏
+						success && success();
 				},
-				afterShowAd: () => {
-					window.focus();
-					this.onfocus();
-					window.WebAudioEngine.adShowing = false;
-					Laya.timer.scale = 1;
-					Laya.stage.renderingEnabled = true //恢复渲染
-					Laya.updateTimer && Laya.updateTimer.resume() //恢复onUpdate
-					Laya.physicsTimer && Laya.physicsTimer.resume() //恢复物理
-					// window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
-					// complete && complete();
-				},
-				rewardComplete: () => {
-
-					success && success();
-					success = null;
-				},
-				rewardDismissed: () => {
-
+				() => {
+					// 广告请求失败或者用户跳过广告
 					if (failure) {
-						failure();
-						failure = null;
+							failure();
 					}
-					// else {
-					// if (event == YYG.Event.AD_SKIPPED) {
-					this.prompt("Pls watch the ad completely, so that you can claim your reward");
-					// }
-					// }
+		
+		
+					promptMessage("Failed to get the reward, please watch the ads to the end.");
 				}
-			});
-
-			// if (GamemonetizeAds) {
-			//     GamemonetizeAds.showReward(() => {
-			//         window.focus();
-			//         this.onfocus();
-			//         window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
-			//         success && success();
-			//         success = null;
-			//     });
-			//     return;
-			// }
-
-			// YYGGames.adsManager.request(YYG.TYPE.REWARD, YYG.EventHandler.create(this, () => {
-			//     window.focus();
-			//     this.onfocus();
-			//     window.WebAudioEngine.adShowing = false;
-			//     window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
-			//     success && success();
-			//     success = null;
-			// }), YYG.EventHandler.create(this, (event) => {
-			//     window.focus();
-			//     this.onfocus();
-			//     window.WebAudioEngine.adShowing = false;
-			//     window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
-			//     if (failure) {
-			//         failure();
-			//         failure = null;
-			//     }
-			//     // else {
-			//     if (event == YYG.Event.AD_SKIPPED) {
-			//         this.prompt("Please watch the ad completely, so that you can claim your reward.");
-			//     }
-			//     // }
-			// }));
+			);
 		}
 
 		initList(appList) {
@@ -640,18 +544,7 @@
 			}.bind(this), duration);
 		}
 		getForgames() {
-			let sforgames = YYGGames.forgames || []; // YYGGames.forgames || []
-			// {
-			//     thumb:"adsfafa.png"
-			// }
-			let forgames = sforgames.slice();
-			for (let i = 0, length = forgames.length; i < length; i++) {
-				const random = Math.floor(Math.random() * (i + 1));
-				const item = forgames[random];
-				forgames[random] = forgames[i];
-				forgames[i] = item;
-			}
-			return forgames;
+			return []
 		}
 
 		createLogo() {
@@ -668,83 +561,61 @@
 		 * @param {*} name 
 		 * @param {*} complete 
 		 */
-		yadstartup(name, complete) {
+		 yadstartup(name, complete) {
 			if (!this.needStartUp) {
-				complete && complete();
+					complete && complete();
 			}
 			if (this.initialized_) return;
+			// platform.getInstance().showSplash();
+			platform.getInstance().createLogo();
 			this.createNoVideo();
 			this.createLoading();
 			window.WebAudioEngine.init().then(() => {
-				Laya.SoundManager.playMusic = function (url) {
-					window.WebAudioEngine && window.WebAudioEngine.playMusic(url);
-				}
-				Laya.SoundManager.playSound = function (url) {
-					window.WebAudioEngine && window.WebAudioEngine.playSound(url);
-				}
-				Laya.SoundManager.stopMusic = function (url) {
-					window.WebAudioEngine && window.WebAudioEngine.stopMusic();
-				}
+					Laya.SoundManager.playMusic = function(url) {
+							window.WebAudioEngine && window.WebAudioEngine.playMusic(url);
+					}
+					Laya.SoundManager.playSound = function(url, loop = false) {
+							window.WebAudioEngine && window.WebAudioEngine.playSound(url);
+					}
+					Laya.SoundManager.stopMusic = function() {
+							window.WebAudioEngine && window.WebAudioEngine.stopMusic();
+					}
+					Laya.SoundManager.stopSound = function(url) {
+							window.WebAudioEngine && window.WebAudioEngine.stopSound(url);
+					}
 			})
+	
+	
 			//临时锁死
 			this.initialized_ = true;
 			Laya.loader.load("cnf.json", Laya.Handler.create(this, (res) => {
-				YYGGames.startupByYad({
-					appName: name,
-					config: res,
-					complete: () => {
-						const platformType = YYGGames.getAdPlatformType();
-						switch (platformType) {
-							case AdPlatformType.en_GAMEDISTRIBUTION:
-							case AdPlatformType.en_XIAOMI:
-								window.yad && (window.yad.scale(0, 0), window.yad.removeSelf());
-								break;
-							default:
-								window.yad && Laya.stage.addChild(window.yad);
-								break;
-						}
-						this.needStartUp = false;
-						complete && complete();
-					}
-				});
-				// this.initialized_ = false;
-				// const gamemonetize = res["gamemonetize"];
-				// if (gamemonetize && gamemonetize.trim().length > 5) {
-				//     GamemonetizeAds = new GamemonetizeAdsInstance();
-				//     GamemonetizeAds.adsAsyncInit(name, YYG.ChannelType.YAD, gamemonetize).then(() => {
-				//         this.initialized_ = true;
-				//         complete && complete();
-				//     });
-				// } else {
-				//     YYGGames.on(YYG.Event._INITIALIZED, this, () => { complete && complete(); complete = null; this.initialized_ = true; });
-				//     let o = new YYG.Options();
-				//     o.gameNameId = name;
-				//     o.gamedistributionID = res["id"] || "";
-				//     YYGGames.__init__(YYG.ChannelType.YAD, o);
-				// }
+					// window.scrollList = this.scrollList();
+					// window.box_adTwo = this.box_adTwo();
+					this.needStartUp = false;
+					complete && complete();
 			}))
-		}
+	}
 
 		showBanner(data) {
-			if (data) {
-				YYGGames.showBanner(data)
-			} else {
-				YYGGames.showBanner()
-			}
+			// if (data) {
+			// 	YYGGames.showBanner(data)
+			// } else {
+			// 	YYGGames.showBanner()
+			// }
 		}
 		hideBanner() {
-			YYGGames.hideBanner()
+			// YYGGames.hideBanner()
 		}
 
 		showSplash(data) {
-			if (data) {
-				YYGGames.showSplash(data)
-			} else {
-				YYGGames.showSplash()
-			}
+			// if (data) {
+			// 	YYGGames.showSplash(data)
+			// } else {
+			// 	YYGGames.showSplash()
+			// }
 		}
 		hideSplash() {
-			YYGGames.hideSplash()
+			// YYGGames.hideSplash()
 		}
 
 

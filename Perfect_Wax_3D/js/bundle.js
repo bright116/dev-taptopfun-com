@@ -2728,7 +2728,7 @@
                 t("scripts/StageUpdate.ts", O), t("scripts/StartMenu.ts", z);
         }
     }
-    W.width = 750, W.height = 1334, W.scaleMode = "showall", W.screenMode = "none",
+    W.width = 750, W.height = 1334, W.scaleMode = "exactfit", W.screenMode = "none",
         W.alignV = "middle", W.alignH = "center", W.startScene = "Loading.scene", W.sceneRoot = "",
         W.debug = !1, W.stat = !1, W.physicsDebug = !1, W.exportSceneToJson = !0, W.init();
     new class {
