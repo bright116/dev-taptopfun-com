@@ -4540,7 +4540,7 @@
                 e("side/SideTwoScene.ts", Te), e("tips/MoveTipsScene.ts", Oe), e("tips/TipsScene.ts", Ge);
         }
     }
-    Re.width = 750, Re.height = 1334, Re.scaleMode = "showall", Re.screenMode = "none",
+    Re.width = 750, Re.height = 1334, Re.scaleMode = "exactfit", Re.screenMode = "none",
         Re.alignV = "middle", Re.alignH = "center", Re.startScene = "scene/LoadingScene.scene",
         Re.sceneRoot = "", Re.debug = !1, Re.stat = !1, Re.physicsDebug = !1, Re.exportSceneToJson = !0,
         Re.init();
