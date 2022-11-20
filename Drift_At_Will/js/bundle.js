@@ -5891,7 +5891,7 @@
                 }
             }]), GameConfig;
         }();
-        Ee.width = 750, Ee.height = 1335, Ee.scaleMode = "showall", Ee.screenMode = "none",
+        Ee.width = 750, Ee.height = 1335, Ee.scaleMode = "exactfit", Ee.screenMode = "none",
             Ee.alignV = "middle", Ee.alignH = "center", Ee.startScene = "sdk_youling/base/view/YLSplash.scene",
             Ee.sceneRoot = "", Ee.debug = !1, Ee.stat = !1, Ee.physicsDebug = !1, Ee.exportSceneToJson = !0,
             Ee.init();
@@ -7367,7 +7367,7 @@
                 }
             }]), GameConfig$1;
         }();
-        it.width = 750, it.height = 1334, it.scaleMode = "showall", it.screenMode = "none",
+        it.width = 750, it.height = 1334, it.scaleMode = "exactfit", it.screenMode = "none",
             it.alignV = "middle", it.alignH = "center", it.startScene = "test/TestScene.scene", it.sceneRoot = "",
             it.debug = !1, it.stat = !1, it.physicsDebug = !1, it.exportSceneToJson = !0, it.init();
         var at = {
