@@ -13617,7 +13617,7 @@ function _0x2e1b() {
         'script/MainUI.ts',
         'script/ShopUI.ts',
         'script/TurnTableUI.ts',
-        'showall',
+        'exactfit',
         'screenMode',
         'alignV',
         'alignH',

@@ -98,7 +98,7 @@ function _0x6aaf() {
         'Scripts/UI/StartPanel.ts',
         'Scripts/UI/TrySkinPanel.ts',
         'scaleMode',
-        'showall',
+        'exactfit',
         'screenMode',
         'alignV',
         'alignH',
