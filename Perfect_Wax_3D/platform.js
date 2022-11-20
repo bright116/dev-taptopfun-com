@@ -441,10 +441,10 @@
 			// if (YYGGames.isGamedistribution) {
 			//     return;
 			// }
-			if (this.canNavigateActive_) {
-				YYGGames.navigate(this.screen_, this.action_, this.to_);
-			}
-			this.canNavigateActive_ = false;
+			// if (this.canNavigateActive_) {
+			// 	YYGGames.navigate(this.screen_, this.action_, this.to_);
+			// }
+			// this.canNavigateActive_ = false;
 		}
 
 		getStorageSync(key) {

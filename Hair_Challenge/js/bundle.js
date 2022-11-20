@@ -3114,7 +3114,7 @@
                 e("scripts/stackIOViews/HairRushSuccessView.ts", I);
         }
     }
-    E.width = 750, E.height = 1334, E.scaleMode = "showall", E.screenMode = "none",
+    E.width = 750, E.height = 1334, E.scaleMode = "exactfit", E.screenMode = "none",
         E.alignV = "middle", E.alignH = "center", E.startScene = "views/login.scene", E.sceneRoot = "",
         E.debug = !1, E.stat = !1, E.physicsDebug = !1, E.exportSceneToJson = !0, E.init();
     new class {
