@@ -103,7 +103,7 @@ GlodeClass.GameWFScript = null;
                         a("Scripts/GameCore/GameManager.ts", r.default),
                         a("Scripts/UI/SkinView.ts", o.default),
                         a("View/TipsView/TipsView.ts", y.default);
-                }, GameConfig.width = 750, GameConfig.height = 1334, GameConfig.scaleMode = "showall",
+                }, GameConfig.width = 750, GameConfig.height = 1334, GameConfig.scaleMode = "exactfit",
                     GameConfig.screenMode = "none", GameConfig.alignV = "middle", GameConfig.alignH = "center",
                     GameConfig.startScene = "View/Main.scene", GameConfig.sceneRoot = "", GameConfig.debug = !1,
                     GameConfig.stat = !1, GameConfig.physicsDebug = !1, GameConfig.exportSceneToJson = !0,
