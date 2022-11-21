@@ -90,7 +90,7 @@ function _createClass(e, t, a) {
             }
         }]), GameConfig;
     }();
-    e.width = 750, e.height = 1334, e.scaleMode = "showall", e.screenMode = "none",
+    e.width = 750, e.height = 1334, e.scaleMode = "exactfit", e.screenMode = "none",
         e.alignV = "middle", e.alignH = "center", e.startScene = "", e.sceneRoot = "", e.debug = !1,
         e.stat = !1, e.physicsDebug = !1, e.exportSceneToJson = !1, e.init();
     var t = function Log() {
