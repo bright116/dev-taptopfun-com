@@ -1,0 +1,26 @@
+{
+    "1": {
+        "id": 1,
+        "sceneName": "GameScene123",
+        "path": "res3d/Game123.ls",
+        "duration": 90
+    },
+    "2": {
+        "id": 2,
+        "sceneName": "WirewalkingScene",
+        "path": "res3d/steel.ls",
+        "duration": 120
+    },
+    "3": {
+        "id": 3,
+        "sceneName": "GuessMarbleScene",
+        "path": "res3d/GameMarble.ls",
+        "duration": 100
+    },
+    "4": {
+        "id": 4,
+        "sceneName": "GlassBridgeScene",
+        "path": "res3d/ZglassRoad.ls",
+        "duration": 120
+    }
+}

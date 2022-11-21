@@ -1,0 +1,54 @@
+{
+	"version":"LAYAHIERARCHY:02",
+	"data":{
+		"type":"MeshSprite3D",
+		"instanceID":37,
+		"props":{
+			"name":"Quad",
+			"active":true,
+			"isStatic":false,
+			"layer":0,
+			"position":[
+				-0.032937,
+				-9.95,
+				-5.14
+			],
+			"rotation":[
+				-0.7071068,
+				0,
+				0,
+				-0.7071068
+			],
+			"scale":[
+				2000,
+				2000,
+				1
+			],
+			"meshPath":"Library/unity default resources-Quad.lm",
+			"enableRender":true,
+			"receiveShadows":false,
+			"castShadow":false,
+			"materials":[
+				{
+					"path":"Assets/Scenes/Mat/water.lmat"
+				}
+			]
+		},
+		"components":[
+			{
+				"type":"PhysicsCollider",
+				"restitution":0,
+				"friction":0.5,
+				"rollingFriction":0,
+				"shapes":[
+					{
+						"type":"MeshColliderShape",
+						"mesh":"Library/unity default resources-Quad.lm"
+					}
+				],
+				"isTrigger":false
+			}
+		],
+		"child":[]
+	}
+}

@@ -1,0 +1,1 @@
+{"compId":47,"child":[{"compId":48,"type":"Label","props":{"name":"label_cd","color":"#ffffff","text":"1:30","presetID":2,"fontSize":100,"centerX":0,"centerY":0,"bold":true}}],"type":"Box","props":{"name":"boxGameCD","width":383,"bgColor":"#000000","presetID":1,"height":161,"isPresetRoot":true,"y":0,"x":0},"loadList":[],"loadList3D":[]}

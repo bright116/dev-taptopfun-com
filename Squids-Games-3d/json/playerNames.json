@@ -1,0 +1,470 @@
+{
+    "1": {
+        "id": 1,
+        "name": "Valley",
+        "res": "res/head/img_head0.png",
+        "color": "#A5A0C4"
+    },
+    "2": {
+        "id": 2,
+        "name": "Roy",
+        "res": "res/head/img_head1.png",
+        "color": "#A5A0C4"
+    },
+    "3": {
+        "id": 3,
+        "name": "Godwin",
+        "res": "res/head/img_head2.png",
+        "color": "#A5A0C4"
+    },
+    "4": {
+        "id": 4,
+        "name": "Curby",
+        "res": "res/head/img_head3.png",
+        "color": "#A5A0C4"
+    },
+    "5": {
+        "id": 5,
+        "name": "Shelby",
+        "res": "res/head/img_head4.png",
+        "color": "#A5A0C4"
+    },
+    "6": {
+        "id": 6,
+        "name": "Poplaski",
+        "res": "res/head/img_head5.png",
+        "color": "#A5A0C4"
+    },
+    "7": {
+        "id": 7,
+        "name": "Cilek",
+        "res": "res/head/img_head6.png",
+        "color": "#A5A0C4"
+    },
+    "8": {
+        "id": 8,
+        "name": "Campana",
+        "res": "res/head/img_head7.png",
+        "color": "#A5A0C4"
+    },
+    "9": {
+        "id": 9,
+        "name": "Edmund",
+        "res": "res/head/img_head8.png",
+        "color": "#A5A0C4"
+    },
+    "10": {
+        "id": 10,
+        "name": "Jardin",
+        "res": "res/head/img_head9.png",
+        "color": "#A5A0C4"
+    },
+    "11": {
+        "id": 11,
+        "name": "Terhorst",
+        "res": "res/head/img_head10.png",
+        "color": "#A5A0C4"
+    },
+    "12": {
+        "id": 12,
+        "name": "Mosman",
+        "res": "res/head/img_head11.png",
+        "color": "#A5A0C4"
+    },
+    "13": {
+        "id": 13,
+        "name": "Hoyt",
+        "res": "res/head/img_head12.png",
+        "color": "#A5A0C4"
+    },
+    "14": {
+        "id": 14,
+        "name": "Sing",
+        "res": "res/head/img_head13.png",
+        "color": "#A5A0C4"
+    },
+    "15": {
+        "id": 15,
+        "name": "Finnell",
+        "res": "res/head/img_head14.png",
+        "color": "#A5A0C4"
+    },
+    "16": {
+        "id": 16,
+        "name": "Goodrum",
+        "res": "res/head/img_head15.png",
+        "color": "#A5A0C4"
+    },
+    "17": {
+        "id": 17,
+        "name": "Carter",
+        "res": "res/head/img_head16.png",
+        "color": "#A5A0C4"
+    },
+    "18": {
+        "id": 18,
+        "name": "Wallaert",
+        "res": "res/head/img_head17.png",
+        "color": "#A5A0C4"
+    },
+    "19": {
+        "id": 19,
+        "name": "Treffert",
+        "res": "res/head/img_head18.png",
+        "color": "#A5A0C4"
+    },
+    "20": {
+        "id": 20,
+        "name": "Rietdorf",
+        "res": "res/head/img_head19.png",
+        "color": "#A5A0C4"
+    },
+    "21": {
+        "id": 21,
+        "name": "Savers",
+        "res": "res/head/img_head20.png",
+        "color": "#A5A0C4"
+    },
+    "22": {
+        "id": 22,
+        "name": "Ramiez",
+        "res": "res/head/img_head21.png",
+        "color": "#A5A0C4"
+    },
+    "23": {
+        "id": 23,
+        "name": "Wilfred",
+        "res": "res/head/img_head22.png",
+        "color": "#A5A0C4"
+    },
+    "24": {
+        "id": 24,
+        "name": "Miquel",
+        "res": "res/head/img_head23.png",
+        "color": "#A5A0C4"
+    },
+    "25": {
+        "id": 25,
+        "name": "Sang",
+        "res": "res/head/img_head24.png",
+        "color": "#A5A0C4"
+    },
+    "26": {
+        "id": 26,
+        "name": "Donnell",
+        "res": "res/head/img_head25.png",
+        "color": "#A5A0C4"
+    },
+    "27": {
+        "id": 27,
+        "name": "Ike",
+        "res": "res/head/img_head26.png",
+        "color": "#A5A0C4"
+    },
+    "28": {
+        "id": 28,
+        "name": "Micah",
+        "res": "res/head/img_head27.png",
+        "color": "#A5A0C4"
+    },
+    "29": {
+        "id": 29,
+        "name": "Garfield",
+        "res": "res/head/img_head28.png",
+        "color": "#A5A0C4"
+    },
+    "30": {
+        "id": 30,
+        "name": "Gary",
+        "res": "res/head/img_head29.png",
+        "color": "#A5A0C4"
+    },
+    "31": {
+        "id": 31,
+        "name": "Gavin",
+        "res": "res/head/img_head30.png",
+        "color": "#A5A0C4"
+    },
+    "32": {
+        "id": 32,
+        "name": "Geoffrey",
+        "res": "res/head/img_head31.png",
+        "color": "#A5A0C4"
+    },
+    "33": {
+        "id": 33,
+        "name": "George",
+        "res": "res/head/img_head32.png",
+        "color": "#A5A0C4"
+    },
+    "34": {
+        "id": 34,
+        "name": "Gino",
+        "res": "res/head/img_head33.png",
+        "color": "#A5A0C4"
+    },
+    "35": {
+        "id": 35,
+        "name": "Glen",
+        "res": "res/head/img_head34.png",
+        "color": "#A5A0C4"
+    },
+    "36": {
+        "id": 36,
+        "name": "Glendon",
+        "res": "res/head/img_head35.jpg",
+        "color": "#A5A0C4"
+    },
+    "37": {
+        "id": 37,
+        "name": "Hank",
+        "res": "res/head/img_head36.jpg",
+        "color": "#A5A0C4"
+    },
+    "38": {
+        "id": 38,
+        "name": "Eric",
+        "res": "res/head/img_head37.jpg",
+        "color": "#A5A0C4"
+    },
+    "39": {
+        "id": 39,
+        "name": "Ron",
+        "res": "res/head/img_head38.jpg",
+        "color": "#A5A0C4"
+    },
+    "40": {
+        "id": 40,
+        "name": "Lydia",
+        "res": "res/head/img_head39.jpg",
+        "color": "#A5A0C4"
+    },
+    "41": {
+        "id": 41,
+        "name": "Page",
+        "res": "res/head/img_head40.jpg",
+        "color": "#A5A0C4"
+    },
+    "42": {
+        "id": 42,
+        "name": "Darcy",
+        "res": "res/head/img_head41.jpg",
+        "color": "#A5A0C4"
+    },
+    "43": {
+        "id": 43,
+        "name": "Susan",
+        "res": "res/head/img_head42.jpg",
+        "color": "#A5A0C4"
+    },
+    "44": {
+        "id": 44,
+        "name": "haggard",
+        "res": "res/head/img_head43.jpg",
+        "color": "#A5A0C4"
+    },
+    "45": {
+        "id": 45,
+        "name": "Blank°",
+        "res": "res/head/img_head44.jpg",
+        "color": "#A5A0C4"
+    },
+    "46": {
+        "id": 46,
+        "name": "Sally",
+        "res": "res/head/img_head45.jpg",
+        "color": "#A5A0C4"
+    },
+    "47": {
+        "id": 47,
+        "name": "sorrow",
+        "res": "res/head/img_head46.jpg",
+        "color": "#A5A0C4"
+    },
+    "48": {
+        "id": 48,
+        "name": "niki",
+        "res": "res/head/img_head47.jpg",
+        "color": "#A5A0C4"
+    },
+    "49": {
+        "id": 49,
+        "name": "NFATUATION",
+        "res": "res/head/img_head48.jpg",
+        "color": "#A5A0C4"
+    },
+    "50": {
+        "id": 50,
+        "name": "so",
+        "res": "res/head/img_head49.jpg",
+        "color": "#A5A0C4"
+    },
+    "51": {
+        "id": 51,
+        "name": "TheStarXo",
+        "res": "res/head/img_head50.jpg",
+        "color": "#A5A0C4"
+    },
+    "52": {
+        "id": 52,
+        "name": "cool",
+        "res": "res/head/img_head51.jpg",
+        "color": "#A5A0C4"
+    },
+    "53": {
+        "id": 53,
+        "name": "Ray",
+        "res": "res/head/img_head52.jpg",
+        "color": "#A5A0C4"
+    },
+    "54": {
+        "id": 54,
+        "name": "Phil",
+        "res": "res/head/img_head53.jpg",
+        "color": "#A5A0C4"
+    },
+    "55": {
+        "id": 55,
+        "name": "Alma",
+        "res": "res/head/img_head54.jpg",
+        "color": "#A5A0C4"
+    },
+    "56": {
+        "id": 56,
+        "name": "Ann",
+        "res": "res/head/img_head55.jpg",
+        "color": "#A5A0C4"
+    },
+    "57": {
+        "id": 57,
+        "name": "Hedy",
+        "res": "res/head/img_head56.jpg",
+        "color": "#A5A0C4"
+    },
+    "58": {
+        "id": 58,
+        "name": "Dora",
+        "res": "res/head/img_head57.jpg",
+        "color": "#A5A0C4"
+    },
+    "59": {
+        "id": 59,
+        "name": "Bella",
+        "res": "res/head/img_head58.jpg",
+        "color": "#A5A0C4"
+    },
+    "60": {
+        "id": 60,
+        "name": "Iy",
+        "res": "res/head/img_head59.jpg",
+        "color": "#A5A0C4"
+    },
+    "61": {
+        "id": 61,
+        "name": "Jack",
+        "res": "res/head/img_head60.jpg",
+        "color": "#A5A0C4"
+    },
+    "62": {
+        "id": 62,
+        "name": "Joab",
+        "res": "res/head/img_head61.jpg",
+        "color": "#A5A0C4"
+    },
+    "63": {
+        "id": 63,
+        "name": "John",
+        "res": "res/head/img_head62.jpg",
+        "color": "#A5A0C4"
+    },
+    "64": {
+        "id": 64,
+        "name": "Bob",
+        "res": "res/head/img_head63.jpg",
+        "color": "#A5A0C4"
+    },
+    "65": {
+        "id": 65,
+        "name": "Dick",
+        "res": "res/head/img_head64.jpg",
+        "color": "#A5A0C4"
+    },
+    "66": {
+        "id": 66,
+        "name": "Eli",
+        "res": "res/head/img_head65.jpg",
+        "color": "#A5A0C4"
+    },
+    "67": {
+        "id": 67,
+        "name": 45643123,
+        "res": "res/head/img_head66.jpg",
+        "color": "#A5A0C4"
+    },
+    "68": {
+        "id": 68,
+        "name": 87643212,
+        "res": "res/head/img_head67.jpg",
+        "color": "#A5A0C4"
+    },
+    "69": {
+        "id": 69,
+        "name": 813213248,
+        "res": "res/head/img_head68.jpg",
+        "color": "#A5A0C4"
+    },
+    "70": {
+        "id": 70,
+        "name": 543212153,
+        "res": "res/head/img_head69.jpg",
+        "color": "#A5A0C4"
+    },
+    "71": {
+        "id": 71,
+        "name": 439665432,
+        "res": "res/head/img_head70.jpg",
+        "color": "#A5A0C4"
+    },
+    "72": {
+        "id": 72,
+        "name": 3247895641,
+        "res": "res/head/img_head71.jpg",
+        "color": "#A5A0C4"
+    },
+    "73": {
+        "id": 73,
+        "name": 9654813546,
+        "res": "res/head/img_head72.jpg",
+        "color": "#A5A0C4"
+    },
+    "74": {
+        "id": 74,
+        "name": 8755643214,
+        "res": "res/head/img_head73.jpg",
+        "color": "#A5A0C4"
+    },
+    "75": {
+        "id": 75,
+        "name": 165795497,
+        "res": "res/head/img_head74.jpg",
+        "color": "#A5A0C4"
+    },
+    "76": {
+        "id": 76,
+        "name": 19986576,
+        "res": "res/head/img_head75.jpg",
+        "color": "#A5A0C4"
+    },
+    "77": {
+        "id": 77,
+        "name": 357986212,
+        "res": "res/head/img_head76.jpg",
+        "color": "#A5A0C4"
+    },
+    "78": {
+        "id": 78,
+        "name": 75648753,
+        "res": "res/head/img_head77.jpg",
+        "color": "#A5A0C4"
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "1": {
+        "id": 1,
+        "cntPercent": 0.1,
+        "countdownRange": [
+            0,
+            0.2
+        ],
+        "freeRateBeforeOnWay": [
+            0,
+            0.2
+        ],
+        "changeBehaviorDelta": [
+            1.5,
+            2
+        ],
+        "stayRate": 0.6,
+        "stayDuration": [
+            0.3,
+            1
+        ],
+        "backRate": 0.01,
+        "changeDirRate": 0
+    },
+    "2": {
+        "id": 2,
+        "cntPercent": 0.5,
+        "countdownRange": [
+            0.5,
+            1
+        ],
+        "freeRateBeforeOnWay": [
+            0.1,
+            0.3
+        ],
+        "changeBehaviorDelta": [
+            1.5,
+            2
+        ],
+        "stayRate": 0.7,
+        "stayDuration": [
+            0.4,
+            1
+        ],
+        "backRate": 0.01,
+        "changeDirRate": 0.03
+    },
+    "3": {
+        "id": 3,
+        "cntPercent": 1,
+        "countdownRange": [
+            0.8,
+            0.9
+        ],
+        "freeRateBeforeOnWay": [
+            0.3,
+            0.8
+        ],
+        "changeBehaviorDelta": [
+            1.5,
+            2
+        ],
+        "stayRate": 0.8,
+        "stayDuration": [
+            0.5,
+            1
+        ],
+        "backRate": 0.03,
+        "changeDirRate": 0.05
+    }
+}

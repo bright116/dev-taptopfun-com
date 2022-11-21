@@ -1,0 +1,390 @@
+{
+    "PRODUCT_START": {
+        "states": [
+            "FULL_1",
+            "FULL_2"
+        ]
+    },
+    "PRODUCT_START.READY": {
+        "base": [
+            {
+                "type": "export_button",
+                "key": "test",
+                "window": {
+                    "align": "bottom"
+                },
+                "base": {
+                    "width": 349,
+                    "height": 160,
+                    "fill": "width",
+                    "offsety": -200,
+                    "switch": "zs_banner_vertical_enable",
+                    "autooffset": {
+                        "button_delay": "zs_button_delay_time"
+                    },
+                    "event": "event_childnext",
+                    "url": [
+                        "export/export",
+                        "btn_continue_new"
+                    ]
+                }
+            }
+        ]
+    },
+    "PRODUCT_START.FULL_1": {
+        "switch": [
+            "zs_full_screen2_jump",
+            "zs_auto_full_screen_jump_switch"
+        ],
+        "base": {
+            "type": "export_full_2",
+            "key": "full_2",
+            "window": {
+                "align": "topleft",
+                "fit": true,
+                "block": true
+            }
+        }
+    },
+    "PRODUCT_START.FULL_2": {
+        "switch": [
+            "zs_full_screen1_jump",
+            "zs_auto_full_screen_jump_switch"
+        ],
+        "base": {
+            "type": "export_full_1",
+            "key": "full_1",
+            "window": {
+                "align": "topleft",
+                "fit": true,
+                "block": true
+            }
+        }
+    },
+    "PRODUCT_BEGIN": {
+        "switch": "!"
+    },
+    "GAME_HOME": {
+        "exporter": [
+            {
+                "type": "export_list",
+                "switch": "zs_game_start_jump_switch",
+                "window": {
+                    "align": "topleft",
+                    "alignoffsety": 400
+                },
+                "base": {
+                    "item": "export_item_2",
+                    "mode": "side",
+                    "width": 350,
+                    "max": 3,
+                    "shaketime": 3000
+                }
+            },
+            {
+                "type": "export_list",
+                "switch": "zs_game_start_jump_switch",
+                "window": {
+                    "align": "topright",
+                    "alignoffsety": 400
+                },
+                "base": {
+                    "item": "export_item_2",
+                    "mode": "side",
+                    "width": 350,
+                    "max": 3,
+                    "shaketime": 3000
+                }
+            },
+            {
+                "type": "export_list",
+                "switch": "zs_game_start_jump_switch",
+                "window": {
+                    "align": "top",
+                    "alignoffsety": 80
+                },
+                "base": {
+                    "item": "export_item_8",
+                    "mode": "hlist",
+                    "height": 270,
+                    "max": 10,
+                    "marginleft": 10,
+                    "marginright": 10,
+                    "background": [
+                        "export/export",
+                        "bg_bg"
+                    ]
+                }
+            },
+            {
+                "type": "export_side",
+                "switch": "zs_game_start_jump_switch",
+                "window": {
+                    "align": "left",
+                    "alignoffsety": 100,
+                    "scale": [
+                        0.9,
+                        0.9
+                    ]
+                }
+            },
+            {
+                "type": "export_fake_exit",
+                "switch": [
+                    "zs_game_start_jump_switch",
+                    "zs_history_list_jump"
+                ],
+                "window": {
+                    "align": "topleft",
+                    "alignoffsetx": 10,
+                    "alignoffsety": 20
+                },
+                "base": {
+                    "event": "event_full_2"
+                }
+            }
+        ]
+    },
+    "PRODUCT_HOME_PLAY": {
+        "states": [
+            "VIDEO",
+            "EGG"
+        ]
+    },
+    "PRODUCT_HOME_PLAY.VIDEO": {
+        "switch": "zs_start_game_video_switch",
+        "event": "event_start_video"
+    },
+    "PRODUCT_HOME_PLAY.EGG": {
+        "check": {
+            "event_check_egg": true
+        },
+        "base": {
+            "type": "export_common_egg",
+            "window": {
+                "align": "topleft",
+                "fit": true,
+                "block": true
+            },
+            "base": {
+                "awardevent": null,
+                "closeevent": "event_childnext"
+            }
+        }
+    },
+    "GAME_PLAY": {
+        "states": [
+            "START",
+            "READY",
+            "PLAY",
+            "SETTLE",
+            "END"
+        ]
+    },
+    "GAME_PLAY.START": {
+        "exporter": {
+            "type": "export_fake_exit",
+            "switch": "zs_history_list_jump",
+            "window": {
+                "align": "topleft",
+                "alignoffsetx": 10,
+                "alignoffsety": 20
+            },
+            "base": {
+                "event": "event_full_2"
+            }
+        }
+    },
+    "GAME_PLAY.READY": {
+        "exporter": {
+            "type": "export_fake_exit",
+            "switch": "zs_history_list_jump",
+            "window": {
+                "align": "topleft",
+                "alignoffsetx": 10,
+                "alignoffsety": 20
+            },
+            "base": {
+                "event": "event_full_2"
+            }
+        }
+    },
+    "GAME_PLAY.PLAY": {
+        "banner": {
+            "switch": "zs_game_banner_show_switch",
+            "auto": true,
+            "checkInit": true
+        },
+        "exporter": [
+            {
+                "type": "export_fake_exit",
+                "switch": "zs_history_list_jump",
+                "window": {
+                    "align": "topleft",
+                    "alignoffsetx": 10,
+                    "alignoffsety": 20
+                },
+                "base": {
+                    "event": "event_full_2"
+                }
+            }
+        ]
+    },
+    "GAME_PLAY.SETTLE": {
+        "exporter": {
+            "type": "export_fake_exit",
+            "switch": "zs_history_list_jump",
+            "window": {
+                "align": "topleft",
+                "alignoffsetx": 10,
+                "alignoffsety": 20
+            },
+            "base": {
+                "event": "event_full_2"
+            }
+        }
+    },
+    "GAME_PLAY.END": {
+        "exporter": {
+            "type": "export_fake_exit",
+            "switch": "zs_history_list_jump",
+            "window": {
+                "align": "topleft",
+                "alignoffsetx": 10,
+                "alignoffsety": 20
+            },
+            "base": {
+                "event": "event_full_2"
+            }
+        }
+    },
+    "PRODUCT_PLAY_END": {
+        "states": [
+            "EGG",
+            "FULL_1",
+            "SETTLE",
+            "FULL_2"
+        ]
+    },
+    "PRODUCT_PLAY_END.EGG": {
+        "switch": "!"
+    },
+    "PRODUCT_PLAY_END.FULL_1": {
+        "switch": "zs_full_screen1_jump",
+        "base": {
+            "type": "export_full_1",
+            "key": "full_1",
+            "window": {
+                "align": "topleft",
+                "fit": true,
+                "block": true
+            }
+        }
+    },
+    "PRODUCT_PLAY_END.FULL_2": {
+        "switch": "zs_full_screen2_jump",
+        "base": {
+            "type": "export_full_2",
+            "key": "full_2",
+            "window": {
+                "align": "topleft",
+                "fit": true,
+                "block": true
+            }
+        }
+    },
+    "PRODUCT_PLAY_END.SETTLE": {
+        "switch": [
+            "!zs_skip_settle",
+            "zs_version"
+        ],
+        "banner": {
+            "delay": true
+        },
+        "base": [
+            {
+                "type": "export_background",
+                "window": {
+                    "align": "topleft",
+                    "fit": true,
+                    "block": true
+                },
+                "base": {
+                    "color": "#43507a",
+                    "alpha": 1
+                }
+            },
+            {
+                "type": "export_loader",
+                "window": {
+                    "align": "top",
+                    "alignoffsety": 100
+                },
+                "base": {
+                    "width": 800,
+                    "fill": "width",
+                    "url": [
+                        "export/export",
+                        "over"
+                    ]
+                }
+            },
+            {
+                "type": "export_button",
+                "window": {
+                    "align": "bottom"
+                },
+                "base": {
+                    "switch": "zs_banner_vertical_enable",
+                    "width": 200,
+                    "fill": "width",
+                    "offsety": -300,
+                    "autooffset": {
+                        "event_product_value": "zs_button_delay_time"
+                    },
+                    "event": "event_childnext",
+                    "url": [
+                        "export/export",
+                        "btn_GoOn"
+                    ]
+                }
+            }
+        ],
+        "exporter": [
+            {
+                "type": "export_knock",
+                "switch": "zs_finish_jump",
+                "window": {
+                    "align": "top",
+                    "alignoffsety": 400
+                }
+            },
+            {
+                "type": "export_fake_exit",
+                "switch": "zs_history_list_jump",
+                "window": {
+                    "align": "topleft",
+                    "alignoffsetx": 10,
+                    "alignoffsety": 20
+                },
+                "base": {
+                    "event": "event_full_2"
+                }
+            },
+            {
+                "type": "export_fake_msg",
+                "switch": "zs_false_news_switch",
+                "window": {
+                    "align": "top"
+                },
+                "base": {
+                    "posy": 200,
+                    "event": "event_challenge_export"
+                }
+            }
+        ]
+    },
+    "PRODUCT_FINISH": {
+        "switch": "!"
+    }
+}

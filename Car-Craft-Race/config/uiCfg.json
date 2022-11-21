@@ -1,0 +1,98 @@
+{
+    "base": {
+        "btn_full_1": {
+            "type": "export_button",
+            "window": {
+                "align": "bottom",
+                "alignoffsety": -10
+            },
+            "base": {
+                "switch": [
+                    "zs_banner_vertical_enable",
+                    "zs_full_screen_button_switch"
+                ],
+                "width": 498,
+                "height": 228,
+                "offsety": -280,
+                "fakeevent": "event_full_continue",
+                "event": "event_full_next",
+                "url": [
+                    "export/export",
+                    "btn_continue_new"
+                ]
+            }
+        },
+        "btn_full_2": {
+            "type": "export_button",
+            "window": {
+                "align": "bottom",
+                "alignoffsety": -10
+            },
+            "base": {
+                "switch": [
+                    "zs_banner_vertical_enable",
+                    "zs_full_screen_button_switch"
+                ],
+                "width": 498,
+                "height": 228,
+                "offsety": -280,
+                "fakeevent": "event_full_continue",
+                "event": "event_full_next",
+                "url": [
+                    "export/export",
+                    "btn_continue"
+                ]
+            }
+        },
+        "btn_full_1_close": {
+            "type": "export_button",
+            "window": {
+                "align": "bottom",
+                "alignoffsety": -10
+            },
+            "base": {
+                "switch": [
+                    "zs_banner_vertical_enable",
+                    "zs_full_screen_button_switch"
+                ],
+                "width": 498,
+                "height": 228,
+                "offsety": -280,
+                "fakeevent": "event_full_continue",
+                "event": "event_hide_full",
+                "url": [
+                    "export/export",
+                    "btn_continue_new"
+                ]
+            }
+        },
+        "btn_full_2_close": {
+            "type": "export_button",
+            "window": {
+                "align": "bottom",
+                "alignoffsety": -10
+            },
+            "base": {
+                "switch": [
+                    "zs_banner_vertical_enable",
+                    "zs_full_screen_button_switch"
+                ],
+                "width": 498,
+                "height": 228,
+                "offsety": -280,
+                "fakeevent": "event_full_continue",
+                "event": "event_hide_full",
+                "url": [
+                    "export/export",
+                    "btn_continue"
+                ]
+            }
+        }
+    },
+    "binder": {
+        "full_1": "btn_full_1",
+        "full_2": "btn_full_2",
+        "full_1_popup": "btn_full_1_close",
+        "full_2_popup": "btn_full_2_close"
+    }
+}

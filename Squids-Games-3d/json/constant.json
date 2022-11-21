@@ -1,0 +1,45 @@
+{
+    "RobotsCnt": 100,
+    "MoveSpeed": 10,
+    "JumpSpeed": 5,
+    "WM_GameTime": [
+        100,
+        90,
+        80
+    ],
+    "WM_GhostBackTime": [
+        4.6,
+        3.84,
+        3.2,
+        2.67,
+        2.22,
+        1.85,
+        1.43,
+        1.1
+    ],
+    "WM_GhostChoose": [
+        [
+            1,
+            2,
+            3
+        ],
+        [
+            3,
+            4,
+            5,
+            6
+        ],
+        [
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    ],
+    "WM_GhostKillTime": 2,
+    "GB_GameTime": 120,
+    "GB_MoveSpeed": 3,
+    "GB_JumpSpeed": 8,
+    "GB_Gravity": -10
+}

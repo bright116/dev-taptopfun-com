@@ -1,0 +1,42 @@
+{
+    "1": {
+        "id": 1,
+        "playerNum": 3,
+        "levName": "lvl_2"
+    },
+    "2": {
+        "id": 2,
+        "playerNum": 4,
+        "levName": "lvl_3"
+    },
+    "3": {
+        "id": 3,
+        "playerNum": 5,
+        "levName": "lvl_5"
+    },
+    "4": {
+        "id": 4,
+        "playerNum": 6,
+        "levName": "lvl_6"
+    },
+    "5": {
+        "id": 5,
+        "playerNum": 7,
+        "levName": "lvl_7"
+    },
+    "6": {
+        "id": 6,
+        "playerNum": 8,
+        "levName": "lvl_9"
+    },
+    "7": {
+        "id": 7,
+        "playerNum": 9,
+        "levName": "lvl_10"
+    },
+    "8": {
+        "id": 8,
+        "playerNum": 10,
+        "levName": "lvl_12"
+    }
+}

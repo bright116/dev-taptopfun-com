@@ -1,0 +1,6 @@
+F:/Awork/WAN/laya2.11/SquidGame/trunk/cfg_c/json/constant.json
+F:/Awork/WAN/laya2.11/SquidGame/trunk/cfg_c/json/glassBridgeCfg.json
+F:/Awork/WAN/laya2.11/SquidGame/trunk/cfg_c/json/miniGameCfg.json
+F:/Awork/WAN/laya2.11/SquidGame/trunk/cfg_c/json/playerNames.json
+F:/Awork/WAN/laya2.11/SquidGame/trunk/cfg_c/json/soundCfg.json
+F:/Awork/WAN/laya2.11/SquidGame/trunk/cfg_c/json/wirewalkingAI.json

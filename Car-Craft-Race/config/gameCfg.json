@@ -1,0 +1,94 @@
+{
+    "debug": false,
+    "pure": false,
+    "appName": "",
+    "version": "1.0.0",
+    "gameId": "cjpzs",
+    "appId": "wx6f4c4c23e6feb33c",
+    "tdKey": "1c6d1cb76d524dd3b807e61c8f8fbec3",
+    "tdVersion": "1.0.0",
+    "aldKey": "47a0fdf78d477061bf30e909a28ec245",
+    "newAds": false,
+    "tdConfig": {
+        "gameComplete": {
+            "label": "",
+            "params": [
+                "uid",
+                "isWin",
+                "level"
+            ],
+            "strict": true
+        },
+        "levelComplete_": {
+            "label": "-"
+        }
+    },
+    "fguiPacks": [
+        "fgui/main1"
+    ],
+    "autoScaleFit": true,
+    "designWidth": 1080,
+    "designHeight": 1920,
+    "network": {
+        "login": {
+            "user_id": 1,
+            "is_new": 0,
+            "user_type": 1
+        },
+        "config>>switch": {
+            "zs_version": 0,
+            "zs_switch": 0,
+            "zs_start_game_video_switch": 0,
+            "zs_banner_vertical_enable": 0,
+            "zs_jump_switch": 0,
+            "zs_full_screen1_jump": 0,
+            "zs_full_screen2_jump": 0,
+            "zs_finish_jump": 0,
+            "zs_history_list_jump": 0,
+            "zs_auto_full_screen_jump_switch": 0,
+            "zs_auto_jump_switch": 0,
+            "zs_friends_playing_switch": 0,
+            "zs_reminder_switch": 0,
+            "zs_false_news_switch": 0,
+            "zs_slide_jump_switch": 0,
+            "zs_share_title": "",
+            "zs_share_img": "",
+            "zs_banner_adunit": "",
+            "zs_banner_adunit2": "",
+            "zs_banner_adunit3": "",
+            "zs_video_adunit": "",
+            "zs_full_screen_adunit": "",
+            "zs_gridAd_id": "",
+            "zs_click_award_num": "0",
+            "zs_ready_click_num": "0",
+            "zs_click_award_since": 0,
+            "zs_button_delay_time": 0,
+            "zs_scene_value": "1005|1006|1011|1012|1013|1014|1017|1019|1020|1023|1024|1025|1030|1031|1032|1036|1042|1047|1048|1049|1053|1102|1129",
+            "zs_revive_way": "",
+            "zs_revive_num": 0,
+            "zs_system": "",
+            "zs_city": "",
+            "zs_time": "",
+            "zs_banner_banner_time": 1000,
+            "zs_full_screen_banner_time": 3,
+            "zs_banner_refresh_time": 30000
+        },
+        "download>>LevelInfo": {
+            "level": 0
+        }
+    },
+    "subpackages": {
+        "*3dres": "3dres/",
+        "*libs": "libs/"
+    },
+    "resources": {
+        "configs": {
+            "combo": [
+                "config/jellyCombo.json",
+                null,
+                true
+            ]
+        },
+        "prefabs": {}
+    }
+}

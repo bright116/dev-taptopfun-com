@@ -1,0 +1,1 @@
+{"compId":242,"child":[{"compId":244,"type":"Script","props":{"customId":"adunit-fab7eb626caab993","runtime":"modules/WXExportAd/CustomAd.ts","presetID":2}}],"type":"Box","props":{"name":"CustomAd","width":720,"presetID":1,"height":212,"isPresetRoot":true,"y":0,"x":0},"loadList":[],"loadList3D":[]}

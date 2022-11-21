@@ -1,0 +1,320 @@
+{
+    "comboList": {
+        "hand": [
+            {
+                "name": "attack_1",
+                "damage": 6,
+                "speed": 1,
+                "AtkPoint": "1",
+                "hitedAnim": "currency_hit",
+                "hitedType": "HITED",
+                "damageRange": "0.7",
+                "durability": -1,
+                "backPower": 2,
+                "backTimes": 2,
+                "hitedPlaySpeed": 0.65,
+                "hited_sound": "sfx_hand_Hit",
+                "attack_1_moveTimes": 5
+            }
+        ]
+    },
+    "AtkPointUrl": {
+        "point1": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/atkPoint",
+        "point2": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001 L Hand/atkPoint",
+        "point3": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/atkPoint",
+        "point4": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf/Bip001 R Foot/atkPoint",
+        "point5": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/longweapons/longweapons2/atkPoint",
+        "point6": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/longweapons/longweapons1/atkPoint",
+        "point7": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/longweapons/longweapons3/atkPoint",
+        "point8": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/heavyweapons/heavyweapons1/atkPoint",
+        "point9": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/heavyweapons/heavyweapons2/atkPoint",
+        "point10": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/heavyweapons/heavyweapons3/atkPoint",
+        "point11": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/shortweapons/shortweapons1/atkPoint",
+        "point12": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/shortweapons/shortweapons2/atkPoint",
+        "point13": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/shortweapons/shortweapons3/atkPoint"
+    },
+    "effectCfg_comment": "角色动态加载的特效,name：特效名称, url：特效挂载的地址",
+    "effectConfig": [
+        {
+            "name": "ef_boxing_attack",
+            "url": ""
+        },
+        {
+            "name": "ef_boxing_attack1",
+            "url": ""
+        },
+        {
+            "name": "ef_boxing_attack2",
+            "url": ""
+        },
+        {
+            "name": "ef_boxing_attack3",
+            "url": ""
+        },
+        {
+            "name": "ef_boxing_sprint",
+            "url": ""
+        },
+        {
+            "name": "ef_WGFJL_allhit",
+            "url": ""
+        },
+        {
+            "name": "ef_WGFJL_hammeratkHit",
+            "url": ""
+        },
+        {
+            "name": "ef_WGFJL_heavyweapons1",
+            "url": "heavyweapons/heavyweapons1/atkPoint",
+            "trail": true
+        },
+        {
+            "name": "ef_WGFJL_heavyweapons2",
+            "url": "heavyweapons/heavyweapons2/atkPoint",
+            "trail": true
+        },
+        {
+            "name": "ef_WGFJL_heavyweapons3",
+            "url": "heavyweapons/heavyweapons3/atkPoint",
+            "trail": true
+        },
+        {
+            "name": "ef_WGFJL_longweapons1",
+            "url": "longweapons/longweapons1/atkPoint",
+            "trail": true
+        },
+        {
+            "name": "ef_WGFJL_longweapons2",
+            "url": "longweapons/longweapons2/atkPoint",
+            "trail": true
+        },
+        {
+            "name": "ef_WGFJL_longweapons3",
+            "url": "longweapons/longweapons3/atkPoint",
+            "trail": true
+        },
+        {
+            "name": "ef_WGFJL_shortweapons1",
+            "url": "shortweapons/shortweapons1/atkPoint",
+            "trail": true
+        },
+        {
+            "name": "ef_WGFJL_shortweapons2",
+            "url": "shortweapons/shortweapons2/atkPoint",
+            "trail": true
+        },
+        {
+            "name": "ef_WGFJL_shortweapons3",
+            "url": "shortweapons/shortweapons3/atkPoint",
+            "trail": true
+        }
+    ],
+    "aiCfg": {
+        "ai_minAtk": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            0.5
+        ],
+        "ai_maxAtk": [
+            15,
+            15,
+            15,
+            15,
+            15,
+            3
+        ],
+        "ai_detectionInterval": 20,
+        "ai_collect": 20,
+        "ai_hitEscape_min": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+        ],
+        "ai_hitEscape_max": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            4
+        ],
+        "ai_minEscapeIn": [
+            30,
+            30,
+            30,
+            30,
+            30,
+            30
+        ],
+        "ai_maxEscapeIn": [
+            220,
+            220,
+            220,
+            220,
+            220,
+            250
+        ],
+        "ai_minEscape": [
+            160,
+            170,
+            180,
+            190,
+            200,
+            240
+        ],
+        "ai_maxEscape": [
+            230,
+            230,
+            230,
+            270,
+            280,
+            340
+        ],
+        "ai_grabAirdrop": 1,
+        "ai_detectionRange": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+        ],
+        "ai_collect_Rate": [
+            0,
+            0,
+            10,
+            20,
+            30,
+            80
+        ],
+        "ai_attack_player_Rate": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            100
+        ],
+        "ai_find_item_range": [
+            4,
+            4,
+            3,
+            3,
+            3,
+            3
+        ]
+    },
+    "killReward": [
+        30,
+        30,
+        30,
+        30
+    ],
+    "baseReward": [
+        40,
+        40,
+        40,
+        40
+    ],
+    "spawnItemNum": 4,
+    "autoAttackTime": 0,
+    "autoAttackRange": 5,
+    "hatRequire": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+    ],
+    "unlockCharRequire": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+    ],
+    "hand_atk": "1",
+    "foot_atk": "1",
+    "body_atk": "1",
+    "trample_atk": "9",
+    "body_hp": "1",
+    "shape_upNumber": "0.25",
+    "hp_upNumber": "1",
+    "atk_upNumber": "100",
+    "gameTimes": "60",
+    "hand_atkSpeed": "1.1",
+    "foot_atkSpeed": "1.1",
+    "body_atkSpeed": "1.5",
+    "trample_atkSpeed": "1",
+    "bothLegs_move": "3",
+    "oneLeg_move": "2",
+    "crawling_move": "1.5",
+    "enemySlim_move": "2",
+    "roleSlim_move": "4",
+    "attacking_speed": "0.8",
+    "backPowerTimes": "6.5",
+    "backPowerRate": "40",
+    "handStartAtkFrame": "10",
+    "footStartAtkFrame": "6",
+    "bodyStartAtkFrame": "4",
+    "trampleStartAtkFrame": "20",
+    "trampleRange": "1",
+    "backPowerHpRate": 12,
+    "backPower": 4,
+    "unstoppableTime": 550,
+    "energyBoom": 20,
+    "moveSpd": 3.6,
+    "baseAttack": 4,
+    "perHpAttack": 5,
+    "itemMax": 60,
+    "unstoppableSpeed": 5.1,
+    "enemySpeedRate": 0.78,
+    "hpIncreaseSpeed": 0.01,
+    "scalePerHp": 0.02,
+    "fatPerHp": 0.05,
+    "maxScale": 2.5,
+    "hitLittleBackPower": 5,
+    "hitBackPowerPerHp": 0.4,
+    "maxHitPower": 8,
+    "minHitPower": 4,
+    "resistPowerX": 0.1,
+    "hitPowerY": 6,
+    "unstoppableHit_fat_power_rate": 0.1,
+    "unstoppableHit_fat_power_min_rate": 3,
+    "unstoppableHit_thin_power_min_rate": 8,
+    "unstoppableHit_fat_power_max_rate": 7,
+    "unstoppableHit_thin_power_max_rate": 14,
+    "unstoppableHit_thin_power_rate": 0.7,
+    "AI_speed": [
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1
+    ],
+    "vehicle_speed": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2.4
+    ],
+    "vehicle_Maxspeed": [
+        2,
+        2.5,
+        3,
+        3,
+        3,
+        4.5
+    ]
+}

@@ -1,0 +1,817 @@
+[
+    {
+        "level": 1,
+        "mapid": 1,
+        "rolenum": 4,
+        "killerid": 2,
+        "roleposdata": [
+            "-4,-2",
+            "0,7",
+            "-3,3",
+            "5,2",
+            "8,-3",
+            "-4,-9"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "-7,7",
+            "-8,-3",
+            "-9,-8",
+            "5,-6",
+            "3,-2"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-2,-3",
+            "8,9",
+            "-2,8",
+            "6,-2"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 2,
+        "mapid": 2,
+        "rolenum": 4,
+        "killerid": 2,
+        "roleposdata": [
+            "0,7",
+            "5,-2",
+            "3,3",
+            "-4,-1",
+            "-1,-6",
+            "-8,-4"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "3,9",
+            "-8,8",
+            "-4,2",
+            "-7,-8",
+            "4,-4"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-8,-6",
+            "-2,-1",
+            "7,-7"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 3,
+        "mapid": 3,
+        "rolenum": 3,
+        "killerid": 1,
+        "roleposdata": [
+            "0,-1",
+            "-2,-2",
+            "-2,1",
+            "2,3",
+            "-1,7",
+            "3,-7"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "-4,9",
+            "-4,-3",
+            "-6,-7",
+            "1,-9",
+            "6,0"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "4,8",
+            "-7,5",
+            "2,-4",
+            "-8,-1"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "10.5,5",
+            "9.5,6.5"
+        ]
+    },
+    {
+        "level": 4,
+        "mapid": 4,
+        "rolenum": 4,
+        "killerid": 2,
+        "roleposdata": [
+            "-7,2",
+            "3,-2",
+            "7,2",
+            "0,7",
+            "-2,-6",
+            "4,-6"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "5,2",
+            "-8,9",
+            "-8,-4",
+            "-9,-8",
+            "9,-8"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "8,9",
+            "-8,-8",
+            "-3,8",
+            "4,-6"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 5,
+        "mapid": 5,
+        "rolenum": 4,
+        "killerid": 2,
+        "roleposdata": [
+            "6,4",
+            "4,-4",
+            "2,-6",
+            "4,2",
+            "9,-7",
+            "-8,-8"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "-8,-2",
+            "-9,-6",
+            "7,-4",
+            "7,2",
+            "-8,8"
+        ],
+        "lampposdata": [
+            "-4,2"
+        ],
+        "boxposdata": [],
+        "switchposdata": [
+            "-4,4",
+            "-4,-4",
+            "9,-9",
+            "9,9",
+            "0,13"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "13,4",
+            "14.5,2.5",
+            "-14.25,-2.5",
+            "-12.75,-4"
+        ]
+    },
+    {
+        "level": 6,
+        "mapid": 6,
+        "rolenum": 4,
+        "killerid": 2,
+        "roleposdata": [
+            "0,9",
+            "0,7",
+            "-3,4",
+            "4,2",
+            "-5,-3",
+            "7,-1"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "-7,9",
+            "-8,-2",
+            "8,1",
+            "5,-5",
+            "-5,-9"
+        ],
+        "lampposdata": [
+            "-6,3"
+        ],
+        "boxposdata": [],
+        "switchposdata": [
+            "-5,5",
+            "5,5",
+            "-5,-5",
+            "5,-9"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 7,
+        "mapid": 7,
+        "rolenum": 4,
+        "killerid": 1,
+        "roleposdata": [
+            "5,-1",
+            "3,3",
+            "0,5",
+            "-5,1",
+            "-2,-5",
+            "2,-5"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "4,-3",
+            "9,-9",
+            "-9,-9",
+            "-8,-4",
+            "-6,8"
+        ],
+        "lampposdata": [
+            "-3,4"
+        ],
+        "boxposdata": [],
+        "switchposdata": [
+            "-7,-7",
+            "-8,6",
+            "7,7",
+            "7,-8",
+            "-3,-3"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 8,
+        "mapid": 8,
+        "rolenum": 4,
+        "killerid": 2,
+        "roleposdata": [
+            "-2,1",
+            "2,-1",
+            "3,3",
+            "-3,-3",
+            "8,-4",
+            "2,-7"
+        ],
+        "waterposdata": [
+            "-2,7"
+        ],
+        "diamondposdata": [
+            "-5,9",
+            "-5,-2",
+            "-6,-8",
+            "2,-6",
+            "7,1"
+        ],
+        "lampposdata": [
+            "-7,-4"
+        ],
+        "boxposdata": [],
+        "switchposdata": [
+            "0,9",
+            "-5,3",
+            "-8,5",
+            "10,0",
+            "-2,-8"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "10.5,5",
+            "9.5,6.5"
+        ]
+    },
+    {
+        "level": 9,
+        "mapid": 9,
+        "rolenum": 4,
+        "killerid": 1,
+        "roleposdata": [
+            "6,-2",
+            "8,5",
+            "2,1",
+            "-6,2",
+            "-3,-8",
+            "-6,-3"
+        ],
+        "waterposdata": [
+            "0,0"
+        ],
+        "diamondposdata": [
+            "5,0",
+            "9,-5",
+            "-8,-8",
+            "-6,0",
+            "-9,9"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-4,-1",
+            "-9,6",
+            "7,8",
+            "8,-7",
+            "3,-9"
+        ],
+        "speedposdata": [
+            "6,-9"
+        ],
+        "keyposdata": [],
+        "randompropposdata": [],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 10,
+        "mapid": 10,
+        "rolenum": 4,
+        "killerid": 2,
+        "roleposdata": [
+            "3,-3",
+            "4,-7",
+            "8,-4",
+            "7,4",
+            "-6,-2",
+            "4,7"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "2,2",
+            "7,-6",
+            "-4,-8",
+            "-4,6",
+            "-5,0"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-1,3",
+            "-3,-3",
+            "2,-8",
+            "2,5"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "-7,4"
+        ],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "1,12",
+            "-1,12"
+        ]
+    },
+    {
+        "level": 11,
+        "mapid": 11,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "2,0",
+            "-1,-3",
+            "-1,3",
+            "6,7",
+            "-7,-3"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "-5,9",
+            "-5,-3",
+            "-6,-7",
+            "4,-7",
+            "8,4"
+        ],
+        "lampposdata": [],
+        "boxposdata": [
+            "-2,6"
+        ],
+        "switchposdata": [
+            "-7,6",
+            "3,8",
+            "-4,-7",
+            "6,-5",
+            "10,0"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "2,-6"
+        ],
+        "dooreffectposdata": [
+            "10,-7",
+            "11.25,-5",
+            "-10,-7",
+            "-11,-5.2"
+        ]
+    },
+    {
+        "level": 12,
+        "mapid": 12,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "6,-1",
+            "7,7",
+            "-6,1",
+            "0,-5",
+            "3,8"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "-8,9",
+            "-8,0",
+            "-7,-8",
+            "9,-9",
+            "8,4"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-3,3",
+            "-7,-4",
+            "6,-9",
+            "9,8",
+            "2,-2"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "0,7"
+        ],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 13,
+        "mapid": 13,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "2,0",
+            "-2,-2",
+            "-2,3",
+            "0,9",
+            "6,-6"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "10,0",
+            "3,2",
+            "-9,-2",
+            "-5,9",
+            "-5,-8"
+        ],
+        "lampposdata": [],
+        "boxposdata": [
+            "2,-5"
+        ],
+        "switchposdata": [
+            "5,-2",
+            "-4,2",
+            "0,-9",
+            "-7,5",
+            "5,8"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "1,4"
+        ],
+        "dooreffectposdata": [
+            "10.5,5",
+            "9.5,6.5"
+        ]
+    },
+    {
+        "level": 14,
+        "mapid": 14,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "-6,2",
+            "-5,-7",
+            "7,7",
+            "0,-4",
+            "5,-1"
+        ],
+        "waterposdata": [
+            "1,-7"
+        ],
+        "diamondposdata": [
+            "-7,-2",
+            "-9,-6",
+            "5,-7",
+            "8,4",
+            "-6,9"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "3,-5",
+            "4,8",
+            "-7,-4",
+            "9,-4",
+            "3,2"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "-4,0"
+        ],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 15,
+        "mapid": 15,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "0,-4",
+            "3,-5",
+            "0,6",
+            "8,0",
+            "-7,-3"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "-5,-2",
+            "-7,7",
+            "-9,-6",
+            "9,-5",
+            "8,3"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "4,-9",
+            "8,8",
+            "-8,2",
+            "-8,-8",
+            "11,-1"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "-5,4"
+        ],
+        "dooreffectposdata": [
+            "13,4",
+            "14.5,2.5",
+            "-14.25,-2.5",
+            "-12.75,-4"
+        ]
+    },
+    {
+        "level": 16,
+        "mapid": 16,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "-2,-3",
+            "-2,4",
+            "0,7",
+            "2,2",
+            "9,-3"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "7,2",
+            "-6,0",
+            "-6,8",
+            "-1,-6",
+            "9,-8"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-7,-3",
+            "2,-5",
+            "7,9",
+            "-8,8",
+            "5,4"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "6,-2"
+        ],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12"
+        ]
+    },
+    {
+        "level": 17,
+        "mapid": 17,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "-4,-5",
+            "-5,3",
+            "-2,5",
+            "2,5",
+            "6,-5"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "-6,1",
+            "-8,-6",
+            "-9,8",
+            "8,6",
+            "2,-4"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-8,6",
+            "-7,-8",
+            "8,-7",
+            "5,2",
+            "-1,-5"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "-6,-2"
+        ],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 18,
+        "mapid": 18,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "-2,-1",
+            "1,-1",
+            "4,-1",
+            "-1,-7",
+            "5,4"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "7,-3",
+            "4,-8",
+            "-4,-7",
+            "-5,5",
+            "3,9"
+        ],
+        "lampposdata": [],
+        "boxposdata": [
+            "-4,7"
+        ],
+        "switchposdata": [
+            "0,8",
+            "-8,-2",
+            "7,-6",
+            "7,4",
+            "1,3"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "5,7"
+        ],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "10.5,5",
+            "9.5,6.5"
+        ]
+    },
+    {
+        "level": 19,
+        "mapid": 19,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "-5,2",
+            "6,1",
+            "4,-8",
+            "-8,-8",
+            "-1,-6"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "6,-2",
+            "-2,2",
+            "-6,-2",
+            "2,-8",
+            "-4,9"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-6,-8",
+            "-6,8",
+            "7,8",
+            "8,-8",
+            "-2,-1"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "1,7"
+        ],
+        "dooreffectposdata": [
+            "1,-12",
+            "-1,-12",
+            "12,1",
+            "12,-1"
+        ]
+    },
+    {
+        "level": 20,
+        "mapid": 20,
+        "rolenum": 4,
+        "killerid": 3,
+        "roleposdata": [
+            "-1,-4",
+            "1,-1",
+            "0,9",
+            "8,-4",
+            "-9,-2"
+        ],
+        "waterposdata": [],
+        "diamondposdata": [
+            "1,4",
+            "-4,-1",
+            "3,-4",
+            "-5,-8",
+            "-5,9"
+        ],
+        "lampposdata": [],
+        "boxposdata": [],
+        "switchposdata": [
+            "-8,4",
+            "10,0",
+            "-3,2",
+            "5,8",
+            "-3,-6"
+        ],
+        "speedposdata": [],
+        "keyposdata": [],
+        "randompropposdata": [
+            "5,0"
+        ],
+        "dooreffectposdata": [
+            "10.5,5",
+            "9.5,6.5"
+        ]
+    }
+]
