@@ -902,7 +902,7 @@ var __extends = this && this.__extends || function () {
             function e() { }
             return e.init = function () {
                 Laya.ClassUtils.regClass;
-            }, e.width = 1280, e.height = 720, e.scaleMode = "showall", e.screenMode = "none",
+            }, e.width = 1280, e.height = 720, e.scaleMode = "exactfit", e.screenMode = "none",
                 e.alignV = "middle", e.alignH = "center", e.startScene = "Load.scene", e.sceneRoot = "",
                 e.debug = !1, e.stat = !1, e.physicsDebug = !1, e.exportSceneToJson = !0, e;
         }();
@@ -1320,7 +1320,7 @@ var __extends = this && this.__extends || function () {
                 window.Laya3D ? Laya3D.init(n.default.width, n.default.height) : Laya.init(n.default.width, n.default.height, Laya.WebGL),
                     Laya.Physics && Laya.Physics.enable(), Laya.DebugPanel && Laya.DebugPanel.enable(),
                     Laya.URL.exportSceneToJson = n.default.exportSceneToJson, Laya.stage.screenMode = "none",
-                    Laya.stage.scaleMode = "showall",
+                    Laya.stage.scaleMode = "exactfit",
                     Laya.stage.alignV = "middle", Laya.stage.alignH = "center"
 
 
@@ -2289,7 +2289,7 @@ var __extends = this && this.__extends || function () {
                             type: "Image",
                             props: {
                                 width: 1280,
-                                skin: "MainUI/BG黑.png",
+                                skin: "MainUI/BGhei.png",
                                 right: 0,
                                 left: 0,
                                 height: 90,
@@ -2343,7 +2343,7 @@ var __extends = this && this.__extends || function () {
                                     type: "Clip",
                                     props: {
                                         width: 133,
-                                        skin: "MainUI/图层 41.png",
+                                        skin: "MainUI/tuceng41.png",
                                         scaleY: 1,
                                         scaleX: 1,
                                         pivotY: 67,
@@ -2411,7 +2411,7 @@ var __extends = this && this.__extends || function () {
                                     type: "Clip",
                                     props: {
                                         width: 133,
-                                        skin: "MainUI/图层 41.png",
+                                        skin: "MainUI/tuceng41.png",
                                         scaleY: 1,
                                         scaleX: 1,
                                         pivotY: 67,
@@ -2728,7 +2728,7 @@ var __extends = this && this.__extends || function () {
                                 type: "Image",
                                 props: {
                                     width: 85,
-                                    skin: "MainUI/FreeCoin_副本.png",
+                                    skin: "MainUI/FreeCoin_fb.png",
                                     height: 85,
                                     centerY: -9,
                                     centerX: 0
@@ -2750,7 +2750,7 @@ var __extends = this && this.__extends || function () {
                                     y: -46,
                                     x: 264,
                                     width: 246,
-                                    skin: "MainUI/BG黑.png",
+                                    skin: "MainUI/BGhei.png",
                                     height: 246,
                                     alpha: .5,
                                     sizeGrid: "15,17,19,17"
@@ -2934,7 +2934,7 @@ var __extends = this && this.__extends || function () {
                                         props: {
                                             presetID: 5,
                                             width: 133,
-                                            skin: "MainUI/图层 41.png",
+                                            skin: "MainUI/tuceng41.png",
                                             scaleY: 1,
                                             scaleX: 1,
                                             pivotY: 67,
@@ -2989,7 +2989,7 @@ var __extends = this && this.__extends || function () {
                                 y: 0,
                                 x: 0,
                                 top: 0,
-                                skin: "MainUI/BG黑.png",
+                                skin: "MainUI/BGhei.png",
                                 right: 0,
                                 left: 0,
                                 bottom: 0,
@@ -3549,7 +3549,7 @@ var __extends = this && this.__extends || function () {
                                 y: 0,
                                 x: 0,
                                 top: 0,
-                                skin: "MainUI/BG黑.png",
+                                skin: "MainUI/BGhei.png",
                                 right: 0,
                                 left: 0,
                                 bottom: 0,
@@ -3826,7 +3826,7 @@ var __extends = this && this.__extends || function () {
                                     type: "Image",
                                     props: {
                                         width: 125,
-                                        skin: "MainUI/框2.png",
+                                        skin: "MainUI/kuang2.png",
                                         pivotY: 89,
                                         pivotX: 82,
                                         name: "bg",
@@ -3879,7 +3879,7 @@ var __extends = this && this.__extends || function () {
                                 var: "btnCloseBackMat2",
                                 top: 5,
                                 stateNum: 1,
-                                skin: "MainUI/返回.png",
+                                skin: "MainUI/fanhui.png",
                                 scaleY: .8,
                                 scaleX: .8,
                                 pivotY: 52,
@@ -3908,7 +3908,7 @@ var __extends = this && this.__extends || function () {
                                 y: 0,
                                 x: 0,
                                 top: 5,
-                                skin: "MainUI/热门.png",
+                                skin: "MainUI/hot.png",
                                 centerX: 0
                             },
                             compId: 2992
@@ -3968,7 +3968,7 @@ var __extends = this && this.__extends || function () {
                                     type: "Image",
                                     props: {
                                         width: 125,
-                                        skin: "MainUI/框2.png",
+                                        skin: "MainUI/kuang2.png",
                                         pivotY: 89,
                                         pivotX: 82,
                                         name: "bg",
@@ -4035,13 +4035,13 @@ var __extends = this && this.__extends || function () {
                             type: "Image",
                             props: {
                                 top: 5,
-                                skin: "MainUI/热门.png",
+                                skin: "MainUI/hot.png",
                                 centerX: 0
                             },
                             compId: 2989
                         }]
                     }],
-                    loadList: ["MainUI/BG黑.png", "MainUI/dc_d32.png", "MainUI/图层 41.png", "", "", "", "MainUI/IconAtlas_13.png", "MainUI/IconAtlas_33.png", "MainUI/font1.png", "", "IconAtlas_39.png", "MainUI/IconAtlas_58.png", "MainUI/trophies.png", "MainUI/FreeCoin_副本.png", "MainUI/Scene01Tip.png", "MainUI/property.png", "MainUI/icon endgame.png", "BeginChoose.prefab", "MainUI/stage_clear$bar.png", "MainUI/carshop_btn.png", "MainUI/stage_clear.png", "MainUI/zuoyouIn2.png", "MainUI/zuoyouIn.png", "MainUI/shacheEnteree.png", "", "", "MainUI/youmen2.png", "MainUI/F10.png", "MainUI/F3.png", "MainUI/F4.png", "MainUI/F5.png", "MainUI/F6.png", "MainUI/F7.png", "MainUI/F8.png", "MainUI/F9.png", "MainUI/pause.png", "MainUI/power.png", "MainUI/flash.png", "MainUI/图层 2.png", "MainUI/图层 3.png", "MainUI/3.png", "", "MainUI/bg_shop.png", "MainUI/carshop_select.png", "MainUI/Icon_video.png", "MainUI/dc_jxyx.png", "Panel.prefab", "MainUI/car.png", "MainUI/bbgg.png", "MainUI/框2.png", "MainUI/返回.png", "MainUI/md_mfsw.png", "MainUI/热门.png"],
+                    loadList: ["MainUI/BGhei.png", "MainUI/dc_d32.png", "MainUI/tuceng41.png", "", "", "", "MainUI/IconAtlas_13.png", "MainUI/IconAtlas_33.png", "MainUI/font1.png", "", "IconAtlas_39.png", "MainUI/IconAtlas_58.png", "MainUI/trophies.png", "MainUI/FreeCoin_fb.png", "MainUI/Scene01Tip.png", "MainUI/property.png", "MainUI/icon endgame.png", "BeginChoose.prefab", "MainUI/stage_clear$bar.png", "MainUI/carshop_btn.png", "MainUI/stage_clear.png", "MainUI/zuoyouIn2.png", "MainUI/zuoyouIn.png", "MainUI/shacheEnteree.png", "", "", "MainUI/youmen2.png", "MainUI/F10.png", "MainUI/F3.png", "MainUI/F4.png", "MainUI/F5.png", "MainUI/F6.png", "MainUI/F7.png", "MainUI/F8.png", "MainUI/F9.png", "MainUI/pause.png", "MainUI/power.png", "MainUI/flash.png", "MainUI/图层 2.png", "MainUI/图层 3.png", "MainUI/3.png", "", "MainUI/bg_shop.png", "MainUI/carshop_select.png", "MainUI/Icon_video.png", "MainUI/dc_jxyx.png", "Panel.prefab", "MainUI/car.png", "MainUI/bbgg.png", "MainUI/kuang2.png", "MainUI/fanhui.png", "MainUI/md_mfsw.png", "MainUI/hot.png"],
                     loadList3D: []
                 }, t;
             }(Laya.View);
