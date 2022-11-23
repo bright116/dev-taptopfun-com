@@ -298,7 +298,7 @@ function _0x3c3a() {
         'modules/Power/PowerScript.ts',
         'script/BoxCoinScript.ts',
         'script/SettingBtnScript.ts',
-        'showall',
+        'exactfit',
         'none',
         'alignV',
         'alignH',
