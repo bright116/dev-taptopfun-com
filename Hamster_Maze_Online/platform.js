@@ -379,42 +379,64 @@ function _0x2d3f(_0x48a063, _0x131a3) {
             _0x231429[_0x5bb328(0xbf)] = ![];
         }
         ['showInterstitial'](_0x1ea2a4) {
+            console.log("请求插屏广告");
+
+            HUHU_showInterstitialAd();
             const _0x5d0512 = _0x938c9;
-            console[_0x5d0512(0xba)]('插屏广告'), YYGGames[_0x5d0512(0x11f)]({
-                'beforeShowAd': () => {
-                    const _0x4d5dea = _0x5d0512;
-                    window[_0x4d5dea(0xef)][_0x4d5dea(0xaa)] = !![], this['onblur'](), Laya[_0x4d5dea(0xc0)][_0x4d5dea(0xc1)] = 0x0, Laya['stage'][_0x4d5dea(0xc6)] = ![], Laya[_0x4d5dea(0xc2)] && Laya[_0x4d5dea(0xc2)][_0x4d5dea(0xc4)](), Laya['physicsTimer'] && Laya[_0x4d5dea(0xc3)]['pause']();
-                },
-                'afterShowAd': () => {
-                    const _0xfc1211 = _0x5d0512;
-                    window[_0xfc1211(0x120)](), this[_0xfc1211(0x11e)](), window[_0xfc1211(0xef)][_0xfc1211(0xaa)] = ![], Laya['timer'][_0xfc1211(0xc1)] = 0x1, Laya[_0xfc1211(0xc5)][_0xfc1211(0xc6)] = !![], Laya[_0xfc1211(0xc2)] && Laya['updateTimer'][_0xfc1211(0xc7)](), Laya[_0xfc1211(0xc3)] && Laya[_0xfc1211(0xc3)]['resume'](), _0x1ea2a4 && _0x1ea2a4();
-                }
-            });
+            const _0xfc1211 = _0x5d0512;
+            window[_0xfc1211(0x120)](), this[_0xfc1211(0x11e)](), window[_0xfc1211(0xef)][_0xfc1211(0xaa)] = ![], Laya['timer'][_0xfc1211(0xc1)] = 0x1, Laya[_0xfc1211(0xc5)][_0xfc1211(0xc6)] = !![], Laya[_0xfc1211(0xc2)] && Laya['updateTimer'][_0xfc1211(0xc7)](), Laya[_0xfc1211(0xc3)] && Laya[_0xfc1211(0xc3)]['resume'](), _0x1ea2a4 && _0x1ea2a4();
+            return;
+            // const _0x5d0512 = _0x938c9;
+            // console[_0x5d0512(0xba)]('插屏广告'), YYGGames[_0x5d0512(0x11f)]({
+            //     'beforeShowAd': () => {
+            //         const _0x4d5dea = _0x5d0512;
+            //         window[_0x4d5dea(0xef)][_0x4d5dea(0xaa)] = !![], this['onblur'](), Laya[_0x4d5dea(0xc0)][_0x4d5dea(0xc1)] = 0x0, Laya['stage'][_0x4d5dea(0xc6)] = ![], Laya[_0x4d5dea(0xc2)] && Laya[_0x4d5dea(0xc2)][_0x4d5dea(0xc4)](), Laya['physicsTimer'] && Laya[_0x4d5dea(0xc3)]['pause']();
+            //     },
+            //     'afterShowAd': () => {
+            //         const _0xfc1211 = _0x5d0512;
+            //         window[_0xfc1211(0x120)](), this[_0xfc1211(0x11e)](), window[_0xfc1211(0xef)][_0xfc1211(0xaa)] = ![], Laya['timer'][_0xfc1211(0xc1)] = 0x1, Laya[_0xfc1211(0xc5)][_0xfc1211(0xc6)] = !![], Laya[_0xfc1211(0xc2)] && Laya['updateTimer'][_0xfc1211(0xc7)](), Laya[_0xfc1211(0xc3)] && Laya[_0xfc1211(0xc3)]['resume'](), _0x1ea2a4 && _0x1ea2a4();
+            //     }
+            // });
         }
         ['showReward'](_0x4debe4, _0x223c7e, _0x1893e4) {
             const _0x49e846 = _0x938c9;
-            console[_0x49e846(0xba)]('激励广告');
-            if (!YYGGames[_0x49e846(0x121)]()) {
-                this[_0x49e846(0x122)](_0x49e846(0x123)), _0x1893e4 && _0x1893e4();
-                return;
-            }
-            YYGGames[_0x49e846(0x124)]({
-                'beforeShowAd': () => {
-                    const _0x4ba91c = _0x49e846;
-                    window[_0x4ba91c(0xef)]['adShowing'] = !![], this[_0x4ba91c(0x11d)](), Laya[_0x4ba91c(0xc0)][_0x4ba91c(0xc1)] = 0x0, Laya[_0x4ba91c(0xc5)][_0x4ba91c(0xc6)] = ![], Laya[_0x4ba91c(0xc2)] && Laya['updateTimer'][_0x4ba91c(0xc4)](), Laya['physicsTimer'] && Laya[_0x4ba91c(0xc3)][_0x4ba91c(0xc4)]();
-                },
-                'afterShowAd': () => {
+            console.log("请求激励广告");
+            HUHU_showRewardedVideoAd(
+                () => {
+                    // 用户观看广告完成，继续游戏
                     const _0x18176b = _0x49e846;
                     window[_0x18176b(0x120)](), this[_0x18176b(0x11e)](), window[_0x18176b(0xef)][_0x18176b(0xaa)] = ![], Laya[_0x18176b(0xc0)][_0x18176b(0xc1)] = 0x1, Laya[_0x18176b(0xc5)]['renderingEnabled'] = !![], Laya[_0x18176b(0xc2)] && Laya['updateTimer'][_0x18176b(0xc7)](), Laya[_0x18176b(0xc3)] && Laya['physicsTimer'][_0x18176b(0xc7)]();
-                },
-                'rewardComplete': () => {
                     _0x4debe4 && _0x4debe4(), _0x4debe4 = null;
                 },
-                'rewardDismissed': () => {
+                () => {
+                  // 广告请求失败或者用户跳过广告
                     const _0x4c32f3 = _0x49e846;
                     _0x223c7e && (_0x223c7e(), _0x223c7e = null), this[_0x4c32f3(0x122)](_0x4c32f3(0x125));
                 }
-            });
+            );
+            return;
+            // console[_0x49e846(0xba)]('激励广告');
+            // if (!YYGGames[_0x49e846(0x121)]()) {
+            //     this[_0x49e846(0x122)](_0x49e846(0x123)), _0x1893e4 && _0x1893e4();
+            //     return;
+            // }
+            // YYGGames[_0x49e846(0x124)]({
+            //     'beforeShowAd': () => {
+            //         const _0x4ba91c = _0x49e846;
+            //         window[_0x4ba91c(0xef)]['adShowing'] = !![], this[_0x4ba91c(0x11d)](), Laya[_0x4ba91c(0xc0)][_0x4ba91c(0xc1)] = 0x0, Laya[_0x4ba91c(0xc5)][_0x4ba91c(0xc6)] = ![], Laya[_0x4ba91c(0xc2)] && Laya['updateTimer'][_0x4ba91c(0xc4)](), Laya['physicsTimer'] && Laya[_0x4ba91c(0xc3)][_0x4ba91c(0xc4)]();
+            //     },
+            //     'afterShowAd': () => {
+            //         const _0x18176b = _0x49e846;
+            //         window[_0x18176b(0x120)](), this[_0x18176b(0x11e)](), window[_0x18176b(0xef)][_0x18176b(0xaa)] = ![], Laya[_0x18176b(0xc0)][_0x18176b(0xc1)] = 0x1, Laya[_0x18176b(0xc5)]['renderingEnabled'] = !![], Laya[_0x18176b(0xc2)] && Laya['updateTimer'][_0x18176b(0xc7)](), Laya[_0x18176b(0xc3)] && Laya['physicsTimer'][_0x18176b(0xc7)]();
+            //     },
+            //     'rewardComplete': () => {
+            //         _0x4debe4 && _0x4debe4(), _0x4debe4 = null;
+            //     },
+            //     'rewardDismissed': () => {
+            //         const _0x4c32f3 = _0x49e846;
+            //         _0x223c7e && (_0x223c7e(), _0x223c7e = null), this[_0x4c32f3(0x122)](_0x4c32f3(0x125));
+            //     }
+            // });
         }
         [_0x938c9(0x126)](_0x5d6916) {
             const _0x1f9f29 = _0x938c9;
@@ -478,44 +500,46 @@ function _0x2d3f(_0x48a063, _0x131a3) {
                 };
             }), this['initialized_'] = !![], Laya[_0x24c159(0x14f)][_0x24c159(0xf3)](_0x24c159(0x150), Laya[_0x24c159(0x128)]['create'](this, _0x376fb3 => {
                 const _0x31d323 = _0x24c159;
-                YYGGames[_0x31d323(0x151)]({
-                    'appName': _0x291205,
-                    'config': _0x376fb3,
-                    'complete': () => {
-                        const _0x56a485 = _0x31d323, _0xc4f9ba = YYGGames[_0x56a485(0x152)]();
-                        window[_0x56a485(0x153)] = this[_0x56a485(0x153)](), window['box_adTwo'] = this[_0x56a485(0x154)]();
-                        switch (_0xc4f9ba) {
-                        case AdPlatformType[_0x56a485(0x155)]:
-                        case AdPlatformType[_0x56a485(0x156)]:
-                            window[_0x56a485(0x145)] && (window[_0x56a485(0x145)]['scale'](0x0, 0x0), window[_0x56a485(0x145)][_0x56a485(0x157)]());
-                            break;
-                        default:
-                            window['yad'] && Laya[_0x56a485(0xc5)][_0x56a485(0x158)](window[_0x56a485(0x145)]), window[_0x56a485(0x145)]['on'](Laya[_0x56a485(0x12b)][_0x56a485(0x12a)], window[_0x56a485(0x145)], _0x476622 => {
-                                const _0x45ceaf = _0x56a485;
-                                _0x476622[_0x45ceaf(0x159)](), _0x2654d8[_0x45ceaf(0x111)]()[_0x45ceaf(0x11c)](_0x45ceaf(0x15a), _0x45ceaf(0x15b));
-                            });
-                            break;
-                        }
-                        this[_0x56a485(0x10f)] = ![], _0x5bcaf9 && _0x5bcaf9();
-                    }
-                });
+                const _0x56a485 = _0x31d323;
+                this[_0x56a485(0x10f)] = ![], _0x5bcaf9 && _0x5bcaf9();
+                // YYGGames[_0x31d323(0x151)]({
+                //     'appName': _0x291205,
+                //     'config': _0x376fb3,
+                //     'complete': () => {
+                //         const _0x56a485 = _0x31d323, _0xc4f9ba = YYGGames[_0x56a485(0x152)]();
+                //         window[_0x56a485(0x153)] = this[_0x56a485(0x153)](), window['box_adTwo'] = this[_0x56a485(0x154)]();
+                //         switch (_0xc4f9ba) {
+                //         case AdPlatformType[_0x56a485(0x155)]:
+                //         case AdPlatformType[_0x56a485(0x156)]:
+                //             window[_0x56a485(0x145)] && (window[_0x56a485(0x145)]['scale'](0x0, 0x0), window[_0x56a485(0x145)][_0x56a485(0x157)]());
+                //             break;
+                //         default:
+                //             window['yad'] && Laya[_0x56a485(0xc5)][_0x56a485(0x158)](window[_0x56a485(0x145)]), window[_0x56a485(0x145)]['on'](Laya[_0x56a485(0x12b)][_0x56a485(0x12a)], window[_0x56a485(0x145)], _0x476622 => {
+                //                 const _0x45ceaf = _0x56a485;
+                //                 _0x476622[_0x45ceaf(0x159)](), _0x2654d8[_0x45ceaf(0x111)]()[_0x45ceaf(0x11c)](_0x45ceaf(0x15a), _0x45ceaf(0x15b));
+                //             });
+                //             break;
+                //         }
+                //         this[_0x56a485(0x10f)] = ![], _0x5bcaf9 && _0x5bcaf9();
+                //     }
+                // });
             }));
         }
         ['showBanner'](_0x9f86cd) {
-            const _0x4472ba = _0x938c9;
-            _0x9f86cd ? YYGGames[_0x4472ba(0x15c)](_0x9f86cd) : YYGGames[_0x4472ba(0x15c)]();
+            // const _0x4472ba = _0x938c9;
+            // _0x9f86cd ? YYGGames[_0x4472ba(0x15c)](_0x9f86cd) : YYGGames[_0x4472ba(0x15c)]();
         }
         [_0x938c9(0x15d)]() {
-            const _0x53bc3f = _0x938c9;
-            YYGGames[_0x53bc3f(0x15d)]();
+            // const _0x53bc3f = _0x938c9;
+            // YYGGames[_0x53bc3f(0x15d)]();
         }
         [_0x938c9(0x14a)](_0x355705) {
-            const _0x558713 = _0x938c9;
-            _0x355705 ? YYGGames[_0x558713(0x14a)](_0x355705) : YYGGames[_0x558713(0x14a)]();
+            // const _0x558713 = _0x938c9;
+            // _0x355705 ? YYGGames[_0x558713(0x14a)](_0x355705) : YYGGames[_0x558713(0x14a)]();
         }
         [_0x938c9(0x15e)]() {
-            const _0x1234fc = _0x938c9;
-            YYGGames[_0x1234fc(0x15e)]();
+            // const _0x1234fc = _0x938c9;
+            // YYGGames[_0x1234fc(0x15e)]();
         }
         [_0x938c9(0x15f)](_0x58f073, _0x2c529a) {
             const _0x3bfb92 = _0x938c9;
@@ -539,27 +563,29 @@ function _0x2d3f(_0x48a063, _0x131a3) {
                 };
             }), this[_0x3bfb92(0x10e)] = !![], Laya[_0x3bfb92(0x14f)][_0x3bfb92(0xf3)](_0x3bfb92(0x150), Laya[_0x3bfb92(0x128)][_0x3bfb92(0x161)](this, _0x30da3e => {
                 const _0x8d477d = _0x3bfb92;
-                YYGGames[_0x8d477d(0x162)]({
-                    'appName': _0x58f073,
-                    'config': _0x30da3e,
-                    'complete': () => {
-                        const _0x6aefbb = _0x8d477d, _0x47266c = YYGGames[_0x6aefbb(0x152)]();
-                        window[_0x6aefbb(0x153)] = this[_0x6aefbb(0x153)](), window[_0x6aefbb(0x154)] = this[_0x6aefbb(0x154)]();
-                        switch (_0x47266c) {
-                        case AdPlatformType[_0x6aefbb(0x155)]:
-                        case AdPlatformType[_0x6aefbb(0x156)]:
-                            window[_0x6aefbb(0x145)] && (window[_0x6aefbb(0x145)][_0x6aefbb(0xc1)](0x0, 0x0), window['yad']['removeSelf']());
-                            break;
-                        default:
-                            window[_0x6aefbb(0x145)] && Laya[_0x6aefbb(0xc5)][_0x6aefbb(0x158)](window[_0x6aefbb(0x145)]), window[_0x6aefbb(0x145)]['on'](Laya[_0x6aefbb(0x12b)][_0x6aefbb(0x12a)], window[_0x6aefbb(0x145)], _0x2f3c49 => {
-                                const _0x51fc08 = _0x6aefbb;
-                                _0x2f3c49[_0x51fc08(0x159)](), _0x2654d8[_0x51fc08(0x111)]()[_0x51fc08(0x11c)](_0x51fc08(0x15a), _0x51fc08(0x15b));
-                            });
-                            break;
-                        }
-                        this[_0x6aefbb(0x10f)] = ![], _0x2c529a && _0x2c529a();
-                    }
-                });
+                const _0x6aefbb = _0x8d477d;
+                this[_0x6aefbb(0x10f)] = ![], _0x2c529a && _0x2c529a();
+                // YYGGames[_0x8d477d(0x162)]({
+                //     'appName': _0x58f073,
+                //     'config': _0x30da3e,
+                //     'complete': () => {
+                //         const _0x6aefbb = _0x8d477d, _0x47266c = YYGGames[_0x6aefbb(0x152)]();
+                //         window[_0x6aefbb(0x153)] = this[_0x6aefbb(0x153)](), window[_0x6aefbb(0x154)] = this[_0x6aefbb(0x154)]();
+                //         switch (_0x47266c) {
+                //         case AdPlatformType[_0x6aefbb(0x155)]:
+                //         case AdPlatformType[_0x6aefbb(0x156)]:
+                //             window[_0x6aefbb(0x145)] && (window[_0x6aefbb(0x145)][_0x6aefbb(0xc1)](0x0, 0x0), window['yad']['removeSelf']());
+                //             break;
+                //         default:
+                //             window[_0x6aefbb(0x145)] && Laya[_0x6aefbb(0xc5)][_0x6aefbb(0x158)](window[_0x6aefbb(0x145)]), window[_0x6aefbb(0x145)]['on'](Laya[_0x6aefbb(0x12b)][_0x6aefbb(0x12a)], window[_0x6aefbb(0x145)], _0x2f3c49 => {
+                //                 const _0x51fc08 = _0x6aefbb;
+                //                 _0x2f3c49[_0x51fc08(0x159)](), _0x2654d8[_0x51fc08(0x111)]()[_0x51fc08(0x11c)](_0x51fc08(0x15a), _0x51fc08(0x15b));
+                //             });
+                //             break;
+                //         }
+                //         this[_0x6aefbb(0x10f)] = ![], _0x2c529a && _0x2c529a();
+                //     }
+                // });
             }));
         }
         [_0x938c9(0x163)](_0x5bd82f, _0x139da1) {
@@ -580,28 +606,30 @@ function _0x2d3f(_0x48a063, _0x131a3) {
                 };
             }), this[_0x4d6792(0x10e)] = !![], Laya[_0x4d6792(0x14f)]['load'](_0x4d6792(0x150), Laya[_0x4d6792(0x128)][_0x4d6792(0x161)](this, _0x53eb63 => {
                 const _0x422bac = _0x4d6792;
-                YYGGames[_0x422bac(0x164)]({
-                    'channel': 0x5,
-                    'appName': _0x5bd82f,
-                    'config': _0x53eb63,
-                    'complete': () => {
-                        const _0x41a3ad = _0x422bac, _0x549308 = YYGGames['getAdPlatformType']();
-                        window[_0x41a3ad(0x153)] = this['scrollList'](), window[_0x41a3ad(0x154)] = this['box_adTwo']();
-                        switch (_0x549308) {
-                        case AdPlatformType['en_GAMEDISTRIBUTION']:
-                        case AdPlatformType[_0x41a3ad(0x156)]:
-                            window[_0x41a3ad(0x145)] && (window[_0x41a3ad(0x145)]['scale'](0x0, 0x0), window[_0x41a3ad(0x145)][_0x41a3ad(0x157)]());
-                            break;
-                        default:
-                            window[_0x41a3ad(0x145)] && Laya['stage'][_0x41a3ad(0x158)](window['yad']), window[_0x41a3ad(0x145)]['on'](Laya['Event'][_0x41a3ad(0x12a)], window['yad'], _0x2dd3b3 => {
-                                const _0x590a2b = _0x41a3ad;
-                                _0x2dd3b3[_0x590a2b(0x159)](), _0x2654d8['getInstance']()[_0x590a2b(0x11c)](_0x590a2b(0x15a), _0x590a2b(0x15b));
-                            });
-                            break;
-                        }
-                        this['needStartUp'] = ![], _0x139da1 && _0x139da1();
-                    }
-                });
+                const _0x41a3ad = _0x422bac;
+                this['needStartUp'] = ![], _0x139da1 && _0x139da1();
+                // YYGGames[_0x422bac(0x164)]({
+                //     'channel': 0x5,
+                //     'appName': _0x5bd82f,
+                //     'config': _0x53eb63,
+                //     'complete': () => {
+                //         const _0x41a3ad = _0x422bac, _0x549308 = YYGGames['getAdPlatformType']();
+                //         window[_0x41a3ad(0x153)] = this['scrollList'](), window[_0x41a3ad(0x154)] = this['box_adTwo']();
+                //         switch (_0x549308) {
+                //         case AdPlatformType['en_GAMEDISTRIBUTION']:
+                //         case AdPlatformType[_0x41a3ad(0x156)]:
+                //             window[_0x41a3ad(0x145)] && (window[_0x41a3ad(0x145)]['scale'](0x0, 0x0), window[_0x41a3ad(0x145)][_0x41a3ad(0x157)]());
+                //             break;
+                //         default:
+                //             window[_0x41a3ad(0x145)] && Laya['stage'][_0x41a3ad(0x158)](window['yad']), window[_0x41a3ad(0x145)]['on'](Laya['Event'][_0x41a3ad(0x12a)], window['yad'], _0x2dd3b3 => {
+                //                 const _0x590a2b = _0x41a3ad;
+                //                 _0x2dd3b3[_0x590a2b(0x159)](), _0x2654d8['getInstance']()[_0x590a2b(0x11c)](_0x590a2b(0x15a), _0x590a2b(0x15b));
+                //             });
+                //             break;
+                //         }
+                //         this['needStartUp'] = ![], _0x139da1 && _0x139da1();
+                //     }
+                // });
             }));
         }
         [_0x938c9(0x14c)]() {
@@ -937,7 +965,7 @@ function _0x2d3f(_0x48a063, _0x131a3) {
                             'props': {
                                 'zOrder': -0xa,
                                 'width': 0x388,
-                                'skin': 'di2.png',
+                                'skin': '',
                                 'sizeGrid': '30,\x2030,\x2030,\x2030',
                                 'presetID': 0x2,
                                 'preset': 'laya/pages/prefab/scrollList.prefab',
