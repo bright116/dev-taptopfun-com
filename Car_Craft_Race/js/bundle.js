@@ -95,7 +95,7 @@
             }]);
             return r;
         }();
-        r.width = 750, r.height = 1334, r.scaleMode = "showall", r.screenMode = "none",
+        r.width = 750, r.height = 1334, r.scaleMode = "exactfit", r.screenMode = "none",
             r.alignV = "middle", r.alignH = "center", r.startScene = "test/TestScene.scene", r.sceneRoot = "",
             r.debug = !1, r.stat = !1, r.physicsDebug = !1, r.exportSceneToJson = !0, r.init();
         var a;
