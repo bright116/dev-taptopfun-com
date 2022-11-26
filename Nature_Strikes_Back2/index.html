@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Cocos Creator | natureStrikesBack</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit"/>
+  <meta name="force-rendering" content="webkit"/>
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  
+  <!-- force screen orientation on some browser -->
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-orientation" content="portrait">
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style-mobile.css"/>
+  <link rel="icon" href="favicon.ico"/>
+
+  <!-- <script type="text/javascript">
+    (function(e,t){var r=e.amplitude||{_q:[],_iq:{}};var n=t.createElement("script")
+    ;n.type="text/javascript"
+    ;n.integrity="sha384-4rr7CTymHc64YjTTL6O3ktfsHYI1yJnQdmKv4zFoe+frjXb05MfzzuLLIAgJ/XHs"
+    ;n.crossOrigin="anonymous";n.async=true
+    ;n.src="https://cdn.amplitude.com/libs/amplitude-8.11.0-min.gz.js"
+    ;n.onload=function(){if(!e.amplitude.runQueuedFunctions){
+    console.log("[Amplitude] Error: could not load SDK")}}
+    ;var s=t.getElementsByTagName("script")[0];s.parentNode.insertBefore(n,s)
+    ;function i(e,t){e.prototype[t]=function(){
+    this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+    var o=function(){this._q=[];return this}
+    ;var a=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove"]
+    ;for(var c=0;c<a.length;c++){i(o,a[c])}r.Identify=o;var u=function(){this._q=[]
+    ;return this}
+    ;var p=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+    ;for(var l=0;l<p.length;l++){i(u,p[l])}r.Revenue=u
+    ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","enableTracking","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId","setLibrary","setTransport"]
+    ;function v(e){function t(t){e[t]=function(){
+    e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+    for(var r=0;r<d.length;r++){t(d[r])}}v(r);r.getInstance=function(e){
+    e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+    ;if(!Object.prototype.hasOwnProperty.call(r._iq,e)){r._iq[e]={_q:[]};v(r._iq[e])
+    }return r._iq[e]};e.amplitude=r})(window,document);
+
+    amplitude.getInstance().init("85a4e7ca2417ab897d0fb5d9bdc7af0a");
+</script> -->
+</head>
+<body>
+  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+  <div id="splash">
+    <div class="progress-bar stripes">
+      <span style="width: 0%"></span>
+    </div>
+  </div>
+
+<script src="https://embed.gamesnacks.com/assets/js/gamesnacks.js"></script>
+<!-- <script src="https://embed.gamesnacks.com/assets/js/gamesnacks.js" data-environment="test"></script> -->
+
+<script src="src/settings.js" charset="utf-8"></script>
+
+<script src="main.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+(function () {
+    // open web debugger console
+    if (typeof VConsole !== 'undefined') {
+        window.vConsole = new VConsole();
+    }
+
+    var debug = window._CCSettings.debug;
+    var splash = document.getElementById('splash');
+    splash.style.display = 'block';
+
+    function loadScript (moduleName, cb) {
+      function scriptLoaded () {
+          document.body.removeChild(domScript);
+          domScript.removeEventListener('load', scriptLoaded, false);
+          cb && cb();
+      };
+      var domScript = document.createElement('script');
+      domScript.async = true;
+      domScript.src = moduleName;
+      domScript.addEventListener('load', scriptLoaded, false);
+      document.body.appendChild(domScript);
+    }
+
+    loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js', function () {
+      if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
+        loadScript(debug ? 'physics.js' : 'physics-min.js', window.boot);
+      }
+      else {
+        window.boot();
+      }
+    });
+})();
+</script>
+</body>
+</html>
