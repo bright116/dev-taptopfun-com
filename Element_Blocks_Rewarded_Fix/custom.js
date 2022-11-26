@@ -4,7 +4,7 @@ window.famobi.hideSplashScreen = function() {
 	if(!window.famobi.hasGameReadyCalled) {
 		window.famobi.hasGameReadyCalled = true;
 		console.log("GAMESNACKS.gameReady")
-		GAMESNACKS.gameReady();
+		// GAMESNACKS.gameReady();
 	}
 }
 window.famobi.audio = window.famobi.audio || {
@@ -26,8 +26,8 @@ window.famobi.audio = window.famobi.audio || {
 			case "sfx":
 				// return this.sfx;
 			default:
-				// return this.bgm && this.sfx;
-				return GAMESNACKS.isAudioEnabled();
+				return this.bgm && this.sfx;
+				// return GAMESNACKS.isAudioEnabled();
 		}
 	}
 };
@@ -53,22 +53,22 @@ window.famobi_analytics.trackEvent = function(event, params) {
 		switch(event) {
 			case "EVENT_LIVESCORE":
 				console.log("GAMESNACKS.sendScore", params.liveScore);
-				GAMESNACKS.sendScore(params.liveScore);
+				// GAMESNACKS.sendScore(params.liveScore);
 				return resolve(event, params);
 			case "EVENT_LEVELSCORE":
 				console.log("GAMESNACKS.sendScore", params.levelScore);
-				GAMESNACKS.sendScore(params.levelScore);
+				// GAMESNACKS.sendScore(params.levelScore);
 				return resolve(event, params);
 			case "EVENT_TOTALSCORE":
 				console.log("GAMESNACKS.sendScore", params.totalScore);
-				GAMESNACKS.sendScore(params.totalScore);
+				// GAMESNACKS.sendScore(params.totalScore);
 				return resolve(event, params);
 			case "EVENT_LEVELFAIL":
 				if(params.reason == "quit") {
 					break;
 				}
 				console.log("GAMESNACKS.gameOver");
-				GAMESNACKS.gameOver();
+				// GAMESNACKS.gameOver();
 				return resolve(event, params);
 			case "EVENT_LEVELSUCCESS":
 				console.log("EVENT_LEVELSUCCESS");
@@ -87,7 +87,7 @@ window.famobi_analytics.trackEvent = function(event, params) {
 						}
 				}
 				console.log("GAMESNACKS.levelComplete", gsLevel);
-				GAMESNACKS.levelComplete(gsLevel);
+				// GAMESNACKS.levelComplete(gsLevel);
 				break;
 			default:
 				// ...
@@ -106,21 +106,21 @@ window.famobi_analytics.trackScreen = function(screen) {
 }
 
 // Gamesnack Audio Listener
-GAMESNACKS.subscribeToAudioUpdates((isAudioEnabled) => {
-	console.log("audio update received!");
+// GAMESNACKS.subscribeToAudioUpdates((isAudioEnabled) => {
+// 	console.log("audio update received!");
 
-	if(isAudioEnabled) {
-		if(typeof window.famobi_onUnmuteRequested == "function") {
-			window.famobi_onUnmuteRequested();
-			console.log("unmuting requested");
-		}
-	} else {
-		if(typeof window.famobi_onMuteRequested == "function") {
-			window.famobi_onMuteRequested();
-			console.log("muting requested");
-		}
-	}
-});
+// 	if(isAudioEnabled) {
+// 		if(typeof window.famobi_onUnmuteRequested == "function") {
+// 			window.famobi_onUnmuteRequested();
+// 			console.log("unmuting requested");
+// 		}
+// 	} else {
+// 		if(typeof window.famobi_onMuteRequested == "function") {
+// 			window.famobi_onMuteRequested();
+// 			console.log("muting requested");
+// 		}
+// 	}
+// });
 
 // localforage: driver to localstorage
 if(famobi_gameJS.includes("c2runtime.js")) {
@@ -148,7 +148,7 @@ var showRewarded_adDismissed = function() {
 
 var rewardedAdObject = {
 	enableLog: false,
-	showAdFn: null,
+	showAdFn: 111,
 	state: 0,
 	states: {
 		"WAITING": 0,
@@ -212,11 +212,11 @@ window.famobi.hasRewardedAd = function() {
 	rewardedAdObject.enableLog && console.log("current state: " + rewardedAdObject.state);
 
 	if(rewardedAdObject.state == rewardedAdObject.states.WAITING) {
-		try{
-			GAMESNACKS.rewardedAdOpportunity(rewardedAdObject);
-		}catch(e) {
-			console.log(e);
-		}
+		// try{
+		// 	GAMESNACKS.rewardedAdOpportunity(rewardedAdObject);
+		// }catch(e) {
+		// 	console.log(e);
+		// }
 		return typeof rewardedAdObject.showAdFn == "function";
 	}
 
