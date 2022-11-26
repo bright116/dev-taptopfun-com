@@ -1,0 +1,10 @@
+const enable_rewarded_videos = true;       // set false to disable this feature completely
+const difficulty_level = 2;                // an integer value from 1 to 10, where 1 means the easiest difficulty curve, 10 - the hardest one.
+const bomb_powerup_basic_price = 15;       // how many stars costs bomb powerup
+const bomb_powerup_price_step = 5;         // for how many stars will the bomb powerup price increase with each next purchase. E.g. If starting price is 15 and step is 5, the prices after each next purchase of the powerup will look like 15, 20, 25, 30 etc...
+const lightning_powerup_basic_price = 25;  // how many stars costs lightning powerup
+const lightning_powerup_price_step = 5;    // for how many stars will the lightning powerup price increase with each next purchase. E.g. If starting price is 25 and step is 5, the prices after each next purchase of the powerup will look like 25, 30, 35, 40 etc...
+const get_stars_button_cooldown = 300;     //  how often will the "Get Free stars for watching video" button appear, in seconds. Default value is once per 300 seconds (5 minutes). Set 0 to completely disable this button
+const get_stars_button_basic_reward = 5;   //  how many stars will user get for watching first video ads after he pressed the "Get free stars" button.
+const get_stars_button_reward_step = 5;    //  each next video watched by pressing "Get free stars" button will give more stars. Default value is 5, which means each next video will give 5 more stars (5, 10, 15, 20 etc). Set to 0 to disable increasing reward and keep it constant.
+const results_watch_video_reward = 10;     //  how many stars player receives for watching rewarded video by pressing "Watch video" button on results screen

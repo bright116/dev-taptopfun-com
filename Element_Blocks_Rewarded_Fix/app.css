@@ -1,0 +1,40 @@
+html {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("img/background.png") no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('fonts/Kanit-Bold.eot');
+    src: url('fonts/Kanit-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Kanit-Bold.woff2') format('woff2'),
+    url('fonts/Kanit-Bold.woff') format('woff'),
+    url('fonts/Kanit-Bold.ttf') format('truetype'),
+    url('fonts/Kanit-Bold.svg#Kanit-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Russo One';
+    src: url('fonts/RussoOne-Regular.eot');
+    src: url('fonts/RussoOne-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/RussoOne-Regular.woff2') format('woff2'),
+    url('fonts/RussoOne-Regular.woff') format('woff'),
+    url('fonts/RussoOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

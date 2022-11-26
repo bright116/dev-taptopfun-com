@@ -1,0 +1,30 @@
+{
+    "features": {
+        "highscores": 1,
+        "rewarded": 1,
+        "leaderboard": 0,
+        "multiplayer": 0,
+        "standalone": 1,
+        "credits": 0,
+        "multiplayer_local": 1,
+        "audio": 1
+    },
+    "game_i18n": {},
+    "aid": "A1234-5",
+    "logging": false,
+    "api": "famobi",
+    "name": "Google GameSnacks",
+    "more_games_url": "",
+    "more_games_button_image": "logo",
+    "show_splash": false,
+    "splash_duration": 9999,
+    "branch": "master",
+    "gameParams": {
+        "ad_type": "off"
+    },
+    "menuless": true,
+    "disable_console": false,
+    "includeJS": [],
+    "version": "5c540970",
+    "supportedLanguages": []
+}
