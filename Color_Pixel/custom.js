@@ -3,7 +3,7 @@ window.famobi.hasGameReadyCalled = false;
 window.famobi.hideSplashScreen = function() {
 	if(!window.famobi.hasGameReadyCalled) {
 		window.famobi.hasGameReadyCalled = true;
-		console.log("GAMESNACKS.gameReady")
+		//console.log("GAMESNACKS.gameReady")
 		// GAMESNACKS.gameReady();
 	}
 }
@@ -78,23 +78,26 @@ window.famobi_analytics.trackEvent = function(event, params) {
 	return new Promise(function(resolve, reject) {
 		switch(event) {
 			case "EVENT_LIVESCORE":
-				console.log("GAMESNACKS.sendScore", params.liveScore);
+				//console.log("GAMESNACKS.sendScore", params.liveScore);
 				// GAMESNACKS.sendScore(params.liveScore);
 				return resolve(event, params);
 			case "EVENT_LEVELSCORE":
-				console.log("GAMESNACKS.sendScore", params.levelScore);
+				//console.log("GAMESNACKS.sendScore", params.levelScore);
 				// GAMESNACKS.sendScore(params.levelScore);
 				return resolve(event, params);
 			case "EVENT_TOTALSCORE":
-				console.log("GAMESNACKS.sendScore", params.totalScore);
+				//console.log("GAMESNACKS.sendScore", params.totalScore);
 				// GAMESNACKS.sendScore(params.totalScore);
 				return resolve(event, params);
 			case "EVENT_LEVELFAIL":
 				if(params.reason == "quit") {
 					break;
 				}
-				console.log("GAMESNACKS.gameOver");
+				//console.log("GAMESNACKS.gameOver");
 				// GAMESNACKS.gameOver();
+				console.log("请求插屏广告");
+				// 展示插屏广告
+				HUHU_showInterstitialAd();
 				return resolve(event, params);
 			case "EVENT_LEVELSUCCESS":
 				console.log("EVENT_LEVELSUCCESS");
@@ -115,7 +118,7 @@ window.famobi_analytics.trackEvent = function(event, params) {
 							gsLevel = parseInt(params.levelName.replace(/\D/g, "")) || -1;
 						}
 				}
-				console.log("GAMESNACKS.levelComplete", gsLevel);
+				//console.log("GAMESNACKS.levelComplete", gsLevel);
 				// GAMESNACKS.levelComplete(gsLevel);
 				break;
 			default:
