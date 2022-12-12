@@ -1,0 +1,26 @@
+{
+    "c2array": true,
+    "size": [
+        2,
+        2,
+        1
+    ],
+    "data": [
+        [
+            [
+                "CurrentLevel"
+            ],
+            [
+                "skinSelected"
+            ]
+        ],
+        [
+            [
+                0
+            ],
+            [
+                ""
+            ]
+        ]
+    ]
+}
