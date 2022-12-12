@@ -4388,9 +4388,9 @@
 								{
 									key: 'setLoadingProgress',
 									value: function (t) {
-										PokiSDK.gameLoadingProgress({
-											percentageDone: t,
-										});
+										// PokiSDK.gameLoadingProgress({
+										// 	percentageDone: t,
+										// });
 									},
 								},
 								{
@@ -4422,8 +4422,8 @@
 																case 2:
 																	return (
 																		(t.prev = 2),
-																		(t.next = 5),
-																		PokiSDK.init()
+																		(t.next = 5)
+																		// , PokiSDK.init()
 																	);
 																case 5:
 																	t.next = 11;
@@ -4438,7 +4438,7 @@
 																			!0);
 																case 11:
 																	// this.sitelock(),
-																		PokiSDK.gameLoadingStart();
+																		// PokiSDK.gameLoadingStart();
 																case 14:
 																case 'end':
 																	return t.stop();
@@ -4578,19 +4578,21 @@
 																			passive:
 																				!1,
 																		}
-																	),
-																	PokiSDK.shareableURL(
-																		{}
-																	).then(
-																		function (
-																			t
-																		) {
-																			return e.setGameDownloadURL(
-																				t
-																			);
-																		}
-																	),
-																	PokiSDK.gameLoadingFinished();
+																	)
+																	// ,
+																	// PokiSDK.shareableURL(
+																	// 	{}
+																	// ).then(
+																	// 	function (
+																	// 		t
+																	// 	) {
+																	// 		return e.setGameDownloadURL(
+																	// 			t
+																	// 		);
+																	// 	}
+																	// ),
+																	// PokiSDK.gameLoadingFinished()
+																	;
 															case 4:
 															case 'end':
 																return t.stop();
@@ -4614,12 +4616,12 @@
 											this.adsBlocked
 												? this.gameplayStart()
 												: ((this.muted = !0),
-												  PokiSDK.commercialBreak().finally(
-														function () {
-															(t.muted = !1),
-																t.gameplayStart();
-														}
-												  ));
+												(t.muted = !1), t.gameplayStart());
+												//   PokiSDK.commercialBreak().finally(
+												// 		function () {
+												// 			(t.muted = !1), t.gameplayStart();
+												// 		}
+												//   ));
 									},
 								},
 								{
@@ -4629,115 +4631,88 @@
 											k().mark(function t() {
 												var e = this;
 												return k().wrap(function (t) {
-													for (;;)
-														switch (
-															(t.prev = t.next)
-														) {
+													for (; ;)
+														switch ((t.prev = t.next)) {
 															case 0:
-																return t.abrupt(
-																	'return',
+																return t.abrupt('return',
 																	{
-																		mediator:
-																			C,
+																		mediator: C,
 																		show: (function () {
-																			var t =
-																				L(
-																					k().mark(
-																						function t(
-																							r
-																						) {
-																							var n;
-																							return k().wrap(
-																								function (
-																									t
-																								) {
-																									for (;;)
-																										switch (
-																											(t.prev =
-																												t.next)
-																										) {
-																											case 0:
-																												if (
-																													((e.muted =
-																														!0),
+																			var t = L(
+																					k().mark(function t(r) {
+																						var n;
+																						return k().wrap(function (t) {
+																								for (; ;)
+																									switch ((t.prev =t.next)) {
+																										case 0:
+																											if (
+																												((e.muted = !0),
 																													e.gameplayStop(),
 																													c(),
-																													(n =
-																														!1),
+																													(n = !1),
 																													e.adsBlocked)
-																												) {
-																													t.next = 14;
-																													break;
-																												}
-																												if (
-																													!(
-																														'object' ===
-																															G(
-																																(o =
-																																	r)
-																															) &&
-																														null !==
-																															o &&
-																														'category' in
-																															o &&
-																														'string' ==
-																															typeof o.category &&
-																														'details' in
-																															o &&
-																														'string' ==
-																															typeof o.details &&
-																														'placement' in
-																															o &&
-																														'string' ==
-																															typeof o.placement
-																													)
-																												) {
-																													t.next = 11;
-																													break;
-																												}
-																												return (
-																													(t.next = 8),
-																													PokiSDK.rewardedBreak(
-																														r.category,
-																														r.details,
-																														r.placement
-																													)
-																												);
-																											case 8:
-																												(n =
-																													t.sent),
-																													(t.next = 14);
+																											) {
+																												t.next = 14;
 																												break;
-																											case 11:
-																												return (
-																													(t.next = 13),
-																													PokiSDK.rewardedBreak()
-																												);
-																											case 13:
-																												n =
-																													t.sent;
-																											case 14:
-																												if (
-																													(l(),
-																													(e.muted =
-																														!1),
-																													e.gameplayStart(),
-																													n)
-																												) {
-																													t.next = 19;
-																													break;
-																												}
-																												throw new s._(
-																													s.j.Unknown,
-																													'Rewarded Ad not displayed.'
-																												);
-																											case 19:
-																											case 'end':
-																												return t.stop();
-																										}
-																								},
-																								t
-																							);
+																											}
+																											if (
+																												!(
+																													'object' === G((o = r)) 
+																													&& null !== o 
+																													&& 'category' in o && 'string' == typeof o.category 
+																													&& 'details' in o && 'string' == typeof o.details 
+																													&& 'placement' in o && 'string' == typeof o.placement
+																												)
+																											) {
+																												t.next = 11;
+																												break;
+																											}
+																											return (
+																												(t.next = 8),
+																												console.log('rewardedBreak ...0')
+																												// ,
+																												// PokiSDK.rewardedBreak(
+																												// 	r.category,
+																												// 	r.details,
+																												// 	r.placement
+																												// )
+																											);
+																										case 8:
+																											(n = t.sent),
+																											(t.next = 14);
+																											break;
+																										case 11:
+																											return (
+																												(t.next = 13),
+																												console.log('rewardedBreak ...11')
+																												// ,
+																												// PokiSDK.rewardedBreak()
+																											);
+																										case 13:
+																											n = t.sent;
+																										case 14:
+																											if (
+																												(l(),
+																												(e.muted = !1),
+																												e.gameplayStart(),
+																												n)
+																											) {
+																												console.log('case ...14'),
+																												t.next = 19;
+																												break;
+																											}
+
+																											throw new s._(
+																												s.j.Unknown,
+																												'Rewarded Ad not displayed.'
+																											);
+																										case 19:
+																										case 'end':
+																											return t.stop();
+																									}
+																							},
+																							t
+																						);
 																						}
 																					)
 																				);
@@ -4759,9 +4734,9 @@
 												}, t);
 											})
 										)),
-										function () {
-											return o.apply(this, arguments);
-										}),
+											function () {
+												return o.apply(this, arguments);
+											}),
 								},
 								{
 									key: 'getInterstitialAd',
@@ -4807,7 +4782,10 @@
 																												}
 																												return (
 																													(t.next = 6),
-																													PokiSDK.commercialBreak()
+																													console.log('getInterstitialAd...'),
+																													// 展示插屏广告
+																													HUHU_showInterstitialAd()
+																													// PokiSDK.commercialBreak()
 																												);
 																											case 6:
 																												l(),
@@ -4851,17 +4829,15 @@
 								{
 									key: 'gameplayStart',
 									value: function () {
-										--this.gameplayState,
-											0 === this.gameplayState &&
-												PokiSDK.gameplayStart();
+										--this.gameplayState
+										// , 0 === this.gameplayState && PokiSDK.gameplayStart();
 									},
 								},
 								{
 									key: 'gameplayStop',
 									value: function () {
-										0 === this.gameplayState &&
-											PokiSDK.gameplayStop(),
-											++this.gameplayState;
+										// 0 === this.gameplayState && PokiSDK.gameplayStop(),
+										++this.gameplayState;
 									},
 								},
 								{
