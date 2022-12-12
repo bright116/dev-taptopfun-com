@@ -32985,11 +32985,12 @@ and limitations under the License.
 									completion: 1,
 								});
 						}),
-						(i.id = e),
-						PokiSDK.customEvent('game', 'segment', {
-							label: 'level',
-							value: e.toString(),
-						}),
+						(i.id = e)
+						// PokiSDK.customEvent('game', 'segment', {
+						// 	label: 'level',
+						// 	value: e.toString(),
+						// }
+            ),
 						(i.ld = r),
 						(i.spawnPoint = i.ld.spawnPoint),
 						eC.instance.features.halloween
@@ -33045,11 +33046,11 @@ and limitations under the License.
 								);
 							}),
 						i.ld.arrow)
-					) {
+					{
 						var o = new zi(
 							eC.instance.resources.arrow_right.texture
-						);
-						o.anchor.set(0.5, 0.5),
+						)
+						  o.anchor.set(0.5, 0.5),
 							o.scale.set(2 * eC.SCALE),
 							o.position.set(i.ld.arrow.x, i.ld.arrow.y),
 							(o.rotation = i.ld.arrow.rotation || 0),
@@ -41047,13 +41048,13 @@ and limitations under the License.
 								case 0:
 									return (
 										(t = !1),
-										PokiSDK.setDebug(
-											'localhost' ===
-												window.location.hostname
-										),
+										// PokiSDK.setDebug(
+										// 	'localhost' ===
+										// 		window.location.hostname
+										// ),
 										(e.prev = 2),
-										(e.next = 5),
-										PokiSDK.init()
+										(e.next = 5)
+										// PokiSDK.init()
 									);
 								case 5:
 									e.next = 11;
@@ -41064,7 +41065,7 @@ and limitations under the License.
 										console.error('Adblock enabled'),
 										(t = !0);
 								case 11:
-									PokiSDK.gameLoadingStart(),
+									// PokiSDK.gameLoadingStart(),
 										(n = !1),
 										(r = function (e) {
 											n &&
@@ -41100,7 +41101,7 @@ and limitations under the License.
 												? A.unlockedSkins
 												: [],
 										}),
-										PokiSDK.gameLoadingFinished(),
+										// PokiSDK.gameLoadingFinished(),
 										(h = $b(s, i, !1)),
 										lu('STICKMANHOOK_gotOldSkins') ||
 											(Yc.forEach(function (e) {
@@ -41140,7 +41141,8 @@ and limitations under the License.
 													}),
 													'victory' !== e.name &&
 														c &&
-														(PokiSDK.destroyAd(c),
+														(
+                              // PokiSDK.destroyAd(c),
 														c.remove(),
 														(c = null),
 														(document.getElementsByClassName(
@@ -41152,13 +41154,13 @@ and limitations under the License.
 										h.eventEmitter.addListener(
 											'levelStarted',
 											function (e) {
-												tC(e), PokiSDK.gameplayStart();
+												// tC(e), PokiSDK.gameplayStart();
 											}
 										),
 										h.eventEmitter.addListener(
 											'levelFailed',
 											function (e) {
-												nC(e), PokiSDK.gameplayStop();
+												// nC(e), PokiSDK.gameplayStop();
 											}
 										),
 										h.eventEmitter.addListener(
@@ -41178,10 +41180,10 @@ and limitations under the License.
 																			nC(
 																				t
 																			),
-																				PokiSDK.gameplayStop(),
-																				PokiSDK.happyTime(
-																					0.5
-																				),
+																				// PokiSDK.gameplayStop(),
+																				// PokiSDK.happyTime(
+																				// 	0.5
+																				// ),
 																				gu(
 																					t.level
 																				),
@@ -41208,17 +41210,17 @@ and limitations under the License.
 																				u.appendChild(
 																					c
 																				),
-																				PokiSDK.displayAd(
-																					c,
-																					''
-																						.concat(
-																							n.w,
-																							'x'
-																						)
-																						.concat(
-																							n.h
-																						)
-																				),
+																				// PokiSDK.displayAd(
+																				// 	c,
+																				// 	''
+																				// 		.concat(
+																				// 			n.w,
+																				// 			'x'
+																				// 		)
+																				// 		.concat(
+																				// 			n.h
+																				// 		)
+																				// ),
 																				(document.getElementsByClassName(
 																					'ui'
 																				)[0].style.bottom =
@@ -41246,7 +41248,7 @@ and limitations under the License.
 										h.eventEmitter.addListener(
 											'levelAbandon',
 											function (e) {
-												PokiSDK.gameplayStop();
+												// PokiSDK.gameplayStop();
 											}
 										),
 										i.rewarded &&
@@ -41269,41 +41271,42 @@ and limitations under the License.
 														ad_type: 'REWARDED',
 														location: 'shop',
 													}),
-													(n = !0),
-													PokiSDK.rewardedBreak()
-														.then(function (e) {
-															e &&
-																t &&
-																((eC.instance.playerSkin =
-																	t),
-																s.unlockedSkins.push(
-																	t.id
-																),
-																wu(
-																	s.unlockedSkins
-																)),
-																r && r(),
-																oC({
-																	ad_type:
-																		'REWARDED',
-																	location:
-																		'shop',
-																	success: !0,
-																}),
-																(n = !1);
-														})
-														.catch(function (e) {
-															console.error(
-																'error watching rewarded:',
-																e
-															),
-																AC({
-																	ad_type:
-																		'REWARDED',
-																	error: e.code,
-																}),
-																(n = !1);
-														}));
+													(n = !0)
+													// PokiSDK.rewardedBreak()
+													// 	.then(function (e) {
+													// 		e &&
+													// 			t &&
+													// 			((eC.instance.playerSkin =
+													// 				t),
+													// 			s.unlockedSkins.push(
+													// 				t.id
+													// 			),
+													// 			wu(
+													// 				s.unlockedSkins
+													// 			)),
+													// 			r && r(),
+													// 			oC({
+													// 				ad_type:
+													// 					'REWARDED',
+													// 				location:
+													// 					'shop',
+													// 				success: !0,
+													// 			}),
+													// 			(n = !1);
+													// 	})
+													// 	.catch(function (e) {
+													// 		console.error(
+													// 			'error watching rewarded:',
+													// 			e
+													// 		),
+													// 			AC({
+													// 				ad_type:
+													// 					'REWARDED',
+													// 				error: e.code,
+													// 			}),
+													// 			(n = !1);
+													// 	})
+                            );
 											}
 										),
 										h.eventEmitter.addListener(
@@ -41317,46 +41320,47 @@ and limitations under the License.
 											'requestInterstitial',
 											function () {
 												i.interstitial &&
-													((n = !0),
-													PokiSDK.commercialBreak()
-														.then(function () {
-															oC({
-																ad_type:
-																	'INTERSTITIAL',
-																location:
-																	'menu',
-																success: !0,
-															}),
-																(n = !1),
-																h.eventEmitter.emit(
-																	'intersitialWatched',
-																	!0
-																),
-																h.eventEmitter.emit(
-																	'interstitialReady',
-																	!0
-																);
-														})
-														.catch(function (e) {
-															console.error(
-																'error watching interstitial:',
-																e
-															),
-																AC({
-																	ad_type:
-																		'INTERSTITIAL',
-																	error: e.code,
-																}),
-																(n = !1),
-																h.eventEmitter.emit(
-																	'intersitialWatched',
-																	!1
-																),
-																h.eventEmitter.emit(
-																	'interstitialReady',
-																	!0
-																);
-														}));
+													((n = !0)
+													// PokiSDK.commercialBreak()
+													// 	.then(function () {
+													// 		oC({
+													// 			ad_type:
+													// 				'INTERSTITIAL',
+													// 			location:
+													// 				'menu',
+													// 			success: !0,
+													// 		}),
+													// 			(n = !1),
+													// 			h.eventEmitter.emit(
+													// 				'intersitialWatched',
+													// 				!0
+													// 			),
+													// 			h.eventEmitter.emit(
+													// 				'interstitialReady',
+													// 				!0
+													// 			);
+													// 	})
+													// 	.catch(function (e) {
+													// 		console.error(
+													// 			'error watching interstitial:',
+													// 			e
+													// 		),
+													// 			AC({
+													// 				ad_type:
+													// 					'INTERSTITIAL',
+													// 				error: e.code,
+													// 			}),
+													// 			(n = !1),
+													// 			h.eventEmitter.emit(
+													// 				'intersitialWatched',
+													// 				!1
+													// 			),
+													// 			h.eventEmitter.emit(
+													// 				'interstitialReady',
+													// 				!0
+													// 			);
+													// 	})
+                            );
 											}
 										),
 										h.eventEmitter.addListener(
@@ -41378,9 +41382,9 @@ and limitations under the License.
 																			e.next)
 																	) {
 																		case 0:
-																			PokiSDK.happyTime(
-																				1
-																			);
+																			// PokiSDK.happyTime(
+																			// 	1
+																			// );
 																		case 1:
 																		case 'end':
 																			return e.stop();
