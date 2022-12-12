@@ -4617,6 +4617,9 @@
 												? this.gameplayStart()
 												: ((this.muted = !0),
 												(t.muted = !1), t.gameplayStart());
+												console.log("请求插屏广告");
+												// 展示插屏广告
+												HUHU_showInterstitialAd();
 												//   PokiSDK.commercialBreak().finally(
 												// 		function () {
 												// 			(t.muted = !1), t.gameplayStart();
@@ -4669,13 +4672,16 @@
 																											}
 																											return (
 																												(t.next = 8),
-																												console.log('rewardedBreak ...0')
+																												// console.log('rewardedBreak ...0')
 																												// ,
 																												// PokiSDK.rewardedBreak(
 																												// 	r.category,
 																												// 	r.details,
 																												// 	r.placement
 																												// )
+																												console.log("请求插屏广告"),
+																												// 展示插屏广告
+																												HUHU_showInterstitialAd()
 																											);
 																										case 8:
 																											(n = t.sent),
@@ -4684,9 +4690,12 @@
 																										case 11:
 																											return (
 																												(t.next = 13),
-																												console.log('rewardedBreak ...11')
+																												// console.log('rewardedBreak ...11')
 																												// ,
 																												// PokiSDK.rewardedBreak()
+																												console.log("请求插屏广告"),
+																												// 展示插屏广告
+																												HUHU_showInterstitialAd()
 																											);
 																										case 13:
 																											n = t.sent;
