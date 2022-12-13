@@ -1,0 +1,1 @@
+window['screenOrie' + 'ntation'] = 'portrait', loadLib('libs/min/l' + 'aya.core.m' + 'in.js'), loadLib('libs/min/l' + 'aya.ui.js'), loadLib('libs/min/l' + 'aya.d3.min' + '.js'), loadLib('js/fairygu' + 'i.js'), loadLib('js/bundle.' + 'js');
