@@ -1,0 +1,1 @@
+window['screenOrie' + 'ntation'] = 'portrait', loadLib('./libs/min' + '/laya.core' + '.min.js'), loadLib('./libs/min' + '/laya.webg' + 'l.min.js'), loadLib('./libs/min' + '/laya.ui.m' + 'in.js'), loadLib('./libs/min' + '/laya.filt' + 'er.min.js'), loadLib('./libs/min' + '/laya.part' + 'icle.min.j' + 's'), loadLib('code.js');
