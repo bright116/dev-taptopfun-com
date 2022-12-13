@@ -1,0 +1,8 @@
+{
+	"front":"sc_02bj_PositiveZ.png",
+	"back":"sc_02bj_NegativeZ.png",
+	"left":"sc_02bj_PositiveX.png",
+	"right":"sc_02bj_NegativeX.png",
+	"up":"sc_02bj_PositiveY.png",
+	"down":"sc_02bj_NegativeY.png"
+}
