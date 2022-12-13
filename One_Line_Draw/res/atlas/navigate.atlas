@@ -1,0 +1,178 @@
+{
+    "frames": {
+        "BlockClear.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 0,
+                "y": 101
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "CrazyGun.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 100,
+                "y": 101
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "CrowdCity.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 101,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "GongjianHero.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 300,
+                "y": 100
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "IdiomCross.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 301,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "MoveCars.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 400,
+                "y": 100
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "PopStar2.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 401,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "cutfruit3.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 200,
+                "y": 100
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "fishing.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 99,
+                "x": 201,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 99
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "nav1.png": {
+            "frame": {
+                "h": 100,
+                "idx": 0,
+                "w": 100,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 100,
+                "w": 100
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "navigate.png",
+        "prefix": "navigate/"
+    }
+}

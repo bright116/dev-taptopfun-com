@@ -1,0 +1,110 @@
+{
+    "frames": {
+        "g3.png": {
+            "frame": {
+                "h": 173,
+                "idx": 0,
+                "w": 465,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 465
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "g5.png": {
+            "frame": {
+                "h": 112,
+                "idx": 0,
+                "w": 236,
+                "x": 0,
+                "y": 174
+            },
+            "sourceSize": {
+                "h": 112,
+                "w": 237
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "g6.png": {
+            "frame": {
+                "h": 44,
+                "idx": 0,
+                "w": 476,
+                "x": 0,
+                "y": 287
+            },
+            "sourceSize": {
+                "h": 50,
+                "w": 477
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 5
+            }
+        },
+        "g7.png": {
+            "frame": {
+                "h": 71,
+                "idx": 0,
+                "w": 71,
+                "x": 237,
+                "y": 174
+            },
+            "sourceSize": {
+                "h": 71,
+                "w": 71
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "g8.png": {
+            "frame": {
+                "h": 38,
+                "idx": 0,
+                "w": 108,
+                "x": 318,
+                "y": 332
+            },
+            "sourceSize": {
+                "h": 50,
+                "w": 109
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 5
+            }
+        },
+        "g9.png": {
+            "frame": {
+                "h": 41,
+                "idx": 0,
+                "w": 317,
+                "x": 0,
+                "y": 332
+            },
+            "sourceSize": {
+                "h": 42,
+                "w": 320
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 1
+            }
+        }
+    },
+    "meta": {
+        "image": "gold.png",
+        "prefix": "gold/"
+    }
+}

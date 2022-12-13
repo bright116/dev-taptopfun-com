@@ -1,0 +1,654 @@
+{
+    "frames": {
+        "animal1.png": {
+            "frame": {
+                "h": 105,
+                "idx": 0,
+                "w": 90,
+                "x": 546,
+                "y": 314
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal10.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 455,
+                "y": 105
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal11.png": {
+            "frame": {
+                "h": 103,
+                "idx": 0,
+                "w": 90,
+                "x": 546,
+                "y": 105
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 2
+            }
+        },
+        "animal12.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 546,
+                "y": 209
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal13.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 182,
+                "y": 314
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal14.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 182,
+                "y": 419
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal15.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 182,
+                "y": 524
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal16.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 273,
+                "y": 210
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal17.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 364,
+                "y": 210
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal18.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 455,
+                "y": 210
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal19.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 364,
+                "y": 105
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal2.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 273,
+                "y": 420
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal20.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 273,
+                "y": 315
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal21.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 273,
+                "y": 525
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal22.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 364,
+                "y": 315
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal23.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 455,
+                "y": 315
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal24.png": {
+            "frame": {
+                "h": 105,
+                "idx": 0,
+                "w": 90,
+                "x": 364,
+                "y": 420
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal25.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 364,
+                "y": 526
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal26.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 455,
+                "y": 420
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal27.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 456,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal28.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 0,
+                "y": 104
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal29.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 0,
+                "y": 209
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal3.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 0,
+                "y": 314
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal30.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 0,
+                "y": 419
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal31.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 0,
+                "y": 524
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal32.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 91,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal33.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 182,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal34.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 273,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal35.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 91,
+                "x": 364,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 14,
+                "y": 1
+            }
+        },
+        "animal36.png": {
+            "frame": {
+                "h": 103,
+                "idx": 0,
+                "w": 90,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 2
+            }
+        },
+        "animal37.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 91,
+                "x": 547,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 14,
+                "y": 1
+            }
+        },
+        "animal38.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 91,
+                "y": 105
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal4.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 91,
+                "y": 210
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal5.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 91,
+                "y": 315
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal6.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 91,
+                "y": 420
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal7.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 91,
+                "y": 525
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal8.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 182,
+                "y": 105
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        },
+        "animal9.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 90,
+                "x": 273,
+                "y": 105
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 1
+            }
+        }
+    },
+    "meta": {
+        "image": "animal.png",
+        "prefix": "animal/"
+    }
+}
