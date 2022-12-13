@@ -1,0 +1,93 @@
+{
+    "frames": {
+        "di.png": {
+            "frame": {
+                "h": 65,
+                "idx": 0,
+                "w": 204,
+                "x": 261,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 69,
+                "w": 207
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "guan.png": {
+            "frame": {
+                "h": 65,
+                "idx": 0,
+                "w": 204,
+                "x": 261,
+                "y": 66
+            },
+            "sourceSize": {
+                "h": 69,
+                "w": 207
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "hands.png": {
+            "frame": {
+                "h": 118,
+                "idx": 0,
+                "w": 105,
+                "x": 154,
+                "y": 99
+            },
+            "sourceSize": {
+                "h": 118,
+                "w": 105
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "restartBtn.png": {
+            "frame": {
+                "h": 153,
+                "idx": 0,
+                "w": 153,
+                "x": 0,
+                "y": 99
+            },
+            "sourceSize": {
+                "h": 153,
+                "w": 153
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "tiaoguo.png": {
+            "frame": {
+                "h": 98,
+                "idx": 0,
+                "w": 260,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 98,
+                "w": 260
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "res.png",
+        "prefix": "res/"
+    }
+}

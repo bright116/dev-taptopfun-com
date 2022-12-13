@@ -1,0 +1,32 @@
+var webuzzCommon = {
+    SDK_VERSION: "1.0.0",
+    GAME_VERSION: "6.1.0",
+    APPID: "wx0f14b1948e2f2783",
+    gridAdIdList: [ "adunit-2aef78cc7285821e", "adunit-508b24e5b62a40ff", "adunit-d2d88aeda2a380d9" ],
+    listCustomAdIdList: [ "adunit-f471b744eba93a61", "adunit-d38afeac8c80effe" ],
+    videoAdId: "adunit-a693314b985aea5b",
+    interstitialAdId: "adunit-a7cd4066f8dddcff",
+    banner_id: "adunit-8a885e1b5bc96ba0",
+    grid_id: "adunit-1e718438397514fc",
+    squareCustomAdIdList: [ "adunit-2cf1001c6422e5db", "adunit-1c78bd2d4b53907c", "adunit-6b444f6e5ea9fe99" ],
+    DEBUG: !1,
+    TEST_MODE: !1,
+    systemInfo: null,
+    scaleX: 1,
+    stageWidth: 720,
+    stageHeight: 1280,
+    screenScale: 1,
+    userChannel: "null",
+    USER_CHANNEL_KEY: "USER_CHANNEL_KEY",
+    USER_ID_KEY: "USER_OPENID",
+    userID: null,
+    newUser: !0,
+    userLevel: 0,
+    USER_LEVEL_KEY: "USER_LEVEL",
+    userStrategy: "null",
+    userScene: 0,
+    lastLoginDate: null,
+    USER_LAST_LOGIN_DATE_KEY: "USER_LAST_LOGIN_DATE"
+};
+
+window.webuzzCommon = webuzzCommon;
