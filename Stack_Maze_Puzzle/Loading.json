@@ -1,0 +1,62 @@
+{
+    "type": "Scene",
+    "props": {
+        "width": 750,
+        "runtime": "scripts/Loading.ts",
+        "height": 1334,
+        "autoDestroyAtClosed": false
+    },
+    "compId": 2,
+    "child": [
+        {
+            "type": "Image",
+            "props": {
+                "top": 0,
+                "skin": "loading/jz_bg_01.jpg",
+                "right": 0,
+                "name": "bg",
+                "left": 0,
+                "bottom": 0
+            },
+            "compId": 12
+        },
+        {
+            "type": "Image",
+            "props": {
+                "top": 200,
+                "skin": "loading/logo.png",
+                "name": "logo",
+                "centerX": 0
+            },
+            "compId": 13
+        },
+        {
+            "type": "ProgressBar",
+            "props": {
+                "var": "bar",
+                "value": 0,
+                "skin": "loading/jz_jdt_01.png",
+                "centerX": 0,
+                "bottom": 350
+            },
+            "compId": 15
+        },
+        {
+            "type": "Image",
+            "props": {
+                "skin": "loading/jz_wz_01.png",
+                "name": "Word",
+                "centerX": 0,
+                "bottom": 300
+            },
+            "compId": 16
+        }
+    ],
+    "loadList": [
+        "loading/jz_bg_01.jpg",
+        "loading/logo.png",
+        "loading/jz_jdt_01.png",
+        "loading/jz_wz_01.png"
+    ],
+    "loadList3D": []
+}

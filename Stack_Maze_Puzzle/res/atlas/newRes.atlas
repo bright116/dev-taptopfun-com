@@ -1,0 +1,229 @@
+{
+    "frames": {
+        "dc_btn_2.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 492,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 104,
+                "w": 492
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dc_btn_bj.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 252,
+                "x": 313,
+                "y": 105
+            },
+            "sourceSize": {
+                "h": 104,
+                "w": 252
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dc_btn_fq.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 252,
+                "x": 313,
+                "y": 210
+            },
+            "sourceSize": {
+                "h": 104,
+                "w": 252
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dc_btn_gb.png": {
+            "frame": {
+                "h": 54,
+                "idx": 0,
+                "w": 54,
+                "x": 493,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 54,
+                "w": 54
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dc_btn_lq.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 252,
+                "x": 328,
+                "y": 315
+            },
+            "sourceSize": {
+                "h": 104,
+                "w": 252
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dc_sz_1.png": {
+            "frame": {
+                "h": 41,
+                "idx": 0,
+                "w": 277,
+                "x": 0,
+                "y": 371
+            },
+            "sourceSize": {
+                "h": 41,
+                "w": 277
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dc_tl_1.png": {
+            "frame": {
+                "h": 66,
+                "idx": 0,
+                "w": 240,
+                "x": 341,
+                "y": 420
+            },
+            "sourceSize": {
+                "h": 67,
+                "w": 240
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dc_wz_2.png": {
+            "frame": {
+                "h": 55,
+                "idx": 0,
+                "w": 327,
+                "x": 0,
+                "y": 315
+            },
+            "sourceSize": {
+                "h": 75,
+                "w": 382
+            },
+            "spriteSourceSize": {
+                "x": 27,
+                "y": 7
+            }
+        },
+        "dc_wz_3.png": {
+            "frame": {
+                "h": 75,
+                "idx": 0,
+                "w": 340,
+                "x": 0,
+                "y": 420
+            },
+            "sourceSize": {
+                "h": 75,
+                "w": 340
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "lbwb_btn_1.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 312,
+                "x": 0,
+                "y": 105
+            },
+            "sourceSize": {
+                "h": 104,
+                "w": 312
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "lbwb_btn_2.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 312,
+                "x": 0,
+                "y": 210
+            },
+            "sourceSize": {
+                "h": 104,
+                "w": 312
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "tj (3).png": {
+            "frame": {
+                "h": 54,
+                "idx": 0,
+                "w": 250,
+                "x": 341,
+                "y": 487
+            },
+            "sourceSize": {
+                "h": 54,
+                "w": 250
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "xq_sp.png": {
+            "frame": {
+                "h": 46,
+                "idx": 0,
+                "w": 35,
+                "x": 278,
+                "y": 371
+            },
+            "sourceSize": {
+                "h": 47,
+                "w": 35
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "newRes.png",
+        "prefix": "newRes/"
+    }
+}

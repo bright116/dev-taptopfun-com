@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "Coin_01.png": {
+            "frame": {
+                "h": 192,
+                "idx": 0,
+                "w": 256,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 192,
+                "w": 256
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "yxz_fh_01.png": {
+            "frame": {
+                "h": 104,
+                "idx": 0,
+                "w": 104,
+                "x": 0,
+                "y": 193
+            },
+            "sourceSize": {
+                "h": 104,
+                "w": 104
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "stageUI.png",
+        "prefix": "stageUI/"
+    }
+}

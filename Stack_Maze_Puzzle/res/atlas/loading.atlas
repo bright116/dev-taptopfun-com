@@ -1,0 +1,76 @@
+{
+    "frames": {
+        "jz_jdt_01$bar.png": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 494,
+                "x": 0,
+                "y": 259
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 494
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "jz_jdt_01.png": {
+            "frame": {
+                "h": 39,
+                "idx": 0,
+                "w": 500,
+                "x": 0,
+                "y": 219
+            },
+            "sourceSize": {
+                "h": 39,
+                "w": 500
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "jz_wz_01.png": {
+            "frame": {
+                "h": 39,
+                "idx": 0,
+                "w": 162,
+                "x": 0,
+                "y": 291
+            },
+            "sourceSize": {
+                "h": 39,
+                "w": 236
+            },
+            "spriteSourceSize": {
+                "x": 35,
+                "y": 0
+            }
+        },
+        "logo.png": {
+            "frame": {
+                "h": 218,
+                "idx": 0,
+                "w": 407,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 337,
+                "w": 407
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 35
+            }
+        }
+    },
+    "meta": {
+        "image": "loading.png",
+        "prefix": "loading/"
+    }
+}
