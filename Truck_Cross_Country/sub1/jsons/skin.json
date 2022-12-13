@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "H3",
+        "valuetype": 1,
+        "value": 0,
+        "speed": 136,
+        "horsepower": 83,
+        "weight": 2.1
+    },
+    {
+        "id": 2,
+        "name": "Hummer",
+        "valuetype": 1,
+        "value": 500,
+        "speed": 398,
+        "horsepower": 293,
+        "weight": 2.9
+    },
+    {
+        "id": 3,
+        "name": "Jeep",
+        "valuetype": 2,
+        "value": 100,
+        "speed": 175,
+        "horsepower": 128,
+        "weight": 1.8
+    },
+    {
+        "id": 4,
+        "name": "Mitsubishi",
+        "valuetype": 3,
+        "value": 3,
+        "speed": 174,
+        "horsepower": 128,
+        "weight": 2.1
+    },
+    {
+        "id": 5,
+        "name": "Land Rover",
+        "valuetype": 3,
+        "value": 3,
+        "speed": 340,
+        "horsepower": 250,
+        "weight": 2.2
+    }
+]
