@@ -139,7 +139,7 @@ var __extends = this && this.__extends || function () {
                     i("View/GuideView/GuideView.ts", l.default),
                     i("View/GamingView/Input.ts", r.default),
                     i("View/LoadingView/LoadingView.ts", s.default);
-            }, GameConfig.width = 750, GameConfig.height = 1334, GameConfig.scaleMode = "showall",
+            }, GameConfig.width = 750, GameConfig.height = 1334, GameConfig.scaleMode = "exactfit",
                 GameConfig.screenMode = "none", GameConfig.alignV = "middle", GameConfig.alignH = "center",
                 GameConfig.startScene = "GameMain.scene", GameConfig.sceneRoot = "", GameConfig.debug = !1,
                 GameConfig.stat = !1, GameConfig.physicsDebug = !1, GameConfig.exportSceneToJson = !0,
