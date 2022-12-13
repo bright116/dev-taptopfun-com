@@ -1,0 +1,1 @@
+window['screenOrie' + 'ntation'] = 'sensor_lan' + 'dscape', loadLib('libs/laya.' + 'core.js'), loadLib('libs/laya.' + 'ui.js'), loadLib('js/laya.d3' + '.js'), loadLib('js/laya.ph' + 'ysics3D.js'), loadLib('js/bundle.' + 'js');
