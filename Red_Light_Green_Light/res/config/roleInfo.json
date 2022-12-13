@@ -1,0 +1,263 @@
+[
+    {
+        "id": 1.0,
+        "name": "1a",
+        "head_mesh": "role-01.lm",
+        "main_texture": "body_1.png",
+        "icon": "1.png",
+        "condition": 0.0,
+        "condition_val": 0.0
+    },
+    {
+        "id": 2.0,
+        "name": "2a",
+        "head_mesh": "role-02.lm",
+        "main_texture": "body_2.png",
+        "icon": "2.png",
+        "condition": 1.0,
+        "condition_val": 300.0
+    },
+    {
+        "id": 3.0,
+        "name": "3a",
+        "head_mesh": "role-03.lm",
+        "main_texture": "body_3.png",
+        "icon": "3.png",
+        "condition": 1.0,
+        "condition_val": 400.0
+    },
+    {
+        "id": 4.0,
+        "name": "4a",
+        "head_mesh": "role-04.lm",
+        "main_texture": "body_4.png",
+        "icon": "4.png",
+        "condition": 1.0,
+        "condition_val": 500.0
+    },
+    {
+        "id": 5.0,
+        "name": "5a",
+        "head_mesh": "role-05.lm",
+        "main_texture": "body_5.png",
+        "icon": "5.png",
+        "condition": 1.0,
+        "condition_val": 600.0
+    },
+    {
+        "id": 6.0,
+        "name": "6a",
+        "head_mesh": "role-06.lm",
+        "main_texture": "body_6.png",
+        "icon": "6.png",
+        "condition": 1.0,
+        "condition_val": 700.0
+    },
+    {
+        "id": 7.0,
+        "name": "7a",
+        "head_mesh": "role-07.lm",
+        "main_texture": "body_7.png",
+        "icon": "7.png",
+        "condition": 1.0,
+        "condition_val": 800.0
+    },
+    {
+        "id": 8.0,
+        "name": "8a",
+        "head_mesh": "role-08.lm",
+        "main_texture": "body_8.png",
+        "icon": "8.png",
+        "condition": 1.0,
+        "condition_val": 900.0
+    },
+    {
+        "id": 9.0,
+        "name": "9a",
+        "head_mesh": "role-09.lm",
+        "main_texture": "body_9.png",
+        "icon": "9.png",
+        "condition": 1.0,
+        "condition_val": 1000.0
+    },
+    {
+        "id": 10.0,
+        "name": "10a",
+        "head_mesh": "role-10.lm",
+        "main_texture": "body_10.png",
+        "icon": "10.png",
+        "condition": 1.0,
+        "condition_val": 1100.0
+    },
+    {
+        "id": 11.0,
+        "name": "11a",
+        "head_mesh": "role-11.lm",
+        "main_texture": "body_11.png",
+        "icon": "11.png",
+        "condition": 1.0,
+        "condition_val": 1200.0
+    },
+    {
+        "id": 12.0,
+        "name": "12a",
+        "head_mesh": "role-12.lm",
+        "main_texture": "body_12.png",
+        "icon": "12.png",
+        "condition": 1.0,
+        "condition_val": 1300.0
+    },
+    {
+        "id": 13.0,
+        "name": "13a",
+        "head_mesh": "role-13.lm",
+        "main_texture": "body_13.png",
+        "icon": "13.png",
+        "condition": 1.0,
+        "condition_val": 1400.0
+    },
+    {
+        "id": 14.0,
+        "name": "14a",
+        "head_mesh": "role-14.lm",
+        "main_texture": "body_14.png",
+        "icon": "14.png",
+        "condition": 1.0,
+        "condition_val": 1500.0
+    },
+    {
+        "id": 15.0,
+        "name": "15a",
+        "head_mesh": "role-15.lm",
+        "main_texture": "body_15.png",
+        "icon": "15.png",
+        "condition": 1.0,
+        "condition_val": 1600.0
+    },
+    {
+        "id": 16.0,
+        "name": "16a",
+        "head_mesh": "role-16.lm",
+        "main_texture": "body_16.png",
+        "icon": "16.png",
+        "condition": 1.0,
+        "condition_val": 1700.0
+    },
+    {
+        "id": 17.0,
+        "name": "17a",
+        "head_mesh": "role-17.lm",
+        "main_texture": "body_17.png",
+        "icon": "17.png",
+        "condition": 1.0,
+        "condition_val": 1800.0
+    },
+    {
+        "id": 18.0,
+        "name": "18a",
+        "head_mesh": "role-18.lm",
+        "main_texture": "body_18.png",
+        "icon": "18.png",
+        "condition": 1.0,
+        "condition_val": 1900.0
+    },
+    {
+        "id": 19.0,
+        "name": "19a",
+        "head_mesh": "role-19.lm",
+        "main_texture": "body_19.png",
+        "icon": "19.png",
+        "condition": 1.0,
+        "condition_val": 2000.0
+    },
+    {
+        "id": 20.0,
+        "name": "20a",
+        "head_mesh": "role-20.lm",
+        "main_texture": "body_20.png",
+        "icon": "20.png",
+        "condition": 1.0,
+        "condition_val": 2100.0
+    },
+    {
+        "id": 21.0,
+        "name": "21a",
+        "head_mesh": "role-21.lm",
+        "main_texture": "body_21.png",
+        "icon": "21.png",
+        "condition": 1.0,
+        "condition_val": 2200.0
+    },
+    {
+        "id": 22.0,
+        "name": "22a",
+        "head_mesh": "role-22.lm",
+        "main_texture": "body_22.png",
+        "icon": "22.png",
+        "condition": 1.0,
+        "condition_val": 2300.0
+    },
+    {
+        "id": 23.0,
+        "name": "23a",
+        "head_mesh": "role-23.lm",
+        "main_texture": "body_23.png",
+        "icon": "23.png",
+        "condition": 1.0,
+        "condition_val": 2400.0
+    },
+    {
+        "id": 24.0,
+        "name": "24a",
+        "head_mesh": "role-24.lm",
+        "main_texture": "body_24.png",
+        "icon": "24.png",
+        "condition": 1.0,
+        "condition_val": 2500.0
+    },
+    {
+        "id": 25.0,
+        "name": "25a",
+        "head_mesh": "role-25.lm",
+        "main_texture": "body_25.png",
+        "icon": "25.png",
+        "condition": 1.0,
+        "condition_val": 2600.0
+    },
+    {
+        "id": 26.0,
+        "name": "26a",
+        "head_mesh": "role-26.lm",
+        "main_texture": "body_26.png",
+        "icon": "26.png",
+        "condition": 1.0,
+        "condition_val": 2700.0
+    },
+    {
+        "id": 27.0,
+        "name": "27a",
+        "head_mesh": "role-27.lm",
+        "main_texture": "body_27.png",
+        "icon": "27.png",
+        "condition": 1.0,
+        "condition_val": 2800.0
+    },
+    {
+        "id": 28.0,
+        "name": "28a",
+        "head_mesh": "role-28.lm",
+        "main_texture": "body_28.png",
+        "icon": "28.png",
+        "condition": 1.0,
+        "condition_val": 2900.0
+    },
+    {
+        "id": 29.0,
+        "name": "29a",
+        "head_mesh": "role-29.lm",
+        "main_texture": "body_29.png",
+        "icon": "29.png",
+        "condition": 1.0,
+        "condition_val": 3000.0
+    }
+]

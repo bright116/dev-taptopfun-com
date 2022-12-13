@@ -1,0 +1,263 @@
+{
+    "frames": {
+        "bg_jb.png": {
+            "frame": {
+                "h": 47,
+                "idx": 0,
+                "w": 49,
+                "x": 212,
+                "y": 517
+            },
+            "sourceSize": {
+                "h": 47,
+                "w": 49
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "bg_txk.png": {
+            "frame": {
+                "h": 115,
+                "idx": 0,
+                "w": 110,
+                "x": 0,
+                "y": 477
+            },
+            "sourceSize": {
+                "h": 115,
+                "w": 110
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "daysign_bg_fsd.png": {
+            "frame": {
+                "h": 100,
+                "idx": 0,
+                "w": 100,
+                "x": 111,
+                "y": 477
+            },
+            "sourceSize": {
+                "h": 100,
+                "w": 100
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "daysign_bg_jdtd$bar.png": {
+            "frame": {
+                "h": 19,
+                "idx": 0,
+                "w": 66,
+                "x": 262,
+                "y": 517
+            },
+            "sourceSize": {
+                "h": 19,
+                "w": 66
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "daysign_bg_jdtd.png": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 78,
+                "x": 248,
+                "y": 330
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 78
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "daysign_txt_1.png": {
+            "frame": {
+                "h": 21,
+                "idx": 0,
+                "w": 75,
+                "x": 212,
+                "y": 565
+            },
+            "sourceSize": {
+                "h": 21,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "luckttEnd_bg_xz.png": {
+            "frame": {
+                "h": 55,
+                "idx": 0,
+                "w": 42,
+                "x": 248,
+                "y": 362
+            },
+            "sourceSize": {
+                "h": 55,
+                "w": 42
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "luckttEnd_bg_zpd.png": {
+            "frame": {
+                "h": 146,
+                "idx": 0,
+                "w": 146,
+                "x": 0,
+                "y": 330
+            },
+            "sourceSize": {
+                "h": 146,
+                "w": 146
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "luckttEnd_bg_zs.png": {
+            "frame": {
+                "h": 85,
+                "idx": 0,
+                "w": 86,
+                "x": 212,
+                "y": 431
+            },
+            "sourceSize": {
+                "h": 85,
+                "w": 86
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "luckttEnd_bg_zz.png": {
+            "frame": {
+                "h": 28,
+                "idx": 0,
+                "w": 16,
+                "x": 288,
+                "y": 537
+            },
+            "sourceSize": {
+                "h": 28,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "lucktt_bg_bs.png": {
+            "frame": {
+                "h": 273,
+                "idx": 0,
+                "w": 208,
+                "x": 330,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 273,
+                "w": 208
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "lucktt_bg_wxz.png": {
+            "frame": {
+                "h": 273,
+                "idx": 0,
+                "w": 208,
+                "x": 330,
+                "y": 274
+            },
+            "sourceSize": {
+                "h": 273,
+                "w": 208
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "lucktt_bg_ym.png": {
+            "frame": {
+                "h": 329,
+                "idx": 0,
+                "w": 329,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 329,
+                "w": 329
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "lucktt_bg_zz.png": {
+            "frame": {
+                "h": 114,
+                "idx": 0,
+                "w": 50,
+                "x": 539,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 114,
+                "w": 50
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "lucktt_light.png": {
+            "frame": {
+                "h": 100,
+                "idx": 0,
+                "w": 100,
+                "x": 147,
+                "y": 330
+            },
+            "sourceSize": {
+                "h": 100,
+                "w": 100
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "turn.png",
+        "prefix": "turn/"
+    }
+}

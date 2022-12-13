@@ -1,0 +1,149 @@
+[
+    {
+        "gid": 1.0,
+        "id": 1.0,
+        "respath": "level_0.lh",
+        "scenepath": "envi.lh",
+        "roadtexture": "road.png"
+    },
+    {
+        "gid": 1.0,
+        "id": 2.0,
+        "respath": "level_1.lh",
+        "scenepath": "envi.lh",
+        "roadtexture": "road.png"
+    },
+    {
+        "gid": 1.0,
+        "id": 3.0,
+        "respath": "level_2.lh",
+        "scenepath": "envi.lh",
+        "roadtexture": "road.png"
+    },
+    {
+        "gid": 2.0,
+        "id": 1.0,
+        "respath": "level_3.lh",
+        "scenepath": "sand.lh",
+        "roadtexture": "road2.png"
+    },
+    {
+        "gid": 2.0,
+        "id": 2.0,
+        "respath": "level_4.lh",
+        "scenepath": "sand.lh",
+        "roadtexture": "road2.png"
+    },
+    {
+        "gid": 2.0,
+        "id": 3.0,
+        "respath": "level_5.lh",
+        "scenepath": "sand.lh",
+        "roadtexture": "road2.png"
+    },
+    {
+        "gid": 3.0,
+        "id": 1.0,
+        "respath": "level_6.lh",
+        "scenepath": "senlin.lh",
+        "roadtexture": "road3.png"
+    },
+    {
+        "gid": 3.0,
+        "id": 2.0,
+        "respath": "level_7.lh",
+        "scenepath": "senlin.lh",
+        "roadtexture": "road3.png"
+    },
+    {
+        "gid": 3.0,
+        "id": 3.0,
+        "respath": "level_8.lh",
+        "scenepath": "senlin.lh",
+        "roadtexture": "road3.png"
+    },
+    {
+        "gid": 4.0,
+        "id": 1.0,
+        "respath": "level_9.lh",
+        "scenepath": "huoshan.lh",
+        "roadtexture": "road4.png"
+    },
+    {
+        "gid": 4.0,
+        "id": 2.0,
+        "respath": "level_10.lh",
+        "scenepath": "huoshan.lh",
+        "roadtexture": "road4.png"
+    },
+    {
+        "gid": 4.0,
+        "id": 3.0,
+        "respath": "level_11.lh",
+        "scenepath": "huoshan.lh",
+        "roadtexture": "road4.png"
+    },
+    {
+        "gid": 5.0,
+        "id": 1.0,
+        "respath": "level_12.lh",
+        "scenepath": "envi.lh",
+        "roadtexture": "road.png"
+    },
+    {
+        "gid": 5.0,
+        "id": 2.0,
+        "respath": "level_13.lh",
+        "scenepath": "envi.lh",
+        "roadtexture": "road.png"
+    },
+    {
+        "gid": 5.0,
+        "id": 3.0,
+        "respath": "level_14.lh",
+        "scenepath": "envi.lh",
+        "roadtexture": "road.png"
+    },
+    {
+        "gid": 6.0,
+        "id": 1.0,
+        "respath": "level_15.lh",
+        "scenepath": "sand.lh",
+        "roadtexture": "road2.png"
+    },
+    {
+        "gid": 6.0,
+        "id": 2.0,
+        "respath": "level_16.lh",
+        "scenepath": "sand.lh",
+        "roadtexture": "road2.png"
+    },
+    {
+        "gid": 6.0,
+        "id": 3.0,
+        "respath": "level_17.lh",
+        "scenepath": "sand.lh",
+        "roadtexture": "road2.png"
+    },
+    {
+        "gid": 7.0,
+        "id": 1.0,
+        "respath": "level_18.lh",
+        "scenepath": "senlin.lh",
+        "roadtexture": "road3.png"
+    },
+    {
+        "gid": 7.0,
+        "id": 2.0,
+        "respath": "level_19.lh",
+        "scenepath": "senlin.lh",
+        "roadtexture": "road3.png"
+    },
+    {
+        "gid": 7.0,
+        "id": 3.0,
+        "respath": "level_20.lh",
+        "scenepath": "senlin.lh",
+        "roadtexture": "road3.png"
+    }
+]
