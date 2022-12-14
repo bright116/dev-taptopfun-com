@@ -330,34 +330,52 @@
             }, 0x64);
         }
         ['showInters' + 'titial'](_0x5757f8) {
-            YYGGames['showInters' + 'titial']({
-                'beforeShowAd': () => {
-                    window['WebAudioEn' + 'gine']['adShowing'] = !![], this['onblur'](), Laya['timer']['scale'] = 0x0, Laya['stage']['renderingE' + 'nabled'] = ![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['pause'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['pause']();
-                },
-                'afterShowAd': () => {
-                    window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume'](), _0x5757f8 && _0x5757f8();
-                }
-            });
+            console.log("请求插屏广告");
+
+            HUHU_showInterstitialAd();
+            window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume'](), _0x5757f8 && _0x5757f8();
+            return;
+            // YYGGames['showInters' + 'titial']({
+            //     'beforeShowAd': () => {
+            //         window['WebAudioEn' + 'gine']['adShowing'] = !![], this['onblur'](), Laya['timer']['scale'] = 0x0, Laya['stage']['renderingE' + 'nabled'] = ![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['pause'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['pause']();
+            //     },
+            //     'afterShowAd': () => {
+            //         window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume'](), _0x5757f8 && _0x5757f8();
+            //     }
+            // });
         }
         ['showReward'](_0x857476, _0x225101, _0x255c5b) {
-            if (!YYGGames['canShowRew' + 'ard']()) {
-                this['prompt']('No\x20Availab' + 'le\x20Video'), _0x255c5b && _0x255c5b();
-                return;
-            }
-            YYGGames['showReward']({
-                'beforeShowAd': () => {
-                    window['WebAudioEn' + 'gine']['adShowing'] = !![], this['onblur'](), Laya['timer']['scale'] = 0x0, Laya['stage']['renderingE' + 'nabled'] = ![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['pause'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['pause']();
-                },
-                'afterShowAd': () => {
+            console.log("请求激励广告");
+            HUHU_showRewardedVideoAd(
+                () => {
+                    // 用户观看广告完成，继续游戏
                     window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume']();
-                },
-                'rewardComplete': () => {
                     _0x857476 && _0x857476(), _0x255c5b && _0x255c5b(), _0x255c5b = null, _0x857476 = null;
                 },
-                'rewardDismissed': () => {
-                    _0x225101 && (_0x225101(), _0x255c5b && _0x255c5b(), _0x255c5b = null, _0x225101 = null), this['prompt']('Pls\x20watch\x20' + 'the\x20ad\x20com' + 'pletely,\x20s' + 'o\x20that\x20you' + '\x20can\x20claim' + '\x20your\x20rewa' + 'rd');
+                () => {
+                  // 广告请求失败或者用户跳过广告
+                  _0x225101 && (_0x225101(), _0x255c5b && _0x255c5b(), _0x255c5b = null, _0x225101 = null), this['prompt']('Pls\x20watch\x20' + 'the\x20ad\x20com' + 'pletely,\x20s' + 'o\x20that\x20you' + '\x20can\x20claim' + '\x20your\x20rewa' + 'rd');
                 }
-            });
+            );
+            return;
+            // if (!YYGGames['canShowRew' + 'ard']()) {
+            //     this['prompt']('No\x20Availab' + 'le\x20Video'), _0x255c5b && _0x255c5b();
+            //     return;
+            // }
+            // YYGGames['showReward']({
+            //     'beforeShowAd': () => {
+            //         window['WebAudioEn' + 'gine']['adShowing'] = !![], this['onblur'](), Laya['timer']['scale'] = 0x0, Laya['stage']['renderingE' + 'nabled'] = ![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['pause'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['pause']();
+            //     },
+            //     'afterShowAd': () => {
+            //         window['focus'](), this['onfocus'](), window['WebAudioEn' + 'gine']['adShowing'] = ![], Laya['timer']['scale'] = 0x1, Laya['stage']['renderingE' + 'nabled'] = !![], Laya['updateTime' + 'r'] && Laya['updateTime' + 'r']['resume'](), Laya['physicsTim' + 'er'] && Laya['physicsTim' + 'er']['resume']();
+            //     },
+            //     'rewardComplete': () => {
+            //         _0x857476 && _0x857476(), _0x255c5b && _0x255c5b(), _0x255c5b = null, _0x857476 = null;
+            //     },
+            //     'rewardDismissed': () => {
+            //         _0x225101 && (_0x225101(), _0x255c5b && _0x255c5b(), _0x255c5b = null, _0x225101 = null), this['prompt']('Pls\x20watch\x20' + 'the\x20ad\x20com' + 'pletely,\x20s' + 'o\x20that\x20you' + '\x20can\x20claim' + '\x20your\x20rewa' + 'rd');
+            //     }
+            // });
         }
         ['initList'](_0x1575ea) {
         }
@@ -371,12 +389,13 @@
             }['bind'](this), _0x4ab1b1);
         }
         ['getForgame' + 's']() {
-            let _0x13b0a9 = YYGGames['forgames'] || [], _0x4cc46b = _0x13b0a9['slice']();
-            for (let _0x1b6a21 = 0x0, _0x44f5b9 = _0x4cc46b['length']; _0x1b6a21 < _0x44f5b9; _0x1b6a21++) {
-                const _0x4986d5 = Math['floor'](Math['random']() * (_0x1b6a21 + 0x1)), _0x46a87a = _0x4cc46b[_0x4986d5];
-                _0x4cc46b[_0x4986d5] = _0x4cc46b[_0x1b6a21], _0x4cc46b[_0x1b6a21] = _0x46a87a;
-            }
-            return _0x4cc46b;
+            return []
+            // let _0x13b0a9 = YYGGames['forgames'] || [], _0x4cc46b = _0x13b0a9['slice']();
+            // for (let _0x1b6a21 = 0x0, _0x44f5b9 = _0x4cc46b['length']; _0x1b6a21 < _0x44f5b9; _0x1b6a21++) {
+            //     const _0x4986d5 = Math['floor'](Math['random']() * (_0x1b6a21 + 0x1)), _0x46a87a = _0x4cc46b[_0x4986d5];
+            //     _0x4cc46b[_0x4986d5] = _0x4cc46b[_0x1b6a21], _0x4cc46b[_0x1b6a21] = _0x46a87a;
+            // }
+            // return _0x4cc46b;
         }
         ['createLogo']() {
             if (!Laya || !Laya['Image'])
@@ -425,16 +444,16 @@
             }));
         }
         ['showBanner'](_0x52a7d7) {
-            _0x52a7d7 ? YYGGames['showBanner'](_0x52a7d7) : YYGGames['showBanner']();
+            // _0x52a7d7 ? YYGGames['showBanner'](_0x52a7d7) : YYGGames['showBanner']();
         }
         ['hideBanner']() {
-            YYGGames['hideBanner']();
+            // YYGGames['hideBanner']();
         }
         ['showSplash'](_0x1f63c1) {
-            _0x1f63c1 ? YYGGames['showSplash'](_0x1f63c1) : YYGGames['showSplash']();
+            // _0x1f63c1 ? YYGGames['showSplash'](_0x1f63c1) : YYGGames['showSplash']();
         }
         ['hideSplash']() {
-            YYGGames['hideSplash']();
+            // YYGGames['hideSplash']();
         }
         ['cargamesst' + 'artup'](_0xcb110f, _0xce7510) {
             !this['needStartU' + 'p'] && (_0xce7510 && _0xce7510());
@@ -486,27 +505,29 @@
                     window['WebAudioEn' + 'gine'] && window['WebAudioEn' + 'gine']['stopMusic']();
                 };
             }), this['initialize' + 'd_'] = !![], Laya['loader']['load']('cnf.json', Laya['Handler']['create'](this, _0x3d913a => {
-                YYGGames['startup']({
-                    'channel': 0x5,
-                    'appName': _0x5c321e,
-                    'config': _0x3d913a,
-                    'complete': () => {
-                        const _0x54cdb9 = YYGGames['getAdPlatf' + 'ormType']();
-                        window['scrollList'] = this['scrollList'](), window['box_adTwo'] = this['box_adTwo']();
-                        switch (_0x54cdb9) {
-                        case AdPlatformType['en_GAMEDIS' + 'TRIBUTION']:
-                        case AdPlatformType['en_XIAOMI']:
-                            window['yad'] && (window['yad']['scale'](0x0, 0x0), window['yad']['removeSelf']());
-                            break;
-                        default:
-                            window['yad'] && Laya['stage']['addChild'](window['yad']), window['yad']['on'](Laya['Event']['MOUSE_DOWN'], window['yad'], _0x277e8e => {
-                                _0x277e8e['stopPropag' + 'ation'](), _0x1d19d7['getInstanc' + 'e']()['navigate']('GAME', 'LOGO');
-                            });
-                            break;
-                        }
-                        this['needStartU' + 'p'] = ![], _0x5cfa2d && _0x5cfa2d();
-                    }
-                });
+                window['scrollList'] = this['scrollList'](), window['box_adTwo'] = this['box_adTwo']();
+                this['needStartU' + 'p'] = ![], _0x5cfa2d && _0x5cfa2d();
+                // YYGGames['startup']({
+                //     'channel': 0x5,
+                //     'appName': _0x5c321e,
+                //     'config': _0x3d913a,
+                //     'complete': () => {
+                //         const _0x54cdb9 = YYGGames['getAdPlatf' + 'ormType']();
+                //         window['scrollList'] = this['scrollList'](), window['box_adTwo'] = this['box_adTwo']();
+                //         switch (_0x54cdb9) {
+                //         case AdPlatformType['en_GAMEDIS' + 'TRIBUTION']:
+                //         case AdPlatformType['en_XIAOMI']:
+                //             window['yad'] && (window['yad']['scale'](0x0, 0x0), window['yad']['removeSelf']());
+                //             break;
+                //         default:
+                //             window['yad'] && Laya['stage']['addChild'](window['yad']), window['yad']['on'](Laya['Event']['MOUSE_DOWN'], window['yad'], _0x277e8e => {
+                //                 _0x277e8e['stopPropag' + 'ation'](), _0x1d19d7['getInstanc' + 'e']()['navigate']('GAME', 'LOGO');
+                //             });
+                //             break;
+                //         }
+                //         this['needStartU' + 'p'] = ![], _0x5cfa2d && _0x5cfa2d();
+                //     }
+                // });
             }));
         }
         ['createNoVi' + 'deo']() {
@@ -789,11 +810,11 @@
         ['scrollList']() {
             if (!Laya || !Laya['stage'])
                 return null;
-            if (YYGGames['getAdPlatf' + 'ormType']() == AdPlatformType['en_GAMEDIS' + 'TRIBUTION'] || YYGGames['getAdPlatf' + 'ormType']() == AdPlatformType['en_XIAOMI']) {
-                let _0x4cded0 = new Laya['Box']();
-                return _0x4cded0['setSize'] = function () {
-                }, _0x4cded0;
-            }
+            // if (YYGGames['getAdPlatf' + 'ormType']() == AdPlatformType['en_GAMEDIS' + 'TRIBUTION'] || YYGGames['getAdPlatf' + 'ormType']() == AdPlatformType['en_XIAOMI']) {
+            //     let _0x4cded0 = new Laya['Box']();
+            //     return _0x4cded0['setSize'] = function () {
+            //     }, _0x4cded0;
+            // }
             if (!this['_scrollLis' + 't']) {
                 let _0x1db5ed = {
                     'x': 0x0,
@@ -831,7 +852,7 @@
                             'props': {
                                 'zOrder': -0xa,
                                 'width': 0x384,
-                                'skin': 'di2.png',
+                                'skin': '',
                                 'sizeGrid': '30,\x2030,\x2030' + ',\x2030',
                                 'presetID': 0x2,
                                 'preset': 'laya/pages' + '/prefab/sc' + 'rollList.p' + 'refab',
@@ -897,7 +918,7 @@
                                                 'y': 0x4b,
                                                 'x': 0x64,
                                                 'width': 0xc8,
-                                                'skin': 'di1.png',
+                                                'skin': '',
                                                 'sizeGrid': '30,30,30,3' + '0',
                                                 'renderType': 'mask',
                                                 'presetID': 0x5,
@@ -1002,11 +1023,11 @@
         ['box_adTwo']() {
             if (!Laya || !Laya['stage'])
                 return null;
-            if (YYGGames['getAdPlatf' + 'ormType']() == AdPlatformType['en_GAMEDIS' + 'TRIBUTION'] || YYGGames['getAdPlatf' + 'ormType']() == AdPlatformType['en_XIAOMI']) {
-                let _0x210f41 = new Laya['Box']();
-                return _0x210f41['setSpaceX'] = _0x210f41['setSize'] = function () {
-                }, _0x210f41;
-            }
+            // if (YYGGames['getAdPlatf' + 'ormType']() == AdPlatformType['en_GAMEDIS' + 'TRIBUTION'] || YYGGames['getAdPlatf' + 'ormType']() == AdPlatformType['en_XIAOMI']) {
+            //     let _0x210f41 = new Laya['Box']();
+            //     return _0x210f41['setSpaceX'] = _0x210f41['setSize'] = function () {
+            //     }, _0x210f41;
+            // }
             if (!this['_box_adTwo']) {
                 let _0x373687 = {
                     'x': 0x0,
@@ -1044,7 +1065,7 @@
                                 'y': 0x0,
                                 'x': -0x136,
                                 'width': 0xdc,
-                                'skin': 'di1.png',
+                                'skin': '',
                                 'sizeGrid': '30,30,30,3' + '0',
                                 'presetID': 0x2,
                                 'preset': 'laya/pages' + '/prefab/bo' + 'x_adTwo.pr' + 'efab',
@@ -1084,7 +1105,7 @@
                                             'searchKey': 'Image',
                                             'props': {
                                                 'width': 0xc8,
-                                                'skin': 'di1.png',
+                                                'skin': '',
                                                 'sizeGrid': '30,30,30,3' + '0',
                                                 'renderType': 'mask',
                                                 'presetID': 0x4,
@@ -1111,7 +1132,7 @@
                                 'y': 0x0,
                                 'x': 0x5a,
                                 'width': 0xdc,
-                                'skin': 'di1.png',
+                                'skin': '',
                                 'sizeGrid': '30,30,30,3' + '0',
                                 'presetID': 0x5,
                                 'preset': 'laya/pages' + '/prefab/bo' + 'x_adTwo.pr' + 'efab',
@@ -1151,7 +1172,7 @@
                                             'searchKey': 'Image',
                                             'props': {
                                                 'width': 0xc8,
-                                                'skin': 'di1.png',
+                                                'skin': '',
                                                 'sizeGrid': '30,30,30,3' + '0',
                                                 'renderType': 'mask',
                                                 'presetID': 0x7,
@@ -1256,15 +1277,15 @@
             if (!this['_box_adTwo' + '0']) {
                 this['_box_adTwo' + '0'] = new Laya['Box'](), this['_box_adTwo' + '0']['name'] = '_box_adTwo' + '0', this['_box_adTwo' + '0']['anchorX'] = this['_box_adTwo' + '0']['anchorY'] = 0.5, this['_box_adTwo' + '0']['zOrder'] = 0x30d3f, this['_box_adTwo' + '0']['spaceXNum'] = 0x0;
                 let _0x3bbe17 = new Laya['Image']();
-                _0x3bbe17['name'] = 'leftAdBg', _0x3bbe17['sizeGrid'] = '30,30,30,3' + '0', _0x3bbe17['size'](0xdc, 0xaa), _0x3bbe17['skin'] = 'di1.png';
+                _0x3bbe17['name'] = 'leftAdBg', _0x3bbe17['sizeGrid'] = '30,30,30,3' + '0', _0x3bbe17['size'](0xdc, 0xaa), _0x3bbe17['skin'] = '';
                 let _0x147ce9 = new Laya['Image']();
-                _0x147ce9['name'] = 'leftAdMask', _0x147ce9['size'](0xc8, 0x96), _0x147ce9['sizeGrid'] = '30,30,30,3' + '0', _0x147ce9['anchorX'] = _0x147ce9['anchorY'] = 0.5, _0x147ce9['skin'] = 'di1.png';
+                _0x147ce9['name'] = 'leftAdMask', _0x147ce9['size'](0xc8, 0x96), _0x147ce9['sizeGrid'] = '30,30,30,3' + '0', _0x147ce9['anchorX'] = _0x147ce9['anchorY'] = 0.5, _0x147ce9['skin'] = '';
                 let _0x46f154 = new Laya['Image']();
                 _0x46f154['name'] = 'leftAd', _0x46f154['size'](0xc8, 0x96), _0x46f154['anchorX'] = _0x46f154['anchorY'] = 0.5, _0x46f154['skin'] = '', _0x46f154['mask'] = _0x147ce9, _0x3bbe17['addChild'](_0x46f154), _0x3bbe17['pos'](0x0, 0x0), _0x46f154['pos'](_0x3bbe17['width'] / 0x2, _0x3bbe17['height'] / 0x2), _0x147ce9['pos'](_0x46f154['width'] / 0x2, _0x46f154['height'] / 0x2);
                 let _0x177eef = new Laya['Image']();
-                _0x177eef['name'] = 'rightAdBg', _0x177eef['sizeGrid'] = '30,30,30,3' + '0', _0x177eef['size'](0xdc, 0xaa), _0x177eef['skin'] = 'di1.png';
+                _0x177eef['name'] = 'rightAdBg', _0x177eef['sizeGrid'] = '30,30,30,3' + '0', _0x177eef['size'](0xdc, 0xaa), _0x177eef['skin'] = '';
                 let _0x5bbecf = new Laya['Image']();
-                _0x5bbecf['name'] = 'rightAdMas' + 'k', _0x5bbecf['size'](0xc8, 0x96), _0x5bbecf['sizeGrid'] = '30,30,30,3' + '0', _0x5bbecf['anchorX'] = _0x5bbecf['anchorY'] = 0.5, _0x5bbecf['skin'] = 'di1.png';
+                _0x5bbecf['name'] = 'rightAdMas' + 'k', _0x5bbecf['size'](0xc8, 0x96), _0x5bbecf['sizeGrid'] = '30,30,30,3' + '0', _0x5bbecf['anchorX'] = _0x5bbecf['anchorY'] = 0.5, _0x5bbecf['skin'] = '';
                 let _0xa200be = new Laya['Image']();
                 _0xa200be['name'] = 'rightAd', _0xa200be['size'](0xc8, 0x96), _0xa200be['anchorX'] = _0xa200be['anchorY'] = 0.5, _0xa200be['skin'] = '', _0xa200be['mask'] = _0x5bbecf, _0x177eef['addChild'](_0xa200be), _0x177eef['pos'](_0x3bbe17['width'], 0x0), _0xa200be['pos'](_0x177eef['width'] / 0x2, _0x177eef['height'] / 0x2), _0x5bbecf['pos'](_0xa200be['width'] / 0x2, _0xa200be['height'] / 0x2), this['_box_adTwo' + '0']['centerX'] = 0x0, this['_box_adTwo' + '0']['width'] = _0x3bbe17['width'] + _0x177eef['width'], this['_box_adTwo' + '0']['addChild'](_0x3bbe17), this['_box_adTwo' + '0']['addChild'](_0x177eef), this['_box_adTwo' + '0']['setSpaceX'] = this['setSpaceX']['bind'](this['_box_adTwo' + '0']), this['_box_adTwo' + '0']['setSize'] = this['setSize']['bind'](this['_box_adTwo' + '0']);
                 let _0x12a4cc = _0x1d19d7['getInstanc' + 'e']()['getForgame' + 's']();
@@ -1305,7 +1326,7 @@
                 }, _0x3261e7;
             }
             if (!this['_scrollLis' + 't']) {
-                this['_scrollLis' + 't'] = new Laya['Image'](), this['_scrollLis' + 't']['name'] = '_scrollLis' + 't', this['_scrollLis' + 't']['skin'] = 'di2.png', this['_scrollLis' + 't']['sizeGrid'] = '30,30,30,3' + '0', this['_scrollLis' + 't']['size'](0x384, 0xbe), this['_scrollLis' + 't']['zOrder'] = 0x30d3f, this['_scrollLis' + 't']['centerX'] = 0x0, this['_scrollLis' + 't']['sizeArr'] = [
+                this['_scrollLis' + 't'] = new Laya['Image'](), this['_scrollLis' + 't']['name'] = '_scrollLis' + 't', this['_scrollLis' + 't']['skin'] = '', this['_scrollLis' + 't']['sizeGrid'] = '30,30,30,3' + '0', this['_scrollLis' + 't']['size'](0x384, 0xbe), this['_scrollLis' + 't']['zOrder'] = 0x30d3f, this['_scrollLis' + 't']['centerX'] = 0x0, this['_scrollLis' + 't']['sizeArr'] = [
                     0xc8,
                     0x96,
                     ![],
@@ -1313,7 +1334,7 @@
                 ];
                 class _0x1a641c extends Laya['Box'] {
                     constructor() {
-                        super(), this['centerY'] = 0x0, this['img'] = new Laya['Image'](), this['img']['name'] = 'img', this['img']['anchorX'] = this['img']['anchorY'] = 0.5, this['size'](0xdc, 0xaa), this['img']['size'](0xc8, 0x96), this['addChild'](this['img']), this['imgMask'] = new Laya['Image'](), this['imgMask']['sizeGrid'] = '30,30,30,3' + '0', this['imgMask']['name'] = 'imgMask', this['imgMask']['anchorX'] = this['imgMask']['anchorY'] = 0.5, this['imgMask']['skin'] = 'di1.png', this['imgMask']['size'](0xc8, 0x96), this['img']['mask'] = this['imgMask'], this['img']['pos'](this['width'] / 0x2, this['height'] / 0x2), this['imgMask']['pos'](this['img']['width'] / 0x2, this['img']['height'] / 0x2);
+                        super(), this['centerY'] = 0x0, this['img'] = new Laya['Image'](), this['img']['name'] = 'img', this['img']['anchorX'] = this['img']['anchorY'] = 0.5, this['size'](0xdc, 0xaa), this['img']['size'](0xc8, 0x96), this['addChild'](this['img']), this['imgMask'] = new Laya['Image'](), this['imgMask']['sizeGrid'] = '30,30,30,3' + '0', this['imgMask']['name'] = 'imgMask', this['imgMask']['anchorX'] = this['imgMask']['anchorY'] = 0.5, this['imgMask']['skin'] = '', this['imgMask']['size'](0xc8, 0x96), this['img']['mask'] = this['imgMask'], this['img']['pos'](this['width'] / 0x2, this['height'] / 0x2), this['imgMask']['pos'](this['img']['width'] / 0x2, this['img']['height'] / 0x2);
                     }
                 }
                 let _0x40c6dd = new Laya['List']();
