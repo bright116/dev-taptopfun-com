@@ -903,10 +903,20 @@ class failView extends Laya['Script'] {
     }
     [_0x49630f(0x28f)]() {
         var _0xa99238 = _0x49630f;
-        var _0x1f16ad = _0xa99238;
+
+        //TODO showReward
+        HUHU_showRewardedVideoAd(
+            () => {
+                // 用户观看广告完成，继续游戏
+                var _0x1f16ad = _0xa99238;
         
-        failView[_0x1f16ad(0x3f5)] && failView[_0x1f16ad(0x3f5)]['run'](), failView[_0x1f16ad(0x3f5)] = null, Laya[_0x1f16ad(0x298)][_0x1f16ad(0x2b6)]('Scene/Game' + _0x1f16ad(0x4ae) + _0x1f16ad(0x2d1) + 'n');
-        console.log("请求插屏广告");
+                failView[_0x1f16ad(0x3f5)] && failView[_0x1f16ad(0x3f5)]['run'](), failView[_0x1f16ad(0x3f5)] = null, Laya[_0x1f16ad(0x298)][_0x1f16ad(0x2b6)]('Scene/Game' + _0x1f16ad(0x4ae) + _0x1f16ad(0x2d1) + 'n');
+            },
+            () => {
+              // 广告请求失败或者用户跳过广告
+              promptMessage("Failed to get the reward, please watch the ads to the end.");
+            }
+          );
         
         // 展示插屏广告
         HUHU_showInterstitialAd();
@@ -921,10 +931,6 @@ class failView extends Laya['Script'] {
 
         var _0x4a7a3d = _0x49630f;
         var _0x4c248f = _0x4a7a3d;
-        console.log("请求插屏广告");
-        
-        // 展示插屏广告
-        HUHU_showInterstitialAd();
         failView[_0x4c248f(0x24d)] && failView[_0x4c248f(0x24d)]['run'](), failView[_0x4c248f(0x24d)] = null, Laya[_0x4c248f(0x298)][_0x4c248f(0x2b6)](_0x4c248f(0x4ce) + _0x4c248f(0x4ae) + _0x4c248f(0x2d1) + 'n');
         // YYGGames['showInters' + _0x4a7a3d(0x3e4)](() => {
         //     var _0x4c248f = _0x4a7a3d;
@@ -2171,10 +2177,6 @@ failView['ReGame'] = null, failView['NextGame'] = null, !(function () {
                 {
                     'key': 'onStart',
                     'value': function () {
-                        console.log("请求插屏广告");
-
-                        // 展示插屏广告
-                        HUHU_showInterstitialAd();
                     }
                 },
                 {
@@ -2607,7 +2609,9 @@ failView['ReGame'] = null, failView['NextGame'] = null, !(function () {
                         var _0x2f0170 = _0x3f4c95[_0xa4d722(0x225)][_0xa4d722(0x28c) + 'x'];
                         _0x2f0170['setForward'](new Laya[(_0xa4d722(0x37c))](0.3, -0.7, 0.3)), _0x3f4c95[_0xa4d722(0x225)][_0xa4d722(0x28c) + 'x'] = _0x2f0170, _0x3f4c95[_0xa4d722(0x388)] = 0.9, _0x3f4c95[_0xa4d722(0x48f)] = Laya['ShadowMode'][_0xa4d722(0x34e)], _0x3f4c95[_0xa4d722(0x315) + _0xa4d722(0x327)] = 0x64, _0x3f4c95['shadowReso' + _0xa4d722(0x2c9)] = 0x400, _0x3f4c95['shadowStre' + 'ngth'] = 0.45, this[_0xa4d722(0x3ec)][_0xa4d722(0x4d2)]['on'](Laya[_0xa4d722(0x232)][_0xa4d722(0x3f7)], this, function (_0xd8c004) {
                             var _0x39b9a1 = _0xa4d722;
+                            //TODO showInterstitial
                             console.log("请求插屏广告");
+                            console.log("777")
         
                             // 展示插屏广告
                             HUHU_showInterstitialAd();
@@ -2835,10 +2839,6 @@ failView['ReGame'] = null, failView['NextGame'] = null, !(function () {
                         }), this['mBtnSound'][_0x577bb1(0x41a)](this, function (_0x235d82) {
                             var _0x4dfa7d = _0x577bb1;
                             _0x2cb924[_0x4dfa7d(0x233)][_0x4dfa7d(0x314)](_0x4dfa7d(0x4a5)), (_0x2cb924[_0x4dfa7d(0x233)][_0x4dfa7d(0x423) + 'able'](_0x4ac9e0[_0x4dfa7d(0x3a5)][_0x4dfa7d(0x3da)]), _0x2cb924['Instance'][_0x4dfa7d(0x2db) + _0x4dfa7d(0x20d)](_0x4ac9e0[_0x4dfa7d(0x3a5)][_0x4dfa7d(0x3da)]));
-                            console.log("请求插屏广告");
-
-                            // 展示插屏广告
-                            HUHU_showInterstitialAd();
                             // YYGGames[_0x4dfa7d(0x409)]['pause'] = !YYGGames[_0x4dfa7d(0x409)][_0x4dfa7d(0x30f)];
                         }), this[_0x577bb1(0x2c2)][_0x577bb1(0x41a)](this, function (_0x11742c) {
                             var _0x3d3581 = _0x577bb1;
@@ -2847,10 +2847,6 @@ failView['ReGame'] = null, failView['NextGame'] = null, !(function () {
                             var _0x2069ea = _0x577bb1;
                             _0x2cb924[_0x2069ea(0x233)][_0x2069ea(0x314)](_0x2069ea(0x4a5)), _0xabba10[_0x2069ea(0x233)][_0x2069ea(0x24d)]();
                         }), UIScene[_0x577bb1(0x3ec)][_0x577bb1(0x460)](0x0)['getChildAt'](0x1)[_0x577bb1(0x460)](0x1)[_0x577bb1(0x40a)] = _0x577bb1(0x2c8) + _0x577bb1(0x3dd), UIScene['WinMain'][_0x577bb1(0x460)](0x0)[_0x577bb1(0x460)](0x1)[_0x577bb1(0x460)](0x1)[_0x577bb1(0x49c)] = 0x258, UIScene[_0x577bb1(0x3ec)][_0x577bb1(0x460)](0x0)[_0x577bb1(0x460)](0x1)[_0x577bb1(0x460)](0x1)['x'] = 0x14, UIScene[_0x577bb1(0x3ec)][_0x577bb1(0x460)](0x0)[_0x577bb1(0x460)](0x1)[_0x577bb1(0x460)](0x1)[_0x577bb1(0x356)] = 0x4, UIScene['WinMain'][_0x577bb1(0x460)](0x0)['getChildAt'](0x4)['visible'] = 0x0, UIScene[_0x577bb1(0x3ec)]['getChildAt'](0x0)['getChildAt'](0x5)[_0x577bb1(0x497)] = 0x0, UIScene[_0x577bb1(0x3ec)][_0x577bb1(0x460)](0x0)[_0x577bb1(0x460)](0x2)['y'] = 0x32;
-                        console.log("请求插屏广告");
-
-                        // 展示插屏广告
-                        HUHU_showInterstitialAd();
                         // YYGGames[_0x577bb1(0x4b2)][_0x577bb1(0x497)] = !![];
                     }
                 },
@@ -2870,12 +2866,13 @@ failView['ReGame'] = null, failView['NextGame'] = null, !(function () {
                     'key': _0x4e2500(0x42d),
                     'value': function () {
                         var _0x1e14d9 = _0x4e2500;
-                        var _0xc4045 = _0x1e14d9;
-                        window[_0xc4045(0x346)][_0xc4045(0x497)] = ![], this[_0xc4045(0x4d2)][_0xc4045(0x497)] = !![];
+                        //TODO showInterstitial
                         console.log("请求插屏广告");
-        
+
                         // 展示插屏广告
                         HUHU_showInterstitialAd();
+                        var _0xc4045 = _0x1e14d9;
+                        window[_0xc4045(0x346)][_0xc4045(0x497)] = ![], this[_0xc4045(0x4d2)][_0xc4045(0x497)] = !![];
                         // YYGGames[_0x1e14d9(0x358) + _0x1e14d9(0x3e4)](() => {
                         //     var _0xc4045 = _0x1e14d9;
                         //     window[_0xc4045(0x346)][_0xc4045(0x497)] = ![], this[_0xc4045(0x4d2)][_0xc4045(0x497)] = !![];
@@ -3022,10 +3019,6 @@ failView['ReGame'] = null, failView['NextGame'] = null, !(function () {
                         UIScene[_0x32a4cb(0x454)] = this, (_get(_getPrototypeOf(_0x3d4977[_0x32a4cb(0x307)]), _0x32a4cb(0x37d), this)['call'](this), this[_0x32a4cb(0x2b3) + 'ar'] = this[_0x32a4cb(0x3b2) + 'e']['getChild']('ProgressBa' + 'r')['asProgress'], this[_0x32a4cb(0x277) + 'o'] = this['contentPan' + 'e'][_0x32a4cb(0x2ad)](_0x32a4cb(0x4e8))[_0x32a4cb(0x47b)], this[_0x32a4cb(0x3eb)] = 0x0), UIScene[_0x32a4cb(0x454)]['getChildAt'](0x0)[_0x32a4cb(0x460)](0x3)[_0x32a4cb(0x497)] = 0x0;
                         var _0x2acdc7 = _0x32a4cb;
                         window[_0x2acdc7(0x3d4) + 'd'] = !![];
-                        console.log("请求插屏广告");
-        
-                        // 展示插屏广告
-                        HUHU_showInterstitialAd();
                         // YYGGames[_0x32a4cb(0x37e)](_0x32a4cb(0x252), () => {
                         //     var _0x2acdc7 = _0x32a4cb;
                         //     YYGGames[_0x2acdc7(0x409)]['pause'] = Laya['LocalStora' + 'ge'][_0x2acdc7(0x303)]('Fruit-Rush' + '-musicStat' + 'e') ? JSON['parse'](Laya['LocalStora' + 'ge']['getItem'](_0x2acdc7(0x252) + _0x2acdc7(0x36c) + 'e')) : (Laya[_0x2acdc7(0x2e4) + 'ge'][_0x2acdc7(0x4d3)](_0x2acdc7(0x252) + _0x2acdc7(0x36c) + 'e', ![]), ![]), 
