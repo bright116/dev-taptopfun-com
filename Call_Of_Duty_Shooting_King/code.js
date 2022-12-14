@@ -5851,10 +5851,12 @@ var MainRightUi = (function(_0x79b4x1a) {
 
         HUHU_showRewardedVideoAd(
             () => { // 用户观看广告完成，继续游戏
-                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1415]]);
+                this[_0xb5bd[1415]]()
+                // YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1415]]);
             },
             () => { // 广告请求失败或者用户跳过广告
-                YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]);
+                this[_0xb5bd[1216]]()
+                // YYG[_0xb5bd[1215]][_0xb5bd[21]](this, this[_0xb5bd[1216]]);
                 promptMessage("Failed to get the reward, please watch the ads to the end.");
             }
         );
