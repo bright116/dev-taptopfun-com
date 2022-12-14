@@ -472,10 +472,10 @@
             // if (YYGGames.isGamedistribution) {
             //     return;
             // }
-            if (this.canNavigateActive_) {
-                YYGGames.navigate(this.screen_, this.action_, this.to_);
-            }
-            this.canNavigateActive_ = false;
+            // if (this.canNavigateActive_) {
+            //     YYGGames.navigate(this.screen_, this.action_, this.to_);
+            // }
+            // this.canNavigateActive_ = false;
         }
 
         getStorageSync(key) {
@@ -519,87 +519,97 @@
 
         //插屏广告
         showInterstitial(complete) {
-            // console.log("插屏广告")
-            // complete && complete()
-            // return;
-            YYGGames.showInterstitial({
-                beforeShowAd: () => {
-                    window.WebAudioEngine.adShowing = true;
-                    this.onblur();
-                    Laya.timer.scale = 0;
-                    Laya.stage.renderingEnabled = false //停止渲染
-                    Laya.updateTimer && Laya.updateTimer.pause() //停止onUpdate
-                    Laya.physicsTimer && Laya.physicsTimer.pause() //停止物理
-                    // window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "");
-                },
-                afterShowAd: () => {
-                    window.focus();
-                    this.onfocus();
-                    window.WebAudioEngine.adShowing = false;
-                    Laya.timer.scale = 1;
-                    Laya.stage.renderingEnabled = true //恢复渲染
-                    Laya.updateTimer && Laya.updateTimer.resume() //恢复onUpdate
-                    Laya.physicsTimer && Laya.physicsTimer.resume() //恢复物理
-                    // window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
-                    complete && complete();
-                }
-            });
-
+            console.log("请求插屏广告");
+        
+            // 展示插屏广告
+            HUHU_showInterstitialAd();
+        
+            // 继续游戏
+            complete && complete()
+            return;
         }
         //复活
         showReward(success, failure, com) {
-            // console.log("激励广告")
-            // success && success()
-            // return;
-            if (!YYGGames.canShowReward()) {
-                this.prompt("No Available Video");
-                com && com();
-                // this.showNoVideo();
-                return;
-            }
-            YYGGames.showReward({
-                beforeShowAd: () => {
-                    window.WebAudioEngine.adShowing = true;
-                    this.onblur();
-                    Laya.timer.scale = 0;
-                    Laya.stage.renderingEnabled = false //停止渲染
-                    Laya.updateTimer && Laya.updateTimer.pause() //停止onUpdate
-                    Laya.physicsTimer && Laya.physicsTimer.pause() //停止物理
-                    // window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "");
-                },
-                afterShowAd: () => {
-                    window.focus();
-                    this.onfocus();
-                    window.WebAudioEngine.adShowing = false;
-                    Laya.timer.scale = 1;
-                    Laya.stage.renderingEnabled = true //恢复渲染
-                    Laya.updateTimer && Laya.updateTimer.resume() //恢复onUpdate
-                    Laya.physicsTimer && Laya.physicsTimer.resume() //恢复物理
-                    // window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
-                    // complete && complete();
-                },
-                rewardComplete: () => {
+            console.log("请求激励广告");
 
-                    success && success();
+
+            HUHU_showRewardedVideoAd(
+              () => {
+                  // 用户观看广告完成，继续游戏
+                  window.focus();
+                  this.onfocus();
+                  window.WebAudioEngine.adShowing = false;
+                  Laya.timer.scale = 1;
+                  Laya.stage.renderingEnabled = true //恢复渲染
+                  Laya.updateTimer && Laya.updateTimer.resume() //恢复onUpdate
+                  Laya.physicsTimer && Laya.physicsTimer.resume() //恢复物理
+                  success && success();
+                  com && com();
+                  com = null;
+                  success = null;
+              },
+              () => {
+                // 广告请求失败或者用户跳过广告
+                if (failure) {
+                    failure();
                     com && com();
                     com = null;
-                    success = null;
-                },
-                rewardDismissed: () => {
-
-                    if (failure) {
-                        failure();
-                        com && com();
-                        com = null;
-                        failure = null;
-                    }
-                    // else {
-                    // if (event == YYG.Event.AD_SKIPPED) {
-                    this.prompt("Pls watch the ad completely, so that you can claim your reward");
-                    // }
-                    // }
+                    failure = null;
                 }
-            });
+                // else {
+                // if (event == YYG.Event.AD_SKIPPED) {          
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+              }
+            );
+            // if (!YYGGames.canShowReward()) {
+            //     this.prompt("No Available Video");
+            //     com && com();
+            //     // this.showNoVideo();
+            //     return;
+            // }
+            // YYGGames.showReward({
+            //     beforeShowAd: () => {
+            //         window.WebAudioEngine.adShowing = true;
+            //         this.onblur();
+            //         Laya.timer.scale = 0;
+            //         Laya.stage.renderingEnabled = false //停止渲染
+            //         Laya.updateTimer && Laya.updateTimer.pause() //停止onUpdate
+            //         Laya.physicsTimer && Laya.physicsTimer.pause() //停止物理
+            //         // window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "");
+            //     },
+            //     afterShowAd: () => {
+            //         window.focus();
+            //         this.onfocus();
+            //         window.WebAudioEngine.adShowing = false;
+            //         Laya.timer.scale = 1;
+            //         Laya.stage.renderingEnabled = true //恢复渲染
+            //         Laya.updateTimer && Laya.updateTimer.resume() //恢复onUpdate
+            //         Laya.physicsTimer && Laya.physicsTimer.resume() //恢复物理
+            //         // window.document.getElementById("advertisement") && (window.document.getElementById("advertisement").style.display = "none");
+            //         // complete && complete();
+            //     },
+            //     rewardComplete: () => {
+
+            //         success && success();
+            //         com && com();
+            //         com = null;
+            //         success = null;
+            //     },
+            //     rewardDismissed: () => {
+
+            //         if (failure) {
+            //             failure();
+            //             com && com();
+            //             com = null;
+            //             failure = null;
+            //         }
+            //         // else {
+            //         // if (event == YYG.Event.AD_SKIPPED) {
+            //         this.prompt("Pls watch the ad completely, so that you can claim your reward");
+            //         // }
+            //         // }
+            //     }
+            // });
         }
 
         initList(appList) {
@@ -653,18 +663,7 @@
             }.bind(this), duration);
         }
         getForgames() {
-            let sforgames = YYGGames.forgames || []; // YYGGames.forgames || []
-            // {
-            //     thumb:"adsfafa.png"
-            // }
-            let forgames = sforgames.slice();
-            for (let i = 0, length = forgames.length; i < length; i++) {
-                const random = Math.floor(Math.random() * (i + 1));
-                const item = forgames[random];
-                forgames[random] = forgames[i];
-                forgames[i] = item;
-            }
-            return forgames;
+            return []
         }
 
         createLogo() {
@@ -685,82 +684,61 @@
          * @param {*} name 
          * @param {*} complete 
          */
-        yadstartup(name, complete) {
+         yadstartup(name, complete) {
             if (!this.needStartUp) {
                 complete && complete();
             }
             if (this.initialized_) return;
-            platform.getInstance().showSplash();
+            // platform.getInstance().showSplash();
             platform.getInstance().createLogo();
             this.createNoVideo();
             this.createLoading();
             window.WebAudioEngine.init().then(() => {
-                Laya.SoundManager.playMusic = function (url) {
+                Laya.SoundManager.playMusic = function(url) {
                     window.WebAudioEngine && window.WebAudioEngine.playMusic(url);
                 }
-                Laya.SoundManager.playSound = function (url, loop = false) {
+                Laya.SoundManager.playSound = function(url, loop = false) {
                     window.WebAudioEngine && window.WebAudioEngine.playSound(url);
                 }
-                Laya.SoundManager.stopMusic = function () {
+                Laya.SoundManager.stopMusic = function() {
                     window.WebAudioEngine && window.WebAudioEngine.stopMusic();
                 }
-                Laya.SoundManager.stopSound = function (url) {
+                Laya.SoundManager.stopSound = function(url) {
                     window.WebAudioEngine && window.WebAudioEngine.stopSound(url);
                 }
             })
-
-
+        
+        
             //临时锁死
             this.initialized_ = true;
             Laya.loader.load("cnf.json", Laya.Handler.create(this, (res) => {
-                YYGGames.startupByYad({
-                    appName: name,
-                    config: res,
-                    complete: () => {
-                        const platformType = YYGGames.getAdPlatformType();
-                        window.scrollList = this.scrollList();
-                        window.box_adTwo = this.box_adTwo();
-                        switch (platformType) {
-                            case AdPlatformType.en_GAMEDISTRIBUTION:
-                            case AdPlatformType.en_XIAOMI:
-                                window.yad && (window.yad.scale(0, 0), window.yad
-                                    .removeSelf());
-                                break;
-                            default:
-                                window.yad && Laya.stage.addChild(window.yad);
-                                window.yad.on(Laya.Event.MOUSE_DOWN, window.yad, (e) => {
-                                    e.stopPropagation();
-                                    platform.getInstance().navigate("GAME", "LOGO");
-                                });
-                                break;
-                        }
-                        this.needStartUp = false;
-                        complete && complete();
-                    }
-                });
+                // window.scrollList = this.scrollList();
+                // window.box_adTwo = this.box_adTwo();
+                this.needStartUp = false;
+                complete && complete();
             }))
         }
 
         showBanner(data) {
-            if (data) {
-                YYGGames.showBanner(data)
-            } else {
-                YYGGames.showBanner()
-            }
+            // if (data) {
+            //     YYGGames.showBanner(data)
+            // } else {
+            //     YYGGames.showBanner()
+            // }
         }
         hideBanner() {
-            YYGGames.hideBanner()
+            // YYGGames.hideBanner()
         }
 
         showSplash(data) {
-            if (data) {
-                YYGGames.showSplash(data)
-            } else {
-                YYGGames.showSplash()
-            }
+            // if (data) {
+            //     YYGGames.showSplash(data)
+            // } else {
+            //     YYGGames.showSplash()
+            // }
         }
         hideSplash() {
-            YYGGames.hideSplash()
+            // YYGGames.hideSplash()
         }
 
 
@@ -1208,11 +1186,11 @@
             if (!Laya || !Laya.stage) {
                 return null;
             }
-            if (!YYGGames.canShowForgames()) {
-                let box = new Laya.Box();
-                box.setSize = function () { };
-                return box;
-            }
+            // if (!YYGGames.canShowForgames()) {
+            //     let box = new Laya.Box();
+            //     box.setSize = function () { };
+            //     return box;
+            // }
 
             if (!this._scrollList) {
                 let scrollListJson = {
@@ -1250,7 +1228,7 @@
                         "props": {
                             "zOrder": -10,
                             "width": 900,
-                            "skin": "di2.png",
+                            "skin": "",
                             "sizeGrid": "30, 30, 30, 30",
                             "presetID": 2,
                             "preset": "laya/pages/prefab/scrollList.prefab",
@@ -1316,7 +1294,7 @@
                                     "y": 75,
                                     "x": 100,
                                     "width": 200,
-                                    "skin": "di1.png",
+                                    "skin": "",
                                     "sizeGrid": "30,30,30,30",
                                     "renderType": "mask",
                                     "presetID": 5,
@@ -1524,7 +1502,7 @@
                             "y": 0,
                             "x": -310,
                             "width": 220,
-                            "skin": "di1.png",
+                            "skin": "",
                             "sizeGrid": "30,30,30,30",
                             "presetID": 2,
                             "preset": "laya/pages/prefab/box_adTwo.prefab",
@@ -1564,7 +1542,7 @@
                                 "searchKey": "Image",
                                 "props": {
                                     "width": 200,
-                                    "skin": "di1.png",
+                                    "skin": "",
                                     "sizeGrid": "30,30,30,30",
                                     "renderType": "mask",
                                     "presetID": 4,
@@ -1591,7 +1569,7 @@
                             "y": 0,
                             "x": 90,
                             "width": 220,
-                            "skin": "di1.png",
+                            "skin": "",
                             "sizeGrid": "30,30,30,30",
                             "presetID": 5,
                             "preset": "laya/pages/prefab/box_adTwo.prefab",
@@ -1631,7 +1609,7 @@
                                 "searchKey": "Image",
                                 "props": {
                                     "width": 200,
-                                    "skin": "di1.png",
+                                    "skin": "",
                                     "sizeGrid": "30,30,30,30",
                                     "renderType": "mask",
                                     "presetID": 7,
@@ -1684,7 +1662,7 @@
                             let imgArr = JSON.parse(JSON.stringify(this.imgArr))
                             Laya.loader.clearRes(imgArr)
                         }
-                        // this.imgArr = ["di1.png", "di2.png"];
+                        // this.imgArr = ["", ""];
                         // for (let i = 0; i < listArray.length; i++) {
                         // 	this.imgArr.push(listArray[i].thumb);
                         // }
@@ -1786,11 +1764,11 @@
             if (!Laya || !Laya.stage) {
                 return null;
             }
-            if (!YYGGames.canShowForgames()) {
-                let box = new Laya.Box();
-                box.setSpaceX = box.setSize = function () { };
-                return box;
-            }
+            // if (!YYGGames.canShowForgames()) {
+            //     let box = new Laya.Box();
+            //     box.setSpaceX = box.setSize = function () { };
+            //     return box;
+            // }
             if (!this._box_adTwo0) {
                 this._box_adTwo0 = new Laya.Box();
                 this._box_adTwo0.name = "_box_adTwo0";
@@ -1802,14 +1780,14 @@
                 leftAdBg.name = "leftAdBg";
                 leftAdBg.sizeGrid = "30,30,30,30";
                 leftAdBg.size(220, 170);
-                leftAdBg.skin = "di1.png";
+                leftAdBg.skin = "";
 
                 let leftAdMask = new Laya.Image();
                 leftAdMask.name = "leftAdMask";
                 leftAdMask.size(200, 150);
                 leftAdMask.sizeGrid = "30,30,30,30";
                 leftAdMask.anchorX = leftAdMask.anchorY = 0.5;
-                leftAdMask.skin = "di1.png";
+                leftAdMask.skin = "";
 
                 let leftAd = new Laya.Image();
                 leftAd.name = "leftAd";
@@ -1826,14 +1804,14 @@
                 rightAdBg.name = "rightAdBg";
                 rightAdBg.sizeGrid = "30,30,30,30";
                 rightAdBg.size(220, 170);
-                rightAdBg.skin = "di1.png";
+                rightAdBg.skin = "";
 
                 let rightAdMask = new Laya.Image();
                 rightAdMask.name = "rightAdMask";
                 rightAdMask.size(200, 150);
                 rightAdMask.sizeGrid = "30,30,30,30";
                 rightAdMask.anchorX = rightAdMask.anchorY = 0.5;
-                rightAdMask.skin = "di1.png";
+                rightAdMask.skin = "";
 
                 let rightAd = new Laya.Image();
                 rightAd.name = "rightAd";
@@ -1944,7 +1922,7 @@
             if (!this._scrollList) {
                 this._scrollList = new Laya.Image();
                 this._scrollList.name = "_scrollList";
-                this._scrollList.skin = "di2.png";
+                this._scrollList.skin = "";
                 this._scrollList.sizeGrid = "30,30,30,30";
                 this._scrollList.size(900, 190);
                 this._scrollList.zOrder = 199999;
@@ -1967,7 +1945,7 @@
                         this.imgMask.sizeGrid = "30,30,30,30";
                         this.imgMask.name = "imgMask";
                         this.imgMask.anchorX = this.imgMask.anchorY = 0.5;
-                        this.imgMask.skin = "di1.png";
+                        this.imgMask.skin = "";
                         this.imgMask.size(200, 150);
                         this.img.mask = this.imgMask;
                         this.img.pos(this.width / 2, this.height / 2);
