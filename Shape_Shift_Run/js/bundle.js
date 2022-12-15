@@ -3316,7 +3316,7 @@
             _0x58a73f('main/gameR' + 'untime.ts', _0x57f6b0), _0x58a73f('spr2dScrip' + 'ts/touchMa' + 'nger.ts', _0x5c6cd2), _0x58a73f('main/loadi' + 'ngRuntime.' + 'ts', _0x3a1c60), _0x58a73f('main/menuR' + 'untime.ts', _0x1005cc), _0x58a73f('main/overR' + 'untime.ts', _0x38257d);
         }
     }
-    _0x2f35a0['width'] = 0x2d0, _0x2f35a0['height'] = 0x500, _0x2f35a0['scaleMode'] = 'showall', _0x2f35a0['screenMode'] = 'none', _0x2f35a0['alignV'] = 'middle', _0x2f35a0['alignH'] = 'center', _0x2f35a0['startScene'] = 'main/loadi' + 'ngView.sce' + 'ne', _0x2f35a0['sceneRoot'] = '', _0x2f35a0['debug'] = !0x1, _0x2f35a0['stat'] = !0x1, _0x2f35a0['physicsDeb' + 'ug'] = !0x1, _0x2f35a0['exportScen' + 'eToJson'] = !0x0, _0x2f35a0['init']();
+    _0x2f35a0['width'] = 0x2d0, _0x2f35a0['height'] = 0x500, _0x2f35a0['scaleMode'] = 'exactfit', _0x2f35a0['screenMode'] = 'none', _0x2f35a0['alignV'] = 'middle', _0x2f35a0['alignH'] = 'center', _0x2f35a0['startScene'] = 'main/loadi' + 'ngView.sce' + 'ne', _0x2f35a0['sceneRoot'] = '', _0x2f35a0['debug'] = !0x1, _0x2f35a0['stat'] = !0x1, _0x2f35a0['physicsDeb' + 'ug'] = !0x1, _0x2f35a0['exportScen' + 'eToJson'] = !0x0, _0x2f35a0['init']();
     class _0x839ec0 {
         constructor() {
             this['bitmapFont' + '_Number'] = new Laya['BitmapFont'](), this['Number_mFo' + 'ntName'] = 'font1', this['bitmapFont' + '_Number']['loadFont']('bitFont/fo' + 'nt1.fnt', Laya['Handler']['create'](this, () => {
