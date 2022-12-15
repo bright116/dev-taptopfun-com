@@ -1788,9 +1788,14 @@
             super(), this['coinNumber'] = 0x64, this['mask_low'] = 0x185, this['mask_high'] = 0xe3, this['countY'] = 0x0, this['carY'] = 0x27, _0x31c0d5['ins'] = this, _0x31c0d5['index'] = 0x0, this['logic'] = _0x161787['getInstanc' + 'e'](), this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['Scene_all'] = _0x4280be['GetInstanc' + 'e']()['getScene_a' + 'll']();
             let _0x593cb2 = this;
             this['ui'] = _0x58a57b, this['ui']['visible'] = !0x1, this['title'] = this['ui']['getChildBy' + 'Name']('title'), this['nextBtn'] = this['ui']['getChildBy' + 'Name']('nextBtn'), this['doubleBtn'] = this['ui']['getChildBy' + 'Name']('doubleBtn'), this['ad_Icon'] = this['doubleBtn']['getChildBy' + 'Name']('icon'), this['ad_Icon']['visible'] = !0x1, this['shareBtn'] = this['ui']['getChildBy' + 'Name']('shareBtn'), this['goBtn'] = this['ui']['getChildBy' + 'Name']('goBtn'), this['levelText'] = this['title']['getChildBy' + 'Name']('levelText'), this['nextBtn']['visible'] = !0x1, this['faterbg'] = this['ui']['getChildBy' + 'Name']('fater'), this['sihouetteE' + 'ffect'] = this['ui']['getChildBy' + 'Name']('sihouetteE' + 'ffect'), this['sihouette'] = this['ui']['getChildBy' + 'Name']('sihouette'), this['sihouetteF' + 'ill'] = this['sihouetteE' + 'ffect']['getChildBy' + 'Name']('sihouetteF' + 'ill'), this['sihouetteM' + 'ask'] = this['sihouetteE' + 'ffect']['mask'], this['progressTe' + 'xt'] = this['ui']['getChildBy' + 'Name']('progressTe' + 'xt'), this['unlockText'] = this['ui']['getChildBy' + 'Name']('unlockText'), this['unlockText' + '_text'] = this['unlockText']['getChildBy' + 'Name']('text'), this['unlockText' + '_text']['visible'] = !0x0, this['unlockText' + '_unlockTex' + 't'] = this['unlockText']['getChildBy' + 'Name']('unlockText'), this['unlockText' + '_unlockTex' + 't']['visible'] = !0x1, this['unlockText' + '_num'] = this['unlockText']['getChildBy' + 'Name']('num'), this['sihouetteM' + 'ask']['y'] = this['mask_low'], this['progressTe' + 'xt']['text'] = '0%', this['light'] = this['ui']['getChildBy' + 'Name']('light'), this['shareBtn']['visible'] = !0x1, this['ADV'] = this['ui']['getChildBy' + 'Name']('ADV'), this['nextBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
-                YYGGames['showInters' + 'titial'](() => {
-                    _0x593cb2['nextBtnCli' + 'ck']();
-                });
+                console.log("请求插屏广告");
+
+                // 展示插屏广告
+                HUHU_showInterstitialAd();
+                _0x593cb2['nextBtnCli' + 'ck']();
+                // YYGGames['showInters' + 'titial'](() => {
+                //     _0x593cb2['nextBtnCli' + 'ck']();
+                // });
             }), this['goBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
                 userExport['Controller' + 'OnOff']['WuChuClick']('reward', _0x31c0d5['index'], this['goBtn']) || this['playBtnEff' + 'ect'](this['goBtn'], function () {
                     _0x593cb2['playBtnSou' + 'nd'](), _0x593cb2['nextBtnCli' + 'ck']();
@@ -2036,24 +2041,29 @@
             ], this['restBtn'] = this['ui']['getChildBy' + 'Name']('restBtn'), this['chooseBtn'] = this['ui']['getChildBy' + 'Name']('chooseBtn'), this['homeBtn'] = this['ui']['getChildBy' + 'Name']('homeBtn'), this['homeBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
                 if (this['scene_all']['cls']['car']['isDriving'] || this['perfect']['visible'] || _0x1a3086['ISMERGE'])
                     return;
-                YYGGames['showInters' + 'titial'](() => {
-                    _0x1a3086['ISREST'] = ![], (_0x2443ee['getInstanc' + 'e']()['clearDialo' + 'g'](), _0x4280be['GetInstanc' + 'e']()['clearLastL' + 'evel'](), this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['userInfo']['chooseLeve' + 'l'] = this['userInfo']['level'], _0x4280be['GetInstanc' + 'e']()['nextLevel'](0x1), _0xa8b540['getInstanc' + 'e']()['setGameSta' + 'te'](0x2)), (_0x2443ee['hide']('gameUI'), _0x2443ee['hide']('titleUI')), _0x2443ee['show']('startUI');
-                });
+                _0x1a3086['ISREST'] = ![], (_0x2443ee['getInstanc' + 'e']()['clearDialo' + 'g'](), _0x4280be['GetInstanc' + 'e']()['clearLastL' + 'evel'](), this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['userInfo']['chooseLeve' + 'l'] = this['userInfo']['level'], _0x4280be['GetInstanc' + 'e']()['nextLevel'](0x1), _0xa8b540['getInstanc' + 'e']()['setGameSta' + 'te'](0x2)), (_0x2443ee['hide']('gameUI'), _0x2443ee['hide']('titleUI')), _0x2443ee['show']('startUI');
+                // YYGGames['showInters' + 'titial'](() => {
+                //     _0x1a3086['ISREST'] = ![], (_0x2443ee['getInstanc' + 'e']()['clearDialo' + 'g'](), _0x4280be['GetInstanc' + 'e']()['clearLastL' + 'evel'](), this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['userInfo']['chooseLeve' + 'l'] = this['userInfo']['level'], _0x4280be['GetInstanc' + 'e']()['nextLevel'](0x1), _0xa8b540['getInstanc' + 'e']()['setGameSta' + 'te'](0x2)), (_0x2443ee['hide']('gameUI'), _0x2443ee['hide']('titleUI')), _0x2443ee['show']('startUI');
+                // });
             }), this['chooseBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
                 if (this['scene_all']['cls']['car']['isDriving'] || this['perfect']['visible'] || _0x1a3086['ISMERGE'])
                     return;
-                YYGGames['showInters' + 'titial'](() => {
-                    _0x1a3086['ISREST'] = ![], (_0x2443ee['getInstanc' + 'e']()['clearDialo' + 'g'](), _0x4280be['GetInstanc' + 'e']()['clearLastL' + 'evel'](), _0x4280be['GetInstanc' + 'e']()['nextLevel'](0x1), _0xa8b540['getInstanc' + 'e']()['setGameSta' + 'te'](0x2)), (_0x2443ee['hide']('gameUI'), _0x2443ee['hide']('titleUI'), _0x2443ee['show']('chooseUI'));
-                });
+                _0x1a3086['ISREST'] = ![], (_0x2443ee['getInstanc' + 'e']()['clearDialo' + 'g'](), _0x4280be['GetInstanc' + 'e']()['clearLastL' + 'evel'](), _0x4280be['GetInstanc' + 'e']()['nextLevel'](0x1), _0xa8b540['getInstanc' + 'e']()['setGameSta' + 'te'](0x2)), (_0x2443ee['hide']('gameUI'), _0x2443ee['hide']('titleUI'), _0x2443ee['show']('chooseUI'));
+                // YYGGames['showInters' + 'titial'](() => {
+                //     _0x1a3086['ISREST'] = ![], (_0x2443ee['getInstanc' + 'e']()['clearDialo' + 'g'](), _0x4280be['GetInstanc' + 'e']()['clearLastL' + 'evel'](), _0x4280be['GetInstanc' + 'e']()['nextLevel'](0x1), _0xa8b540['getInstanc' + 'e']()['setGameSta' + 'te'](0x2)), (_0x2443ee['hide']('gameUI'), _0x2443ee['hide']('titleUI'), _0x2443ee['show']('chooseUI'));
+                // });
             }), this['tipBtn'] = this['ui']['getChildBy' + 'Name']('tipBtn'), this['helpBtn'] = this['ui']['getChildBy' + 'Name']('helpBtn'), this['helpIcon'] = this['helpBtn']['getChildBy' + 'Name']('helpIcon'), this['rewardBgBt' + 'n'] = this['ui']['getChildBy' + 'Name']('rewardBgBt' + 'n'), this['rewardBtn'] = this['ui']['getChildBy' + 'Name']('rewardBtn'), this['chestBox'] = this['rewardBtn']['getChildBy' + 'Name']('chestBox'), this['red'] = this['tipBtn']['getChildBy' + 'Name']('red'), this['timeText'] = this['red']['getChildBy' + 'Name']('timeText'), this['videoIcon'] = this['tipBtn']['getChildBy' + 'Name']('videoIcon'), this['reward_tim' + 'e_txt'] = this['rewardBtn']['getChildBy' + 'Name']('text'), this['rewardbg_t' + 'ime_txt'] = this['rewardBgBt' + 'n']['getChildBy' + 'Name']('text'), this['clickBtn'] = this['ui']['getChildBy' + 'Name']('clickBtn'), this['tipReward'] = this['ui']['getChildBy' + 'Name']('tipReward'), this['perfect'] = this['ui']['getChildBy' + 'Name']('perfect'), this['coins_star' + '_anchor'] = this['ui']['getChildBy' + 'Name']('coins_star' + '_anchor'), this['total_time'] = 0x0, this['reward_mas' + 'k'] = this['rewardBtn']['mask'], this['reward_mas' + 'k']['y'] = this['low_mask_y'];
             let _0x1fe752 = this['low_mask_y'] - this['high_mask_' + 'y'];
             this['restBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
                 if (this['scene_all']['cls']['car']['isDriving'] || this['perfect']['visible'] || _0x1a3086['ISMERGE'])
                     return;
                 this['playBtnEff' + 'ect'](this['restBtn'], function () {
-                    _0x1a3086['ISMERGE'] || (_0x1a3086['ISREST'] = !0x0, YYGGames['showInters' + 'titial'](() => {
-                        _0x9ef1a4['restBtnCli' + 'ck']();
-                    })), _0x1b2063['ins']['onShowHotL' + 'ist'](!0x0);
+                    _0x1a3086['ISMERGE'] || (_0x1a3086['ISREST'] = !0x0, 
+                    _0x9ef1a4['restBtnCli' + 'ck'](),
+                    // YYGGames['showInters' + 'titial'](() => {
+                    //     _0x9ef1a4['restBtnCli' + 'ck']();
+                    // })
+                     _0x1b2063['ins']['onShowHotL' + 'ist'](!0x0))
                 });
             }), this['tipBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
                 _0x1a3086['ISMERGE'] || this['playBtnEff' + 'ect'](this['tipBtn'], function () {
@@ -2095,9 +2105,25 @@
             this['timeText']['text'] = this['userInfo']['tip_times']['toString']();
         }
         ['tipBtnClic' + 'k']() {
-            this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['userInfo']['tip_times'] > 0x0 ? (this['userInfo']['tip_times'] -= 0x1, this['timeText']['text'] = this['userInfo']['tip_times']['toString'](), _0x1a3086['RECONRD_AD' + '_TIMES'] += 0x1, _0x4280be['GetInstanc' + 'e']()['cancelAllR' + 'oute'](), _0x4280be['GetInstanc' + 'e']()['showArrow'](), this['userInfo']['tip_times'] <= 0x0 && (this['videoIcon']['visible'] = !0x0, this['red']['visible'] = !0x1)) : YYGGames['showReward'](() => {
-                _0x1a3086['RECONRD_AD' + '_TIMES'] += 0x1, _0x4280be['GetInstanc' + 'e']()['cancelAllR' + 'oute'](), _0x4280be['GetInstanc' + 'e']()['showArrow']();
-            });
+            this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['userInfo']['tip_times'] > 0x0 ? (this['userInfo']['tip_times'] -= 0x1, this['timeText']['text'] = this['userInfo']['tip_times']['toString'](), _0x1a3086['RECONRD_AD' + '_TIMES'] += 0x1, _0x4280be['GetInstanc' + 'e']()['cancelAllR' + 'oute'](), _0x4280be['GetInstanc' + 'e']()['showArrow'](), this['userInfo']['tip_times'] <= 0x0 && (this['videoIcon']['visible'] = !0x0, this['red']['visible'] = !0x1)) : 
+            HUHU_showRewardedVideoAd(
+                () => {
+                    // 用户观看广告完成，继续游戏
+                    _0x1a3086['RECONRD_AD' + '_TIMES'] += 0x1, _0x4280be['GetInstanc' + 'e']()['cancelAllR' + 'oute'](), _0x4280be['GetInstanc' + 'e']()['showArrow']();
+                },
+                () => {
+                  // 广告请求失败或者用户跳过广告
+                //   if (failure) {
+                //       failure();
+                //   }
+            
+            
+                  promptMessage("Failed to get the reward, please watch the ads to the end.");
+                }
+              );
+            // YYGGames['showReward'](() => {
+            //     _0x1a3086['RECONRD_AD' + '_TIMES'] += 0x1, _0x4280be['GetInstanc' + 'e']()['cancelAllR' + 'oute'](), _0x4280be['GetInstanc' + 'e']()['showArrow']();
+            // });
         }
         ['helpBtnCli' + 'ck']() {
             _0x2c206a['share']({
@@ -2115,7 +2141,10 @@
             this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['record_rew' + 'ard_time'] != this['userInfo']['reward_tim' + 'e'] && (0x1 == this['userInfo']['reward_tim' + 'e'] ? (this['total_time' + '_init'] = 0x3c, this['record_rew' + 'ard_time'] = this['userInfo']['reward_tim' + 'e']) : 0x2 == this['userInfo']['reward_tim' + 'e'] ? (this['total_time' + '_init'] = 0xb4, this['record_rew' + 'ard_time'] = this['userInfo']['reward_tim' + 'e']) : (this['total_time' + '_init'] = 0x12c, this['record_rew' + 'ard_time'] = this['userInfo']['reward_tim' + 'e']), this['total_time'] = this['total_time' + '_init'], this['reward_mas' + 'k']['y'] = this['low_mask_y'], this['ischange'] = !0x0, this['reward_tim' + 'e'] = 0x0, this['total_time'] = this['total_time' + '_init'], this['reward_tim' + 'e_txt']['text'] = 'CD', this['rewardbg_t' + 'ime_txt']['text'] = 'CD');
         }
         ['show']() {
-            this['reset'](), this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['perfect']['visible'] = !0x1, this['coins_star' + '_anchor']['visible'] = !0x1, this['IsVideo'] = _0x2c206a['getshareOr' + 'Video'](this['userInfo']['level']), this['IsVideo'] ? this['videoIcon']['skin'] = 'comp/tipvi' + 'deoIcon.pn' + 'g' : this['videoIcon']['skin'] = 'comp/share' + '.png', this['tipReward']['visible'] = !0x1, this['reward_mas' + 'k']['y'] <= this['high_mask_' + 'y'] + 0x1 && (this['reward_tim' + 'e_txt']['text'] = 'Available', this['rewardbg_t' + 'ime_txt']['text'] = 'Available'), 0x0 == this['total_time'] && this['restReward'](), _0x2443ee['show']('titleUI'), 0x0 == this['userInfo']['level'] && (this['clickBtn']['visible'] = !0x0), this['userInfo']['tip_times'] > 0x0 ? (this['videoIcon']['visible'] = !0x1, this['red']['visible'] = !0x0) : (this['videoIcon']['visible'] = !0x0, this['red']['visible'] = !0x1), this['timeText']['text'] = this['userInfo']['tip_times']['toString'](), this['showBtn_Sl' + 'id'](), console['log']('this.userI' + 'nfo.level\x20' + '\x20\x20：\x20\x20', this['userInfo']['level']), this['lead'] && (this['lead']['visible'] = !0x1), 0x1 == this['userInfo']['level'] ? (console['log']('展示新手引导'), this['lead']['visible'] = !0x0, this['showHandAn' + 'imation'](this['lead'])) : this['lead'] && (this['lead']['visible'] = !0x1), this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] = YYGGames['audio']['pause'] ? 'comp/syg.p' + 'ng' : 'comp/syk.p' + 'ng';
+            this['reset'](), this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['perfect']['visible'] = !0x1, this['coins_star' + '_anchor']['visible'] = !0x1, this['IsVideo'] = _0x2c206a['getshareOr' + 'Video'](this['userInfo']['level']), this['IsVideo'] ? this['videoIcon']['skin'] = 'comp/tipvi' + 'deoIcon.pn' + 'g' : this['videoIcon']['skin'] = 'comp/share' + '.png', this['tipReward']['visible'] = !0x1, this['reward_mas' + 'k']['y'] <= this['high_mask_' + 'y'] + 0x1 && (this['reward_tim' + 'e_txt']['text'] = 'Available', this['rewardbg_t' + 'ime_txt']['text'] = 'Available'), 0x0 == this['total_time'] && this['restReward'](), _0x2443ee['show']('titleUI'), 0x0 == this['userInfo']['level'] && (this['clickBtn']['visible'] = !0x0), this['userInfo']['tip_times'] > 0x0 ? (this['videoIcon']['visible'] = !0x1, this['red']['visible'] = !0x0) : (this['videoIcon']['visible'] = !0x0, this['red']['visible'] = !0x1), this['timeText']['text'] = this['userInfo']['tip_times']['toString'](), this['showBtn_Sl' + 'id'](), console['log']('this.userI' + 'nfo.level\x20' + '\x20\x20：\x20\x20', this['userInfo']['level']), this['lead'] && (this['lead']['visible'] = !0x1), 0x1 == this['userInfo']['level'] ? (console['log']('展示新手引导'), this['lead']['visible'] = !0x0, this['showHandAn' + 'imation'](this['lead'])) : this['lead'] && (this['lead']['visible'] = !0x1), 
+            this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] =  'comp/syk.p' + 'ng';
+            // this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] = YYGGames['audio']['pause'] ? 'comp/syg.p' + 'ng' : 'comp/syk.p' + 'ng';
+
         }
         ['hide']() {
             _0x2443ee['hide']('titleUI'), this['haveTimer'] = !0x1, this['closeBtn_S' + 'lid'](), this['showChestB' + 'osTime'] && Laya['timer']['clear'](this, this['showChestB' + 'osTime']), this['perfect']['visible'] = !0x1, this['coins_star' + '_anchor']['visible'] = !0x1;
@@ -2282,9 +2311,15 @@
             super(), this['items'] = [], this['nowChooseI' + 'd'] = 0x0, this['page'] = 0x1, this['clicked'] = !0x1, this['carY'] = 0x1e, this['Scene_all'] = _0x4280be['GetInstanc' + 'e']()['getScene_a' + 'll'](), this['logic'] = _0x161787['getInstanc' + 'e'](), this['userInfo'] = this['logic']['getUserInf' + 'o']();
             let _0x2ebc56 = this;
             this['ui'] = _0x970f01, this['ui']['visible'] = !0x1, this['bg'] = this['ui']['getChildBy' + 'Name']('bg'), this['videoUnloc' + 'kBtn'] = this['ui']['getChildBy' + 'Name']('videoUnloc' + 'kBtn'), this['video_icon'] = this['videoUnloc' + 'kBtn']['getChildBy' + 'Name']('icon1'), this['videoUnclo' + 'kText'] = this['videoUnloc' + 'kBtn']['getChildBy' + 'Name']('videoUnclo' + 'kText'), this['closeBtn'] = this['ui']['getChildBy' + 'Name']('closeBtn'), this['skinList'] = this['ui']['getChildBy' + 'Name']('skinList'), this['point'] = this['ui']['getChildBy' + 'Name']('point'), this['tip'] = this['ui']['getChildBy' + 'Name']('tip'), this['tip']['visible'] = !0x1, this['showCarEff' + 'ect'] = this['ui']['getChildBy' + 'Name']('showCarEff' + 'ect'), this['road'] = this['showCarEff' + 'ect']['getChildBy' + 'Name']('road'), this['left'] = this['ui']['getChildBy' + 'Name']('arrowL'), this['right'] = this['ui']['getChildBy' + 'Name']('arrowR'), this['line1'] = this['road']['getChildBy' + 'Name']('line1'), this['closeBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
-                YYGGames['showInters' + 'titial'](() => {
-                    _0x2443ee['hide']('storeUI'), _0x2443ee['show']('startUI');
-                });
+
+                console.log("请求插屏广告");
+
+                // 展示插屏广告
+                HUHU_showInterstitialAd();
+                _0x2443ee['hide']('storeUI'), _0x2443ee['show']('startUI');
+                // YYGGames['showInters' + 'titial'](() => {
+                //     _0x2443ee['hide']('storeUI'), _0x2443ee['show']('startUI');
+                // });
             }), this['videoUnloc' + 'kBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
                 _0x2ebc56['playBtnSou' + 'nd'](), this['videoUnloc' + 'kBtnClick']();
             }), this['ui_list2'] = [];
@@ -2453,9 +2488,10 @@
             super(), this['clicked'] = !0x1, this['page'] = 0x1, this['logic'] = _0x161787['getInstanc' + 'e']();
             let _0x1a69fa = this;
             this['ui'] = _0x229e8d, this['ui']['visible'] = !0x1, this['closeBtn'] = this['ui']['getChildBy' + 'Name']('closeBtn'), this['left'] = this['ui']['getChildBy' + 'Name']('arrowL'), this['right'] = this['ui']['getChildBy' + 'Name']('arrowR'), this['leveList'] = this['ui']['getChildBy' + 'Name']('leveList'), this['point'] = this['ui']['getChildBy' + 'Name']('point'), this['title'] = this['ui']['getChildBy' + 'Name']('title'), this['closeBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
-                YYGGames['showInters' + 'titial'](() => {
-                    _0x2443ee['hide']('chooseUI'), _0x2443ee['show']('startUI');
-                });
+                _0x2443ee['hide']('chooseUI'), _0x2443ee['show']('startUI');
+                // YYGGames['showInters' + 'titial'](() => {
+                //     _0x2443ee['hide']('chooseUI'), _0x2443ee['show']('startUI');
+                // });
             }), this['left']['on'](Laya['Event']['CLICK'], this, function () {
                 this['playBtnEff' + 'ect'](this['left'], function () {
                     _0x1a69fa['changePage'](-0x1);
@@ -2546,30 +2582,54 @@
                 _0x2197a9['playBtnSou' + 'nd'](), _0x2197a9['rewardBtnC' + 'lick']();
             }), this['chooseBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
                 this['playBtnEff' + 'ect'](this['chooseBtn'], function () {
-                    YYGGames['showInters' + 'titial'](() => {
-                        _0x2197a9['chooseBtnC' + 'lick']();
-                    });
+                    _0x2197a9['chooseBtnC' + 'lick']();
+                    // YYGGames['showInters' + 'titial'](() => {
+                    //     _0x2197a9['chooseBtnC' + 'lick']();
+                    // });
                 });
             }), this['signBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
                 this['playBtnEff' + 'ect'](this['signBtn'], function () {
-                    YYGGames['showInters' + 'titial'](() => {
-                        _0x2197a9['signBtnCli' + 'ck']();
-                    });
+                    console.log("请求插屏广告");
+
+                    // 展示插屏广告
+                    HUHU_showInterstitialAd();
+                    _0x2197a9['signBtnCli' + 'ck']();
+                    // YYGGames['showInters' + 'titial'](() => {
+                    //     _0x2197a9['signBtnCli' + 'ck']();
+                    // });
                 });
             }), this['musicBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
-                YYGGames['audio']['pause'] = !YYGGames['audio']['pause'], this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] = YYGGames['audio']['pause'] ? 'comp/syg.p' + 'ng' : 'comp/syk.p' + 'ng', Laya['LocalStora' + 'ge']['setItem']('Build-A-Ro' + 'ad-musicSt' + 'ate', JSON['stringify'](YYGGames['audio']['pause']));
-            }), this['carBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
-                _0x2197a9['playBtnSou' + 'nd'](), YYGGames['showInters' + 'titial'](() => {
-                    _0x2197a9['carBtnClic' + 'k']();
-                });
+                // YYGGames['audio']['pause'] = !YYGGames['audio']['pause'], 
+                this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] =  'comp/syk.p' + 'ng',
+                // this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] = YYGGames['audio']['pause'] ? 'comp/syg.p' + 'ng' : 'comp/syk.p' + 'ng',
+                 Laya['LocalStora' + 'ge']['setItem']('Build-A-Ro' + 'ad-musicSt' + 'ate', 
+                 "true"
+                //  JSON['stringify'](YYGGames['audio']['pause'])
+                 );
+            }), 
+            this['carBtn']['on'](Laya['Event']['MOUSE_UP'], this, function () {
+                _0x2197a9['playBtnSou' + 'nd'](), 
+                console.log("请求插屏广告");
+
+                // 展示插屏广告
+                HUHU_showInterstitialAd();
+                _0x2197a9['carBtnClic' + 'k']();
+                // YYGGames['showInters' + 'titial'](() => {
+                //     _0x2197a9['carBtnClic' + 'k']();
+                // });
             }), this['logo']['on'](Laya['Event']['MOUSE_UP'], this, function () {
             }), this['carBtn']['alpha'] = 0x1, this['rewardBgBt' + 'n']['alpha'] = 0x1, this['rewardBtn']['alpha'] = 0x1, this['chooseBtn']['alpha'] = 0x1, this['signBtn']['alpha'] = 0x1, this['clickBtn']['disabled'] = !0x0, this['clickBtn']['on'](Laya['Event']['MOUSE_DOWN'], this, function () {
             }), this['startGameB' + 'tn']['on'](Laya['Event']['MOUSE_DOWN'], this, function () {
                 this['playBtnEff' + 'ect'](this['startGameB' + 'tn'], function () {
                     _0x2197a9['playBtnSou' + 'nd'](), _0x2197a9['showRing'](), setTimeout(() => {
-                        YYGGames['showInters' + 'titial'](() => {
-                            _0x2197a9['click']();
-                        });
+                        console.log("请求插屏广告");
+
+                        // 展示插屏广告
+                        HUHU_showInterstitialAd();
+                        _0x2197a9['click']();
+                        // YYGGames['showInters' + 'titial'](() => {
+                        //     _0x2197a9['click']();
+                        // });
                     }, 0x12c);
                 });
             }), this['ui_list2'] = []);
@@ -2622,7 +2682,10 @@
             this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['record_rew' + 'ard_time'] != this['userInfo']['reward_tim' + 'e'] && (0x1 == this['userInfo']['reward_tim' + 'e'] ? (this['total_time' + '_init'] = 0x3c, this['record_rew' + 'ard_time'] = this['userInfo']['reward_tim' + 'e']) : 0x2 == this['userInfo']['reward_tim' + 'e'] ? (this['total_time' + '_init'] = 0xb4, this['record_rew' + 'ard_time'] = this['userInfo']['reward_tim' + 'e']) : (this['total_time' + '_init'] = 0x12c, this['record_rew' + 'ard_time'] = this['userInfo']['reward_tim' + 'e']), this['total_time'] = this['total_time' + '_init'], this['reward_mas' + 'k']['y'] = this['low_mask_y'], this['reward_tim' + 'e'] = 0x0, this['total_time'] = this['total_time' + '_init'], this['reward_tim' + 'e_txt']['text'] = 'CD', this['rewardbg_t' + 'ime_txt']['text'] = 'CD');
         }
         ['show']() {
-            _0x1a3086['ISSTARTDON' + 'E'] = !0x1, this['tipText']['visible'] = !0x1, this['carBtn']['alpha'] = 0x1, this['rewardBgBt' + 'n']['alpha'] = 0x0, this['rewardBtn']['alpha'] = 0x0, this['chooseBtn']['alpha'] = 0x1, this['signBtn']['alpha'] = 0x1, this['carBtn']['visible'] = !0x0, this['homeBtn']['visible'] = !0x1, this['rewardBgBt' + 'n']['visible'] = !0x1, this['rewardBtn']['visible'] = !0x1, this['chooseBtn']['visible'] = !0x1, this['signBtn']['visible'] = !0x1, this['clickBtn']['disabled'] = !0x0, this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['reset'](), Math['abs'](this['reward_mas' + 'k']['y'] - this['high_mask_' + 'y']) < 0x1 && (this['reward_tim' + 'e_txt']['text'] = 'Available', this['rewardbg_t' + 'ime_txt']['text'] = 'Available', this['ShowChestB' + 'ox']()), 0x0 == this['total_time'] && this['restReward'](), this['userInfo']['level'] >= _0x2c206a['getThereBt' + 'nUnlock']() && this['showBtn_Sl' + 'id'](), this['playButton' + 'ShowEffect'](this['startGameB' + 'tn'], this, null), this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] = YYGGames['audio']['pause'] ? 'comp/syg.p' + 'ng' : 'comp/syk.p' + 'ng';
+            _0x1a3086['ISSTARTDON' + 'E'] = !0x1, this['tipText']['visible'] = !0x1, this['carBtn']['alpha'] = 0x1, this['rewardBgBt' + 'n']['alpha'] = 0x0, this['rewardBtn']['alpha'] = 0x0, this['chooseBtn']['alpha'] = 0x1, this['signBtn']['alpha'] = 0x1, this['carBtn']['visible'] = !0x0, this['homeBtn']['visible'] = !0x1, this['rewardBgBt' + 'n']['visible'] = !0x1, this['rewardBtn']['visible'] = !0x1, this['chooseBtn']['visible'] = !0x1, this['signBtn']['visible'] = !0x1, this['clickBtn']['disabled'] = !0x0, this['userInfo'] = this['logic']['getUserInf' + 'o'](), this['reset'](), Math['abs'](this['reward_mas' + 'k']['y'] - this['high_mask_' + 'y']) < 0x1 && (this['reward_tim' + 'e_txt']['text'] = 'Available', this['rewardbg_t' + 'ime_txt']['text'] = 'Available', this['ShowChestB' + 'ox']()), 0x0 == this['total_time'] && this['restReward'](), this['userInfo']['level'] >= _0x2c206a['getThereBt' + 'nUnlock']() && this['showBtn_Sl' + 'id'](), this['playButton' + 'ShowEffect'](this['startGameB' + 'tn'], this, null),
+            //  this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] = YYGGames['audio']['pause'] ? 'comp/syg.p' + 'ng' : 'comp/syk.p' + 'ng';
+            this['musicBtn']['getChildBy' + 'Name']('icon')['skin'] =  'comp/syk.p' + 'ng';
+
         }
         ['addRoad3D']() {
             let _0x4272ab = this;
@@ -2705,9 +2768,10 @@
                 };
             this['closeBtn']['on'](Laya['Event']['CLICK'], this, function () {
                 this['playBtnEff' + 'ect'](this['closeBtn'], function () {
-                    YYGGames['showInters' + 'titial'](() => {
-                        _0x2443ee['hide']('SignUI');
-                    });
+                    _0x2443ee['hide']('SignUI');
+                    // YYGGames['showInters' + 'titial'](() => {
+                    //     _0x2443ee['hide']('SignUI');
+                    // });
                 });
             }), this['closeBtn']['visible'] = !0x1, this['getDouble']['visible'] = !0x0, this['sign_btn']['x'] = 0x182, this['getDouble']['on'](Laya['Event']['CLICK'], this, function () {
                 this['playBtnEff' + 'ect'](this['getDouble'], function () {
@@ -2770,9 +2834,12 @@
             });
         }
         ['signBtnCli' + 'cked']() {
-            'Sign\x20in' == this['sign_btn_t' + 'xt']['text'] ? (_0x59d2cc['setData']('signed_day' + 's', _0x59d2cc['data']['signed_day' + 's'] + 0x1), _0x59d2cc['setData']('today_data', new Date()['getDate']()), this['upTodaySig' + 'ned'](), this['showItems'](), this['basis'] = 0x64, this['times'] = 0x1, this['timeText']['text'] = '1', this['getReward'](_0x59d2cc['data']['signed_day' + 's'])) : YYGGames['showInters' + 'titial'](() => {
-                _0x2443ee['hide']('SignUI'), _0x2443ee['show']('StartUI');
-            });
+            'Sign\x20in' == this['sign_btn_t' + 'xt']['text'] ? (_0x59d2cc['setData']('signed_day' + 's', _0x59d2cc['data']['signed_day' + 's'] + 0x1), _0x59d2cc['setData']('today_data', new Date()['getDate']()), this['upTodaySig' + 'ned'](), this['showItems'](), this['basis'] = 0x64, this['times'] = 0x1, this['timeText']['text'] = '1', this['getReward'](_0x59d2cc['data']['signed_day' + 's'])) : 
+            _0x2443ee['hide']('SignUI'), 
+            _0x2443ee['show']('StartUI');
+            // YYGGames['showInters' + 'titial'](() => {
+            //     _0x2443ee['hide']('SignUI'), _0x2443ee['show']('StartUI');
+            // });
         }
         ['getReward'](_0x5116e2) {
             switch (_0x5116e2) {
@@ -3483,7 +3550,11 @@
             this['titleUI']['updateCoin'](), this['SignUI']['updateCoin'](), this['rewardUI']['updateCoin']();
         }
         static ['show'](..._0x368afc) {
-            _0x2443ee['getInstanc' + 'e']()[_0x368afc[0x0]] && (YYGGames['gameBanner']['visible'] = ![], _0x2443ee['getUI'](_0x368afc[0x0])['ui']['visible'] || (_0x2443ee['getInstanc' + 'e']()[_0x368afc[0x0]]['_show'](), _0x2443ee['getInstanc' + 'e']()[_0x368afc[0x0]]['show'](..._0x368afc)), (_0x2443ee['getUI']('startUI') && _0x2443ee['getUI']('startUI')['ui']['visible'] || _0x2443ee['getUI']('endUI') && _0x2443ee['getUI']('endUI')['ui']['visible'] || _0x2443ee['getUI']('HomeUI') && _0x2443ee['getUI']('HomeUI')['ui']['visible']) && _0x368afc[0x0] != 'SignUI' && _0x368afc[0x0] != 'storeUI' && (YYGGames['gameBanner']['visible'] = !![])), this['OffPanel'](_0x368afc, !0x0), console['log']('显示' + _0x368afc[0x0]);
+            _0x2443ee['getInstanc' + 'e']()[_0x368afc[0x0]];
+             _0x2443ee['getUI'](_0x368afc[0x0])['ui']['visible'] || (_0x2443ee['getInstanc' + 'e']()[_0x368afc[0x0]]['_show'](),
+              _0x2443ee['getInstanc' + 'e']()[_0x368afc[0x0]]['show'](..._0x368afc)), 
+              (_0x2443ee['getUI']('startUI') && _0x2443ee['getUI']('startUI')['ui']['visible'] || _0x2443ee['getUI']('endUI') && _0x2443ee['getUI']('endUI')['ui']['visible'] || _0x2443ee['getUI']('HomeUI') && _0x2443ee['getUI']('HomeUI')['ui']['visible']) && _0x368afc[0x0] != 'SignUI' && _0x368afc[0x0] != 'storeUI';
+              this['OffPanel'](_0x368afc, !0x0);
         }
         static ['OffPanel'](_0x368d25, _0x2ac022) {
             var _0x745ff = 0x0;
@@ -3507,7 +3578,10 @@
             }
         }
         static ['hide'](..._0x435405) {
-            _0x2443ee['getInstanc' + 'e']()[_0x435405[0x0]] && (_0x2443ee['getInstanc' + 'e']()[_0x435405[0x0]]['_hide'](), _0x2443ee['getInstanc' + 'e']()[_0x435405[0x0]]['hide']()), this['OffPanel'](_0x435405, !0x1), console['log']('关闭' + _0x435405[0x0]);
+            _0x2443ee['getInstanc' + 'e']()[_0x435405[0x0]] && (_0x2443ee['getInstanc' + 'e']()[_0x435405[0x0]]['_hide'](), 
+            _0x2443ee['getInstanc' + 'e']()[_0x435405[0x0]]['hide']()), 
+            this['OffPanel'](_0x435405, !0x1),
+             console['log']('关闭' + _0x435405[0x0]);
         }
         ['showDialog']() {
         }
@@ -3794,9 +3868,23 @@
             var _0x12f554 = 0x0;
             _0x263233['frameLoop'](0x1, this, () => {
                 (_0x33df67['width'] += 0x2, _0x1f6a95['rotation'] -= 0x2, _0x33df67['width'] > 0x1e0) && (_0x33df67['width'] = 0x1e0);
-            }), YYGGames['init']('Build-A-Ro' + 'ad', () => {
-                YYGGames['icon']['scale'](0.8, 0.8), YYGGames['icon']['top'] = 0x14, YYGGames['icon']['right'] = 0x14, YYGGames['gameBanner']['setBannerS' + 'ize'](0x96, 0x96), YYGGames['gameBanner']['games']['spaceX'] = 0xa, YYGGames['gameBanner']['bottom'] = 0x32, YYGGames['gameBanner']['visible'] = ![], YYGGames['gameBox']['visible'] = ![], YYGGames['audio']['pause'] = Laya['LocalStora' + 'ge']['getItem']('Build-A-Ro' + 'ad-musicSt' + 'ate') ? JSON['parse'](Laya['LocalStora' + 'ge']['getItem']('Build-A-Ro' + 'ad-musicSt' + 'ate')) : ![], Laya['SoundManag' + 'er']['playMusic']('res/audio/' + 'bgm.mp3'), new _0x867ad3();
-            });
+            }), 
+            Laya['LocalStora' + 'ge']['getItem']('Build-A-Ro' + 'ad-musicSt' + 'ate') ? JSON['parse'](Laya['LocalStora' + 'ge']['getItem']('Build-A-Ro' + 'ad-musicSt' + 'ate')) : ![],
+            Laya['SoundManag' + 'er']['playMusic']('res/audio/' + 'bgm.mp3'),
+             new _0x867ad3();
+            // YYGGames['init']('Build-A-Ro' + 'ad', () => {
+            //     YYGGames['icon']['scale'](0.8, 0.8), 
+            //     YYGGames['icon']['top'] = 0x14, 
+            //     YYGGames['icon']['right'] = 0x14,
+            //      YYGGames['gameBanner']['setBannerS' + 'ize'](0x96, 0x96), 
+            //      YYGGames['gameBanner']['games']['spaceX'] = 0xa, 
+            //      YYGGames['gameBanner']['bottom'] = 0x32, 
+            //      YYGGames['gameBanner']['visible'] = ![],
+            //       YYGGames['gameBox']['visible'] = ![],
+            //        YYGGames['audio']['pause'] = Laya['LocalStora' + 'ge']['getItem']('Build-A-Ro' + 'ad-musicSt' + 'ate') ? JSON['parse'](Laya['LocalStora' + 'ge']['getItem']('Build-A-Ro' + 'ad-musicSt' + 'ate')) : ![],
+            //        Laya['SoundManag' + 'er']['playMusic']('res/audio/' + 'bgm.mp3'),
+            //         new _0x867ad3();
+            // });
         };
     _0x23a41d(), window['pauseTimes'] = function () {
         _0x263233['pause']();
