@@ -2,7 +2,21 @@ function beginLoading() {
     LoadingSceneObj = new LoadingScene(), LoadingSceneObj['init']('LoadingSce' + 'ne'), LoadingSceneObj['active'](), LoadingSceneObj['setLoadedC' + 'B'](function () {
         initGame();
     }), platform['getInstanc' + 'e']()['puzzlegame' + 'startup']('Block-3d', () => {
-        window['yad']['right'] = 0x14, window['yad']['top'] = 0x14, Laya['stage']['addChild'](window['scrollList']), window['scrollList']['visible'] = ![], window['scrollList']['width'] = 0x4b0, window['scrollList']['getChildAt'](0x0)['width'] = 0x44c, window['scrollList']['setSize'](0xc8, 0xc8, !![]), window['scrollList']['scale'](0x1, 0x1), window['scrollList']['bottom'] = 0x32, window['WebAudioEn' + 'gine']['pause'] = Laya['LocalStora' + 'ge']['getItem']('Block-3d-m' + 'usicState') ? JSON['parse'](Laya['LocalStora' + 'ge']['getItem']('Block-3d-m' + 'usicState')) : ![], (loadGameData(), Laya['loader']['load'](AssetsFileArr, Laya['Handler']['create'](this, loadControl)), load3D()), Laya['loader']['load'](loadMusic, Laya['Handler']['create'](this, loadControl));
+        window['yad']['right'] = 0x14, 
+        window['yad']['top'] = 0x14,
+         Laya['stage']['addChild'](window['scrollList']), 
+        //  window['scrollList']['visible'] = ![], 
+        //  window['scrollList']['width'] = 0x4b0, 
+        //  window['scrollList']['getChildAt'](0x0)['width'] = 0x44c,
+        //   window['scrollList']['setSize'](0xc8, 0xc8, !![]),
+        //   window['scrollList']['scale'](0x1, 0x1), 
+        //   window['scrollList']['bottom'] = 0x32,
+           window['WebAudioEn' + 'gine']['pause'] = Laya['LocalStora' + 'ge']['getItem']('Block-3d-m' + 'usicState') ? JSON['parse'](Laya['LocalStora' + 'ge']['getItem']('Block-3d-m' + 'usicState')) : ![],
+            (loadGameData(), Laya['loader']['load'](AssetsFileArr, 
+            Laya['Handler']['create'](this, loadControl)), 
+           load3D()), 
+           Laya['loader']['load'](loadMusic, 
+            Laya['Handler']['create'](this, loadControl));
     });
 }
 function loadControl() {
@@ -35591,7 +35605,7 @@ var CLASS$ = Laya['class'], STATICATTR$ = Laya['static'], View = laya['ui']['Vie
                             'props': {
                                 'y': 0x8e,
                                 'x': 0x86,
-                                'skin': 'common/未标题' + '-1(6).png'
+                                'skin': ''
                             },
                             'nodeParent': 0x7,
                             'label': 'Image',
@@ -36923,18 +36937,31 @@ var parseFileArr = [{
         }
         var _0x33f8fc = _0x1e5890['prototype'] = new Scene2D();
         return _0x33f8fc['initScene'] = function (_0x15216a) {
-            this['bg']['height'] += offH, this['bg']['y'] -= offH / 0x2, Audio['playBg']('audio/bgm.' + 'mp3'), GameSceneObj['resetGame'](), this['btnStartGa' + 'me']['on'](Laya['Event']['MOUSE_DOWN'], HomeSceneObj, HomeSceneObj['startGame']), this['btnMusic']['on'](Laya['Event']['MOUSE_DOWN'], HomeSceneObj, HomeSceneObj['goSet']), BaseData['initSceneG' + 'ameData'](this), window['scrollList']['visible'] = !![], this['btnMusic']['skin'] = window['WebAudioEn' + 'gine']['pause'] ? 'common/voi' + 'ce1.png' : 'common/voi' + 'ce.png';
+            this['bg']['height'] += offH, 
+            this['bg']['y'] -= offH / 0x2, 
+            Audio['playBg']('audio/bgm.' + 'mp3'), 
+            GameSceneObj['resetGame'](), 
+            this['btnStartGa' + 'me']['on'](Laya['Event']['MOUSE_DOWN'], 
+            HomeSceneObj, HomeSceneObj['startGame']), 
+            this['btnMusic']['on'](Laya['Event']['MOUSE_DOWN'],
+             HomeSceneObj, HomeSceneObj['goSet']),
+              BaseData['initSceneG' + 'ameData'](this), 
+            //   window['scrollList']['visible'] = !![], 
+              this['btnMusic']['skin'] = window['WebAudioEn' + 'gine']['pause'] ? 'common/voi' + 'ce1.png' : 'common/voi' + 'ce.png';
             var _0x139e2a = BaseData['getGameSco' + 're'](Config['gameScoreK' + 'ey']);
             this['his_score']['text'] = 'Highest\x20sc' + 'ore:\x20' + _0x139e2a;
         }, _0x33f8fc['onActive'] = function (_0x103206) {
             0x2 == Config['channelID'] && Laya['timer']['frameOnce'](0x1, this, function () {
                 this['btnMusic']['visible'] = !0x0;
-            }), window['scrollList']['visible'] = !![], this['btnMusic']['skin'] = window['WebAudioEn' + 'gine']['pause'] ? 'common/voi' + 'ce1.png' : 'common/voi' + 'ce.png';
+            }), 
+            // window['scrollList']['visible'] = !![], 
+            this['btnMusic']['skin'] = window['WebAudioEn' + 'gine']['pause'] ? 'common/voi' + 'ce1.png' : 'common/voi' + 'ce.png';
             var _0x1a0067 = BaseData['getGameSco' + 're'](Config['gameScoreK' + 'ey']);
             this['his_score']['text'] = 'Highest\x20sc' + 'ore:\x20' + _0x1a0067;
         }, _0x33f8fc['onInActive'] = function () {
         }, _0x33f8fc['startGame'] = function () {
-            window['scrollList']['visible'] = ![], (Tool['log']('start_game'), Audio['playClick'](), platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
+            // window['scrollList']['visible'] = ![], 
+            (Tool['log']('start_game'), Audio['playClick'](), platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
                 Config['start_game' + '_time'] = new Date()['getTime'](), Config['channelID'], SceneManager['toggleActi' + 'on']('start_game');
             }));
         }, _0x33f8fc['goRank'] = function () {
@@ -37472,7 +37499,10 @@ var parseFileArr = [{
             Tool['log']('----------' + '-游戏复活-----' + '----------' + '-');
             for (var _0x5ae7df = this['floorArr']['length'] - 0x1; _0x5ae7df > this['floorArr']['length'] - 0x6; _0x5ae7df--)
                 this['destroyFlo' + 'orByIndex'](_0x5ae7df);
-            this['destroyCur' + 'rentBlock'](), this['updateAllT' + 'opPromptBl' + 'ock'](), this['deadDlg']['close'](), Laya['timer']['frameOnce'](0x1e, this, function () {
+            this['destroyCur' + 'rentBlock'](), 
+            // this['updateAllT' + 'opPromptBl' + 'ock'](),
+             this['deadDlg']['close'](),
+              Laya['timer']['frameOnce'](0x1e, this, function () {
                 this['isPause'] = !0x1, this['checkCanDe' + 'stroyFloor']();
             }), this['reviveTime']++;
         }, _0x5c00d0['gameEnd'] = function () {
@@ -37512,18 +37542,22 @@ var parseFileArr = [{
         }
         var _0x331c18 = _0x5edbff['prototype'] = new Scene2D();
         return _0x331c18['initScene'] = function (_0x2fc7fe) {
-            this['bg']['height'] += offH, this['bg']['y'] -= offH / 0x2, this['btnHome']['on'](Laya['Event']['MOUSE_DOWN'], this, this['goBack']), this['btnReplay']['on'](Laya['Event']['MOUSE_DOWN'], this, this['goGame']), this['_stackLeng' + 'th'] = 0x0, 0x66 == Config['channelID'] && w1 >= 0x1f4 && w1 <= 0x2ee && (this['scoreTitle']['fontSize'] -= 0x1e, this['score']['fontSize'] -= 0x32, this['his_score']['fontSize'] -= 0x14), BaseData['initSceneG' + 'ameData'](this), window['scrollList']['visible'] = !![];
+            this['bg']['height'] += offH, this['bg']['y'] -= offH / 0x2, this['btnHome']['on'](Laya['Event']['MOUSE_DOWN'], this, this['goBack']), this['btnReplay']['on'](Laya['Event']['MOUSE_DOWN'], this, this['goGame']), this['_stackLeng' + 'th'] = 0x0, 0x66 == Config['channelID'] && w1 >= 0x1f4 && w1 <= 0x2ee && (this['scoreTitle']['fontSize'] -= 0x1e, this['score']['fontSize'] -= 0x32, this['his_score']['fontSize'] -= 0x14), BaseData['initSceneG' + 'ameData'](this);
+            //  window['scrollList']['visible'] = !![];
         }, _0x331c18['goBack'] = function () {
             isReGame = !0x0, platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
-                window['scrollList']['visible'] = ![], Config['gameScore'] = 0x0, GameSceneObj['resetGame'](), SceneManager['toggleActi' + 'on']('return_hom' + 'e');
+                // window['scrollList']['visible'] = ![], 
+                Config['gameScore'] = 0x0, GameSceneObj['resetGame'](), SceneManager['toggleActi' + 'on']('return_hom' + 'e');
             });
         }, _0x331c18['goGame'] = function () {
             isReGame = !0x0, platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
-                window['scrollList']['visible'] = ![], Config['gameScore'] = 0x0, (GameSceneObj['resetGame'](), SceneManager['toggleActi' + 'on']('game_again'));
+                // window['scrollList']['visible'] = ![], 
+                Config['gameScore'] = 0x0, (GameSceneObj['resetGame'](), SceneManager['toggleActi' + 'on']('game_again'));
             });
         }, _0x331c18['goShare'] = function () {
         }, _0x331c18['onActive'] = function (_0x48b8a7) {
-            this['score']['text'] = Config['gameScore'], window['scrollList']['visible'] = !![];
+            this['score']['text'] = Config['gameScore'];
+            //  window['scrollList']['visible'] = !![];
             var _0x5c988b = BaseData['getGameSco' + 're'](Config['gameScoreK' + 'ey']);
             if (this['his_score']['text'] = 'Highest\x20sc' + 'ore:\x20' + _0x5c988b, Laya['timer']['frameLoop'](0x1, this, this['onloop']), GameSceneObj['score'] > _0x5c988b && BaseData['saveGameSc' + 'ore'](GameSceneObj['score']), 0x1 == Config['channelID'])
                 this['share'] = new Laya['Sprite'](), this['_node']['addChild'](this['share']), this['share']['pos'](0x44, 0x1e0), this['share']['size'](0x3af, 0x19c), (this['sharedCanv' + 'as'] || (this['sharedCanv' + 'as'] = Laya['Browser']['window']['sharedCanv' + 'as'], this['sharedCanv' + 'as']['width'] = this['share']['width'], this['sharedCanv' + 'as']['height'] = this['share']['height'], this['shareTex'] = new Laya['Texture'](this['sharedCanv' + 'as'])), this['scheCount'] = 0x0, Laya['timer']['loop'](0x7d0, this, this['drawWxCanv' + 'a']), Laya['timer']['once'](0x7d0, this, function () {
@@ -37696,7 +37730,12 @@ var parseFileArr = [{
                 this['btnRevive']['on'](Laya['Event']['MOUSE_DOWN'], this, this['onRelive']), this['btnCancle']['on'](Laya['Event']['MOUSE_DOWN'], this, this['onCancel']);
             }), this['score']['text'] = Config['gameScore'];
             var _0x238c0a = BaseData['getGameSco' + 're'](Config['gameScoreK' + 'ey']);
-            this['his_score']['text'] = 'Highest\x20sc' + 'ore:\x20' + _0x238c0a, Config['gameScore'] > _0x238c0a && BaseData['saveGameSc' + 'ore'](Config['gameScore']), this['showAd'] = !0x1, this['isUpdate'] = !0x0, this['timeCount'] = 0xa, this['time']['text'] = this['timeCount'], this['timeStep'] = 0x0, this['isUp'] = !0x0, Laya['timer']['frameLoop'](0x1, this, this['timeLoop']), BaseData['initSceneG' + 'ameData'](this), window['scrollList']['visible'] = !![];
+            this['his_score']['text'] = 'Highest\x20sc' + 'ore:\x20' + _0x238c0a, 
+            Config['gameScore'] > _0x238c0a && BaseData['saveGameSc' + 'ore'](Config['gameScore']),
+             this['showAd'] = !0x1, this['isUpdate'] = !0x0, 
+             this['timeCount'] = 0xa, this['time']['text'] = this['timeCount'],
+              this['timeStep'] = 0x0, this['isUp'] = !0x0, Laya['timer']['frameLoop'](0x1, this, this['timeLoop']), BaseData['initSceneG' + 'ameData'](this); 
+            //   window['scrollList']['visible'] = !![];
         }
         return Laya['class'](_0x45ff69, 'ui.reviveD' + 'lg', ReviveUI), _0x45ff69['prototype']['timeLoop'] = function () {
             this['isUpdate'] && (this['timeStep'] += 0x1, this['move']['rotation'] += 0x6, this['isUp'] && this['hurt']['scaleX'] < 0x1 ? (this['hurt']['scaleX'] += 0.01, this['hurt']['scaleY'] += 0.01) : (this['isUp'] = !0x1, this['hurt']['scaleX'] -= 0.01, this['hurt']['scaleY'] -= 0.01, this['hurt']['scaleX'] < 0.8 && (this['isUp'] = !0x0)), this['timeCount'] > 0x0 ? this['timeStep'] % 0x3c == 0x0 && (this['timeCount'] -= 0x1, this['time']['text'] = this['timeCount']) : (this['timeCount'] = 0x0, this['time']['text'] = 0x0, Laya['timer']['clear'](this, this['timeLoop']), this['onCancel']()));
@@ -37704,12 +37743,18 @@ var parseFileArr = [{
             var _0x31d1e7 = this;
             if (Config['isAd'])
                 platform['getInstanc' + 'e']()['showReward'](() => {
-                    _0x31d1e7['isUpdate'] = !0x1, Laya['timer']['clear'](_0x31d1e7, _0x31d1e7['timeLoop']), window['scrollList']['visible'] = ![], (_0x31d1e7['close'](), _0x31d1e7['confirmHan' + 'dler']());
+                    _0x31d1e7['isUpdate'] = !0x1, Laya['timer']['clear'](_0x31d1e7, _0x31d1e7['timeLoop']), 
+                    // window['scrollList']['visible'] = ![], 
+                    (_0x31d1e7['close'](),
+                     _0x31d1e7['confirmHan' + 'dler']());
                 });
             else
                 _0x31d1e7['confirmHan' + 'dler']();
         }, _0x45ff69['prototype']['onCancel'] = function () {
-            this['isUpdate'] = !0x1, Laya['timer']['clear'](this, this['timeLoop']), Audio['resumeAll'](), window['scrollList']['visible'] = ![], platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
+            this['isUpdate'] = !0x1, Laya['timer']['clear'](this, this['timeLoop']), 
+            Audio['resumeAll'](),
+            //  window['scrollList']['visible'] = ![],
+              platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
                 this['close'](), this['cancleHand' + 'ler']();
             });
         }, _0x45ff69['prototype']['showDlgAnd' + 'Mask'] = function () {
@@ -37796,5 +37841,5 @@ var parseFileArr = [{
             this['_cancleHan' + 'dler'] && this['_cancleHan' + 'dler'](), this['close']();
         }, _0xd5ed74;
     }();
-offH = 0x0, (Laya3D['init'](Config['GameWidth'], Config['GameHeight'], !0x0), Laya['stage']['scaleMode'] = 'showall', Laya['stage']['screenMode'] = 'none', Laya['stage']['alignH'] = 'center', Laya['stage']['alignV'] = 'middle', BaseData['init'](), Config['guideStep'] = parseInt(BaseData['getGameDat' + 'a']('guide')), 0x1 == Config['channelID'] && (Laya['URL']['basePath'] = Config['downUrl'], Laya['LocalStora' + 'ge']['getJSON']('guide') && 0x0 == Config['guideStep'] && (Config['guideStep'] = Laya['LocalStora' + 'ge']['getJSON']('guide')))), (Laya['loader']['maxLoader'] = 0x5, Laya['loader']['load'](loadFile, Laya['Handler']['create'](this, beginLoading)));
+offH = 0x0, (Laya3D['init'](Config['GameWidth'], Config['GameHeight'], !0x0), Laya['stage']['scaleMode'] = 'exactfit', Laya['stage']['screenMode'] = 'none', Laya['stage']['alignH'] = 'center', Laya['stage']['alignV'] = 'middle', BaseData['init'](), Config['guideStep'] = parseInt(BaseData['getGameDat' + 'a']('guide')), 0x1 == Config['channelID'] && (Laya['URL']['basePath'] = Config['downUrl'], Laya['LocalStora' + 'ge']['getJSON']('guide') && 0x0 == Config['guideStep'] && (Config['guideStep'] = Laya['LocalStora' + 'ge']['getJSON']('guide')))), (Laya['loader']['maxLoader'] = 0x5, Laya['loader']['load'](loadFile, Laya['Handler']['create'](this, beginLoading)));
 var GlobalScene = null, GlobalCamera = null, GlobalLight = null, GlobalButtomBg = null, GlobalBasicBoxArr = [], GlobalBasicBase = null, GlobalEffext = null, GlobalEffextLittle = null, GlobalEffextBig = null, GlobalPromptBox = null, GlobalPromptBigBox = null, GlobalTopPromptBox = null;
