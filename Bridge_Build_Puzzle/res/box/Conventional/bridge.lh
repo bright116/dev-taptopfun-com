@@ -164,7 +164,7 @@
 						2,
 						1.17
 					],
-					"meshPath":"Assets/3d/bridge2-ç«‹æ–¹ä½“.lm",
+					"meshPath":"Assets/3d/bridge2-立方体.lm",
 					"enableRender":true,
 					"receiveShadows":true,
 					"castShadow":true,
