@@ -3886,7 +3886,6 @@
             });
 
             let musicOn = JSON.parse(Laya['LocalStorage']['getItem']('Build-A-Road-musicState')) || true;
-            // let musicOn = Laya['LocalStorage']['getItem']('Build-A-Road-musicState');
             if (musicOn) {
                 Laya['SoundManager']['playMusic']('res/audio/bgm.mp3');
             }
