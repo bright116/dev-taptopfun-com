@@ -1120,7 +1120,7 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                     }
                 }]), _0x2fd3d4;
         }();
-    _0x388182['width'] = 0x2ee, _0x388182['height'] = 0x536, _0x388182['scaleMode'] = 'showall', _0x388182['screenMode'] = 'none', _0x388182['alignV'] = 'center', _0x388182['alignH'] = 'middle', _0x388182['startScene'] = 'test/TestS' + 'cene.scene', _0x388182['sceneRoot'] = '', _0x388182['debug'] = !0x1, _0x388182['stat'] = !0x1, _0x388182['physicsDeb' + 'ug'] = !0x1, _0x388182['exportScen' + 'eToJson'] = !0x0, _0x388182['init']();
+    _0x388182['width'] = 0x2ee, _0x388182['height'] = 0x536, _0x388182['scaleMode'] = 'exactfit', _0x388182['screenMode'] = 'none', _0x388182['alignV'] = 'center', _0x388182['alignH'] = 'middle', _0x388182['startScene'] = 'test/TestS' + 'cene.scene', _0x388182['sceneRoot'] = '', _0x388182['debug'] = !0x1, _0x388182['stat'] = !0x1, _0x388182['physicsDeb' + 'ug'] = !0x1, _0x388182['exportScen' + 'eToJson'] = !0x0, _0x388182['init']();
     var _0x2b72aa = function (_0x3d33e0) {
             function _0x2baa76(_0x145901) {
                 var _0x1c635a;
@@ -1241,9 +1241,20 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                         _0x493f7a == 0x1 && (_0x493f7a = 0x0);
                         console['log']('ooooooo', _0x493f7a);
                         if (0x0 == _0x493f7a)
-                            YYGGames['showReward'](() => {
-                                0x0 == _0x20c0c7 ? (_0x166d84['shareToast']('金币+' + _0xe53014['AV_COIN']), _0xe53014['allInfoIni' + 't']['coin'] += _0xe53014['AV_COIN'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['updateMone' + 'y']()) : (_0xe53014['allInfoIni' + 't']['shopOwnIte' + 'm'][_0x20c0c7] = 0x1, _0xe53014['allInfoIni' + 't']['carid'] = _0x20c0c7, _0xe53014['saveData']()), 0x0 != _0x20c0c7 && 0x1 != _0x493f7a && this['listRender'](_0x20c0c7, _0x963a87);
-                            });
+                            //TODO showReward
+                            HUHU_showRewardedVideoAd(
+                                () => {
+                                    // 用户观看广告完成，继续游戏
+                                    0x0 == _0x20c0c7 ? (_0x166d84['shareToast']('金币+' + _0xe53014['AV_COIN']), _0xe53014['allInfoIni' + 't']['coin'] += _0xe53014['AV_COIN'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['updateMone' + 'y']()) : (_0xe53014['allInfoIni' + 't']['shopOwnIte' + 'm'][_0x20c0c7] = 0x1, _0xe53014['allInfoIni' + 't']['carid'] = _0x20c0c7, _0xe53014['saveData']()), 0x0 != _0x20c0c7 && 0x1 != _0x493f7a && this['listRender'](_0x20c0c7, _0x963a87);
+                                },
+                                () => {
+                                  // 广告请求失败或者用户跳过广告                            
+                                  promptMessage("Failed to get the reward, please watch the ads to the end.");
+                                }
+                              );
+                            // YYGGames['showReward'](() => {
+                            //     0x0 == _0x20c0c7 ? (_0x166d84['shareToast']('金币+' + _0xe53014['AV_COIN']), _0xe53014['allInfoIni' + 't']['coin'] += _0xe53014['AV_COIN'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['updateMone' + 'y']()) : (_0xe53014['allInfoIni' + 't']['shopOwnIte' + 'm'][_0x20c0c7] = 0x1, _0xe53014['allInfoIni' + 't']['carid'] = _0x20c0c7, _0xe53014['saveData']()), 0x0 != _0x20c0c7 && 0x1 != _0x493f7a && this['listRender'](_0x20c0c7, _0x963a87);
+                            // });
                         else {
                             if (0x1 == _0x493f7a)
                                 _0x166d84['share']('这关连续搭出10个完' + '美的桥，就问问还有谁', function () {
@@ -1284,9 +1295,19 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                 {
                     'key': 'closeV',
                     'value': function _0x29b9c6() {
-                        YYGGames['showInters' + 'titial'](() => {
-                            _get(_getPrototypeOf(_0x5c7ffb['prototype']), 'offClick', this)['call'](this, [this['_badd']], this['bclick']), _get(_getPrototypeOf(_0x5c7ffb['prototype']), 'closeV', this)['call'](this), window['scrollList']['visible'] = !![], window['btnSY']['visible'] = !![];
-                        });
+                        //TODO showInterstitial
+                        console.log("请求插屏广告");
+
+                        // 展示插屏广告
+                        HUHU_showInterstitialAd();
+                    
+                        // 继续游戏
+                        _get(_getPrototypeOf(_0x5c7ffb['prototype']), 'offClick', this)['call'](this, [this['_badd']], this['bclick']), _get(_getPrototypeOf(_0x5c7ffb['prototype']), 'closeV', this)['call'](this);
+                        // YYGGames['showInters' + 'titial'](() => {
+                        //     _get(_getPrototypeOf(_0x5c7ffb['prototype']), 'offClick', this)['call'](this, [this['_badd']], this['bclick']), _get(_getPrototypeOf(_0x5c7ffb['prototype']), 'closeV', this)['call'](this);
+                        //      window['scrollList']['visible'] = !![], 
+                        //      window['btnSY']['visible'] = !![];
+                        // });
                     }
                 }
             ]), _0x5c7ffb;
@@ -1299,7 +1320,9 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                 {
                     'key': 'show',
                     'value': function _0x2c5413() {
-                        window['scrollList']['visible'] = !![], arguments['length'] > 0x0 && void 0x0 !== arguments[0x0] && arguments[0x0], (_get(_getPrototypeOf(_0x139080['prototype']), 'show', this)['call'](this), _get(_getPrototypeOf(_0x139080['prototype']), 'onClick', this)['call'](this, [this['_brelive']], this['reliveDo']), this['_markS'] || (this['_markS'] = new Laya['Sprite']()), this['_time'] = 0x6, this['_angle'] = -0xa4, this['_circle']['mask'] = this['_markS'], this['updateV']()), window['reliveView'] = this, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x4)['scaleX'] = Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x4)['scaleY'] = 1.3, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x4)['x'] = 0xeb, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x1)['visible'] = ![], Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x3)['y'] = 0x1a0, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x6)['y'] = 0x1a0, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x7)['y'] = 0x1a5, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x2)['y'] = 0x2a8;
+                        // window['scrollList']['visible'] = !![], 
+                        arguments['length'] > 0x0 && void 0x0 !== arguments[0x0] && arguments[0x0],
+                         (_get(_getPrototypeOf(_0x139080['prototype']), 'show', this)['call'](this), _get(_getPrototypeOf(_0x139080['prototype']), 'onClick', this)['call'](this, [this['_brelive']], this['reliveDo']), this['_markS'] || (this['_markS'] = new Laya['Sprite']()), this['_time'] = 0x6, this['_angle'] = -0xa4, this['_circle']['mask'] = this['_markS'], this['updateV']()), window['reliveView'] = this, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x4)['scaleX'] = Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x4)['scaleY'] = 1.3, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x4)['x'] = 0xeb, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x1)['visible'] = ![], Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x3)['y'] = 0x1a0, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x6)['y'] = 0x1a0, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x7)['y'] = 0x1a5, Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](0x2)['y'] = 0x2a8;
                         for (let _0x42a713 = 0x1; _0x42a713 < 0x8; _0x42a713++) {
                             Laya['stage']['getChildAt'](0x2)['getChildAt'](0x1)['getChildAt'](0x0)['getChildAt'](_0x42a713)['visible'] = !![];
                         }
@@ -1310,9 +1333,17 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                         } else
                             window['closeText']['visible'] = !![];
                         window['faileTitle' + 'Img'] ? window['faileTitle' + 'Img']['visible'] = ![] : (window['faileTitle' + 'Img'] = new Laya['Image'](), window['faileTitle' + 'Img']['x'] = 0x6e, window['faileTitle' + 'Img']['y'] = 0x104, window['faileTitle' + 'Img']['skin'] = 'failed.png', Laya['stage']['addChild'](window['faileTitle' + 'Img']), window['faileTitle' + 'Img']['visible'] = ![]), closetText['on'](Laya['Event']['CLICK'], this, () => {
-                            YYGGames['showInters' + 'titial'](() => {
-                                this['closeV1'](), _0x1cabd6['visible'] = ![];
-                            });
+                            //TODO showInterstitial
+                            console.log("请求插屏广告");
+
+                            // 展示插屏广告
+                            HUHU_showInterstitialAd();
+                        
+                            // 继续游戏
+                            this['closeV1'](), _0x1cabd6['visible'] = ![];
+                            // YYGGames['showInters' + 'titial'](() => {
+                            //     this['closeV1'](), _0x1cabd6['visible'] = ![];
+                            // });
                         }), Laya['timer']['loop'](0x3e8, this, this['updateV']);
                         window['reliveImg'] && (window['reliveImg']['visible'] = !![]);
                         const _0x313736 = JSON['parse'](JSON['parse'](Laya['LocalStora' + 'ge']['getItem']('HAPPY_B_RI' + 'DGE')));
@@ -1328,19 +1359,44 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                 {
                     'key': 'reliveDo',
                     'value': function _0x2f1c3d() {
-                        Laya['timer']['clear'](this, this['updateV']), YYGGames['showReward'](() => {
-                            console['log']('success'), (_0x1220b2['playMusic'](0x0), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['REGAME']), this['closeV2'](!0x1));
-                        }, () => {
-                            console['log']('faile'), Laya['timer']['loop'](0x3e8, this, this['updateV']);
-                        });
+                        Laya['timer']['clear'](this, this['updateV']), 
+                        //TODO showReward
+                        HUHU_showRewardedVideoAd(
+                            () => {
+                                // 用户观看广告完成，继续游戏
+                                console['log']('success'), (_0x1220b2['playMusic'](0x0), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['REGAME']), this['closeV2'](!0x1));
+                            },
+                            () => {
+                                // 广告请求失败或者用户跳过广告                            
+                                promptMessage("Failed to get the reward, please watch the ads to the end.");
+                            }
+                            );
+                        // YYGGames['showReward'](() => {
+                        //     console['log']('success'), (_0x1220b2['playMusic'](0x0), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['REGAME']), this['closeV2'](!0x1));
+                        // }, () => {
+                        //     console['log']('faile'), Laya['timer']['loop'](0x3e8, this, this['updateV']);
+                        // });
                     }
                 },
                 {
                     'key': 'closeV',
                     'value': function _0x1025a0() {
-                        Laya['timer']['clear'](this, this['updateV']), YYGGames['showInters' + 'titial'](() => {
-                            window['scrollList']['visible'] = ![], window['closetText']['visible'] = ![], window['reliveImg']['visible'] = ![], window['coinbg']['visible'] = ![], ((!(arguments['length'] > 0x0 && void 0x0 !== arguments[0x0]) || arguments[0x0]) && _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RETURN_MAI' + 'N']), Laya['Tween']['clearAll'](this), _get(_getPrototypeOf(_0x139080['prototype']), 'offClick', this)['call'](this, [this['_brelive']], this['reliveDo']), _get(_getPrototypeOf(_0x139080['prototype']), 'closeV', this)['call'](this));
-                        });
+                        Laya['timer']['clear'](this, this['updateV']), 
+                        //TODO showInterstitial
+                        console.log("请求插屏广告");
+
+                        // 展示插屏广告
+                        HUHU_showInterstitialAd();
+                    
+                        // 继续游戏
+                        // window['scrollList']['visible'] = ![], 
+                        // window['closetText']['visible'] = ![],
+                        window['reliveImg']['visible'] = ![], window['coinbg']['visible'] = ![], ((!(arguments['length'] > 0x0 && void 0x0 !== arguments[0x0]) || arguments[0x0]) && _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RETURN_MAI' + 'N']), Laya['Tween']['clearAll'](this), _get(_getPrototypeOf(_0x139080['prototype']), 'offClick', this)['call'](this, [this['_brelive']], this['reliveDo']), _get(_getPrototypeOf(_0x139080['prototype']), 'closeV', this)['call'](this));
+                        // YYGGames['showInters' + 'titial'](() => {
+                        //     // window['scrollList']['visible'] = ![], 
+                        //     // window['closetText']['visible'] = ![],
+                        //      window['reliveImg']['visible'] = ![], window['coinbg']['visible'] = ![], ((!(arguments['length'] > 0x0 && void 0x0 !== arguments[0x0]) || arguments[0x0]) && _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RETURN_MAI' + 'N']), Laya['Tween']['clearAll'](this), _get(_getPrototypeOf(_0x139080['prototype']), 'offClick', this)['call'](this, [this['_brelive']], this['reliveDo']), _get(_getPrototypeOf(_0x139080['prototype']), 'closeV', this)['call'](this));
+                        // });
                     }
                 },
                 {
@@ -1373,9 +1429,20 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                     'value': function _0x5e7565(_0x4091e2) {
                         switch (_0x1220b2['playMusic'](0x0), _0x4091e2) {
                         case this['_buse']:
-                            YYGGames['showReward'](() => {
-                                _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['USE_GOD_TO' + 'OL']), this['closeV']();
-                            });
+                            //TODO showReward
+                            HUHU_showRewardedVideoAd(
+                                () => {
+                                    // 用户观看广告完成，继续游戏
+                                    _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['USE_GOD_TO' + 'OL']), this['closeV']();
+                                },
+                                () => {
+                                    // 广告请求失败或者用户跳过广告                            
+                                    promptMessage("Failed to get the reward, please watch the ads to the end.");
+                                }
+                                );
+                            // YYGGames['showReward'](() => {
+                            //     _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['USE_GOD_TO' + 'OL']), this['closeV']();
+                            // });
                         }
                     }
                 },
@@ -1476,9 +1543,17 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                     'value': function _0x5cce0d(_0x10881f) {
                         switch (_0x1220b2['playMusic'](0x0), _0x10881f) {
                         case this['_breturn']:
-                            YYGGames['showInters' + 'titial'](() => {
-                                _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RETURN_MAI' + 'N']);
-                            });
+                            //TODO showInterstitial
+                            console.log("请求插屏广告");
+
+                            // 展示插屏广告
+                            HUHU_showInterstitialAd();
+                        
+                            // 继续游戏
+                            _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RETURN_MAI' + 'N']);
+                            // YYGGames['showInters' + 'titial'](() => {
+                            //     _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RETURN_MAI' + 'N']);
+                            // });
                             break;
                         case this['_badd']:
                             _0xe53014['allInfoIni' + 't']['coin'] += _0xe53014['AV_COIN'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), _0x166d84['shareToast']('金币+' + _0xe53014['AV_COIN']);
@@ -1503,25 +1578,51 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                     'value': function _0x3a75a1(_0x4a0174) {
                         switch (_0x1220b2['playMusic'](0x0), _0x4a0174) {
                         case this['_bnext']:
-                            YYGGames['showInters' + 'titial'](() => {
-                                window['titleimg']['visible'] = ![], window['coinbg']['visible'] = ![], (_0x166d84['shareToast']('金币+' + _0xe53014['STAGE_COIN' + '_AWARD']), _0xe53014['allInfoIni' + 't']['coin'] += _0xe53014['STAGE_COIN' + '_AWARD'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['closeV'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART']), window['scrollList']['visible'] = ![]);
-                            });
+                            //TODO showInterstitial
+                            console.log("请求插屏广告");
+
+                            // 展示插屏广告
+                            HUHU_showInterstitialAd();
+                        
+                            // 继续游戏
+                            window['titleimg']['visible'] = ![], window['coinbg']['visible'] = ![], (_0x166d84['shareToast']('金币+' + _0xe53014['STAGE_COIN' + '_AWARD']), _0xe53014['allInfoIni' + 't']['coin'] += _0xe53014['STAGE_COIN' + '_AWARD'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['closeV'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART'])
+                            // window['scrollList']['visible'] = ![]
+                            );
+                            // YYGGames['showInters' + 'titial'](() => {
+                            //     window['titleimg']['visible'] = ![], window['coinbg']['visible'] = ![], (_0x166d84['shareToast']('金币+' + _0xe53014['STAGE_COIN' + '_AWARD']), _0xe53014['allInfoIni' + 't']['coin'] += _0xe53014['STAGE_COIN' + '_AWARD'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['closeV'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART']), window['scrollList']['visible'] = ![]);
+                            // });
                             break;
                         case this['_bshare']:
                             _0x166d84['share']('这关连续搭出10个完' + '美的桥，就问问还有谁', function () {
                             });
                             break;
                         case this['_btimesAwa' + 'rd']:
-                            YYGGames['showReward'](() => {
-                                window['titleimg']['visible'] = ![], window['coinbg']['visible'] = ![], (_0x166d84['shareToast']('金币+' + 0x5 * _0xe53014['STAGE_COIN' + '_AWARD']), _0xe53014['allInfoIni' + 't']['coin'] += 0x5 * _0xe53014['STAGE_COIN' + '_AWARD'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['closeV'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART']), window['scrollList']['visible'] = ![]);
-                            });
+                            //TODO showReward
+                            HUHU_showRewardedVideoAd(
+                                () => {
+                                    // 用户观看广告完成，继续游戏
+                                    window['titleimg']['visible'] = ![], window['coinbg']['visible'] = ![], (_0x166d84['shareToast']('金币+' + 0x5 * _0xe53014['STAGE_COIN' + '_AWARD']), _0xe53014['allInfoIni' + 't']['coin'] += 0x5 * _0xe53014['STAGE_COIN' + '_AWARD'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['closeV'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART'])
+                                    // window['scrollList']['visible'] = ![]
+                                    );
+                                },
+                                () => {
+                                  // 广告请求失败或者用户跳过广告
+                            
+                            
+                                  promptMessage("Failed to get the reward, please watch the ads to the end.");
+                                }
+                              );
+                            // YYGGames['showReward'](() => {
+                            //     window['titleimg']['visible'] = ![], window['coinbg']['visible'] = ![], (_0x166d84['shareToast']('金币+' + 0x5 * _0xe53014['STAGE_COIN' + '_AWARD']), _0xe53014['allInfoIni' + 't']['coin'] += 0x5 * _0xe53014['STAGE_COIN' + '_AWARD'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']), this['closeV'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART']), 
+                            //     window['scrollList']['visible'] = ![]);
+                            // });
                         }
                     }
                 },
                 {
                     'key': 'show',
                     'value': function _0x45239e() {
-                        window['scrollList']['visible'] = !![];
+                        // window['scrollList']['visible'] = !![];
                         window['titleimg'] && (window['titleimg']['visible'] = !![]);
                         if (window['coinbg']) {
                             window['coinbg']['visible'] = !![];
@@ -1568,14 +1669,46 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                             _0x166d84['shareToast']('金币+' + _0xe53014['AV_COIN']), _0xe53014['allInfoIni' + 't']['coin'] += _0xe53014['AV_COIN'], _0xe53014['saveData'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['MONEY_CHAN' + 'GE']);
                             break;
                         case this['_bstart']:
-                            YYGGames['showInters' + 'titial'](() => {
-                                window['scrollList']['visible'] = ![], window['btnSY']['visible'] = ![], (this['closeV'](), _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART']), this['_ingameVie' + 'w'] || (this['_ingameVie' + 'w'] = new _0x226b8a()), this['_ingameVie' + 'w']['show'](), this['_view']['visible'] = !0x1);
-                            });
+                            //TODO showInterstitial
+                            console.log("请求插屏广告");
+
+                            // 展示插屏广告
+                            HUHU_showInterstitialAd();
+                        
+                            // 继续游戏
+                            // window['scrollList']['visible'] = ![], 
+                            window['btnSY']['visible'] = ![], 
+                            (this['closeV'](),
+                            _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART']),
+                             this['_ingameVie' + 'w'] || (this['_ingameVie' + 'w'] = new _0x226b8a()), 
+                             this['_ingameVie' + 'w']['show'](), this['_view']['visible'] = !0x1);
+                            // YYGGames['showInters' + 'titial'](() => {
+                            //     window['scrollList']['visible'] = ![], 
+                            //     window['btnSY']['visible'] = ![], 
+                            //     (this['closeV'](),
+                            //     _0xe53014['SEventDisp' + 'atcher']['event'](_0xe53014['Events']['RESTART']),
+                            //      this['_ingameVie' + 'w'] || (this['_ingameVie' + 'w'] = new _0x226b8a()), 
+                            //      this['_ingameVie' + 'w']['show'](), this['_view']['visible'] = !0x1);
+                            // });
                             break;
                         case this['_bcar']:
-                            YYGGames['showInters' + 'titial'](() => {
-                                window['scrollList']['visible'] = ![], window['btnSY']['visible'] = ![], (this['_shopView'] || (this['_shopView'] = new _0xabca43()), this['_shopView']['show']());
-                            });
+                            //TODO showInterstitial
+                            console.log("请求插屏广告");
+
+                            // 展示插屏广告
+                            HUHU_showInterstitialAd();
+                        
+                            // 继续游戏
+                            // window['scrollList']['visible'] = ![],
+                            // window['btnSY']['visible'] = ![],
+                            (this['_shopView'] || (this['_shopView'] = new _0xabca43()),
+                             this['_shopView']['show']());
+                            // YYGGames['showInters' + 'titial'](() => {
+                            //     window['scrollList']['visible'] = ![],
+                            //      window['btnSY']['visible'] = ![],
+                            //      (this['_shopView'] || (this['_shopView'] = new _0xabca43()),
+                            //       this['_shopView']['show']());
+                            // });
                             break;
                         case this['_bshare']:
                             _0x166d84['share']('这关连续搭出10个完' + '美的桥，就问问还有谁', function () {
@@ -1750,15 +1883,45 @@ function _createClass(_0x562469, _0x1d200e, _0x30182d) {
                     var _0x5e585c = new Laya['ProgressBa' + 'r']();
                     _0x5e585c['skin'] = 'res/Progre' + 'ssBg.png', _0x5e585c['anchorX'] = _0x5e585c['anchorY'] = 0.5, _0x5e585c['centerX'] = 0x0, _0x5e585c['centerY'] = 0x64, Laya['stage']['addChild'](_0x5e585c);
                     var _0x3de14d = new Laya['Image']();
-                    _0x3de14d['skin'] = 'yad.png', _0x3de14d['right'] = 0xa, _0x3de14d['top'] = 0xa, Laya['stage']['addChild'](_0x3de14d), _0x5e585c['bar']['skin'] = 'res/Progre' + 'ssBg$bar.p' + 'ng', _0x5e585c['value'] = 0x0, YYGGames['init']('Bridge-Bui' + 'ld-Puzzle', () => {
-                        window['isonPreLoa' + 'dFinish'] = !![], window['scrollList'] = YYGGames['gameBanner'], window['scrollList']['visible'] = ![], YYGGames['gameBox']['visible'] = ![], YYGGames['gameBanner']['bottom'] = 0x64, YYGGames['icon']['right'] = 0xa, YYGGames['icon']['top'] = 0xa, YYGGames['gameBanner']['setBannerS' + 'ize'](0xaf, 0xaf), YYGGames['gameBanner']['games']['spaceX'] = 12.5, Laya['Tween']['to'](_0x5e585c, { 'value': 0x1 }, 0x7d0, null, new Laya['Handler']['create'](this, () => {
-                            window['scrollList']['visible'] = !![], _0x40621e['removeSelf'](), _0x5e585c['removeSelf'](), _0x3fa8ab['removeSelf']();
-                            var _0x52b13a = Laya['LocalStora' + 'ge']['getItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY');
-                            !_0x52b13a && (_0x52b13a = 0x1, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x1)), window['btnSY'] ? window['btnSY']['visible'] = !![] : (window['btnSY'] = new Laya['Button'](), window['btnSY']['stateNum'] = 0x1, _0x52b13a == 0x1 ? (window['btnSY']['skin'] = 'btn_sound_' + 'on.png', Laya['SoundManag' + 'er']['playMusic']('res/music/' + 'background' + '2.mp3')) : window['btnSY']['skin'] = 'btn_sound_' + 'off.png', Laya['stage']['addChild'](window['btnSY']), window['btnSY']['x'] = 0x3c, window['btnSY']['y'] = 0x8c, window['btnSY']['on'](Laya['Event']['CLICK'], this, () => {
-                                window['btnSY']['skin'] == 'btn_sound_' + 'on.png' ? (window['btnSY']['skin'] = 'btn_sound_' + 'off.png', _0x52b13a = 0x0, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x0), Laya['SoundManag' + 'er']['stopMusic']()) : (window['btnSY']['skin'] = 'btn_sound_' + 'on.png', _0x52b13a = 0x1, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x1), Laya['SoundManag' + 'er']['playMusic']('res/music/' + 'background' + '2.mp3'));
-                            }));
+                    _0x3de14d['skin'] = 'yad.png', _0x3de14d['right'] = 0xa, _0x3de14d['top'] = 0xa, Laya['stage']['addChild'](_0x3de14d), _0x5e585c['bar']['skin'] = 'res/Progre' + 'ssBg$bar.p' + 'ng', _0x5e585c['value'] = 0x0, 
+                    window['isonPreLoa' + 'dFinish'] = !![], 
+                    // window['scrollList'] = YYGGames['gameBanner'],
+                    //  window['scrollList']['visible'] = ![], 
+                    //  YYGGames['gameBox']['visible'] = ![], 
+                    //  YYGGames['gameBanner']['bottom'] = 0x64,
+                    //   YYGGames['icon']['right'] = 0xa,
+                    //    YYGGames['icon']['top'] = 0xa, 
+                    //    YYGGames['gameBanner']['setBannerS' + 'ize'](0xaf, 0xaf),
+                        // YYGGames['gameBanner']['games']['spaceX'] = 12.5,
+                         Laya['Tween']['to'](_0x5e585c, { 'value': 0x1 }, 0x7d0, null, new Laya['Handler']['create'](this, () => {
+                        // window['scrollList']['visible'] = !![],
+                         _0x40621e['removeSelf'](), 
+                         _0x5e585c['removeSelf'](), _0x3fa8ab['removeSelf']();
+                        var _0x52b13a = Laya['LocalStora' + 'ge']['getItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY');
+                        !_0x52b13a && (_0x52b13a = 0x1, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x1)), window['btnSY'] ? window['btnSY']['visible'] = !![] : (window['btnSY'] = new Laya['Button'](), window['btnSY']['stateNum'] = 0x1, _0x52b13a == 0x1 ? (window['btnSY']['skin'] = 'btn_sound_' + 'on.png', Laya['SoundManag' + 'er']['playMusic']('res/music/' + 'background' + '2.mp3')) : window['btnSY']['skin'] = 'btn_sound_' + 'off.png', Laya['stage']['addChild'](window['btnSY']), window['btnSY']['x'] = 0x3c, window['btnSY']['y'] = 0x8c, window['btnSY']['on'](Laya['Event']['CLICK'], this, () => {
+                            window['btnSY']['skin'] == 'btn_sound_' + 'on.png' ? (window['btnSY']['skin'] = 'btn_sound_' + 'off.png', _0x52b13a = 0x0, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x0), Laya['SoundManag' + 'er']['stopMusic']()) : (window['btnSY']['skin'] = 'btn_sound_' + 'on.png', _0x52b13a = 0x1, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x1), Laya['SoundManag' + 'er']['playMusic']('res/music/' + 'background' + '2.mp3'));
                         }));
-                    }), window['reliveImg'] ? window['reliveImg']['visible'] = ![] : (window['reliveImg'] = new Laya['Image'](), window['reliveImg']['x'] = 0x41, window['reliveImg']['y'] = 0xd2, window['reliveImg']['skin'] = 'fuhuo.png', Laya['stage']['addChild'](window['reliveImg']), window['reliveImg']['visible'] = ![]);
+                    }));
+                    // YYGGames['init']('Bridge-Bui' + 'ld-Puzzle', 
+                    // () => {
+                    //     window['isonPreLoa' + 'dFinish'] = !![], 
+                    //     // window['scrollList'] = YYGGames['gameBanner'],
+                    //     //  window['scrollList']['visible'] = ![], 
+                    //     //  YYGGames['gameBox']['visible'] = ![], 
+                    //     //  YYGGames['gameBanner']['bottom'] = 0x64,
+                    //     //   YYGGames['icon']['right'] = 0xa,
+                    //     //    YYGGames['icon']['top'] = 0xa, 
+                    //     //    YYGGames['gameBanner']['setBannerS' + 'ize'](0xaf, 0xaf),
+                    //         // YYGGames['gameBanner']['games']['spaceX'] = 12.5,
+                    //          Laya['Tween']['to'](_0x5e585c, { 'value': 0x1 }, 0x7d0, null, new Laya['Handler']['create'](this, () => {
+                    //         window['scrollList']['visible'] = !![], _0x40621e['removeSelf'](), _0x5e585c['removeSelf'](), _0x3fa8ab['removeSelf']();
+                    //         var _0x52b13a = Laya['LocalStora' + 'ge']['getItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY');
+                    //         !_0x52b13a && (_0x52b13a = 0x1, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x1)), window['btnSY'] ? window['btnSY']['visible'] = !![] : (window['btnSY'] = new Laya['Button'](), window['btnSY']['stateNum'] = 0x1, _0x52b13a == 0x1 ? (window['btnSY']['skin'] = 'btn_sound_' + 'on.png', Laya['SoundManag' + 'er']['playMusic']('res/music/' + 'background' + '2.mp3')) : window['btnSY']['skin'] = 'btn_sound_' + 'off.png', Laya['stage']['addChild'](window['btnSY']), window['btnSY']['x'] = 0x3c, window['btnSY']['y'] = 0x8c, window['btnSY']['on'](Laya['Event']['CLICK'], this, () => {
+                    //             window['btnSY']['skin'] == 'btn_sound_' + 'on.png' ? (window['btnSY']['skin'] = 'btn_sound_' + 'off.png', _0x52b13a = 0x0, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x0), Laya['SoundManag' + 'er']['stopMusic']()) : (window['btnSY']['skin'] = 'btn_sound_' + 'on.png', _0x52b13a = 0x1, Laya['LocalStora' + 'ge']['setItem']('Bridge-Bui' + 'ld-Puzzle_' + 'SY', 0x1), Laya['SoundManag' + 'er']['playMusic']('res/music/' + 'background' + '2.mp3'));
+                    //         }));
+                    //     }));
+                    // }),
+                     window['reliveImg'] ? window['reliveImg']['visible'] = ![] : (window['reliveImg'] = new Laya['Image'](), window['reliveImg']['x'] = 0x41, window['reliveImg']['y'] = 0xd2, window['reliveImg']['skin'] = 'fuhuo.png', Laya['stage']['addChild'](window['reliveImg']), window['reliveImg']['visible'] = ![]);
                 }
             },
             {
