@@ -73,7 +73,7 @@ var __extends =
               }),
               (e.width = 750),
               (e.height = 1334),
-              (e.scaleMode = "showall"),
+              (e.scaleMode = "exactfit"),
               (e.screenMode = "none"),
               (e.alignV = "middle"),
               (e.alignH = "center"),
@@ -161,38 +161,52 @@ var __extends =
               }),
               (e.prototype.beginLoad = function () {
                 var e = this;
-                YYGGames.init("Red-Light-Green-Light", () => {
-                  // window.WebAudioEngine.musicVolume = 30;
-                  YYGGames.audio.music.volume = 20;
-                  YYGGames.audio.sound.volume = 50;
-                  YYGGames.gameBox.game1.top = 720;
-                  YYGGames.gameBox.game2.top = 520;
-                  YYGGames.gameBox.game1.left = 500;
-                  YYGGames.gameBox.game2.left = 500;
-                  YYGGames.gameBox.game1.visible = false;
-                  YYGGames.gameBox.game2.visible = false;
-                  YYGGames.gameBanner.bottom = 10;
-                  YYGGames.gameBanner.visible = false;
-                  YYGGames.gameBanner.scale(0.83, 1.106);
-                  YYGGames.icon.left = NaN;
-                  YYGGames.icon.right = 25;
-                  YYGGames.icon.top = 15;
-                  YYGGames.icon.scale(0.9, 0.9);
-                  console.log("puzzlegame登录完成");
-                  switch (n["default"].channelID) {
-                    case h.KG.Channel.Wechat:
-                      l["default"].Instance.Setup(),
-                        r["default"].SendEvent(r["default"].Statis.e_start_login, {}),
-                        // l["default"].Instance.showLoading("登录中..."),
-                        l["default"].Instance.login(function (t) {
-                          t && e.login(t);
-                        });
-                      break;
+                console.log("puzzlegame登录完成");
+                switch (n["default"].channelID) {
+                  case h.KG.Channel.Wechat:
+                    l["default"].Instance.Setup(),
+                      r["default"].SendEvent(r["default"].Statis.e_start_login, {}),
+                      // l["default"].Instance.showLoading("登录中..."),
+                      l["default"].Instance.login(function (t) {
+                        t && e.login(t);
+                      });
+                    break;
 
-                    case h.KG.Channel.Develop:
-                      n["default"].Instance.Init();
-                  }
-                });
+                  case h.KG.Channel.Develop:
+                    n["default"].Instance.Init();
+                }
+                // YYGGames.init("Red-Light-Green-Light", () => {
+                //   // window.WebAudioEngine.musicVolume = 30;
+                //   YYGGames.audio.music.volume = 20;
+                //   YYGGames.audio.sound.volume = 50;
+                //   YYGGames.gameBox.game1.top = 720;
+                //   YYGGames.gameBox.game2.top = 520;
+                //   YYGGames.gameBox.game1.left = 500;
+                //   YYGGames.gameBox.game2.left = 500;
+                //   YYGGames.gameBox.game1.visible = false;
+                //   YYGGames.gameBox.game2.visible = false;
+                //   YYGGames.gameBanner.bottom = 10;
+                //   YYGGames.gameBanner.visible = false;
+                //   YYGGames.gameBanner.scale(0.83, 1.106);
+                //   YYGGames.icon.left = NaN;
+                //   YYGGames.icon.right = 25;
+                //   YYGGames.icon.top = 15;
+                //   YYGGames.icon.scale(0.9, 0.9);
+                //   console.log("puzzlegame登录完成");
+                //   switch (n["default"].channelID) {
+                //     case h.KG.Channel.Wechat:
+                //       l["default"].Instance.Setup(),
+                //         r["default"].SendEvent(r["default"].Statis.e_start_login, {}),
+                //         // l["default"].Instance.showLoading("登录中..."),
+                //         l["default"].Instance.login(function (t) {
+                //           t && e.login(t);
+                //         });
+                //       break;
+
+                //     case h.KG.Channel.Develop:
+                //       n["default"].Instance.Init();
+                //   }
+                // });
                 //________________
               }),
               (e.prototype.login = function (e) {
@@ -295,7 +309,6 @@ var __extends =
               Object.defineProperty(e, "resUrl", {
                 get: function () {
                   return Laya.Browser.onMiniGame ? e.cdnPath : Laya.URL.basePath;
-                  return e.cdnPath;
                 },
                 enumerable: !0,
                 configurable: !0,
@@ -2921,11 +2934,26 @@ var __extends =
                 // console.log(e, "_____", t, "_____", a, "_____", i, "_____", u.SUCCESS);
                 console.log("激励视频方法");
 
-                YYGGames &&
+                // YYGGames &&
+                //   a &&
+                //   YYGGames.showReward(() => {
+                //     a(u.SUCCESS, 1);
+                //   });
+                
                   a &&
-                  YYGGames.showReward(() => {
-                    a(u.SUCCESS, 1);
-                  });
+                  HUHU_showRewardedVideoAd(
+                    () => {
+                        // 用户观看广告完成，继续游戏
+                        a(u.SUCCESS, 1);
+                    },
+                    () => {
+                      // 广告请求失败或者用户跳过广告
+                      promptMessage("Failed to get the reward, please watch the ads to the end.");
+                    }
+                  );
+                  // YYGGames.showReward(() => {
+                  //   a(u.SUCCESS, 1);
+                  // });
 
                 // a: 激励回调方法  有两个参数  接收激励的成功失败数据    和  激励的类型   分享，视频
                 // var o = this;
@@ -9938,8 +9966,12 @@ var __extends =
               }),
               (t.prototype.clickClose = function () {
                 var e = this;
-                YYGGames.showInterstitial(() => {});
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                // 展示插屏广告
+                //TODO showInterstitial
+                console.log("请求插屏广告");
+                HUHU_showInterstitialAd()
+                // YYGGames.showInterstitial(() => {});
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                 c["default"].Instance.CloseAllAd(),
                   this._objRole.destroy(),
                   this.scene3D.destroy(),
@@ -10109,7 +10141,7 @@ var __extends =
               }),
               (t.prototype.clickClose = function () {
                 // YYGGames.showInterstitial(() => {});
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                 this._close(), o["default"].Instance.event(o["default"].Event_BackShowMain);
               }),
               (t.prototype._close = function () {
@@ -10335,8 +10367,8 @@ var __extends =
                 this.lab_zsNum.changeText(l["default"].Instance.gold.toString());
               }),
               (t.prototype.clickNext = function () {
-                YYGGames.icon && ((YYGGames.icon.top = 1200), (YYGGames.icon.right = 145), (YYGGames.icon.skin = "yad2.png"));
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
+                // YYGGames.icon && ((YYGGames.icon.top = 1200), (YYGGames.icon.right = 145), (YYGGames.icon.skin = "yad2.png"));
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
                 h["default"].Instance.CloseBannerAd("EndGameView"), (this.visible = !1);
                 var e = function () {
                   r["default"].Instance.ContinueGame();
@@ -10367,15 +10399,19 @@ var __extends =
                 );
               }),
               (t.prototype.clickLobby = function () {
-                YYGGames.showInterstitial(() => {});
+                // 展示插屏广告
+                //TODO showInterstitial
+                console.log("请求插屏广告");
+                HUHU_showInterstitialAd()
+                // YYGGames.showInterstitial(() => {});
                 h["default"].Instance.CloseBannerAd("EndGameView"), r["default"].Instance.ReturnMainView(), (this.visible = !1);
               }),
               (t.prototype.clickGift = function () {
                 var e = this;
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
                 o["default"].Instance.ShowGainItemDialog(1, n.KG.ItemType.GIFTBOX, function () {
                   h["default"].Instance.ShowAd("endView"), (e.btn_giftBox.visible = !1);
-                  YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                  // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                 });
               }),
               (t.prototype.loadSk = function () {
@@ -10444,9 +10480,9 @@ var __extends =
                 // }),
                 //原暂停按钮改为直接回到主页按钮
                 this.btn_outGame.on(Laya.Event.CLICK, this, function () {
-                  YYGGames.showInterstitial(() => {});
-                  YYGGames.icon && ((YYGGames.icon.top = 15), (YYGGames.icon.right = 25), (YYGGames.icon.skin = "yad.png"));
-                  YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                  // YYGGames.showInterstitial(() => {});
+                  // YYGGames.icon && ((YYGGames.icon.top = 15), (YYGGames.icon.right = 25), (YYGGames.icon.skin = "yad.png"));
+                  // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                   (this.box_outGame.visible = e), r["default"].Instance.gameScene.PauseGame(e), this.clickBackToMain();
                 }),
                   this.btn_stay.on(Laya.Event.CLICK, this, function () {
@@ -10703,8 +10739,8 @@ var __extends =
               }),
               (t.prototype.clickClose = function () {
                 var e = this;
-                YYGGames.icon && ((YYGGames.icon.top = 15), (YYGGames.icon.right = 25), (YYGGames.icon.skin = "yad.png"));
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                // YYGGames.icon && ((YYGGames.icon.top = 15), (YYGGames.icon.right = 25), (YYGGames.icon.skin = "yad.png"));
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                 s["default"].Instance.CloseBannerAd("GiftView"),
                   s["default"].Instance.CloseAllAd(),
                   this.objGiftBox.destroy(),
@@ -11274,7 +11310,11 @@ var __extends =
               }),
               (t.prototype.clickClose = function () {
                 // YYGGames.showInterstitial(() => {});
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                // 展示插屏广告
+                //TODO showInterstitial
+                console.log("请求插屏广告");
+                HUHU_showInterstitialAd()
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                 Laya.timer.clearAll(this),
                   this.destroy(),
                   r["default"].Instance.CloseBannerAd("TurnTableView"),
@@ -11378,7 +11418,7 @@ var __extends =
               (t.prototype.bindClick = function () {
                 var e = this;
                 // Laya.timer.once(1000, this, () => {
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                 // });
 
                 Laya.SoundManager.musicVolume = 0.1;
@@ -11486,14 +11526,20 @@ var __extends =
               (t.prototype.clickStart = function () {
                 //点击start按钮  开始游戏
 
-                YYGGames.icon && ((YYGGames.icon.top = 1200), (YYGGames.icon.right = 145), (YYGGames.icon.skin = "yad2.png"));
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
+                // YYGGames.icon && ((YYGGames.icon.top = 1200), 
+                // (YYGGames.icon.right = 145),
+                //  (YYGGames.icon.skin = "yad2.png"));
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
                 n["default"].Instance.ResetGuanQia(), this.openTryView();
               }),
               (t.prototype.clickAvatar = function () {
                 if (!this._openingUI) {
-                  YYGGames.showInterstitial(() => {});
-                  YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
+                  // 展示插屏广告
+                  //TODO showInterstitial
+                  console.log("请求插屏广告");
+                  HUHU_showInterstitialAd()
+                  // YYGGames.showInterstitial(() => {});
+                  // YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
                   this.hideScene3D();
                   var e = new m["default"]();
                   Laya.stage.addChild(e), e.Show();
@@ -11512,14 +11558,18 @@ var __extends =
                 //   YYGGames.showInterstitial(() => {});
                 // }
                 if (!this._openingUI) {
-                  YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
+                  // YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
                   this.hideScene3D();
                   var e = new b["default"]();
                   Laya.stage.addChild(e), e.Show();
                 }
               }),
               (t.prototype.openTryView = function (e) {
-                YYGGames.showInterstitial(() => {});
+                // 展示插屏广告
+                //TODO showInterstitial
+                console.log("请求插屏广告");
+                HUHU_showInterstitialAd()
+                // YYGGames.showInterstitial(() => {});
                 //试用  打开试用页页
                 void 0 === e && (e = !0),
                   (this.visible = !0),
@@ -11676,14 +11726,14 @@ var __extends =
               }),
               (t.prototype.clickOpenProduce = function () {
                 // YYGGames.showInterstitial(() => {});
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
                 (this.box_produce.visible = !0),
                   this.hideScene3D(),
                   y["default"].Instance.ShowBannerAd("ProduceView"),
                   y["default"].Instance.ShowAd("offlineView");
               }),
               (t.prototype.clickGetProduce = function () {
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                 var e = n["default"].Instance.GainOnlinProduce(1); //在线奖励 单倍领取
                 e > 0 &&
                   (d["default"].Instance.ShowTips("Get " + e + " coins"),
@@ -11692,7 +11742,7 @@ var __extends =
                   y["default"].Instance.CloseBannerAd("ProduceView"));
               }),
               (t.prototype.clickDoubleGetProduce = function () {
-                YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
+                // YYGGames.gameBanner && (YYGGames.gameBanner.visible = true);
                 var e = this;
                 c["default"].Instance.Share(
                   "double_procude",
@@ -11718,7 +11768,7 @@ var __extends =
               (t.prototype.clickTurnTable = function () {
                 if (!this._openingUI) {
                   // YYGGames.showInterstitial(() => {});
-                  YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
+                  // YYGGames.gameBanner && (YYGGames.gameBanner.visible = false);
                   var e = new I["default"]();
                   Laya.stage.addChild(e), e.Show(), this.hideScene3D();
                 }
