@@ -2086,7 +2086,8 @@ var f, d, v, y, x, g, w, _, m, L, b, P, T, O = function () {
                 Laya['stage']['addChild'](ht['loadingUI']), ht['gameUi']['removeSelf'](), window['scrollList']['visible'] = !![];
             });
         }, _0x2f3bb4['prototype']['restartCli' + 'ck'] = function (_0x147a71) {
-            window['scrollList']['visible'] = ![], (_0x147a71['stopPropag' + 'ation'](), z['playSound'](S), this['close'](), platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
+            // window['scrollList']['visible'] = ![], 
+            (_0x147a71['stopPropag' + 'ation'](), z['playSound'](S), this['close'](), platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
                 ht['replayGame'](ht['level']);
             }));
         }, _0x2f3bb4['prototype']['showPoup'] = function () {
@@ -2124,15 +2125,21 @@ var f, d, v, y, x, g, w, _, m, L, b, P, T, O = function () {
             return _0x1da107['btnHome']['on'](Laya['Event']['CLICK'], _0x1da107, _0x1da107['goHome']), (_0x1da107['btnRestart']['on'](Laya['Event']['CLICK'], _0x1da107, _0x1da107['restartCli' + 'ck']), _0x1da107);
         }
         return p(_0x5bebc6, _0x2e56c2), _0x5bebc6['prototype']['goHome'] = function (_0x1315c3) {
-            _0x1315c3['stopPropag' + 'ation'](), z['playSound'](S), this['close'](), platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
-                Laya['stage']['addChild'](ht['loadingUI']), window['scrollList']['visible'] = !![], ht['gameUi']['removeSelf']();
+            _0x1315c3['stopPropag' + 'ation'](),
+             z['playSound'](S), this['close'](),
+              platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
+                Laya['stage']['addChild'](ht['loadingUI']),
+                //  window['scrollList']['visible'] = !![],
+                  ht['gameUi']['removeSelf']();
             });
         }, _0x5bebc6['prototype']['restartCli' + 'ck'] = function (_0xfea13a) {
             _0xfea13a['stopPropag' + 'ation'](), z['playSound'](S), this['close'](), platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
                 ht['level'] += 0x1, ht['initGame'](ht['level']);
-            }), window['scrollList']['visible'] = ![];
+            });
+            // window['scrollList']['visible'] = ![];
         }, _0x5bebc6['prototype']['showPoup'] = function () {
-            window['scrollList']['visible'] = !![], platform['getInstanc' + 'e']()['clearLabel'](), Laya['stage']['addChild'](window['scrollList']), this['popup']();
+            // window['scrollList']['visible'] = !![], 
+            platform['getInstanc' + 'e']()['clearLabel'](), Laya['stage']['addChild'](window['scrollList']), this['popup']();
         }, _0x5bebc6['getSelf'] = function () {
             return _0x5bebc6['self'] || (_0x5bebc6['self'] = new _0x5bebc6()), _0x5bebc6['self'];
         }, _0x5bebc6['self'] = null, _0x5bebc6;
@@ -2219,7 +2226,9 @@ var f, d, v, y, x, g, w, _, m, L, b, P, T, O = function () {
         }
         return p(_0x486971, _0x4de313), _0x486971['prototype']['gohome'] = function (_0x4b6758) {
             _0x4b6758['stopPropag' + 'ation'](), z['playSound'](S), platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
-                Laya['stage']['addChild'](ht['loadingUI']), window['scrollList']['visible'] = !![], ht['gameUi']['removeSelf']();
+                Laya['stage']['addChild'](ht['loadingUI']),
+                //  window['scrollList']['visible'] = !![],
+                  ht['gameUi']['removeSelf']();
             });
         }, _0x486971['prototype']['refGame'] = function (_0x30495a) {
             _0x30495a['stopPropag' + 'ation'](), this['onReplay'](_0x30495a);
@@ -2806,11 +2815,21 @@ var f, d, v, y, x, g, w, _, m, L, b, P, T, O = function () {
             window['WebAudioEn' + 'gine']['pause'] = !window['WebAudioEn' + 'gine']['pause'], this['btn_dis']['visible'] = window['WebAudioEn' + 'gine']['pause'], Laya['LocalStora' + 'ge']['setItem']('Push-It-3d' + '-musicStat' + 'e', JSON['stringify'](window['WebAudioEn' + 'gine']['pause']));
         }, _0x51404a['prototype']['startGame'] = function () {
             platform['getInstanc' + 'e']()['showInters' + 'titial'](() => {
-                window['scrollList']['visible'] = ![], ht['onAssetLoa' + 'ded']();
+                // window['scrollList']['visible'] = ![], 
+                ht['onAssetLoa' + 'ded']();
             });
         }, _0x51404a['prototype']['loadRes'] = function () {
             platform['getInstanc' + 'e']()['puzzlegame' + 'startup']('Push-It-3d', () => {
-                window['yad']['scale'](1.2, 1.2), window['yad']['top'] = 0x14, window['yad']['right'] = 0x14, window['scrollList']['setSize'](0xc8, 0xc8, !![]), window['scrollList']['bottom'] = 0x32, Laya['stage']['addChild'](window['scrollList']), window['scrollList']['visible'] = ![], window['scrollList']['width'] = 0x460, window['scrollList']['getChildAt'](0x0)['width'] = 0x44c, window['WebAudioEn' + 'gine']['pause'] = Laya['LocalStora' + 'ge']['getItem']('Push-It-3d' + '-musicStat' + 'e') ? JSON['parse'](Laya['LocalStora' + 'ge']['getItem']('Push-It-3d' + '-musicStat' + 'e')) : ![], Laya['loader']['load']([
+                window['yad']['scale'](1.2, 1.2),
+                 window['yad']['top'] = 0x14,
+                  window['yad']['right'] = 0x14, 
+                //   window['scrollList']['setSize'](0xc8, 0xc8, !![]),
+                //    window['scrollList']['bottom'] = 0x32,
+                    Laya['stage']['addChild'](window['scrollList']), 
+                    // window['scrollList']['visible'] = ![],
+                    //  window['scrollList']['width'] = 0x460,
+                    //   window['scrollList']['getChildAt'](0x0)['width'] = 0x44c, 
+                      window['WebAudioEn' + 'gine']['pause'] = Laya['LocalStora' + 'ge']['getItem']('Push-It-3d' + '-musicStat' + 'e') ? JSON['parse'](Laya['LocalStora' + 'ge']['getItem']('Push-It-3d' + '-musicStat' + 'e')) : ![], Laya['loader']['load']([
                     'res/atlas/' + 'comp.atlas',
                     'levels/lev' + 'els.fnt.js' + 'on'
                 ], Laya['Handler']['create'](this, this['onAssetLoa' + 'ded'])), this['btn_dis']['visible'] = window['WebAudioEn' + 'gine']['pause'], Laya['SoundManag' + 'er']['playMusic']('subassets/' + 'sound/musi' + 'c.mp3');
@@ -2818,7 +2837,16 @@ var f, d, v, y, x, g, w, _, m, L, b, P, T, O = function () {
         }, _0x51404a['prototype']['onAssetLoa' + 'ded'] = function () {
             !ht['gameUi'] && (window['gameUI'] = ht['gameUi'] = new V()), this['loadEnd'] = !![];
         }, _0x51404a['prototype']['changePra'] = function () {
-            !this['loadEnd'] ? (this['loopNum'] += 0.025, this['loopNum'] > 0.9 && (this['loopNum'] = 0.9)) : (this['loopNum'] += 0.1, this['loopNum'] > 0x1 && (this['loopNum'] = 0x1)), this['img_ug']['width'] = 0x2da * this['loopNum'], this['lab_load']['text'] = parseInt(this['loopNum'] * 0x64) + '%', this['loopNum'] >= 0x1 && (Laya['timer']['clear'](this, this['changePra']), this['btn_music']['visible'] = this['btnStart']['visible'] = !![], this['lab_load']['visible'] = this['img_ug']['visible'] = this['img_bg']['visible'] = ![], window['scrollList']['visible'] = !![], Laya['stage']['addChild'](window['scrollList']));
+            !this['loadEnd'] ? (this['loopNum'] += 0.025, 
+            this['loopNum'] > 0.9 && (this['loopNum'] = 0.9)) : (this['loopNum'] += 0.1,
+             this['loopNum'] > 0x1 && (this['loopNum'] = 0x1)), 
+             this['img_ug']['width'] = 0x2da * this['loopNum'], 
+             this['lab_load']['text'] = parseInt(this['loopNum'] * 0x64) + '%',
+              this['loopNum'] >= 0x1 && (Laya['timer']['clear'](this, this['changePra']),
+               this['btn_music']['visible'] = this['btnStart']['visible'] = !![], 
+               this['lab_load']['visible'] = this['img_ug']['visible'] = this['img_bg']['visible'] = ![],
+            //    window['scrollList']['visible'] = !![], 
+               Laya['stage']['addChild'](window['scrollList']));
         }, _0x51404a;
     }(i['page_dir']['LoadingUI']), U = (p = (m = function (_0xc8d11, _0x3eb30a) {
         return (m = Object['setPrototy' + 'peOf'] || { '__proto__': [] } instanceof Array && function (_0x1d1ed5, _0x22b18c) {
@@ -3353,7 +3381,7 @@ var f, d, v, y, x, g, w, _, m, L, b, P, T, O = function () {
             var _0x216f95 = window['localStora' + 'ge']['getItem']('Push-It-3d' + '-tipLeftTi' + 'mesKey');
             _0x216f95 ? this['tipLeftTim' + 'es'] = parseInt(_0x216f95) : (this['tipLeftTim' + 'es'] = 0x1, window['localStora' + 'ge']['setItem']('Push-It-3d' + '-tipLeftTi' + 'mesKey', 0x1));
         }, _0x460c39['prototype']['loadLaya'] = function () {
-            Laya['init'](0x438, 0x780, at), Laya['stage']['bgColor'] = '#000000', Laya['stage']['scaleMode'] = 'showall', Laya['stage']['alignH'] = 'center', Laya['stage']['alignV'] = 'middle', Laya['loader']['retryNum'] = 0x0, (null === this['loadingUI'] && (window['loadingUI'] = this['loadingUI'] = new LoadingSpr()), Laya['stage']['addChild'](this['loadingUI']));
+            Laya['init'](0x438, 0x780, at), Laya['stage']['bgColor'] = '#000000', Laya['stage']['scaleMode'] = 'exactfit', Laya['stage']['alignH'] = 'center', Laya['stage']['alignV'] = 'middle', Laya['loader']['retryNum'] = 0x0, (null === this['loadingUI'] && (window['loadingUI'] = this['loadingUI'] = new LoadingSpr()), Laya['stage']['addChild'](this['loadingUI']));
         }, _0x460c39['prototype']['onError'] = function (_0x401cd3) {
         }, _0x460c39['prototype']['onLoading'] = function (_0x31f732) {
         }, _0x460c39['prototype']['onAssetLoa' + 'ded'] = function () {
