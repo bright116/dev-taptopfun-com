@@ -2370,9 +2370,22 @@
         }
         ['videoUnlockBtnClick']() {
             let _0x245f42 = this;
-            _0x245f42['video_icon']['visible'] ? YYGGames['showReward'](() => {
-                _0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] > 0x0 && (_0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] -= 0x1, _0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] <= 0x0) && (_0x245f42['skinList']['cells'][_0x245f42['nowChooseId'] - 0x1]['getChildAt'](0x0)['getChildAt'](0x3)['visible'] = !0x1, _0x245f42['userInfo']['get_cars']['push'](_0x245f42['nowChooseId'] - 0x1), _0x245f42['userInfo']['now_car_id'] = _0x245f42['nowChooseId'] - 0x1), _0x4280be['GetInstance']()['setNowCar'](_0x245f42['nowChooseId'] - 0x1), _0x2443ee['hide']('storeUI'), _0x2443ee['show']('startUI');
-            }) : (_0x245f42['userInfo']['last_car_id'] = _0x245f42['userInfo']['now_car_id'], _0x245f42['userInfo']['now_car_id'] = _0x245f42['nowChooseId'] - 0x1, _0x4280be['GetInstance']()['setNowCar'](_0x245f42['nowChooseId'] - 0x1), _0x2443ee['hide']('storeUI'), _0x2443ee['show']('startUI'));
+            _0x245f42['video_icon']['visible'] ? 
+            //TODO showReward
+            HUHU_showRewardedVideoAd(
+                () => {
+                    // 用户观看广告完成，继续游戏
+                    _0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] > 0x0 && (_0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] -= 0x1, _0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] <= 0x0) && (_0x245f42['skinList']['cells'][_0x245f42['nowChooseId'] - 0x1]['getChildAt'](0x0)['getChildAt'](0x3)['visible'] = !0x1, _0x245f42['userInfo']['get_cars']['push'](_0x245f42['nowChooseId'] - 0x1), _0x245f42['userInfo']['now_car_id'] = _0x245f42['nowChooseId'] - 0x1), _0x4280be['GetInstance']()['setNowCar'](_0x245f42['nowChooseId'] - 0x1), _0x2443ee['hide']('storeUI'), _0x2443ee['show']('startUI');
+                },
+                () => {
+                // 广告请求失败或者用户跳过广告
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+                }
+            )
+            // YYGGames['showReward'](() => {
+            //     _0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] > 0x0 && (_0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] -= 0x1, _0x245f42['userInfo']['carAd_times'][_0x245f42['nowChooseId'] - 0x1] <= 0x0) && (_0x245f42['skinList']['cells'][_0x245f42['nowChooseId'] - 0x1]['getChildAt'](0x0)['getChildAt'](0x3)['visible'] = !0x1, _0x245f42['userInfo']['get_cars']['push'](_0x245f42['nowChooseId'] - 0x1), _0x245f42['userInfo']['now_car_id'] = _0x245f42['nowChooseId'] - 0x1), _0x4280be['GetInstance']()['setNowCar'](_0x245f42['nowChooseId'] - 0x1), _0x2443ee['hide']('storeUI'), _0x2443ee['show']('startUI');
+            // })
+            : (_0x245f42['userInfo']['last_car_id'] = _0x245f42['userInfo']['now_car_id'], _0x245f42['userInfo']['now_car_id'] = _0x245f42['nowChooseId'] - 0x1, _0x4280be['GetInstance']()['setNowCar'](_0x245f42['nowChooseId'] - 0x1), _0x2443ee['hide']('storeUI'), _0x2443ee['show']('startUI'));
         }
         ['show']() {
             this['reset'](), this['showList'](), this['upPageUI'](), this['addCar3D'](), this['userInfo'] = this['logic']['getUserInfo'](), this['IsVideo'] = _0x2c206a['getshareOrVideo'](this['userInfo']['Level']), this['IsVideo'] ? this['video_icon']['skin'] = 'comp/video.png' : this['video_icon']['skin'] = 'comp/share.png', this['playButtonShowEffect'](this['videoUnlockBtn'], null, null), setTimeout(() => {
@@ -2558,11 +2571,29 @@
                 _0xb698c = _0x11ed30 > 0x0 ? _0x3724b3 - 0x14 * _0x11ed30 : _0x3724b3;
                 let _0x43c7bd = (Math['floor'](_0xb698c % _0x3cdd0d) + 0x1 - 0x1) * _0x548c7e + (Math['floor'](_0xb698c / _0x3cdd0d) + 0x1);
                 this['use_levelnum'] = _0x43c7bd + 0x14 * _0x11ed30, this['levelNumber']['text'] = this['use_levelnum']['toString'](), this['use_levelnum'] <= this['userInfo']['level'] ? this['bg']['skin'] = 'comp/ChooseUI/shenlanjuxing.png' : this['bg']['skin'] = 'comp/ChooseUI/lanhuijuxing.png', this['levelItem']['on'](Laya['Event']['MOUSE_UP'], this, function () {
-                    this['use_levelnum'] <= this['userInfo']['level'] && YYGGames['showInterstitial'](() => {
-                        this['click_done'] || (this['click_done'] = !0x0, this['userInfo']['chooseLevel'] = _0x47f23a['use_levelnum'], _0x4280be['GetInstance']()['clearLastLevel'](), _0x4280be['GetInstance']()['clearGroup'](), _0x2443ee['hide']('chooseUI'), _0x4280be['GetInstance']()['chooseLevel'](), setTimeout(() => {
-                            this['click_done'] = !0x1, _0x2443ee['show']('gameUI'), _0xa8b540['getInstance']()['setGameState'](0x1);
-                        }, 0x3e8));
-                    });
+                    this['use_levelnum'] <= this['userInfo']['level'] && 
+                    this['click_done'] || (this['click_done'] = !0x0,
+                    this['userInfo']['chooseLevel'] = _0x47f23a['use_levelnum'], 
+                    _0x4280be['GetInstance']()['clearLastLevel'](),
+                     _0x4280be['GetInstance']()['clearGroup'](), 
+                     _0x2443ee['hide']('chooseUI'),
+                      _0x4280be['GetInstance']()['chooseLevel'](), 
+                      setTimeout(() => {
+                       this['click_done'] = !0x1, _0x2443ee['show']('gameUI'), 
+                       _0xa8b540['getInstance']()['setGameState'](0x1);
+                   }, 0x3e8));
+                    // YYGGames['showInterstitial'](() => {
+                    //     this['click_done'] || (this['click_done'] = !0x0,
+                    //      this['userInfo']['chooseLevel'] = _0x47f23a['use_levelnum'], 
+                    //      _0x4280be['GetInstance']()['clearLastLevel'](),
+                    //       _0x4280be['GetInstance']()['clearGroup'](), 
+                    //       _0x2443ee['hide']('chooseUI'),
+                    //        _0x4280be['GetInstance']()['chooseLevel'](), 
+                    //        setTimeout(() => {
+                    //         this['click_done'] = !0x1, _0x2443ee['show']('gameUI'), 
+                    //         _0xa8b540['getInstance']()['setGameState'](0x1);
+                    //     }, 0x3e8));
+                    // });
                 });
             }
         }
@@ -2847,9 +2878,20 @@
         }
         ['getDoubleClick']() {
             var _0x4ac077 = this;
-            YYGGames['showReward'](() => {
-                _0x4ac077['getDouble']['visible'] = !0x1, this['sign_btn']['x'] = 0x107, _0x59d2cc['setData']('signed_days', _0x59d2cc['data']['signed_days'] + 0x1), _0x59d2cc['setData']('today_data', new Date()['getDate']()), _0x4ac077['upTodaySigned'](), _0x4ac077['showItems'](), _0x4ac077['basis'] = 0xc8, _0x4ac077['times'] = 0x2, _0x4ac077['timeText']['text'] = '2', _0x4ac077['getReward'](_0x59d2cc['data']['signed_days']);
-            });
+            //TODO showReward
+            HUHU_showRewardedVideoAd(
+                () => {
+                    // 用户观看广告完成，继续游戏
+                    _0x4ac077['getDouble']['visible'] = !0x1, this['sign_btn']['x'] = 0x107, _0x59d2cc['setData']('signed_days', _0x59d2cc['data']['signed_days'] + 0x1), _0x59d2cc['setData']('today_data', new Date()['getDate']()), _0x4ac077['upTodaySigned'](), _0x4ac077['showItems'](), _0x4ac077['basis'] = 0xc8, _0x4ac077['times'] = 0x2, _0x4ac077['timeText']['text'] = '2', _0x4ac077['getReward'](_0x59d2cc['data']['signed_days']);
+                },
+                () => {
+                // 广告请求失败或者用户跳过广告
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+                }
+            );
+            // YYGGames['showReward'](() => {
+            //     _0x4ac077['getDouble']['visible'] = !0x1, this['sign_btn']['x'] = 0x107, _0x59d2cc['setData']('signed_days', _0x59d2cc['data']['signed_days'] + 0x1), _0x59d2cc['setData']('today_data', new Date()['getDate']()), _0x4ac077['upTodaySigned'](), _0x4ac077['showItems'](), _0x4ac077['basis'] = 0xc8, _0x4ac077['times'] = 0x2, _0x4ac077['timeText']['text'] = '2', _0x4ac077['getReward'](_0x59d2cc['data']['signed_days']);
+            // });
         }
         ['signBtnClicked']() {
             'Sign\x20in' == this['sign_btn_txt']['text'] ? (_0x59d2cc['setData']('signed_days', _0x59d2cc['data']['signed_days'] + 0x1), _0x59d2cc['setData']('today_data', new Date()['getDate']()), this['upTodaySigned'](), this['showItems'](), this['basis'] = 0x64, this['times'] = 0x1, this['timeText']['text'] = '1', this['getReward'](_0x59d2cc['data']['signed_days'])) : setTimeout(() => {
@@ -3291,9 +3333,22 @@
             let _0x9b9135 = this;
             this['clickGet'] || (this['clickGet'] = !0x0, setTimeout(() => {
                 this['clickGet'] = !0x1;
-            }, 0x7d0), YYGGames['showReward'](() => {
-                _0x9b9135['userInfo']['now_car_id'] = _0x2ea805 - 0x1, _0x4280be['GetInstance']()['setNowCar'](_0x2ea805 - 0x1), _0x9b9135['hand']['visible'] = !0x1, _0x9b9135['closeUI']();
-            }));
+            }, 0x7d0), 
+            //TODO showReward
+            HUHU_showRewardedVideoAd(
+                () => {
+                    // 用户观看广告完成，继续游戏
+                    _0x9b9135['userInfo']['now_car_id'] = _0x2ea805 - 0x1, _0x4280be['GetInstance']()['setNowCar'](_0x2ea805 - 0x1), _0x9b9135['hand']['visible'] = !0x1, _0x9b9135['closeUI']();
+                },
+                () => {
+                // 广告请求失败或者用户跳过广告
+                promptMessage("Failed to get the reward, please watch the ads to the end.");
+                }
+            )
+            // YYGGames['showReward'](() => {
+            //     _0x9b9135['userInfo']['now_car_id'] = _0x2ea805 - 0x1, _0x4280be['GetInstance']()['setNowCar'](_0x2ea805 - 0x1), _0x9b9135['hand']['visible'] = !0x1, _0x9b9135['closeUI']();
+            // })
+            );
         }
         ['chooseBtnL_click']() {
             this['click_choose'] || (this['getCar'](this['useRandom_1'], this['ISVideo_L']), this['click_choose'] = !0x0, setTimeout(() => {
@@ -3842,7 +3897,7 @@
             _0x1d9653('Scripts/Enter.ts', _0x5e15f8), _0x1d9653('Scripts/LightTool/lightEffect.ts', _0x4e9bec), _0x1d9653('Scripts/LightTool/RotLight.ts', _0x176e3e), _0x1d9653('Scripts/LightTool/StarEffect.ts', _0x5914f7), _0x1d9653('Scripts/LightTool/ComBtnEffect2.ts', _0x13edab);
         }
     }
-    _0x4d5969['width'] = 0x280, _0x4d5969['height'] = 0x470, _0x4d5969['scaleMode'] = 'showall', _0x4d5969['screenMode'] = 'none', _0x4d5969['alignV'] = 'middle', _0x4d5969['alignH'] = 'center', _0x4d5969['startScene'] = 'MainScene/Main.scene', _0x4d5969['sceneRoot'] = '', _0x4d5969['debug'] = !0x1, _0x4d5969['stat'] = !0x1, _0x4d5969['physicsDebug'] = !0x1, _0x4d5969['exportSceneToJson'] = !0x0, _0x4d5969['init']();
+    _0x4d5969['width'] = 0x280, _0x4d5969['height'] = 0x470, _0x4d5969['scaleMode'] = 'exactfit', _0x4d5969['screenMode'] = 'none', _0x4d5969['alignV'] = 'middle', _0x4d5969['alignH'] = 'center', _0x4d5969['startScene'] = 'MainScene/Main.scene', _0x4d5969['sceneRoot'] = '', _0x4d5969['debug'] = !0x1, _0x4d5969['stat'] = !0x1, _0x4d5969['physicsDebug'] = !0x1, _0x4d5969['exportSceneToJson'] = !0x0, _0x4d5969['init']();
     class _0x867ad3 {
         constructor() {
             Laya['ResourceVersion']['enable']('version.json', Laya['Handler']['create'](this, this['onVersionLoaded']), Laya['ResourceVersion']['FILENAME_VERSION']);
@@ -3858,7 +3913,7 @@
             var _0x3f3426 = {
                 'width': 0x280,
                 'height': 0x470,
-                'scaleMode': 'showall',
+                'scaleMode': 'exactfit',
                 'screenMode': 'none',
                 'alignV': 'middle',
                 'alignH': 'center'
