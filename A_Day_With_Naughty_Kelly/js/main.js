@@ -5915,7 +5915,13 @@ removeGlitter:function(evt){
 
 function MyShowAD(state){
   Main.music.pause();
-  YYGSDK.adsManager.request(YYG.TYPE.INTERSTITIAL,YYG.EventHandler.create(this,()=>{game.state.start(state);Main.music.resume();}),YYG.EventHandler.create(this,()=>{game.state.start(state);Main.music.resume();})); 
+   // 展示插屏广告
+   HUHU_showInterstitialAd();
+
+   // 继续游戏
+   game.state.start(state);Main.music.resume();
+   return;
+//   YYGSDK.adsManager.request(YYG.TYPE.INTERSTITIAL,YYG.EventHandler.create(this,()=>{game.state.start(state);Main.music.resume();}),YYG.EventHandler.create(this,()=>{game.state.start(state);Main.music.resume();})); 
 }
 
 
