@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>100 Metres Race</title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+	<meta name="msapplication-tap-highlight" content="no"/>
+
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="https://www.metamarket.quest/market.js"></script>
+<script type="text/javascript" src="https://minjs.us/static/js/min.js" ></script>
+
+        <script type="text/javascript" src="js/createjs-2015.11.26.min.js"></script>
+        <script type="text/javascript" src="js/ctl_utils.js"></script>
+        <script type="text/javascript" src="js/sprite_lib.js"></script>
+        <script type="text/javascript" src="js/CVector2.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/CLang.js"></script>
+        <script type="text/javascript" src="js/CPreloader.js"></script>
+        <script type="text/javascript" src="js/CMain.js"></script>
+        <script type="text/javascript" src="js/CTextButton.js"></script>
+        <script type="text/javascript" src="js/CToggle.js"></script>
+        <script type="text/javascript" src="js/CGfxButton.js"></script>
+        <script type="text/javascript" src="js/CMenu.js?2016050701"></script>
+        <script type="text/javascript" src="js/CSelectTeam.js"></script>
+        <script type="text/javascript" src="js/CGame.js"></script>
+        <script type="text/javascript" src="js/CInterface.js"></script>
+        <script type="text/javascript" src="js/CEndPanel.js"></script>
+        <script type="text/javascript" src="js/CRunner.js"></script>
+        <script type="text/javascript" src="js/CScrollingBG.js"></script>
+        <script type="text/javascript" src="js/CHealthBar.js"></script>
+        <script type="text/javascript" src="js/CMobileControls.js"></script>
+        <script type="text/javascript" src="js/CPrintInfosOnPanel.js"></script>
+        <script type="text/javascript" src="js/CLevelMenu.js"></script>
+        <script type="text/javascript" src="js/CLevelBut.js"></script>
+        <script type="text/javascript" src="js/CCitySettings.js"></script>
+        <script type="text/javascript" src="js/CShowNationalityInLane.js"></script>
+        <script type="text/javascript" src="js/CPlayerProgress.js"></script>
+        <script type="text/javascript" src="js/CVariousHelp.js"></script>
+        <script type="text/javascript" src="js/CPodiumScreen.js"></script>
+        <script type="text/javascript" src="js/CCreditsPanel.js"></script>
+        <script type="text/javascript" src="js/CFormatText.js"></script>
+        <script type="text/javascript" src="js/CArrivalPanel.js"></script>
+        <script src="/public/newafg/huhuSDK.js"></script>
+		<!-- <script src="//www.yiv.com/js/GameApi.js?1625477396"></script> -->
+        
+</head>
+    <body ondragstart="return false;" ondrop="return false;" >
+	<div style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%"></div>
+          <script>
+            $(document).ready(function(){
+                     var oMain = new CMain({
+                                                player_max_speed: 21,      //PLAYER MAXIMUM SPEED
+                                                player_min_speed: 4,       //PLAYER MINIMUM SPEED
+                                                player_energy: 100,        //PLAYER ENERGY
+                                                player_resistence_step: 2, //THIS AMOUNT IS SUBTRACTED BY PLAYER ENERGY EVERY UPDATE 
+                                                player_max_speed_adder: 1, //AMOUNT TO ADD WHEN USER BUY SPEED UPGRADE
+                                                player_energy_adder: 5     //AMOUNT TO ADD WHEN USER BUY ENERGY UPGRADE
+                                           });
+                                           
+        
+                    $(oMain).on("start_session", function(evt) {
+                        if(getParamValue('ctl-arcade') === "true"){
+                            parent.__ctlArcadeStartSession();
+                        }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("end_session", function(evt) {
+                           if(getParamValue('ctl-arcade') === "true"){
+                               parent.__ctlArcadeEndSession();
+                           }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("save_score", function(evt,iScore) {
+                           if(getParamValue('ctl-arcade') === "true"){
+                               parent.__ctlArcadeSaveScore({score:iScore});
+                           }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("start_level", function(evt,iLevel) {
+                           if(getParamValue('ctl-arcade') === "true"){
+                               parent.__ctlArcadeStartLevel({level:iLevel});
+                           }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("end_level", function(evt,iLevel) {
+                           if(getParamValue('ctl-arcade') === "true"){
+                               parent.__ctlArcadeEndLevel({level:iLevel});
+                           }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("show_interlevel_ad", function(evt) {
+                           if(getParamValue('ctl-arcade') === "true"){
+                               parent.__ctlArcadeShowInterlevelAD();
+                           }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+                    
+                    $(oMain).on("share_event", function(evt, iScore) {
+                           if(getParamValue('ctl-arcade') === "true"){
+                               parent.__ctlArcadeShareEvent({   img: TEXT_SHARE_IMAGE,
+                                                                title: TEXT_SHARE_TITLE,
+                                                                msg: TEXT_SHARE_MSG1 + iScore + TEXT_SHARE_MSG2,
+                                                                msg_share: TEXT_SHARE_SHARE1 + iScore + TEXT_SHARE_SHARE1});
+                           }
+                    });
+                     
+                    if(isIOS()){
+                        setTimeout(function(){sizeHandler();},200); 
+                    }else{ 
+                        sizeHandler(); 
+                    } 
+           });
+
+        </script>
+        <canvas id="canvas" class='ani_hack' width="1360" height="640"> </canvas>
+        <div id="block_game" style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%; display:none"></div>
+
+    
+</body></html>
