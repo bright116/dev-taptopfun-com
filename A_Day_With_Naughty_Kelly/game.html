@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>A Day With Naughty Kelly</title>
+		<script src="/public/newafg/huhuSDK.js"></script>
+		<!-- <script type="text/javascript" src="https://h5gamessdk.yyggames.com/sdk/YYGSDK.js?1614333484"></script> -->
+
+<style>
+			html { 
+			  
+			}
+			body{
+				margin: 0;
+				padding: 0;
+				background-color: #b8175f;
+			}
+
+			#gameContainer{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				overflow: hidden;
+			}
+		</style>
+		<script>
+		document.onkeydown = function(e) {
+		
+			if(e.keyCode == 123) {
+			return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+
+			return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+			return false;
+			}
+			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+			return false;
+			}
+			}
+		
+		</script>
+							</head>
+
+<body>
+<div class="gameContainer" id="gameContainer"></div>
+<script>
+YYGSDK.on(YYG.Event.YYGSDK_INITIALIZED,this,function(){
+    //Do Something
+	// console.log("YYGSDK_INITIALIZED OK");
+	YYGSDK.options.debug=true;
+});
+YYGSDK.__init__(YYG.ChannelType.BABYGAMES,{gameNameId:"A-Day-With-Naughty-Kelly"});
+</script>
+		<script src="js/phaser.min.js"></script>
+		<script src="//www.babygames.com/forgame/relatedgames.js"></script>  
+<script src="//www.babygames.com/forgame/functions.js"></script>
+        <script src="js/main.js"></script>
+</body>
+</html>
