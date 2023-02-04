@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta name="viewport"
+    content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>2 Cars Run</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <script src="/public/newafg/huhuSDK.js"></script>
+    <!-- <script src="https://h5gamessdk.yyggames.com/sdk/YYGGames.js"></script> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            overflow: 'hidden';
+            /* 页面背景颜色 */
+            background: #628DAD
+        }
+
+
+        #unity-canvas {
+            width: 100%;
+            height: 100%;
+            top: 0
+        }
+
+        #unity-container {
+            position: absolute;
+            overflow: hidden;
+        }
+
+        #LoadingView {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+        }
+
+
+        #top-container {
+            flex: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 距离顶部位置 */
+            margin-top: 20%;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script src="Adapter.js"></script>
+    <div id="unity-container">
+        <canvas id="unity-canvas"></canvas>
+
+        <div id="LoadingView">
+            <div id="top-container">
+                <img id="logo" src="logo.png"></img>
+                <!-- //大图距离logo 的位置 margin-top: -->
+                <img id="thumbnail" src="thumbnail.jpg"
+                    style="margin-top: 100px; border-radius:10px;border:2px solid #FFF; "></img>
+            </div>
+
+            <div id="progress" style="position:absolute;bottom:10%;width: 100%; color:#FFF;
+                font-size:24px;">
+                Loading...
+            </div>
+            <img id="bestgames" src="bestgames.com.png" style="position:absolute;bottom:0px;left: 5px;"></img>
+        </div>
+    </div>
+
+
+    <script>
+        const loadingView = document.getElementById("LoadingView");
+        const progress = document.getElementById("progress");
+        const canvas = document.querySelector("#unity-canvas");
+        // console.log = console.info = console.warn = function () { };
+        Adapter.init(750, 1334);
+        const util = {
+            percent: function (value) {
+                progress.innerHTML = "Loading: " + Math.round(value) + "%"
+            },
+            hideLoading: function () {
+                loadingView.style.display = "none";
+            }
+        }
+
+    </script>
+    <script>
+        const buildUrl = "Build";
+        const loaderUrl = buildUrl + "/BuildText.loader.js";
+        const config = {
+            dataUrl: buildUrl + "/BuildText.data.unityweb",
+            frameworkUrl: buildUrl + "/BuildText.framework.js.unityweb",
+            codeUrl: buildUrl + "/BuildText.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "Clawbear Games",
+            productName: "Shooty Race",
+            productVersion: "0.1",
+        };
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (value) => {
+                util.percent(value * 99);
+            }).then((unityInstance) => {
+                //加载交叉推荐
+                // util.hideLoading();
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    </script>
+
+</body>
+
+</html>
