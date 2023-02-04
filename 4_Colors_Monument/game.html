@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>4 Colors Monument</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+
+    <link rel="stylesheet" href="css/orientation_utils.css" type="text/css">
+    <link rel="stylesheet" href="css/ios_fullscreen.css" type="text/css">
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script src="/public/newafg/huhuSDK.js"></script>
+    <!-- <script type="text/javascript" src="https://h5gamessdk.yyggames.com/sdk/YYGGames.js"></script> -->
+    <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/createjs.min.js"></script>
+    <script type="text/javascript" src="js/lib/platform.js"></script>
+    <script type="text/javascript" src="js/lib/ios_fullscreen.js"></script>
+    <script type="text/javascript" src="js/lib/screenfull.js"></script>
+    <script type="text/javascript" src="js/lib/howler.min.js"></script>
+    <script type="text/javascript" src="js/lib/ctl_utils.js"></script>
+    <script type="text/javascript" src="js/lib/sprite_lib.js"></script>
+    <script type="text/javascript" src="js/lib/CTextButton.js"></script>
+    <script type="text/javascript" src="js/lib/CToggle.js"></script>
+    <script type="text/javascript" src="js/lib/CGfxButton.js"></script>
+    <script type="text/javascript" src="js/lib/CCTLText.js"></script>
+    <script type="text/javascript" src="js/lib/sprintf.js"></script>
+
+
+    <script type="text/javascript" src="js/lib/CButLang.js"></script>
+
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/CLang.min.js"></script>
+    <script type="text/javascript" src="js/CPreloader.js"></script>
+    <script type="text/javascript" src="js/CMain.js"></script>
+    <script type="text/javascript" src="js/CPanelTutorial.js"></script>
+    <script type="text/javascript" src="js/CTurnManager.js"></script>
+    <script type="text/javascript" src="js/CAnimation.js"></script>
+    <script type="text/javascript" src="js/CMenu.js"></script>
+    <script type="text/javascript" src="js/CSelectPlayers.js"></script>
+    <script type="text/javascript" src="js/CCard.js"></script>
+    <script type="text/javascript" src="js/CDeckDisplayer.js"></script>
+    <script type="text/javascript" src="js/CHandDisplayer.js"></script>
+    <script type="text/javascript" src="js/CGameBase.js"></script>
+    <script type="text/javascript" src="js/CGameSingle.js"></script>
+    <script type="text/javascript" src="js/CInterface.js"></script>
+    <script type="text/javascript" src="js/CCreditsPanel.js"></script>
+    <script type="text/javascript" src="js/CSelectColorPanel.js"></script>
+    <script type="text/javascript" src="js/CAreYouSurePanel.js"></script>
+    <script type="text/javascript" src="js/CAIManager.js"></script>
+    <script type="text/javascript" src="js/CUnoController.js"></script>
+    <script type="text/javascript" src="js/CSummaryPanel.js"></script>
+    <script type="text/javascript" src="js/CPlayerInfo.js"></script>
+    <script type="text/javascript" src="js/CInfoLabel.js"></script>
+    <script type="text/javascript" src="js/CMsgBox.js"></script>
+
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+    <div style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%"></div>
+    <script>
+        // YYGGames.startup({
+        //     channel: 5,
+        //     appName: "4-Colors-Monument",
+        //     complete: () => {
+
+
+
+        //     }
+        // }
+        // )
+        $(document).ready(function () {
+                    var oMain = new CMain({
+                        starting_num_cards: 7,
+                        audio_enable_on_startup: true, //ENABLE/DISABLE AUDIO WHEN GAME STARTS 
+                        fullscreen: true,   //SET THIS TO FALSE IF YOU DON'T WANT TO SHOW FULLSCREEN BUTTON
+                        check_orientation: true, //SET TO FALSE IF YOU DON'T WANT TO SHOW ORIENTATION ALERT ON MOBILE DEVICES
+                    });
+
+
+                    $(oMain).on("select_players", function (evt, iNumPlayers) {
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("start_session", function (evt) {
+                        if (getParamValue('ctl-arcade') === "true") {
+                            parent.__ctlArcadeStartSession();
+                        }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("end_session", function (evt) {
+                        if (getParamValue('ctl-arcade') === "true") {
+                            parent.__ctlArcadeEndSession();
+                        }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("save_score", function (evt, iScore, szMode) {
+                        if (getParamValue('ctl-arcade') === "true") {
+                            parent.__ctlArcadeSaveScore({ score: iScore, mode: szMode });
+                        }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("show_interlevel_ad", function (evt) {
+                        if (getParamValue('ctl-arcade') === "true") {
+                            parent.__ctlArcadeShowInterlevelAD();
+                        }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    $(oMain).on("share_event", function (evt, iScore) {
+                        if (getParamValue('ctl-arcade') === "true") {
+                            parent.__ctlArcadeShareEvent({
+                                img: TEXT_SHARE_IMAGE,
+                                title: TEXT_SHARE_TITLE,
+                                msg: TEXT_SHARE_MSG1 + iScore + TEXT_SHARE_MSG2,
+                                msg_share: TEXT_SHARE_SHARE1 + iScore + TEXT_SHARE_SHARE1
+                            });
+                        }
+                        //...ADD YOUR CODE HERE EVENTUALLY
+                    });
+
+                    if (isIOS()) {
+                        setTimeout(function () { sizeHandler(); }, 200);
+                    } else { sizeHandler(); }
+
+                });
+
+                function on_ctl_multiplayer_send_nickname() {
+                    var szNickname = jQuery('input[name=nickname]').val();
+
+                    g_oCTLMultiplayer.setNickName(szNickname);
+
+                    s_oNetworkManager.login(szNickname);
+                }
+
+                function on_ctl_multiplayer_send_password() {
+
+                    var oNodePassword = jQuery('#' + g_oCTLMultiplayer._idCurDialog + ' input[name=password]');
+
+                    var szRoomName = oNodePassword.attr("data-room-name");
+                    var szPassword = oNodePassword.val();
+
+                    s_oNetworkManager.tryJoinRoomWithPass(szRoomName, szPassword);
+                }
+
+                function on_ctl_multiplayer_join_room_with_password() {
+                    g_oCTLMultiplayer.closeAllDialog();
+                    g_oCTLMultiplayer.showLoading(TEXT_NETWORK_CONNECTING);
+                }
+
+                function on_ctl_multiplayer_show_create_match() {
+                    g_oCTLMultiplayer.closeAllDialog();
+                    g_oCTLMultiplayer.showCreateRoom();
+                }
+
+                function on_ctl_multiplayer_join_quick_match() {
+                    g_oCTLMultiplayer.closeAllDialog();
+
+                    s_oNetworkManager.joinQuickMatch();
+                }
+
+                function on_ctl_multiplayer_close_type_room_password() {
+                    g_oCTLMultiplayer.closeAllDialog();
+                    s_oNetworkManager.gotoLobby();
+                }
+
+                function on_ctl_multiplayer_close_create_room() {
+                    g_oCTLMultiplayer.closeAllDialog();
+                    s_oNetworkManager.gotoLobby();
+
+                }
+
+                function on_ctl_multiplayer_refresh_room_list() {
+                    s_oNetworkManager.gotoLobby();
+                }
+
+                function on_ctl_multiplayer_create_room() {
+                    var szRoomname = jQuery('input[name=roomname]').val();
+                    var szPassword = jQuery('input[name=password]').val();
+                    var iMaxPlayers = jQuery("input[name='maxplayers']:checked").val();
+
+                    s_oNetworkManager.tryCreateUniqueRoom(szRoomname, szPassword, iMaxPlayers);
+                }
+
+                function on_ctl_multiplayer_join_room(szRoomName) {
+                    s_oNetworkManager.joinRoom(szRoomName);
+                }
+
+                function on_ctl_user_search(szTerm) {
+                    s_oNetworkManager.filterRoomsShown(szTerm);
+                }
+
+    </script>
+    <div class="check-fonts">
+        <p class="check-font-1">RoundedMplus1c</p>
+    </div>
+
+    <canvas id="canvas" class='ani_hack' width="1920" height="1080"> </canvas>
+    <div data-orientation="landscape" class="orientation-msg-container">
+        <p class="orientation-msg-text">Please rotate your device</p>
+    </div>
+    <div id="block_game"
+        style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%; display:none">
+    </div>
+
+</body>
+
+</html>
