@@ -351,6 +351,10 @@ function CGame(oData,  iLevel){
     
     this.onExit = function(){
         $(s_oMain).trigger("end_level");
+        console.log("请求插屏广告");
+
+        // 展示插屏广告
+        HUHU_showInterstitialAd();
         $(s_oMain).trigger("end_session");
         
         
@@ -362,6 +366,10 @@ function CGame(oData,  iLevel){
     
     this.onContinue = function(){
         $(s_oMain).trigger("end_level");
+        console.log("请求插屏广告");
+
+        // 展示插屏广告
+        HUHU_showInterstitialAd();
         $(s_oMain).trigger("show_interlevel_ad");
         
         this.unload();
