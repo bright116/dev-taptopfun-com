@@ -1,0 +1,1 @@
+[{"__type__":"cc.SpriteFrame","content":{"name":"ColorSpray","texture":"d4aCTd5HxLOav+fHHo1VEU","rect":[0,0,63,64],"offset":[-0.5,0],"originalSize":[64,64],"capInsets":[0,0,0,0]}},{"__type__":"cc.ParticleAsset","_name":"ColorSpray","_native":".plist","spriteFrame":{"__uuid__":"3bfdi5rsBLxplgxoGsKR2W"}}]

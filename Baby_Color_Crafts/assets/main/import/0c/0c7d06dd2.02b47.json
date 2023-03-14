@@ -1,0 +1,1 @@
+[{"__type__":"cc.SpriteFrame","content":{"name":"effect_start_dianji","texture":"1bWYG0U/1Mx5L4KwnJducz","rect":[9,10,82,84],"offset":[0,-2],"originalSize":[100,100],"capInsets":[0,0,0,0]}},{"__type__":"cc.ParticleAsset","_name":"ItemStar","_native":".plist","spriteFrame":{"__uuid__":"10aZ+TJKpD2JnAkWWZZOou"}}]
