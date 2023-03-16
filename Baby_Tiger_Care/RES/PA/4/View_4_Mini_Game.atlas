@@ -1,0 +1,159 @@
+
+View_4_Mini_Game.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 215, 159
+  size: 143, 96
+  orig: 145, 98
+  offset: 1, 1
+  index: -1
+Brow_L
+  rotate: false
+  xy: 510, 183
+  size: 31, 16
+  orig: 33, 18
+  offset: 1, 1
+  index: -1
+Brow_R
+  rotate: true
+  xy: 445, 84
+  size: 32, 15
+  orig: 34, 17
+  offset: 1, 1
+  index: -1
+Ear_L
+  rotate: true
+  xy: 896, 152
+  size: 103, 108
+  orig: 105, 110
+  offset: 1, 1
+  index: -1
+Ear_R
+  rotate: true
+  xy: 215, 54
+  size: 103, 110
+  orig: 105, 112
+  offset: 1, 1
+  index: -1
+Eb
+  rotate: false
+  xy: 1, 20
+  size: 182, 57
+  orig: 184, 59
+  offset: 1, 1
+  index: -1
+Eye_L
+  rotate: true
+  xy: 185, 1
+  size: 43, 40
+  orig: 45, 42
+  offset: 1, 1
+  index: -1
+Eye_R
+  rotate: false
+  xy: 265, 12
+  size: 43, 40
+  orig: 45, 42
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 1, 79
+  size: 212, 176
+  orig: 214, 178
+  offset: 1, 1
+  index: -1
+Lash
+  rotate: false
+  xy: 510, 201
+  size: 155, 54
+  orig: 157, 56
+  offset: 1, 1
+  index: -1
+Leg_1
+  rotate: false
+  xy: 402, 57
+  size: 41, 59
+  orig: 43, 61
+  offset: 1, 1
+  index: -1
+Leg_1_1
+  rotate: false
+  xy: 402, 118
+  size: 58, 63
+  orig: 60, 65
+  offset: 1, 1
+  index: -1
+Leg_2
+  rotate: false
+  xy: 227, 1
+  size: 36, 51
+  orig: 38, 53
+  offset: 1, 1
+  index: -1
+Leg_2_1
+  rotate: false
+  xy: 462, 115
+  size: 48, 66
+  orig: 50, 68
+  offset: 1, 1
+  index: -1
+Leg_3
+  rotate: true
+  xy: 667, 195
+  size: 60, 113
+  orig: 62, 115
+  offset: 1, 1
+  index: -1
+Leg_4
+  rotate: true
+  xy: 782, 193
+  size: 62, 112
+  orig: 64, 114
+  offset: 1, 1
+  index: -1
+Lip_1
+  rotate: true
+  xy: 310, 16
+  size: 36, 21
+  orig: 38, 23
+  offset: 1, 1
+  index: -1
+Mouth
+  rotate: false
+  xy: 360, 159
+  size: 30, 22
+  orig: 32, 24
+  offset: 1, 1
+  index: -1
+Mouth_Back
+  rotate: false
+  xy: 333, 27
+  size: 33, 29
+  orig: 35, 31
+  offset: 1, 1
+  index: -1
+Noise
+  rotate: true
+  xy: 185, 46
+  size: 31, 28
+  orig: 33, 30
+  offset: 1, 1
+  index: -1
+Tale
+  rotate: false
+  xy: 327, 58
+  size: 73, 99
+  orig: 75, 101
+  offset: 1, 1
+  index: -1
+White_Part
+  rotate: false
+  xy: 360, 183
+  size: 148, 72
+  orig: 150, 74
+  offset: 1, 1
+  index: -1

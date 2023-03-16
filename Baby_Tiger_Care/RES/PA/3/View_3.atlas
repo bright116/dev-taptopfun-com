@@ -1,0 +1,187 @@
+
+View_3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 312, 232
+  size: 143, 96
+  orig: 145, 98
+  offset: 1, 1
+  index: -1
+Body_2
+  rotate: false
+  xy: 185, 43
+  size: 108, 127
+  orig: 108, 127
+  offset: 0, 0
+  index: -1
+Book
+  rotate: false
+  xy: 1, 172
+  size: 309, 334
+  orig: 309, 334
+  offset: 0, 0
+  index: -1
+Brow_L
+  rotate: false
+  xy: 676, 386
+  size: 31, 16
+  orig: 33, 18
+  offset: 1, 1
+  index: -1
+Brow_R
+  rotate: false
+  xy: 457, 203
+  size: 32, 15
+  orig: 34, 17
+  offset: 1, 1
+  index: -1
+Ear_L
+  rotate: false
+  xy: 457, 220
+  size: 103, 108
+  orig: 105, 110
+  offset: 1, 1
+  index: -1
+Ear_R
+  rotate: false
+  xy: 295, 58
+  size: 103, 110
+  orig: 105, 112
+  offset: 1, 1
+  index: -1
+Eb
+  rotate: false
+  xy: 526, 449
+  size: 182, 57
+  orig: 184, 59
+  offset: 1, 1
+  index: -1
+Eye_L
+  rotate: false
+  xy: 238, 1
+  size: 43, 40
+  orig: 45, 42
+  offset: 1, 1
+  index: -1
+Eye_R
+  rotate: true
+  xy: 676, 404
+  size: 43, 40
+  orig: 45, 42
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 312, 330
+  size: 212, 176
+  orig: 214, 178
+  offset: 1, 1
+  index: -1
+Face_Red
+  rotate: false
+  xy: 1, 8
+  size: 182, 162
+  orig: 182, 162
+  offset: 0, 0
+  index: -1
+Lash
+  rotate: false
+  xy: 710, 452
+  size: 155, 54
+  orig: 157, 56
+  offset: 1, 1
+  index: -1
+Leg_1
+  rotate: false
+  xy: 981, 447
+  size: 41, 59
+  orig: 43, 61
+  offset: 1, 1
+  index: -1
+Leg_1_1
+  rotate: true
+  xy: 562, 214
+  size: 58, 63
+  orig: 60, 65
+  offset: 1, 1
+  index: -1
+Leg_2
+  rotate: true
+  xy: 185, 5
+  size: 36, 51
+  orig: 38, 53
+  offset: 1, 1
+  index: -1
+Leg_2_1
+  rotate: false
+  xy: 637, 307
+  size: 48, 66
+  orig: 50, 68
+  offset: 1, 1
+  index: -1
+Leg_3
+  rotate: true
+  xy: 312, 170
+  size: 60, 113
+  orig: 62, 115
+  offset: 1, 1
+  index: -1
+Leg_4
+  rotate: true
+  xy: 867, 444
+  size: 62, 112
+  orig: 64, 114
+  offset: 1, 1
+  index: -1
+Lip_1
+  rotate: true
+  xy: 400, 132
+  size: 36, 21
+  orig: 38, 23
+  offset: 1, 1
+  index: -1
+Mouth
+  rotate: false
+  xy: 637, 283
+  size: 30, 22
+  orig: 32, 24
+  offset: 1, 1
+  index: -1
+Mouth_Back
+  rotate: false
+  xy: 526, 344
+  size: 33, 29
+  orig: 35, 31
+  offset: 1, 1
+  index: -1
+Noise
+  rotate: true
+  xy: 427, 199
+  size: 31, 28
+  orig: 33, 30
+  offset: 1, 1
+  index: -1
+Tale
+  rotate: false
+  xy: 562, 274
+  size: 73, 99
+  orig: 75, 101
+  offset: 1, 1
+  index: -1
+Toung_D
+  rotate: false
+  xy: 427, 175
+  size: 15, 22
+  orig: 17, 24
+  offset: 1, 1
+  index: -1
+White_Part
+  rotate: false
+  xy: 526, 375
+  size: 148, 72
+  orig: 150, 74
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,264 @@
+
+View_2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 371, 85
+  size: 143, 96
+  orig: 145, 98
+  offset: 1, 1
+  index: -1
+Body_Hair
+  rotate: false
+  xy: 532, 241
+  size: 163, 106
+  orig: 163, 106
+  offset: 0, 0
+  index: -1
+Body_Shampoo
+  rotate: true
+  xy: 976, 431
+  size: 80, 42
+  orig: 82, 44
+  offset: 1, 1
+  index: -1
+Body_Shower
+  rotate: false
+  xy: 551, 147
+  size: 138, 92
+  orig: 140, 94
+  offset: 1, 1
+  index: -1
+Body_Sponge
+  rotate: false
+  xy: 669, 380
+  size: 158, 131
+  orig: 160, 133
+  offset: 1, 1
+  index: -1
+Brow_L
+  rotate: true
+  xy: 522, 44
+  size: 31, 16
+  orig: 33, 18
+  offset: 1, 1
+  index: -1
+Brow_R
+  rotate: false
+  xy: 991, 361
+  size: 32, 15
+  orig: 34, 17
+  offset: 1, 1
+  index: -1
+Dress
+  rotate: false
+  xy: 252, 230
+  size: 168, 103
+  orig: 170, 105
+  offset: 1, 1
+  index: -1
+Ear_L
+  rotate: true
+  xy: 422, 230
+  size: 103, 108
+  orig: 105, 110
+  offset: 1, 1
+  index: -1
+Ear_L_Hair
+  rotate: false
+  xy: 829, 376
+  size: 145, 135
+  orig: 145, 135
+  offset: 0, 0
+  index: -1
+Ear_R
+  rotate: false
+  xy: 808, 264
+  size: 103, 110
+  orig: 105, 112
+  offset: 1, 1
+  index: -1
+Ear_R_Hair
+  rotate: false
+  xy: 225, 92
+  size: 144, 136
+  orig: 144, 136
+  offset: 0, 0
+  index: -1
+Eb
+  rotate: false
+  xy: 1, 33
+  size: 182, 57
+  orig: 184, 59
+  offset: 1, 1
+  index: -1
+Eye_L
+  rotate: false
+  xy: 752, 154
+  size: 43, 40
+  orig: 45, 42
+  offset: 1, 1
+  index: -1
+Eye_R
+  rotate: false
+  xy: 797, 147
+  size: 43, 40
+  orig: 45, 42
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 252, 335
+  size: 212, 176
+  orig: 214, 178
+  offset: 1, 1
+  index: -1
+Face_Hair
+  rotate: false
+  xy: 1, 92
+  size: 222, 202
+  orig: 222, 202
+  offset: 0, 0
+  index: -1
+Face_Shampoo
+  rotate: true
+  xy: 469, 77
+  size: 151, 80
+  orig: 153, 82
+  offset: 1, 1
+  index: -1
+Face_Shower
+  rotate: false
+  xy: 466, 349
+  size: 201, 162
+  orig: 203, 164
+  offset: 1, 1
+  index: -1
+Face_Sponge
+  rotate: false
+  xy: 1, 296
+  size: 249, 215
+  orig: 251, 217
+  offset: 1, 1
+  index: -1
+Lash
+  rotate: false
+  xy: 185, 36
+  size: 155, 54
+  orig: 157, 56
+  offset: 1, 1
+  index: -1
+Leg_1
+  rotate: true
+  xy: 691, 153
+  size: 41, 59
+  orig: 43, 61
+  offset: 1, 1
+  index: -1
+Leg_1_1
+  rotate: true
+  xy: 457, 17
+  size: 58, 63
+  orig: 60, 65
+  offset: 1, 1
+  index: -1
+Leg_1_Hair
+  rotate: false
+  xy: 912, 192
+  size: 64, 61
+  orig: 64, 61
+  offset: 0, 0
+  index: -1
+Leg_2
+  rotate: false
+  xy: 976, 378
+  size: 36, 51
+  orig: 38, 53
+  offset: 1, 1
+  index: -1
+Leg_2_1
+  rotate: false
+  xy: 701, 85
+  size: 48, 66
+  orig: 50, 68
+  offset: 1, 1
+  index: -1
+Leg_3
+  rotate: true
+  xy: 342, 23
+  size: 60, 113
+  orig: 62, 115
+  offset: 1, 1
+  index: -1
+Leg_3_Hair
+  rotate: false
+  xy: 697, 260
+  size: 109, 118
+  orig: 109, 118
+  offset: 0, 0
+  index: -1
+Leg_4
+  rotate: true
+  xy: 697, 196
+  size: 62, 112
+  orig: 64, 114
+  offset: 1, 1
+  index: -1
+Lip_1
+  rotate: true
+  xy: 225, 258
+  size: 36, 21
+  orig: 38, 23
+  offset: 1, 1
+  index: -1
+Mouth
+  rotate: true
+  xy: 1, 1
+  size: 30, 22
+  orig: 32, 24
+  offset: 1, 1
+  index: -1
+Mouth_Back
+  rotate: false
+  xy: 25, 2
+  size: 33, 29
+  orig: 35, 31
+  offset: 1, 1
+  index: -1
+Noise
+  rotate: false
+  xy: 842, 159
+  size: 31, 28
+  orig: 33, 30
+  offset: 1, 1
+  index: -1
+Tale
+  rotate: true
+  xy: 811, 189
+  size: 73, 99
+  orig: 75, 101
+  offset: 1, 1
+  index: -1
+Tale_Hair
+  rotate: false
+  xy: 913, 255
+  size: 76, 119
+  orig: 76, 119
+  offset: 0, 0
+  index: -1
+Toung_D
+  rotate: false
+  xy: 669, 356
+  size: 15, 22
+  orig: 17, 24
+  offset: 1, 1
+  index: -1
+White_Part
+  rotate: false
+  xy: 551, 73
+  size: 148, 72
+  orig: 150, 74
+  offset: 1, 1
+  index: -1
