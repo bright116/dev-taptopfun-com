@@ -4638,7 +4638,7 @@ window.__require = function e(c, n, o) {
                         }
                         ,
                         c.prototype.OpenUrl = function () {
-                            cc.sys.openURL("https://www.yiv.com/?utm_source=unknown&utm_medium=Loading-logo&utm_campaign=game-" + document.title.replace(/ /g, "-"))
+                            // cc.sys.openURL("https://www.yiv.com/?utm_source=unknown&utm_medium=Loading-logo&utm_campaign=game-" + document.title.replace(/ /g, "-"))
                         }
                         ,
                         c.self = null,

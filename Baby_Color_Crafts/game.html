@@ -81,11 +81,11 @@
 
         try {
             if (typeof (console) != "undefined") {
-                console = {};
-                console.log = function () { };
-                console.info = function () { };
-                console.warn = function () { };
-                console.error = function () { };
+                // console = {};
+                // console.log = function () { };
+                // console.info = function () { };
+                // console.warn = function () { };
+                // console.error = function () { };
             }
 
             if (typeof (alert) !== "undefined") {
@@ -111,49 +111,50 @@
 
     </script>
     <script type="text/javascript">
-        // (function () {
-        //     // open web debugger console
-        //     if (typeof VConsole !== 'undefined') {
-        //         window.vConsole = new VConsole();
-        //     }
+        (function () {
+            // open web debugger console
+            if (typeof VConsole !== 'undefined') {
+                window.vConsole = new VConsole();
+            }
 
-        //     var debug = window._CCSettings.debug;
-        //     var splash = document.getElementById('splash');
-        //     splash.style.display = 'block';
-        //     var logo = document.getElementById('logo');
-        //     logo.onmouseup = function () {
-        //         window.open('https://www.yiv.com/?utm_source=unknown&utm_medium=Loading-logo&utm_campaign=game-' + document.title.replace(/ /g, "-"));
-        //     };
+            var debug = window._CCSettings.debug;
+            var splash = document.getElementById('splash');
+            splash.style.display = 'block';
+            var logo = document.getElementById('logo');
+            logo.onmouseup = function () {
+                // window.open('https://www.yiv.com/?utm_source=unknown&utm_medium=Loading-logo&utm_campaign=game-' + document.title.replace(/ /g, "-"));
+            };
 
-        //     function loadScript(moduleName, cb) {
-        //         function scriptLoaded() {
-        //             document.body.removeChild(domScript);
-        //             domScript.removeEventListener('load', scriptLoaded, false);
-        //             cb && cb();
-        //         };
-        //         var domScript = document.createElement('script');
-        //         domScript.async = true;
-        //         domScript.src = moduleName;
-        //         domScript.addEventListener('load', scriptLoaded, false);
-        //         document.body.appendChild(domScript);
-        //     }
+            function loadScript(moduleName, cb) {
+                function scriptLoaded() {
+                    document.body.removeChild(domScript);
+                    domScript.removeEventListener('load', scriptLoaded, false);
+                    cb && cb();
+                };
+                var domScript = document.createElement('script');
+                domScript.async = true;
+                domScript.src = moduleName;
+                domScript.addEventListener('load', scriptLoaded, false);
+                document.body.appendChild(domScript);
+            }
 
-        //     loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.1627f.js', function () {
-        //         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
-        //             loadScript(debug ? 'physics.js' : 'physics-min.js', () => {
-        //                 YYGGames.startupByYiv({ appName: document.title.replace(/ /g, "-"), complete: window.boot.bind(window), debugOpen: window.bOpenV })
-        //             });
-        //         } else {
+            loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.1627f.js', function () {
+                if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
+                    loadScript(debug ? 'physics.js' : 'physics-min.js', () => {
+                        YYGGames.startupByYiv({ appName: document.title.replace(/ /g, "-"), complete: window.boot.bind(window), debugOpen: window.bOpenV })
+                    });
+                } else {
+                    window.boot();
 
-        //             YYGGames.startupByYiv({
-        //                 appName: document.title.replace(/ /g, "-"), complete: () => {
-        //                     window.boot();
-        //                 }, debugOpen: window.bOpenV
-        //             })
+                    // YYGGames.startupByYiv({
+                    //     appName: document.title.replace(/ /g, "-"), complete: () => {
+                    //         window.boot();
+                    //     }, debugOpen: window.bOpenV
+                    // })
 
-        //         }
-        //     });
-        // })();
+                }
+            });
+        })();
     </script>
 
 
