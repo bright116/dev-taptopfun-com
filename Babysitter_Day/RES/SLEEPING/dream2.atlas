@@ -1,0 +1,54 @@
+
+dream2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back
+  rotate: false
+  xy: 433, 220
+  size: 161, 122
+  orig: 161, 122
+  offset: 0, 0
+  index: -1
+Bg
+  rotate: false
+  xy: 2, 2
+  size: 429, 340
+  orig: 434, 344
+  offset: 0, 4
+  index: -1
+Body
+  rotate: true
+  xy: 547, 145
+  size: 73, 66
+  orig: 74, 66
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 433, 100
+  size: 112, 118
+  orig: 114, 119
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: false
+  xy: 547, 115
+  size: 24, 28
+  orig: 27, 32
+  offset: 2, 2
+  index: -1
+Hend_R
+  rotate: false
+  xy: 573, 115
+  size: 24, 28
+  orig: 27, 32
+  offset: 1, 2
+  index: -1
+Up
+  rotate: false
+  xy: 433, 23
+  size: 146, 75
+  orig: 161, 122
+  offset: 0, 0
+  index: -1

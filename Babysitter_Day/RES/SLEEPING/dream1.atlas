@@ -1,0 +1,61 @@
+
+dream1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bg_1
+  rotate: true
+  xy: 344, 33
+  size: 429, 340
+  orig: 429, 340
+  offset: 0, 0
+  index: -1
+Bg_2
+  rotate: true
+  xy: 2, 32
+  size: 430, 340
+  orig: 430, 340
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 686, 31
+  size: 69, 62
+  orig: 69, 63
+  offset: 0, 0
+  index: -1
+Car
+  rotate: true
+  xy: 686, 298
+  size: 164, 97
+  orig: 164, 97
+  offset: 0, 0
+  index: -1
+Car_Glass
+  rotate: false
+  xy: 686, 102
+  size: 137, 80
+  orig: 137, 80
+  offset: 0, 0
+  index: -1
+Face
+  rotate: true
+  xy: 686, 184
+  size: 112, 118
+  orig: 114, 119
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: false
+  xy: 2, 2
+  size: 24, 28
+  orig: 27, 32
+  offset: 2, 2
+  index: -1
+Hend_R
+  rotate: false
+  xy: 28, 2
+  size: 24, 28
+  orig: 27, 32
+  offset: 1, 2
+  index: -1

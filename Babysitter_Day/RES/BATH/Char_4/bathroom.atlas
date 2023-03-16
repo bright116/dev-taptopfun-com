@@ -1,0 +1,180 @@
+
+bathroom.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body_back
+  rotate: true
+  xy: 533, 264
+  size: 247, 222
+  orig: 247, 222
+  offset: 0, 0
+  index: -1
+Face_2
+  rotate: true
+  xy: 1, 63
+  size: 448, 419
+  orig: 448, 419
+  offset: 0, 0
+  index: -1
+Hend_L1
+  rotate: true
+  xy: 803, 412
+  size: 99, 116
+  orig: 99, 116
+  offset: 0, 0
+  index: -1
+Hend_L3
+  rotate: true
+  xy: 803, 319
+  size: 91, 115
+  orig: 91, 115
+  offset: 0, 0
+  index: -1
+Hend_L4
+  rotate: true
+  xy: 803, 151
+  size: 92, 95
+  orig: 92, 95
+  offset: 0, 0
+  index: -1
+Hend_R1
+  rotate: false
+  xy: 921, 296
+  size: 99, 116
+  orig: 99, 116
+  offset: 0, 0
+  index: -1
+Hend_R3
+  rotate: true
+  xy: 921, 414
+  size: 97, 102
+  orig: 97, 108
+  offset: 0, 3
+  index: -1
+Hend_R4
+  rotate: true
+  xy: 900, 128
+  size: 92, 95
+  orig: 92, 95
+  offset: 0, 0
+  index: -1
+bathroompistol
+  rotate: false
+  xy: 570, 14
+  size: 109, 215
+  orig: 109, 215
+  offset: 0, 0
+  index: -1
+bathroomship
+  rotate: true
+  xy: 422, 63
+  size: 163, 137
+  orig: 163, 137
+  offset: 0, 0
+  index: -1
+eyebrow_l
+  rotate: false
+  xy: 533, 231
+  size: 79, 31
+  orig: 79, 31
+  offset: 0, 0
+  index: -1
+eyebrow_r
+  rotate: false
+  xy: 533, 231
+  size: 79, 31
+  orig: 79, 31
+  offset: 0, 0
+  index: -1
+eyes_close2
+  rotate: false
+  xy: 164, 13
+  size: 282, 48
+  orig: 282, 48
+  offset: 0, 0
+  index: -1
+eyes_open2
+  rotate: true
+  xy: 422, 228
+  size: 283, 109
+  orig: 283, 109
+  offset: 0, 0
+  index: -1
+foot_l
+  rotate: false
+  xy: 681, 140
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+foot_r
+  rotate: false
+  xy: 681, 16
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+leg_l
+  rotate: true
+  xy: 803, 245
+  size: 72, 96
+  orig: 72, 96
+  offset: 0, 0
+  index: -1
+leg_r
+  rotate: true
+  xy: 901, 222
+  size: 72, 96
+  orig: 72, 96
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 757, 417
+  size: 94, 35
+  orig: 94, 35
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: false
+  xy: 448, 17
+  size: 36, 44
+  orig: 36, 44
+  offset: 0, 0
+  index: -1
+mouth3
+  rotate: false
+  xy: 486, 18
+  size: 82, 43
+  orig: 82, 43
+  offset: 0, 0
+  index: -1
+mouth4
+  rotate: false
+  xy: 614, 242
+  size: 65, 20
+  orig: 65, 20
+  offset: 0, 0
+  index: -1
+mouth5
+  rotate: false
+  xy: 63, 5
+  size: 83, 56
+  orig: 83, 56
+  offset: 0, 0
+  index: -1
+nose
+  rotate: true
+  xy: 148, 9
+  size: 52, 14
+  orig: 52, 14
+  offset: 0, 0
+  index: -1
+pupil1
+  rotate: false
+  xy: 1, 1
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1

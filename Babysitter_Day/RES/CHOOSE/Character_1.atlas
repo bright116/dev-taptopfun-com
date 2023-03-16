@@ -1,0 +1,260 @@
+
+Character_1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_Carpet_Up
+  rotate: true
+  xy: 877, 78
+  size: 480, 141
+  orig: 480, 141
+  offset: 0, 0
+  index: -1
+2_Carpet_Up
+  rotate: true
+  xy: 402, 442
+  size: 493, 93
+  orig: 493, 93
+  offset: 0, 0
+  index: -1
+3_Carpet
+  rotate: false
+  xy: 1, 937
+  size: 575, 82
+  orig: 575, 82
+  offset: 0, 0
+  index: -1
+Face_2
+  rotate: false
+  xy: 578, 560
+  size: 436, 459
+  orig: 439, 459
+  offset: 3, 0
+  index: -1
+Hend_L1
+  rotate: true
+  xy: 687, 17
+  size: 99, 116
+  orig: 99, 116
+  offset: 0, 0
+  index: -1
+Hend_L3
+  rotate: false
+  xy: 402, 131
+  size: 91, 115
+  orig: 91, 115
+  offset: 0, 0
+  index: -1
+Hend_L4
+  rotate: false
+  xy: 402, 345
+  size: 92, 95
+  orig: 92, 95
+  offset: 0, 0
+  index: -1
+Hend_R4
+  rotate: false
+  xy: 402, 248
+  size: 92, 95
+  orig: 92, 95
+  offset: 0, 0
+  index: -1
+Sparrow_1_1
+  rotate: true
+  xy: 1, 501
+  size: 434, 399
+  orig: 434, 399
+  offset: 0, 0
+  index: -1
+Sparrow_1_2
+  rotate: true
+  xy: 497, 118
+  size: 440, 378
+  orig: 440, 378
+  offset: 0, 0
+  index: -1
+Sparrow_2_1
+  rotate: true
+  xy: 1, 65
+  size: 434, 399
+  orig: 434, 399
+  offset: 0, 0
+  index: -1
+eyebrow_l
+  rotate: true
+  xy: 497, 625
+  size: 79, 31
+  orig: 79, 31
+  offset: 0, 0
+  index: -1
+eyebrow_r
+  rotate: true
+  xy: 497, 625
+  size: 79, 31
+  orig: 79, 31
+  offset: 0, 0
+  index: -1
+eyes_close
+  rotate: false
+  xy: 1, 15
+  size: 282, 48
+  orig: 282, 48
+  offset: 0, 0
+  index: -1
+eyes_open
+  rotate: false
+  xy: 402, 7
+  size: 283, 109
+  orig: 283, 109
+  offset: 0, 0
+  index: -1
+leg_l
+  rotate: true
+  xy: 805, 4
+  size: 72, 96
+  orig: 72, 96
+  offset: 0, 0
+  index: -1
+leg_r
+  rotate: true
+  xy: 903, 4
+  size: 72, 96
+  orig: 72, 96
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 285, 28
+  size: 94, 35
+  orig: 94, 35
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: true
+  xy: 805, 80
+  size: 36, 44
+  orig: 36, 44
+  offset: 0, 0
+  index: -1
+mouth3
+  rotate: true
+  xy: 497, 706
+  size: 82, 43
+  orig: 82, 43
+  offset: 0, 0
+  index: -1
+mouth4
+  rotate: true
+  xy: 1001, 11
+  size: 65, 20
+  orig: 65, 20
+  offset: 0, 0
+  index: -1
+mouth5
+  rotate: true
+  xy: 497, 790
+  size: 83, 56
+  orig: 83, 56
+  offset: 0, 0
+  index: -1
+nose
+  rotate: false
+  xy: 687, 1
+  size: 52, 14
+  orig: 52, 14
+  offset: 0, 0
+  index: -1
+pupil1
+  rotate: false
+  xy: 497, 875
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+
+Character_12.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_Carpet
+  rotate: false
+  xy: 1, 1
+  size: 493, 213
+  orig: 493, 213
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 496, 33
+  size: 248, 223
+  orig: 248, 223
+  offset: 0, 0
+  index: -1
+Hend_R1
+  rotate: false
+  xy: 746, 140
+  size: 99, 116
+  orig: 99, 116
+  offset: 0, 0
+  index: -1
+Hend_R3
+  rotate: false
+  xy: 879, 784
+  size: 97, 108
+  orig: 97, 108
+  offset: 0, 0
+  index: -1
+Sparrow_2_2
+  rotate: false
+  xy: 437, 638
+  size: 440, 378
+  orig: 440, 378
+  offset: 0, 0
+  index: -1
+Sparrow_3_1
+  rotate: false
+  xy: 1, 617
+  size: 434, 399
+  orig: 434, 399
+  offset: 0, 0
+  index: -1
+Sparrow_3_2
+  rotate: false
+  xy: 437, 258
+  size: 440, 378
+  orig: 440, 378
+  offset: 0, 0
+  index: -1
+Sparrow_4_1
+  rotate: false
+  xy: 1, 216
+  size: 434, 399
+  orig: 434, 399
+  offset: 0, 0
+  index: -1
+foot_l
+  rotate: false
+  xy: 879, 894
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+
+Character_13.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_Carpet
+  rotate: false
+  xy: 443, 84
+  size: 480, 295
+  orig: 480, 295
+  offset: 0, 0
+  index: -1
+Sparrow_4_2
+  rotate: false
+  xy: 1, 1
+  size: 440, 378
+  orig: 440, 378
+  offset: 0, 0
+  index: -1

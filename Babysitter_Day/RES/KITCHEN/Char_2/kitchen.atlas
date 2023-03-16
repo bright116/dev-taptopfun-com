@@ -1,0 +1,269 @@
+
+kitchen.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 776, 437
+  size: 248, 224
+  orig: 248, 224
+  offset: 0, 0
+  index: -1
+Dust_1
+  rotate: true
+  xy: 959, 271
+  size: 164, 35
+  orig: 164, 35
+  offset: 0, 0
+  index: -1
+Dust_2
+  rotate: false
+  xy: 597, 1
+  size: 159, 65
+  orig: 159, 65
+  offset: 0, 0
+  index: -1
+Dust_3
+  rotate: false
+  xy: 394, 1
+  size: 201, 65
+  orig: 201, 65
+  offset: 0, 0
+  index: -1
+Face_2
+  rotate: false
+  xy: 1, 238
+  size: 502, 447
+  orig: 502, 447
+  offset: 0, 0
+  index: -1
+Hend_L5
+  rotate: false
+  xy: 285, 11
+  size: 107, 87
+  orig: 107, 87
+  offset: 0, 0
+  index: -1
+Hend_R5
+  rotate: false
+  xy: 285, 11
+  size: 107, 87
+  orig: 107, 87
+  offset: 0, 0
+  index: -1
+Table
+  rotate: false
+  xy: 1, 687
+  size: 907, 335
+  orig: 907, 335
+  offset: 0, 0
+  index: -1
+cheek
+  rotate: false
+  xy: 1, 100
+  size: 404, 136
+  orig: 412, 136
+  offset: 4, 0
+  index: -1
+eyebrow_l
+  rotate: false
+  xy: 85, 17
+  size: 79, 31
+  orig: 79, 31
+  offset: 0, 0
+  index: -1
+eyebrow_r
+  rotate: false
+  xy: 85, 17
+  size: 79, 31
+  orig: 79, 31
+  offset: 0, 0
+  index: -1
+eyes_close2
+  rotate: false
+  xy: 1, 50
+  size: 282, 48
+  orig: 282, 48
+  offset: 0, 0
+  index: -1
+eyes_open2
+  rotate: true
+  xy: 910, 739
+  size: 283, 109
+  orig: 283, 109
+  offset: 0, 0
+  index: -1
+kitchenback
+  rotate: true
+  xy: 505, 212
+  size: 473, 269
+  orig: 473, 269
+  offset: 0, 0
+  index: -1
+kitchenbib
+  rotate: false
+  xy: 776, 244
+  size: 181, 191
+  orig: 181, 191
+  offset: 0, 0
+  index: -1
+kitchenmilkmilk_1
+  rotate: true
+  xy: 407, 68
+  size: 142, 228
+  orig: 142, 228
+  offset: 0, 0
+  index: -1
+kitchenmilkmilk_2
+  rotate: true
+  xy: 637, 68
+  size: 142, 228
+  orig: 142, 228
+  offset: 0, 0
+  index: -1
+kitchenmilkmilk_3
+  rotate: false
+  xy: 867, 14
+  size: 142, 228
+  orig: 142, 228
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 910, 702
+  size: 94, 35
+  orig: 94, 35
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: true
+  xy: 166, 12
+  size: 36, 44
+  orig: 36, 44
+  offset: 0, 0
+  index: -1
+mouth3
+  rotate: false
+  xy: 1, 5
+  size: 82, 43
+  orig: 82, 43
+  offset: 0, 0
+  index: -1
+mouth4
+  rotate: false
+  xy: 407, 216
+  size: 65, 20
+  orig: 65, 20
+  offset: 0, 0
+  index: -1
+mouth5
+  rotate: false
+  xy: 758, 10
+  size: 83, 56
+  orig: 83, 56
+  offset: 0, 0
+  index: -1
+nose
+  rotate: true
+  xy: 843, 14
+  size: 52, 14
+  orig: 52, 14
+  offset: 0, 0
+  index: -1
+tongue
+  rotate: false
+  xy: 776, 212
+  size: 37, 30
+  orig: 37, 30
+  offset: 0, 0
+  index: -1
+
+kitchen2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Hend_L1
+  rotate: true
+  xy: 433, 6
+  size: 99, 116
+  orig: 99, 116
+  offset: 0, 0
+  index: -1
+Hend_L4
+  rotate: false
+  xy: 551, 10
+  size: 92, 95
+  orig: 92, 95
+  offset: 0, 0
+  index: -1
+Hend_R1
+  rotate: false
+  xy: 677, 113
+  size: 99, 116
+  orig: 99, 116
+  offset: 0, 0
+  index: -1
+Hend_R4
+  rotate: false
+  xy: 778, 134
+  size: 92, 95
+  orig: 92, 95
+  offset: 0, 0
+  index: -1
+foot_l
+  rotate: false
+  xy: 433, 107
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+foot_r
+  rotate: false
+  xy: 555, 107
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+kitchenmilkmilk_4
+  rotate: false
+  xy: 1, 1
+  size: 142, 228
+  orig: 142, 228
+  offset: 0, 0
+  index: -1
+kitchenmilkmilk_5
+  rotate: false
+  xy: 145, 1
+  size: 142, 228
+  orig: 142, 228
+  offset: 0, 0
+  index: -1
+kitchenmilkmilk_6
+  rotate: false
+  xy: 289, 1
+  size: 142, 228
+  orig: 142, 228
+  offset: 0, 0
+  index: -1
+leg_l
+  rotate: true
+  xy: 872, 157
+  size: 72, 96
+  orig: 72, 96
+  offset: 0, 0
+  index: -1
+leg_r
+  rotate: false
+  xy: 645, 9
+  size: 72, 96
+  orig: 72, 96
+  offset: 0, 0
+  index: -1
+pupil1
+  rotate: false
+  xy: 719, 51
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1

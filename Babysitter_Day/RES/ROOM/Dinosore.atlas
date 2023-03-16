@@ -1,0 +1,26 @@
+
+Dinosore.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1, 1
+  size: 246, 240
+  orig: 248, 242
+  offset: 1, 1
+  index: -1
+Hend_1
+  rotate: false
+  xy: 249, 216
+  size: 59, 25
+  orig: 61, 27
+  offset: 1, 1
+  index: -1
+Hend_2
+  rotate: false
+  xy: 249, 216
+  size: 59, 25
+  orig: 61, 27
+  offset: 1, 1
+  index: -1
