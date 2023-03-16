@@ -1,0 +1,89 @@
+
+Panda.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 415, 325
+  size: 191, 185
+  orig: 193, 187
+  offset: 1, 1
+  index: -1
+Eb
+  rotate: false
+  xy: 2, 17
+  size: 211, 73
+  orig: 213, 75
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 92
+  size: 411, 418
+  orig: 413, 420
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: false
+  xy: 415, 150
+  size: 102, 173
+  orig: 104, 175
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: false
+  xy: 608, 327
+  size: 82, 183
+  orig: 84, 185
+  offset: 1, 1
+  index: -1
+Item_1
+  rotate: false
+  xy: 792, 453
+  size: 73, 57
+  orig: 73, 57
+  offset: 0, 0
+  index: -1
+Item_2
+  rotate: false
+  xy: 215, 44
+  size: 95, 46
+  orig: 95, 46
+  offset: 0, 0
+  index: -1
+Item_3
+  rotate: false
+  xy: 312, 47
+  size: 73, 43
+  orig: 73, 43
+  offset: 0, 0
+  index: -1
+Leg_L
+  rotate: false
+  xy: 415, 2
+  size: 95, 146
+  orig: 97, 148
+  offset: 1, 1
+  index: -1
+Leg_R
+  rotate: false
+  xy: 692, 360
+  size: 98, 150
+  orig: 100, 152
+  offset: 1, 1
+  index: -1
+Lip_Eat
+  rotate: true
+  xy: 519, 162
+  size: 161, 55
+  orig: 163, 57
+  offset: 1, 1
+  index: -1
+Lip_Happy
+  rotate: false
+  xy: 792, 414
+  size: 56, 37
+  orig: 58, 39
+  offset: 1, 1
+  index: -1

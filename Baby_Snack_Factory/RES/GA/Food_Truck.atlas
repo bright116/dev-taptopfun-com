@@ -1,0 +1,73 @@
+
+Food_Truck.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Door_Closed
+  rotate: true
+  xy: 2, 2
+  size: 431, 489
+  orig: 433, 491
+  offset: 1, 1
+  index: -1
+Truck
+  rotate: false
+  xy: 2, 435
+  size: 1019, 577
+  orig: 1021, 579
+  offset: 1, 1
+  index: -1
+Tyre_1
+  rotate: false
+  xy: 820, 247
+  size: 186, 186
+  orig: 188, 188
+  offset: 1, 1
+  index: -1
+Tyre_2
+  rotate: false
+  xy: 820, 247
+  size: 186, 186
+  orig: 188, 188
+  offset: 1, 1
+  index: -1
+View_1_Box
+  rotate: true
+  xy: 493, 33
+  size: 400, 325
+  orig: 402, 327
+  offset: 1, 1
+  index: -1
+
+Food_Truck2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Door_Open
+  rotate: false
+  xy: 727, 141
+  size: 127, 513
+  orig: 129, 515
+  offset: 1, 1
+  index: -1
+Monkey
+  rotate: false
+  xy: 404, 252
+  size: 321, 402
+  orig: 323, 404
+  offset: 1, 1
+  index: -1
+View_2_Box
+  rotate: false
+  xy: 2, 329
+  size: 400, 325
+  orig: 402, 327
+  offset: 1, 1
+  index: -1
+View_3_Box
+  rotate: false
+  xy: 2, 2
+  size: 400, 325
+  orig: 402, 327
+  offset: 1, 1
+  index: -1

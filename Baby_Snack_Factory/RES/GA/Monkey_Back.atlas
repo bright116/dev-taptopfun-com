@@ -1,0 +1,54 @@
+
+Monkey_Back.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 377, 398
+  size: 105, 108
+  orig: 107, 110
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 225
+  size: 373, 281
+  orig: 375, 283
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: false
+  xy: 2, 68
+  size: 50, 79
+  orig: 52, 81
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: true
+  xy: 193, 173
+  size: 50, 79
+  orig: 52, 81
+  offset: 1, 1
+  index: -1
+Leg_L_1
+  rotate: false
+  xy: 377, 332
+  size: 43, 64
+  orig: 45, 66
+  offset: 1, 1
+  index: -1
+Leg_R_1
+  rotate: false
+  xy: 2, 2
+  size: 43, 64
+  orig: 45, 66
+  offset: 1, 1
+  index: -1
+Tale
+  rotate: false
+  xy: 2, 149
+  size: 189, 74
+  orig: 191, 76
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,96 @@
+
+Monkey.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 435, 292
+  size: 130, 123
+  orig: 132, 125
+  offset: 1, 1
+  index: -1
+Eb
+  rotate: false
+  xy: 435, 417
+  size: 207, 84
+  orig: 209, 86
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 147
+  size: 431, 354
+  orig: 433, 356
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: false
+  xy: 435, 159
+  size: 85, 131
+  orig: 87, 133
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: true
+  xy: 644, 414
+  size: 87, 122
+  orig: 89, 124
+  offset: 1, 1
+  index: -1
+Item_1
+  rotate: false
+  xy: 878, 444
+  size: 73, 57
+  orig: 73, 57
+  offset: 0, 0
+  index: -1
+Item_2
+  rotate: false
+  xy: 2, 2
+  size: 95, 46
+  orig: 95, 46
+  offset: 0, 0
+  index: -1
+Item_3
+  rotate: true
+  xy: 522, 217
+  size: 73, 43
+  orig: 73, 43
+  offset: 0, 0
+  index: -1
+Leg_L
+  rotate: true
+  xy: 768, 436
+  size: 65, 108
+  orig: 67, 110
+  offset: 1, 1
+  index: -1
+Leg_R
+  rotate: false
+  xy: 567, 313
+  size: 66, 102
+  orig: 68, 104
+  offset: 1, 1
+  index: -1
+Lip_Eat
+  rotate: false
+  xy: 223, 57
+  size: 162, 88
+  orig: 163, 89
+  offset: 1, 1
+  index: -1
+Lip_Happy
+  rotate: false
+  xy: 387, 72
+  size: 53, 73
+  orig: 55, 75
+  offset: 1, 1
+  index: -1
+Tale
+  rotate: false
+  xy: 2, 50
+  size: 219, 95
+  orig: 221, 97
+  offset: 1, 1
+  index: -1

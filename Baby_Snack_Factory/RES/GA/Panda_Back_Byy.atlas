@@ -1,0 +1,33 @@
+
+Panda_Back_Byy.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 431, 167
+  size: 195, 313
+  orig: 197, 315
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 106
+  size: 427, 374
+  orig: 429, 376
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: false
+  xy: 628, 317
+  size: 138, 163
+  orig: 140, 165
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: true
+  xy: 2, 2
+  size: 102, 185
+  orig: 102, 185
+  offset: 0, 0
+  index: -1
