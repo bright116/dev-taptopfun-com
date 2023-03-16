@@ -1,0 +1,82 @@
+
+Basket_1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 712, 391
+  size: 148, 111
+  orig: 150, 113
+  offset: 1, 1
+  index: -1
+Bow_1
+  rotate: false
+  xy: 578, 257
+  size: 33, 38
+  orig: 35, 40
+  offset: 1, 1
+  index: -1
+Bow_2
+  rotate: false
+  xy: 712, 317
+  size: 77, 72
+  orig: 79, 74
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 308, 253
+  size: 268, 249
+  orig: 270, 251
+  offset: 1, 1
+  index: -1
+Hend_Back
+  rotate: false
+  xy: 250, 154
+  size: 50, 66
+  orig: 52, 68
+  offset: 1, 1
+  index: -1
+Hend_Up
+  rotate: false
+  xy: 250, 154
+  size: 50, 66
+  orig: 52, 68
+  offset: 1, 1
+  index: -1
+Leg_Back
+  rotate: false
+  xy: 1, 1
+  size: 45, 37
+  orig: 47, 39
+  offset: 1, 1
+  index: -1
+Leg_Up
+  rotate: false
+  xy: 1, 1
+  size: 45, 37
+  orig: 47, 39
+  offset: 1, 1
+  index: -1
+Mom_Basket
+  rotate: false
+  xy: 1, 40
+  size: 247, 180
+  orig: 247, 180
+  offset: 0, 0
+  index: -1
+Mom_Body
+  rotate: false
+  xy: 578, 297
+  size: 132, 205
+  orig: 134, 207
+  offset: 1, 1
+  index: -1
+Mom_Face
+  rotate: false
+  xy: 1, 222
+  size: 305, 280
+  orig: 307, 282
+  offset: 1, 1
+  index: -1

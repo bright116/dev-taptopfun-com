@@ -1,0 +1,229 @@
+
+Makeup.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Blush1
+  rotate: false
+  xy: 414, 960
+  size: 313, 62
+  orig: 315, 64
+  offset: 1, 1
+  index: -1
+Blush2
+  rotate: false
+  xy: 1, 535
+  size: 313, 62
+  orig: 315, 64
+  offset: 1, 1
+  index: -1
+Blush3
+  rotate: false
+  xy: 414, 896
+  size: 313, 62
+  orig: 315, 64
+  offset: 1, 1
+  index: -1
+Blush4
+  rotate: false
+  xy: 1, 471
+  size: 313, 62
+  orig: 315, 64
+  offset: 1, 1
+  index: -1
+Body
+  rotate: false
+  xy: 1, 599
+  size: 347, 134
+  orig: 349, 136
+  offset: 1, 1
+  index: -1
+Diffy_Cultty
+  rotate: false
+  xy: 1, 1
+  size: 72, 62
+  orig: 72, 62
+  offset: 0, 0
+  index: -1
+Ear_L
+  rotate: false
+  xy: 452, 643
+  size: 120, 102
+  orig: 122, 104
+  offset: 1, 1
+  index: -1
+Ear_R
+  rotate: false
+  xy: 574, 642
+  size: 118, 103
+  orig: 120, 105
+  offset: 1, 1
+  index: -1
+Eb
+  rotate: false
+  xy: 729, 934
+  size: 272, 88
+  orig: 274, 90
+  offset: 1, 1
+  index: -1
+Eye_L
+  rotate: false
+  xy: 75, 6
+  size: 57, 57
+  orig: 59, 59
+  offset: 1, 1
+  index: -1
+Eye_R
+  rotate: false
+  xy: 75, 6
+  size: 57, 57
+  orig: 59, 59
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 1, 735
+  size: 411, 287
+  orig: 413, 289
+  offset: 1, 1
+  index: -1
+Hair
+  rotate: false
+  xy: 912, 853
+  size: 86, 79
+  orig: 88, 81
+  offset: 1, 1
+  index: -1
+Lip_1
+  rotate: false
+  xy: 134, 18
+  size: 68, 45
+  orig: 70, 47
+  offset: 1, 1
+  index: -1
+Lip_2
+  rotate: false
+  xy: 280, 243
+  size: 68, 45
+  orig: 70, 47
+  offset: 1, 1
+  index: -1
+Lip_3
+  rotate: false
+  xy: 555, 595
+  size: 68, 45
+  orig: 70, 47
+  offset: 1, 1
+  index: -1
+Lip_4
+  rotate: false
+  xy: 625, 595
+  size: 68, 45
+  orig: 70, 47
+  offset: 1, 1
+  index: -1
+Lip_D
+  rotate: true
+  xy: 672, 826
+  size: 68, 45
+  orig: 70, 47
+  offset: 1, 1
+  index: -1
+Mouth
+  rotate: true
+  xy: 316, 558
+  size: 39, 22
+  orig: 41, 24
+  offset: 1, 1
+  index: -1
+Shadow1
+  rotate: false
+  xy: 1, 416
+  size: 277, 53
+  orig: 279, 55
+  offset: 1, 1
+  index: -1
+Shadow2
+  rotate: false
+  xy: 1, 361
+  size: 277, 53
+  orig: 279, 55
+  offset: 1, 1
+  index: -1
+Shadow3
+  rotate: false
+  xy: 1, 306
+  size: 277, 53
+  orig: 279, 55
+  offset: 1, 1
+  index: -1
+Shadow4
+  rotate: false
+  xy: 1, 251
+  size: 277, 53
+  orig: 279, 55
+  offset: 1, 1
+  index: -1
+Shadow_Back1
+  rotate: false
+  xy: 414, 747
+  size: 250, 60
+  orig: 252, 62
+  offset: 1, 1
+  index: -1
+Shadow_Back2
+  rotate: false
+  xy: 1, 189
+  size: 250, 60
+  orig: 250, 60
+  offset: 0, 0
+  index: -1
+Shadow_Back3
+  rotate: false
+  xy: 1, 127
+  size: 250, 60
+  orig: 252, 62
+  offset: 1, 1
+  index: -1
+Shadow_Back4
+  rotate: false
+  xy: 1, 65
+  size: 250, 60
+  orig: 252, 62
+  offset: 1, 1
+  index: -1
+Tiara1
+  rotate: false
+  xy: 729, 845
+  size: 181, 87
+  orig: 183, 89
+  offset: 1, 1
+  index: -1
+Tiara2
+  rotate: false
+  xy: 452, 575
+  size: 101, 66
+  orig: 103, 68
+  offset: 1, 1
+  index: -1
+Tiara3
+  rotate: true
+  xy: 350, 594
+  size: 139, 100
+  orig: 141, 102
+  offset: 1, 1
+  index: -1
+Tiara4
+  rotate: true
+  xy: 280, 290
+  size: 179, 90
+  orig: 181, 92
+  offset: 1, 1
+  index: -1
+White_Part
+  rotate: false
+  xy: 414, 809
+  size: 256, 85
+  orig: 258, 87
+  offset: 1, 1
+  index: -1

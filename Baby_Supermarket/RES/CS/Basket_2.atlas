@@ -1,0 +1,117 @@
+
+Basket_2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Basket
+  rotate: false
+  xy: 1, 252
+  size: 404, 237
+  orig: 406, 239
+  offset: 1, 1
+  index: -1
+Basket_Tyre_1
+  rotate: false
+  xy: 958, 314
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+1Basket_Tyre_2
+  rotate: false
+  xy: 958, 314
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 271, 102
+  size: 148, 111
+  orig: 150, 113
+  offset: 1, 1
+  index: -1
+Bow_1
+  rotate: false
+  xy: 906, 263
+  size: 33, 38
+  orig: 35, 40
+  offset: 1, 1
+  index: -1
+Bow_2
+  rotate: false
+  xy: 271, 28
+  size: 77, 72
+  orig: 79, 74
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 1, 1
+  size: 268, 249
+  orig: 270, 251
+  offset: 1, 1
+  index: -1
+Hend_Back
+  rotate: false
+  xy: 906, 303
+  size: 50, 66
+  orig: 52, 68
+  offset: 1, 1
+  index: -1
+Hend_Up
+  rotate: false
+  xy: 906, 303
+  size: 50, 66
+  orig: 52, 68
+  offset: 1, 1
+  index: -1
+Leg_Back
+  rotate: false
+  xy: 859, 253
+  size: 45, 37
+  orig: 47, 39
+  offset: 1, 1
+  index: -1
+Leg_Up
+  rotate: false
+  xy: 859, 253
+  size: 45, 37
+  orig: 47, 39
+  offset: 1, 1
+  index: -1
+Mom_Body
+  rotate: false
+  xy: 714, 292
+  size: 190, 197
+  orig: 192, 199
+  offset: 1, 1
+  index: -1
+Mom_Face
+  rotate: false
+  xy: 407, 209
+  size: 305, 280
+  orig: 307, 282
+  offset: 1, 1
+  index: -1
+Mom_Hend
+  rotate: false
+  xy: 714, 209
+  size: 143, 81
+  orig: 145, 83
+  offset: 1, 1
+  index: -1
+Mom_Leg_Back
+  rotate: false
+  xy: 906, 371
+  size: 55, 118
+  orig: 57, 120
+  offset: 1, 1
+  index: -1
+Mom_Leg_Up
+  rotate: false
+  xy: 963, 371
+  size: 55, 118
+  orig: 57, 120
+  offset: 1, 1
+  index: -1
