@@ -1,0 +1,89 @@
+
+Cat.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Blush
+  rotate: false
+  xy: 2, 2
+  size: 297, 17
+  orig: 299, 19
+  offset: 1, 1
+  index: -1
+Body
+  rotate: false
+  xy: 316, 115
+  size: 131, 138
+  orig: 131, 138
+  offset: 0, 0
+  index: -1
+Ear_L
+  rotate: true
+  xy: 316, 27
+  size: 86, 97
+  orig: 88, 99
+  offset: 1, 1
+  index: -1
+Ear_R
+  rotate: false
+  xy: 449, 156
+  size: 86, 97
+  orig: 88, 99
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 21
+  size: 312, 232
+  orig: 314, 234
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: true
+  xy: 820, 204
+  size: 49, 116
+  orig: 49, 116
+  offset: 0, 0
+  index: -1
+Hend_R
+  rotate: true
+  xy: 820, 153
+  size: 49, 116
+  orig: 49, 116
+  offset: 0, 0
+  index: -1
+Leg_R
+  rotate: false
+  xy: 938, 207
+  size: 36, 46
+  orig: 36, 46
+  offset: 0, 0
+  index: -1
+Leg_l
+  rotate: true
+  xy: 976, 217
+  size: 36, 46
+  orig: 36, 46
+  offset: 0, 0
+  index: -1
+Mouch_L
+  rotate: false
+  xy: 537, 162
+  size: 92, 91
+  orig: 94, 93
+  offset: 1, 1
+  index: -1
+Mouch_R
+  rotate: false
+  xy: 631, 162
+  size: 92, 91
+  orig: 94, 93
+  offset: 1, 1
+  index: -1
+Tale
+  rotate: false
+  xy: 725, 176
+  size: 93, 77
+  orig: 93, 77
+  offset: 0, 0
+  index: -1

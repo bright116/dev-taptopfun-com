@@ -1,0 +1,89 @@
+
+Big_Panda.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Blush
+  rotate: false
+  xy: 2, 42
+  size: 248, 31
+  orig: 250, 33
+  offset: 1, 1
+  index: -1
+Body
+  rotate: false
+  xy: 2, 75
+  size: 412, 435
+  orig: 414, 437
+  offset: 1, 1
+  index: -1
+Eye
+  rotate: false
+  xy: 742, 230
+  size: 139, 45
+  orig: 141, 47
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 416, 195
+  size: 324, 315
+  orig: 326, 317
+  offset: 1, 1
+  index: -1
+Glasses
+  rotate: false
+  xy: 1552, 370
+  size: 248, 140
+  orig: 250, 142
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: true
+  xy: 742, 277
+  size: 233, 403
+  orig: 235, 405
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: true
+  xy: 1147, 277
+  size: 233, 403
+  orig: 235, 405
+  offset: 1, 1
+  index: -1
+Lip_D
+  rotate: false
+  xy: 1802, 477
+  size: 92, 33
+  orig: 94, 35
+  offset: 1, 1
+  index: -1
+Lip_Happy
+  rotate: false
+  xy: 1552, 299
+  size: 77, 69
+  orig: 79, 71
+  offset: 1, 1
+  index: -1
+Lip_Sad
+  rotate: false
+  xy: 416, 89
+  size: 54, 40
+  orig: 56, 42
+  offset: 1, 1
+  index: -1
+Noice
+  rotate: true
+  xy: 2, 2
+  size: 38, 25
+  orig: 40, 27
+  offset: 1, 1
+  index: -1
+White_Part
+  rotate: false
+  xy: 416, 131
+  size: 155, 62
+  orig: 157, 64
+  offset: 1, 1
+  index: -1

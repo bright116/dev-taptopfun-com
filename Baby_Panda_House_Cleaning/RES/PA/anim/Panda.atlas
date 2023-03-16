@@ -1,0 +1,47 @@
+
+Panda.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 361, 265
+  size: 196, 219
+  orig: 198, 221
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 169
+  size: 357, 315
+  orig: 359, 317
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: false
+  xy: 2, 2
+  size: 110, 165
+  orig: 112, 167
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: true
+  xy: 361, 189
+  size: 74, 179
+  orig: 76, 181
+  offset: 1, 1
+  index: -1
+Lip_D
+  rotate: false
+  xy: 114, 138
+  size: 51, 29
+  orig: 53, 31
+  offset: 1, 1
+  index: -1
+Lip_Happy
+  rotate: false
+  xy: 559, 423
+  size: 75, 61
+  orig: 77, 63
+  offset: 1, 1
+  index: -1

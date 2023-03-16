@@ -1,0 +1,40 @@
+
+Masin_Panda.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Leg_1
+  rotate: false
+  xy: 2, 51
+  size: 49, 70
+  orig: 51, 72
+  offset: 1, 1
+  index: -1
+Leg_2
+  rotate: false
+  xy: 426, 375
+  size: 49, 70
+  orig: 51, 72
+  offset: 1, 1
+  index: -1
+Panda
+  rotate: false
+  xy: 2, 123
+  size: 422, 322
+  orig: 424, 324
+  offset: 1, 1
+  index: -1
+Tyre_1
+  rotate: false
+  xy: 53, 83
+  size: 38, 38
+  orig: 40, 40
+  offset: 1, 1
+  index: -1
+Tyre_2
+  rotate: false
+  xy: 2, 2
+  size: 47, 47
+  orig: 49, 49
+  offset: 1, 1
+  index: -1
