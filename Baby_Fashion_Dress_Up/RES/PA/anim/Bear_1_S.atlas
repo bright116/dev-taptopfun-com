@@ -1,0 +1,68 @@
+
+Bear_1_S.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bag
+  rotate: false
+  xy: 379, 155
+  size: 97, 90
+  orig: 97, 90
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 264, 104
+  size: 113, 141
+  orig: 115, 143
+  offset: 1, 1
+  index: -1
+Bow
+  rotate: false
+  xy: 360, 44
+  size: 53, 53
+  orig: 53, 53
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 2, 14
+  size: 260, 231
+  orig: 260, 233
+  offset: 0, 0
+  index: -1
+Hend_L
+  rotate: true
+  xy: 379, 99
+  size: 54, 95
+  orig: 56, 97
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: true
+  xy: 264, 44
+  size: 58, 94
+  orig: 60, 96
+  offset: 1, 1
+  index: -1
+Leg_L
+  rotate: true
+  xy: 264, 2
+  size: 40, 79
+  orig: 42, 81
+  offset: 1, 1
+  index: -1
+Leg_R
+  rotate: true
+  xy: 264, 2
+  size: 40, 79
+  orig: 42, 81
+  offset: 1, 1
+  index: -1
+Tale
+  rotate: false
+  xy: 478, 220
+  size: 29, 25
+  orig: 31, 27
+  offset: 1, 1
+  index: -1

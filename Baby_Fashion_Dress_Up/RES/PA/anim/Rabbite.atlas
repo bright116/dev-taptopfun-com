@@ -1,0 +1,96 @@
+
+Rabbite.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 334, 237
+  size: 153, 156
+  orig: 155, 158
+  offset: 1, 1
+  index: -1
+Eb
+  rotate: false
+  xy: 334, 395
+  size: 260, 115
+  orig: 260, 115
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 2, 108
+  size: 330, 402
+  orig: 330, 402
+  offset: 0, 0
+  index: -1
+Hend_L
+  rotate: false
+  xy: 334, 150
+  size: 75, 85
+  orig: 77, 87
+  offset: 1, 1
+  index: -1
+Hend_L1
+  rotate: true
+  xy: 731, 439
+  size: 71, 83
+  orig: 73, 85
+  offset: 1, 1
+  index: -1
+Hend_L2
+  rotate: false
+  xy: 654, 429
+  size: 75, 81
+  orig: 77, 83
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: false
+  xy: 489, 308
+  size: 75, 85
+  orig: 77, 87
+  offset: 1, 1
+  index: -1
+Hend_R1
+  rotate: true
+  xy: 816, 439
+  size: 71, 83
+  orig: 73, 85
+  offset: 1, 1
+  index: -1
+Hend_R2
+  rotate: false
+  xy: 411, 154
+  size: 75, 81
+  orig: 77, 83
+  offset: 1, 1
+  index: -1
+Leg_L
+  rotate: true
+  xy: 2, 50
+  size: 56, 112
+  orig: 56, 112
+  offset: 0, 0
+  index: -1
+Leg_R
+  rotate: false
+  xy: 596, 398
+  size: 56, 112
+  orig: 56, 112
+  offset: 0, 0
+  index: -1
+Lip_1
+  rotate: false
+  xy: 2, 2
+  size: 55, 46
+  orig: 55, 46
+  offset: 0, 0
+  index: -1
+Lip_2
+  rotate: true
+  xy: 116, 51
+  size: 55, 63
+  orig: 55, 63
+  offset: 0, 0
+  index: -1

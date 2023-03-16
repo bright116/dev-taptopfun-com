@@ -1,5 +1,5 @@
 function ShareToFacebook(_0x18c818, _0x46a172) {
-    var _0x21cd65 = '' + _0x18c818, _0x50e84e = 'https://ww' + 'w.facebook' + '.com/dialo' + 'g/feed?app' + '_id=836700' + '136395273&' + 'display=po' + 'pup&captio' + 'n=' + _0x46a172 + '&link=' + _0x21cd65 + ('&redirect_' + 'uri=') + _0x21cd65 + ('&picture=h' + 'ttps://www' + '.yiv.com/t' + 'humb/') + _0x18c818 + '.jpg';
+    var _0x21cd65 = '' + _0x18c818, _0x50e84e = '';
     window['open'](_0x50e84e);
 }
 function ShareToWebsites(_0x5bac7e, _0x149534, _0x59e18d, _0x23d831) {
@@ -13,7 +13,7 @@ function ShareToWebsites(_0x5bac7e, _0x149534, _0x59e18d, _0x23d831) {
     }
 }
 function ShareToTwitter(_0x34f62c, _0x5ef873) {
-    var _0x1d51c0 = '' + _0x34f62c, _0x3a633f = 'https://tw' + 'itter.com/' + 'share?text' + '=' + _0x5ef873 + ('&url=https' + '://www.yiv' + '.com/') + _0x34f62c;
+    var _0x1d51c0 = '' + _0x34f62c, _0x3a633f = '';
     window['open'](_0x3a633f);
 }
 function CreateLinksInGame(_0x5f028, _0x5220a3, _0x691fd0) {
