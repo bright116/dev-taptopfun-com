@@ -1,0 +1,75 @@
+
+Panda_Underwater.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 182, 136
+  size: 115, 95
+  orig: 117, 97
+  offset: 1, 1
+  index: -1
+Eye_1
+  rotate: false
+  xy: 182, 99
+  size: 93, 35
+  orig: 95, 37
+  offset: 1, 1
+  index: -1
+Eye_2
+  rotate: false
+  xy: 299, 196
+  size: 93, 35
+  orig: 95, 37
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 67
+  size: 178, 164
+  orig: 180, 166
+  offset: 1, 1
+  index: -1
+Gun
+  rotate: false
+  xy: 2, 2
+  size: 125, 63
+  orig: 127, 65
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: true
+  xy: 394, 191
+  size: 40, 74
+  orig: 42, 76
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: false
+  xy: 470, 157
+  size: 40, 74
+  orig: 42, 76
+  offset: 1, 1
+  index: -1
+Leg_L
+  rotate: false
+  xy: 129, 10
+  size: 44, 55
+  orig: 46, 57
+  offset: 1, 1
+  index: -1
+Leg_R
+  rotate: true
+  xy: 182, 54
+  size: 43, 55
+  orig: 45, 57
+  offset: 1, 1
+  index: -1
+Teliscope
+  rotate: false
+  xy: 299, 153
+  size: 78, 41
+  orig: 80, 43
+  offset: 1, 1
+  index: -1

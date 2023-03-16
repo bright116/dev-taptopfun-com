@@ -1,0 +1,110 @@
+
+Panda.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ba_Strep
+  rotate: false
+  xy: 499, 169
+  size: 118, 85
+  orig: 118, 85
+  offset: 0, 0
+  index: -1
+Bag_Back
+  rotate: true
+  xy: 243, 61
+  size: 62, 109
+  orig: 62, 109
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 243, 125
+  size: 114, 129
+  orig: 116, 131
+  offset: 1, 1
+  index: -1
+Eb
+  rotate: false
+  xy: 869, 213
+  size: 130, 41
+  orig: 130, 41
+  offset: 0, 0
+  index: -1
+Eye
+  rotate: false
+  xy: 359, 128
+  size: 116, 29
+  orig: 118, 31
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 25
+  size: 239, 229
+  orig: 241, 231
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: true
+  xy: 619, 190
+  size: 64, 130
+  orig: 66, 132
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: true
+  xy: 751, 196
+  size: 58, 116
+  orig: 60, 118
+  offset: 1, 1
+  index: -1
+Leg_L
+  rotate: true
+  xy: 243, 4
+  size: 55, 85
+  orig: 57, 87
+  offset: 1, 1
+  index: -1
+Leg_R
+  rotate: true
+  xy: 619, 133
+  size: 55, 85
+  orig: 57, 87
+  offset: 1, 1
+  index: -1
+Lip_1
+  rotate: false
+  xy: 869, 197
+  size: 51, 14
+  orig: 53, 16
+  offset: 1, 1
+  index: -1
+Lip_2
+  rotate: true
+  xy: 330, 2
+  size: 57, 36
+  orig: 59, 38
+  offset: 1, 1
+  index: -1
+Lip_3
+  rotate: false
+  xy: 706, 151
+  size: 24, 37
+  orig: 26, 39
+  offset: 1, 1
+  index: -1
+Lip_4
+  rotate: false
+  xy: 2, 5
+  size: 52, 18
+  orig: 52, 18
+  offset: 0, 0
+  index: -1
+Net
+  rotate: false
+  xy: 359, 159
+  size: 138, 95
+  orig: 138, 95
+  offset: 0, 0
+  index: -1

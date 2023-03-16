@@ -1,0 +1,68 @@
+
+Panda_Winter.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 315, 110
+  size: 75, 78
+  orig: 77, 80
+  offset: 1, 1
+  index: -1
+Face
+  rotate: false
+  xy: 2, 47
+  size: 215, 204
+  orig: 217, 206
+  offset: 1, 1
+  index: -1
+Hend_L
+  rotate: true
+  xy: 2, 2
+  size: 43, 57
+  orig: 45, 59
+  offset: 1, 1
+  index: -1
+Hend_R
+  rotate: false
+  xy: 392, 154
+  size: 48, 34
+  orig: 50, 36
+  offset: 1, 1
+  index: -1
+Kanto
+  rotate: false
+  xy: 219, 98
+  size: 94, 153
+  orig: 96, 155
+  offset: 1, 1
+  index: -1
+Leg_L
+  rotate: true
+  xy: 219, 58
+  size: 38, 50
+  orig: 40, 52
+  offset: 1, 1
+  index: -1
+Leg_R
+  rotate: false
+  xy: 471, 201
+  size: 39, 50
+  orig: 41, 52
+  offset: 1, 1
+  index: -1
+Lip
+  rotate: false
+  xy: 61, 15
+  size: 45, 30
+  orig: 47, 32
+  offset: 1, 1
+  index: -1
+Shadow
+  rotate: false
+  xy: 315, 190
+  size: 154, 61
+  orig: 156, 63
+  offset: 1, 1
+  index: -1
