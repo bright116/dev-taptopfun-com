@@ -1,0 +1,1 @@
+[{"__type__":"cc.SpriteFrame","content":{"name":"goldBurst","texture":"35MFOn+4ZEyqZrswSJ2vSd","rect":[12,5,73,86],"offset":[0.5,0],"originalSize":[96,96],"capInsets":[0,0,0,0]}},{"__type__":"cc.ParticleAsset","_name":"goldBurst","_native":".plist","spriteFrame":{"__uuid__":"71hgSpy3pFlYrjM+mT8am/"}}]
