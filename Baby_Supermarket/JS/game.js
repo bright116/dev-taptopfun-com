@@ -28355,6 +28355,7 @@ _p.midPoint,
                     return r.b0;
                 r = t[++n]
             }
+        return -1
     }
     ,
     cc.Codec.GZip.prototype.DeflateLoop = function () {
@@ -81746,27 +81747,19 @@ comman.Hide_Sloat = function (e, t) {
         if (!window.newads) {
             type = "start";
         }
-        console.log("beforeBreak");
-        comman.isMusicLevelEnable = !1;
-        this.muteSound();
 
-
-        window.newads = true;
-        this.onInterstitialSuccessCallback();
-        console.log("afterBreak");
-
-        // YYGGames.showInterstitial({
-        //     beforeBreak: () => {
-        //         console.log("beforeBreak");
-        //         comman.isMusicLevelEnable = !1;
-        //         this.muteSound();
-        //     },  // You may also want to mute the game's sound.
-        //     afterBreak: () => {
-        //         window.newads = true;
-        //         this.onInterstitialSuccessCallback();
-        //         console.log("afterBreak");
-        //     }
-        // })
+        YYGGames.showInterstitial({
+            beforeBreak: () => {
+                console.log("beforeBreak");
+                comman.isMusicLevelEnable = !1;
+                this.muteSound();
+            },  // You may also want to mute the game's sound.
+            afterBreak: () => {
+                window.newads = true;
+                this.onInterstitialSuccessCallback();
+                console.log("afterBreak");
+            }
+        })
 
         // comman.isMusicLevelEnable = !1,
         // this.muteSound(),
@@ -81777,16 +81770,15 @@ comman.Hide_Sloat = function (e, t) {
     ,
     comman.onInterstitialSuccessCallback = function () {
 
-        // if (!YYGGames.canShowReward()) {
-        //     window.prompt("No Video Available");
-        //     // this.showNoVideo();
-        //     return;
-        // }
+        if (!YYGGames.canShowReward()) {
+            window.prompt("No Video Available");
+            // this.showNoVideo();
+            return;
+        }
         comman.isMusicLevelEnable = !0,
         this.muteSound(),
             this.pauseGame(),
-            this.onRewardSuccessCallback
-            // YYGGames.showRewardad(() => { this.onRewardSuccessCallback }, () => { this.onRewardFailCallback })
+            YYGGames.showRewardad(() => { this.onRewardSuccessCallback }, () => { this.onRewardFailCallback })
     }
     ,
     comman.onInterstitialFailCallback = function () {
@@ -82593,8 +82585,8 @@ var res_common_button = {
 };
 for (i in res_common_button)
     res_resource.push(res_common_button[i]);
-// for (var k = 0; k < RelatedGames.length; k++)
-//     res_resource.push(RelatedGames[k].thumb);
+for (var k = 0; k < RelatedGames.length; k++)
+    res_resource.push(RelatedGames[k].thumb);
 window.onload = function () {
     cc.game.onStart = function () {
         cc.director.setDisplayStats(!1),
@@ -82602,18 +82594,14 @@ window.onload = function () {
             cc.view.setDesignResolutionSize(800, 504, cc.ResolutionPolicy.SHOW_ALL),
             cc.view.resizeWithBrowserSize(!0),
 
-            Preloader.preload(res_resource, function () {
-                cc.director.runScene(MainScene.scene()),
-                    comman.playMusic(res_comman.bg_sound, !0, !0)
-            }, this)
-            // YYGGames.startupByYiv({
-            //     appName: document.title.replace(/ /g, "-"), complete: () => {
-            //         Preloader.preload(res_resource, function () {
-            //             cc.director.runScene(MainScene.scene()),
-            //                 comman.playMusic(res_comman.bg_sound, !0, !0)
-            //         }, this)
-            //     }, debugOpen: window.bOpenV
-            // })
+            YYGGames.startupByYiv({
+                appName: document.title.replace(/ /g, "-"), complete: () => {
+                    Preloader.preload(res_resource, function () {
+                        cc.director.runScene(MainScene.scene()),
+                            comman.playMusic(res_comman.bg_sound, !0, !0)
+                    }, this)
+                }, debugOpen: window.bOpenV
+            })
 
 
     },cc.game.run("gameCanvas")
