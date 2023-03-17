@@ -81748,6 +81748,8 @@ comman.Hide_Sloat = function (e, t) {
             type = "start";
         }
 
+        
+
         YYGGames.showInterstitial({
             beforeBreak: () => {
                 console.log("beforeBreak");
@@ -82337,7 +82339,8 @@ GameOverScene.scene = function () {
     ;
 var res_resource = []
     , res_comman = {
-        bb_icon_3: "https://www.yiv.com/forgame/100x50.png",
+        bb_icon_3: "",
+        // bb_icon_3: "https://www.yiv.com/forgame/100x50.png",
         bg_sound: "RES/CI/bg_sound.mp3",
         sparkle_1_plist: "RES/CI/Sparkle_1.plist",
         sparkle_2_plist: "RES/CI/Sparkle_2.plist",
@@ -82585,6 +82588,7 @@ var res_common_button = {
 };
 for (i in res_common_button)
     res_resource.push(res_common_button[i]);
+let RelatedGames = [];
 for (var k = 0; k < RelatedGames.length; k++)
     res_resource.push(RelatedGames[k].thumb);
 window.onload = function () {
@@ -82594,14 +82598,20 @@ window.onload = function () {
             cc.view.setDesignResolutionSize(800, 504, cc.ResolutionPolicy.SHOW_ALL),
             cc.view.resizeWithBrowserSize(!0),
 
-            YYGGames.startupByYiv({
-                appName: document.title.replace(/ /g, "-"), complete: () => {
-                    Preloader.preload(res_resource, function () {
-                        cc.director.runScene(MainScene.scene()),
-                            comman.playMusic(res_comman.bg_sound, !0, !0)
-                    }, this)
-                }, debugOpen: window.bOpenV
-            })
+            document.title.replace(/ /g, "-");
+            Preloader.preload(res_resource, function () {
+                cc.director.runScene(MainScene.scene()),
+                    comman.playMusic(res_comman.bg_sound, !0, !0)
+            }, this);
+
+            // YYGGames.startupByYiv({
+            //     appName: document.title.replace(/ /g, "-"), complete: () => {
+            //         Preloader.preload(res_resource, function () {
+            //             cc.director.runScene(MainScene.scene()),
+            //                 comman.playMusic(res_comman.bg_sound, !0, !0)
+            //         }, this)
+            //     }, debugOpen: window.bOpenV
+            // })
 
 
     },cc.game.run("gameCanvas")
