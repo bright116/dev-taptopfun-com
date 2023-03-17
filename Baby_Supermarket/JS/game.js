@@ -81748,7 +81748,8 @@ comman.Hide_Sloat = function (e, t) {
             type = "start";
         }
 
-        
+        HUHU_showInterstitialAd();
+        return;
 
         YYGGames.showInterstitial({
             beforeBreak: () => {
